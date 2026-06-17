@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domiciliary & At-Home Cancer Care: Bringing Specialized Support Home</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Mobile fix for icon layout - compact icon on left, text on right */
+        @media (max-width: 768px) {
+            /* Make icon smaller and compact on mobile - icon stays on left */
+            .bg-white.rounded-xl h4.flex.items-center > div.w-12 {
+                width: 2.25rem !important;
+                height: 2.25rem !important;
+                min-width: 2.25rem !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .bg-white.rounded-xl h4.flex.items-center > div.w-12 > i {
+                font-size: 0.9rem !important;
+            }
+            
+            .bg-white.rounded-xl h4.flex.items-center > div.mr-3 {
+                margin-right: 0.625rem !important;
+            }
+            
+            /* Icon and text in horizontal layout - text can wrap, icon stays left */
+            .bg-white.rounded-xl h4.flex.items-center {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                align-items: flex-start !important;
+                gap: 0 !important;
+            }
+            
+            /* Make heading text compact and allow wrapping */
+            .bg-white.rounded-xl h4.flex.items-center {
+                font-size: 1.05rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Ensure text part can wrap while icon stays fixed */
+            .bg-white.rounded-xl h4.flex.items-center {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Reduce excessive margins on mobile */
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-12 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Reduce grid gaps on mobile */
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Reduce space-y spacing on mobile */
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+            
+            .space-y-12 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            /* Reduce padding in cards and containers on mobile */
+            .p-8 {
+                padding: 1rem !important;
+            }
+            
+            .rounded-2xl.p-8 {
+                padding: 1.25rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Domiciliary Care.jpg" 
+                alt="Domiciliary & At-Home Cancer Care"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Domiciliary Care.jpg" 
+                alt="Domiciliary & At-Home Cancer Care"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What Does Our Biochemistry Department Do? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Does Our Domiciliary Care Department Do?
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Domiciliary and At-Home Cancer Care Department is dedicated to extending specialized, hospital-level cancer support directly into the comfort and familiarity of the patient's home. Our comprehensive program focuses on maximizing quality of life, easing the burden on caregivers, and preventing unnecessary hospital readmissions. Services range from skilled nursing care and expert pain management to psychosocial support and rapid response for symptoms, ensuring continuity of compassionate, high-quality care throughout the entire treatment journey and survivorship.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Domiciliary care recognizes that the home environment is often the best setting for healing and maintaining a sense of normalcy, especially during demanding cancer treatments. Our department coordinates the logistical and clinical needs required to support complex medical care outside the traditional hospital walls.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-bullseye mr-3" style="color: #2E8B57;"></i>
+                        Core Scope and Mission
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-8 mt-2">
+                        Our department is dedicated to providing comprehensive, compassionate home-based cancer care that enhances quality of life, supports caregivers, and ensures continuity of specialized medical support in the comfort of home.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Monitoring Treatment Safety -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-3" style="background: linear-gradient(135deg, #2E8B57, #3cb371);">
+                                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                                </div>
+                                Enhanced Quality of Life
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Our primary goal is to provide symptom control and supportive care in the patient's familiar setting, reducing the stress and fatigue associated with frequent hospital visits and ensuring the patient's emotional and physical comfort.
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Care in familiar, comfortable home environment</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Reduced stress from frequent hospital visits</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Maintained sense of normalcy and autonomy</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Diagnosis and Prognosis Support -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-3" style="background: linear-gradient(135deg, #FF4500, #ff6347);">
+                                    <i class="fas fa-stethoscope text-white text-xl"></i>
+                                </div>
+                                Bridging Hospital and Home
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                We serve as the direct link between the oncology treatment team and the patient's home environment. This ensures seamless transitions after discharge and continuous monitoring of complex medical issues, preventing crises and unnecessary emergency room visits.
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                    <span>Seamless transition from hospital to home</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                    <span>Continuous monitoring of complex medical issues</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                    <span>Prevention of unnecessary emergency visits</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Evaluating Efficacy -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-3" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+                                    <i class="fas fa-chart-line text-white text-xl"></i>
+                                </div>
+                                Caregiver Support
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                A critical component is supporting the family and caregivers, who are often navigating complex medical tasks at home. We provide education, respite, psychological support, and practical assistance to the entire unit.
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                    <span>Education and training for caregivers</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                    <span>Respite care to prevent caregiver burnout</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                    <span>Psychological and practical support</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Services: Skilled Nursing and Holistic Home Support
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our services are delivered by a dedicated interdisciplinary team, including specialized oncology nurses, physicians, social workers, and rehabilitation therapists.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Tumor Marker Assays -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-vial text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">At-Home Skilled Nursing & Medical Management</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Provides professional nursing services for complex tasks, including monitoring vital signs, managing intravenous (IV) lines and central ports, administering medications (e.g., subcutaneous injections), complex wound and drain management, and managing post-operative care.
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                           
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Hospital Care at Home:</strong> Our specialized oncology nurses visit you to handle all the complex medical tasks, like managing your IV lines, changing dressings, and ensuring your medications are correctly administered. This reduces your need to travel back to the hospital.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Symptom & Pain Control -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-heartbeat text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Symptom & Pain Control</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Experts in adapting Palliative Care principles to the home setting, focusing on prompt assessment and effective management of symptoms such as breakthrough pain, nausea, fatigue, and bowel issues. We coordinate prescription refills and adjustments for optimal comfort.
+                            </p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4 border-l-4" style="border-color: #FF4500;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Relief, Where You Need It:</strong> We ensure expert pain and symptom management in your home. Our team can quickly adjust your medication and give you the support you need to control side effects like nausea and fatigue, allowing you to focus on living well.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Psychosocial and Practical Support -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-hands-helping text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Psychosocial and Practical Support</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Provides counseling, emotional support, and coordination with community resources. We offer assistance with activities of daily living (ADLs), practical tasks, and respite care for primary caregivers to prevent burnout.
+                            </p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Support for the Whole Family:</strong> Cancer affects everyone. Our social workers and support staff provide counseling, help coordinate practical needs (like equipment or resources), and give your family and caregivers necessary breaks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rehabilitation and Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-dumbbell text-2xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Rehabilitation and Therapy</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                           
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Arranging and coordinating physical, occupational, and speech therapy services delivered in the patient's home. This facilitates continuous rehabilitation, minimizing functional decline and maximizing independence during and after treatment.
+                            </p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4 border-l-4" style="border-color: #7c3aed;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Therapy Delivered to Your Door:</strong> We coordinate physical and occupational therapists to visit your home. Continuing your rehabilitation in your own setting helps you maintain strength and mobility throughout your recovery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Unique Strengths (USPs) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Domiciliary Oncology Services?
+                </h2>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- A. High-Throughput Automation and Safety -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57;">
+                                <i class="fas fa-cogs text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">A. Specialized Oncology Focus</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-md mr-3" style="color: #2E8B57;"></i>
+                                Expertise in High-Risk Patients
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our home care nurses and physicians are specially trained in the complex needs of oncology patients (e.g., managing chemotherapy side effects, neutropenic precautions, and BMT recovery needs). This specialized knowledge minimizes the risk of complications compared to general home health services.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-clinic-medical mr-3" style="color: #2E8B57;"></i>
+                                Rapid Response and Crisis Prevention
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We implement proactive monitoring protocols and provide direct communication lines to the oncology team. This rapid identification and management of acute symptoms (e.g., fever, sudden pain) has been shown to reduce avoidable emergency department visits and hospital admissions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- B. Seamless Integration with Palliative Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500;">
+                                <i class="fas fa-heart text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">B. Seamless Integration with Palliative Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-friends mr-3" style="color: #FF4500;"></i>
+                                Continuity of Care
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our domiciliary service ensures that the personalized care plan developed by the hospital's Palliative Care team is seamlessly transitioned and executed in the home, maintaining the highest standard of symptom management and quality of life.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-bone mr-3" style="color: #FF4500;"></i>
+                                Family-Centric Education
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We provide tailored education and training for caregivers on complex tasks, medication management, and symptom reporting, empowering them to confidently participate in the patient's care journey.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C. Patient Comfort and Preference -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #1e40af;">
+                                <i class="fas fa-home text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">C. Patient Comfort and Preference</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-microscope mr-3" style="color: #1e40af;"></i>
+                                Care in a Familiar Setting
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Receiving clinical care at home significantly enhances the patient's emotional well-being and comfort, allowing them to spend more time with loved ones and maintain autonomy.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-clock mr-3" style="color: #1e40af;"></i>
+                                Tailored Scheduling
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We coordinate appointments and visits around the patient's needs and energy levels, respecting their dignity and individual preferences throughout the course of treatment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Domiciliary Care Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our specialized home care experts dedicated to bringing hospital-level support to your home.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Prashanth R Putran.webp" alt="Dr. Prashanth Putran" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Prashanth+Putran'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Prashanth Putran</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-Anaesthesiology (2015), Post Doctoral Fellowship - Regional Anaesthesia & Pain Management (Dec 2017), Fellowship in Chronc Pain Management (Feb 2021)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Pain and Palliative Care Medicine
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>11 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Prashanth R Putran.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sunitha B. S..webp" alt="Dr. Sunitha B. S." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sunitha+B.+S.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sunitha B. S.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-Physiology (Oct 2008), Fellowship Palliative Care (July 2019)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Pain and Palliative Care Medicine
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>18 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sunitha B. S..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Doctor Card Styles - Scoped to doctors section only */
+        #doctors .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        #doctors .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        #doctors .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        #doctors .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        #doctors .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            #doctors .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            #doctors .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            #doctors .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            #doctors .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            #doctors .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            #doctors .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        #doctors .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        #doctors .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        #doctors .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        #doctors .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        #doctors .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #doctors .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        #doctors .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        #doctors .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        #doctors .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        #doctors .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        #doctors .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                    resetAutoRotate();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselTrack = document.getElementById('carouselTrack');
+        if (carouselTrack) {
+            carouselTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

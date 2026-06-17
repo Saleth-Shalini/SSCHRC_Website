@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surgical Oncology Department</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Doctor Card Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .role-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sea-green), #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, var(--sea-green));
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: var(--sea-green);
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: var(--sea-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+        
+        /* Mobile spacing optimizations */
+        @media (max-width: 768px) {
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Reduce excessive margins on mobile */
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-12 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Reduce grid gaps on mobile */
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Reduce space-y spacing on mobile */
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+            
+            .space-y-12 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            /* Reduce padding in cards and containers on mobile */
+            .p-8 {
+                padding: 1rem !important;
+            }
+            
+            .rounded-2xl.p-8 {
+                padding: 1.25rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Surgical Oncology.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Surgical Oncology.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                   <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+          <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What Does Our Surgical Oncology Department Do? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Does Our Surgical Oncology Department Do?
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Our Surgical Oncology Department is the clinical core for the operative management of solid organ cancers, acting as a vital partner within our hospital's multidisciplinary cancer program. Our mission, guided by the highest standards from globally benchmarked institutions, is three-fold:
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mt-8">
+                    <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-green-50 to-white">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background: #2E8B57;">
+                            <i class="fas fa-search text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Precise Diagnosis and Staging</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            We use advanced surgical techniques, such as biopsy and sentinel lymph node mapping, to accurately determine the type and extent (stage) of the cancer, which is critical for planning the most effective treatment course.
+                        </p>
+                    </div>
+                    
+                    <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background: #FF4500;">
+                            <i class="fas fa-cut text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Definitive Cancer Removal</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our primary goal is to achieve complete tumor clearance—the removal of the entire tumor with microscopically negative margins (R0 resection)—to maximize the chances of long-term local control and survival.
+                        </p>
+                    </div>
+                    
+                    <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background: #1e40af;">
+                            <i class="fas fa-heart text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Holistic Patient Outcomes</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            We are committed not just to removing cancer, but also to preserving function and maximizing quality of life, using techniques that minimize surgical impact and expedite recovery.
+                        </p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mt-8">
+                    We treat cancer as a complex, multifaceted disease, ensuring surgical intervention is expertly sequenced with medical and radiation oncology, providing care that is both comprehensive and personalized.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Surgical Oncology Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Surgical Oncology Services
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our team of specialized surgical oncologists provides expert consultation, diagnosis, and treatment for a wide range of complex and common cancers, utilizing the latest evidence-backed techniques to achieve optimal outcomes.
+                </p>
+            </div>
+            
+            <!-- Cancers We Treat -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Cancers We Treat:</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Head & Neck Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #8B5CF6;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #EDE9FE;">
+                                <i class="fas fa-head-side-virus text-xl" style="color: #8B5CF6;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Head & Neck Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div><strong>Oral Cavity:</strong> Wide Local Excision, Partial/Segmental/Hemi-Mandibulectomy, Composite Resection, Buccal Mucosa Resection, Floor of Mouth Resection, Tongue Surgeries (Partial/Hemi/Total Glossectomy)</div>
+                            <div><strong>Pharynx & Larynx:</strong> Partial/Total Laryngectomy, Pharyngectomy, Tracheoesophageal Voice Prosthesis (TEP)</div>
+                            <div><strong>Salivary Glands & Thyroid:</strong> Parotidectomy, Submandibular Gland Excision, Hemithyroidectomy, Total Thyroidectomy, Central & Lateral Neck Dissection</div>
+                            <div><strong>Neck:</strong> Selective/Modified Radical/Radical Neck Dissection</div>
+                        </div>
+                    </div>
+
+                    <!-- Gynaecologic Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #EC4899;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #FCE7F3;">
+                                <i class="fas fa-venus text-xl" style="color: #EC4899;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Gynaecologic Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div><strong>Cervical Cancer:</strong> Radical Hysterectomy (Wertheim's), Pelvic ± Para-aortic Lymphadenectomy</div>
+                            <div><strong>Ovarian Cancer:</strong> Primary/Interval Cytoreductive Surgery, Oophorectomy (Unilateral/Bilateral), Omentectomy</div>
+                            <div><strong>Uterine & Endometrial:</strong> Total Abdominal Hysterectomy (TAH), Bilateral Salpingo-Oophorectomy (BSO)</div>
+                            <div><strong>Vulvar & Vaginal:</strong> Radical Vulvectomy, Wide Local Excision, Inguinofemoral Lymph Node Dissection</div>
+                            <div><strong>Minimally Invasive:</strong> Laparoscopic/Robotic Gynecologic Oncology Procedures</div>
+                        </div>
+                    </div>
+
+                    <!-- Thoracic Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14B8A6;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #CCFBF1;">
+                                <i class="fas fa-lungs text-xl" style="color: #14B8A6;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Thoracic Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div><strong>Lung:</strong> Lobectomy, Segmentectomy, Pneumonectomy, Sleeve Resection</div>
+                            <div><strong>Mediastinum:</strong> Thymectomy, Mediastinal Tumor Excision</div>
+                            <div><strong>Chest Wall & Pleura:</strong> Chest Wall Tumor Resection, Rib Resection with Reconstruction, Pleurectomy/Decortication</div>
+                            <div><strong>Esophagus:</strong> Esophagectomy (Transhiatal/Transthoracic), Feeding Jejunostomy</div>
+                        </div>
+                    </div>
+
+                    <!-- Bone & Soft Tissue Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #F97316;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #FFEDD5;">
+                                <i class="fas fa-bone text-xl" style="color: #F97316;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Bone & Soft Tissue Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div><strong>Bone Tumors:</strong> Limb Salvage Surgery, Tumor Resection with Endoprosthetic Reconstruction, Pelvic Bone Tumor Resection, Amputation (When Indicated)</div>
+                            <div><strong>Soft Tissue Sarcomas:</strong> Wide Local Excision, Compartment Resection, Re-excision for Margin Clearance</div>
+                            <div><strong>Metastatic Bone Disease:</strong> Stabilization of Pathological Fractures, Palliative Tumor Resections</div>
+                        </div>
+                    </div>
+
+                    <!-- Plastic Surgery & Reconstruction -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #10B981;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #D1FAE5;">
+                                <i class="fas fa-cut text-xl" style="color: #10B981;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Plastic Surgery & Reconstruction</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div><strong>Head & Neck:</strong> PMMC Flap, Free Flaps (Fibula, Radial Forearm, ALT), Local & Regional Flaps</div>
+                            <div><strong>Breast & Trunk:</strong> Oncoplastic Breast Reconstruction, Chest Wall Reconstruction</div>
+                            <div><strong>Extremities:</strong> Soft Tissue Coverage (Flaps & Skin Grafts)</div>
+                            <div><strong>Advanced Techniques:</strong> Microvascular Free Tissue Transfer</div>
+                        </div>
+                    </div>
+
+                    <!-- Gastro-Intestinal Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                                <i class="fas fa-utensils text-xl" style="color: #2E8B57;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Gastro-Intestinal Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div><strong>Esophagus & Stomach:</strong> Esophagectomy, Partial/Total Gastrectomy</div>
+                            <div><strong>Small & Large Intestine:</strong> Right/Left Hemicolectomy, Anterior Resection, Abdominoperineal Resection (APR), Total Colectomy</div>
+                            <div><strong>Hepato-Pancreato-Biliary:</strong> Hepatectomy (Segmental/Major), Whipple's Procedure, Distal Pancreatectomy, Biliary Resections</div>
+                            <div><strong>Anorectal:</strong> Sphincter-Saving Surgeries, Permanent Stoma Creation</div>
+                        </div>
+                    </div>
+
+                    <!-- Breast Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                                <i class="fas fa-ribbon text-xl" style="color: #FF4500;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Breast Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div>Breast Conserving Surgery (Lumpectomy)</div>
+                            <div>Modified Radical Mastectomy</div>
+                            <div>Skin-Sparing Mastectomy</div>
+                            <div>Nipple-Sparing Mastectomy</div>
+                            <div>Sentinel Lymph Node Biopsy</div>
+                            <div>Axillary Lymph Node Dissection</div>
+                            <div>Oncoplastic Breast Surgery</div>
+                        </div>
+                    </div>
+
+                    <!-- Endocrine Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                                <i class="fas fa-flask text-xl" style="color: #1e40af;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Endocrine Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div>Thyroidectomy (Benign & Malignant)</div>
+                            <div>Completion Thyroidectomy</div>
+                            <div>Central/Lateral Neck Dissection</div>
+                            <div>Parathyroidectomy</div>
+                            <div>Adrenalectomy (Open/Laparoscopic)</div>
+                        </div>
+                    </div>
+
+                    <!-- Skin & Soft Tissue Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                                <i class="fas fa-spa text-xl" style="color: #2E8B57;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Skin & Soft Tissue Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div>Wide Local Excision of Skin Cancers</div>
+                            <div>Melanoma Surgery</div>
+                            <div>Sentinel Lymph Node Biopsy</div>
+                            <div>Regional Lymph Node Dissection</div>
+                            <div>Reconstructive Closure/Grafting</div>
+                        </div>
+                    </div>
+
+                    <!-- Genito-Urinary Surgical Oncology -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                                <i class="fas fa-tint text-xl" style="color: #FF4500;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Genito-Urinary Surgical Oncology</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div><strong>Kidney:</strong> Partial Nephrectomy, Radical Nephrectomy</div>
+                            <div><strong>Bladder:</strong> Radical Cystectomy, Urinary Diversion (Ileal Conduit/Neobladder)</div>
+                            <div><strong>Prostate:</strong> Radical Prostatectomy</div>
+                            <div><strong>Testicular & Penile:</strong> Orchiectomy, Penectomy (Partial/Total), Inguinal Lymph Node Dissection</div>
+                        </div>
+                    </div>
+
+                    <!-- Peritoneal Surface Malignancies -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                                <i class="fas fa-lungs text-xl" style="color: #1e40af;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Peritoneal Surface Malignancies</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div>Cytoreductive Surgery (CRS)</div>
+                            <div>Omentectomy</div>
+                            <div>Peritonectomy Procedures</div>
+                            <div>Multivisceral Resections</div>
+                        </div>
+                    </div>
+
+                    <!-- Common Supportive & Adjunct Oncosurgeries -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #6366F1;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #E0E7FF;">
+                                <i class="fas fa-heartbeat text-xl" style="color: #6366F1;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Common Supportive & Adjunct Oncosurgeries</h4>
+                        </div>
+                        <div class="text-gray-700 text-sm space-y-2">
+                            <div>Image-Guided Biopsies</div>
+                            <div>Sentinel Lymph Node Mapping</div>
+                            <div>Port-a-Cath Insertion</div>
+                            <div>Feeding Gastrostomy/Jejunostomy</div>
+                            <div>Tracheostomy</div>
+                            <div>Palliative Surgical Procedures</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Advanced Procedures Offered -->
+            <div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Advanced Procedures Offered:</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                                <i class="fas fa-robot text-2xl" style="color: #2E8B57;"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Minimally Invasive Surgery (MIS)</h4>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            This includes Laparoscopic and Robotic-Assisted Surgery, allowing for complex resections through small incisions, leading to faster healing and less scarring.
+                        </p>
+                    </div>
+                    
+                    <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                                <i class="fas fa-thermometer-half text-2xl" style="color: #FF4500;"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Hyperthermic Intraperitoneal Chemotherapy (HIPEC)</h4>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            A highly specialized two-step procedure involving the surgical removal of visible tumors (Cytoreductive Surgery) followed by a heated chemotherapy solution circulated directly within the abdominal cavity for peritoneal cancers.
+                        </p>
+                    </div>
+                    
+                    <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                                <i class="fas fa-hands-helping text-2xl" style="color: #1e40af;"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Complex Reconstructive Procedures</h4>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            Working closely with Plastic Surgery, we ensure immediate reconstruction following large tumor resections (e.g., breast, head and neck, soft tissue).
+                        </p>
+                    </div>
+                    
+                    <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                                <i class="fas fa-microscope text-2xl" style="color: #2E8B57;"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Oncologic Biopsy</h4>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            Precise diagnostic procedures, including image-guided and core needle biopsies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Unique Strengths (USPs) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Surgical Oncology Department?
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Choosing our department means choosing a team dedicated to global standards of cancer care and innovation.
+                </p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- A. World-Class Expertise & Collaboration -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57;">
+                                <i class="fas fa-globe text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">A. World-Class Expertise & Collaboration</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-md mr-3" style="color: #2E8B57;"></i>
+                                Site-Specific Expertise
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our surgeons are highly fellowship-trained and specialize in specific organ systems (e.g., HPB, Melanoma), ensuring you benefit from unparalleled knowledge and technical skill, mirroring the model of leading global cancer centers like MD Anderson and Mayo Clinic.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-users mr-3" style="color: #2E8B57;"></i>
+                                Truly Multidisciplinary Approach
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Every patient's case is reviewed in a Tumor Board meeting involving Surgical, Medical, and Radiation Oncologists, guaranteeing that your treatment plan is comprehensive, personalized, and follows the latest ASCO/NCCN guidelines.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- B. Leading-Edge Technology for Precision -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500;">
+                                <i class="fas fa-microchip text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">B. Leading-Edge Technology for Precision</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-robot mr-3" style="color: #FF4500;"></i>
+                                Robotic Surgery Platform
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We utilize the latest robotic systems (e.g., Da Vinci) for complex procedures, which provides surgeons with 3D visualization and superior dexterity, leading to more accurate dissection, reduced blood loss, and excellent functional outcomes.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-x-ray mr-3" style="color: #FF4500;"></i>
+                                Intraoperative Imaging
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The use of Intraoperative Ultrasound and other advanced imaging tools during surgery allows the surgeon to visualize tumors and margins in real-time, enhancing the safety and completeness of the resection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- C. Patient-Focused Recovery and Safety -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #1e40af;">
+                                <i class="fas fa-heartbeat text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">C. Patient-Focused Recovery and Safety</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-running mr-3" style="color: #1e40af;"></i>
+                                Enhanced Recovery After Surgery (ERAS) Protocols
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We implement evidence-based protocols to manage pain, nutrition, and mobility immediately after surgery, helping to shorten your hospital stay and dramatically speed up your return to normal life.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-shield-alt mr-3" style="color: #1e40af;"></i>
+                                Minimized Surgical Impact
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                By prioritizing minimally invasive techniques where appropriate, we reduce the physical toll of surgery, which is particularly beneficial when further treatments like chemotherapy or radiation are planned.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Surgical Oncology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our distinguished team of surgical oncologists dedicated to providing advanced surgical treatments and procedures for cancer patients.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                     <!-- Doctor 1 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. B. S. Srinath.webp" alt="Dr. B. S. Srinath" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+B.+S.+Srinath'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. B. S. Srinath</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surg (1976), FRCS (Edin)(1981), FRCS(Glas)(1981)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">HOD, Senior Consultant Surgical Oncologist</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>50 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. B. S. Srinath.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Ganesh Nayak.webp" alt="Dr. Ganesh Nayak" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Ganesh+Nayak'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Ganesh Nayak</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS - Gen Surgery (March 1972), DABS (1977), M.Ch, FICS (1985)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant Surgical Oncologist</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>54 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Ganesh Nayak.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Manjunath Sastry.webp" alt="Dr. Manjunath Sastry" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Manjunath+Sastry'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Manjunath Sastry</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, DNB Gen Surg (1993), Fellow Adv Lap & Robotic Surg (2005)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant Surgical Oncologist</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>33 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Manjunath Sastry.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- Doctor 4 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Srivatsa H G.webp" alt="Dr. Srivatsa H G" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Srivatsa+H+G'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Srivatsa H G</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (Oct 2005), MCh-Surgical Oncology (July 2014)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Monday to Friday: 10:00 AM to 5:00 PM, Saturday: 10:00 AM to 2:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>21 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Srivatsa H. G.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 5 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sanjeev Kulkarni.webp" alt="Dr. Sanjeev Kulkarni" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sanjeev+Kulkarni'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sanjeev Kulkarni</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (May 2012), MCh-Surgical Oncology (July 2017)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Monday to Friday: 9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>14 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sanjeev Kulkarni.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- Doctor 6 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Vishnu Kurpad.webp" alt="Dr. Vishnu Kurpad" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Vishnu+Kurpad'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Vishnu Kurpad</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (June 2013), MCh-Surgical Oncology (July 2016)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>13 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Vishnu Kurpad.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Doctor 7 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Abhay K Kattepur.webp" alt="Dr. Abhay K Kattepur" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Abhay+K+Kattepur'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Abhay K Kattepur</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (2012), DNB-Gen Surgery (2012), MRCS (2014), DNB - Surgical Oncology (2017), MCh-Surgical Oncology (2017)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Full time</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>14 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Abhay K Kattepur.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- Doctor 8 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sasi Mouli V. V. H. P. K..webp" alt="Dr. Sasi Mouli V. V. H. P. K." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sasi+Mouli'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sasi Mouli V. V. H. P. K.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS - Gen Surgery (June 2015), DNB - Gen Surgery, MCh - Endocrine Surgery (Nov 2020), Fellowship in Minimal Access Surgery</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>11 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sasi Mouli V. V. H. P. K..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Doctor 9 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Kanyadhara Lohita Krishna.webp" alt="Dr. Kanyadhara Lohita Krishna" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Kanyadhara+Lohita+Krishna'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Kanyadhara Lohita Krishna</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (2017), Fellowship in Breast Cancer Diseases (July 2019), MCh Breast Oncoplasty (Dec 2022)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Full time</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>9 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Kanyadhara Lohitha Krishna.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Doctor 10 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Raksha Nadig.webp" alt="Dr. Raksha Nadig" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Raksha+Nadig'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Raksha Nadig</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (Jun 2018), MCh-Surgical Oncology (Jan 2024)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Junior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:30 A.M. - 6:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>8 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Raksha Nadig.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+                    
+                     <!-- Doctor 11 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Venkatachala.webp" alt="Dr. Venkatachala" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Venkatachala'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Venkatachala K</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (May 2002), MCh-Surgical Oncology (July 2005)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>24 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Venkatachala.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 12 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sriram V.webp" alt="Dr. Sriram V" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sriram+V'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sriram V</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS - General Surgery (2010), MCh-Cardio Thoracic and Vascular Surgery (Aug 2014), Surgical Oncology - Thoracic Fellowship (2019), MTI Fellowship Thoracic Surgery (Mar 2020), Minimally Invasive Thoracic Surgery (June 2024)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Part-time</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>16 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sriram V.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+                    
+                     <!-- Doctor 13 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sonal Asthana.webp" alt="Dr. Sonal Asthana" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sonal+Asthana'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sonal Asthana</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (1997), ASTS Abdominal Organ transplant fellowship (2009), Masters in Experimental Surgery (2011)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>On Call</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>29 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sonal Asthana.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            const track = document.getElementById('carouselTrack');
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                    resetAutoRotate();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        document.getElementById('carouselTrack').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        document.getElementById('carouselTrack').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <!-- Footer JavaScript -->
+    <script src="../footer.js"></script>
+    <script src="../footer-main.js"></script>
+    
+    <!-- Chatbox FAB Button -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Chatbox JavaScript - Load after chatbot HTML elements -->
+    <script src="../chatbox.js"></script>
+</body>
+</html>
+

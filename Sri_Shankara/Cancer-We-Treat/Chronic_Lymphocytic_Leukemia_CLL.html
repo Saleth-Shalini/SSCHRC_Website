@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Lymphocytic Leukemia (CLL) - Sri Shankara Cancer Hospital & Research Centre</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Title and Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Chronic Lymphocytic Leukemia (CLL)
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Leukemia is a general term for cancers affecting the blood and the blood-forming tissues of the body. Chronic Lymphocytic Leukemia (CLL) is the most prevalent form of the disease, with the majority of cases occurring in individuals aged 55 and over.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Like all types of leukemia, CLL begins with abnormalities in the creation of blood cells. Blood cells are primarily produced in the bone marrow, where immature stem cells develop into either lymphoid or myeloid stem cells.
+                </p>
+            </div>
+
+            <!-- Blood Cell Development -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Normal Blood Cell Development
+                    </h3>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Lymphoid stem cells mature into lymphocytes (B cells and T cells), which are crucial for the immune system. Myeloid stem cells mature into other white blood cells (monocytes and granulocytes), red blood cells (which carry oxygen), and platelets (which help blood to clot).
+                    </p>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow border-t-4" style="border-color: #FF4500;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">CLL Development</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            CLL develops from B cells. A cancerous B cell grows and multiplies abnormally in the bone marrow, lymph nodes, liver, and spleen, leading to a high white blood cell count. These cancerous cells are unable to function correctly to fight infection. They also crowd out healthy cells in the marrow and can cause the enlargement of the lymph nodes, liver, and spleen.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">
+                            CLL is a chronic disease, meaning it is typically slow-growing and less aggressive than acute forms of leukemia. The presence of specific genetic mutations or proteins, however, can significantly affect a patient's outlook.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    CLL Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases the likelihood of developing a disease, though not all individuals with risk factors will develop the condition. Risk factors for CLL include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Almost 90% of new CLL cases are diagnosed in people aged 55 and older.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sex</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        More men develop CLL than women.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Having a parent, sibling, or child with CLL increases one's risk.
+                    </p>
+                </div>
+
+                
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Chemical Exposure</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Exposure to Agent Orange is a known risk factor for CLL.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    As chronic leukemia develops slowly, many CLL patients may not experience symptoms for months or even years. In such cases, the disease is often discovered incidentally through a routine blood test.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    When symptoms do develop, they are frequently related to a deficiency of properly functioning blood cells, which impacts the body's ability to transport oxygen, fight infection, and stop bleeding. Symptoms can also be caused by low levels of haemoglobin.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Common CLL Symptoms Include:</h3>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Weakness, tiredness, and fatigue (often caused by the leukemia or low haemoglobin).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Fever and frequent infections (due to low counts of healthy white blood cells).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Excessive sweating or night sweats.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Easy bleeding and bruising, including bleeding of the gums (due to low platelet levels).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Recurrent nose bleeds.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Petechiae (a rash-like collection of pinpoint spots on the skin caused by bleeding into the skin, also due to low platelet levels).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Shortness of breath (may be due to low haemoglobin levels or lung infections).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Swollen lymph nodes (in the neck, underarm, stomach, or groin).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Loss of appetite or a feeling of fullness after eating very little (due to enlargement of the spleen).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Unexplained weight loss.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Bone and joint pain.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            For female patients, longer or heavier than normal menstruation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A successful treatment journey begins with an accurate and precise diagnosis.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Diagnosing Leukemia</h3>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Diagnosis typically starts with a simple blood test called a Complete Blood Count (CBC), which a doctor may order after evaluating a patient's symptoms or as part of a routine check-up.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        If the CBC shows evidence of leukemia cells or abnormal levels of red blood cells, white blood cells, or platelets, doctors may order further tests to provide a definitive diagnosis, determine the extent of the disease, and monitor its progress.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy (Bone Marrow Biopsy)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is a key diagnostic test for leukemia. It involves using a needle to take a sample of bone marrow from the hip to check for the presence of cancerous cells.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Genetic and Molecular Testing (Molecular Profiling)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        If leukemia is diagnosed, additional tests can determine if specific chromosomes or gene mutations are present in the diseased cells, or if the cells have particular proteins or molecules on their surface. This profiling helps doctors determine the exact type of leukemia and the patient's prognosis, informing the creation of the most effective treatment plan.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Lumbar Puncture (Spinal Tap)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        While leukemia starts in the bone marrow, it may spread to the central nervous system (brain and spinal cord). A lumbar puncture is used to examine the patient's spinal fluid for this spread. During this procedure, a small dose of chemotherapy may also be administered into the spinal fluid to kill any leukemia cells that may be present.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Exams</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Doctors may order various imaging exams to look for the presence of cancer in other parts of the body.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: CLL Staging -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    CLL Staging
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Staging is the process of learning how far the cancer has spread within the patient's body, which is vital for determining prognosis and treatment plans. CLL is typically staged as follows (based on the National Cancer Institute system):
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage 0</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Too many lymphocytes are present in the blood, but there are no other signs or symptoms of leukemia. This stage is considered indolent (slow-growing).
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage I</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Too many lymphocytes in the blood, and the lymph nodes are larger than normal.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage II</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Too many lymphocytes in the blood, and the liver or spleen is larger than normal. Lymph nodes may also be larger than normal.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage III</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Too many lymphocytes in the blood, and there is a low level of red blood cells (anaemia). The lymph nodes, liver, or spleen may be enlarged.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage IV</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Too many lymphocytes in the blood, and there is a low level of platelets (thrombocytopenia). The lymph nodes, liver, or spleen may be enlarged, or there may be too few red blood cells.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The ultimate goal of leukemia treatment is to achieve remission and, where possible, a cure. Complete remission generally means that a patient's bone marrow has no detectable microscopic evidence of the disease and their blood counts have returned to normal. Patients who remain in continuous complete remission for an extended period are considered cured, having an extremely low chance of recurrence.
+                </p>
+            </div>
+
+            <!-- Treatment Plans -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Chronic Lymphocytic Leukemia (CLL) Treatment Plans
+                    </h3>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Clinical studies have often not demonstrated a benefit to immediate treatment for many early-stage CLL patients. Because of this, doctors frequently recommend active surveillance.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Active Surveillance</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Patients undergo regular blood tests to monitor the disease's progress, specifically watching for an increase in leukemia cell count and a decrease in haemoglobin and platelet counts. Symptoms are managed as they arise.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Initial Treatment</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                If and when the disease progresses to a set point (known as an indication for treatment), initial therapies can include targeted therapy and a combined chemotherapy/immunotherapy treatment.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">
+                            These initial treatments generally put patients into remission. Some may require continued maintenance therapy to sustain remission, while others may stop treatment entirely. All CLL patients in remission carry a risk of recurrence, which may necessitate further courses of treatment, including new drug combinations or a stem cell transplant.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Treatment Options -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Options
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs used to kill cancer cells, control their growth, or alleviate disease-related symptoms. It may involve a single drug or a combination, depending on the cancer type and its rate of growth.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs specifically designed to interfere with the molecules (often proteins) that cancer cells need to survive, multiply, and spread.
+                    </p>
+                </div>
+
+                <!-- Stem Cell Transplantation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Stem Cell Transplantation (Bone Marrow Transplant)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A procedure that replaces cancerous bone marrow with new, healthy bone marrow stem cells. This is typically done after intense chemotherapy to prepare the body. This physically challenging treatment is generally reserved for patients whose leukemia has returned, has not responded to standard treatments, or who have a high-risk form of the disease that makes a cure unlikely with standard therapies.
+                    </p>
+                </div>
+
+                <!-- Clinical Trials -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Clinical Trials</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        As a leading cancer centre, SSCHRC offers multiple clinical trials for CLL. These trials explore new drugs and drug combinations, including targeted therapies and immunotherapies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9a799bcd6a7cd86d","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+
+</html>

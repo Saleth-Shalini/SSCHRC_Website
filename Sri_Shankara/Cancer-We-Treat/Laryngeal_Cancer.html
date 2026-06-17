@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laryngeal Cancer: Information for Patients</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Laryngeal Cancer: Overview
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Laryngeal cancer is a rare form of throat cancer that develops in the larynx, commonly known as the voice box. This cancer begins when a cell within the larynx mutates and starts to multiply rapidly.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The voice box is a vital structure that houses the vocal cords, enabling us to speak. It also functions as a crucial valve, opening to allow breathing and closing to prevent food or drink from entering the trachea (windpipe).
+                </p>
+            </div>
+
+            <!-- Larynx Structure -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        The larynx is divided into three main parts:
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Glottis</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The central portion containing the vocal cords.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Supraglottis</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The area situated above the vocal cords.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Subglottis</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The area located below the vocal cords and above the trachea.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">
+                            Nearly all laryngeal cancers originate in the lining of the structure, which is composed of thin, flat cells called squamous cells. For this reason, most cases are classified as squamous cell carcinoma.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Laryngeal Cancer Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases an individual's likelihood of developing a specific disease. Key risk factors for laryngeal cancer include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Tobacco Use</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Individuals who use tobacco have a significantly increased risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Alcohol Consumption</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Frequent consumption of large amounts of alcohol is another major risk factor.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sex</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Males are more likely to develop laryngeal cancer than females.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Most cases are diagnosed in people over the age of 55, and it is rarely found in those under 45.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Race</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The condition is more common in Black and white people compared to Hispanic and Asian populations.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gastric Reflux</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Gastric reflux is also a risk factor for laryngeal cancer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Symptoms of laryngeal cancer may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hoarseness or other vocal changes</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is the most common symptom and occurs when a tumour affects the vocal cords.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">A persistent sore throat</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A sore throat that does not go away may indicate laryngeal cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">A lump in the neck</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This can result from swollen lymph nodes.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Difficulty swallowing</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Trouble swallowing food or liquids may be a symptom.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Earaches</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Persistent ear pain may be associated with laryngeal cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Persistent bad breath</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Ongoing bad breath can be a symptom of laryngeal cancer.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Important Note:</strong> It is important to remember that these symptoms do not definitively mean you have cancer. However, if you experience any of these, it is essential to discuss them with your doctor, as they may indicate other health issues.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Early and accurate diagnosis of laryngeal cancer is crucial, as it significantly increases the chance of successful treatment while helping to preserve a patient's quality of life, including their ability to speak and swallow.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If you have symptoms suggestive of laryngeal cancer, your doctor will perform a thorough examination and ask questions about your health, lifestyle (including smoking and drinking habits), and family medical history.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The following tests are used to diagnose laryngeal cancer, determine if it has spread (staged), and monitor the disease's response to treatment:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Fiberoptic Laryngoscopy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is often the first diagnostic test. A doctor passes a small, flexible camera through the nose to examine the larynx. This procedure helps the doctor determine if a biopsy is required.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A biopsy is the only way to definitively diagnose throat cancer. It involves doctors retrieving suspected cancerous tissue for microscopic study. Different methods are used depending on the tumour's location:
+                    </p>
+                    <ul class="space-y-3 text-gray-700 ml-6">
+                        <li><strong>Fine-needle-aspiration biopsy (FNA):</strong> Used for a lump in the neck that can be felt externally. A thin needle is inserted to withdraw cells for examination, often guided by ultrasound to confirm correct placement.</li>
+                        <li><strong>Conventional Incisional Biopsy:</strong> A surgical procedure to remove a part of the suspected cancerous tissue.</li>
+                        <li><strong>Excisional Biopsy:</strong> A type of biopsy that removes most or all of the suspected cancerous tissue. This is often done in the operating room, sometimes along with a tonsillectomy.</li>
+                        <li><strong>Endoscopic Biopsy:</strong> An endoscope (a long, thin tube with a light and lens) is inserted through the mouth, nose, or an incision. The endoscope is fitted with a tool to safely remove tissue samples.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Exams</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Imaging exams help to precisely locate the suspected cancer, check for spread, and monitor the disease's progression and treatment response. These may include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>CT or CAT (Computed Axial Tomography) scans</li>
+                        <li>PET (Positron Emission Tomography) scans</li>
+                        <li>MRI (Magnetic Resonance Imaging) scans</li>
+                        <li>Ultrasound</li>
+                        <li>Chest and dental X-rays</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Swallowing Tests</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These tests are used to assess the throat's function, which is critical for treatment planning. Types of swallowing tests include:
+                    </p>
+                    <ul class="space-y-3 text-gray-700 ml-6">
+                        <li><strong>Barium Swallow:</strong> The patient drinks a liquid containing barium, which enhances the visibility of certain areas during X-rays. This evaluates the passage from the throat to the stomach, looking for changes in structure and muscle movement.</li>
+                        <li><strong>Modified Barium Swallow:</strong> The patient ingests liquid, pudding, and solid food, all containing barium. A speech pathologist and radiologist observe the swallowing process in real-time using a specialised X-ray exam called fluoroscopy to evaluate the associated structures and movements.</li>
+                        <li><strong>Fiberoptic Endoscopic Examination of Swallowing (FEES):</strong> This relies on a small, flexible endoscope inserted through the nose, allowing a doctor or speech pathologist to examine swallowing function.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Laryngeal Cancer Staging</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Staging is the process of determining the extent of the disease and whether it has spread. This information is essential for doctors to decide on the most appropriate treatment and determine the outlook for recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    SSCHRC offers personalised laryngeal cancer treatment to maximise the chances of a cure while maintaining a special focus on the patient's quality of life. As the oropharynx is critical for speaking, breathing, and swallowing, treatment plans often prioritise preserving these functions alongside eliminating the cancer.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If the disease is detected early, the patient may receive radiation therapy, sometimes combined with chemotherapy. Patients with more advanced disease may require surgery.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Surgical options for laryngeal cancer include:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Partial Laryngectomy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This procedure removes only the cancerous area of the larynx, preserving as much healthy tissue as possible to maintain function. Patients can usually still speak normally after a partial laryngectomy, though with some degree of hoarseness.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Total Laryngectomy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The entire larynx, including the vocal cords, is removed. Patients will require a permanent opening (stoma) in the neck to breathe through and will need assistance from speech pathologists to learn new methods of communication.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Neck Dissection</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This procedure involves removing lymph nodes from the neck. As lymph nodes are part of the immune system and are often the first site for cancer to spread, a neck dissection is frequently performed concurrently with a total or partial laryngectomy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Radiation therapy uses focused, powerful beams of energy to destroy cancer cells. Various techniques are employed to accurately target the tumour while minimising damage to surrounding healthy tissue. Types of radiation therapy include:
+                    </p>
+                    <div class="space-y-3 ml-6">
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-900 mb-1">Intensity Modulated Radiation Therapy (IMRT)</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                This technique focuses multiple radiation beams of varying intensities directly onto the tumour for the highest possible dose. A variation of IMRT is Volumetric Modulated Arc Therapy (VMAT), which uses a rotating treatment machine to deliver radiation from multiple angles.
+                            </p>
+                        </div>
+
+                        
+
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-900 mb-1">MR LINAC Radiotherapy</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                This advanced approach uses a specialised device to adjust treatment on a daily basis, which can reduce side effects and effectively treat tumours that change shape or position.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-900 mb-1">Stereotactic Body Radiation Therapy (SBRT)</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                Also known as stereotactic ablative radiotherapy, SBRT precisely targets tumours with very high doses of radiation by using several beams of various intensities aimed at the tumour from different angles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Chemotherapy involves the use of drugs to kill cancer cells, control their growth, or relieve disease-related symptoms. Treatment may consist of a single drug or a combination of two or more, depending on the cancer type and its rate of growth.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Targeted therapy drugs are specifically designed to stop or slow the growth or spread of cancer at a cellular level. Cancer cells depend on specific molecules (often proteins) to survive, multiply, and spread. Targeted therapies are designed to interfere with, or target, these molecules or the cancer-causing genes that produce them.
+                    </p>
+                </div>
+
+                <!-- Immune Checkpoint Inhibitors -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immune Checkpoint Inhibitors</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        These are a type of immunotherapy that works by preventing the body's immune system from 'turning off' before the cancer is fully eliminated. For laryngeal cancer, immune checkpoint inhibitors are currently approved for use only in Stage IV disease and may be used alone or combined with other treatments such as surgery or radiation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Specialized Care -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Specialized Care for Laryngeal Cancer Patients
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Because throat cancer and its treatments can affect a person's ability to eat, drink, and speak, as well as their appearance, SSCHRC offers a range of therapies and services to help patients adjust to and overcome these challenges:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Speech Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC speech pathologists and audiologists provide the most advanced techniques for restoring speech after cancer treatment.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Swallowing Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Experts in the Speech Pathology and Audiology Section are dedicated to evaluating and treating patients who experience difficulty eating, drinking, and swallowing after treatment.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Reconstructive Surgery</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our renowned reconstructive surgeons can perform procedures to help restore a patient's appearance impacted by throat cancer treatment.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Dental Care</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC dentists specialise in designing implants and performing procedures to help patients restore appearance and function when their teeth and jaw are damaged by the disease or its treatments.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Survivorship</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A dedicated survivorship clinic addresses the long-term needs of head and neck cancer patients.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Regular follow-up appointments and screenings are vital after treatment due to the high risk of the cancer returning (recurring) in the throat or other areas of the head and neck. Patients are advised to see their doctors every three to six months for the first two years after treatment, as most recurrences happen within this period. Furthermore, throat cancer patients are strongly urged to abstain from smoking and drinking alcohol both during and after treatment, as these habits can reduce the effectiveness of treatment, worsen side effects, and significantly increase the chance of the cancer returning.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

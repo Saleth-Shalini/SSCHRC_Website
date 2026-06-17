@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head and Neck Cancer: Health Information Page</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Head and Neck Cancer: Overview
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Head and neck cancers originate when a cell in the head and neck region undergoes a mutation and begins to divide uncontrollably.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    These tumours can form in various locations, including the ears, eyes, mouth, nose, throat, larynx (voice box), thyroid, and the base of the skull. They can also develop in the skin of the head and neck. It is important to note that brain cancers involve different cells and require separate treatment plans, and as such, are not classified as a head and neck cancer.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Due to their critical location, these cancers can significantly affect many aspects of daily life, potentially impacting one's ability to see, hear, chew, swallow, smell, and talk. They may also disrupt hormone levels that regulate key bodily functions, such as digestion and heart rate.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Successful treatment of head and neck cancer requires a team of highly experienced specialists dedicated to managing the tumours while striving to maximise the patient's quality of life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Types of Head and Neck Cancer -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Types of Head and Neck Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Head and neck cancer is a broad term encompassing a variety of specific cancer types, including:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Eye Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancers that develop in or around the eye, such as the eyeball, eyelid, and orbit. This includes subtypes like melanoma, lymphoma, sarcoma, and carcinoma. A rare pediatric form is Retinoblastoma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Oral Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Often found in the tongue, lips, and floor of the mouth, but can also start in the gums, salivary glands, or the roof of the mouth.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Parathyroid Disease</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Diseases of the parathyroid glands in the neck that control calcium and phosphorus levels. Both benign (non-cancerous) and malignant (cancerous) types exist.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Pituitary Tumours</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Tumours starting in the pituitary gland at the base of the brain. These are almost always benign but can cause serious medical issues.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Skin Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The most common type of cancer, with many cases developing on the head and neck (ears, face, neck, scalp). Types include basal cell carcinoma, squamous cell carcinoma, melanoma, and Merkel cell carcinoma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Salivary Gland Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancers forming in the minor or major salivary glands found in the mouth, throat, and sinus cavities.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Skull Base Tumours</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Tumours starting in or extending into the base of the skull, which can be malignant or benign.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Throat Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        A general term for cancers classified by their location:
+                    </p>
+                    <ul class="space-y-1 text-gray-700 ml-6">
+                        <li>Oropharynx (soft palate, back of tongue, tonsils).</li>
+                        <li>Nasopharynx (behind the nasal cavity).</li>
+                        <li>Hypopharynx (connects the throat to the oesophagus and windpipe).</li>
+                        <li>Larynx (voice box).</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Thyroid Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Begins in the butterfly-shaped thyroid gland in the front of the neck. Most cases are slow-growing and treatable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Head and Neck Cancer Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Factors that may increase the chance of developing head and neck cancer include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Tobacco Use</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Using tobacco in any form significantly increases the risk for oral and throat cancers.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Alcohol Consumption</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drinking alcohol is linked to an increased risk of developing throat and oral cancers.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sun/Ultraviolet Light Exposure</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Skin damage from UV light can cause skin cancer, including melanoma, in the head and neck area.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Infection with Human Papillomavirus (HPV)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is the most significant risk factor for many types of cancer, particularly oropharyngeal cancer. Since HPV is spread through sexual contact, a person's sexual history is a related factor.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Previous Radiation Treatment</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Having received radiation to the head and neck area for a prior cancer increases the risk of developing a new one, though the benefits of the initial treatment typically outweigh this risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Risk varies by type (e.g., most oral cancers are found in people over 45; most thyroid cancers are diagnosed in people aged 20-55).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sex</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Oral and throat cancers are more common in men, while thyroid cancer is more common in women.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Genetic Conditions</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Some head and neck cancers are associated with inherited genetic conditions. Genetic counselling may be recommended for you and your family.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The symptoms of head and neck cancer can vary widely depending on the specific disease and the tumour's location (e.g., eye cancer may cause vision issues, while throat cancer can cause difficulty chewing).
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">The most common symptoms of head and neck cancer include:</h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <p class="text-gray-700 leading-relaxed">A painless lump in the neck</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <p class="text-gray-700 leading-relaxed">Changes or problems with vision, including double vision</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">Hearing loss, often limited to one ear</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <p class="text-gray-700 leading-relaxed">Dizziness or challenges with balance</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <p class="text-gray-700 leading-relaxed">Changes in voice, such as hoarseness</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">Difficulty opening the mouth</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <p class="text-gray-700 leading-relaxed">Trouble breathing and speaking</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <p class="text-gray-700 leading-relaxed">Difficulty chewing and swallowing</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">Nasal congestion or a stuffy nose</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <p class="text-gray-700 leading-relaxed">Nose bleeds</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <p class="text-gray-700 leading-relaxed">Facial weakness or paralysis</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">Pain in the head and neck area, including the throat and ear</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Additionally, some head and neck cancers can affect hormone levels, leading to symptoms such as:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">Unexplained weight gain or weight loss</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <p class="text-gray-700 leading-relaxed">High blood pressure</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <p class="text-gray-700 leading-relaxed">Excessive sweating</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">Constipation</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <p class="text-gray-700 leading-relaxed">Frequent urination</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <p class="text-gray-700 leading-relaxed">Bone pain or fractured bones</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">Kidney stones</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <p class="text-gray-700 leading-relaxed">Muscle weakness</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <p class="text-gray-700 leading-relaxed">Fatigue</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to remember that these symptoms do not automatically indicate cancer. However, any persistent or concerning symptoms should be discussed promptly with your doctor, as they may signal other health problems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Early and accurate diagnosis is crucial for increasing the chance of successful treatment and preserving the patient's quality of life, including the ability to hear, speak, and swallow. The experts at SSCHRC possess extensive skill and experience in diagnosing the various types of head and neck cancer.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Doctors at SSCHRC use this high level of expertise, combined with advanced diagnostic tools, to accurately diagnose each cancer type and subtype, which informs the best possible personalised treatment plans.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Head and Neck Cancer Diagnostic Tests</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    If you have symptoms that may suggest head and neck cancer, your doctor will conduct a physical examination and ask about your health history and lifestyle. You may then undergo one or more diagnostic tests, which can be used to identify cancer, determine if it has spread, and monitor your response to treatment.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Physical Exam</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Doctors examine the suspected area, sometimes using special tools like:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Indirect Laryngoscopy:</strong> Using a small mirror and light to view the throat.</li>
+                        <li><strong>Fiberoptic Laryngoscopy (Nasolaryngoscopy):</strong> Using a small, flexible telescope passed through the nose to examine the throat and voice box.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A small tissue sample is removed and examined under a microscope for cancer cells. This may be done with a needle and local anaesthesia or require a surgical procedure under general anaesthesia.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Exams</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These allow doctors to see inside the body without surgery:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>CT scan (Computerised Tomography)</li>
+                        <li>MRI (Magnetic Resonance Imaging)</li>
+                        <li>Ultrasound</li>
+                        <li>PET scan (Positron Emission Tomography)</li>
+                        <li>X-Ray</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Blood and Urine Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These check hormone levels (impacted by thyroid and parathyroid tumours) and monitor treatment response and side effects.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Functional Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Patients with suspected cancer in the throat, eyes, or ears may be tested for vision, hearing, swallowing, and/or balance.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Molecular Diagnosis</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Identifies the specific molecular features of the cancer to inform treatment selection.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Genetic Testing</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Identifies patients with genetic conditions that may be linked to certain cancers, helping to assess risk for the patient and their family.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, head and neck cancer patients receive care from a dedicated team of expert doctors, including medical oncologists, radiation oncologists, and surgeons, who specialise exclusively in cancers of the head and neck. This concentrated experience allows them to develop a personalised and coordinated treatment plan for each patient.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Treatment plans may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">Minimally invasive surgical procedures, often leading to shorter hospital stays and faster recovery.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <p class="text-gray-700 leading-relaxed">Advanced radiation therapy techniques that minimise radiation exposure to healthy tissue.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <p class="text-gray-700 leading-relaxed">Immunotherapy, which harnesses the body's own immune system to fight cancer.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">Targeted therapy, which slows or stops cancer growth at the cellular level.</p>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Treatment Modalities</h3>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A primary treatment for many types of head and neck cancer.
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Open Surgery</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                Involves making incisions in the skin to remove the tumour and affected tissue, with care taken to protect important nerves and vessels. Plastic surgeons often perform reconstruction to restore function and appearance.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Minimally Invasive Surgery</h5>
+                            <p class="text-gray-700 leading-relaxed mb-2">
+                                Performed without large incisions, resulting in quicker recovery. This includes:
+                            </p>
+                            <ul class="space-y-1 text-gray-700 ml-6">
+                                <li>Endoscopic surgery (using a thin tube with a camera).</li>
+                                <li>Laser surgery.</li>
+                                <li>Robotic surgery (using robotic tools to access small spaces like the throat).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Uses powerful, focused beams of energy to destroy cancer cells, accurately targeting the tumour while limiting side effects.
+                    </p>
+                    <div class="space-y-3">
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">External Beam Radiation:</h5>
+                            <ul class="space-y-1 text-gray-700 ml-6">
+                                <li>Intensity Modulated Radiation Therapy (IMRT), including Volumetric Modulated Arc Therapy (VMAT).</li>
+                                
+                                <li>Stereotactic Body Radiation Therapy (SBRT), which delivers very high levels of radiation in fewer sessions.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Brachytherapy</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                Delivers radiation using small pieces of radioactive material placed directly on or inside the tumour site.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs used to kill cancer cells, control their growth, or relieve symptoms. It may involve a single drug or a combination.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Hormone Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Used to adjust hormone levels that might encourage the growth of certain cancers.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs designed to interfere with the specific molecules or cancer-causing genes that cancer cells need to survive and spread.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Immunotherapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Treatments that improve the immune system's ability to recognise and eliminate cancer, such as immune checkpoint inhibitors.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Cryoablation (Cryotherapy/Cryosurgery)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A non-invasive procedure that uses extreme cold to freeze and destroy cancerous tissue.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Active Surveillance</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        For slow-growing cancers, doctors may recommend closely monitoring the disease without immediate active treatment, initiating therapy only if the disease progresses.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Clinical Trials</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC offers an extensive clinical trials programme that provides access to new and emerging treatments, including new immunotherapies, targeted therapies, and advanced radiation techniques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Specialised Care -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Specialised Care for Head and Neck Cancer Patients
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Head and neck cancer and its treatments can impact a patient's ability to eat, drink, speak, and their appearance. SSCHRC offers comprehensive services to help patients manage and overcome these challenges:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Audiology and Otology Care</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Examination and treatment for the tumour's impact on hearing and balance.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Speech Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Advanced techniques to help restore speech function after treatment.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Swallowing Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Dedicated experts for evaluating and treating patients who experience or may develop difficulty drinking and swallowing.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Dental Care</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Specialised dental services, including designing implants and procedures to restore appearance and function of the teeth and jaw.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Survivorship</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A dedicated clinic for patients successfully treated for head and neck cancer, providing lifelong follow-up care and screening. Regular follow-up is vital due to the risk of recurrence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Patients are also strongly advised to avoid smoking and alcohol during and after treatment, as both can hinder treatment success and significantly increase the risk of the cancer returning or a new cancer developing.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

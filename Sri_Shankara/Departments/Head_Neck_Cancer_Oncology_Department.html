@@ -1,0 +1,2848 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Head and Neck Cancer - Patient Information Guide | Sri Shankara Cancer Hospital</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Enhanced Visual Elements */
+        .gradient-text {
+            background: linear-gradient(135deg, #2E8B57, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .feature-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #2E8B57, transparent);
+            margin: 4rem 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: #2E8B57;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(46, 139, 87, 0.15);
+        }
+        
+        /* Doctor Card Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            section.py-20 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Head & Neck Oncology.jpg" 
+                alt="Understanding Head and Neck Cancer"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Head & Neck Oncology.jpg" 
+                alt="Understanding Head and Neck Cancer"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: Introduction -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Understanding Head and Neck Cancer
+                </h1>
+                <p class="text-2xl text-gray-600 mt-4">
+                    A Patient Information Guide
+                </p>
+            </div>
+            
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-question-circle mr-3" style="color: #2E8B57;"></i>
+                        What is Head and Neck Cancer?
+                    </h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Head and neck cancer refer to a group of cancers that start in the tissues of the mouth, nose, throat, larynx (voice box), sinuses, salivary glands, thyroid, parathyroid gland, skin and skull base.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Head and Neck Cancer in India -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Head and Neck Cancer in India: The Burden
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-male text-xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Most Common in Men</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Oral cancer is the most common cancer among Indian men. Head and neck cancer accounts for approximately <strong>26% of all cancer cases in Indian males</strong> and <strong>8% in females</strong>.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-exclamation-triangle text-xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Risk Statistics</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        The risk of developing head and neck cancer is <strong>1 in 33 for Indian males</strong> and <strong>1 in 107 for females</strong>. India has the highest number of oral cavity cancer patients globally.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-map-marker-alt text-xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Regional Distribution</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        The northeastern states report the highest incidence rates (31.7 per 100,000), followed by northern, central, western, southern and eastern regions.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-users text-xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Gender Ratio</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        The male-to-female ratio is approximately <strong>2:1 in urban areas</strong> and <strong>5:1 in rural areas</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-6 card-shadow border-l-4" style="border-color: #FF4500;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i class="fas fa-info-circle mr-3" style="color: #FF4500;"></i>
+                    Common Sites Affected
+                </h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-3">
+                    The most common sites affected are the <strong>mouth (oral cavity), tongue, larynx (voice box), hypopharynx, and tonsils</strong>.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    <strong>Primary Cause:</strong> The high burden in India is primarily attributed to widespread tobacco use in various forms.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors: What Increases Your Chances?
+                </h2>
+            </div>
+            
+            <!-- Tobacco Use - Primary Risk Factor -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #dc2626;">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-smoking-ban mr-3" style="color: #dc2626;"></i>
+                        Tobacco Use (Primary Risk Factor)
+                    </h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Tobacco use is linked to <strong>80-90% of all head and neck cancers in India</strong>. This includes:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                <i class="fas fa-fire mr-3 text-red-600"></i>
+                                Smoking
+                            </h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-red-600 mr-2 mt-1"></i>
+                                    <span>Cigarettes</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-red-600 mr-2 mt-1"></i>
+                                    <span>Bidis (rolled tobacco leaves)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-red-600 mr-2 mt-1"></i>
+                                    <span>Hookah/shisha</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-red-600 mr-2 mt-1"></i>
+                                    <span>E-cigarettes</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                <i class="fas fa-leaf mr-3 text-orange-600"></i>
+                                Smokeless Tobacco
+                            </h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                                    <span>Gutka</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                                    <span>Pan masala</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                                    <span>Khaini, zarda, mishri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                                    <span>Tobacco with betel quid (paan)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-100 rounded-xl p-6 border-l-4" style="border-color: #dc2626;">
+                        <p class="text-lg text-gray-800 leading-relaxed mb-3">
+                            <strong>Betel Quid (Paan) with Areca Nut:</strong> Even without tobacco, betel quid with areca nut (supari) is carcinogenic.
+                        </p>
+                        <p class="text-xl font-bold text-red-800">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            Important: All forms of tobacco, whether smoked or chewed, significantly increase cancer risk. There is no safe form of tobacco use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Risk Factors -->
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Other Risk Factors</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background: #dcfce7;">
+                                <i class="fas fa-wine-glass text-lg" style="color: #2E8B57;"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900">Alcohol Consumption</h4>
+                        </div>
+                        <p class="text-gray-700">Increases risk significantly; combined with tobacco, the risk multiplies many times</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background: #ffe4e1;">
+                                <i class="fas fa-tooth text-lg" style="color: #FF4500;"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900">Poor Oral Hygiene</h4>
+                        </div>
+                        <p class="text-gray-700">Chronic dental infections, ill-fitting dentures, and poor dental health increase risk</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background: #dbeafe;">
+                                <i class="fas fa-apple-alt text-lg" style="color: #1e40af;"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900">Poor Nutrition</h4>
+                        </div>
+                        <p class="text-gray-700">Diet lacking in fruits and vegetables; deficiency of vitamins A, C, and E</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background: #f3e8ff;">
+                                <i class="fas fa-industry text-lg" style="color: #7c3aed;"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900">Occupational Exposure</h4>
+                        </div>
+                        <p class="text-gray-700">Wood dust, nickel, formaldehyde, asbestos, and certain chemicals</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background: #ccfbf1;">
+                                <i class="fas fa-user text-lg" style="color: #14b8a6;"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900">Age and Gender</h4>
+                        </div>
+                        <p class="text-gray-700">More common in people over 50 years; 2-3 times more common in men</p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #ef4444;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background: #fee2e2;">
+                                <i class="fas fa-virus text-lg" style="color: #ef4444;"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900">Human Papillomavirus (HPV)</h4>
+                        </div>
+                        <p class="text-gray-700">HPV-16 and HPV-18 are linked to oropharyngeal (throat) cancers, particularly tonsil and base of tongue cancers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Warning Signs and Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Warning Signs and Symptoms
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Recognizing early signs is crucial. If any of the following symptoms persist for more than 2-3 weeks, consult a doctor immediately.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mouth (Oral Cavity) Cancer -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-comment-dots text-xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Mouth (Oral Cavity) Cancer</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>White or red patches (leukoplakia or erythroplakia) inside the mouth that do not go away</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Ulcer or sore in the mouth that does not heal within 3 weeks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Swelling or lump in the mouth, lips, or gums</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Difficulty in opening the mouth fully (trismus) or moving the tongue</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Loosening of teeth without apparent dental cause</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Numbness or pain in the mouth, lips, or face</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Persistent bad breath despite good oral hygiene</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Bleeding from the mouth</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span>Difficulty chewing or swallowing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Throat (Pharyngeal) Cancer -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-lungs text-xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Throat (Pharyngeal) Cancer</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>Persistent sore throat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>Pain or difficulty while swallowing (dysphagia)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>Feeling of something stuck in the throat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>One-sided ear pain (referred pain)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>Changes in voice or speech</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>Coughing up blood</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>Unexplained weight loss</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span>Painless lump or swelling in the neck</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Voice Box (Laryngeal) Cancer -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-microphone text-xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Voice Box (Laryngeal) Cancer</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span>Persistent hoarseness or change in voice lasting more than 3 weeks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span>Difficulty or pain while swallowing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span>Breathing difficulties or noisy breathing (stridor)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span>Persistent cough</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span>Ear pain on one side</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span>Lump in the throat or neck</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Nose and Sinus Cancer -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-wind text-xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Nose and Sinus Cancer</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span>Persistent nasal congestion, especially on one side</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span>Frequent nosebleeds</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span>Mucus discharge from the nose (may be blood-stained)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span>Facial pain, numbness, or swelling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span>Vision problems (double vision, bulging eye)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span>Hearing loss or ear fullness</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span>Foul smell in the nose</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Important Reminder -->
+            <div class="mt-12 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-6 card-shadow border-l-4" style="border-color: #dc2626;">
+                <p class="text-xl font-bold text-red-800 flex items-center">
+                    <i class="fas fa-exclamation-circle mr-3"></i>
+                    Remember: Early detection saves lives. If you notice any of these symptoms persisting for more than 2-3 weeks, please consult a doctor immediately. Most head and neck cancers are curable when detected early.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Special Cancer Types -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Special Cancer Types
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Salivary Gland Cancers -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-droplet mr-3" style="color: #2E8B57;"></i>
+                        Salivary Gland Cancers
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The salivary glands make the watery substance known as saliva. This keeps the mouth moist to help with swallowing and talking, and helps protect the mouth and teeth.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        There are <strong>3 pairs of major salivary glands:</strong>
+                    </p>
+                    <ul class="space-y-2 text-gray-700 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span><strong>Parotid glands</strong> – in front of the ears</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span><strong>Submandibular glands</strong> – under the lower jaw</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                            <span><strong>Sublingual glands</strong> – under the tongue</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed">
+                        There are also hundreds of smaller glands throughout the lining of the mouth, nose and throat. These are known as the <strong>minor salivary glands</strong>. Cancers can start in the major or minor salivary glands. When cancer is found in one of the parotid glands, it may have spread from a skin cancer on the head or neck.
+                    </p>
+                </div>
+
+                <!-- Thyroid Cancer -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-heartbeat mr-3" style="color: #FF4500;"></i>
+                        Thyroid Cancer
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Thyroid cancer develops in the thyroid gland, a butterfly-shaped organ at the base of your neck that produces hormones regulating metabolism, heart rate, and body temperature.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Types</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-orange-50 rounded-lg p-4">
+                                <h5 class="font-bold text-gray-900 mb-2">Papillary thyroid cancer</h5>
+                                <p class="text-sm text-gray-700">The most common form (about 80% of cases), usually slow-growing and highly treatable with excellent survival rates.</p>
+                            </div>
+                            <div class="bg-orange-50 rounded-lg p-4">
+                                <h5 class="font-bold text-gray-900 mb-2">Follicular thyroid cancer</h5>
+                                <p class="text-sm text-gray-700">The second most common type (10-15% of cases), also generally treatable with good outcomes.</p>
+                            </div>
+                            <div class="bg-orange-50 rounded-lg p-4">
+                                <h5 class="font-bold text-gray-900 mb-2">Medullary thyroid cancer</h5>
+                                <p class="text-sm text-gray-700">Less common (3-4% of cases), can be hereditary, develops in C cells that produce calcitonin.</p>
+                            </div>
+                            <div class="bg-orange-50 rounded-lg p-4">
+                                <h5 class="font-bold text-gray-900 mb-2">Anaplastic thyroid cancer</h5>
+                                <p class="text-sm text-gray-700">Rare and aggressive (1-2% of cases), grows quickly and is more difficult to treat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Symptoms</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Many people have no symptoms initially. When present, signs may include a lump or swelling in the neck, voice changes or hoarseness, difficulty swallowing, neck or throat pain, and swollen lymph nodes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Skull Base Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-skull mr-3" style="color: #1e40af;"></i>
+                        Skull Base Surgery
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The skull base is the undersurface of the skull, the border between the brain and the sinuses and neck. This area contains many important parts of the body, including brain, sinuses, eyes, nose, and ear cavities. The nerves and structures that control sight, hearing, smell, taste, speech, swallowing, and facial movement and sensation run through this area. Skull base surgery is a specialized field focused on management of diseases located in this area.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        There are many disorders that require skull base surgery, including noncancerous and cancerous tumors of nose and sinuses, of the ear and mastoid bone, salivary glands, skin of the face or neck, and tumors arising from cranial nerves, the brain, or coverings of the brain. Surgery in this area may involve a team of surgeons including head and neck oncologic surgeons, neurotologists (ear specialists), neurosurgeons, oculoplastic (eye) surgeons and vascular surgeons.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The goal of skull base surgery is to treat the underlying problem or tumor with as little disruption of these important structures as possible using minimally invasive approaches.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Anterior Skull Base Surgery</h4>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-3">
+                                The bone between the frontal lobes (front part of the brain) and the eye sockets, sinuses, and nose is called anterior skull base. Surgery in this area has improved significantly in the past 15 years and minimally invasive techniques are now commonly utilized.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                The most common minimally invasive technique is called <strong>endoscopic surgery</strong>, in which a small scope and instruments are used to perform surgery in the area through the nostrils, without an incision on the face or craniotomy. Some of the most common conditions that are treated with endoscopic surgery are tumors of the pituitary gland and benign and cancerous tumors of the sinuses and nasal cavity.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Lateral Skull Base Surgery</h4>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-3">
+                                The areas around the temporal bone, the part of the skull above and behind the ear, are called lateral skull base. Some tumors of the neck can be removed through this area through a neck incision, preserving nerves and blood vessels.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                More advanced tumors may require removal of the temporal bone by a neurotologist to allow safe tumor removal with preservation of normal structures or complete removal of a cancer. The most common benign tumors of this region are tumors of the nerves of the inner ear (acoustic neuromas or vestibular schwannomas) or lining of the brain (meningiomas).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Diagnosis and Staging -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    How is Head and Neck Cancer Diagnosed?
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- Physical Examination -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-stethoscope text-xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Physical Examination</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        The head and neck surgeon will thoroughly examine your mouth, throat, and neck, looking for abnormal areas, lumps, or swollen lymph nodes.
+                    </p>
+                </div>
+
+                <!-- Endoscopy -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-camera text-xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Endoscopy</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span><strong>Flexible Nasopharyngoscopy/Laryngoscopy:</strong> A thin, flexible tube with a camera is passed through your nose to examine the throat and voice box</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-2 mt-1"></i>
+                            <span><strong>Panendoscopy:</strong> Examination under general anaesthesia for detailed visualization of the entire upper aerodigestive tract</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Biopsy -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-microscope text-xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Biopsy</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        A small sample of tissue is taken and examined under a microscope. This is the only way to confirm cancer. Types include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span><strong>Incisional Biopsy:</strong> A small piece of the suspicious area is removed</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span><strong>FNAC (Fine Needle Aspiration Cytology):</strong> A thin needle is used to extract cells from a lump</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Imaging Tests -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-x-ray text-xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Imaging Tests</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span><strong>CT Scan:</strong> Provides detailed images of the tumor and nearby structures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span><strong>MRI:</strong> Shows soft tissue detail and helps assess nerve involvement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span><strong>PET-CT Scan:</strong> Helps detect cancer spread to other parts of the body</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span><strong>Ultrasound:</strong> Used to examine neck lymph nodes and guide biopsies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                            <span><strong>Chest X-ray:</strong> To check if cancer has spread to the lungs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HPV Testing -->
+            <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                    <i class="fas fa-virus mr-3" style="color: #2E8B57;"></i>
+                    HPV Testing
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                    For throat cancers, testing for HPV (Human Papillomavirus) may be done, as HPV-positive cancers often have better treatment outcomes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Staging -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Staging: How Far Has the Cancer Spread?
+                </h2>
+            </div>
+            
+            <div class="mb-8">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Once cancer is confirmed, staging determines how far it has spread. This is described using the <strong>TNM System</strong>:
+                </p>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white rounded-xl shadow-lg">
+                        <thead class="bg-gradient-to-r from-green-600 to-orange-600 text-white">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-sm font-bold">Component</th>
+                                <th class="px-6 py-4 text-left text-sm font-bold">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold text-gray-900">T (Tumor)</td>
+                                <td class="px-6 py-4 text-gray-700">Size and extent of the primary tumor (T1-T4)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold text-gray-900">N (Nodes)</td>
+                                <td class="px-6 py-4 text-gray-700">Whether cancer has spread to nearby lymph nodes (N0-N3)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold text-gray-900">M (Metastasis)</td>
+                                <td class="px-6 py-4 text-gray-700">Whether cancer has spread to distant organs (M0 or M1)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-green-50 border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-check-circle mr-3" style="color: #2E8B57;"></i>
+                        Stage I-II (Early Stage)
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Smaller tumors with no or limited lymph node spread; best treatment outcomes
+                    </p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-orange-50 border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-exclamation-triangle mr-3" style="color: #FF4500;"></i>
+                        Stage III-IV (Advanced Stage)
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Larger tumors or those with lymph node involvement; may require combination treatment
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-6 card-shadow border-l-4" style="border-color: #FF4500;">
+                <p class="text-lg text-gray-800 leading-relaxed">
+                    <strong>Important:</strong> In India, majority of patients present with locally advanced (Stage III/IV) disease. Early detection significantly improves treatment outcomes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Treatment Options -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Options
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Treatment depends on the cancer's location, stage, your overall health, and preferences. Your treatment plan is decided by a multidisciplinary team of specialists.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-cut text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Surgery</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Surgery aims to remove the cancer while preserving as much normal function as possible. Types include:
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span><strong>Primary Tumor Removal:</strong> Removing the cancer with a margin of healthy tissue</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span><strong>Neck Dissection:</strong> Removing lymph nodes in the neck if cancer has spread</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span><strong>Reconstructive Surgery:</strong> Rebuilding tissues after cancer removal using skin grafts or tissue flaps. In reconstructive surgery, a combination of skin, muscle and sometimes bone is used to rebuild the area. This can be taken from another part of the body and is called either a "free flap" or a "regional flap". Occasionally synthetic materials such as silicone and titanium are used to re-create bony areas or other structures in the head and neck, such as the palate. This is called a prosthetic.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span><strong>Transoral Robotic Surgery (TORS):</strong> Minimally invasive surgery through the mouth (available at select centres)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span><strong>Laser Surgery:</strong> For early-stage cancers, particularly of the voice box</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span><strong>Radioactive iodine therapy:</strong> For certain type of thyroid cancer. Hormone therapy is usually needed after surgery.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-radiation text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Radiation Therapy (Radiotherapy)</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        High-energy radiation is used to kill cancer cells. It may be used:
+                    </p>
+                    <ul class="space-y-3 text-gray-700 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>As the primary treatment for early-stage cancers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>After surgery to eliminate remaining cancer cells (adjuvant therapy)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>Combined with chemotherapy (chemoradiation) for advanced cancers</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed">
+                        Modern techniques like <strong>IMRT (Intensity-Modulated Radiation Therapy)</strong> help focus radiation on the tumor while sparing healthy tissues.
+                    </p>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-pills text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Chemotherapy</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Anti-cancer drugs are given intravenously or orally to kill cancer cells. Chemotherapy is often combined with radiation for advanced cancers. Common drugs include cisplatin, carboplatin, 5-fluorouracil, and taxanes.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-bullseye text-2xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Targeted Therapy</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        These drugs target specific proteins on cancer cells (e.g., Cetuximab targets EGFR). They may be used when conventional chemotherapy isn't suitable.
+                    </p>
+                </div>
+
+                <!-- Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ccfbf1;">
+                            <i class="fas fa-shield-virus text-2xl" style="color: #14b8a6;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Immunotherapy</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs like pembrolizumab and nivolumab help your immune system fight cancer. They are increasingly used for recurrent or advanced head and neck cancer. Recent Indian studies have shown that even ultra-low doses can improve survival outcomes.
+                    </p>
+                </div>
+
+                <!-- Palliative Care -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #ef4444;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #fee2e2;">
+                            <i class="fas fa-heart text-2xl" style="color: #ef4444;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Palliative Care</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        When cure is not possible, palliative care focuses on symptom relief and quality of life. This includes pain management, nutritional support, and emotional care.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Managing Side Effects -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Managing Side Effects of Treatment
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- During Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-radiation mr-3" style="color: #FF4500;"></i>
+                        During Radiation Therapy
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span><strong>Mucositis:</strong> Painful mouth sores; use prescribed mouthwashes and maintain good oral hygiene</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span><strong>Dry Mouth (Xerostomia):</strong> Reduced saliva production; carry water, use saliva substitutes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span><strong>Taste Changes:</strong> Food may taste bland or metallic; usually improves after treatment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span><strong>Skin Changes:</strong> Redness and sensitivity in treated areas; use recommended skincare products</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span><strong>Difficulty Swallowing:</strong> May require dietary modifications or feeding tube support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span><strong>Fatigue:</strong> Common during treatment; rest when needed but stay as active as possible</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- After Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-cut mr-3" style="color: #2E8B57;"></i>
+                        After Surgery
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Swelling and bruising (temporary)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Changes in speech or swallowing (may need speech therapy)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Shoulder stiffness (after neck dissection)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Numbness in certain areas (may be permanent)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Changes in appearance (reconstructive options available)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Nutrition During and After Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Nutrition During and After Treatment
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Good nutrition is crucial for recovery. Head and neck cancer and its treatment can make eating difficult. Work with a dietitian to ensure adequate nutrition.
+                </p>
+            </div>
+            
+            <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-utensils mr-3" style="color: #2E8B57;"></i>
+                    Dietary Tips for Indian Patients
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Soft Foods</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                <span>Khichdi, dalia, soft idli, curd rice</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                <span>Mashed dal, vegetable purees</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">High-Protein Options</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                <span>Paneer, tofu, dal, moong</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                <span>Eggs, well-cooked chicken or fish</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Calorie-Dense Foods</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                <span>Add ghee, coconut milk, or ground nuts to meals</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Stay Hydrated</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                <span>Buttermilk, coconut water, soups</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                <span>Dal water, clear juices</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-6 bg-red-50 rounded-lg p-4 border-l-4" style="border-color: #dc2626;">
+                    <h4 class="font-bold text-gray-900 mb-2">Avoid:</h4>
+                    <p class="text-gray-700">
+                        Spicy, acidic, or very hot foods; rough or crunchy textures; alcohol and tobacco
+                    </p>
+                </div>
+                
+                <div class="mt-6 bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                    <h4 class="font-bold text-gray-900 mb-2">Additional Tips:</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span><strong>Small Frequent Meals:</strong> Eat 5-6 small meals rather than 3 large ones</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                            <span><strong>Nutritional Supplements:</strong> High-protein supplements or oral nutritional drinks if needed</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 mt-3">
+                        If swallowing becomes too difficult, a feeding tube (nasogastric tube) may be recommended temporarily to ensure adequate nutrition.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Rehabilitation and Recovery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Rehabilitation and Recovery
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Recovery involves addressing physical, emotional, and functional changes
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-comments text-xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Speech Therapy</h3>
+                    </div>
+                    <p class="text-gray-700">Helps with swallowing difficulties and speech changes</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-running text-xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Physiotherapy</h3>
+                    </div>
+                    <p class="text-gray-700">For shoulder and neck mobility after surgery</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-tooth text-xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Dental Care</h3>
+                    </div>
+                    <p class="text-gray-700">Regular dental check-ups; fluoride treatment if radiation affected teeth</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-microphone text-xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Voice Rehabilitation</h3>
+                    </div>
+                    <p class="text-gray-700">After laryngectomy, learn alternative voice methods (electrolarynx, voice prosthesis)</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ccfbf1;">
+                            <i class="fas fa-heart text-xl" style="color: #14b8a6;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Psychological Support</h3>
+                    </div>
+                    <p class="text-gray-700">Counseling for emotional challenges; support groups</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #ef4444;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #fee2e2;">
+                            <i class="fas fa-hand-holding-heart text-xl" style="color: #ef4444;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Lymphoedema Management</h3>
+                    </div>
+                    <p class="text-gray-700">Exercises and massage for neck/face swelling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12: Prevention -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Prevention: Reducing Your Risk
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #dc2626;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #fee2e2;">
+                            <i class="fas fa-ban text-xl" style="color: #dc2626;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Quit Tobacco</h3>
+                    </div>
+                    <p class="text-gray-700">Stop all forms of tobacco use – smoking, chewing, gutka, paan. Seek help from tobacco cessation clinics</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-wine-glass text-xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Limit Alcohol</h3>
+                    </div>
+                    <p class="text-gray-700">Reduce or eliminate alcohol consumption</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-apple-alt text-xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Healthy Diet</h3>
+                    </div>
+                    <p class="text-gray-700">Eat plenty of fruits and vegetables; avoid preserved foods</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-syringe text-xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">HPV Vaccination</h3>
+                    </div>
+                    <p class="text-gray-700">Discuss HPV vaccination with your doctor, especially for adolescents</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-tooth text-xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Oral Hygiene</h3>
+                    </div>
+                    <p class="text-gray-700">Maintain good oral health; regular dental check-ups</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background: #ccfbf1;">
+                            <i class="fas fa-sun text-xl" style="color: #14b8a6;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Sun Protection</h3>
+                    </div>
+                    <p class="text-gray-700">Protect lips from excessive sun exposure</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                    <i class="fas fa-search mr-3" style="color: #2E8B57;"></i>
+                    Regular Screening
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Those with high-risk habits should get regular oral examinations
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 13: Follow-Up Care -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Follow-Up Care
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    After treatment, regular follow-up is essential to:
+                </p>
+                <ul class="space-y-3 text-gray-700 mb-6">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span>Detect any recurrence early</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span>Monitor and manage treatment side effects</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span>Screen for second primary cancers (head and neck cancer patients have higher risk)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span>Address nutritional and rehabilitation needs</span>
+                    </li>
+                </ul>
+                <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-800 leading-relaxed">
+                        <strong>Follow-up Schedule:</strong> Typically, follow-up visits are every 1-2 months in the first year, every 3 months in the second year, every 4-6 months in years 3-5, and annually thereafter. <strong>Never miss a follow-up appointment.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 14: Prognosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Are the Chances of Cure?
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-green-50 border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Early Stage (I-II)</h3>
+                    <p class="text-3xl font-bold text-green-700 mb-2">70-90%</p>
+                    <p class="text-gray-700">Cure rates with appropriate treatment</p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-orange-50 border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Advanced Stage (III-IV)</h3>
+                    <p class="text-3xl font-bold text-orange-700 mb-2">50-60%</p>
+                    <p class="text-gray-700">5-year survival with multimodal treatment</p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-blue-50 border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">HPV-Positive Cancers</h3>
+                    <p class="text-3xl font-bold text-blue-700 mb-2">85-90%</p>
+                    <p class="text-gray-700">5-year survival rate</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gradient-to-r from-green-50 to-orange-50 rounded-xl p-6 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <p class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                    <i class="fas fa-lightbulb mr-3" style="color: #2E8B57;"></i>
+                    Key Message
+                </p>
+                <p class="text-lg text-gray-800 leading-relaxed">
+                    Early detection is key: If detected early, most head and neck cancers are curable. The key message is: <strong>Don't delay – seek medical attention for any persistent symptoms.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 15: Questions to Ask Your Doctor -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Questions to Ask Your Doctor
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    When meeting your healthcare team, consider asking these important questions
+                </p>
+            </div>
+            
+            <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                <ol class="space-y-4 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">1.</span>
+                        <span>What type and stage of cancer do I have?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">2.</span>
+                        <span>What treatment options are available for my condition?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">3.</span>
+                        <span>What are the benefits and risks of each treatment?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">4.</span>
+                        <span>Will I need more than one type of treatment?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">5.</span>
+                        <span>What side effects can I expect and how can they be managed?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">6.</span>
+                        <span>How will treatment affect my eating, speaking, and appearance?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">7.</span>
+                        <span>Will I need rehabilitation after treatment?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">8.</span>
+                        <span>What are my chances of cure or long-term survival?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">9.</span>
+                        <span>When the ryle's tube will be removed?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">10.</span>
+                        <span>When the tracheostomy tube will be removed?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">11.</span>
+                        <span>What support services are available?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">12.</span>
+                        <span>What will be the approximate cost and are there any financial assistance options?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-green-600 mr-3 mt-1">13.</span>
+                        <span>How often will I need follow-up visits?</span>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 card-shadow border-l-4" style="border-color: #1e40af;">
+                <p class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                    <i class="fas fa-heart mr-3" style="color: #1e40af;"></i>
+                    Remember
+                </p>
+                <p class="text-lg text-gray-800 leading-relaxed">
+                    You are not alone in this journey. With timely treatment and proper care, many patients lead full lives after head and neck cancer. Stay positive, follow your treatment plan, and lean on your support network.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Disclaimer Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-lg p-6">
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>Disclaimer:</strong> This information is for educational purposes only and is not a substitute for professional medical advice. Always consult your healthcare provider for diagnosis and treatment decisions specific to your condition.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Unique Philosophy Section -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-green-100 to-blue-100 rounded-full opacity-20 blur-3xl -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-100 to-green-100 rounded-full opacity-20 blur-3xl -ml-48 -mb-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Main Heading -->
+            <div class="mb-16 text-center">
+                <div class="inline-block mb-6">
+                    <div class="feature-icon-wrapper" style="background: linear-gradient(135deg, #2E8B57, #1e40af);">
+                        <i class="fas fa-heart text-4xl text-white relative z-10"></i>
+                    </div>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Our Unique Philosophy</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- Philosophy Introduction -->
+            <div class="mb-16">
+                <div class="bg-gradient-to-br from-green-50 via-blue-50 to-green-50 rounded-2xl p-8 card-shadow border-2 border-green-200 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-green-100 rounded-full -mr-32 -mt-32 opacity-20"></div>
+                    <div class="relative z-10">
+                        <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                            We provide <strong class="text-green-600">compassionate, comprehensive care</strong> for all head and neck conditions, from routine to highly complex. Our core principle is <strong class="text-blue-600">'Functional Head and Neck Surgery'</strong>—we never compromise on cancer control while passionately focusing on preserving your speech, swallowing, and quality of life.
+                        </p>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            This is supported by routine <strong>microvascular reconstruction</strong> and also specific expertise in complex skull-base surgery (both endoscopic and open). Our surgeons, including <strong class="text-green-600">Dr. Karthik N Rao</strong>, the International Chair of the American Head & Neck Society's Skull Base Section, are dedicated to this balanced approach.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Clinical Excellence -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-t-4 hover-scale relative overflow-hidden group" style="border-color: #2E8B57;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0" style="background: linear-gradient(135deg, #2E8B57, #3cb371);">
+                                <i class="fas fa-award text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900">Clinical Excellence</h3>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 border border-green-100">
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Our team is home to <strong class="text-green-600">significant surgical experience and volume</strong>. Patients consistently place their trust in us, often after their consultations, drawn by our compassionate, evidence-based care and exceptional functional outcomes.
+                            </p>
+                            <div class="bg-green-100 rounded-lg p-4">
+                                <p class="text-sm text-green-900 font-semibold">
+                                    <i class="fas fa-star mr-2"></i>
+                                    Most notably in rehabilitating total glossectomy patients to speak and eat again
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multidisciplinary Team -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-t-4 hover-scale relative overflow-hidden group" style="border-color: #1e40af;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+                                <i class="fas fa-users text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900">A Truly Multidisciplinary Team</h3>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 border border-blue-100">
+                            <p class="text-gray-700 leading-relaxed">
+                                Every patient's journey is supported by a <strong class="text-blue-600">fully integrated team</strong>, ensuring holistic, world-class care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research & Global Connections -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-t-4 hover-scale relative overflow-hidden group" style="border-color: #7c3aed;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">
+                                <i class="fas fa-globe text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900">Research & Global Connections</h3>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 border border-purple-100">
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Our strong research focus directly informs and improves clinical practice. All consultants are <strong class="text-purple-600">Fellows of the American Head & Neck Society</strong>, and we are proud to have published <strong>~50 research papers</strong> in the last two years, often co-authored with leading institutes across the globe.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="bg-purple-100 rounded-lg p-3">
+                                    <p class="text-sm text-purple-900 font-semibold">
+                                        <i class="fas fa-user-tie mr-2"></i>
+                                        <strong>Dr. Karthik N Rao</strong> serves as Editor for Nature Scientific Reports, one of the leading scientific journal in the world.
+                                    </p>
+                                </div>
+                                <div class="bg-purple-100 rounded-lg p-3">
+                                    <p class="text-sm text-purple-900 font-semibold">
+                                        <i class="fas fa-user-md mr-2"></i>
+                                        <strong>Dr. Sreeram M P</strong> contributes as Co-Chair of the Translational Research Committee for HNCIG
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessible, High-Quality Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-t-4 hover-scale relative overflow-hidden group" style="border-color: #f59e0b;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+                                <i class="fas fa-hand-holding-heart text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900">Accessible, High-Quality Care</h3>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-amber-50 to-white rounded-xl p-6 border border-amber-100">
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                As a trust hospital, we provide <strong class="text-amber-600">world-class care at costs typically 40–50% lower</strong> than other hospitals. Subsidies are applied proactively, and our Charity Cell offers further support to all, irrespective of background.
+                            </p>
+                            <div class="grid grid-cols-2 gap-3 text-sm">
+                                <div class="bg-amber-100 rounded-lg p-2 text-center">
+                                    <i class="fas fa-certificate text-amber-600 mb-1"></i>
+                                    <p class="text-xs text-amber-900 font-semibold">NABH & NABL Accredited</p>
+                                </div>
+                                <div class="bg-amber-100 rounded-lg p-2 text-center">
+                                    <i class="fas fa-clock text-amber-600 mb-1"></i>
+                                    <p class="text-xs text-amber-900 font-semibold">24/7 Emergency Services</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training, Awards & Technology -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-t-4 hover-scale relative overflow-hidden group" style="border-color: #dc2626;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-100 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0" style="background: linear-gradient(135deg, #dc2626, #ef4444);">
+                                <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900">Training, Awards & Technology</h3>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-red-50 to-white rounded-xl p-6 border border-red-100">
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Our doctors are trained at prestigious high-volume institutes (<strong class="text-red-600">Tata Memorial, AIIMS</strong>). Their excellence has been recognized with awards such as:
+                            </p>
+                            <div class="space-y-3">
+                                <div class="bg-red-100 rounded-lg p-3">
+                                    <p class="text-sm text-red-900 font-semibold">
+                                        <i class="fas fa-medal mr-2"></i>
+                                        <strong>Dhanvantri Award (Gold Medal)</strong> from the President of India - Dr. Karthik N Rao
+                                    </p>
+                                </div>
+                                <div class="bg-red-100 rounded-lg p-3">
+                                    <p class="text-sm text-red-900 font-semibold">
+                                        <i class="fas fa-trophy mr-2"></i>
+                                        <strong>FHNO Gold Medal</strong> for Basic Research - Dr. Prajwal Dange
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mt-4 text-sm">
+                                We are equipped with advanced technology, including an <strong>in-house 3D printing lab</strong> and <strong>AI-based treatment planning</strong>, ensuring precision care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patient Support & Community -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-t-4 hover-scale relative overflow-hidden group md:col-span-2" style="border-color: #059669;">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-100 rounded-full -mr-20 -mt-20 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0" style="background: linear-gradient(135deg, #059669, #10b981);">
+                                <i class="fas fa-hands-helping text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900">Patient Support & Community</h3>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-6 border border-emerald-100">
+                            <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                                We treat every patient as a family, approaching your care with <strong class="text-emerald-600">empathy and humility</strong>. We walk alongside you throughout your cancer journey, providing not just medical expertise but constant motivation and support. While being pragmatic about outcomes, we focus on hope and progress, ensuring you never face this challenge alone.
+                            </p>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div class="bg-emerald-100 rounded-lg p-4 text-center">
+                                    <i class="fas fa-heartbeat text-2xl text-emerald-600 mb-2"></i>
+                                    <p class="text-sm text-emerald-900 font-semibold">Comprehensive Rehabilitation</p>
+                                </div>
+                                <div class="bg-emerald-100 rounded-lg p-4 text-center">
+                                    <i class="fas fa-user-friends text-2xl text-emerald-600 mb-2"></i>
+                                    <p class="text-sm text-emerald-900 font-semibold">Peer Support & Survivorship Care</p>
+                                </div>
+                                <div class="bg-emerald-100 rounded-lg p-4 text-center">
+                                    <i class="fas fa-bullhorn text-2xl text-emerald-600 mb-2"></i>
+                                    <p class="text-sm text-emerald-900 font-semibold">Screening Camps & Awareness</p>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed mt-6 font-semibold text-center">
+                                We are here to guide you through your journey with expertise, compassion, and an unwavering focus on your return to a full life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Head & Neck Oncology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our expert head and neck surgeons and oncologists dedicated to treating cancers of the mouth, throat, larynx, and neck with advanced surgical and reconstructive techniques.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Nanjundappa.webp" alt="Dr. Nanjundappa" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Nanjundappa'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Nanjundappa</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS - ENT (Jun 1988), DLO - Laryngo-oncology (Aug 1982)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Head & Neck Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>38 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Nanjundappa.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Karthik N. Rao.webp" alt="Dr. Karthik N. Rao" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Karthik+N.+Rao'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Karthik N. Rao</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS, MCh (Head Neck Surgery and Oncology), FHNS, FACS, FAHNS, eFASCO, DEBEORLHNS</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant & HOD</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Head & Neck Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | 9:00 A.M. to 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>8 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Karthik N. Rao.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+                     <!-- Doctor 3 -->
+                      <!--<div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Girish Rao.webp" alt="Dr. Girish Rao" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Girish+Rao'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Girish Rao</h3>
+                            <p class="text-sm text-gray-600 mb-2">MDS (Sep 1991), FFDRCSI (Nov 1993), FDSRCS (Jun 1994)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Oral & Maxillofacial Surgery
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                               
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>35 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Girish Rao.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>-->
+
+                    <!-- Doctor 4 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sreeram MP.webp" alt="Dr. Sreeram MP" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sreeram+MP'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sreeram MP</h3>
+                            <p class="text-sm text-gray-600 mb-2">MDS (Apr 2015), Fellow in oral Oncology (RGUHS)(June 2020), FAHNS (USA), EACMF- HNPG (Europe), AOCMF-Oral Cancer Dip, FHNO Travel Fellow</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Head and Neck Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Friday: 9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>11 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sreeram M. P.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div> 
+
+                    <!-- Doctor 5 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Prajwal S. Dange.webp" alt="Dr. Prajwal S. Dange" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Prajwal+S.+Dange'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Prajwal S. Dange</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS - Otorhinlaryngology & Head - Neck Surgery (Aug 2020), DNB - Otorhinlaryngology & Head - Neck Surgery (Jan 2021), MCh - Head Neck Surgery & Oncology (Jan 2022)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Junior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Head and Neck Surgical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Friday: 9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>6 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Prajwal S. D.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 6 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Teertha Shetty.webp" alt="Dr. Teertha Shetty" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Teertha+Shetty'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Teertha S. Shetty</h3>
+                            <p class="text-sm text-gray-600 mb-2">BDS, MDS, Fellowship (Head & Neck Oncology)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Head & Neck Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>1.5 years experience | Senior Resident</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Teertha Shetty.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Mr. T. V. Kumareshwar.webp" alt="Mr T V Kumareshwar" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Mr+T+V+Kumareshwar'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Mr T V Kumareshwar</h3>
+                            <p class="text-sm text-gray-600 mb-4">MSc - Audiology & Speech Language Pathology (June 2019) | Speech and Swallow Specialist</p>
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Head & Neck Oncology
+                                </p>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>7 years of experience</span>
+                                </div>
+                            </div>
+                            <a href="../Doctors/Mr. T. V. Kumareshwar.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                    </div>
+                </div>
+
+</div>
+                
+<button class="carousel-nav next" onclick="moveCarousel(1)">
+    <i class="fas fa-chevron-right"></i>
+</button>
+
+<div class="carousel-dots" id="carouselDots"></div>
+</div>
+</div>
+</section>
+
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Oral & Maxillofacial Surgery Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our expert oral and maxillofacial surgeons dedicated to treating cancers of the mouth, throat, larynx, and neck with advanced surgical and reconstructive techniques.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel2(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack2">
+
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Girish Rao.webp" alt="Dr. Girish Rao" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Girish+Rao'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Girish Rao</h3>
+                            <p class="text-sm text-gray-600 mb-2">MDS (Sep 1991), FFDRCSI (Nov 1993), FDSRCS (Jun 1994)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Senior Consultant</span>
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Oral & Maxillofacial Surgery
+                                </p>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>35 years of experience</span>
+                                </div>
+                            </div>
+                            <a href="../Doctors/Dr. Girish Rao.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                 <!-- Doctor 2 -->
+                 <div class="doctor-card doctor-card-desktop">
+                    <div class="doctor-photo-frame">
+                        <img src="../Doctors_Photo/Dr. Prithvi B. S..webp" alt="Dr. Prithvi B. S." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Prithvi+B.+S.'">
+                        <div class="doctor-photo-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Prithvi B. S.</h3>
+                        <p class="text-sm text-gray-600 mb-2">BDS, MDS (2008), Fellowship in Oral Oncology (Feb 2013)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                        
+                        <div class="mb-4">
+                            <p class="text-green-600 font-semibold mb-2">
+                                <i class="fas fa-stethoscope mr-2"></i>Oral & Maxillofacial Surgery
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-3 mb-4">
+                            <!-- <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-clock text-green-600 mr-2"></i>
+                                <span>9:00 A.M. - 5:00 P.M.</span>
+                            </div> -->
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-award text-green-600 mr-2"></i>
+                                <span>18 years of experience</span>
+                            </div>
+                        </div>
+                        
+                        <a href="../Doctors/Dr. Prithvi B. S..html" class="btn-primary w-full text-center">
+                            <i class="fas fa-user-md mr-2"></i>View Profile
+                        </a>
+                    </div>
+                </div>
+ 
+                <!-- Doctor 3 -->
+                <div class="doctor-card doctor-card-desktop">
+                    <div class="doctor-photo-frame">
+                        <img src="../Doctors_Photo/Dr. Sudha Sah.webp" alt="Dr. Sudha Sah" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sudha+Sah'">
+                        <div class="doctor-photo-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sudha Sah</h3>
+                        <p class="text-sm text-gray-600 mb-2">BDS (1999), FAD (University of medicine greifswald,Germany)</p>
+                        <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Dental Specialist</span>
+                        
+                        <div class="mb-4">
+                            <p class="text-green-600 font-semibold mb-2">
+                                <i class="fas fa-stethoscope mr-2"></i>Oral & Maxillofacial Surgery
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-3 mb-4">
+                            <!-- <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-clock text-green-600 mr-2"></i>
+                                <span>Available</span>
+                            </div> -->
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-award text-green-600 mr-2"></i>
+                                <span>27 years of experience</span>
+                            </div>
+                        </div>
+                        
+                        <a href="../Doctors/Dr. Sudha Sah.html" class="btn-primary w-full text-center">
+                            <i class="fas fa-user-md mr-2"></i>View Profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Doctor 4 -->
+                <div class="doctor-card doctor-card-desktop">
+                    <div class="doctor-photo-frame">
+                        <img src="../Doctors_Photo/Dr. Sainath J. V..webp" alt="Dr. Sainath J. V." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sainath+J.+V.'">
+                        <div class="doctor-photo-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sainath J. V.</h3>
+                        <p class="text-sm text-gray-600 mb-2">BDS, MDS (2019), MBA-Hospital Administration (2011)</p>
+                        <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Prosothodontist</span>
+                        
+                        <div class="mb-4">
+                            <p class="text-green-600 font-semibold mb-2">
+                                <i class="fas fa-stethoscope mr-2"></i>Head & Neck Oncology
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-3 mb-4">
+                            <!-- <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-clock text-green-600 mr-2"></i>
+                                <span>9:00 A.M. - 5:00 P.M</span>
+                            </div> -->
+                            <div class="flex items-center text-sm text-gray-700">
+                                <i class="fas fa-award text-green-600 mr-2"></i>
+                                <span>7 years of experience</span>
+                            </div>
+                        </div>
+                        
+                        <a href="../Doctors/Dr. Sainath J. V..html" class="btn-primary w-full text-center">
+                            <i class="fas fa-user-md mr-2"></i>View Profile
+                        </a>
+                    </div>
+                </div>
+
+</div>
+                
+<button class="carousel-nav next" onclick="moveCarousel2(1)">
+    <i class="fas fa-chevron-right"></i>
+</button>
+
+<div class="carousel-dots" id="carouselDots2"></div>
+</div>
+</div>
+</section>
+
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Carousel functionality - scoped to doctors section
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            
+            const cards = track.querySelectorAll('.doctor-card');
+            const totalCards = cards.length;
+            
+            if (totalCards === 0) return;
+            
+            updateSlidesPerView();
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = Math.max(0, totalCards - slidesPerView);
+            } else if (currentSlide > totalCards - slidesPerView) {
+                currentSlide = 0;
+            }
+            
+            const cardWidth = cards[0].offsetWidth + 24; // card width + gap
+            const translateX = -currentSlide * cardWidth;
+            track.style.transform = `translateX(${translateX}px)`;
+            
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.querySelectorAll('.doctor-card');
+                const totalCards = cards.length;
+                if (totalCards === 0) return;
+                
+                updateSlidesPerView();
+                const maxSlide = Math.max(0, totalCards - slidesPerView);
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                const cardWidth = cards[0].offsetWidth + 24;
+                const translateX = -currentSlide * cardWidth;
+                track.style.transform = `translateX(${translateX}px)`;
+                
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dots = document.querySelectorAll('.carousel-dot');
+            const cards = document.querySelectorAll('.doctor-card');
+            if (cards.length === 0) return;
+            
+            updateSlidesPerView();
+            const totalDots = Math.ceil(cards.length / slidesPerView);
+            
+            dots.forEach((dot, index) => {
+                const dotIndex = Math.floor(currentSlide / slidesPerView);
+                dot.classList.toggle('active', index === dotIndex);
+            });
+        }
+        
+        function initCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            
+            updateSlidesPerView();
+            const cards = document.querySelectorAll('.doctor-card');
+            if (cards.length === 0) return;
+            
+            const totalDots = Math.ceil(cards.length / slidesPerView);
+            const dotsContainer = document.getElementById('carouselDots');
+            
+            if (!dotsContainer) return;
+            
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    currentSlide = i * slidesPerView;
+                    const cardWidth = cards[0].offsetWidth + 24;
+                    const translateX = -currentSlide * cardWidth;
+                    track.style.transform = `translateX(${translateX}px)`;
+                    updateDots();
+                });
+                dotsContainer.appendChild(dot);
+            }
+            
+            // Touch/swipe support
+            let startX = 0;
+            let isDragging = false;
+            
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            });
+            
+            track.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+            });
+            
+            track.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                const endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        moveCarousel(1);
+                    } else {
+                        moveCarousel(-1);
+                    }
+                }
+                isDragging = false;
+            });
+        }
+        
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            moveCarousel(0);
+        });
+        
+        // Make function globally accessible
+        window.moveCarousel = moveCarousel;
+        
+        // Initialize carousel when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(initCarousel, 100);
+            });
+        } else {
+            setTimeout(initCarousel, 100);
+        }
+
+        // Carousel 2 functionality - for Oral & Maxillofacial Surgery Specialists
+        let currentSlide2 = 0;
+        let slidesPerView2 = 3;
+        let autoRotateInterval2 = null;
+        
+        function updateSlidesPerView2() {
+            if (window.innerWidth < 768) {
+                slidesPerView2 = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView2 = 2;
+            } else {
+                slidesPerView2 = 3;
+            }
+        }
+        
+        function moveCarousel2(direction) {
+            const track = document.getElementById('carouselTrack2');
+            if (!track) {
+                console.error('Carousel track 2 not found');
+                return;
+            }
+            
+            const cards = track.querySelectorAll('.doctor-card');
+            const totalCards = cards.length;
+            
+            if (totalCards === 0) {
+                console.error('No doctor cards found in carousel 2');
+                return;
+            }
+            
+            // Ensure cards are rendered and have width
+            if (cards[0].offsetWidth === 0) {
+                // Retry after a short delay if cards aren't ready
+                setTimeout(() => moveCarousel2(direction), 50);
+                return;
+            }
+            
+            updateSlidesPerView2();
+            
+            if (direction !== 0) {
+                currentSlide2 += direction;
+            }
+            
+            const maxSlide = Math.max(0, totalCards - slidesPerView2);
+            
+            if (currentSlide2 < 0) {
+                currentSlide2 = maxSlide;
+            } else if (currentSlide2 > maxSlide) {
+                currentSlide2 = 0;
+            }
+            
+            // Calculate card width including gap (1.5rem = 24px)
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 24; // 1.5rem in pixels
+            const translateX = -currentSlide2 * (cardWidth + gap);
+            track.style.transform = `translateX(${translateX}px)`;
+            
+            updateDots2();
+            if (direction !== 0) {
+                resetAutoRotate2();
+            }
+        }
+        
+        function startAutoRotate2() {
+            if (autoRotateInterval2) {
+                clearInterval(autoRotateInterval2);
+            }
+            
+            autoRotateInterval2 = setInterval(() => {
+                const track = document.getElementById('carouselTrack2');
+                if (!track) return;
+                const cards = track.querySelectorAll('.doctor-card');
+                const totalCards = cards.length;
+                if (totalCards === 0) return;
+                
+                updateSlidesPerView2();
+                const maxSlide = Math.max(0, totalCards - slidesPerView2);
+                currentSlide2 += 1;
+                
+                if (currentSlide2 > maxSlide) {
+                    currentSlide2 = 0;
+                }
+                
+                const cardWidth = cards[0].offsetWidth;
+                const gap = 24; // 1.5rem in pixels
+                const translateX = -currentSlide2 * (cardWidth + gap);
+                track.style.transform = `translateX(${translateX}px)`;
+                
+                updateDots2();
+            }, 5000);
+        }
+        
+        function stopAutoRotate2() {
+            if (autoRotateInterval2) {
+                clearInterval(autoRotateInterval2);
+                autoRotateInterval2 = null;
+            }
+        }
+        
+        function resetAutoRotate2() {
+            stopAutoRotate2();
+            startAutoRotate2();
+        }
+        
+        function updateDots2() {
+            const dots = document.querySelectorAll('#carouselDots2 .carousel-dot');
+            const track = document.getElementById('carouselTrack2');
+            if (!track) return;
+            const cards = track.querySelectorAll('.doctor-card');
+            if (cards.length === 0) return;
+            
+            updateSlidesPerView2();
+            const totalDots = Math.ceil(cards.length / slidesPerView2);
+            
+            dots.forEach((dot, index) => {
+                const dotIndex = Math.floor(currentSlide2 / slidesPerView2);
+                dot.classList.toggle('active', index === dotIndex);
+            });
+        }
+        
+        function initCarousel2() {
+            const track = document.getElementById('carouselTrack2');
+            if (!track) return;
+            
+            updateSlidesPerView2();
+            const cards = track.querySelectorAll('.doctor-card');
+            if (cards.length === 0) return;
+            
+            const totalDots = Math.ceil(cards.length / slidesPerView2);
+            const dotsContainer = document.getElementById('carouselDots2');
+            
+            if (!dotsContainer) return;
+            
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    currentSlide2 = i * slidesPerView2;
+                    const cardWidth = cards[0].offsetWidth;
+                    const gap = 24; // 1.5rem in pixels
+                    const translateX = -currentSlide2 * (cardWidth + gap);
+                    track.style.transform = `translateX(${translateX}px)`;
+                    updateDots2();
+                });
+                dotsContainer.appendChild(dot);
+            }
+            
+            // Touch/swipe support
+            let startX = 0;
+            let isDragging = false;
+            
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            });
+            
+            track.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+            });
+            
+            track.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                const endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        moveCarousel2(1);
+                    } else {
+                        moveCarousel2(-1);
+                    }
+                }
+                isDragging = false;
+            });
+            
+            // Initialize position
+            moveCarousel2(0);
+            startAutoRotate2();
+        }
+        
+        window.addEventListener('resize', () => {
+            updateSlidesPerView2();
+            moveCarousel2(0);
+        });
+        
+        // Make function globally accessible
+        window.moveCarousel2 = moveCarousel2;
+        
+        // Initialize carousel 2 when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(initCarousel2, 100);
+            });
+        } else {
+            setTimeout(initCarousel2, 100);
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer id="hospital-footer"></footer>
+    <script src="../footer.js"></script>
+
+    <!-- Chatbox -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../chatbox.js"></script>
+    <script src="../footer-main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Myeloid Leukemia (CML) - Sri Shankara Cancer Hospital & Research Centre</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Title and Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Chronic Myeloid Leukemia (CML)
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Leukaemia is an umbrella term encompassing cancers that affect the blood and the body's blood-forming tissues. Chronic myeloid leukaemia (CML) is a slowly developing form of the disease that primarily affects individuals over the age of 55.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Like all types of leukaemia, CML originates from issues in the process of blood cell creation.
+                </p>
+            </div>
+
+            <!-- Understanding Blood Cell Creation -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Understanding Blood Cell Creation
+                    </h3>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The body produces millions of blood cells daily, mostly within the bone marrow, the spongy tissue inside bones that houses immature stem cells. In a healthy person, these immature stem cells develop into either lymphoid stem cells or myeloid stem cells.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Lymphoid Stem Cells</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Lymphoid stem cells mature into white blood cells, which are part of the immune system. They initially become lymphoblasts, then mature into lymphocytes (B cells and T cells). B cells produce antibodies to combat bacteria and viruses, while T cells help signal other immune cells or directly fight infection.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Myeloid Stem Cells</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Myeloid stem cells also develop into white blood cells. They first become myeloblasts, which then mature into monocytes and granulocytes (including neutrophils), all vital for fighting disease. Other myeloid stem cells form red blood cells (which transport oxygen) and platelets (essential for blood clotting).
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">
+                            Leukaemia occurs when the DNA (the genetic instructions controlling cell activity) of a bone marrow stem cell mutates. The cell turns cancerous, begins to multiply rapidly, and overcrowds the healthy cells in the blood and bone marrow. These diseased cells may also accumulate in various organs, such as the liver, lymph nodes, spleen, and skin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Classification -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Classification of Leukaemia
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Leukaemia is typically classified based on the type of stem cell that became cancerous (lymphoid or myeloid) and whether the disease is chronic or acute.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Acute Leukaemia</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Acute leukaemia affects immature cells, preventing them from developing and functioning correctly. These cells tend to multiply quickly, making acute leukaemia more aggressive.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Chronic Leukaemia</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Chronic leukaemia involves mature or partially mature cells. These cells multiply more slowly and are less aggressive than those in acute leukaemia.
+                    </p>
+                </div>
+            </div>
+
+            <!-- About CML -->
+            <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">About Chronic Myeloid Leukaemia (CML)</h3>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    CML develops from myeloid stem cells, which are responsible for producing red blood cells, platelets, and several types of white blood cells known as granulocytes. In patients with CML, an excessive number of myeloid cells become granulocytes. These cancerous cells are ineffective at fighting disease and crowd out healthy blood cells, often causing patients to feel weak and be prone to infection.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    CML predominantly affects older patients, with approximately half of all cases diagnosed in people aged 65 and above. It is very uncommon in paediatric patients.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Philadelphia Chromosome -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    The Philadelphia Chromosome
+                </h2>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Nearly all CML patients possess a specific chromosome abnormality known as the Philadelphia chromosome. Chromosomes are sections of DNA found in every cell. The Philadelphia chromosome is formed when sections of chromosomes 9 and 22 swap places within a blood cell. This genetic change causes the cancerous cell to produce a protein (from the tyrosine kinase family) that encourages it to multiply rapidly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors for CML
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases the likelihood of developing a disease, though having risk factors does not guarantee that a person will develop CML. Risk factors for CML include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The majority of CML cases are found in people aged 65 or older.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sex</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Men are more likely to develop CML than women.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Radiation Exposure</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Exposure to high levels of radiation, such as that from nuclear bombs, is a risk factor. However, radiation therapy used for cancer treatment is not considered a risk factor for CML.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    While there are various types of leukaemia, their symptoms can often be similar. Since chronic leukaemia develops slowly, CML patients may not experience symptoms for months or even years. In such instances, the disease is often discovered incidentally during a routine blood test performed for an annual physical or another medical reason.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    When CML patients do develop symptoms, they are often a result of a lack of properly functioning blood cells needed to transport oxygen, combat infection, and stop bleeding. Low levels of haemoglobin (the oxygen-carrying protein) can also contribute to symptoms.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Common Leukaemia Symptoms May Include:</h3>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Weakness, tiredness, and fatigue, which may be caused by the leukaemia itself or low haemoglobin levels.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Fever and frequent infections due to low counts of healthy white blood cells.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Excessive sweating, particularly at night.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Easy bleeding and bruising, including bleeding of the gums, caused by low platelet levels.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Recurrent nosebleeds.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Petechiae: a rash-like collection of tiny, pinpoint spots on the skin due to bleeding into the skin, also a result of low platelet levels.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Shortness of breath, which may be due to low haemoglobin levels or lung infections.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Swollen lymph nodes in the neck, underarm, stomach, or groin area.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Loss of appetite or feeling full after consuming very little food, caused by an enlarged spleen.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Unexplained weight loss.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Bone and joint pain.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            For female patients, menstruation that is longer or heavier than normal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A leukaemia diagnosis typically begins with a simple blood test called a complete blood count (CBC), which a doctor may order after assessing a patient's symptoms or as part of a routine check-up.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If the blood test reveals leukaemia cells or abnormal levels of red blood cells, white blood cells, or platelets, further tests may be ordered to provide a definitive leukaemia diagnosis and determine the extent of the disease. These tests are also used to monitor the disease's progress and track its response to treatment.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, suspected leukaemia cells are examined by pathologists who specialise exclusively in diagnosing leukaemia and its many subtypes, ensuring an accurate and precise diagnosis, which is the foundation for effective treatment.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        For leukaemia, patients typically undergo a bone marrow biopsy. This involves using a needle to take a sample of bone marrow from the hip to check for cancerous cells.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Genetic and Molecular Testing (Molecular Profiling)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        If leukaemia is diagnosed, additional tests can determine if specific chromosomes or gene mutations, or certain proteins or molecules, are present on the diseased cells. This profiling helps doctors determine the patient's exact type of leukaemia and prognosis, as cancers with different genetic features may respond differently to treatments. This information is crucial for developing an optimal treatment plan.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Lumbar Puncture (Spinal Tap)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Leukaemia may spread to the central nervous system (the brain and spinal cord). A lumbar puncture is used to examine the patient's spinal fluid for this spread. During the procedure, a small dose of chemotherapy may also be administered into the spinal fluid to target any leukaemia cells present.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Exams</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Doctors may order imaging scans to look for the presence of cancer in various parts of the body.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: CML Phases -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    CML Phases
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    CML is not described by stages (which typically indicate how much and where cancer has spread), but rather by phases. These phases are defined by the percentage of immature blood cells, known as blasts, found in the blood and bone marrow.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">The Three Phases Are:</h3>
+                
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Chronic Phase</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Fewer than 10% of the cells in the blood and bone marrow are blast cells.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Accelerated Phase</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            10% to 19% of the cells in the blood and bone marrow are blast cells.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Blastic Phase (Blast Crisis)</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            20% or more of the cells in the blood or bone marrow are blast cells. When this phase is accompanied by tiredness, fever, and an enlarged spleen, it is referred to as a blast crisis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The goal of leukaemia treatment is to achieve remission and ultimately cure the patient. For leukaemia, complete remission generally means that a patient's bone marrow shows no detectable microscopic evidence of the disease, and their blood counts have returned to normal. Patients who maintain complete remission for an extended period, typically measured in years, are considered cured, indicating an extremely low chance of recurrence.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, a team of highly experienced specialists communicates and collaborates daily to customise comprehensive leukaemia treatment plans for each patient.
+                </p>
+            </div>
+
+            <!-- Treatment Plans -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Chronic Myeloid Leukaemia (CML) Treatment Plans
+                    </h3>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Treatment for CML is adapted according to the disease phase: chronic, accelerated, or blastic.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Chronic Phase</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Patients typically receive targeted therapy. Younger patients may also be candidates for a stem cell transplant. Chemotherapy may also be given to help lower elevated white blood cell counts.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Accelerated and Blastic Phases</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A stem cell transplant, targeted therapy, and chemotherapy are the primary treatment modalities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Treatment Options -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Options
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Targeted therapy drugs are designed to interfere with specific molecules (often proteins) that cancer cells need to survive, multiply, and spread. For CML, the most common targeted therapy drugs are tyrosine kinase inhibitors (TKIs). These drugs are designed to block the tyrosine kinase protein that promotes the rapid multiplication of cancerous white blood cells. The introduction of TKIs has significantly improved the outlook and extended the survival times for CML patients, with the disease's five-year survival rate now exceeding 70%.
+                    </p>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Chemotherapy drugs are used to kill cancer cells, control their growth, or alleviate disease-related symptoms. Treatment may involve a single drug or a combination of multiple drugs, depending on the type and growth rate of the cancer.
+                    </p>
+                </div>
+
+                <!-- Stem Cell Transplantation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Stem Cell Transplantation</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A stem cell transplant, also known as a bone marrow transplant, is a procedure that replaces cancerous bone marrow with new, healthy bone marrow stem cells. It is usually performed after an intensive round of chemotherapy designed to eliminate the patient's existing bone marrow cells. This treatment may be necessary for patients whose leukaemia has returned or has not responded to standard treatments, or for those with a high-risk form of leukaemia. Because it can be physically challenging, it is generally reserved for patients who are younger and otherwise healthy.
+                    </p>
+                </div>
+
+                <!-- Clinical Trials -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Clinical Trials</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        As a top cancer centre, SSCHRC offers various clinical trials for CML, many of which are unavailable elsewhere. These trials explore new drug combinations and novel drugs, including targeted therapies and immunotherapies, offering patients access to cutting-edge treatments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9a799b646a0ad86d","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+
+</html>

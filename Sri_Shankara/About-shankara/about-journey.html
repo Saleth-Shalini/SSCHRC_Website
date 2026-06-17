@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    <link rel="canonical" href="https://srishankaracancerhospital.org/About-shankara/about-journey" />
+    
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script> 
+    
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey - Sri Shankara Cancer Foundation</title>
+    <meta name="description" content="Explore the rich history and impactful milestones of Sri Shankara Cancer Foundation from 2008 to present.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#1E3A8A',
+                        'secondary-blue': '#3B82F6',
+                        'accent-green': '#10B981',
+                        'warm-orange': '#F59E0B',
+                        'deep-gray': '#1F2937',
+                        'light-gray': '#F8FAFC',
+                        'medium-gray': '#64748B',
+                        'success-green': '#059669',
+                        'warning-orange': '#D97706',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Modern Desktop Timeline Design */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #1E3A8A, #3B82F6, #10B981);
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(30, 58, 138, 0.3);
+            z-index: -1;
+        }
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        .timeline-dot {
+            display: none;
+        }
+        
+        /* Modern Desktop Year Styling - Centered between Picture and Content */
+        .timeline-date {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 50%, #10B981 100%);
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.2;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .timeline-date:hover {
+            transform: translate(-50%, -50%) translateY(-3px);
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4);
+        }
+        
+        /* Modern Desktop Content Styling */
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #E5E7EB;
+            margin-bottom: 3rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+            margin-top: 2.5rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            letter-spacing: -0.025em;
+        }
+        
+        .timeline-description {
+            color: #64748B;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        /* Enhanced Desktop Image Styling */
+        .timeline-image {
+            border-radius: 1rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .timeline-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+        }
+        
+        /* Desktop Timeline Item Enhancements */
+        .timeline-item {
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Desktop Grid Image Improvements */
+        .grid.grid-cols-2 img {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .grid.grid-cols-2 img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Desktop Animation Enhancements */
+        .timeline-item {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Staggered animation for timeline items */
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(7) { animation-delay: 0.7s; }
+        .timeline-item:nth-child(8) { animation-delay: 0.8s; }
+        .timeline-item:nth-child(9) { animation-delay: 0.9s; }
+        .timeline-item:nth-child(10) { animation-delay: 1.0s; }
+        .timeline-item:nth-child(11) { animation-delay: 1.1s; }
+        .timeline-item:nth-child(12) { animation-delay: 1.2s; }
+        .timeline-item:nth-child(13) { animation-delay: 1.3s; }
+        .timeline-item:nth-child(14) { animation-delay: 1.4s; }
+        .timeline-item:nth-child(15) { animation-delay: 1.5s; }
+        .timeline-item:nth-child(16) { animation-delay: 1.6s; }
+        .timeline-item:nth-child(17) { animation-delay: 1.7s; }
+        .timeline-item:nth-child(18) { animation-delay: 1.8s; }
+        .timeline-item:nth-child(19) { animation-delay: 1.9s; }
+        .timeline-item:nth-child(20) { animation-delay: 2.0s; }
+        
+        /* Modern Mobile Timeline Design */
+        @media (max-width: 768px) {
+            /* Mobile timeline line - centered and behind content */
+            .timeline-item::before {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 3px;
+                background: linear-gradient(180deg, #1E3A8A, #3B82F6, #10B981);
+                border-radius: 2px;
+                box-shadow: 0 0 10px rgba(30, 58, 138, 0.3);
+                z-index: -1;
+                top: 0;
+                height: 100%;
+            }
+            
+            /* Hide desktop timeline dot */
+            .timeline-dot {
+                display: none;
+            }
+            
+            /* Mobile Year Positioning on Timeline - centered and above line */
+            .timeline-date {
+                position: absolute;
+                left: 50%;
+                top: 1rem;
+                transform: translateX(-50%);
+                background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 50%, #10B981 100%);
+                color: white !important;
+                padding: 0.5rem 1rem;
+                border-radius: 0.75rem;
+                font-weight: 700;
+                font-size: 1rem;
+                line-height: 1.2;
+                box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                transition: all 0.3s ease;
+                text-align: center;
+                z-index: 10;
+            }
+            
+            .timeline-date:hover {
+                transform: translateX(-50%) translateY(-2px);
+                box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+            }
+            
+            /* Mobile Layout: Year → Text → Picture (Vertical) */
+            .timeline-item .grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1rem !important;
+                align-items: center !important;
+            }
+            
+            .timeline-item .grid > div {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                order: unset !important;
+            }
+            
+            /* Year positioning for mobile - First in order */
+            .timeline-item .timeline-date {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+                transform: none !important;
+                margin: 0 auto 1rem auto !important;
+                display: inline-block !important;
+                order: 1 !important;
+            }
+            
+            /* Clean Content Layout - Second in order */
+            .timeline-content {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                position: relative;
+                background: white;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                border: 1px solid #F1F5F9;
+                margin-bottom: 1rem;
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                z-index: 10;
+                order: 2 !important;
+            }
+            
+            /* Image positioning for mobile - Third in order */
+            .timeline-item .grid > div:last-child {
+                order: 3 !important;
+                margin-top: 1rem;
+            }
+            
+            /* Ensure images are centered */
+            .timeline-item .grid > div:last-child img {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .timeline-content::before {
+                display: none;
+            }
+            
+            /* Modern Typography */
+            .timeline-title {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: #1E293B;
+                margin-bottom: 1rem;
+                line-height: 1.3;
+                letter-spacing: -0.025em;
+            }
+            
+            .timeline-description {
+                color: #64748B;
+                line-height: 1.7;
+                font-size: 0.95rem;
+                margin-bottom: 0;
+            }
+            
+            /* Enhanced Image Styling */
+            .timeline-image {
+                margin-top: 1.5rem;
+                border-radius: 1rem;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                transition: transform 0.3s ease;
+            }
+            
+            .timeline-image:hover {
+                transform: scale(1.02);
+            }
+            
+            /* Timeline Item Spacing */
+            .timeline-item {
+                margin-bottom: 2rem;
+                padding-bottom: 0;
+                position: relative;
+            }
+            
+            .timeline-item:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            /* Mobile Image Grid Improvements */
+            .grid.grid-cols-2 {
+                gap: 0.75rem;
+                margin-top: 1rem;
+            }
+            
+            .grid.grid-cols-2 img {
+                border-radius: 0.75rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                position: relative;
+                z-index: 10;
+            }
+            
+            /* Ensure images don't overlap with timeline */
+            .timeline-image {
+                margin-top: 1rem;
+                border-radius: 1rem;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                transition: transform 0.3s ease;
+                position: relative;
+                z-index: 10;
+            }
+            
+            /* Remove connecting element to prevent overlap */
+            .timeline-item:not(:last-child)::after {
+                display: none;
+            }
+        }
+        
+        /* Tablet optimizations */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .timeline-item {
+                margin-bottom: 2rem;
+            }
+            
+            .timeline-date {
+                font-size: 1.1rem;
+            }
+            
+            .timeline-title {
+                font-size: 1.25rem;
+            }
+            
+            .timeline-description {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Additional Modern Enhancements */
+        @media (max-width: 768px) {
+            /* Add subtle animation to timeline items */
+            .timeline-item {
+                animation: fadeInUp 0.6s ease-out;
+            }
+            
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            /* Enhanced date card without icon */
+            .timeline-date::before {
+                content: none;
+            }
+            
+            /* Professional content card hover effect */
+            .timeline-content:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            }
+            
+            /* Modern section spacing */
+            .timeline-item {
+                margin-bottom: 3rem;
+            }
+            
+            .timeline-item:last-child {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1E3A8A, #10B981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .mega-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .mega-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-inter smooth-scroll">
+
+
+    <!-- Page Header -->
+    <section class="bg-primary-blue text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Journey</h1>
+            <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                A testament to our unwavering commitment to pioneering world-class cancer care. 
+                From humble beginnings in 2008 to becoming a leading cancer care institution.
+            </p>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-accent-green"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-16">
+                    <!-- 2010 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2010</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Foundation Blessing</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        The land on which Sri Shankara Cancer Hospital and Research Centre, Bengaluru stands is consecrated and blessed through Gudli Pooje.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2010-08-27_m_1.webp" alt="Foundation Blessing 2010" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2012 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2012</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Advanced Radiotherapy</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        The Radiotherapy Department housing the Varian RapidArc - an advanced radiotherapy machine for enhanced tumour targeting, the first in Bangalore is blessed by His Holiness Jagadguru Shankaracharya Sri Sri Bharati Tirtha Mahasannidhanam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <img src="Media/about/about_2012-03-01-a_m_1.webp" alt="Radiotherapy Department 2012" class="timeline-image rounded-lg shadow-lg">
+                                    <img src="Media/about/about_2012-03-01-b_m_1.webp" alt="Radiotherapy Blessing 2012" class="timeline-image rounded-lg shadow-lg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2012</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Operations Begin</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Sri Shankara Cancer Hospital and Research Centre commences operations, marking the beginning of our journey in providing world-class cancer care.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2012-08-15_m_1.webp" alt="Operations Begin 2012" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2013 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2013</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Mobile Screening Unit</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        The Custom-Built Mobile Cancer Detection and Screening Bus - "Vignaatri" supported by the State Bank of India, is flagged off, bringing cancer screening to communities.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2013-07-01_m_1.webp" alt="Mobile Screening Unit 2013" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2014 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2014</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">First Surgeries</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        First Surgeries in our New Operation Theatres at Sri Shankara Cancer Hospital and Research Centre, Bengaluru.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2014-02-03_m_1.webp" alt="First Surgeries 2014" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2015 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2015</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Nithya Anna Dana</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Nithya Anna Dana Yojana to provide meals to all general ward patients at Sri Shankara Cancer Hospital and Research Centre is inaugurated by His Holiness Jagadguru Sri Sri Bharati Tirtha Mahasannidham and His Holiness Jagadguru Sri Sri Vidushekhara Bharati Sannidham.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2015-07-13_m_1.webp" alt="Nithya Anna Dana 2015" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2015</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Advanced Technology</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Philips MRI & Varian Truebeam Linear Accelerator - Advanced systems for accurate radiodiagnosis and radiotherapy, that enable excellent patient care, is inaugurated by Late Sri Ananth Kumar, Honorable Former Union Minister.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2015-12-06_m_1.webp" alt="Advanced Technology 2015" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2016 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2016</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Second Mobile Unit</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        The cancer detection camp bus - 'Vidhaatri', equipped with diagnostic equipment is blessed by His Holiness Jagadguru Shankaracharya Sri Sri Sri Bharati Tirtha Mahasannidhanam and His Holiness Jagadguru Shankaracharya Sri Sri Sri Vidhushekhara Bharati Sannidham. Vidhaatri is supported by Cognizant Foundation.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2016-08-04_m_1.webp" alt="Vidhaatri Mobile Unit 2016" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2016</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Jan Aushadhi</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Bengaluru's first Pradhan Mantri Jan Aushadalaya is inaugurated at Sri Shankara Cancer Hospital and Research Centre.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2016-10-01_m_1.webp" alt="Jan Aushadhi 2016" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2016</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">National Dedication</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Sri Shankara Cancer Hospital and Research Center and Sri Shankara National Centre for Cancer Prevention and Research are dedicated to the nation by the Honorable President of India, Sri Pranab Mukherjee.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2016-12-30_m_1.webp" alt="National Dedication 2016" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2017 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2017</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Breast Diseases Centre</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Centre for Breast Diseases supported by the State Bank of Mysore is inaugurated.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2017-03-27_m_1.webp" alt="Breast Diseases Centre 2017" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2019 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2019</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Nursing College</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Sri Shankara College of Nursing is inaugurated, expanding our commitment to healthcare education.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2019-03-26_m_1.webp" alt="Nursing College 2019" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2019</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Lung Diseases Centre</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Sri Shyamji Agarwal Centre for Lung Diseases - Centre of Excellence in Pulmonology is inaugurated.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2019-09-01_m_1.webp" alt="Lung Diseases Centre 2019" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2019</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Children's Health Centre</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Lakshmi Children's Health Centre is inaugurated, providing specialized care for pediatric patients.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2019-12-08_m_1.webp" alt="Children's Health Centre 2019" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2021</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Bhubaneswar Vision</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        The idea of Bagchi Sri Shankara Cancer Centre & Research Institute, Bhubaneswar is born.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2021-02-18_m_1.webp" alt="Bhubaneswar Vision 2021" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2021</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Three New Departments</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Three departments are inaugurated:
+                                        <br>• Smt. Parvati Chandrasekhar Bone Marrow Transplantation Centre
+                                        <br>• Paediatric Oncology Unit
+                                        <br>• Sri Shankara Cancer Research Centre at Sharada Kripa
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <img src="Media/about/about_2021-02-27-a_m_1.webp" alt="New Departments 2021" class="timeline-image rounded-lg shadow-lg">
+                                    <img src="Media/about/about_2021-02-27-b_m_1.webp" alt="New Departments 2021" class="timeline-image rounded-lg shadow-lg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2021</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Bhubaneswar Groundbreaking</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Bhoomi Pooje of Bagchi Sri Shankara Cancer Centre & Research Institute, Bhubaneswar on the auspicious day of the Ratha Yatra of Lord Sri Jagannath.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2021-07-12_m_1.webp" alt="Bhubaneswar Groundbreaking 2021" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2022</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Cutting-Edge Technology</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Inauguration by Hon'ble Vice Chancellor of Rajiv Gandhi University of Health Sciences and Dr. M K Ramesh:
+                                        <br>• Trubeam HyperArc Linear Accelerator - Advanced radiotherapy machine
+                                        <br>• Da Vinci Robotic Surgery Unit - Advanced robotic surgical system
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2022-02-26_m_1.webp" alt="Advanced Technology 2022" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2022</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">10 Years of Service</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Completed 10 years of dedicated service to cancer care and community health.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2022-08-15_m_1.webp" alt="10 Years of Service 2022" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:order-2 md:pl-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2023</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Allied Health Sciences</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Sri Shankara Institute of Allied Health Sciences is affiliated with Rajiv Gandhi University of Health Sciences (RGUHS).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:order-1 md:pr-8">
+                                <img src="Media/about/about_2023-11-15_m_1.webp" alt="Allied Health Sciences 2023" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="timeline-item relative">
+                        <div class="timeline-dot"></div>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <div class="timeline-date text-1l font-bold text-primary-blue mb-2">2024</div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title text-xl font-semibold text-secondary-gray mb-4">Bhubaneswar Inauguration</h3>
+                                    <p class="timeline-description text-gray-600">
+                                        Bagchi Sri Shankara Cancer Centre and Research Institute in Bhubaneswar is inaugurated by The Hon'ble Chief Minister of Odisha, Sri Naveen Patnaik.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:pl-8">
+                                <img src="Media/about/about_2024-02-15_m_1.webp" alt="Bhubaneswar Inauguration 2024" class="timeline-image rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.lg\\:hidden button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'lg:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-40';
+        mobileMenu.innerHTML = `
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" class="block text-secondary-gray hover:text-primary-blue">Home</a>
+                <a href="about.html" class="block text-primary-blue font-semibold">About Us</a>
+                <a href="services.html" class="block text-secondary-gray hover:text-primary-blue">Patient Care</a>
+                <a href="research.html" class="block text-secondary-gray hover:text-primary-blue">Research</a>
+                <a href="education.html" class="block text-secondary-gray hover:text-primary-blue">Education</a>
+                <a href="community.html" class="block text-secondary-gray hover:text-primary-blue">Community</a>
+                <a href="involve.html" class="block text-secondary-gray hover:text-primary-blue">Get Involved</a>
+                <a href="news.html" class="block text-secondary-gray hover:text-primary-blue">News</a>
+            </div>
+        `;
+        
+        // Mega Menu Functionality
+        document.querySelectorAll('.group').forEach(group => {
+            const megaMenu = group.querySelector('.mega-menu');
+            if (megaMenu) {
+                group.addEventListener('mouseenter', () => {
+                    megaMenu.classList.add('active');
+                });
+                
+                group.addEventListener('mouseleave', () => {
+                    megaMenu.classList.remove('active');
+                });
+            }
+        });
+
+        let isMenuOpen = false;
+        mobileMenuButton.addEventListener('click', function() {
+            if (isMenuOpen) {
+                mobileMenu.remove();
+                isMenuOpen = false;
+            } else {
+                document.querySelector('header').appendChild(mobileMenu);
+                isMenuOpen = true;
+            }
+        });
+    </script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oesophageal Cancer: Health Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Oesophageal Cancer: Health Information
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Oesophageal cancer is a condition where the cells lining the oesophagus undergo mutation and begin to grow in an uncontrolled manner. In some cases, this cancer can penetrate through the lining and into the wall of the oesophagus.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The oesophagus is a hollow, muscular tube, approximately a foot in length, which connects the back of your throat to your stomach. Its function is to transport food and liquids to the stomach for digestion when you swallow.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    According to the National Cancer Institute, many indians are diagnosed with oesophageal cancer annually. Since it often presents with no symptoms in its initial stages, it is typically detected at a more advanced stage, making treatment more complex.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Types -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Types of Oesophageal Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Oesophageal cancer is classified based on the type of cell in which the cancer originates. The two most common types are:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Oesophageal Adenocarcinoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This cancer begins in the glandular cells of the oesophageal lining, which are concentrated in the lower oesophagus, near the stomach. These cells produce mucus to lubricate the passage of food. Risk factors include long-term heartburn (reflux or GERD), obesity, smoking, and Barrett's oesophagus. It is the most common type in the Western Hemisphere, particularly in white males.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Oesophageal Squamous Cell Carcinoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This cancer starts in the flat squamous cells that make up the majority of the oesophageal lining. It is often found in the middle and upper parts of the oesophagus. Risk factors include smoking and excessive alcohol consumption. Globally, it is the most common type, although its incidence is decreasing in India.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Other Less Common Types</h4>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    Other less common types of cancer that can occur in the oesophagus include:
+                </p>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• <strong>Neuroendocrine Tumours:</strong> Cancer affecting the hormone-producing cells.</li>
+                    <li>• <strong>Lymphoma:</strong> Cancer that arises from the lymph nodes attached to the oesophagus, affecting the body's immune system.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Anything that increases the likelihood of developing oesophageal cancer is considered a risk factor. It is often linked to repeated injury to the oesophageal lining, as well as age and hereditary conditions. Key risk factors include:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Most cases occur in people over 55.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gender</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Men are about three times more likely than women to develop the disease.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Long-term Heartburn/GERD</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Acid reflux or gastroesophageal reflux disease (GERD) is a factor in approximately half of all oesophageal cancers.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Barrett's Oesophagus</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Long-term, uncontrolled heartburn can cause the cells lining the lower oesophagus to change and resemble intestinal cells. This is a pre-cancerous condition that must be monitored closely as it can potentially transform into oesophageal cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Smoking</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A long history of smoking damages the cell lining and is implicated in half of all squamous cell oesophageal cancers, while also increasing the risk of adenocarcinoma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Excessive Alcohol Consumption</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The risk increases with the amount of alcohol consumed. Combining smoking and drinking alcohol significantly amplifies the risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Diet and Weight</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Being overweight, overeating, or maintaining an unhealthy diet increases risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Exposure to Chemicals</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This includes ingesting lye or being frequently exposed to dry-cleaning chemicals.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Medical Conditions</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Conditions like Achalasia (sphincter at the bottom of the oesophagus fails to open), Tylosis (a rare inherited skin disorder), and Oesophageal webs can increase risk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Signs of oesophageal cancer are often not noticeable in the early stages. When symptoms do appear, they can indicate other health problems, making a doctor's consultation essential.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Early Signs and Symptoms</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Painful swallowing (odynophagia).</li>
+                        <li>• Indigestion or heartburn that is persistent.</li>
+                        <li>• A feeling of pressure, pain, or burning in the chest or throat.</li>
+                        <li>• Reduced appetite.</li>
+                        <li>• Chronic cough or hoarseness.</li>
+                        <li>• Persistent hiccups.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Late Signs and Symptoms (as cancer progresses)</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Difficulty swallowing (dysphagia), which may start with solid foods and progress to liquids. This is often the first symptom to appear as a tumour grows and may block the food passage.</li>
+                        <li>• Unintended weight loss.</li>
+                        <li>• Vomiting or regurgitation of food.</li>
+                        <li>• Black, tar-like stools (a possible sign of internal bleeding).</li>
+                        <li>• Anaemia (low red blood cell count), which can lead to fatigue and weakness.</li>
+                        <li>• Pneumonia, which may occur if food or liquid enters the lungs due to swallowing problems.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <h4 class="text-xl font-bold text-gray-900 mb-3">When to Consult a Doctor</h4>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    It is important to seek medical advice if you experience any of the following, especially if they are persistent or worsening:
+                </p>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• Trouble swallowing.</li>
+                    <li>• Persistent heartburn or chest discomfort.</li>
+                    <li>• Unexplained weight loss or loss of appetite.</li>
+                    <li>• Vomiting or spitting up undigested food.</li>
+                    <li>• Black stools or signs of bleeding.</li>
+                    <li>• Long-lasting hoarseness, hiccups, or cough.</li>
+                    <li>• Feeling unusually tired or weak.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    For many patients, the first noticeable symptom is trouble swallowing. If a doctor suspects oesophageal cancer, they will conduct a physical examination and inquire about your health history, lifestyle (smoking and drinking), and family medical history. Since early-stage oesophageal cancer is often asymptomatic, it may be discovered incidentally during tests for other conditions.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    SSCHRC's experts utilise advanced technology for precise diagnosis, which is key to successful treatment. Diagnostic tests may include:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Blood Tests</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        X-rays, CT (computed axial tomography) scans, MRI (magnetic resonance imaging) scans, and PET (positron emission tomography) scans.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Barium Swallow Test</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The patient swallows a chalky liquid containing barium, which coats the oesophageal lining, allowing tissue changes to be clearly visible on an X-ray.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        The removal of suspected cancer cells for microscopic examination. Biopsy procedures include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Upper Gastrointestinal Endoscopy:</strong> An endoscope (a tube with a high-definition camera and light) is inserted through the mouth to examine the oesophagus and remove small tissue samples.</li>
+                        <li>• <strong>Endoscopic Ultrasound (EUS) or Endosonography:</strong> An endoscope with an ultrasound device provides images of internal organs, helping to determine how deeply a tumour has invaded the oesophageal wall and to examine nearby lymph nodes.</li>
+                        <li>• <strong>Bronchoscopy:</strong> Used to examine the trachea and tubes leading to the lungs if cancer invasion into the respiratory tract is suspected.</li>
+                        <li>• <strong>Laryngoscopy:</strong> Used to examine the larynx (voice box).</li>
+                        <li>• <strong>CT-guided Biopsy:</strong> Used to check for cancer spread (metastasis) to other organs like the lungs or liver for staging purposes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Staging -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Staging
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The stage of oesophageal cancer describes how advanced the tumour is and if it has spread, which informs the care team about treatment options. The most common system is the TNM system:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">T-category (Tumour)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Refers to the depth of the primary tumour within the oesophagus and its spread to nearby organs.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">N-category (Nodes)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Refers to the spread of cancer to nearby lymph nodes.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">M-category (Metastasis)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Indicates whether the cancer has spread to distant organs or lymph nodes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Staging also considers the cell type, the cancer Grade (G1: well-differentiated, less aggressive to G3: poorly-differentiated/undifferentiated, more aggressive), and sometimes the Location of the tumour (upper, middle, or lower oesophagus). Stages range from Stage 0 (pre-cancer) to Stage IV (advanced cancer).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    SSCHRC offers a range of innovative treatments, including minimally invasive surgeries and targeted therapies, customised to the patient's specific type and stage of cancer, and general health. Treatment may involve one or more therapies to address the cancer or relieve symptoms.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Preventative Treatment -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Preventative Treatment</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These are recommended for very early-stage Barrett's oesophagus with a high risk of developing into cancer (dysplasia):
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Radiofrequency Ablation (RFA):</strong> An endoscopic device uses heat to destroy pre-cancerous tissue.</li>
+                        <li>• <strong>Cryotherapy:</strong> A technique using very low temperatures to rapidly freeze and kill pre-cancerous tissue, which is then replaced by normal cells as the area heals.</li>
+                    </ul>
+                </div>
+
+                <!-- Treatment for Early Oesophageal Cancer -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Treatment for Early Oesophageal Cancer</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Endoscopic Mucosal Resection (EMR) / Endoscopic Submucosal Dissection (ESD):</strong> Minimally invasive procedures using an endoscope to remove early-stage cancer that has only invaded the surface of the oesophagus, without requiring incisions or removal of the oesophagus.</li>
+                    </ul>
+                </div>
+
+                <!-- Treatment for Locally Advanced and Advanced Cancers -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Treatment for Locally Advanced and Advanced Cancers</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        If cancer has spread beyond the surrounding tissue, treatments are used to slow the disease and ease symptoms:
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• <strong>Surgery (Esophagectomy):</strong> The most common treatment. It typically involves removing all or part of the oesophagus, a portion of the stomach, and nearby lymph nodes. The remaining stomach is then repositioned and connected to the remaining oesophagus. Surgery may be combined with chemotherapy and/or radiation therapy for advanced stages.</li>
+                        <li>• <strong>Chemotherapy:</strong> Works by destroying fast-growing cells, including cancer cells. It is used before or after surgery, and to treat metastasised cancer.</li>
+                        <li>• <strong>Radiation Therapy:</strong> Focused, high-energy photon beams destroy cancer cells. Advanced techniques, such as Intensity-Modulated Radiotherapy (IMRT), deliver beams tailored to the tumour's shape, which aims high-radiation particles directly at the tumour site, can result in fewer side effects to surrounding healthy tissue.</li>
+                        <li>• <strong>Immunotherapy:</strong> Recruits the patient's own immune system to fight cancer, often by using immune checkpoint inhibitors. It is most commonly used for advanced-stage disease and is being explored for earlier stages.</li>
+                        <li>• <strong>Targeted Therapies:</strong> These treatments work at a cellular level by interfering with the specific molecules (proteins) or genes that cancer cells need to survive, multiply, and spread, thereby stopping or slowing the cancer's growth.</li>
+                    </ul>
+                </div>
+
+                <!-- Other Supportive Procedures -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Other Supportive Procedures</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Oesophageal Stents:</strong> Small, expandable metal tubes placed inside the oesophagus using an endoscope. Once expanded, the stent opens the blocked part of the oesophagus, making it easier for food and liquids to pass through.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

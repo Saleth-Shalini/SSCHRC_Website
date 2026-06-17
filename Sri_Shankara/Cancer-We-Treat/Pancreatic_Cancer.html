@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancreatic Cancer: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pancreatic Cancer: A Comprehensive Guide
+                </h2>
+            </div>
+            
+            
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Pancreatic cancer develops when malignant (cancerous) cells form and multiply within the pancreas. These tumours are often challenging to detect in their early stages because the signs and symptoms are frequently subtle or non-specific. Consequently, the majority of cases are diagnosed when the disease has already reached an advanced stage, limiting the range of treatment options available.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Pancreatic cancer is a significant health concern, being one of the leading causes of cancer-related death globally. In India, it is estimated that approximately 60,000 new cases are diagnosed annually, leading to over 47,000 deaths each year. The lifetime risk of developing this condition is about 1.6%, with a slightly increased risk observed in men compared to women. The typical age at diagnosis is generally between 65 and 74 years.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: About the Pancreas -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    About the Pancreas
+                </h2>
+            </div>
+            
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The pancreas is an elongated organ situated deep within the abdomen, behind the lower portion of the stomach and in front of the spine. Its primary roles include:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Digestive Juices</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Producing and releasing juices containing enzymes that aid in the digestion of food.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Hormones</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Producing insulin and other crucial hormones that help the body regulate sugar absorption and control blood sugar levels.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The pancreas is mainly composed of two types of cells:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Exocrine cells</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Responsible for producing and releasing enzymes that facilitate food digestion.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Endocrine cells</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Responsible for producing and releasing vital hormones directly into the bloodstream.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The vast majority of pancreatic cancers originate in the exocrine cells that line the ducts of the pancreas, and these are known as pancreatic adenocarcinomas. This health information focuses specifically on exocrine pancreatic cancer, and further mentions of pancreatic cancer refer to pancreatic adenocarcinoma, excluding pancreatic neuroendocrine tumours (NETs).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pancreatic Cancer Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases an individual's probability of developing pancreatic cancer. These factors can be broadly categorised as modifiable (changeable) or non-modifiable (unchangeable).
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Risk Factors that may be modified:
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Smoking and Tobacco Use</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Individuals who smoke are approximately twice as likely to develop pancreatic cancer.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Obesity</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Being significantly overweight (having an elevated Body Mass Index, or BMI) increases the chance of developing pancreatic cancer by around 20%.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Other Pancreatic Cancer Risk Factors (Non-Modifiable):
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The risk of pancreatic cancer increases sharply after the age of 55 years.
+                            </p>
+                        </div>
+
+                        
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Inherited genetic changes may account for about 10% of pancreatic cancers. Examples of genetic syndromes linked to exocrine pancreatic cancer include:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>Hereditary breast and ovarian cancer syndrome (caused by mutations in the BRCA1 or BRCA2 genes).</li>
+                                <li>Lynch syndrome (typically involving defects in MLH1 or MSH2 genes).</li>
+                                <li>Hereditary pancreatitis (due to mutations in the PRSSI gene).</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Diabetes</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                People with a prolonged history of Type 2 diabetes face an increased risk of developing pancreatic cancer.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Chronic Pancreatitis</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Long-term inflammation of the pancreas is associated with an increased risk, especially among those who smoke.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to remember that not everyone with these risk factors will develop pancreatic cancer. However, if you have any risk factors, it is advisable to discuss them with your doctor.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Pancreatic cancer often does not present with any noticeable symptoms in its earliest stages. When symptoms do emerge, they are usually a result of the pancreas's close proximity and relationship to other digestive organs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Jaundice (yellowing of the skin) or icterus (yellowing of the eyes).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Dark urine or pale/light-coloured stools.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Pain in the abdomen or the middle of the back.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Bloating or a persistent feeling of fullness.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Nausea, vomiting, or indigestion.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Persistent fatigue.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Lack of appetite.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Unexplained weight loss.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Sudden-onset diabetes.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    These symptoms can be indicative of various other health problems and do not automatically confirm pancreatic cancer. Nonetheless, it is essential to consult your doctor immediately if you experience any of these symptoms for a proper evaluation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The diagnosis of pancreatic cancer is challenging. The lack of early symptoms, combined with the pancreas's deep location within the body behind several other organs, makes it difficult to detect without specialised equipment.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    To accurately find and stage (determine the extent of) pancreatic cancer, several diagnostic tests are typically necessary. Precise diagnosis and staging are vital for your care team to determine the most suitable course of treatment.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Diagnostic Tests for Pancreatic Cancer
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        One or more of the following tests may be used for initial testing, to determine if the cancer has spread, and to monitor the effectiveness of treatment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Tests</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Imaging procedures are used to take pictures of the pancreas and surrounding areas to look for potential tumours, assess their spread, and check treatment response. In some cases, these tests can also be used to guide the collection of tissue samples for a biopsy. Common imaging tests include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>CT Scan (Computed Tomography):</strong> A painless, outpatient procedure that uses a series of X-rays taken from various angles to create detailed cross-sectional images of the pancreas. A CT scan optimised for the pancreas is generally the primary choice for diagnosis and staging, unless other medical factors make it unsuitable.</li>
+                        <li><strong>MRI Scan (Magnetic Resonance Imaging):</strong> A painless, outpatient procedure that uses powerful magnets and radio waves, rather than X-rays, to produce an image of the pancreas. Although CT scans are more widely used, an MRI can sometimes be better at visualising tumours that are difficult to see.</li>
+                        <li><strong>Endoscopic Ultrasound (EUS):</strong> A doctor uses a flexible tube with a camera (endoscope) to examine the stomach. A special endoscope equipped with an ultrasound probe is then guided into the first part of the small intestine to obtain a clear video image of the pancreas. If cancer is suspected, a small tissue sample can be collected for biopsy during this procedure.</li>
+                        <li><strong>Endoscopic Retrograde Cholangiopancreatography (ERCP):</strong> An endoscope is inserted through the mouth to the first part of the small intestine. A smaller tube is then passed through the endoscope into the bile ducts. A contrast dye is injected through this tube, and an X-ray is taken. This procedure can also be used to take a tissue sample for biopsy. If a tumour blocks the ducts, a stent may be placed to relieve the blockage, which can help alleviate pain and digestive issues.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A biopsy involves removing a small piece of tissue to be examined under a microscope to confirm the presence of cancer. While imaging tests can suggest pancreatic cancer, a biopsy is nearly always required for a definitive diagnosis.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        For localised pancreatic cancer, biopsies are most commonly obtained during an Endoscopic Ultrasound (EUS) or Endoscopic Retrograde Cholangiopancreatography (ERCP).
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        For patients with metastatic disease (cancer that has spread), a biopsy of the most accessible distant site is often preferred, such as a liver biopsy performed via CT-guided fine-needle aspiration.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Blood Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Blood samples can be analysed to check for the function of organs like the liver (e.g., bilirubin levels) or other organs that may be impacted by a pancreatic tumour. Blood tests can also measure the levels of tumour markers, such as CA-19-9. High levels of these markers may indicate pancreatic cancer and can also be used to monitor the effectiveness of treatment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Pancreatic Cancer Stages -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pancreatic Cancer Stages
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The stage of cancer describes the size of the primary tumour and how far the cancer has spread within the patient's body. Knowing the stage is crucial for the care team to understand the disease, develop an appropriate treatment plan, and estimate the patient's prognosis (chance of successful treatment).
+                </p>
+            </div>
+
+            <!-- TNM Stages -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        TNM Stages
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Most cancers use the TNM staging system, which describes the cancer based on three key factors:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">T (Tumour)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The size of the primary tumour and whether it has invaded nearby tissues. (Scored 1–4)
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">N (Nodes)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The spread of the cancer to nearby lymph nodes. (Scored 1–3)
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">M (Metastasis)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Whether the cancer has spread (metastasised) to distant parts of the body. (Scored 0–1)
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-lg text-gray-700 leading-relaxed mt-6">
+                        After all diagnostic and staging procedures are complete, your doctor will be able to determine the TNM stage of your cancer and explain how this impacts your treatment and outlook.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 0 to IV Stages -->
+            <div class="mb-12">
+                <div class="bg-white rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        0 to IV Stages
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The TNM staging is often simplified into four main stages (I–IV), with some cancers also including a Stage 0. Higher numbers generally indicate a more advanced disease that is typically more challenging to treat.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 0</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Abnormal cells are found in the lining of the pancreas. This is also called carcinoma in situ ("in its original place") and is considered a pre-cancerous stage that could potentially develop into cancer. Not all cancers have a Stage 0.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage I</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The cancer has formed but is confined to the pancreas.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage II & Stage III</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The cancer has spread to nearby tissue and/or lymph nodes.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage IV (Metastatic)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The cancer has spread to distant areas of the body. While Stage IV cancer is often not curable, it can frequently be managed like a chronic disease.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specific Pancreatic Cancer Stages -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Specific Pancreatic Cancer Stages (Source: National Cancer Institute)
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 0</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Abnormal cells are found only in the lining of the pancreas (carcinoma in situ).
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 1</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Cancer is in the pancreas only.
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Stage 1A:</strong> The tumour is 2 centimetres or smaller.</li>
+                                <li><strong>Stage 1B:</strong> The tumour is larger than 2 centimetres but not larger than 4 centimetres.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 2</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Stage 2A:</strong> The tumour is larger than 4 centimetres.</li>
+                                <li><strong>Stage 2B:</strong> The tumour is any size and has spread to 1 to 3 nearby lymph nodes.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 3</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The tumour is any size and has spread to:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6 mt-2">
+                                <li>4 or more nearby lymph nodes; or</li>
+                                <li>The major blood vessels near the pancreas.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 4</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The tumour is any size and has spread to other distant parts of the body, such as the liver, lung, or peritoneal cavity (the abdominal body cavity).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The treatment strategy at SSCHRC combines pioneering research, advanced technology, and a multidisciplinary team approach to create a personalised care plan.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Pancreatic cancer treatment plans are largely determined by whether or not the tumour can be surgically removed (resected). As most pancreatic cancers are diagnosed after they have spread beyond the pancreas, only about 20% of tumours are localised and considered resectable. Regardless of resectability, treatment plans are often varied, and patients typically require more than one type of therapy provided by a team of specialists.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Treatment options may include current standard-of-care therapies or those being evaluated in clinical trials. The following therapies may be recommended to treat the cancer or help relieve symptoms:
+                </p>
+                
+                <ul class="space-y-2 text-gray-700 ml-6">
+                    <li>Surgery</li>
+                    <li>Chemotherapy</li>
+                    <li>Radiation</li>
+                    <li>Targeted Therapy</li>
+                </ul>
+            </div>
+
+            <!-- Impact of Resectability on Treatment -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Impact of Resectability on Treatment
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Surgery is the only treatment that offers a potential cure for pancreatic cancer, but it is only an option for a minority of patients (~20%). Therefore, determining if a patient will benefit from surgery at the time of diagnosis is paramount.
+                    </p>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        SSCHRC doctors utilise a contemporary system called resectability staging to plan treatment. This classification divides pancreatic cancers into three groups based on their potential for complete surgical removal:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">1. Resectable</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The cancer is confined to the pancreas or has only spread to immediately adjacent tissue, and the entire tumour can be removed surgically. This typically includes Stage I and some Stage II pancreatic cancers. Patients may proceed with:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>Surgery straight away.</li>
+                                <li>Chemotherapy before surgery.</li>
+                                <li>Radiation and chemotherapy before surgery.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">2. Borderline Resectable</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The cancer has reached nearby blood vessels but still has the potential to be removed entirely with surgery. This generally includes some Stage II and Stage III cancers. Patients often receive chemotherapy and may subsequently receive radiation before surgery (neoadjuvant therapy). Following these initial treatments, the tumour is re-evaluated to determine if complete surgical removal is possible.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">3. Unresectable</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The cancer cannot be removed completely by surgery. This stage is further divided into:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Locally-Advanced:</strong> The cancer remains largely confined to the pancreas and surrounding organs but has grown into or is enveloping major blood vessels. This often includes many Stage III cancers. These patients always receive chemotherapy first and are then considered for radiation therapy. Depending on the tumour's size and location, higher-than-normal doses of radiation (dose-escalation) may be used.</li>
+                                <li><strong>Metastatic:</strong> The cancer has spread to distant organs and cannot be completely removed. These patients are treated with chemotherapy, provided it can be safely tolerated. Radiation therapy may sometimes be used as a palliative measure to help relieve symptoms.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Specific Treatment Modalities -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Specific Treatment Modalities
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pancreatic Cancer Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Surgical approaches are classified into two main types:
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Potentially Curative</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Aimed at treating the pancreatic cancer by removing the tumour entirely.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Palliative</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Aimed at relieving symptoms, such as a blocked bile duct or bowel.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Potentially Curative Surgical Techniques</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">
+                            Complete surgical removal of the tumour offers the best prospect for a cure when the cancer is confined to the pancreas or has only spread to nearby areas. Partial tumour removal is not beneficial for long-term survival, so surgery is only performed if the tumour can be entirely resected.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-3">
+                            The most common technique for removing a pancreatic tumour is called a pancreatoduodenectomy, or the Whipple procedure. This complex operation involves removing portions of the pancreas, intestine, nearby lymph nodes, gallbladder, bile duct, and sometimes parts of the stomach.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-3">
+                            Since the pancreas is located near vital blood vessels supplying the liver and draining the intestine, cancer may spread into these vessels. Surgeons at SSCHRC may perform vascular resection and reconstruction (removing the tumour and rerouting affected vessels) during the Whipple procedure, even if the tumour is closely associated with these vessels. These complex operations are potentially curative and are frequently performed at SSCHRC for patients with localised pancreatic cancer undergoing surgery. The Whipple procedure is a major operation with a high risk of complications; studies suggest it is more successful and carries less risk when performed at a major cancer centre with surgeons who have extensive experience in the procedure.
+                        </p>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Palliative Surgical Operations</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">
+                            When cancer is unresectable because it has spread too far or into major blood vessels, surgery may be used to relieve symptoms. Blockage of the bile duct is a common symptom addressed surgically, as it can cause bile to leak into surrounding organs, leading to pain and digestive issues. Two techniques are used to alleviate this:
+                        </p>
+                        <ul class="space-y-2 text-gray-700 ml-6">
+                            <li><strong>Stent Placement:</strong> Metal tubes (stents) are inserted using an endoscope, often during Endoscopic Retrograde Cholangiopancreatography (ERCP), to keep the bile duct open.</li>
+                            <li><strong>Bypass Operations:</strong> The flow of bile is redirected from the bile duct directly to the intestine, bypassing the pancreas. Bypass operations offer longer-lasting relief but require a longer recovery period than stent placement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy for Pancreatic Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Chemotherapy drugs are used to destroy cancer cells, control their growth, or ease disease-related symptoms. Treatment may involve a single drug or a combination of two or more drugs, depending on the cancer type and its rate of growth.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Depending on the tumour's resectability, chemotherapy can be administered in several ways:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6 mb-4">
+                        <li><strong>Neoadjuvant Therapy:</strong> Given before surgery to try and reduce the size of the pancreatic tumour.</li>
+                        <li><strong>Adjuvant Therapy:</strong> Given after surgery to eliminate any cancer cells that may remain and reduce the likelihood of the cancer returning.</li>
+                        <li><strong>Chemoradiation:</strong> Given alongside radiation therapy, sometimes used for localised pancreatic cancer.</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Many chemotherapy drugs are used, including Gemcitabine, Nab-paclitaxel, 5-fluorouracil (F-5U), Irinotecan, Oxaliplatin, Capecitabine, Cisplatin, and Liposomal Irinotecan. Typically, two or more drugs are given in combination, based on the patient's ability to tolerate the treatment. Two common combinations approved for initial treatment include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Gemcitabine + nab-paclitaxel</li>
+                        <li>FOLFIRINOX (5-flurouracil, irinotecan, and oxaliplatin)</li>
+                    </ul>
+                </div>
+
+                <!-- Radiation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation for Pancreatic Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Radiation therapy employs high-energy photon beams (X-rays) to slow or shrink pancreatic tumours. Due to the high precision of certain types of radiation, higher-than-normal doses (dose-escalation) can be used while minimising damage to healthy surrounding tissues. SSCHRC employs several different types of radiation therapy:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Intensity-Modulated Radiation Therapy (IMRT):</strong> This technique delivers radiation beams from multiple angles using advanced computational techniques. Its extreme precision allows for dose-escalation, and this therapy is usually administered over 3–6 weeks, sometimes in conjunction with chemotherapy.</li>
+                        <li><strong>Stereotactic Body Radiation Therapy (SBRT):</strong> Also known as stereotactic ablative radiotherapy, SBRT targets tumours precisely with very high doses of radiation using multiple beams of varying intensities aimed from different angles.</li>
+                        <li><strong>3D Conformal Radiation Therapy:</strong> A traditional method that uses three-dimensional scans to image the tumour before delivering radiation beams. This therapy is typically administered over 2–6 weeks.</li>
+                        
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        At SSCHRC, radiation oncologists use specialised equipment to deliver higher than normal doses of radiation with extreme precision, a technique typically employed during IMRT and SBRT.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy for Pancreatic Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Targeted therapy is a treatment approach that focuses on isolating specific molecules to slow or halt the cancer's growth, offering a way to target cancer cells while sparing healthy cells more than traditional chemotherapy.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        For some patients with advanced pancreatic cancer, SSCHRC doctors can perform genetic sequencing to determine if the patient is suitable for one of SSCHRC's targeted therapy clinical trials. These research studies are exploring novel therapies to target specific genetic mutations, such as the KRAS mutation, which were previously considered difficult to treat. These experimental therapies represent a significant area of research with the potential to improve treatment success and survival rates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

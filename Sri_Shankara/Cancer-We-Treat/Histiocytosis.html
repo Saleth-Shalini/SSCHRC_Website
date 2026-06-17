@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histiocytosis: A Comprehensive Guide</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        table th {
+            background-color: #2E8B57;
+            color: white;
+            font-weight: bold;
+        }
+        
+        table tr:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Histiocytosis: A Comprehensive Guide
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Histiocytosis (HIS-tee-oh-sy-TOH-sis) is the name given to a rare family of diseases affecting only a small number of people each year in the country. This condition begins when the body produces an excessive number of white blood cells known as histiocytes. While these cells are normally part of the immune system, helping to absorb and remove bacteria and other foreign substances, in histiocytosis, they can build up and form tumours in various parts of the body, most commonly in the bones and skin.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The SSCHRC team cares for more adults with this condition than any other hospital in the country, and our SSCHRC Paediatrics team is highly experienced in the care of children with histiocytosis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: General Information -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    General Information
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">What are Histiocytes?</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Histiocytes are a type of white blood cell produced in the bone marrow.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Disease Mechanism</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The condition is characterised by the overproduction of these cells, which can then accumulate to form lesions or tumours anywhere in the body.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">The Cause</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Recent research indicates that histiocytosis is caused by genetic changes (mutations or variants). This research has classified histiocytic diseases as neoplastic (cancerous) blood disorders, which is why they are managed by cancer experts.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Types of Histiocytosis</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        There are numerous types, ranging from mild forms to very severe ones. Some are more prevalent in specific age groups.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Types Table -->
+            <div class="card-shadow rounded-xl p-8 bg-white border-l-4 overflow-x-auto" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Types of Histiocytosis</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Types of Histiocytosis</th>
+                            <th>Predominant Age Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Langerhans Cell Histiocytosis (LCH)</td>
+                            <td>Most common in children (newborns up to age 4), but affects adults too.</td>
+                        </tr>
+                        <tr>
+                            <td>Rosai-Dorfman Disease (RDD)</td>
+                            <td>Most common in children, but affects adults too.</td>
+                        </tr>
+                        <tr>
+                            <td>Juvenile Xanthogranuloma (JXG)</td>
+                            <td>Rare, primarily affects infants and toddlers.</td>
+                        </tr>
+                        <tr>
+                            <td>Erdheim-Chester Disease (ECD)</td>
+                            <td>Primarily affects adults (average age of diagnosis is about 50).</td>
+                        </tr>
+                        <tr>
+                            <td>Adult Xanthogranuloma (AXG)</td>
+                            <td>Rare, starts in older people.</td>
+                        </tr>
+                        <tr>
+                            <td>Malignant Histiocytic Disorders</td>
+                            <td>Very rare and aggressive (e.g., Histiocytic Sarcoma).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Histiocytosis symptoms often overlap with those of other diseases, making diagnosis challenging.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-r from-green-50 via-white to-orange-50 border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Common General Symptoms</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Fever</h4>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Pain</h4>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Rashes</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Symptoms by Affected Area</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Histiocytosis can affect various areas of the body, leading to localised symptoms:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Skin</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Rashes that may appear as red, yellow, or purplish patches or bumps. These can be painful or itchy.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Bones</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Tumours in weight-bearing bones can cause intense pain and increase the risk of fractures.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sinuses and Eyes</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Tumours near the sinuses may cause discomfort behind the face. Tumours around or behind the eyes can lead to bulging eyes or vision problems.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Brain</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Can result in difficulties with balance, hormonal imbalances, headaches, weakness, reduced sensation, and impaired thinking.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Internal Organs</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Tumours in organs such as the kidneys, liver, spleen, lungs, or lymph nodes can cause swelling and compromise organ function.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Specific Symptoms for Common Types</h3>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">LCH</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Most often presents with skin rashes (sometimes very painful, affecting about half of patients) and pain and swelling in bones, particularly the skull, jaw, or hips (lesions in bones are seen in nearly 4 out of 5 patients). Rare but serious brain involvement can cause balance, speech, and coordination problems.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">RDD</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Common signs include swollen lymph nodes in the neck, chest, groin, or armpits. Skin lumps may be itchy and painful. Other general symptoms include fever, night sweats, and a general feeling of illness. Lesions in bones, sinuses, and internal organs are less common.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">ECD</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Common symptoms are pain in the bones or joints (affecting nearly everyone with ECD), weakness and extreme fatigue, fevers, and night sweats. Depending on the site, it can cause kidney, blood vessel, heart, or lung issues (leading to shortness of breath and leg/foot swelling), eye problems, and neurological issues affecting coordination, balance, speech, mood, thinking, and memory.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">JXG/AXG</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Both typically begin as a single skin lesion. Rarely, they can affect the bones, eyes, and brain.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A correct diagnosis can be difficult due to the disease's rarity and symptoms that mimic other health conditions. SSCHRC has experts who specialise in recognising the signs of histiocytosis. Diagnosis typically involves:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">1. Tumor Tissue Biopsy and Genetic Testing</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A biopsy to obtain a tissue sample is often performed on the affected areas.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Tumour Genetic Testing</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                Since some treatments are targeted at specific genetic changes, doctors often test the tissue sample for known histiocytosis-related gene mutations. For instance, about half of people with ECD and LCH have BRAF genetic mutations. SSCHRC utilises an advanced tumour tissue test called SSCHRC-IMPACT®, which helps doctors match patients with the best available targeted therapies.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Genetic Blood Tests (Liquid Biopsy)</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                If a tumour sample is unavailable or insufficient, SSCHRC-ACCESS® may be used. This liquid biopsy blood test checks for 129 key genes linked to cancer, helping to establish the tumour's genetic profile and monitor disease status.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">2. Imaging Scans</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Imaging tests are crucial to identify the areas affected by histiocytosis.
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>CT Scans (Computed Tomography):</strong> Create 3D images and are helpful for showing histiocytosis in the lungs, heart, kidneys, lymph nodes, and other organs.</li>
+                        <li><strong>MRI Scans (Magnetic Resonance Imaging):</strong> Provide detailed 3D images. An MRI of the brain and pituitary gland is commonly performed, with scans of other areas like the heart or abdomen also used.</li>
+                        <li><strong>X-rays:</strong> Used to see areas inside the body. A skeletal survey (an X-ray of all the bones) is often used for children to check for asymptomatic bone lesions.</li>
+                        <li><strong>Ultrasound:</strong> Uses sound waves to create pictures of organs like the liver and spleen, often used in children to check for signs of the disease.</li>
+                        <li><strong>PET Scans (Positron Emission Tomography):</strong> A nuclear medicine scan that can help locate tumours and histiocytosis by showing areas that are using more glucose (sugar) than normal.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">3. Breathing and Blood Tests</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The necessity of these tests depends on the type of histiocytosis and the patient's symptoms.
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Pulmonary Function Test:</strong> Measures breathing capacity and is helpful for diagnosing people with histiocytosis who have respiratory problems.</li>
+                        <li><strong>Blood Tests:</strong> Used to measure hormone function, how the kidneys and liver are working, blood cell counts, and inflammation levels. These tests also provide information about the specific type of histiocytosis.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The treatment plan for histiocytosis is highly individualised and is based on: the type of histiocytosis, the location of the disease, how many parts of the body are affected, and the speed of disease progression.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    SSCHRC brings together a multidisciplinary care team of experts to discuss each case and determine a tailored plan of care, focusing on the latest therapies and managing side effects to ensure the best possible quality of life.
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Treatment Options</h3>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Observation (Monitoring)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        For mild forms (like some LCH, RDD, and ECD), or when the disease is only in the skin (in infants with LCH or JXG), the patient may only need regular exams and tests.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        May be the only necessary treatment if the disease affects only one area (unifocal LCH, JXG, AXG). It can also be used to remove part of a tumour that is pressing on a vital area, such as the eye, to improve symptoms. It is rarely used for ECD and RDD.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Often used for adults with histiocytosis affecting a single area. It is effective for LCH, but less useful for multi-system diseases like ECD. Low-dose radiation may be used for JXG eye lesions to prevent vision loss. It is rarely used for RDD and AXG in general, and rarely for children with LCH.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy (Chemo)</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Uses strong drugs to slow or stop the growth of abnormal cells. It is used when the disease affects multiple areas, is growing fast, or is harder to cure (e.g., LCH in the liver, spleen, brain).
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        <strong>Common drugs include:</strong>
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Vinblastine (often combined with prednisone), 6-mercaptopurine, Methotrexate, Cytarabine, Cladribine (2-CDA), Clofarabine, and Hydroxyurea. Mild chemotherapy is often preferred for children and teens to minimise long-term organ harm.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Immunosuppressants</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Drugs that regulate an overactive immune system to help manage histiocytosis symptoms.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Examples include:</strong> Prednisone (a standard therapy for initial LCH diagnosis, often with vinblastine and 6-mercaptopurine), Interferon-alpha (sometimes used for ECD), and Anakinra (for ECD, helps with swelling).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapies (Precision Medicines)</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These treatments target the specific gene mutations that drive the disease.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Examples include:</strong> Vemurafenib (Zelboraf®) and other BRAF inhibitors (e.g., Dabrafenib, Encorafenib) for BRAF mutations found in about half of ECD and LCH patients. Cobimetinib (Cotellic®) and other MEK inhibitors (e.g., Trametinib, Binimetinib) are also used for LCH in adults, ECD, and RDD.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Clinical Trials</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Research studies that test new treatments, drug combinations, and procedures. These trials offer access to new therapies not yet widely available and are an important part of advancing treatment for histiocytosis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Follow-up Care -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Follow-up Care
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    After treatment, patients are monitored regularly for several years or longer to watch for signs of disease recurrence and any late side effects from the treatment, including complications that may arise as a child grows into adulthood. Follow-up may include physical exams, blood tests, biopsies, heart function tests, and imaging scans (CT and MRI).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Post-Treatment Wellness -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Post-Treatment Wellness
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    SSCHRC offers a dedicated survivorship team to support patients in managing the lasting effects of histiocytosis and its treatment, focusing on health and wellness. Resources are available for:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Pain management</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Nutrition</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Exercise</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Integrative medicine therapies</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Skin, nail, and hair health</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sexual health and fertility</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

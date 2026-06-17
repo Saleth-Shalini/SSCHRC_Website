@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors info</title>
+    <link rel="stylesheet" href="doctorcss.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+    </head>
+<body>
+<!-- start -->
+
+
+
+
+<div class="container">
+    <section class="header">
+        <img src="../Doctors_Photo/Dr. Surekha T M.webp" alt="Dr. Surekha T M" class="profile-img" onerror="this.src='../Doctors_Photo/Dr. Surekha TM.webp'">
+        <div class="header-content">
+            <h1>Dr. Surekha T M</h1>
+            <p class="subtitle">MBBS, MD-Paediatrics (May 2021), DM - Paediatric Oncology (Nov 2025) | Junior Consultant</p>
+            
+            <div class="contact-info">
+                <span>5 years of experience</span>
+            </div>
+        </div>
+        <a href="../patient-services/book-appointment.html?doctor=Dr.%20Surekha%20T%20M" class="btn btn-book" style="text-decoration: none; display: inline-block; background-color: #dc3545; color: #ffffff;">Book Consultation</a>
+    </section>
+    
+    <!-- <div class="btn-container"> ... </div> -->
+
+</div>
+<section class="doctor-profile-section-word">
+        <div class="container-word">
+            <!-- Professional Overview -->
+            <div class="professional-overview-word">
+                <h2 class="section-title-word">Professional Overview</h2>
+                <div class="overview-content-word">
+                    <p class="overview-text-word">
+                        Dr. Surekha T M is a Junior Consultant in Paediatric Oncology at Sri Shankara Cancer Hospital & Research Centre, Bengaluru. She completed her MBBS, MD in Paediatrics (May 2021), and DM in Paediatric Oncology (November 2025). She is dedicated to providing compassionate and evidence-based care to children with cancer and blood disorders.
+                    </p>
+                    <p class="overview-text-word">
+                        Dr. Surekha is committed to holistic care for paediatric oncology patients and their families. Her focus includes diagnosis, treatment planning, and supportive care for children undergoing cancer treatment, in line with the centre's multidisciplinary approach to paediatric oncology and BMT.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Section with Timings and Languages -->
+            <div class="bottom-section-word">
+                <!-- Languages Spoken -->
+                <div class="languages-section-word">
+                    <h3 class="subsection-title-word">
+                        Languages Spoken
+                    </h3>
+                    <div class="language-tags-word">
+                        <!-- Language tags can be added when available -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="modal" id="appointmentModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3>Book Paediatric Oncology & BMT Consultation</h3>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label><strong>Child's Name*</strong></label>
+                <input type="text" id="patientName" placeholder="Full name of child" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Child's Date of Birth*</strong></label>
+                <input type="date" id="patientDob" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label><strong>Child's Gender*</strong></label>
+                <select id="patientGender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label><strong>Parent/Guardian Contact Number*</strong></label>
+                <input type="tel" id="contactNumber" placeholder="Mobile number" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label><strong>Parent/Guardian Email Address*</strong></label>
+                <input type="email" id="patientEmail" placeholder="Email address" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Consultation Type*</strong></label>
+                <select id="visitType" required>
+                    <option value="">Select Consultation Type</option>
+                    <option value="New Cancer Diagnosis">New Cancer Diagnosis (Child)</option>
+                    <option value="Haematological Disorder">Haematological Disorder (Non-malignant)</option>
+                    <option value="BMT Consultation">Bone Marrow Transplant (BMT) Evaluation</option>
+                    <option value="Second Opinion Paediatric Oncology">Second Opinion (Paediatric Oncology)</option>
+                    <option value="Follow-Up Paediatric">Follow-Up Consultation (Paediatric)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label><strong>Doctor</strong></label>
+            <input type="text" id="selectedDoctor" value="Dr. Surekha T M - Paediatric Oncology & BMT" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label><strong>Select Consultation Date*</strong></label>
+            <input type="date" id="appointmentDate" required onchange="generateTimeSlots()">
+        </div>
+        
+        <div id="timeSlotsContainer" style="display: none;">
+            <p class="selected-date" id="selectedDateDisplay"></p>
+            <p><strong>Available Time Slots:</strong></p>
+            <div class="time-slots" id="timeSlots">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label><strong>Primary Concern/Reason for Consultation*</strong></label>
+            <textarea id="clinicalQuestion" placeholder="Briefly describe your child's symptoms, diagnosis, or reason for seeking a paediatric oncology/BMT consultation" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label><strong>Upload Relevant Medical Records/Scans (Optional)</strong></label>
+            <input type="file" id="scanUpload" multiple>
+            <p class="file-note">You may upload diagnosis reports, biopsy results, imaging scans, or previous treatment summaries (max 10MB)</p>
+        </div>
+        
+        <button onclick="submitAppointment()">Submit Consultation Request</button>
+        <p id="successMessage" style="color: green; display: none; text-align: center; margin-top: 15px;">
+            Your Paediatric Oncology & BMT consultation request has been received. Our coordinator will contact you shortly to confirm your appointment.
+        </p>
+    </div>
+</div>
+
+<!-- stop -->
+<script src="doctorjs.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Cancer: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Eye Cancer: A Comprehensive Guide
+                </h2>
+            </div>
+            
+            
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            More than two dozen types of cancer can develop in the various structures in and around the eye. These include subtypes of melanoma, lymphoma, sarcoma, and carcinoma.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Structures of the Eye
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The eye and its surrounding area are composed of several key structures where cancer may develop:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Eyeball</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Internal structures like the uvea, retina, and vitreous.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Uvea</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The middle layer of the eyeball, comprising:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Iris:</strong> The coloured part of the eye.</li>
+                                <li><strong>Choroid:</strong> A thin layer providing the eye with essential nutrients.</li>
+                                <li><strong>Ciliary body:</strong> Contains muscles for focusing and cells that form aqueous humour (the clear liquid at the front of the eye).</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Vitreous</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The gel-like fluid that fills the main part of the eyeball.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Retina</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The light-sensitive cell layer at the back of the eye, connected to the brain by the optic nerve.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Orbit</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The bony space around and behind the eye, containing important nerves (including the optic nerve), the lacrimal gland, and eye-moving muscles.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Lacrimal gland</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Located in the upper outer quadrant of the orbit, this gland produces tears.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Eyelid</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Tumours can affect the skin or the inner layer (tarsus and conjunctiva).
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Conjunctiva</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The surface covering of the eye that also covers the inside of the eyelid.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Lacrimal sac/duct</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The structure responsible for draining tears, located near the nose in the inner lower quadrant of the orbit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Types of Eye Cancer
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Eye cancers are categorised by their primary location:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Cancers Inside the Eyeball</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Uveal melanoma (Choroidal melanoma):</strong> The most common primary intraocular eye cancer in adults, originating in the uvea (iris, ciliary body, and choroid).</li>
+                                <li><strong>Retinoblastoma:</strong> The most common malignant tumour that starts in the eye among children, typically occurring before age five.</li>
+                                <li><strong>Metastatic intraocular tumours:</strong> Cancers (most commonly breast, lung, and gastrointestinal cancers) that spread from other parts of the body to the eyeball.</li>
+                            </ul>
+                            <p class="text-gray-700 leading-relaxed mt-3">
+                                Note: Non-cancerous growths like Circumscribed choroidal hemangioma and Retinal hemangioblastoma may also occur in the eye structures.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Cancers of the Eyelid</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Basal cell carcinoma:</strong> Accounts for over 90% of eyelid cancers and is usually not aggressive.</li>
+                                <li><strong>Squamous cell carcinoma:</strong> A less common but more aggressive form of skin cancer on the eyelid.</li>
+                                <li><strong>Cutaneous melanoma:</strong> A potentially life-threatening form of skin cancer affecting the eyelid skin or conjunctiva.</li>
+                                <li><strong>Sebaceous carcinoma (Meibomian gland carcinoma):</strong> A rare type that affects the oil-producing glands of the eyelids and can be mistaken for non-cancerous conditions like a sty.</li>
+                                <li><strong>Merkel cell carcinoma:</strong> A rare but fast-growing, aggressive cancer.</li>
+                                <li><strong>Metastatic eyelid tumours:</strong> Cancers that have spread to the eyelid.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Cancers of the Conjunctiva</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Squamous cell carcinoma:</strong> The most common type of conjunctival eye cancer, affecting the cornea area or inner eyelid layer.</li>
+                                <li><strong>Conjunctival Melanoma:</strong> Can occur on the surface of the eyeball or the inside of the eyelid.</li>
+                                <li><strong>Metastatic conjunctival tumours:</strong> Cancers that have spread to the conjunctiva.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Cancers of the Orbit, Lacrimal Gland, and Lacrimal Drainage System</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Orbital sarcoma:</strong> Sarcomas arising from muscle or fatty tissue, with rhabdomyosarcoma being the most common type in children.</li>
+                                <li><strong>Adenoid cystic carcinoma:</strong> A rare, potentially life-threatening cancer of the lacrimal gland.</li>
+                                <li><strong>Squamous cell carcinoma (Lacrimal sac/duct):</strong> The main cancer type in the lacrimal sac and nasolacrimal duct.</li>
+                                <li><strong>Transitional cell carcinoma:</strong> A cancer of the lacrimal sac.</li>
+                            </ul>
+                            <p class="text-gray-700 leading-relaxed mt-3">
+                                Note: Non-cancerous tumours like Orbital and optic nerve meningiomas and Pleomorphic adenoma (of the lacrimal gland) also occur.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Lymphomas of the Eye</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Cancer of the white blood cells that can affect the vitreous, choroid, conjunctiva, or adnexa (surrounding structures). Types include Diffuse large B-cell lymphoma and indolent lymphomas like Marginal zone lymphoma and Follicular lymphoma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Risk Factors
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Factors that may increase the risk of developing eye cancer include:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Having light skin and/or blue eyes.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Exposure to the sun or tanning salons, which may increase the risk of carcinomas or melanomas on the eyelid.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Nevus of Ota: A large birthmark associated with a high number of melanocytes.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Exposure to certain viruses such as Human Papilloma Virus (HPV), which may increase the risk of squamous cell carcinoma of the conjunctiva.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Atypical mole and melanoma syndrome (AMS): Characterised by a large number of atypical moles.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Certain genetic conditions, including Von Hippel Lindau disease and mutations to the RB1 and BAP-1 genes.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    In the early stages, eye cancer often has no symptoms. When signs do appear, they can vary and may include:
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Vision Changes</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Loss of vision, blurry or double vision, flashing lights, or floaters (objects in the field of vision).
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Physical Changes</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>Leukocoria (a white reflection in the pupil).</li>
+                                <li>A pigmented (dark) area on the conjunctiva.</li>
+                                <li>A growing dark spot on the iris.</li>
+                                <li>A change in the pupil's shape or size.</li>
+                                <li>A change in the eyeball's position or movement, or a bulging eye.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Eyelid Changes</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>A small, firm, raised lump with a central lesion on the eyelid.</li>
+                                <li>Ulceration of the eyelid.</li>
+                                <li>Loss of eyelashes.</li>
+                                <li>A brown or pigmented lesion on the eyelid.</li>
+                                <li>A sty that does not heal with medical treatment.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Other</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Orbital or ocular pain, excessive or bloody tears.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Important: These symptoms may signal other health problems and should always be discussed with a doctor.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Patients with suspected eye cancer should consult an ophthalmologist (a medical doctor specialising in the eye) who has specific training in diagnosing eye cancers. Diagnosis involves several tests and exams:
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Eye Exams</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A dilated retinal exam and ultrasound imaging for tumours of the eyeball, and a careful inspection of the outside of the eye and eye movements for orbital, eyelid, and conjunctival tumours.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Imaging Exams</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Used to identify the location, size, and shape of the suspected tissue. These include:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>CT or CAT (computed axial tomography) scans.</li>
+                                <li>PET (positron emission tomography) scans.</li>
+                                <li>MRI (magnetic resonance imaging) scans.</li>
+                                <li>Optical coherence tomography (OCT).</li>
+                                <li>Ultrasound (sonogram).</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Biopsy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The removal of a small tissue sample for microscopic examination. Biopsies are used in limited circumstances to diagnose eye cancer and may require local or general anaesthesia depending on the tumour's location.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Molecular and Genetic Testing</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Used to look for specific mutations in tumour cells to assess the risk of metastasis or to plan treatment. Genetic testing can also determine if the patient has an inherited form of eye cancer.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Blood Tests</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Performed to monitor the body's response to ongoing treatment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The treatment of ocular cancers is highly specialised. At SSCHRC, care is personalised to include the most advanced therapies while minimising the impact on the body. Our primary goals are successful treatment, preserving the eye and vision whenever possible, and restoring the patient's appearance after treatment.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Treatment options are determined based on several factors, including: the type of cancer, its location and size, whether it has spread (metastasised), and the patient's age and overall health.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    One or more of the following therapies may be recommended:
+                </p>
+            </div>
+
+            <div class="space-y-8 mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Eye-preserving surgery:</strong> Used in select cases to remove cancer while aiming to preserve the function and aesthetic appearance of the eye.</li>
+                        <li><strong>Iridectomy:</strong> Surgical removal of the iris (the coloured part of the eye).</li>
+                        <li><strong>Enucleation:</strong> Removal of the entire eyeball, typically for advanced uveal melanoma.</li>
+                        <li><strong>Orbital exenteration:</strong> A rare surgery involving the removal of the eye, eyelids, and surrounding tissues, reserved for very advanced disease.</li>
+                        <li><strong>Eye reconstructive surgery:</strong> Following enucleation or exenteration, a specialised team fits the patient with a custom-made prosthetic eye.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Uses focused beams of energy to kill cancer cells, precisely targeting the tumour to minimise damage to healthy tissue. Types offered include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Intensity Modulated Radiation Therapy (IMRT)</li>
+                        <li>Volumetric Modulated Arc Therapy</li>
+                       
+                        <li>Brachytherapy</li>
+                        <li>Stereotactic Radiosurgery (SRS)</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Drugs used to kill cancer cells or control their growth. It can be delivered in several ways:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Intravenous:</strong> Injected into a blood vessel for systemic distribution.</li>
+                        <li><strong>Intra-arterial:</strong> Delivered directly to the eye via a catheter from the groin, avoiding systemic exposure (a preferred technique for retinoblastoma).</li>
+                        <li><strong>Intravitreal:</strong> Injected directly into the eye.</li>
+                        <li><strong>Periocular:</strong> Placed around the eye.</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        Topical chemotherapy in the form of eye drops is also used for some cancers (e.g., sebaceous carcinoma, conjunctival squamous cell carcinoma).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs designed to interfere with the specific molecules that cancer cells need to survive, multiply, and spread. This is used for eye cancer that has spread to other parts of the body.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Therapy to improve the immune system's ability to fight cancer, also used for eye cancer that has spread. Types include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Immune Checkpoint Inhibitors</li>
+                        <li>Monoclonal Antibodies</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Laser Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Uses an intense, focused beam of light to destroy cancer tissue, sometimes used for uveal melanoma and metastatic tumours inside the eyeball.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Cryoablation (Cryotherapy or Cryosurgery)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Uses extreme cold (freezing) to destroy cancerous tissue. It is sometimes performed as an outpatient procedure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

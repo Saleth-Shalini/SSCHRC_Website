@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre of Excellence in Bone Marrow Transplantation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Prevent header menu from looking over-extended */
+        #dynamic-header .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-menu .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-item {
+            padding: 0.5rem 0.65rem !important;
+            gap: 0.5rem;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* FAQ Accordion Styles */
+        .faq-accordion {
+            width: 100%;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .faq-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-header:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-header.active {
+            background: #f0fdf4;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+        
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            color: #2E8B57;
+            font-size: 1.25rem;
+        }
+        
+        .faq-header.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-content.active {
+            max-height: 1000px;
+            padding: 1.5rem;
+        }
+        
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .faq-answer ul {
+            margin-top: 0.75rem;
+            margin-left: 1.5rem;
+            list-style-type: disc;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/bmt.jpg" 
+                alt="Bone Marrow Transplantation Centre of Excellence"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/bmt.jpg" 
+                alt="Bone Marrow Transplantation Centre of Excellence"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What is a Bone Marrow Transplant? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What is a Bone Marrow Transplant?
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Bone marrow is the soft, spongy tissue inside most bones responsible for producing blood stem cells. These unspecialized cells develop into the essential components of your blood: red blood cells (for oxygen transport), white blood cells (for fighting infection), and platelets (for blood clotting). When severe diseases like cancer damage the bone marrow, or when intensive treatments like chemotherapy and radiation are used, the body's ability to produce these vital cells is destroyed. A bone marrow transplant (BMT), also known as a hematopoietic stem cell transplant, is a procedure that replaces the damaged or destroyed bone marrow with healthy stem cells, thereby restoring the body's capacity to produce a healthy blood supply.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Bone marrow transplantation is an established, potentially life-saving treatment for patients diagnosed with blood cancers and certain other serious blood conditions that have been resistant to conventional therapies. It represents one of the most significant advances in cancer medicine, offering many patients the possibility of a cure or prolonged survival.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: How Does a Bone Marrow Transplant Work? -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    How Does a Bone Marrow Transplant Work?
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    The transplant process involves several carefully managed phases:
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <span class="text-2xl font-bold" style="color: #2E8B57;">1</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Conditioning Therapy</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The patient first receives intensive conditioning therapy, which involves high-dose chemotherapy and, in some cases, radiation. The goals of this therapy are to eliminate any remaining cancer cells, suppress the patient's immune system to prevent rejection of the new stem cells, and create the necessary space in the bone marrow for the new, healthy cells to grow.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <span class="text-2xl font-bold" style="color: #1e40af;">2</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Stem Cell Infusion</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Once the conditioning phase is complete, healthy stem cells are infused directly into the patient's bloodstream through an intravenous (IV) line, a process that is similar to a routine blood transfusion. The infusion procedure itself is typically painless and is performed while the patient remains awake.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <span class="text-2xl font-bold" style="color: #FF4500;">3</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Engraftment</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Over the next several weeks, these infused stem cells naturally travel to the bone marrow and begin the critical process of engraftment—growing and differentiating into new red blood cells, white blood cells, and platelets. This restores the body's blood-producing capacity and gradually rebuilds immune function. Throughout this recovery period, the medical team provides close monitoring and manages potential side effects such as nausea, fatigue, and infection risk to ensure the best possible outcome.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Types of Bone Marrow Transplants -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Types of Bone Marrow Transplants
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    The most appropriate type of transplant is determined by the medical team based on the patient's condition, disease status, and donor availability.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Autologous Transplant</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This method utilizes the patient's own stem cells, which are harvested while their disease is in remission or stable, then frozen and stored when required (CRYOPRESERVATION). They are reinfused after the conditioning therapy. This is commonly used for conditions like multiple myeloma, lymphomas, and neuroblastoma etc.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Allogeneic Transplant</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This procedure uses stem cells from a matched donor, who may be a sibling, an unrelated matched volunteer found through national or international donor registries. The donor's healthy immune cells provide a powerful anti-cancer effect known as graft-versus-tumor activity. However, a potential complication is graft-versus-host disease (GVHD), where the donor's cells attack the patient's healthy tissues, which requires careful management. Allogeneic transplants are typically recommended for leukemias, myelodysplastic syndromes, and high-risk lymphomas.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Syngeneic Transplant</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        In the rare instance that a patient has an identical twin, stem cells from the twin can be used. This is the least complicated type, as there is no risk of rejection or GVHD.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Advanced Transplant Approaches -->
+            <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Advanced Transplant Approaches</h3>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    For patients without a perfectly matched donor or those with health limitations, modern techniques have expanded the availability of transplantation:
+                </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Haploidentical Transplant</h4>
+                        <p class="text-gray-700 text-sm">This approach utilizes a partially matched donor, such as a parent or child. Advanced preventative methods are employed to manage the risk of graft-versus-host disease, making transplantation possible for a wider range of patients.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Reduced-Intensity Conditioning (Mini-Transplant)</h4>
+                        <p class="text-gray-700 text-sm">This uses lower doses of chemotherapy and radiation, making it a suitable option for older patients or those too frail to tolerate traditional high-dose conditioning. This approach relies significantly on the beneficial graft-versus-tumor effect for disease control.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Donor Leukocyte Infusion (DLI)</h4>
+                        <p class="text-gray-700 text-sm">Following an allogeneic transplant, additional donor white blood cells may be infused to strengthen the anti-cancer immune response and help maintain remission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Who Can Benefit and Benefits -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Who Can Benefit from Bone Marrow Transplantation?
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    BMT is a treatment option for a wide array of hematological malignancies and selected non-malignant conditions.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Blood Cancers (Hematological Malignancies)</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Acute myeloid leukemia (AML)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Acute lymphoblastic leukemia (ALL)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Chronic myeloid leukemia (CML)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Chronic lymphocytic leukemia (CLL)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Hodgkin lymphoma</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Non-Hodgkin lymphoma (including mantle cell, relapsed follicular and relapsed diffuse large B cell lymphoma)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Multiple myeloma</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Myelodysplastic syndromes (MDS)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Myeloproliferative neoplasms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-green-600 mr-2 mt-2"></i>
+                                <span>Primary amyloidosis</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Selected Solid Tumors</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-blue-600 mr-2 mt-2"></i>
+                                <span>Ewing's sarcoma (high-risk or recurrent)</span>
+                            </li>
+                           
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-blue-600 mr-2 mt-2"></i>
+                                <span>Neuroblastoma (high-risk or recurrent)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Non-Malignant Conditions</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-orange-600 mr-2 mt-2"></i>
+                                <span>Severe aplastic anemia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-orange-600 mr-2 mt-2"></i>
+                                <span>Fanconi's anemia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-orange-600 mr-2 mt-2"></i>
+                                <span>Thalassemia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-orange-600 mr-2 mt-2"></i>
+                                <span>Sickle cell disease</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-orange-600 mr-2 mt-2"></i>
+                                <span>Severe combined immunodeficiency (SCID)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-orange-600 mr-2 mt-2"></i>
+                                <span>Other inherited bone marrow disorders</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Transplant feasibility is influenced by factors such as age, overall health, disease stage, and the availability of a suitable donor. A patient's medical team conducts a careful evaluation to determine the most appropriate course of action.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4b: Benefits and Clinical Advantages -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Benefits and Clinical Advantages
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    For many patients, bone marrow transplantation offers significant survival advantages that cannot be achieved with conventional chemotherapy alone. Key clinical benefits include:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-check-circle mr-3" style="color: #2E8B57;"></i>
+                            Potential for Cure
+                        </h4>
+                        <p class="text-gray-700">Potential for cure or long-term remission in blood cancers, particularly when performed during early disease stages.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-check-circle mr-3" style="color: #2E8B57;"></i>
+                            Graft-versus-Tumor Effect
+                        </h4>
+                        <p class="text-gray-700">Graft-versus-tumor effect in allogeneic transplants, where donor immune cells actively recognize and destroy residual cancer cells.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-check-circle mr-3" style="color: #2E8B57;"></i>
+                            Disease Control
+                        </h4>
+                        <p class="text-gray-700">Disease control for chemotherapy-resistant cancers, extending survival for patients who have stopped responding to standard treatments.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-check-circle mr-3" style="color: #2E8B57;"></i>
+                            Improved Survival Rates
+                        </h4>
+                        <p class="text-gray-700">Improved survival rates that have steadily increased over the past decade, with overall survival rates ranging from 50% to over 90% in select patient populations, depending on the disease type and risk factors.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 md:col-span-2">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-check-circle mr-3" style="color: #2E8B57;"></i>
+                            Restored Bone Marrow Function
+                        </h4>
+                        <p class="text-gray-700">Restored bone marrow function in non-malignant conditions, such as inherited blood disorders and aplastic anemia, for which long-term survival rates are often 70–90%.</p>
+                    </div>
+                </div>
+                <p class="text-lg text-gray-700 mt-6 leading-relaxed">
+                    Continuous modern advances in donor matching (HLA typing), infection prevention, and GVHD management have significantly improved transplant outcomes, making this treatment option available to an increasingly broad patient population, including older and more medically fragile individuals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Risks and Limitations -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risks and Limitations
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Bone marrow transplantation is an intensive medical procedure associated with serious potential complications that necessitate vigilant management. Understanding these risks is crucial for informed decision-making.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Early Post-Transplant Complications -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Early Post-Transplant Complications</h3>
+                    <div class="grid md:grid-cols-1 gap-4">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                <span>Infection: During the neutropenic period (when white blood cell counts are critically low), there is an increased risk of bacterial, fungal, and viral infections (e.g., cytomegalovirus or herpes simplex virus).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                <span>Nausea and vomiting: Common side effects related to conditioning chemotherapy, which are typically managed with supportive care.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                <span>Mucositis: Painful inflammation and sores in the mouth and digestive tract.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                <span>Diarrhea and gastrointestinal disturbances.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                <span>Sinusoidal Obstruction Syndrome (SOS): A rare but serious liver complication characterized by abdominal pain, fluid retention, and elevated bilirubin.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                <span>Engraftment failure or delayed engraftment: Occurs when the infused stem cells fail to successfully establish themselves in the bone marrow.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GVHD -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Graft-Versus-Host Disease (GVHD)</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        This primary risk in allogeneic transplants occurs when donor immune cells attack the patient's healthy tissues, recognizing them as foreign. GVHD can be acute (within the first 100 days) or chronic (developing later), affecting organs such as the skin, gastrointestinal tract, and liver. While a serious risk, GVHD is also linked to the beneficial graft-versus-tumor effect. Modern strategies, including careful donor-patient matching and immunosuppressive therapy, have substantially reduced its severity.
+                    </p>
+                </div>
+
+                <!-- Long-Term Complications -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Long-Term Complications</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Secondary malignancies: Rarely, new cancers may develop years after transplantation, sometimes related to the conditioning therapy or chronic GVHD.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Infertility: Conditioning therapy can damage reproductive tissues; fertility preservation options should be discussed before treatment.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Chronic organ dysfunction: Potential long-term issues affecting the heart, lungs, kidneys, or thyroid.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Cataracts: May develop due to radiation exposure.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Psychological effects: Including anxiety, depression, and adjustment challenges during the intensive recovery period.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Transplant-Related Mortality: Though outcomes have greatly improved, some patients do not survive the procedure or its complications, particularly those who are older or have advanced disease.</span>
+                        </li>
+                    </ul>
+                    <p class="text-lg text-gray-700 mt-6 leading-relaxed">
+                        The specific risks are highly variable based on the disease type, disease stage, patient age, overall health, donor match quality, and transplant type. The medical team will comprehensively discuss all potential risks and outline the preventative strategies and close monitoring protocols used to minimize them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Preparing for Your Transplant -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Preparing for Your Transplant
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Successful transplantation requires comprehensive preparation across multiple domains.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Pre-Transplant Evaluation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Pre-Transplant Evaluation</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Extensive testing is conducted to ensure the patient is physically and emotionally ready:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span>Blood tests and tissue typing (HLA matching for allogeneic or cord transplants).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span>Heart function studies (echocardiogram) and lung function tests.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span>Kidney and liver function assessments.</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span>Infectious disease screening.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span>Psychological and nutritional evaluations.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Central Venous Catheter -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Insertion of Central Venous Catheter</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        A central line (e.g., a Hickman or PICC line) is placed in a large vein. This catheter remains in place throughout the hospital stay and recovery, facilitating the easy administration of chemotherapy, stem cell infusion, antibiotics, blood products, and nutrients, which minimizes the number of needle sticks.
+                    </p>
+                </div>
+
+                <!-- Conditioning Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Conditioning Therapy</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Typically administered 7–14 days before the stem cell infusion, this intensive chemotherapy and/or radiation regimen works to:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Destroy cancer cells.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Eliminate existing bone marrow to create space for the new stem cells.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span>Suppress the immune system to reduce rejection risk.</span>
+                        </li>
+                    </ul>
+                    <p class="text-lg text-gray-700 mt-4 leading-relaxed">
+                        Conditioning intensity varies, from myeloablative (complete bone marrow destruction) to reduced-intensity (non-myeloablative or "mini" transplants).
+                    </p>
+                </div>
+
+                <!-- Psychological and Practical Preparation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Psychological and Practical Preparation</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The transplant team provides thorough education on what to expect, coping strategies, and support system arrangements. A committed caregiver is essential during the hospital stay and recovery period to manage daily needs and ensure attendance at frequent medical appointments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: The Transplant Procedure and Recovery -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    The Transplant Procedure and Recovery
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        The actual stem cell infusion is straightforward and painless. Stem cells are prepared (thawed if frozen, or collected fresh) and infused directly into the bloodstream through the central catheter. The procedure typically takes several hours.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4" style="border-color: #1e40af;">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Engraftment Phase (typically 2–4 weeks)</h3>
+                            <p class="text-gray-700 mb-4">The infused stem cells travel to the bone marrow and begin to establish themselves. During this critical time, blood cell counts are extremely low, requiring:</p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Regular blood transfusions for adequate red blood cells and platelets.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Antibiotic prophylaxis to prevent infection.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Close monitoring of vital signs and laboratory values.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Strict infection control measures.</span>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700 mt-4 font-semibold">Most patients are hospitalized for 2–3 weeks during this early phase.</p>
+                        </div>
+
+                        <div class="bg-green-50 rounded-lg p-6 border-l-4" style="border-color: #2E8B57;">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Early Recovery (weeks 4–12)</h3>
+                            <p class="text-gray-700">
+                                As engraftment progresses and blood counts recover, the risk of infection decreases. Patients gradually return to normal activities while continuing regular outpatient visits for disease monitoring and complication management.
+                            </p>
+                        </div>
+
+                        <div class="bg-purple-50 rounded-lg p-6 border-l-4" style="border-color: #7c3aed;">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Extended Recovery (months 3–12)</h3>
+                            <p class="text-gray-700">
+                                Full immune recovery takes months to years. Patients remain at an increased risk for infections during this time, especially if chronic GVHD develops. Energy levels improve, and normal life activities resume, though continued medical follow-up remains essential.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Special Features and Outcomes -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Special Features and Innovative Approaches
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white mb-8">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Modern bone marrow transplant programs incorporate cutting-edge techniques to continually improve patient outcomes:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Improved Donor Matching Technology</h4>
+                        <p class="text-gray-700 text-sm">High-resolution HLA typing now enables successful transplantation with partially mismatched donors, significantly expanding the donor pool for patients without perfectly matched family members.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Reduced-Intensity Conditioning</h4>
+                        <p class="text-gray-700 text-sm">Advanced regimens allow for transplantation in older adults and medically fragile patients who cannot tolerate traditional high-dose conditioning.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Enhanced Infection Prevention</h4>
+                        <p class="text-gray-700 text-sm">Sophisticated monitoring tools and preemptive antiviral therapy have substantially reduced serious infections, such as CMV disease, which now occur at a much lower rate in the early post-transplant phases.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Complementary Cellular Therapies</h4>
+                        <p class="text-gray-700 text-sm">Some advanced centers combine BMT with other modalities like CAR-T cell therapy to enhance the anti-cancer effect, leading to high complete response rates in certain cancer populations.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 md:col-span-2">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Survivorship Programs</h4>
+                        <p class="text-gray-700 text-sm">Comprehensive follow-up care is provided to address long-term complications, fertility preservation, psychological well-being, and overall quality of life for transplant survivors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evidence-Based Outcomes -->
+            <div class="card-shadow rounded-2xl p-8 bg-white">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Evidence-Based Outcomes</h3>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Bone marrow transplant outcomes have significantly improved over the last decade, driven by advances in donor matching, supportive care, and immunological management. Current data demonstrate:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-green-50 rounded-lg p-6 border-l-4" style="border-color: #2E8B57;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Allogeneic transplant overall survival</h4>
+                        <p class="text-3xl font-bold text-green-600 mb-2">79–94%</p>
+                        <p class="text-gray-700 text-sm">Reported rates range from 79–94% across major international transplant centers in recent years.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-6 border-l-4" style="border-color: #1e40af;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">One-year survival for malignancies</h4>
+                        <p class="text-3xl font-bold text-blue-600 mb-2">47–86%</p>
+                        <p class="text-gray-700 text-sm">Reported rates range from 47–86%, with steadily improving trends.</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg p-6 border-l-4" style="border-color: #7c3aed;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Lymphoma 5-year survival</h4>
+                        <p class="text-3xl font-bold text-purple-600 mb-2">50–70%</p>
+                        <p class="text-gray-700 text-sm">Typically ranges from 50–70%, varying by lymphoma subtype.</p>
+                    </div>
+                    <div class="bg-orange-50 rounded-lg p-6 border-l-4" style="border-color: #FF4500;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Multiple myeloma 5-year survival</h4>
+                        <p class="text-3xl font-bold text-orange-600 mb-2">50–80%</p>
+                        <p class="text-gray-700 text-sm">Reported rates range from 50–80%, with improvements due to newer conditioning regimens.</p>
+                    </div>
+                    <div class="bg-teal-50 rounded-lg p-6 border-l-4" style="border-color: #14b8a6;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Aplastic anemia long-term survival</h4>
+                        <p class="text-3xl font-bold text-teal-600 mb-2">70–90%</p>
+                        <p class="text-gray-700 text-sm">Reported rates are often between 70–90%.</p>
+                    </div>
+                </div>
+                <p class="text-lg text-gray-700 mt-6 leading-relaxed">
+                    These positive outcomes are the result of careful patient selection, optimized conditioning regimens, effective prevention and treatment of GVHD, and enhanced supportive care strategies grounded in international oncology guidelines (NCCN, ESMO).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Why Choose Our Centre -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Centre of Excellence?
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-white mb-8">
+                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                    Our Bone Marrow Transplantation Centre is led by a dedicated, multidisciplinary team of experienced hematologists, transplant specialists, nurses, pharmacists, coordinators, and support staff. We are committed to optimizing outcomes and quality of life for every patient through:
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-clipboard-check text-2xl mr-4 mt-1" style="color: #2E8B57;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Comprehensive Evaluation</h3>
+                            <p class="text-gray-700">Pre- and post-transplant evaluations use standardized protocols aligned with stringent international guidelines (NCCN, ESMO).</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-dna text-2xl mr-4 mt-1" style="color: #1e40af;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Donor Matching</h3>
+                            <p class="text-gray-700">We utilize high-resolution HLA typing and have access to extensive regional and international donor registries.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-hospital text-2xl mr-4 mt-1" style="color: #7c3aed;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Specialized Inpatient Care</h3>
+                            <p class="text-gray-700">We provide 24/7 monitoring and expert management of complications in a specialized setting.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-heartbeat text-2xl mr-4 mt-1" style="color: #FF4500;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Reduced-Intensity Conditioning</h3>
+                            <p class="text-gray-700">We offer options for older and medically fragile patients who cannot tolerate traditional high-dose conditioning.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-shield-alt text-2xl mr-4 mt-1" style="color: #2E8B57;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Enhanced Infection Prevention</h3>
+                            <p class="text-gray-700">We employ sophisticated molecular diagnostics and preemptive antiviral therapy to minimize serious infections.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-user-md text-2xl mr-4 mt-1" style="color: #1e40af;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Multidisciplinary Survivorship Programs</h3>
+                            <p class="text-gray-700">Comprehensive follow-up care is provided to address long-term complications and quality-of-life optimization.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-heart text-2xl mr-4 mt-1" style="color: #FF4500;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Compassionate, Patient-Centered Care</h3>
+                            <p class="text-gray-700">We acknowledge and support the intense physical and emotional demands of the transplantation journey.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-flask text-2xl mr-4 mt-1" style="color: #7c3aed;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Research Partnerships</h3>
+                            <p class="text-gray-700">We are involved in partnerships that bring cutting-edge treatments and clinical trials to our patients.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xl text-gray-700 mt-8 leading-relaxed text-center">
+                    Every transplant patient receives an individualized care plan tailored to their specific disease, risk profile, and personal circumstances, ensuring the best possible outcomes while maintaining dignity and hope throughout the entire process.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <!-- <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Is bone marrow transplant painful?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                The stem cell infusion procedure itself is not painful; it is similar to receiving a blood transfusion. However, the conditioning chemotherapy and radiation cause side effects such as nausea, vomiting, mouth sores, and diarrhea, which are managed aggressively with supportive medications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Does a bone marrow transplant change who I am?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                No. The transplant's purpose is to replace diseased blood cells with healthy ones. While allogeneic transplant recipients do receive donor DNA in their blood cells, this is harmless and affects only the blood-producing system—it does not impact the brain, personality, or identity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">What about bone marrow donor pain?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                This procedure is similar to blood donation. Only under rare circumstances, bone marrow harvest will be done under anesthesia as a brief surgical procedure. Mild to moderate discomfort for the donor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">How long is the hospital stay?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Most patients are hospitalized for 2–3 weeks during the critical early engraftment phase. However, the duration varies based on the transplant type, the rate of engraftment, and overall recovery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">What if I don't have a matched family donor?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                National and international registries contain millions of voluntary donors worldwide. More than half of allogeneic transplants performed today utilize voluntary unrelated donors. Additionally, advances in haploidentical and cord blood transplantation have expanded treatment options for patients without perfectly matched donors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Can I donate bone marrow for someone else?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Yes. National and international organizations maintain registries of volunteer/voluntary donors. Potential donors provide a cheek swab or blood sample for tissue typing (HLA typing) to be recorded. If you are matched to a patient in need, the registry will contact you to confirm your willingness and arrange the donation procedure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // FAQ Accordion Toggle Function
+        function toggleFaq(header) {
+            const faqItem = header.parentElement;
+            const content = faqItem.querySelector('.faq-content');
+            const isActive = header.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.querySelector('.faq-header').classList.remove('active');
+                    item.querySelector('.faq-content').classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                header.classList.remove('active');
+                content.classList.remove('active');
+            } else {
+                header.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

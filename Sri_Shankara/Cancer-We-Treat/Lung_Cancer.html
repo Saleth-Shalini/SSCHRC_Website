@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer: Comprehensive Health Information</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Lung Cancer: Comprehensive Health Information
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">General Information</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Lung cancer is a disease where malignant (cancer) cells form in the tissues of the lungs, most commonly in the cells that line the air passages. This condition develops when these cells begin to grow and multiply without control, often due to exposure to toxins such as tobacco smoke, radiation, and asbestos.
+                </p>
+            </div>
+
+         
+        </div>
+    </section>
+
+    <!-- Section 2: Types of Lung Cancer -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Types of Lung Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Traditional diagnosis categorises the disease by the type of cell where it begins:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Non-Small Cell Lung Cancer (NSCLC)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Representing about 85% of cases, NSCLC arises from the epithelial cells that line the surface of the organs. Subtypes include adenocarcinoma, squamous cell carcinoma, and large cell carcinoma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Small Cell Lung Cancer (SCLC)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Accounting for about 15% of lung cancers, SCLC is almost always caused by smoking tobacco. It typically starts in the central chest, is highly aggressive, and spreads quickly. For this reason, surgery is used less often for SCLC than for NSCLC.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Doctors can also diagnose the disease on a molecular level by looking for mutations in the DNA and/or proteins of cancer cells. These subtypes (such as mutations to the EGFR, ALK, KRAS, and ROS1 genes) are crucial as they predict how the cancer will respond to specific treatments, allowing SSCHRC doctors to design highly personalised care plans.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases the likelihood of developing a disease. The primary risk factors for lung cancer include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• A history of or current tobacco use (the biggest risk factor).</li>
+                        <li>• Exposure to second-hand smoke.</li>
+                        <li>• Exposure to chemicals like asbestos, arsenic, and chromium.</li>
+                        <li>• Exposure to radon gas (a natural radioactive gas).</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• Living in an area with high air pollution.</li>
+                        <li>• A family history of lung cancer, which may indicate a rare genetic link that could make genetic counselling appropriate.</li>
+                        <li>• Infection with the human immunodeficiency virus (HIV).</li>
+                        <li>• Past radiation exposure, including radiation therapy to the chest.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Lung cancer symptoms can vary widely, and some people may not experience any signs at all, especially in the early stages. Often, symptoms are easily mistaken for common respiratory infections like bronchitis or pneumonia, which can unfortunately delay an accurate diagnosis. It is important to discuss any persistent or unusual symptoms with your doctor.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Common Signs and Symptoms</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-3 text-gray-700">
+                            <li>• A persistent cough that does not go away and gets worse over time.</li>
+                            <li>• Chest pain that is constant, often aggravated by deep breathing, coughing, or laughing.</li>
+                            <li>• Shortness of breath.</li>
+                            <li>• Wheezing.</li>
+                            <li>• Hoarseness or changes in your voice.</li>
+                            <li>• Coughing up blood or rust-coloured phlegm/mucus.</li>
+                        </ul>
+                        <ul class="space-y-3 text-gray-700">
+                            <li>• Frequent lung infections, such as pneumonia or bronchitis, that do not clear up or return often.</li>
+                            <li>• Arm or shoulder pain.</li>
+                            <li>• Swelling of the neck and face.</li>
+                            <li>• Unexplained loss of appetite and/or weight loss.</li>
+                            <li>• Feeling weak or tired all the time (fatigue).</li>
+                            <li>• Widening of the fingertips and nailbeds, also known as "clubbing."</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Symptoms of Advanced or Metastatic Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        If lung cancer spreads (metastasises) to other parts of the body, it may cause additional symptoms, including:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-3 text-gray-700">
+                            <li>• Bone pain.</li>
+                            <li>• Weakness or numbness in an arm or leg.</li>
+                            <li>• Headaches, dizziness, or seizures.</li>
+                        </ul>
+                        <ul class="space-y-3 text-gray-700">
+                            <li>• Balance problems or an unsteady gait.</li>
+                            <li>• Yellowing of the skin and eyes (jaundice).</li>
+                            <li>• Swollen lymph nodes in the neck or above the collarbone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">When to See a Doctor</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    These symptoms do not automatically mean you have lung cancer, as many other conditions share similar signs (such as chronic bronchitis, pneumonia, asthma, COPD, and tuberculosis). However, you should see a doctor if you experience any persistent cough, notice blood in your mucus, have chest pain or trouble breathing, feel constantly tired or weak without reason, lose weight without trying, or get frequent lung infections. Early detection offers the best chance of a successful outcome.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Because early-stage lung cancer often has no symptoms or symptoms that mimic common illnesses, many cases are diagnosed at an advanced stage. Patients at high risk for lung cancer, particularly those with a history of smoking, should discuss regular screenings with their doctor to catch the disease early.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Initial Assessment</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        If you present with symptoms that could indicate lung cancer, your doctor will begin by taking a detailed history, asking about your medical, smoking, and family history, and any exposure to chemicals or substances. This is typically followed by an imaging exam, such as a chest X-ray. If the images show an area of concern, further scans like a CT scan or PET scan may be ordered to gather additional details.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy Procedures</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        If imaging suggests cancer, a tissue or fluid sample is required for a definitive diagnosis. This procedure is called a biopsy. Doctors may use several methods to perform a lung tumour biopsy:
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• <strong>Needle Biopsy (CT-guided):</strong> A needle is inserted through the skin under local anaesthesia to acquire a sample. This includes Fine Needle Aspiration (FNA), which uses a very small needle and suction.</li>
+                        <li>• <strong>Thoracentesis:</strong> Fluid surrounding the lungs is drawn out with a needle and tested for cancer cells.</li>
+                        <li>• <strong>Bronchoscopy:</strong> A thin, flexible tube with a camera is passed through the nose or mouth into the lungs to obtain a small tissue sample. It is often performed with an endobronchial ultrasound (EBUS).</li>
+                        <li>• <strong>Endobronchial Ultrasound (EBUS):</strong> An ultrasound device attached to a bronchoscope is used to check for cancer within nearby chest lymph nodes.</li>
+                        <li>• <strong>Video-Assisted Thoracoscopic Surgery (VATS):</strong> A minimally invasive surgical procedure using a small camera to retrieve tumour samples that are difficult to access.</li>
+                        <li>• <strong>Thorascopy/Pleuroscopy:</strong> A flexible tube with a camera is inserted through a small incision to look for and retrieve suspected cancer tissue.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Cancer Staging</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        After diagnosis, the cancer is staged to determine the size of the primary tumour and how far it has spread. This information is critical for the care team to understand the disease and plan the appropriate treatment.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h5 class="text-xl font-semibold text-gray-900 mb-2">TNM Staging</h5>
+                            <p class="text-gray-700 leading-relaxed mb-2">
+                                Used for most cancers, including non-small cell lung cancer, this system describes the cancer based on three factors:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>• <strong>T (Tumour):</strong> Size of the primary tumour and whether it has invaded nearby tissues.</li>
+                                <li>• <strong>N (Nodes):</strong> Cancer spread to nearby lymph nodes.</li>
+                                <li>• <strong>M (Metastasis):</strong> Whether the cancer has spread to distant parts of the body.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="text-xl font-semibold text-gray-900 mb-2">0 to IV Stages (Non-Small Cell Lung Cancer)</h5>
+                            <p class="text-gray-700 leading-relaxed mb-2">
+                                The TNM stages are often simplified into four main stages, with larger numbers indicating more advanced cancer.
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>• <strong>Stage 0:</strong> Abnormal cells are present but have not spread to nearby tissue (precancerous or in-situ).</li>
+                                <li>• <strong>Stage I:</strong> Cancer is typically small and confined to the area where it began.</li>
+                                <li>• <strong>Stage II and Stage III:</strong> Cancer has spread to nearby tissue and/or lymph nodes.</li>
+                                <li>• <strong>Stage IV:</strong> Cancer has spread to distant areas of the body (metastatic cancer). While often not curable, it can frequently be managed like a chronic disease.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="text-xl font-semibold text-gray-900 mb-2">Small Cell Lung Cancer Stages</h5>
+                            <p class="text-gray-700 leading-relaxed mb-2">
+                                Due to its tendency to spread early, SCLC is usually classified into two stages:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>• <strong>Limited-Stage:</strong> Cancer is confined to the lung where it started and may have spread to the area between the lungs or to the lymph nodes above the collarbone.</li>
+                                <li>• <strong>Extensive-Stage:</strong> Cancer has spread beyond the lung or the central chest area to other places in the body.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, a multidisciplinary team of lung specialists customises treatment to deliver the most advanced, effective, and least invasive therapies available, with a focus on preserving lung function and quality of life. Treatment plans are based on factors including the stage and type of lung cancer, other existing lung problems (e.g., emphysema), and overall health.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Surgery is often a viable option for those with early-stage non-small cell lung cancer. In some cases, chemotherapy or radiation may be given before surgery (neoadjuvant therapy) to shrink the tumour. The most common types of surgery, in order of tissue removed, include:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Wedge Resection</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Removal of the tumour and a small, wedge-shaped piece of the lung around it.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Segmentectomy (Segmental Resection)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Removal of an anatomical segment of the lobe where the cancer is located. Both this and wedge resection are often used for small, early-stage tumours or for patients with limited lung capacity.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Lobectomy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Removal of the entire lung lobe containing the cancer. This is considered the "standard of care" for most surgical patients.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Sleeve Lobectomy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A more complex lobectomy for centrally located tumours, involving removal of the lobe and part of the connecting bronchus, which is then reconnected. It is preferred over pneumonectomy to preserve lung tissue.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Pneumonectomy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Removal of an entire lung. This is occasionally necessary due to tumour location but is generally well tolerated by people with otherwise healthy lungs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-700 leading-relaxed mt-6">
+                        During most procedures, lymph nodes are also removed for examination to determine if the cancer has spread outside the lungs, which helps guide any necessary further treatment (adjuvant therapy), such as chemotherapy, radiation, or targeted therapy.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        Surgical approaches include Open Surgery (traditional incision) and Minimally Invasive Surgery which uses smaller incisions, resulting in shorter recovery times and less pain. Minimally invasive methods include Video-Assisted Thoracic Surgery (VATS) and Robotic-Assisted Surgery.
+                    </p>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Radiation therapy uses focused, high-energy photon or proton beams to destroy cancer cells. SSCHRC has radiation oncologists dedicated exclusively to lung cancer care. Treatments include:
+                    </p>
+                    
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• <strong>3D-Conformal Radiation Therapy:</strong> Delivers radiation beams shaped exactly to the tumour, primarily used for palliative care.</li>
+                        <li>• <strong>Intensity-Modulated Radiotherapy (IMRT):</strong> Treatment is precisely tailored to the tumour's specific shape, commonly used for cancers that have invaded nearby lymph nodes.</li>
+                        <li>• <strong>Volumetric-Modulated Arc Therapy (VMAT):</strong> A specialised IMRT where the radiation machine rotates around the patient, allowing for more precise irradiation and shorter procedure times.</li>
+                        <li>• <strong>Stereotactic Body Radiation Therapy (SBRT):</strong> Delivers high doses of radiation with multiple beams and angles to precisely target the tumour.</li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Systemic Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Systemic Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Systemic therapy refers to treatments using substances that travel through the bloodstream to affect cells throughout the body. Significant advancements have been made in this area, particularly in targeted and immune therapies.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Targeted Therapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These therapies stop or slow cancer growth by interfering with specific molecules (like proteins) that cancer cells use to survive and multiply. They are currently available for many subtypes of adenocarcinoma.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Immunotherapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These treatments harness the body's own immune system to fight the cancer. The standard of care for non-small cell lung cancer often includes checkpoint inhibitor immunotherapies, which remove the immune system's natural "brakes," allowing it to attack the cancer cells.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Chemotherapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Uses drugs to directly kill cancer cells by halting their growth. It is often combined with immunotherapy, which makes both treatments more effective.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Angiogenesis Inhibitors</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These drugs disrupt the process of angiogenesis (creating new blood vessels) that tumours use to increase their blood supply and grow rapidly. They bind to molecules like Vascular Endothelial Growth Factor (VEGF), prohibiting the activation of this growth process.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

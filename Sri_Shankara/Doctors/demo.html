@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sri Shankara Cancer Hospital & Research Centre, Bengaluru | Advanced Cancer Care & Oncology Research in India</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+    }
+    .uh-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-image: none;
+    }
+    .uh-logo img {
+      height: 69px;
+      cursor: pointer;
+    }
+    /* Right side container */
+    .uh-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 14px;
+    }
+    /* Contact items with vertical layout */
+    .uh-contact-item {
+      color: #4a5568;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      font-weight: 500;
+      min-width: 70px;
+    }
+    .uh-contact-item:hover {
+      background-color: #edf2f7;
+      color: #00695c;
+    }
+    /* Emergency link special color */
+    .uh-contact-item.emergency {
+      color: #e53e3e;
+      font-weight: 600;
+    }
+    .uh-contact-item.emergency:hover {
+      text-decoration: underline;
+      background-color: transparent;
+      color: #9b2c2c;
+    }
+    /* Label below number styling */
+    .uh-contact-label {
+      font-size: 11px;
+      color: #718096; /* gray-500 */
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    /* Number + icon wrapper (horizontal) */
+    .uh-contact-number {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+    /* Icons */
+    .uh-icon {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+    .uh-flex-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .uh-contact-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #444;
+      font-size: 14px;
+    }
+    .uh-contact-link:hover {
+      color: #00695c;
+    }
+    .uh-icon {
+      width: 20px;
+      height: 20px;
+      color: #00695c;
+    }
+    .uh-contact-text {
+      line-height: 1.1;
+      display: flex;
+      flex-direction: column;
+    }
+    .uh-contact-text small {
+      font-size: 11px;
+      color: #666;
+    }
+    .uh-lang-select {
+      padding: 1px 3px;
+      font-size: 11px;
+      height: 22px;
+      border: 1px solid #00695c;
+      border-radius: 2px;
+      font-weight: 500;
+      color: #00695c;
+      background: #fff;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .uh-btn {
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .uh-btn-donate {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .uh-btn-donate:hover {
+      background-color: #218838;
+    }
+    .uh-btn-login {
+      background-color: #1c1c1c;
+      border: 1.5px solid #ffffff;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .uh-btn-login:hover {
+      background-color: #00695c;
+      color: #ffffff;
+      border-color: #00695c;
+    }
+    .uh-btn-register {
+      background-color: #00695c;
+      color: #fff;
+      margin-left: 10px;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+    }
+    .uh-btn-register:hover {
+      background-color: #00695c;
+    }
+  </style>
+</head>
+<body>
+  <header class="uh-header" role="banner">
+    <div class="uh-logo">
+      <a href="/">
+        <a href="Sri Shankara Cancer Hospital and Research Centre.html" target="_blank"><img src="..\Images\Logo.jpg" alt="Urself Logo" /></a>
+      </a>
+    </div>
+
+    <nav class="uh-header-actions" aria-label="Primary navigation">
+
+      <a href="https://wa.me/1234567890" target="_blank" rel="noopener" aria-label="WhatsApp Chat" class="uh-contact-item">
+        <div class="uh-contact-number">
+          <svg class="uh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.52 3.48A11.68 11.68 0 0 0 3.48 20.52l-1.37 4.87 5.03-1.31a11.68 11.68 0 0 0 13.38-20.6zm-2.45 14.74c-.35 1.04-2.26 1.98-3.15 2.12-.84.13-1.55.19-4.4-1.56a16.4 16.4 0 0 1-6-6c-1.75-2.85-1.69-3.56-1.56-4.4.14-.9 1.08-2.8 2.12-3.15.56-.18 1.3-.29 2.04-.29a9.54 9.54 0 0 1 6.76 3.14 9.51 9.51 0 0 1 3.14 6.76c0 .74-.1 1.48-.28 2.03zM12 6.5a1 1 0 0 0-1 1v.18a1 1 0 0 0 .52.88l.46.28a.5.5 0 0 1 .18.65l-1.07 1.95a.5.5 0 0 1-.54.27c-.3-.06-.82-.24-1.57-.94-.74-.68-1.23-1.52-1.38-2.37-.14-.84.18-1.22.44-1.4l.17-.12a1 1 0 0 0 .36-.83v-.44a1 1 0 0 0-1-1 4.2 4.2 0 0 0-2.6 1 6.37 6.37 0 0 0-1.37 2.2c-.4 1.12-.3 2.2.2 3.25a8.56 8.56 0 0 0 6.65 5.66c1.49.22 2.93-.06 4.22-.76a6.66 6.66 0 0 0 2.56-2.5 7.32 7.32 0 0 0 .74-3.7 4.2 4.2 0 0 0-1.5-3.25 4.16 4.16 0 0 0-3-1.27z"/>
+          </svg>
+          +91 12345 67890
+        </div>
+        <span class="uh-contact-label">WhatsApp</span>
+      </a>
+
+      <a href="/emergency" class="uh-contact-item emergency" aria-label="Emergency Contact">
+        <div class="uh-contact-number">
+          <svg class="uh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 2a9.93 9.93 0 0 0-7.07 2.93A10 10 0 0 0 4 19a9.95 9.95 0 0 0 8 3 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 5.66-2.34A7.94 7.94 0 0 1 12 20zm-.5-9h1v5h-1zM12 9a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+          </svg>
+          +91 98765 43210
+        </div>
+        <span class="uh-contact-label">Emergency</span>
+      </a>
+
+      <a href="/lifeline" class="uh-contact-item" aria-label="Lifeline Contact">
+        <div class="uh-contact-number">
+          <svg class="uh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 3.8 4 6 4c1.3 0 2.5 1.12 3 2.14A3.51 3.51 0 0 1 12 4c2.2 0 4 2 4 4.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          +91 11223 44556
+        </div>
+        <span class="uh-contact-label">Lifeline</span>
+      </a>
+
+      <select class="uh-lang-select" aria-label="Select language">
+        <option value="en">EN</option>
+        <option value="hi" lang="hi">Hindi</option>
+        <option value="kn" lang="kn">Kannada</option>
+       <option value="ta" lang="ta">Tamil</option>
+       <option value="te" lang="te">Telugu</option>
+       <option value="ml" lang="ml">Malayalam</option>
+     <option value="bn" lang="bn">Bengali</option>
+      <option value="gu">Gujarati</option>
+  <option value="mr">Marathi</option>
+  <option value="ar">Arabic</option>
+  <option value="fr">French</option>
+  <option value="es">Spanish</option>
+  <option value="ru">Russian</option>
+  <option value="zh-Hans">Chinese</option>
+  <option value="ja">Japanese</option>
+      </select>
+
+      <a href="d.html" target="_blank" rel="noopener noreferrer" class="uh-btn uh-btn-donate">Donate</a>
+<a href="Login.html" target="_blank" rel="noopener noreferrer" class="uh-btn uh-btn-login">Login</a>
+<a href="Register.html" target="_blank" rel="noopener noreferrer" class="uh-btn uh-btn-register">Register</a>
+    </nav>
+  </header>
+</body>
+
+
+
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Cancer Hospital Menu</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .cch-nav {
+      background-color: #00695c;
+      color: white;
+      padding: 10px 0;
+    }
+
+    .cch-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+.cch-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.cch-menu a:hover {
+  color: #ffcc00; /* Optional: add a hover color */
+}
+
+    .cch-menu > li {
+      position: relative;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cch-menu > li:hover {
+      background-color: #00695c;
+    }
+
+    .cch-menu li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #00695c;
+      padding: 0;
+      min-width: 220px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .cch-menu li:hover > ul {
+      display: block;
+    }
+
+    .cch-submenu li {
+      padding: 10px 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
+
+    .cch-submenu li:hover {
+      background-color: #00695c;
+    }
+
+    .cch-submenu li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #00695c;
+    }
+
+    .cch-submenu li:hover > ul {
+      display: block;
+    }
+  </style>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+
+<body>
+  <nav class="cch-nav">
+    <ul class="cch-menu">
+      <li>
+        <a href="types-of-cancer.html">Cancer Care</a>
+        <ul class="cch-submenu">
+          <li>
+            <a href="types-of-cancer.html" target="_blank">>Cancers We Treat</a>
+            <ul class="cch-submenu">
+              <li><a href="Breast Cancer.html" target="_blank">Breast Cancer</a></li>
+              <li><a href="Lung Cancer.html" target="_blank">Lung Cancer</a></li>
+         
+              <li><a href="Cervical Cancer.html" target="_blank">Cervical Cancer</a></li>
+              <li><a href="prostate-cancer.html" target="_blank">Prostate Cancer</a></li>
+              <li><a href="colorectal-cancer.html" target="_blank">Colorectal Cancers</a></li>
+              <li><a href="blood-cancer.html" target="_blank">Blood Cancers</a></li>
+              <li><a href="brain-tumors.html" target="_blank">Brain Tumors</a></li>
+              <li><a href="liver-tumors.html" target="_blank">Liver Tumors</a></li>
+              <li><a href="head&neck-cancer.html" target="_blank">Head & Neck Cancer</a></li>
+               <li><a href="Gastrointestinal Cancer.html" target="_blank">Gastrointestinal Cancer</a></li>
+               <li><a href="Gynecologic Cancer.html" target="_blank">Gynecologic Cancer</a></li>
+               <li><a href="prostate-cancer.html" target="_blank">prostate-cancer</a></li>
+               <li><a href="Urological Cancer.html" target="_blank">Urological Cancer</a></li>
+               <li><a href="Genital Cancer.html" target="_blank">Genital Cancer</a></li>
+               <li><a href="Ovarian Cancer.html" target="_blank">Ovarian Cancer</a></li>
+               <li><a href="Pancreatic Cancer.html" target="_blank">Pancreatic Cancer</a></li>
+               <li><a href="Skin cancer.html" target="_blank">Skin cancer</a></li>
+               <li><a href="Pediatric Cancer.html" target="_blank">Pediatric Cancer</a></li>
+               <li><a href="Thyroid cancer.html" target="_blank">Thyroid cancer</a></li>
+               <li><a href="Rare Cancer.html" target="_blank">Rare Cancer</a></li>
+              <li><a href="all-types-cancer.html.html" target="_blank">All Types Cancer</a></li>
+            </ul>
+          </li>
+          <li>
+            Screening & Diagnosis
+            <ul class="cch-submenu">
+              <li><a href="Breast-cancer screening.html" target="_blank">Breast Cancer Screening (Mammograms)</a></li>
+              <li><a href="Cervical Cancer Screening.html" target="_blank">Cervical Cancer Screening</a></li>
+              <li><a href="Colorectal Cancer Screening.html" target="_blank"> Colorectal Cancer Screening</a></li>
+              <li><a href="Lung Cancer screening.html" target="_blank"> Lung Cancer Screening</a></li>
+              <li><a href="prostate Cancer Screening.html" target="_blank"> Prostate Cancer Screening</a></li>
+              <li><a href="Age-Based cancer Screening.html" target="_blank">Age-Based Screening Packages</a></li>
+              <li><a href="Men’s & Women’s Cancer Screening.html" target="_blank">Men’s & Women’s Screening Packages</a></li>
+              <li><a href="view-all-screenings.html" target="_blank">View All Screenings ›</a></li>
+            </ul>
+          </li>
+          <li>
+            Treatment Options
+            <ul class="cch-submenu">
+              <li><a href="cancer-treatment-options.html#1" target="_blank">Surgery</a></li>
+              <li><a href="cancer-treatment-options.html#chemotherapy" target="_blank">Chemotherapy</a></li>
+              <li><a href="cancer-treatment-options.html#radiation" target="_blank">Radiation Therapy</a></li>
+              <li><a href="cancer-treatment-options.html#targeted" target="_blank">Targeted Therapy</a></li>
+              <li><a href="cancer-treatment-options.html#immunotherapy" target="_blank">Immunotherapy</a></li>
+              <li><a href="cancer-treatment-options.html#hormone" target="_blank">Hormone Therapy</a></li>
+              <li><a href="cancer-treatment-options.html#nuclear" target="_blank">Nuclear Medicine</a></li>
+              <li><a href="cancer-treatment-options.html#integrative" target="_blank">Integrative Oncology</a></li>
+              <li><a href="cancer-treatment-options.html#tumourboard" target="_blank">Multidisciplinary Tumour Board</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Advanced Technologies
+        <ul class="cch-submenu">
+          <li>
+            Treatment Innovations
+            <ul class="cch-submenu">
+              <li><a href="advanced treatment.html#robotic-surgery" target="_blank">Robotic Surgery</a></li>
+              <li><a href="advanced treatment.html#cyberknife radiosurgery" target="_blank">CyberKnife Radiosurgery</a></li>
+              <!-- <li><a href="Proton-Therapy.html" target="_blank">Proton Therapy</a></li> -->
+              <li><a href="advanced treatment.html#radiation therapy" target="_blank">Radiation Therapy (IMRT, IGRT)</a></li>
+              <li><a href="advanced treatment.html#immunotherapy" target="_blank">Immunotherapy</a></li>
+            </ul>
+          </li>
+          <li>
+            Diagnostic Technologies
+            <ul class="cch-submenu">
+              <li><a href="PET-CT-Molecular Imaging.html" target="_blank">PET-CT & Molecular Imaging</a></li>
+              <li><a href="AI-Powered-Diagnostics.html" target="_blank">AI Powered Diagnostics</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Doctors & Specialists
+        <ul class="cch-submenu">
+          <li><a href="doctors.html" target="_blank">Our Doctors</a></li>
+          <li><a href="Specialist-by-Cancer-Type.html" target="_blank">Specialist by Cancer Type</a></li>
+        </ul>
+      </li>
+
+      <li>
+        Patient Services
+        <ul class="cch-submenu">
+          <li><a href="Book-an-Appointment.html" target="_blank">Book an Appointment</a></li>
+          <li><a href="2nd opinion.html" target="_blank">Second Opinion</a></li>
+          <li><a href="Financial-Assistance.html" target="_blank">Financial Assistance</a></li>
+          <li><a href="Insurance-Billing.html" target="_blank">Insurance & Billing</a></li>
+          <li><a href="International-Patients.html" target="_blank">International Patients</a></li>
+          <li><a href="patient testimony.html" target="_blank">Patient Testimonials</a></li>
+        </ul>
+      </li>
+
+      <li>
+        Research & Clinical Trials
+        <ul class="cch-submenu">
+          <li><a href="Ongoing-Clinical-Trials.html#clinicalTrialsSection" target="_blank">Ongoing Clinical Trials</a></li>
+          <li><a href="Ongoing-Clinical-Trials.html#Eligibility" target="_blank">Eligibility Criteria</a></li>
+          <li><a href="How-to-Apply.html" target="_blank">How to Apply</a></li>
+          <li><a href="Research-Publications.html" target="_blank">Research Publications</a></li>
+        </ul>
+      </li>
+
+      <li>
+        Support Services
+        <ul class="cch-submenu">
+          <li><a href="Nutritional-Support.html" target="_blank">Nutritional Support</a></li>
+          <li><a href="Pain-Symptom-Management.html" target="_blank">Pain & Symptom Management</a></li>
+          <li><a href="Psychological-Counseling.html" target="_blank">Psychological Counseling</a></li>
+          <li><a href="Rehabilitation-Physiotherapy.html" target="_blank">Rehabilitation & Physiotherapy</a></li>
+          <li><a href="Cancer-Survivorship-Programs.html" target="_blank">Cancer Survivorship Programs</a></li>
+          <li><a href="Palliative-End-of-Life-Care.html" target="_blank">Palliative & End-of-Life Care</a></li>
+          <li><a href="View-All-Support-Services.html" target="_blank">View All Support Services</a></li>  
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors info</title>
+    <link rel="stylesheet" href="doctorcss.css" />
+    
+    </head>
+<body>
+<!-- start -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- stop -->
+<script src="doctorjs.js"></script>
+</body>
+</html>
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Footer styles */
+        .footer-section {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+        }
+
+        .footer-column {
+            margin-bottom: 20px;
+        }
+
+        .footer-column h5 {
+            font-weight: bold;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #000;
+        }
+
+        .social-icons a:hover {
+            color: #00695c;
+        }
+
+        .subscribe-form input {
+            padding: 10px;
+            width: 50%;
+            margin-right: 10px;
+        }
+
+        .subscribe-form button {
+            padding: 10px;
+        }
+
+        .footer-logo img {
+            width: 150px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-bottom .footer-text {
+            font-size: 14px;
+        }
+
+
+
+        /* Footer bottom with black background for app download */
+
+
+
+
+
+
+        .footer-bottom .chatbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .footer-bottom .contact-number {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+         .footer-bottom .chatbox button {
+            margin: 5px 0;
+            padding: 10px 15px;
+        }
+
+        .footer-bottom .footer-middle {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom .footer-text a {
+            color: #00695c;
+            text-decoration: none;
+        }
+
+        .footer-bottom .footer-text a:hover {
+            color: white;
+        }
+
+      /*  /* Chatbox Button Styling */
+        .footer-bottom .chatbox button {
+            background-color: #00695c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .footer-bottom .chatbox button:hover {
+            background-color: #00695c;
+        }  */
+         /* Styling for the App section */
+        .footer-middle {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer Sections */
+        .footer-bottom .footer-text {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Remove bullet points from the footer menu */
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .footer-column ul li a:hover {
+            color: #00695c;
+        }
+        /* social media logo */
+
+    
+  /* .instagram-icon {
+    font-size: 40px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, 
+                #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; 
+  }*/
+   .social-icon {
+    font-size: 25px;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  .instagram-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, 
+                #fd5949 45%, #d6249f 60%, #285AEB 90%);
+     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .facebook-icon {
+    color: #1877F2;
+  }
+
+  .twitter-icon {
+    color: #1DA1F2;
+  }
+
+  .linkedin-icon {
+    color: #0A66C2;
+  }
+
+  .youtube-icon {
+    color: #FF0000;
+  }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- Footer Section -->
+<div class="footer-section">
+    <div class="container">
+        <div class="row">
+            <!-- 1st Column -->
+            <div class="col-md-2 footer-column">
+                <h5>Accreditation</h5>
+                <p>🏆 <a href="#" class="footer-link">ESMO</a> | 🏥 <a href="#" class="footer-link">NABH</a> | 🔬 <a href="#" class="footer-link">NABL</a> | 🎖️ <a href="#" class="footer-link">Healthcare Achievers</a></p>
+             <div class="my-4"></div>
+                <h5>Emergency Numbers</h5>
+                <p>📞 Lifeline: 1234-567-890</p>
+                <p>☎️ Health Help Line: 9876-543-210</p>
+
+                
+                <h5>Other Locations</h5>
+                <p><a href="">📍 Bengaluru</a> | <a href="">📍 Bhubaneswar</a></p>
+                
+            </div>
+            
+
+            <!-- 2nd Column -->
+            <div class="col-md-2 footer-column">
+                <h5>Shankara Cancer Hospital & Research Center</h5>
+               <div class="my-3"></div>
+                
+                <address>
+                    1st Cross, Shankara Matt Premises,<br>
+                    Shankarapuram, Basavanagudi,<br>
+                    Bengaluru, Karnataka 560004
+                </address>
+
+                
+                 
+                 
+                  <div style="margin-top: 15px;">
+    
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8090006483215!2d77.58088037484443!3d12.917789087388075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzA0LjAiTiA3N8KwMzUnMDIuNiJF!5e0!3m2!1sen!2sin!4v1717145372304" 
+      width="200" 
+      height="200" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <!-- <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sschrcblr/"><i class="fab fa-facebook social-icon facebook-icon"></i></a>
+                    <a href="https://www.instagram.com/shankara_cancer/?hl=en"><i class="fab fa-instagram social-icon instagram-icon"></i></a>
+                    <a href="https://twitter.com/shankaracancer"><i class="fab fa-twitter social-icon twitter-icon"></i></a>
+                    <a href="https://in.linkedin.com/company/shankara-cancer-hospital-research-centre"><i class="fab fa-linkedin social-icon linkedin-icon"></i></a>
+                    <a href="https://www.youtube.com/@SSCHRCBengaluru" target="_blank"><i class="fab fa-youtube social-icon youtube-icon"></i></a>
+                </div> -->
+            </div>
+
+            <!-- 3rd Column -->
+            <div class="col-md-2 footer-column">
+                <h5>Diagnosis & Screening</h5>
+                <ul>
+                    <li><a href="Cancer Screening & Early Detection.html">Cancer Screening & Early Detection</a></li>
+                    <li><a href="Advanced Diagnostic Tests.html">Advanced Diagnostic Tests</a></li>
+                    <li><a href="Imaging & Biopsy Services.html">Imaging & Biopsy Services</a></li>
+                    <li><a href="Genetic Testing.html">Genetic Testing</a></li>
+                </ul>
+            </div>
+
+            <!-- 4th Column -->
+            <div class="col-md-2 footer-column">
+                <h5>Cancers We Treat</h5>
+                <ul>
+                    <li><a href="Breast Cancer.html">Breast Cancer</a></li>
+                    <li><a href="Lung Cancer.html">Lung Cancer</a></li>
+                    <li><a href="Liver Tumors.html">Liver Tumors</a></li>
+                    <li><a href="Ovarian Cancer.html">Ovarian Cancer</a></li>
+                    <li><a href="colorectal-cancer.html">Colorectal-cancer</a></li>
+                    <li><a href="Cervical Cancer.html">Cervical Cancer</a></li>
+                    <li><a href="Head & Neck Cancer.html">Head & Neck Cancer</a></li>
+                    <li><a href="Gastrointestinal Cancer.html">Gastrointestinal cancer</a></li>
+                    <li><a href="blood-cancer.html">Blood Cancers</a></li>
+                    <li><a href="Gynecologic Cancer.html">Gynecological Cancers</li>
+                    <li><a href="prostate-cancer.html">Prostate Cancers</a></li>
+                    <li><a href="brain-tumors.html">Brain Tumors</a></li>
+                    <li><a href="types-of-cancer.html">All Type Cancers</a></li>
+                    <li><a href="Urological Cancer.html">Urological Cancer</a></li>
+                    <li><a href="Genital Cancer.html">Genital Cancer</a></li>
+                    <li><a href="Pancreatic Cancer.html">Pancreatic Cancer</a></li>
+                    <li><a href="Skin cancer.html">Skin cancer</a></li>
+                    <li><a href="Pediatric Cancer.html">Pediatric Cancer</a></li>
+                    <li><a href="Thyroid cancer.html">Thyroid cancer</a></li>
+                    <li><a href="Rare Cancer.html">Rare Cancer</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- 5th Column -->
+            <div class="col-md-2 footer-column">
+                <h5>Cancer Treatments</h5>
+                <ul>
+                    <li><a href="chemotherapy.html">Chemotherapy</a></li>
+                    <li><a href="Radiation Therapy.html">Radiation Therapy</a></li>
+                    <li><a href="Immunotherapy.html">Immunotherapy</a></li>
+                    <li><a href="Interventional Oncology.html">Interventional Oncology</a></li>
+                    <li><a href="Cellular Therapy.html">Cellular Therapy</a></li>
+                    <li><a href="Palliative & Supportive Care.html">Palliative & Supportive Care</a></li>
+                    <li><a href="Robotic Surgery.html">Robotic Surgery</a></li>
+                    <li><a href="Musculoskeletal & Soft Tissue Cancers.html">Musculoskeletal & Soft Tissue Cancers</a></li>
+                    <li><a href="Other Specialized Cancers.html">Other Specialized Cancers</a></li>
+                    <li><a href="Surgery.html">Surgery</a></li>
+                    <li><a href="Targeted Therapy.html">Targeted Therapy</a></li>
+                    <li><a href="Hormone Therapy.html">Hormone Therapy</a></li>
+                </ul>
+            </div>
+
+            <!-- 6th Column -->
+            <div class="col-md-2 footer-column">
+                <h5>Other Support Services</h5>
+                <ul>
+                    <li><a href="Blood Center & Transfusion Medicine.html">Blood Center & Transfusion Medicine</a></li>
+                    <li><a href="Support Groups & Caregiver Support.html">Support Groups & Caregiver Support</a></li>
+                    <li><a href="Bereavement & Domiciliary Care.html">Bereavement & Domiciliary Care</a></li>
+                    <li><a href="Survivorship Programs.html">Survivorship Programs</a></li>
+                </ul>
+
+                <a href="About shankara.html" style="color: #000;text-decoration: none;"><h5>About Shankara</h5></a>
+                <ul>
+                    <li><a href="About shankara.html#founder">Contact Us</a></li>
+                    <li><a href="About shankara.html#who-are-we">Who We Are</a></li>
+                    <li><a href="About shankara.html#our-hospital">Our Hospital</a></li>
+                    <li><a href="About shankara.html#our-leadership">Our Leadership</a></li>
+                    <li><a href="About shankara.html#mission-vision">Mission and Vision</a></li>
+                    
+                    
+                </ul>
+                <a href="Contact Us.html" style="color: #000;text-decoration: none;"><h5>Contact Us</h5></a>
+            </div>
+        </div>
+
+        <table style="width: 100%;"><tr>
+          <td>
+            <h5>Follow Us</h5>
+                <div class="social-icons">
+                  
+                    <a href="https://www.facebook.com/sschrcblr/"><i class="fab fa-facebook social-icon facebook-icon"></i></a>
+                    <a href="https://www.instagram.com/shankara_cancer/?hl=en"><i class="fab fa-instagram social-icon instagram-icon"></i></a>
+                    <a href="https://twitter.com/shankaracancer"><i class="fab fa-twitter social-icon twitter-icon"></i></a>
+                    <a href="https://in.linkedin.com/company/shankara-cancer-hospital-research-centre"><i class="fab fa-linkedin social-icon linkedin-icon"></i></a>
+                    <a href="https://www.youtube.com/@SSCHRCBengaluru" target="_blank"><i class="fab fa-youtube social-icon youtube-icon"></i></a>
+                </div>
+          </td>
+          <td>
+            <h5>Subscribe to Our Newsletter</h5>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" />
+                    <button class="btn btn-primary" style="background-color: #00695c;">Submit</button>
+                </div>
+          </td>
+        </tr></table>
+
+        <!-- Middle Footer Section -->
+        <div class="row footer-bottom">
+            <div class="col-md-6 footer-text">
+                <h5>Shankara Healthcare @ App</h5>
+                <p>📱 Download the App: <a href="https://apple.com" class="btn btn-link">Apple Store</a> | <a href="https://google.com" class="btn btn-link">Google Play</a></p>
+            </div>
+
+            <div class="col-md-6 text-end">
+                <div class="footer-text">
+                    <a href="#" class="btn btn-link">Terms of Use</a> |
+                    <a href="#" class="btn btn-link">Disclaimer</a> |
+                    <a href="#" class="btn btn-link">Sitemap</a> |
+                    <a href="#" class="btn btn-link">Careers</a> |
+                    <a href="#" class="btn btn-link">BMW Reports</a>
+                </div>
+                <div class="footer-text">
+                    <p>© 2024 Shankara Hospitals. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        
+</div>
+
+    </div>
+</div>
+
+<!-- Font Awesome for Social Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js">
+  
+   
+
+
+</script>
+
+
+
+<style>
+  /* Basic Reset */
+  #chatbox-container * {
+    box-sizing: border-box;
+  }
+  #chatbox-container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #222;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    z-index: 9999;
+  }
+  #chatbox-header {
+    background: #00695c; /* Corporate blue */
+    color: white;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  #chatbox-header:hover {
+    background: #00695c;
+  }
+  #chatbox-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  #chatbox-body {
+    background: #f9fbfc;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  #chatbox-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  .message {
+    margin-bottom: 12px;
+    max-width: 80%;
+    line-height: 1.4;
+  }
+  .message.bot {
+    background: #e1f0ff;
+    color: #00695c;
+    border-radius: 12px 12px 12px 0;
+    padding: 10px 15px;
+    align-self: flex-start;
+  }
+  .message.user {
+    background: #00695c;
+    color: white;
+    border-radius: 12px 12px 0 12px;
+    padding: 10px 15px;
+    align-self: flex-end;
+  }
+  #chatbox-input-area {
+    border-top: 1px solid #ddd;
+    padding: 10px 15px;
+    display: flex;
+    background: #fff;
+  }
+  #chatbox-input {
+    flex: 1;
+    border: 1.5px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  #chatbox-input:focus {
+    border-color: #00695c;
+  }
+  #chatbox-send-btn {
+    background: #00695c;
+    color: white;
+    border: none;
+    padding: 0 18px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+  #chatbox-send-btn:hover {
+    background: #00695c;
+  }
+  #chatbox-audience-select {
+    background: #f5faff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .audience-btn {
+    background: #00695c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s;
+  }
+  .audience-btn:hover {
+    background: #00695c;
+  }
+  .audience-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+  #chatbox-faq-buttons {
+    padding: 5px;
+    background: #eaf6ff;
+    border-top: 1px solid #c3d9f5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .faq-btn {
+    background: #cce4ff;
+    border: none;
+    border-radius: 18px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #00695c;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .faq-btn:hover {
+    background: #99c2ff;
+  }
+  #chatbox-loading {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 12px;
+    user-select: none;
+  }
+  @media (max-width: 400px) {
+    #chatbox-container {
+      max-width: 95vw;
+      bottom: 10px;
+      right: 10px;
+      height: 450px;
+    }
+    #chatbox-body {
+      height: 350px;
+    }
+  }
+</style>
+
+<div id="chatbox-container" aria-live="polite" aria-label="Chat support for Urself Cancer Hospital">
+  <div id="chatbox-header" role="button" tabindex="0" aria-expanded="true" aria-controls="chatbox-body">
+    <span>Chat with Our Care Team</span>
+    <button id="chatbox-toggle" aria-label="Close chatbox">&times;</button>
+  </div>
+  <div id="chatbox-body" role="region" aria-live="polite" aria-atomic="false">
+    <div id="chatbox-audience-select" aria-label="Select audience category">
+      <p><strong>How can we help you today?</strong></p>
+      <button class="audience-btn" data-audience="patient" aria-label="I am a Patient or Caregiver">
+        Patient / Caregiver
+      </button>
+      <button class="audience-btn" data-audience="medical" aria-label="I am a Medical Professional">
+        Medical Professional
+      </button>
+      <button class="audience-btn" data-audience="researcher" aria-label="I am a Researcher or Academic">
+        Researcher / Academic
+      </button>
+      <button class="audience-btn" data-audience="donor" aria-label="I am a Donor or CSR Partner">
+        Donor / CSR Partner
+      </button>
+      <button class="audience-btn" data-audience="visitor" aria-label="I am a General Visitor">
+        General Visitor
+      </button>
+    </div>
+    <div id="chatbox-messages" role="log" aria-live="polite" aria-relevant="additions" tabindex="0" style="display:none;"></div>
+    <div id="chatbox-faq-buttons"  role="log" style="display:none;"></div>
+    <form id="chatbox-form" style="display:none;" aria-label="Chat input form">
+      <div id="chatbox-input-area">
+        <input type="text" id="chatbox-input" autocomplete="off" placeholder="Type your message here..." aria-label="Message input" required />
+        <button type="submit" id="chatbox-send-btn" aria-label="Send message">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const chatboxContainer = document.getElementById('chatbox-container');
+    const chatboxToggle = document.getElementById('chatbox-toggle');
+    const chatboxHeader = document.getElementById('chatbox-header');
+    const chatboxAudienceSelect = document.getElementById('chatbox-audience-select');
+    const chatboxMessages = document.getElementById('chatbox-messages');
+    const chatboxFaqButtons = document.getElementById('chatbox-faq-buttons');
+    const chatboxForm = document.getElementById('chatbox-form');
+    const chatboxInput = document.getElementById('chatbox-input');
+
+    let audience = null;
+    let chatOpen = true;
+
+    // Predefined FAQs for each audience type
+    const faqData = {
+      patient: [
+        "What are the common symptoms of cancer?",
+        "How can I schedule an appointment?",
+        "What treatment options are available?",
+        "Can I get emotional support?",
+        "How do I access my test results?"
+        
+      ],
+      medical: [
+        "How to refer a patient?",
+        "Latest clinical trial updates?",
+        "Research publications access?",
+        "Collaboration opportunities?",
+        "Treatment protocols?"
+      ],
+      researcher: [
+        "Where to find data sets?",
+        "How to submit a research paper?",
+        "Funding and grants?",
+        "Clinical trial databases?",
+        "Upcoming conferences?"
+      ],
+      donor: [
+        "How to donate?",
+        "What is the impact of donations?",
+        "Volunteer opportunities?",
+        "CSR partnership details?",
+        "Upcoming events?"
+      ],
+      visitor: [
+        "What services do you offer?",
+        "How to contact the hospital?",
+        "Visiting hours?",
+        "Patient rights and privacy?",
+        "How to get involved?"
+      ]
+    };
+
+    // Simple canned responses for demo purposes - replace with API calls or AI backend as needed
+    const cannedResponses = {
+      "What are the common symptoms of cancer?": "Common symptoms include unexplained weight loss, fatigue, lumps or swelling, persistent pain, and changes in skin or bowel habits. Please consult your doctor for diagnosis.",
+      "How can I schedule an appointment?": "You can schedule an appointment by calling our hospital helpline or through our online portal. Would you like me to help you book now?",
+      "What treatment options are available?": "Our hospital offers surgery, chemotherapy, radiotherapy, targeted therapy, and immunotherapy tailored to each patient’s needs.",
+      "Can I get emotional support?": "Yes, we have a dedicated counseling team available. Would you like to connect with one now?",
+      "How do I access my test results?": "Test results are accessible through our secure patient portal. Would you like me to guide you to the login page?",
+      "How to refer a patient?": "You can refer patients via our referral portal or contact our medical affairs team directly for assistance.",
+      "Latest clinical trial updates?": "Our clinical trials are listed on our Research section. I can help you find trials based on your interest or specialty.",
+      "Research publications access?": "Access the latest publications on our website under the Research & Innovation section. Would you like me to send the link?",
+      "Collaboration opportunities?": "We welcome collaborations with medical professionals and institutions. Please share your proposal or contact our research office.",
+      "Treatment protocols?": "We follow the latest evidence-based protocols in oncology. Please specify the cancer type or protocol you are interested in.",
+      "Where to find data sets?": "Our data sets are available for approved researchers. Please submit your request via the Research portal.",
+      "How to submit a research paper?": "You can submit your papers to our quarterly journal or conferences. Visit our Academics section for guidelines.",
+      "Funding and grants?": "Information on funding and grants can be found on our website’s Research Funding page.",
+      "Clinical trial databases?": "We maintain an updated clinical trials database accessible on our website.",
+      "Upcoming conferences?": "We organize and participate in various oncology conferences. Check our Events page for schedules.",
+      "How to donate?": "Donations can be made online through our secure portal or via bank transfer. I can guide you through the process.",
+      "What is the impact of donations?": "Donations help fund patient care, research, and community programs. We provide regular impact reports to donors.",
+      "Volunteer opportunities?": "We welcome volunteers for various roles. Would you like to know more?",
+      "CSR partnership details?": "We offer several CSR partnership opportunities. Let me connect you to our CSR team.",
+      "Upcoming events?": "Check our Events page for the latest campaigns and activities.",
+      "What services do you offer?": "We provide comprehensive cancer care, including diagnosis, treatment, counseling, and rehabilitation.",
+      "How to contact the hospital?": "You can contact us via phone, email, or visit our Contact Us page.",
+      "Visiting hours?": "Visiting hours are 10am to 6pm daily, with restrictions during treatment times.",
+      "Patient rights and privacy?": "We strictly adhere to patient privacy and rights. Details are available on our Policies page.",
+      "How to get involved?": "You can donate, volunteer, or participate in awareness programs. Would you like details?"
+    };
+
+    // Utility: Scroll chat to bottom
+    function scrollChatToBottom() {
+      setTimeout(() => {
+        chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+      }, 100);
+    }
+
+    // Add message to chat
+    function addMessage(text, sender = 'bot') {
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add('message', sender);
+      msgDiv.textContent = text;
+      chatboxMessages.appendChild(msgDiv);
+      scrollChatToBottom();
+    }
+
+    // Show FAQ quick buttons based on audience
+    function showFaqButtons(audienceType) {
+      chatboxFaqButtons.innerHTML = '';
+      faqData[audienceType].forEach(q => {
+        const btn = document.createElement('button');
+        btn.classList.add('faq-btn');
+        btn.textContent = q;
+        btn.type = 'button';
+        btn.addEventListener('click', () => {
+          addMessage(q, 'user');
+          respondToUser(q);
+        });
+        chatboxFaqButtons.appendChild(btn);
+      });
+      chatboxFaqButtons.style.display = 'flex';
+    }
+
+    // Respond to user input
+    function respondToUser(userText) {
+      addLoading(true);
+      setTimeout(() => {
+        addLoading(false);
+        const response = cannedResponses[userText] || "Thank you for your message. Our team will get back to you shortly.";
+        addMessage(response, 'bot');
+      }, 1200);
+    }
+
+    // Loading indicator
+    let loadingElem = null;
+    function addLoading(show) {
+      if (show) {
+        if (!loadingElem) {
+          loadingElem = document.createElement('div');
+          loadingElem.id = 'chatbox-loading';
+          loadingElem.textContent = 'Typing...';
+          chatboxMessages.appendChild(loadingElem);
+          scrollChatToBottom();
+        }
+      } else {
+        if (loadingElem) {
+          loadingElem.remove();
+          loadingElem = null;
+        }
+      }
+    }
+
+    // Handle audience button click
+    chatboxAudienceSelect.querySelectorAll('.audience-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        audience = btn.getAttribute('data-audience');
+        chatboxAudienceSelect.style.display = 'none';
+        chatboxMessages.style.display = 'block';
+        chatboxFaqButtons.style.display = 'flex';
+        chatboxForm.style.display = 'flex';
+        addMessage(`Hello! You have selected: ${btn.textContent.trim()}`, 'bot');
+        showFaqButtons(audience);
+      });
+    });
+
+    // Handle form submit (user sends message)
+    chatboxForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const text = chatboxInput.value.trim();
+      if (!text) return;
+      addMessage(text, 'user');
+      chatboxInput.value = '';
+      respondToUser(text);
+    });
+
+    // Toggle chat open/close
+    function toggleChat() {
+      chatOpen = !chatOpen;
+      if (chatOpen) {
+        chatboxBody.style.display = 'flex';
+        chatboxToggle.innerHTML = '&times;';
+        chatboxHeader.setAttribute('aria-expanded', 'true');
+      } else {
+        chatboxBody.style.display = 'none';
+        chatboxToggle.innerHTML = '&#x25B2;';
+        chatboxHeader.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    const chatboxBody = document.getElementById('chatbox-body');
+    chatboxToggle.addEventListener('click', toggleChat);
+    chatboxHeader.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleChat();
+      }
+    });
+
+    // Start with audience select visible
+    chatboxAudienceSelect.style.display = 'flex';
+    chatboxMessages.style.display = 'none';
+    chatboxFaqButtons.style.display = 'none';
+    chatboxForm.style.display = 'none';
+
+  })();
+</script>
+
+</body>
+</html>

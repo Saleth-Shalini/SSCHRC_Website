@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Centre of Excellence</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Prevent header menu from looking over-extended */
+        #dynamic-header .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-menu .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-item {
+            padding: 0.5rem 0.65rem !important;
+            gap: 0.5rem;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* FAQ Accordion Styles */
+        .faq-accordion {
+            width: 100%;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .faq-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-header:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-header.active {
+            background: #f0fdf4;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+        
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            color: #2E8B57;
+            font-size: 1.25rem;
+        }
+        
+        .faq-header.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-content.active {
+            max-height: 1000px;
+            padding: 1.5rem;
+        }
+        
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .faq-answer ul {
+            margin-top: 0.75rem;
+            margin-left: 1.5rem;
+            list-style-type: disc;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/breast oncology.jpg" 
+                alt="Breast Cancer Centre of Excellence"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/breast oncology.jpg" 
+                alt="Breast Cancer Centre of Excellence"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+ <!-- Section 1: Introduction and Multidisciplinary Approach -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Compassionate, Coordinated, and Cutting-Edge Breast Cancer Care
+            </h2>
+        </div>
+
+        <div class="space-y-6 mb-12">
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Welcome to the Breast Cancer Centre of Excellence, a comprehensive, multidisciplinary program dedicated to providing personalized, evidence-based diagnosis, treatment, and care. Our mission is to advance patient outcomes and enhance quality of life through shared decision-making by a team of world-class experts.
+            </p>
+        </div>
+
+        <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-pink-50 to-white">
+
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                Our Approach: The Multidisciplinary Difference
+            </h3>
+
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Your care is managed by a dedicated team of specialists who work together seamlessly in our institute, including:
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4">
+
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-cut text-2xl" style="color:#2E8B57;"></i>
+                        <h4 class="font-semibold text-gray-900">Surgical Oncologists</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-user-md text-2xl" style="color:#1e40af;"></i>
+                        <h4 class="font-semibold text-gray-900">Medical Oncologists</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-radiation text-2xl" style="color:#FF4500;"></i>
+                        <h4 class="font-semibold text-gray-900">Radiation Oncologists</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-x-ray text-2xl" style="color:#7c3aed;"></i>
+                        <h4 class="font-semibold text-gray-900">Breast Radiologists</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-microscope text-2xl" style="color:#14b8a6;"></i>
+                        <h4 class="font-semibold text-gray-900">Breast Pathologists</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-user-md text-2xl" style="color:#1e40af;"></i>
+                        <h4 class="font-semibold text-gray-900">Psycho oncologists</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-hands-helping text-2xl" style="color:#2E8B57;"></i>
+                        <h4 class="font-semibold text-gray-900">Breast care nurse</h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="text-lg text-gray-700 mt-6 leading-relaxed">
+                This integrated model ensures that every patient benefits from expert consensus on the optimal treatment strategy, leading to improved outcomes, faster treatment initiation, and enhanced quality of life throughout your Breast cancer journey.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Section 2: Diagnostic Services & Advanced Imaging -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnostic Services & Advanced Imaging
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Early detection is key. We use state-of-the-art diagnostic imaging to detect breast cancer at the earliest, most treatable stages.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">3D Mammography (Digital Breast Tomosynthesis)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Captures multiple layers of breast tissue for a clear, 3D image. Significantly improves cancer detection, especially in dense breast tissue, and reduces false-positive results.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Mammography (FFDM)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A gold-standard screening tool using digital X-rays to monitor tissue changes over time.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Breast MRI</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Uses magnetic fields and radio waves to assess the extent of known cancer, screen high-risk women, and evaluate the opposite breast.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ultrasound</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Uses sound waves to distinguish between solid masses and fluid-filled cysts; often used for guiding biopsies.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Image-Guided, USG guided, Stereotactic guided Breast Biopsies</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Minimally invasive needle biopsies performed under ultrasound, mammographic, stereotactic guided for precise diagnosis with less discomfort and faster recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Surgical Oncology -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Surgical Oncology: Safety and Aesthetics
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our highly trained breast surgeons prioritize both oncological safety and cosmetic outcomes, offering advanced techniques:
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Breast-Conserving Surgery (Lumpectomy)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Removes the tumour and a margin of healthy tissue while preserving the breast. Typically combined with radiation therapy, achieving long-term cancer control equivalent to mastectomy in selected patients. We provide intraoperative margin assessment through frozen section.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Nipple-Sparing Mastectomy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Removes all breast tissue while preserving the skin, nipple, and areola for superior cosmetic outcomes and maintaining a natural breast appearance.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sentinel Lymph Node Biopsy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Minimally invasive technique to identify and remove only the first lymph node(s) likely to contain cancer. This minimizes the risk of lymphedema while providing accurate staging. We have all 3 techniques (ICH, Methylene blue, Gamma probe) available at our center.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Axillary Lymph Node Dissection</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Performed when cancer has spread to regional lymph nodes to reduce the risk of recurrence.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lymphovenous Bypass for Lymphedema Prevention</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        An innovative microsurgical technique performed at the time of axillary dissection to reconnect lymphatic channels, reducing the incidence and severity of lymphedema.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mastectomy (Nipple-Sparing / Skin-Sparing)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A mastectomy involves removal of the entire breast tissue for cancer treatment or risk reduction.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        Skin-sparing mastectomy preserves most of the breast skin, while nipple-sparing mastectomy preserves both the skin and nipple-areola complex, enabling superior cosmetic outcomes when combined with immediate reconstruction, without compromising oncologic safety in selected patients.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Breast-Conserving Surgery (BCS / Lumpectomy)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Breast-conserving surgery removes the cancerous tumor along with a rim of surrounding healthy tissue, while preserving most of the breast.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        It is typically followed by radiotherapy and offers survival outcomes equivalent to mastectomy in early-stage breast cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sentinel Lymph Node Biopsy (SLNB) & Axillary Lymph Node Dissection (ALND)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SLNB involves removal of the first few lymph nodes that drain the breast to assess cancer spread, minimizing surgical morbidity.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        ALND involves removal of multiple axillary lymph nodes and is performed when nodal involvement is confirmed or extensive, to achieve local disease control.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Targeted Axillary Dissection (TAD)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Targeted axillary dissection is an advanced technique that selectively removes previously biopsy-proven positive lymph nodes along with sentinel nodes.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        It is commonly used after neoadjuvant chemotherapy to accurately stage the axilla while reducing complications such as lymphedema.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Oncoplastic Breast Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Oncoplastic surgery combines cancer removal with plastic surgical techniques to preserve or improve breast shape and symmetry.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        It allows wider tumor excision with better cosmetic outcomes and may include volume displacement or replacement techniques, often with simultaneous contralateral breast symmetrization.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Duct Excision (Microdochectomy / Complete Duct Excision)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Microdochectomy involves removal of a single affected milk duct, usually performed for pathological nipple discharge.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        Complete duct excision removes all major ducts beneath the nipple and is indicated when multiple ducts are involved or malignancy cannot be ruled out.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Breast Reconstruction & Aesthetic Surgery -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Breast Reconstruction & Aesthetic Surgery
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    We offer a comprehensive range of breast reconstruction and aesthetic procedures designed to restore form, confidence, and emotional well-being after breast cancer treatment. Our approach is personalized—balancing oncologic safety with natural appearance and long-term comfort.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Autologous Breast Reconstruction (DIEP Flap)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Often regarded as the gold standard in tissue-based breast reconstruction, the DIEP flap uses the patient's own skin and fat from the lower abdomen to recreate the breast. Because abdominal muscles are preserved, this technique offers a more natural feel, quicker recovery of core strength, and high long-term patient satisfaction.
+                    </p>
+                </div>
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Implant-Based Breast Reconstruction</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Implant-based reconstruction uses silicone or saline implants to restore breast shape, either immediately or in a staged manner. Techniques such as tissue expansion and acellular dermal matrices allow for optimal implant positioning, symmetry, and aesthetic outcomes with shorter operative time.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Latissimus Dorsi (LD) Flap Reconstruction</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        The LD flap uses muscle, skin, and fat from the upper back to reconstruct the breast, often in combination with an implant. It is a reliable option for patients who are not candidates for abdominal flaps or who have received prior radiation therapy.
+                    </p>
+                </div>
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">DIEP Flap Reconstruction</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This advanced microvascular procedure reconstructs the breast using abdominal tissue while preserving muscle function. In addition to creating a natural-looking breast, it provides the added benefit of abdominal contouring, similar to a tummy tuck.
+                    </p>
+                </div>
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Implant-Based Reconstruction</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A commonly chosen option where breast volume is restored using implants alone or following tissue expansion. It is suitable for select patients seeking a less extensive surgery with predictable outcomes.
+                    </p>
+                </div>
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lymphovenous Bypass (LVB)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Lymphovenous bypass is a microsurgical procedure that helps prevent or treat lymphedema by redirecting lymphatic fluid into nearby veins. When performed alongside breast cancer surgery, it can significantly reduce long-term arm swelling and improve quality of life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Systemic Therapy and Medical Oncology -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Systemic Therapy and Medical Oncology
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Personalized treatment plans are designed based on your individual tumour biology and genetic markers.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Carefully selected regimens to slow or stop cancer cell growth, with continuous monitoring to optimize effectiveness and manage side effects.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs (e.g., Herceptin, CDK4/6 inhibitors) that specifically attack cancer cells with particular characteristics (like HER2-positive or hormone receptor-positive cancers), often with fewer side effects than traditional chemotherapy.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Endocrine (Hormone) Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Blocks the effects of hormones that fuel cancer growth (e.g., tamoxifen, aromatase inhibitors) for hormone receptor-positive cancers, used in adjuvant and metastatic settings.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Harnesses your body's immune system (e.g., checkpoint inhibitors like pembrolizumab) to destroy cancer cells, particularly for triple-negative and high-risk disease.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 md:col-span-2" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Combination Approaches</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Regimens that combine different therapies (chemotherapy with immunotherapy, targeted therapy with endocrine therapy, etc.) to maximize cancer control.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Radiation Oncology -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Radiation Oncology: Precision & Innovation
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    We use advanced technologies to deliver highly precise radiation therapy while minimizing exposure to healthy tissues.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">External Beam Radiation Therapy (EBRT)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Advanced planning techniques deliver high doses of energy beams to the tumour.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">MR-Linac Technology</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Allows radiation oncologists to visualize the tumour in real-time during treatment using MRI, enabling adaptive treatment and maximizing precision.
+                    </p>
+                </div>
+
+                
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Stereotactic Body Radiotherapy (SBRT)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Delivers high-dose radiation in very few sessions with exceptional precision, valuable for early-stage and limited metastatic disease.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Brachytherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Internal radiation used as a boost or primary treatment in selected patients, allowing for shorter overall treatment duration.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Reirradiation for Recurrent Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Safely delivers additional external beam radiation therapy using modern techniques for locally recurrent breast cancer.
+                    </p>
+                </div>
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">APBI</h3>
+                    <p class="text-gray-700 leading-relaxed">APBI targets radiation only to the part of the breast where the tumor was removed, rather than the entire breast.</p>
+                    <p class="text-gray-700 leading-relaxed">It significantly reduces treatment duration and side effects, making it an effective option for selected early-stage breast cancer patients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Specialized Programmes and Support -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Specialized Programmes and Support
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    We address the full scope of your needs—physical, emotional, social, and spiritual.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Comprehensive Supportive Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-pink-50 to-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Comprehensive Supportive Care</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-nurse mr-3" style="color: #2E8B57;"></i>
+                                Nurse Navigation Programme
+                            </h4>
+                            <p class="text-gray-700">Dedicated nurse navigators coordinate appointments, explain treatment, serve as a single point of contact, and connect you with resources, significantly reducing anxiety.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-heart mr-3" style="color: #1e40af;"></i>
+                                Psychosocial Support Services
+                            </h4>
+                            <p class="text-gray-700">Individual and group counseling, support groups, and mental health referrals for anxiety, depression, and cancer-related distress.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-apple-alt mr-3" style="color: #FF4500;"></i>
+                                Nutrition Services
+                            </h4>
+                            <p class="text-gray-700">Personalized nutrition counseling by registered dietitians to support recovery, manage side effects, and promote long-term wellness.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-dumbbell mr-3" style="color: #7c3aed;"></i>
+                                Rehabilitation and Physical Wellness
+                            </h4>
+                            <p class="text-gray-700">Physiotherapy and occupational therapy to manage pain, prevent lymphedema, and restore function.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 md:col-span-2">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-heartbeat mr-3" style="color: #14b8a6;"></i>
+                                Psycho oncology / support groups (Saheli)
+                            </h4>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialized Initiatives -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Specialized Initiatives</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Metastatic Breast Cancer Programme</h4>
+                            <p class="text-gray-700">Dedicated clinic focused on advanced systemic therapies, symptom management, and psychosocial support to maintain quality of life for patients with stage IV disease.</p>
+                        </div>
+                        <div class="bg-pink-50 rounded-lg p-6 border-l-4" style="border-color: #ec4899;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Young Women's Breast Cancer Initiative</h4>
+                            <p class="text-gray-700">Specialized care addressing unique challenges like fertility preservation, psychosocial support, and cosmetically-sensitive surgical planning.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Support -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Diagnostic Support</h3>
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Genetic Counseling and Testing</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Assess personal and family history, discuss risks/benefits of testing (BRCA1, BRCA2, etc.), interpret results, and develop surveillance strategies for high-risk individuals and their families.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research and Future Care -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Research and Future Care</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Clinical Trials and Research</h4>
+                            <p class="text-gray-700">Active participation in clinical trials offers eligible patients access to cutting-edge therapies and contributes to advancing cancer science.</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Surveillance and Survivorship Care</h4>
+                            <p class="text-gray-700">Ongoing monitoring after treatment, including annual mammography, screening for other cancers, and proactive management of long-term treatment effects (lymphedema, fatigue, bone health).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Getting Care -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Getting Care
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-stethoscope text-3xl mr-4" style="color: #2E8B57;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">For Breast Concerns or Suspected Breast Cancer</h3>
+                    </div>
+                    <p class="text-gray-700">Contact us to schedule a rapid-access appointment with a breast specialist.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-clipboard-check text-3xl mr-4" style="color: #1e40af;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">For Second Opinions</h3>
+                    </div>
+                    <p class="text-gray-700">We welcome the opportunity to review your records and provide an independent expert assessment of your diagnosis and treatment recommendations.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exchange-alt text-3xl mr-4" style="color: #FF4500;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">For Patients Referred from Other Centres</h3>
+                    </div>
+                    <p class="text-gray-700">We facilitate smooth care transitions and maintain communication with your referring physicians.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    
+
+
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sri Shankara Cancer Hospital & Research Centre — Careers</title>
+<meta name="description" content="Careers at Sri Shankara Cancer Hospital & Research Centre. Join our mission-driven team transforming cancer care in India." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root{
+    --sea:#2e8b57; --sea-600:#27724a; --sea-300:#5aa57c; --sea-100:#cce8d8; --sea-50:#f0fbf6;
+    --saffron:#ff8c1a; --saffron-600:#d97312; --saffron-300:#ffaa5c; --saffron-100:#ffe0c2; --saffron-50:#fff7f0;
+    --ink:#1f2937; --ink-light:#4b5563; --muted:#6b7280; --muted-light:#9ca3af;
+    --bg:#ffffff; --card:#ffffff; --ring:#d1fae5;
+    --shadow: 0 10px 25px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+    --shadow-lg: 0 20px 40px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    --radius:16px; --radius-sm:12px;
+    --transition: all 0.3s ease;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;scroll-behavior: smooth;}
+  a{color:var(--sea);text-decoration:none; transition: var(--transition);} 
+  a:hover{color:var(--saffron);}
+  .container{max-width:1200px;margin:0 auto;padding:16px}
+  .badge{display:inline-flex;gap:.5rem;align-items:center;padding:.5rem 1rem;border-radius:999px;font-size:.85rem;font-weight:600;background:var(--sea-50);color:var(--sea);border:1px solid var(--ring)}
+  .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.75rem;border-radius:12px;font-weight:700;border:none;cursor:pointer;box-shadow:var(--shadow);transition: var(--transition);}
+  .btn-primary{background:var(--saffron);color:#fff;}
+  .btn-primary:hover{background:var(--saffron-600); transform: translateY(-2px); box-shadow: var(--shadow-lg);}
+  .btn-ghost{background:#fff;color:var(--sea);border:1px solid var(--sea-100);}
+  .btn-ghost:hover{background:var(--sea-50); border-color: var(--sea-300); transform: translateY(-2px);}
+  
+  /* Header */
+  header {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg,var(--sea),var(--saffron));
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Hero */
+  .hero{
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(46,139,87,.15), transparent 60%),
+      radial-gradient(800px 400px at 110% 10%, rgba(255,140,26,.12), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #f9fffc 100%);
+    padding: 40px 0 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232e8b57' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 0;
+  }
+  .hero-grid{
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero h1{
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    line-height: 1.1;
+    margin: 1rem 0 1.5rem;
+    color: var(--ink);
+    font-weight: 800;
+  }
+  .hero p{
+    color: var(--ink-light);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 90%;
+  }
+  .hero-card{
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 28px;
+    border: 1px solid #edf7f1;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-list{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .pill{
+    padding: .6rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px dashed var(--sea-100);
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+  }
+  .pill:hover {
+    border-color: var(--sea);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+  .pill i {
+    color: var(--sea);
+  }
+  .top-banner{
+    margin: 1rem 0;
+    border-radius: 16px;
+    border: 1px solid var(--saffron-100);
+    box-shadow: var(--shadow);
+    background: linear-gradient(135deg, var(--saffron-50), var(--sea-50));
+    padding: 18px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .top-banner i {
+    font-size: 2.5rem;
+    color: var(--saffron);
+  }
+  .top-banner-content h2{
+    margin: 0;
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    color: var(--saffron-600);
+  }
+  .top-banner-content p{
+    margin: .5rem 0 0;
+    color: var(--saffron-600);
+    opacity: 0.9;
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  .section{
+    padding: 30px 0;
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 0.75rem;
+    color: var(--ink) !important;
+    font-weight: 800;
+    text-align: center;
+  }
+  
+  /* Ensure all headings are dark, not white */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--ink) !important;
+  }
+  
+  .section h2,
+  .section h3 {
+    color: var(--ink) !important;
+  }
+  
+  /* Exception: Contact header should remain white on colored background */
+  .contact-header h2 {
+    color: white !important;
+  }
+  
+  /* Protect footer headings from page-level styles */
+  #hospital-footer h1,
+  #hospital-footer h2,
+  #hospital-footer h3,
+  #hospital-footer h4,
+  #hospital-footer h5,
+  #hospital-footer h6 {
+    color: white !important;
+  }
+  
+  #hospital-footer .section-title,
+  #hospital-footer h2,
+  #hospital-footer h3 {
+    color: white !important;
+  }
+  .section-subtitle {
+    text-align: center;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+  }
+  .grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  /* Cards */
+  .card{
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 28px;
+    border: 1px solid #edf7f1;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  .card h3{
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .meta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 1.2rem;
+  }
+  .meta .tag{
+    font-size: .85rem;
+    padding: .4rem .8rem;
+    border-radius: 999px;
+    border: 1px solid #eaf6f0;
+    background: #ffffff;
+    color: var(--sea);
+    font-weight: 500;
+  }
+  .meta .dept{
+    background: var(--saffron-50);
+    border-color: var(--saffron-100);
+    color: var(--saffron-600);
+  }
+  .meta .type{
+    background: var(--sea-50);
+    border-color: var(--sea-100);
+  }
+  .meta .loc{
+    background: #f8f9fa;
+    border-color: #e5e7eb;
+    color: var(--ink-light);
+  }
+
+  /* Benefits */
+  .benefit{
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .benefit-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--sea-50);
+    border: 1px solid var(--ring);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--sea);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  .benefit-content {
+    flex: 1;
+  }
+  .benefit-content p {
+    color: var(--muted);
+    margin: 0.5rem 0 0;
+  }
+
+  /* Jobs section */
+  .jobs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .filter-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    color: var(--ink-light);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--sea);
+    color: white;
+    border-color: var(--sea);
+  }
+
+  /* Testimonials */
+  .testimonials {
+    background: linear-gradient(180deg, #f9fffc 0%, #ffffff 100%);
+    padding: 30px 0;
+  }
+  .testimonial-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    position: relative;
+    border: 1px solid #edf7f1;
+  }
+  .testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 5rem;
+    color: var(--sea-50);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .testimonial-content {
+    position: relative;
+    z-index: 2;
+  }
+  .testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--sea-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sea);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .author-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .author-info p {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* Contact */
+  .contact{
+    background: linear-gradient(180deg, var(--saffron-50) 0%, #ffffff 100%);
+    border: 1px solid var(--saffron-100);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .contact-header {
+    background: var(--saffron);
+    color: white;
+    padding: 24px;
+    margin: -28px -28px 28px;
+  }
+  .contact-header h2 {
+    margin: 0;
+    color: white;
+  }
+  .contact .row{
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 32px;
+  }
+  .contact address{
+    font-style: normal;
+  }
+  .contact .small{
+    font-size: .95rem;
+    color: var(--muted);
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact-detail {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .contact-detail i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--saffron-50);
+    color: var(--saffron);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chip{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    border: 1px solid var(--saffron-100);
+    background: #fff;
+    border-radius: 999px;
+    color: var(--saffron-600);
+    margin-top: 1rem;
+  }
+  .contact-chip-row {
+    margin-top: 8px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(234, 179, 8, 0.15);
+  }
+  .contact-chip-row .chip {
+    margin-top: 0;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .contact-apply__title {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+    color: var(--ink);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .contact-apply__text {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0 0 1.35rem;
+    line-height: 1.65;
+    max-width: 26rem;
+  }
+
+  /* Footer */
+  .footer{
+    padding: 40px 0;
+    border-top: 1px solid #eef5f1;
+    color: var(--muted);
+    font-size: .95rem;
+    background: #f9fffc;
+  }
+  .foot-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    margin-top: 1rem;
+  }
+  .footer-links a {
+    color: var(--muted);
+    transition: var(--transition);
+  }
+  .footer-links a:hover {
+    color: var(--sea);
+  }
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .hero-grid{grid-template-columns:1fr}
+    .grid-3{grid-template-columns:1fr 1fr}
+    .contact .row{grid-template-columns:1fr}
+    .hero-card {
+      order: -1;
+    }
+  }
+  @media (max-width: 768px){
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 16px;
+    }
+    .top-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+    .jobs-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 640px){
+    .grid-3, .grid-2{grid-template-columns:1fr}
+    .hero-list {
+      grid-template-columns: 1fr;
+    }
+    .foot-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .footer-links {
+      justify-content: center;
+    }
+    .hero {
+      padding: 30px 0 15px;
+    }
+    .section {
+      padding: 25px 0;
+    }
+  }
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+    <body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge" style="color: #d97312;"><i class="fas fa-rocket"></i> Build a career with purpose</span>
+        <h1>Join a mission-driven team transforming cancer care</h1>
+        <p>At Sri Shankara, you'll collaborate across clinics, labs, operations, and community programs to deliver compassionate, evidence-based care. We prioritize learning, teamwork, and impact—so you can do your life's best work.</p>
+        
+        <div class="top-banner">
+          <i class="fas fa-trophy"></i>
+          <div class="top-banner-content">
+            <h2>Shankara — Employer-Friendly Workplace</h2>
+            <p>Supportive leadership • Learning-first culture • Transparent growth pathways</p>
+          </div>
+        </div>
+        
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <!--<a class="btn btn-primary" href="#open-roles"><i class="fas fa-search"></i> Explore Roles</a>-->
+          <a class="btn btn-ghost" href="#why"><i class="fas fa-info-circle"></i> Why Sri Shankara</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3 style="margin-top:0">Why our team loves working here</h3>
+        <div class="hero-list">
+          <div class="pill"><i class="fas fa-user-injured"></i> Patient-first culture</div>
+          <div class="pill"><i class="fas fa-users"></i> Interdisciplinary teams</div>
+          <div class="pill"><i class="fas fa-graduation-cap"></i> Skills growth & CME</div>
+          <div class="pill"><i class="fas fa-flask"></i> Research & innovation</div>
+          <!-- <div class="pill"><i class="fas fa-hand-holding-heart"></i> Community oncology</div>-->
+          <div class="pill"><i class="fas fa-handshake"></i> Ethics & empathy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why join -->
+  <section id="why" class="section">
+    <div class="container">
+      <h2 class="section-title">Why work at Sri Shankara?</h2>
+      <p class="section-subtitle">We're building a world-class cancer care institution where professionals can grow while making a meaningful difference in patients' lives.</p>
+      
+      <div class="grid-3">
+        <article class="card benefit">
+          <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="benefit-content">
+            <h3>Mission & Meaning</h3>
+            <p>Contribute to compassionate, affordable cancer care and research that changes lives every day.</p>
+          </div>
+        </article>
+        <article class="card benefit">
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="benefit-content">
+            <h3>Growth & Learning</h3>
+            <p>Advance through mentorship, CME, conferences, and interdisciplinary case discussions.</p>
+          </div>
+        </article>
+        <article class="card benefit">
+          <div class="benefit-icon"><i class="fas fa-people-group"></i></div>
+          <div class="benefit-content">
+            <h3>Team & Culture</h3>
+            <p>Work with clinicians, scientists, engineers, and field teams united by empathy and excellence.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Hear from our team</h2>
+      <p class="section-subtitle">Don't just take our word for it - here's what our employees say about working at Sri Shankara</p>
+      
+      <div class="grid-3">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-text">
+              "The culture of compassion and excellence here is unlike any other hospital I've worked at. I feel supported in my professional growth while making a real difference."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RP</div>
+              <div class="author-info">
+                <h4>Dr. Rajesh Patel</h4>
+                <p>Oncologist, 3 years at Shankara</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-text">
+              "As a nurse, I appreciate the focus on work-life balance and continuous learning. The management truly listens to our feedback and implements positive changes."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">PM</div>
+              <div class="author-info">
+                <h4>Priya Mehta</h4>
+                <p>Oncology Nurse, 2 years at Shankara</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-text">
+              "The interdisciplinary collaboration here has helped me grow as a researcher. I get to work on meaningful projects that directly impact patient care."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AK</div>
+              <div class="author-info">
+                <h4>Anika Kumar</h4>
+                <p>Research Scientist, 4 years at Shankara</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open roles -->
+  <!-- <section id="open-roles" class="section">
+    <div class="container">
+      <div class="jobs-header">
+        <div>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 0.5rem;">Open Roles</h2>
+          <p class="small" style="color:var(--muted);">
+            Browse current opportunities. Click a card for details (link to your ATS or email HR).
+          </p>
+        </div>
+        <div class="filter-options">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Medical</button>
+          <button class="filter-btn">Nursing</button>
+          <button class="filter-btn">Technical</button>
+          <button class="filter-btn">Admin</button>
+        </div>
+      </div>
+
+      <div id="jobs" class="grid-3">
+        <article class="card job" data-dept="Nursing" data-loc="Bengaluru" data-type="Full-time">
+          <h3>Staff Nurse — Oncology Ward</h3>
+          <div class="meta">
+            <span class="tag dept">Nursing</span>
+            <span class="tag loc">Bengaluru</span>
+            <span class="tag type">Full-time</span>
+          </div>
+          <p style="color:var(--muted); margin-bottom: 1.5rem;">Deliver evidence-based, compassionate care across inpatient oncology services.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <a class="btn btn-ghost" href="#hr-contact">View Details</a>
+          </div>
+        </article>
+
+        <article class="card job" data-dept="IT & Analytics" data-loc="Bengaluru" data-type="Full-time">
+          <h3>Data Analyst — Hospital Analytics</h3>
+          <div class="meta">
+            <span class="tag dept">IT & Analytics</span>
+            <span class="tag loc">Bengaluru</span>
+            <span class="tag type">Full-time</span>
+          </div>
+          <p style="color:var(--muted); margin-bottom: 1.5rem;">Build dashboards and analyses that improve patient flow, quality, and outcomes.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <a class="btn btn-ghost" href="#hr-contact">View Details</a>
+          </div>
+        </article>
+
+        <article class="card job" data-dept="Pathology" data-loc="Bengaluru" data-type="Full-time">
+          <h3>Histotechnologist — Pathology Lab</h3>
+          <div class="meta">
+            <span class="tag dept">Pathology</span>
+            <span class="tag loc">Bengaluru</span>
+            <span class="tag type">Full-time</span>
+          </div>
+          <p style="color:var(--muted); margin-bottom: 1.5rem;">Support diagnostic excellence with high-quality tissue processing and staining.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <a class="btn btn-ghost" href="#hr-contact">View Details</a>
+          </div>
+        </article>
+        
+        <article class="card job" data-dept="Medical" data-loc="Bengaluru" data-type="Full-time">
+          <h3>Oncology Pharmacist</h3>
+          <div class="meta">
+            <span class="tag dept">Medical</span>
+            <span class="tag loc">Bengaluru</span>
+            <span class="tag type">Full-time</span>
+          </div>
+          <p style="color:var(--muted); margin-bottom: 1.5rem;">Specialize in oncology medications and support patient care through pharmaceutical expertise.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <a class="btn btn-ghost" href="#hr-contact">View Details</a>
+          </div>
+        </article>
+        
+        <article class="card job" data-dept="Administration" data-loc="Bengaluru" data-type="Full-time">
+          <h3>Patient Relations Manager</h3>
+          <div class="meta">
+            <span class="tag dept">Administration</span>
+            <span class="tag loc">Bengaluru</span>
+            <span class="tag type">Full-time</span>
+          </div>
+          <p style="color:var(--muted); margin-bottom: 1.5rem;">Enhance patient experience and support families throughout their care journey.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <a class="btn btn-ghost" href="#hr-contact">View Details</a>
+          </div>
+        </article>
+        
+        <article class="card job" data-dept="Research" data-loc="Bengaluru" data-type="Full-time">
+          <h3>Clinical Research Coordinator</h3>
+          <div class="meta">
+            <span class="tag dept">Research</span>
+            <span class="tag loc">Bengaluru</span>
+            <span class="tag type">Full-time</span>
+          </div>
+          <p style="color:var(--muted); margin-bottom: 1.5rem;">Coordinate oncology clinical trials and contribute to cutting-edge cancer research.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <a class="btn btn-ghost" href="#hr-contact">View Details</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Benefits & culture 
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Benefits & Culture</h2>
+      <p class="section-subtitle">We invest in our team's well-being and professional growth with comprehensive benefits and a supportive culture</p>
+      
+      <div class="grid-3">
+        <div class="card">
+          <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+          <h3>Health & Wellness</h3>
+          <ul>
+            <li>Comprehensive health insurance</li>
+            <li>Wellness programs & mental health support</li>
+            <li>Preventive health screenings</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Learning & Development</h3>
+          <ul>
+            <li>CME allowances</li>
+            <li>Conference participation</li>
+            <li>Skill-building workshops</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="benefit-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Work-Life Balance</h3>
+          <ul>
+            <li>Flexible scheduling options</li>
+            <li>Generous paid time off</li>
+            <li>Parental leave policies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- Contact HR -->
+  <section id="hr-contact" class="section">
+    <div class="container">
+      <div class="card contact">
+        <div class="contact-header">
+          <h2>Human Resources</h2>
+        </div>
+        <div class="row">
+          <div class="contact-info">
+            <address>
+              <strong>Sri Shankara Cancer Hospital & Research Centre</strong><br/>
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  
+                  <span>1st Cross, Shankara Math Premises, Shankarapuram, Basavanagudi, Bengaluru, Karnataka 560004</span>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <span>Email: </span><a href="mailto:hr@sschrc.org">hr@sschrc.org</a>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <span>Phone: </span><a href="tel:08026981061">080-26981061</a>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <span>Phone: </span><a href="tel:08026981069">080-26981069</a>
+                </div>
+              </div>
+            </address>
+          </div>
+          <div id="apply-now">
+            <h3 class="contact-apply__title">Apply Now</h3>
+            <p class="contact-apply__text">
+              Click below to submit your application online. Our HR team will review it and get in touch with you.
+            </p>
+            <button type="button" id="open-career-modal" class="btn-apply-modal" aria-haspopup="dialog" aria-controls="career-modal">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Apply Now
+            </button>
+          </div>
+        </div>
+        <div class="contact-chip-row">
+          <span class="chip"><i class="fas fa-clock"></i> Mon–Sat • 9:30 AM – 5:30 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       CAREER APPLICATION FORM — modal (trigger: Human Resources → Apply Now)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <!-- Job application modal -->
+  <div id="career-modal" class="career-modal" role="dialog" aria-modal="true" aria-labelledby="career-modal-title" aria-hidden="true">
+    <div class="career-modal__backdrop" id="career-modal-backdrop" tabindex="-1"></div>
+    <div class="career-modal__dialog">
+      <header class="career-modal__header">
+        <div class="career-modal__header-brand">
+          <span class="career-modal__header-icon" aria-hidden="true"><i class="fas fa-hospital"></i></span>
+          <div>
+            <strong id="career-modal-title">Job Application</strong>
+            <span class="career-modal__subtitle">Sri Shankara Cancer Hospital &amp; Research Centre</span>
+          </div>
+        </div>
+        <button type="button" class="career-modal__close" id="close-career-modal" aria-label="Close dialog">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="career-modal__body">
+        <div id="form-success" class="career-form-alert career-form-alert--ok" style="display:none">
+          <strong>&#10003; Application Submitted!</strong><br>
+          Your application has been successfully submitted. If shortlisted, HR department will contact you.
+        </div>
+        <div id="form-error" class="career-form-alert career-form-alert--err" style="display:none"></div>
+
+      <form id="career-form" method="POST" action="apply.php" enctype="multipart/form-data" novalidate class="career-modal__form-inner">
+
+        <input type="hidden" name="csrf_token" id="csrf_token_field">
+
+        <!-- ── SECTION A: Basic Details ─────────────────────────────────── -->
+        <div style="margin-bottom:8px">
+          <h3 class="career-modal__section-title">
+            <i class="fas fa-briefcase" aria-hidden="true"></i> A — Basic Details
+          </h3>
+        </div>
+
+        <div class="cf-field" style="margin-bottom:18px">
+          <label class="cf-label" for="post_applied_for">1. Post Applied For <span class="cf-req">*</span></label>
+          <select id="post_applied_for" name="post_applied_for" class="cf-input" required disabled>
+            <option value="">Loading&hellip;</option>
+          </select>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+          <div class="cf-field">
+            <label class="cf-label" for="applied_on_date">Applied On — Date <span class="cf-req">*</span></label>
+            <input type="text" id="applied_on_date" class="cf-input" readonly tabindex="-1"
+                   style="background:#f9fafb;color:#6b7280;cursor:default" aria-describedby="applied_on_date_hint">
+            <small id="applied_on_date_hint" style="font-size:.75rem;color:#6b7280;margin-top:4px;display:block">Auto-filled with today&apos;s date</small>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="applied_on_time">Applied On — Time <span class="cf-req">*</span></label>
+            <input type="text" id="applied_on_time" class="cf-input" readonly tabindex="-1"
+                   style="background:#f9fafb;color:#6b7280;cursor:default" aria-describedby="applied_on_time_hint">
+            <small id="applied_on_time_hint" style="font-size:.75rem;color:#6b7280;margin-top:4px;display:block">Auto-filled with current time</small>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:120px 1fr 1fr 1fr;gap:18px;margin-bottom:18px">
+          <!-- 3. Title -->
+          <div class="cf-field">
+            <label class="cf-label" for="title">3. Title <span class="cf-req">*</span></label>
+            <select id="title" name="title" class="cf-input" required disabled>
+              <option value="">Loading&hellip;</option>
+            </select>
+          </div>
+          <!-- 4. First Name -->
+          <div class="cf-field">
+            <label class="cf-label" for="first_name">4. First Name <span class="cf-req">*</span></label>
+            <input type="text" id="first_name" name="first_name" class="cf-input" maxlength="200" required placeholder="First name">
+          </div>
+          <!-- 5. Middle Name -->
+          <div class="cf-field">
+            <label class="cf-label" for="middle_name">5. Middle Name</label>
+            <input type="text" id="middle_name" name="middle_name" class="cf-input" maxlength="200" placeholder="Middle name">
+          </div>
+          <!-- 6. Last Name -->
+          <div class="cf-field">
+            <label class="cf-label" for="last_name">6. Last Name <span class="cf-req">*</span></label>
+            <input type="text" id="last_name" name="last_name" class="cf-input" maxlength="200" required placeholder="Last name">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+          <!-- 7. Date of Birth -->
+          <div class="cf-field">
+            <label class="cf-label" for="date_of_birth">7. Date of Birth</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" class="cf-input">
+          </div>
+          <!-- 10. Gender (moved to top row for layout) -->
+          <div class="cf-field">
+            <label class="cf-label" for="gender">10. Gender <span class="cf-req">*</span></label>
+            <select id="gender" name="gender" class="cf-input" required disabled>
+              <option value="">Loading&hellip;</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 8. Address -->
+        <div class="cf-field" style="margin-bottom:18px">
+          <label class="cf-label" for="address">8. Address <span class="cf-req">*</span></label>
+          <textarea id="address" name="address" class="cf-input" rows="3" maxlength="2000" required
+                    placeholder="Full residential address" style="resize:vertical"></textarea>
+        </div>
+
+        <!-- 9. Nationality -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px">
+          <div class="cf-field">
+            <label class="cf-label" for="nationality">9. Nationality <span class="cf-req">*</span></label>
+            <select id="nationality" name="nationality" class="cf-input" required disabled>
+              <option value="">Loading&hellip;</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ── SECTION B: Contact Details ──────────────────────────────── -->
+        <h3 style="font-size:1rem;font-weight:800;color:#2e8b57;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid #cce8d8;padding-bottom:8px;margin-bottom:20px">
+          B — Contact Details
+        </h3>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:28px">
+          <!-- 11. Contact Number -->
+          <div class="cf-field">
+            <label class="cf-label" for="contact_number">11. Contact Number <span class="cf-req">*</span></label>
+            <input type="tel" id="contact_number" name="contact_number" class="cf-input" maxlength="10" required
+                   pattern="[6-9][0-9]{9}" placeholder="Enter 10-digit mobile number" inputmode="numeric">
+          </div>
+          <!-- 12. Email Id -->
+          <div class="cf-field">
+            <label class="cf-label" for="email_id">12. Email Id <span class="cf-req">*</span></label>
+            <input type="email" id="email_id" name="email_id" class="cf-input" maxlength="100" required
+                   placeholder="example@email.com">
+          </div>
+          <!-- 13. Registration No. -->
+          <div class="cf-field">
+            <label class="cf-label" for="registration_no">13. Registration No.</label>
+            <input type="text" id="registration_no" name="registration_no" class="cf-input" maxlength="200"
+                   placeholder="Medical / Nursing Reg. No.">
+          </div>
+        </div>
+
+        <!-- ── SECTION C: Education ────────────────────────────────────── -->
+        <h3 style="font-size:1rem;font-weight:800;color:#2e8b57;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid #cce8d8;padding-bottom:8px;margin-bottom:20px">
+          C — Education / Qualification
+        </h3>
+        <p style="font-size:.85rem;color:#6b7280;margin-bottom:14px">Enter up to 4 qualifications. At least one is required.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px">
+          <div class="cf-field">
+            <label class="cf-label" for="qualification_1">14. Qualification 1 <span class="cf-req">*</span></label>
+            <select id="qualification_1" name="qualification_1" class="cf-input" required disabled>
+              <option value="">Loading…</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="qualification_2">Qualification 2</label>
+            <select id="qualification_2" name="qualification_2" class="cf-input" disabled>
+              <option value="">Loading…</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="qualification_3">Qualification 3</label>
+            <input type="text" id="qualification_3" name="qualification_3" class="cf-input" maxlength="500"
+                   placeholder="Additional qualification">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="qualification_4">Qualification 4</label>
+            <input type="text" id="qualification_4" name="qualification_4" class="cf-input" maxlength="500"
+                   placeholder="Additional qualification">
+          </div>
+        </div>
+
+        <!-- ── SECTION D: Job Details ──────────────────────────────────── -->
+        <h3 style="font-size:1rem;font-weight:800;color:#2e8b57;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid #cce8d8;padding-bottom:8px;margin-bottom:20px">
+          D — Job Details
+        </h3>
+
+        <!-- 15. Preferred Location + Department -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+          <div class="cf-field">
+            <label class="cf-label" for="preferred_location">15. Preferred Location</label>
+            <select id="preferred_location" name="preferred_location" class="cf-input" disabled>
+              <option value="">Loading&hellip;</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="department">Department</label>
+            <select id="department" name="department" class="cf-input" disabled>
+              <option value="">Loading&hellip;</option>
+            </select>
+          </div>
+        </div>
+        <!-- 16. Experience -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:18px">
+          <div class="cf-field">
+            <label class="cf-label" for="experience_years">16. Experience (Years)</label>
+            <input type="number" id="experience_years" name="experience_years" class="cf-input"
+                   min="0" max="50" placeholder="e.g. 3">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="experience_months">Experience (Months)</label>
+            <input type="number" id="experience_months" name="experience_months" class="cf-input"
+                   min="0" max="11" placeholder="0–11">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:18px">
+          <!-- 17. Current CTC -->
+          <div class="cf-field">
+            <label class="cf-label" for="current_ctc">17. Current CTC</label>
+            <input type="number" id="current_ctc" name="current_ctc" class="cf-input"
+                   min="0" step="0.01" placeholder="Annual (₹)">
+          </div>
+          <!-- 18. Expected CTC -->
+          <div class="cf-field">
+            <label class="cf-label" for="expected_ctc">18. Expected CTC</label>
+            <input type="number" id="expected_ctc" name="expected_ctc" class="cf-input"
+                   min="0" step="0.01" placeholder="Annual (₹)">
+          </div>
+          <!-- 21. Notice Period -->
+          <div class="cf-field">
+            <label class="cf-label" for="notice_period">21. Notice Period (days)</label>
+            <input type="number" id="notice_period" name="notice_period" class="cf-input"
+                   min="0" placeholder="e.g. 30">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px">
+          <!-- 20. Current Designation -->
+          <div class="cf-field">
+            <label class="cf-label" for="current_designation">20. Current Designation</label>
+            <input type="text" id="current_designation" name="current_designation" class="cf-input"
+                   maxlength="500" placeholder="Your current job title">
+          </div>
+          <!-- 19. Current Company -->
+          <div class="cf-field">
+            <label class="cf-label" for="current_company">19. Current Company</label>
+            <input type="text" id="current_company" name="current_company" class="cf-input"
+                   maxlength="2000" placeholder="Current employer name">
+          </div>
+        </div>
+
+        <!-- ── SECTION E: Document Upload ─────────────────────────────── -->
+        <h3 style="font-size:1rem;font-weight:800;color:#2e8b57;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid #cce8d8;padding-bottom:8px;margin-bottom:20px">
+          E — CV Upload
+        </h3>
+
+        <div class="cf-field" style="margin-bottom:28px">
+          <label class="cf-label" for="cv_file">22. Upload CV <span class="cf-req">*</span></label>
+          <div id="cv-drop-zone" style="border:2px dashed #cce8d8;border-radius:12px;padding:28px;text-align:center;cursor:pointer;transition:.2s;background:#f9fffc"
+               onclick="document.getElementById('cv_file').click()"
+               ondragover="event.preventDefault();this.style.borderColor='#2e8b57';this.style.background='#e6f7ef'"
+               ondragleave="this.style.borderColor='#cce8d8';this.style.background='#f9fffc'"
+               ondrop="handleDrop(event)">
+            <i class="fas fa-cloud-upload-alt" style="font-size:2rem;color:#2e8b57;display:block;margin-bottom:10px"></i>
+            <strong style="color:#1f2937">Click to upload</strong> or drag &amp; drop<br>
+            <small style="color:#6b7280">PDF, DOC, DOCX — Max 2 MB</small>
+            <div id="cv-filename" style="margin-top:10px;color:#2e8b57;font-weight:600;font-size:.9rem"></div>
+          </div>
+          <input type="file" id="cv_file" name="cv_file" accept=".pdf,.doc,.docx" required
+                 style="display:none" onchange="showFileName(this)">
+        </div>
+
+        <p style="font-size:.85rem;color:#6b7280;margin:0;border-top:1px solid #edf7f1;padding-top:18px">
+          By submitting, you confirm that all information provided is accurate and complete.
+        </p>
+
+      </form><!-- /career-form -->
+      </div><!-- /.career-modal__body -->
+
+      <footer class="career-modal__footer">
+        <span class="career-modal__req-note"><span class="cf-req">*</span> Required fields</span>
+        <div class="career-modal__footer-actions">
+          <button type="button" class="career-modal__btn-cancel" id="cancel-career-modal">Cancel</button>
+          <button type="submit" form="career-form" id="submit-btn" class="career-modal__btn-submit">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Submit Application
+          </button>
+        </div>
+      </footer>
+    </div><!-- /.career-modal__dialog -->
+  </div><!-- /#career-modal -->
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       END CAREER APPLICATION FORM
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Inline styles for form fields (scoped, no conflict with existing CSS) -->
+  <style>
+    .cf-field { display:flex; flex-direction:column; }
+    .cf-label { font-size:.82rem; font-weight:700; color:#4b5563; margin-bottom:5px; text-transform:uppercase; letter-spacing:.04em; }
+    .cf-req   { color:#dc2626; }
+    .cf-input { width:100%; padding:10px 14px; border:1.5px solid #d1d5db; border-radius:9px; font-size:.93rem; font-family:Inter,sans-serif; color:#1f2937; background:#fafafa; transition:border-color .2s, box-shadow .2s; }
+    .cf-input:focus { outline:none; border-color:#2e8b57; box-shadow:0 0 0 3px rgba(46,139,87,.12); background:#fff; }
+    .cf-input.error { border-color:#ef4444; }
+    .cf-input[readonly] { cursor:default; }
+
+    .btn-apply-modal {
+      display:inline-flex; align-items:center; gap:.65rem;
+      padding:.95rem 1.85rem; border-radius:12px; border:none; cursor:pointer;
+      font-family:inherit; font-size:1.05rem; font-weight:700; color:#fff;
+      background:linear-gradient(180deg,#2563eb 0%,#1d4ed8 100%);
+      box-shadow:0 4px 14px rgba(37,99,235,.35), 0 2px 4px rgba(0,0,0,.06);
+      transition:transform .2s, box-shadow .2s, filter .2s;
+    }
+    .btn-apply-modal:hover { filter:brightness(1.05); transform:translateY(-2px); box-shadow:0 8px 22px rgba(37,99,235,.4), 0 2px 6px rgba(0,0,0,.08); }
+    .btn-apply-modal:focus-visible { outline:2px solid #2563eb; outline-offset:3px; }
+    .btn-apply-modal i { font-size:1rem; }
+
+    .career-modal { position:fixed; inset:0; z-index:10050; display:none; align-items:center; justify-content:center; padding:20px; opacity:0; visibility:hidden; transition:opacity .25s ease, visibility .25s; }
+    .career-modal.is-open { display:flex; opacity:1; visibility:visible; }
+    .career-modal__backdrop { position:absolute; inset:0; background:rgba(15,23,42,.55); cursor:pointer; }
+    .career-modal__dialog {
+      position:relative; width:100%; max-width:640px; max-height:min(92vh,900px);
+      display:flex; flex-direction:column;
+      background:#fff; border-radius:14px;
+      box-shadow:0 25px 50px -12px rgba(0,0,0,.25), 0 0 0 1px rgba(0,0,0,.04);
+      overflow:hidden;
+    }
+    .career-modal__header {
+      flex-shrink:0; display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:16px 18px 16px 20px;
+      background:linear-gradient(180deg,#1f6f46 0%,#1a5c3a 100%);
+      color:#fff;
+    }
+    .career-modal__header-brand { display:flex; align-items:center; gap:12px; min-width:0; }
+    .career-modal__header-icon {
+      width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,.15);
+      display:flex; align-items:center; justify-content:center; font-size:1.1rem;
+    }
+    .career-modal__header strong { display:block; font-size:1.15rem; font-weight:800; letter-spacing:.02em; }
+    .career-modal__subtitle { display:block; font-size:.78rem; font-weight:500; opacity:.88; margin-top:2px; }
+    .career-modal__close {
+      flex-shrink:0; width:40px; height:40px; border-radius:999px; border:none; cursor:pointer;
+      background:rgba(255,255,255,.18); color:#fff; display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; transition:background .2s;
+    }
+    .career-modal__close:hover { background:rgba(255,255,255,.28); }
+    .career-modal__body {
+      flex:1; overflow-y:auto; overflow-x:hidden; padding:20px 22px 8px;
+      -webkit-overflow-scrolling:touch;
+    }
+    .career-modal__form-inner { padding:0; margin:0; border:none; background:transparent; box-shadow:none; }
+    .career-modal__section-title {
+      font-size:1rem; font-weight:800; color:#2e8b57; text-transform:uppercase; letter-spacing:.08em;
+      border-bottom:2px solid #cce8d8; padding-bottom:8px; margin-bottom:20px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .career-modal__section-title i { font-size:.95rem; opacity:.9; }
+    .career-form-alert { border-radius:12px; padding:16px 18px; margin-bottom:16px; font-size:.95rem; line-height:1.6; }
+    .career-form-alert--ok { background:#f0fbf6; border:1.5px solid #2e8b57; color:#1f2937; }
+    .career-form-alert--ok strong { color:#2e8b57; font-size:1.05rem; }
+    .career-form-alert--err { background:#fff5f5; border:1.5px solid #fc8181; color:#c53030; }
+
+    .career-modal__footer {
+      flex-shrink:0; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      padding:14px 20px 16px; border-top:1px solid #e5e7eb; background:#fafafa;
+    }
+    .career-modal__req-note { font-size:.82rem; color:#dc2626; }
+    .career-modal__footer-actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+    .career-modal__btn-cancel {
+      padding:11px 22px; border-radius:10px; border:1.5px solid #d1d5db; background:#fff;
+      color:#374151; font-weight:600; font-size:.95rem; cursor:pointer; font-family:inherit;
+      transition:background .2s, border-color .2s;
+    }
+    .career-modal__btn-cancel:hover { background:#f9fafb; border-color:#9ca3af; }
+    .career-modal__btn-submit {
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:11px 22px; border-radius:10px; border:none; cursor:pointer;
+      font-family:inherit; font-weight:700; font-size:.95rem; color:#fff;
+      background:linear-gradient(180deg,#1f6f46 0%,#1a5c3a 100%);
+      box-shadow:0 2px 8px rgba(26,92,58,.35);
+      transition:filter .2s, transform .15s;
+    }
+    .career-modal__btn-submit:hover:not(:disabled) { filter:brightness(1.06); transform:translateY(-1px); }
+    .career-modal__btn-submit:disabled { opacity:.75; cursor:not-allowed; transform:none; }
+
+    @media(max-width:700px) {
+      .career-modal__body { padding:16px 14px 8px; }
+      #career-form > div[style*="grid-template-columns"] { grid-template-columns:1fr !important; }
+    }
+  </style>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // 'year' element lives inside dynamically loaded footer.js — guard against null
+    (function setFooterYear() {
+      function trySet() {
+        var el = document.getElementById('year');
+        if (el) {
+          el.textContent = new Date().getFullYear();
+        }
+      }
+      // Try immediately (in case footer is already rendered)
+      trySet();
+      // Also try after DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', trySet);
+      }
+      // Also observe DOM mutations so we catch footer.js injecting the element later
+      if (typeof MutationObserver !== 'undefined') {
+        var obs = new MutationObserver(function(mutations) {
+          var el = document.getElementById('year');
+          if (el) { el.textContent = new Date().getFullYear(); obs.disconnect(); }
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+      }
+    })();
+    
+    // Simple filter functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Filter logic would go here in a real implementation
+        // This is just a UI demonstration
+      });
+    });
+    
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      // Observe cards for animation
+      document.querySelectorAll('.card').forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+      });
+    });
+
+    // ── CAREER FORM SCRIPTS ───────────────────────────────────────────────
+    function refreshAppliedOnFields() {
+      const dEl = document.getElementById('applied_on_date');
+      const tEl = document.getElementById('applied_on_time');
+      if (!dEl || !tEl) return;
+      const now = new Date();
+      const pad = n => String(n).padStart(2,'0');
+      dEl.value = pad(now.getDate()) + '/' + pad(now.getMonth()+1) + '/' + now.getFullYear();
+      tEl.value = pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
+    }
+    refreshAppliedOnFields();
+
+    (function enforceDob18Plus() {
+      const dobEl = document.getElementById('date_of_birth');
+      if (!dobEl) return;
+
+      // Max allowed DOB = today minus 18 years (enforce 18+)
+      const today = new Date();
+      const maxDob = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+      const pad = n => String(n).padStart(2, '0');
+      const maxDobStr = `${maxDob.getFullYear()}-${pad(maxDob.getMonth() + 1)}-${pad(maxDob.getDate())}`;
+      dobEl.max = maxDobStr;
+
+      // Prevent future / underage dates even if typed manually
+      dobEl.addEventListener('change', () => {
+        if (!dobEl.value) return;
+        if (dobEl.value > maxDobStr) dobEl.value = maxDobStr;
+      });
+    })();
+
+    function careerModalScrollToAlert(el) {
+      if (!el) return;
+      const body = document.querySelector('.career-modal__body');
+      if (body) {
+        body.scrollTop = 0;
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // ── DROPDOWN FALLBACK DATA ────────────────────────────────────────────────
+    var DROPDOWN_FALLBACK = {
+      PostAppliedFor: [
+        {ID:'GEN',   DESCRIPTION:'General Application'},
+        {ID:'NURSE', DESCRIPTION:'Staff Nurse'},
+        {ID:'DOC',   DESCRIPTION:'Medical Officer / Doctor'},
+        {ID:'PARA',  DESCRIPTION:'Paramedical Staff'},
+        {ID:'ADMIN', DESCRIPTION:'Administrative Staff'},
+        {ID:'LAB',   DESCRIPTION:'Lab Technician'},
+        {ID:'PHARM', DESCRIPTION:'Pharmacist'},
+        {ID:'RADIO', DESCRIPTION:'Radiology Technician'},
+        {ID:'IT',    DESCRIPTION:'IT Staff'},
+        {ID:'OTHER', DESCRIPTION:'Other'}
+      ],
+      Title: [
+        {ID:'MR',   DESCRIPTION:'Mr.'},
+        {ID:'MRS',  DESCRIPTION:'Mrs.'},
+        {ID:'MS',   DESCRIPTION:'Ms.'},
+        {ID:'DR',   DESCRIPTION:'Dr.'},
+        {ID:'PROF', DESCRIPTION:'Prof.'}
+      ],
+      Gender: [
+        {ID:'M', DESCRIPTION:'Male'},
+        {ID:'F', DESCRIPTION:'Female'},
+        {ID:'T', DESCRIPTION:'Transgender'},
+        {ID:'N', DESCRIPTION:'Prefer not to say'}
+      ],
+      Nationality: [
+        {ID:'IN',    DESCRIPTION:'Indian'},
+        {ID:'OTHER', DESCRIPTION:'Other'}
+      ],
+      Qualification: [
+        {ID:'MBBS',    DESCRIPTION:'MBBS'},
+        {ID:'MD',      DESCRIPTION:'MD'},
+        {ID:'MS',      DESCRIPTION:'MS'},
+        {ID:'DM',      DESCRIPTION:'DM'},
+        {ID:'MCH',     DESCRIPTION:'M.Ch.'},
+        {ID:'BDS',     DESCRIPTION:'BDS'},
+        {ID:'MDS',     DESCRIPTION:'MDS'},
+        {ID:'BSCNSG',  DESCRIPTION:'B.Sc. Nursing'},
+        {ID:'MSCNSG',  DESCRIPTION:'M.Sc. Nursing'},
+        {ID:'GNM',     DESCRIPTION:'GNM Nursing'},
+        {ID:'BPHARM',  DESCRIPTION:'B.Pharm'},
+        {ID:'MPHARM',  DESCRIPTION:'M.Pharm'},
+        {ID:'PHARMD',  DESCRIPTION:'Pharm.D'},
+        {ID:'BMLT',    DESCRIPTION:'BMLT'},
+        {ID:'DMLT',    DESCRIPTION:'DMLT'},
+        {ID:'BPT',     DESCRIPTION:'BPT'},
+        {ID:'MPT',     DESCRIPTION:'MPT'},
+        {ID:'BSC',     DESCRIPTION:'B.Sc.'},
+        {ID:'MSC',     DESCRIPTION:'M.Sc.'},
+        {ID:'BE',      DESCRIPTION:'B.E. / B.Tech'},
+        {ID:'ME',      DESCRIPTION:'M.E. / M.Tech'},
+        {ID:'BCA',     DESCRIPTION:'BCA'},
+        {ID:'MCA',     DESCRIPTION:'MCA'},
+        {ID:'MBA',     DESCRIPTION:'MBA'},
+        {ID:'BCOM',    DESCRIPTION:'B.Com'},
+        {ID:'MCOM',    DESCRIPTION:'M.Com'},
+        {ID:'DIPLOMA', DESCRIPTION:'Diploma'},
+        {ID:'ITI',     DESCRIPTION:'ITI'},
+        {ID:'OTHER',   DESCRIPTION:'Other'}
+      ],
+      PreferredLocation: [
+        {ID:'BLR', DESCRIPTION:'Bengaluru'}
+      ],
+      Department: [
+        {ID:'MED_ONC',  DESCRIPTION:'Medical Oncology'},
+        {ID:'SURG_ONC', DESCRIPTION:'Surgical Oncology'},
+        {ID:'RAD_ONC',  DESCRIPTION:'Radiation Oncology'},
+        {ID:'NURSING',  DESCRIPTION:'Nursing'},
+        {ID:'PATH',     DESCRIPTION:'Pathology'},
+        {ID:'RADIO',    DESCRIPTION:'Radiology'},
+        {ID:'PHARMA',   DESCRIPTION:'Pharmacy'},
+        {ID:'ADMIN',    DESCRIPTION:'Administration'},
+        {ID:'HR',       DESCRIPTION:'Human Resources'},
+        {ID:'IT',       DESCRIPTION:'Information Technology'},
+        {ID:'FINANCE',  DESCRIPTION:'Finance & Accounts'},
+        {ID:'OT',       DESCRIPTION:'Operation Theatre'},
+        {ID:'ICU',      DESCRIPTION:'ICU / Critical Care'},
+        {ID:'PHYSIO',   DESCRIPTION:'Physiotherapy'},
+        {ID:'SOCIAL',   DESCRIPTION:'Social Work'},
+        {ID:'OTHER',    DESCRIPTION:'Other'}
+      ]
+    };
+
+    // ── DROPDOWN LOADER ───────────────────────────────────────────────────────
+    // Options load from external APIs via career_proxy.php (see career_api_config.php).
+    // Form submit goes to apply.php (database + CV upload), which also syncs to
+    // CarrierPageDataInsert API after a successful DB insert (additional, non-blocking).
+    // Falls back to static options when the API is unreachable.
+    function loadDropdown(selectId, action, placeholder) {
+      var sel = document.getElementById(selectId);
+      if (!sel) return;
+      sel.disabled = true;
+      sel.innerHTML = '<option value="">Loading…</option>';
+
+      function populateSelect(data) {
+        sel.innerHTML = '<option value="">' + placeholder + '</option>';
+        data.forEach(function(item) {
+          var opt = document.createElement('option');
+          opt.value = item.ID;
+          opt.textContent = item.DESCRIPTION;
+          sel.appendChild(opt);
+        });
+        sel.disabled = false;
+      }
+
+      fetch('career_proxy.php?action=' + action)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data._error) throw new Error(data.message);
+          populateSelect(data);
+        })
+        .catch(function(err) {
+          console.warn('Dropdown [' + action + '] API unavailable, using fallback:', err.message);
+          var fallback = DROPDOWN_FALLBACK[action];
+          if (fallback && fallback.length) {
+            populateSelect(fallback);
+          } else {
+            sel.innerHTML = '<option value="">⚠ Failed to load — refresh page</option>';
+            sel.disabled = false;
+          }
+        });
+    }
+
+    // Load all API-driven dropdowns on page load
+    loadDropdown('post_applied_for',   'PostAppliedFor',    '— Select Position —');
+    loadDropdown('title',              'Title',             '— Title —');
+    loadDropdown('gender',             'Gender',            '— Select —');
+    loadDropdown('nationality',        'Nationality',       '— Select —');
+    loadDropdown('qualification_1',    'Qualification',     '— Select Qualification —');
+    loadDropdown('qualification_2',    'Qualification',     '— Select Qualification —');
+    loadDropdown('preferred_location', 'PreferredLocation', '— Select Location —');
+    loadDropdown('department',         'Department',        '— Select Department —');
+
+    (function initCareerModal() {
+      const modal = document.getElementById('career-modal');
+      const openBtn = document.getElementById('open-career-modal');
+      const closeBtn = document.getElementById('close-career-modal');
+      const cancelBtn = document.getElementById('cancel-career-modal');
+      const backdrop = document.getElementById('career-modal-backdrop');
+      if (!modal || !openBtn) return;
+
+      let lastFocus = null;
+      function openModal() {
+        lastFocus = document.activeElement;
+        refreshAppliedOnFields();
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        const first = modal.querySelector('select, input:not([readonly]):not([type="hidden"]), textarea, button');
+        if (first) setTimeout(function() { first.focus(); }, 50);
+      }
+      function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+      }
+
+      openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+      if (backdrop) backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function(ev) {
+        if (ev.key === 'Escape' && modal.classList.contains('is-open')) {
+          ev.preventDefault();
+          closeModal();
+        }
+      });
+    })();
+
+    (function fetchCsrf() {
+      fetch('get_csrf.php', {credentials: 'include'}).then(r=>r.text()).then(token=>{
+        const field = document.getElementById('csrf_token_field');
+        if (field) field.value = token.trim();
+      }).catch(()=>{});
+    })();
+
+    function showFileName(input) {
+      const lbl = document.getElementById('cv-filename');
+      const zone = document.getElementById('cv-drop-zone');
+      if (input.files.length) {
+        const f = input.files[0];
+        lbl.textContent = '\u2714 ' + f.name + ' (' + (f.size/1024).toFixed(1) + ' KB)';
+        zone.style.borderColor = '#2e8b57'; zone.style.background = '#e6f7ef';
+      } else {
+        lbl.textContent = ''; zone.style.borderColor = '#cce8d8'; zone.style.background = '#f9fffc';
+      }
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      const zone = document.getElementById('cv-drop-zone');
+      zone.style.borderColor='#cce8d8'; zone.style.background='#f9fffc';
+      const dt = e.dataTransfer;
+      if (dt.files.length) {
+        const fi = document.getElementById('cv_file');
+        const dt2 = new DataTransfer(); dt2.items.add(dt.files[0]); fi.files = dt2.files;
+        showFileName(fi);
+      }
+    }
+
+    const careerFormEl = document.getElementById('career-form');
+    if (careerFormEl) careerFormEl.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      form.querySelectorAll('.cf-input').forEach(i => i.classList.remove('error'));
+      document.getElementById('form-error').style.display='none';
+      document.getElementById('form-success').style.display='none';
+      const errors = [];
+      const req = ['post_applied_for','title','first_name','last_name','address','nationality','gender','contact_number','email_id','qualification_1'];
+      req.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el || el.value.trim()==='') {
+          errors.push((el && el.previousElementSibling ? el.previousElementSibling.textContent.replace('*','').trim() : id) + ' is required.');
+          if(el) el.classList.add('error');
+        }
+      });
+      const emailEl = document.getElementById('email_id');
+      if (emailEl && emailEl.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+        errors.push('Please enter a valid Email Id.'); emailEl.classList.add('error');
+      }
+      const phoneEl = document.getElementById('contact_number');
+      if (phoneEl && phoneEl.value && !/^\d+$/.test(phoneEl.value)) {
+        errors.push('Contact Number must contain digits only.'); phoneEl.classList.add('error');
+      }
+      const cvEl = document.getElementById('cv_file');
+      if (!cvEl.files.length) {
+        errors.push('Please upload your CV (PDF, DOC, or DOCX).');
+      } else {
+        const ext = cvEl.files[0].name.split('.').pop().toLowerCase();
+        if (!['pdf','doc','docx'].includes(ext)) errors.push('CV must be PDF, DOC, or DOCX.');
+        if (cvEl.files[0].size > 2*1024*1024) errors.push('CV file must be 2 MB or smaller.');
+      }
+
+      // DOB must be 18+ (if provided)
+      const dobEl = document.getElementById('date_of_birth');
+      if (dobEl && dobEl.value) {
+        const today = new Date();
+        const maxDob = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+        const dob = new Date(dobEl.value + 'T00:00:00');
+        if (isNaN(dob.getTime())) {
+          errors.push('Please enter a valid Date of Birth.'); dobEl.classList.add('error');
+        } else if (dob > maxDob) {
+          errors.push('Date of Birth must indicate age 18 years or above.'); dobEl.classList.add('error');
+        }
+      }
+      if (errors.length) {
+        const eb = document.getElementById('form-error');
+        eb.innerHTML = '<strong>Please fix the following:</strong><ul style="margin:.5rem 0 0 1.2rem">'+errors.map(e=>'<li>'+e+'</li>').join('')+'</ul>';
+        eb.style.display='block'; careerModalScrollToAlert(eb); return;
+      }
+      var btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting\u2026';
+
+      // Build FormData from the form (includes all fields + CV file automatically)
+      var formData = new FormData(form);
+      var cvFile = document.getElementById('cv_file');
+      if (cvFile && cvFile.files.length) formData.set('cv_file', cvFile.files[0]);
+
+      fetch('apply.php', {
+        method:      'POST',
+        credentials: 'include',
+        body:        formData
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> Submit Application';
+        if (!data.success) {
+          var eb = document.getElementById('form-error');
+          eb.innerHTML = '<strong>Submission failed:</strong><br>' + data.message;
+          eb.style.display = 'block'; careerModalScrollToAlert(eb);
+        } else {
+          form.reset();
+          document.getElementById('cv-filename').textContent = '';
+          document.getElementById('cv-drop-zone').style.borderColor = '#cce8d8';
+          document.getElementById('cv-drop-zone').style.background  = '#f9fffc';
+          refreshAppliedOnFields();
+          loadDropdown('post_applied_for',   'PostAppliedFor',    '— Select Position —');
+          loadDropdown('title',              'Title',             '— Title —');
+          loadDropdown('gender',             'Gender',            '— Select —');
+          loadDropdown('nationality',        'Nationality',       '— Select —');
+          loadDropdown('qualification_1',    'Qualification',     '— Select Qualification —');
+          loadDropdown('qualification_2',    'Qualification',     '— Select Qualification —');
+          loadDropdown('preferred_location', 'PreferredLocation', '— Select Location —');
+          loadDropdown('department',         'Department',        '— Select Department —');
+          var succ = document.getElementById('form-success');
+          succ.innerHTML = '<strong style="color:#2e8b57">&#10003; Application Submitted Successfully!</strong><br>Your application has been received. If shortlisted, our HR team will contact you.';
+          succ.style.display = 'block'; careerModalScrollToAlert(succ);
+        }
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> Submit Application';
+        var eb = document.getElementById('form-error');
+        eb.textContent = 'Network error. Please check your connection and try again. (' + err + ')';
+        eb.style.display = 'block'; careerModalScrollToAlert(eb);
+      });
+    });
+  </script>
+
+  <!-- Optional: Schema.org JobPosting -->
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Staff Nurse — Oncology Ward",
+    "hiringOrganization": {"@type": "Organization","name": "Sri Shankara Cancer Hospital & Research Centre"},
+    "employmentType": "FULL_TIME",
+    "applicantLocationRequirements": {"@type":"Country","name":"India"},
+    "jobLocation": {"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"}},
+    "description": "Deliver evidence-based, compassionate care across inpatient oncology services.",
+    "datePosted": "2025-09-05",
+    "validThrough": "2025-12-31",
+    "industry": "Healthcare"
+  }]
+  </script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+           </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

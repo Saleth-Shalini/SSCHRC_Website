@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervical Cancer - Sri Shankara Cancer Hospital & Research Centre</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Title and Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Cervical Cancer: Health Information
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Cervical cancer originates in the cells of the cervix, which is the lower, narrow part of the uterus that connects to the vagina (birth canal). It generally affects women between the ages of 20 and 50.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The widespread use of the Papanicolaou test (Pap test) has been crucial in reducing the mortality rate from cervical cancer in India by helping doctors detect it in its earliest, most treatable stages. Furthermore, increased uptake of the Human Papillomavirus (HPV) vaccine is expected to decrease the number of cervical cancer cases even further.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Precancerous Changes and Causes -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Precancerous Changes and Causes
+                </h2>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Before cancer develops, the cells of the cervix often undergo precancerous changes known as dysplasia. This process is typically very slow, developing over many years. Regular Pap tests, usually recommended every three to five years, look for these changes. If precancerous cells are found, they can often be removed, preventing the formation of cancer. If left untreated, these abnormal cells can eventually become cancerous and spread into the cervix and surrounding tissues.
+                </p>
+                
+                <div class="bg-white rounded-xl p-6 card-shadow border-t-4" style="border-color: #FF4500;">
+                    <p class="text-gray-700 leading-relaxed">
+                        The vast majority of cervical cancer cases are caused by infection with Human Papillomavirus (HPV), which is commonly passed through sexual contact. While the average person's lifetime risk of contracting HPV is high (around 80%), the immune system successfully clears the virus in most people before it causes cell changes. However, in a small percentage of individuals, the virus persists, leading to the cellular changes that may result in cancer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Types of Cervical Cancer -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Types of Cervical Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Cervical cancer is classified according to the cell type where it develops. The most common types include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Squamous Cell Carcinoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is the most prevalent type, accounting for 80% to 90% of cases. It develops on the surface of the cervix.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Adenocarcinoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This type develops in the gland cells that produce cervical mucus, representing about 10% to 20% of cases.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Mixed Carcinoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Occasionally, a cancer may exhibit features of both squamous cell carcinoma and adenocarcinoma.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    In rare instances, other forms of cancer, such as neuroendocrine tumours (small and large cell cervical cancer), melanoma, sarcoma, and lymphoma, can be found in the cervix.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Factors that increase the risk of cervical cancer are generally those that increase the chance of acquiring HPV, decrease the ability to receive regular screening, or weaken the immune system. These risk factors include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The risk increases with age, most often found in women over 40. However, younger women frequently have precancerous lesions that require treatment.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Smoking</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Chemicals in cigarette smoke can damage the body's cells and increase the risk of precancerous changes, particularly in women with HPV.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sexual Behaviour</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Since HPV is sexually transmitted, certain behaviours can increase infection risk, such as having multiple sexual partners, high-risk male partners, first intercourse at an early age, or not using condoms during sex.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Other Factors</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Lack of regular Pap tests, having a sexually transmitted disease (like chlamydia), HIV infection, a weakened immune system (from an organ transplant or taking steroids), and Diethylstilbestrol (DES) exposure before birth (if the mother took the drug between 1940 and 1971).
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important for women with risk factors to discuss them with a healthcare provider.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    In its earliest stages, cervical cancer typically presents with no noticeable symptoms, which underscores the critical importance of regular Pap tests, especially for sexually active women.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    When symptoms do occur, they may vary and can include:
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Abnormal vaginal bleeding, such as excessively heavy periods, bleeding between menstrual periods, or bleeding after menopause.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Vaginal discharge that is tinged with blood.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Vaginal bleeding and/or pain during sexual intercourse.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Increased frequency of urination.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Pelvic pain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    These symptoms are not exclusive to cervical cancer and may indicate other health issues. Any concerning symptoms should be discussed promptly with a doctor.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Accurate and early diagnosis is vital for choosing the most effective treatment plan and determining if the cancer has spread. At SSCHRC, our specialised pathologists, diagnostic radiologists, and technicians use advanced equipment to diagnose and stage the disease.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Diagnostic Tests</h3>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        If symptoms or Pap test results suggest precancerous cells or cervical cancer, a doctor will perform an examination and inquire about the patient's health, lifestyle, and family medical history. One or more of the following tests may be used for diagnosis and staging:
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Colposcopy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        An instrument called a colposcope (a type of microscope) is used to examine an area of abnormal tissue on the cervix, vagina, or vulva more closely.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A small amount of tissue is removed from the cervix and examined under a microscope. Types of cervical biopsies include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Punch Biopsy:</strong> Removal of the tissue sample using biopsy forceps.</li>
+                        <li><strong>Endocervical Curettage (ECC):</strong> Scraping a tissue sample from just inside the opening of the cervix using a small, spoon-shaped instrument (curette) or a brush.</li>
+                        <li><strong>LEEP (Loop Electro-surgical Excision Procedure):</strong> A thin wire heated by electrical current is used to remove cells from the cervix.</li>
+                        <li><strong>Cone Biopsy:</strong> A larger, cone-shaped tissue sample is removed under local or general anaesthesia to check for abnormal cells beneath the surface.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Cystoscopy or Proctoscopy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        If there is concern about spread, lighted tubes may be used to view the inside of the bladder (cystoscopy) or the anus, rectum, and lower colon (proctoscopy).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These non-invasive tests help determine the extent of the disease and may include CT (Computed Axial Tomography) scans, MRI (Magnetic Resonance Imaging) scans, PET (Positron Emission Tomography) scans, Chest X-rays, and Ultrasounds.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Lymph Node Dissection</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Lymph nodes may be removed surgically to check for cancer spread.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Staging -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Staging
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Following a cancer diagnosis, staging is performed to classify the extent of the disease in the body, which guides the development of the treatment plan. The staging for cervical cancer is set by the International Federation of Gynecology and Obstetrics (FIGO) and ranges from Stage I to Stage IV. Higher stages indicate more advanced disease.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Carcinoma in situ (Stage 0)</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Abnormal cells are found only in the inner lining of the cervix, but they have not yet become invasive cancer.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage I</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            The cancer is confined to the cervix only.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage II</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            The cancer has spread beyond the cervix and uterus but has not reached the lower third of the vagina or the pelvic wall.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage III</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            The cancer has spread to the lower third of the vagina and/or extends to the pelvic wall, and/or has caused kidney problems (hydronephrosis), and/or involves nearby lymph nodes.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Stage IV</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            The cancer has spread to distant organs or has invaded the bladder or rectum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Treatment Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The optimal treatment for cervical cancer is individualised and depends on several factors, including the stage and size of the tumour, whether it has spread, the patient's age and overall health, and the desire to have children in the future. Treatment for pregnant patients is also carefully tailored based on the stage of pregnancy and cancer.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, treatment plans are customised, and one or more of the following therapies may be recommended:
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Surgery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Surgery
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Surgical options vary depending on the size and spread of the cancer:
+                </p>
+            </div>
+
+            <!-- Small Precancerous Lesions -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">For Small Precancerous Lesions or Early Cancer:</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Cryosurgery (Cryotherapy)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Uses an instrument to freeze and destroy precancerous tissue.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">LEEP (Loop Electrosurgical Excision Procedure)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Electrical current is passed through a thin wire loop to remove precancerous lesions.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Cone</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A procedure identical to a cone biopsy that removes all cancerous tissue. It may be an option when the cancer is small, and the woman wishes to preserve fertility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Larger Lesions -->
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">For Larger Lesions or Invasive Cancer:</h3>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hysterectomy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Removal of the uterus and the cervix. Minimally invasive laparoscopic or robotic surgery may be an option.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Bilateral Salpingo-oophorectomy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Removal of the fallopian tubes and ovaries, sometimes performed concurrently with a hysterectomy, particularly for women nearing menopause.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Trachelectomy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Removal of the cervix and surrounding tissue but preserving the uterus. This procedure is generally reserved for younger women with specific, larger tumours (usually up to 2 centimetres) who wish to retain the ability to have children.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Radical Hysterectomy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Removal of the cervix, uterus, part of the vagina, the surrounding tissues (parametria), and nearby lymph nodes.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Pelvic Exenteration</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A complex surgery, sometimes performed for recurrent cancer, that removes the organs and tissues of a radical hysterectomy along with the bladder, vagina, rectum, and part of the colon.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sentinel Lymph Node Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Used to identify the key lymph nodes in the initial spread of the cancer, often performed as part of a larger surgical procedure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Radiation Therapy -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Radiation Therapy
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Radiation therapy uses powerful, focused energy beams to kill cancer cells while minimising damage to healthy tissue. It is often used to treat cervical cancers that have spread beyond the cervix, for very large lesions (greater than 4 centimetres), or as an alternative to surgery. It may also be delivered after surgery to reduce the risk of recurrence.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Two main types of radiation therapy are:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Intensity Modulated Radiation Therapy (IMRT)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Focuses multiple beams of different intensities directly on the tumour for the highest possible dose.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Brachytherapy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Delivers radiation using small pieces of radioactive material placed on or inside the patient's body, close to the tumour. This allows for a very high, concentrated dose of radiation directly to the tumour.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Chemotherapy -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Chemotherapy
+                </h2>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Chemotherapy involves the use of drugs to kill cancer cells, control their growth, or relieve symptoms. It may involve a single drug or a combination of drugs. SSCHRC offers modern and advanced chemotherapy options, along with supportive care to manage side effects such as nausea and constipation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12: Clinical Trials and Research -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Clinical Trials and Research
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    As a leading research centre, SSCHRC actively participates in clinical trials that investigate new treatments for cervical cancer. Research initiatives are focused on improving treatment outcomes, including tumour response and quality of life. Recent research has contributed to new standards of care, such as demonstrating that chemotherapy combined with radiation improves patient survival outcomes, and pioneering minimally-invasive and fertility-sparing surgical strategies. SSCHRC is also committed to global initiatives for prevention and detection in low-resource settings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9a799c3e0eb8d86d","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+
+</html>

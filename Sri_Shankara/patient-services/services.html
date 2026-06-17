@@ -1,0 +1,3887 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSCHRC Services & Facilities - Comprehensive Cancer Care</title>
+    <meta name="description" content="Comprehensive cancer care services including Surgical Oncology, Medical Oncology, Radiation Oncology, Diagnostic Services, and more at Sri Shankara Cancer Hospital & Research Centre">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    
+    <!-- Chatbox CSS -->
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Apply font-family to body only - header.css handles header styles separately */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Page Content Wrapper - isolates page styles from footer */
+        #page-content-wrapper {
+            /* All page content is contained within this wrapper */
+            min-height: 100vh;
+        }
+        
+        /* Ensure footer is isolated from page styles - reset any inherited styles */
+        footer#hospital-footer {
+            position: relative !important;
+            z-index: 1 !important;
+        }
+        
+        footer#hospital-footer * {
+            /* Footer styles are handled by footer.css - prevent page styles from affecting footer */
+            box-sizing: border-box;
+        }
+        
+        /* Prevent page styles from affecting footer headings */
+        footer#hospital-footer .section-title,
+        footer#hospital-footer h3,
+        footer#hospital-footer .section-header .section-title {
+            color: #ffffff !important;
+            background: none !important;
+            -webkit-background-clip: unset !important;
+            -webkit-text-fill-color: #ffffff !important;
+            background-clip: unset !important;
+            text-shadow: none !important;
+        }
+        
+        :root {
+            --primary-blue: #014196;
+            --primary-teal: #079591;
+            --primary-gradient: linear-gradient(135deg, #014196, #079591);
+            --primary-gradient-reverse: linear-gradient(135deg, #079591, #014196);
+            --primary-blue-light: rgba(1, 65, 150, 0.1);
+            --primary-teal-light: rgba(7, 149, 145, 0.1);
+            --primary-blue-medium: rgba(1, 65, 150, 0.2);
+            --primary-teal-medium: rgba(7, 149, 145, 0.2);
+            --primary-blue-dark: #013075;
+            --primary-teal-dark: #066d6a;
+        }
+        
+        body {
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Main Content Layout */
+        .main-content {
+            padding: 2rem 1rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        
+        /* Hero Section */
+        .hero-section {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6rem 1rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 15s ease infinite;
+            background-size: 200% 200%;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { 
+                background: linear-gradient(135deg, #014196, #079591);
+            }
+            50% { 
+                background: linear-gradient(135deg, #079591, #014196);
+            }
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease-out;
+            /* Font family removed - uses body font (Inter) */
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 4rem 1rem;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Category Cards Grid Container - Responsive */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 1200px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .categories-grid {
+                gap: 1rem;
+            }
+        }
+        
+        /* Service Category Card - Glass UI */
+        .category-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 1rem;
+            padding: 0;
+            box-shadow: 
+                0 8px 32px rgba(31, 38, 135, 0.15),
+                0 4px 16px rgba(0, 0, 0, 0.1);
+            border: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+            cursor: default;
+            display: flex;
+            flex-direction: column;
+            min-height: auto;
+        }
+        
+        .category-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .category-card.hidden {
+            display: none;
+        }
+        
+        .category-card:hover {
+            box-shadow: 
+                0 12px 48px rgba(31, 38, 135, 0.2),
+                0 6px 24px rgba(1, 65, 150, 0.15);
+            transform: translateY(-6px);
+            border-color: rgba(1, 65, 150, 0.3);
+            background: rgba(255, 255, 255, 0.85);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        
+        .category-header {
+            background: linear-gradient(to right, #1C4F92, #009999);
+            padding: 1.5rem 1.75rem;
+            margin: 0;
+            border-radius: 1rem 1rem 0 0;
+            position: relative;
+            text-align: center;
+        }
+        
+        .category-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            pointer-events: none;
+        }
+        
+        .category-icon {
+            display: none;
+        }
+        
+        .category-title {
+            font-size: 1.125rem !important;
+            font-weight: 700;
+            color: white !important;
+            -webkit-text-fill-color: white !important;
+            margin: 0;
+            line-height: 1.4;
+            text-align: center;
+            word-wrap: break-word;
+            hyphens: auto;
+            padding: 0;
+            text-transform: none;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .category-learn-more {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--primary-blue);
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 1.125rem 1.5rem;
+            border-radius: 0 0 1rem 1rem;
+            font-size: 0.9375rem !important;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 0;
+            box-shadow: none;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .category-learn-more::after {
+            content: '\f061';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 0.875rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-learn-more:hover {
+            background: rgba(1, 65, 150, 0.1);
+            color: var(--primary-teal);
+        }
+        
+        .category-learn-more:hover::after {
+            transform: translateX(4px);
+        }
+        
+        /* Desktop-specific: Transparent gradient header and white titles */
+        @media (min-width: 769px) {
+            .category-header {
+                background: linear-gradient(to right, #1C4F92, #009999) !important;
+            }
+            
+            .category-title {
+                color: white !important;
+                -webkit-text-fill-color: white !important;
+            }
+        }
+        
+        .category-content {
+            display: none;
+        }
+        
+        .category-icon {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.25rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .category-card:hover .category-icon {
+            transform: rotate(10deg) scale(1.15);
+            box-shadow: 
+                0 15px 30px rgba(1, 65, 150, 0.3),
+                0 5px 15px rgba(7, 149, 145, 0.2);
+        }
+        
+        .category-card:hover .category-icon::before {
+            width: 250%;
+            height: 250%;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        .category-title {
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            /* Font family removed - uses body font (Inter) like subcategory titles */
+        }
+        
+        /* Service List */
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.25rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.125rem 1.25rem;
+            background: #ffffff;
+            border-radius: 0.875rem;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(1, 65, 150, 0.1) 0%, rgba(7, 149, 145, 0.1) 100%);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 0;
+        }
+        
+        .service-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+            mask: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+            -webkit-mask: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+        }
+        
+        .service-item > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-item:hover {
+            background: linear-gradient(135deg, rgba(1, 65, 150, 0.04) 0%, rgba(7, 149, 145, 0.04) 100%);
+            transform: translateX(10px) scale(1.02);
+            box-shadow: 
+                0 10px 30px rgba(1, 65, 150, 0.15),
+                0 5px 15px rgba(7, 149, 145, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            border-color: rgba(1, 65, 150, 0.25);
+        }
+        
+        .service-item:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .service-item:hover::after {
+            opacity: 0.05;
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .service-check {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.25rem;
+            margin-top: 0.125rem;
+            flex-shrink: 0;
+            min-width: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            filter: drop-shadow(0 2px 4px rgba(1, 65, 150, 0.2));
+        }
+        
+        .service-item:hover .service-check {
+            transform: scale(1.3) rotate(360deg);
+            filter: drop-shadow(0 6px 12px rgba(1, 65, 150, 0.4));
+        }
+        
+        .service-text {
+            font-size: 0.9375rem;
+            color: #374151;
+            line-height: 1.6;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .service-item:hover .service-text {
+            color: var(--primary-blue);
+            font-weight: 600;
+            transform: translateX(2px);
+        }
+        
+        /* Subcategory */
+        .subcategory {
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .subcategory-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            border-left: 4px solid;
+            border-image: var(--primary-gradient) 1;
+            background: linear-gradient(90deg, var(--primary-teal-light) 0%, transparent 100%);
+            border-radius: 0 0.5rem 0.5rem 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .subcategory-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-radius: 0 2px 2px 0;
+        }
+        
+        .subcategory:hover .subcategory-title {
+            transform: translateX(4px);
+            background: linear-gradient(90deg, var(--primary-teal-light) 0%, var(--primary-blue-light) 100%);
+            box-shadow: 0 2px 8px rgba(1, 65, 150, 0.1);
+        }
+        
+        .subcategory:hover .subcategory-title::after {
+            width: 100%;
+        }
+        
+        /* Search Bar */
+        .search-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+            top: 0;
+            z-index: 100;
+        }
+        
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1.125rem 3.5rem 1.125rem 1.5rem;
+            border: 2px solid rgba(229, 231, 235, 0.8);
+            border-radius: 1rem;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            background: white;
+            box-shadow: 0 4px 16px rgba(1, 65, 150, 0.15), 0 0 0 4px rgba(1, 65, 150, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 1.5rem;
+            color: #6b7280;
+            font-size: 1.25rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus + .search-icon {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transform: scale(1.1);
+        }
+        
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 1rem;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 0.5rem;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            z-index: 200;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .search-results.active {
+            display: block;
+        }
+        
+        .search-result-item {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(243, 244, 246, 0.8);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .search-result-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0.1;
+            transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .search-result-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-gradient);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .search-result-item:hover {
+            background: linear-gradient(90deg, var(--primary-blue-light) 0%, var(--primary-teal-light) 100%);
+            transform: translateX(8px) scale(1.01);
+            box-shadow: 0 4px 12px rgba(1, 65, 150, 0.15);
+        }
+        
+        .search-result-item:hover::before {
+            width: 100%;
+        }
+        
+        .search-result-item:hover::after {
+            transform: scaleY(1);
+        }
+        
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .search-result-category {
+            font-size: 0.75rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+        
+        .search-result-text {
+            font-size: 0.9375rem;
+            color: #374151;
+        }
+        
+        .search-highlight {
+            background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #92400e;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .no-results {
+            padding: 2rem;
+            text-align: center;
+            color: #6b7280;
+        }
+        
+        .no-results i {
+            font-size: 2.5rem;
+            color: #d1d5db;
+            margin-bottom: 1rem;
+        }
+        
+        .search-stats {
+            padding: 0.75rem 1.5rem;
+            background: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+            color: #6b7280;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+        
+        /* Hide categories when searching */
+        .category-card.hidden {
+            display: none;
+        }
+        
+        /* Scroll to result animation */
+        .scroll-to-result {
+            scroll-margin-top: 120px;
+        }
+        
+        .category-card.highlight {
+            animation: highlightPulse 2s ease-in-out;
+        }
+        
+        @keyframes highlightPulse {
+            0%, 100% { 
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+                border-color: rgba(255, 255, 255, 0.18);
+            }
+            50% { 
+                box-shadow: 0 0 0 6px rgba(1, 65, 150, 0.25), 0 20px 40px rgba(1, 65, 150, 0.15), 0 8px 16px rgba(7, 149, 145, 0.12);
+                border-color: rgba(1, 65, 150, 0.4);
+                transform: translateY(-4px) scale(1.02);
+            }
+        }
+        
+        /* Clear search button */
+        .clear-search {
+            position: absolute;
+            right: 3.5rem;
+            background: none;
+            border: none;
+            color: #9ca3af;
+            cursor: pointer;
+            padding: 0.5rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+        }
+        
+        .clear-search:hover {
+            color: #6b7280;
+        }
+        
+        .clear-search.active {
+            display: flex;
+        }
+        
+        /* International UI/UX Enhancements */
+        .search-input::placeholder {
+            color: #9ca3af;
+            opacity: 0.8;
+        }
+        
+        /* Focus visible for keyboard navigation */
+        .search-input:focus-visible,
+        .search-result-item:focus-visible,
+        .clear-search:focus-visible {
+            outline: 2px solid var(--primary-blue);
+            outline-offset: 2px;
+        }
+        
+        /* Loading state */
+        .search-loading {
+            position: relative;
+        }
+        
+        .search-loading::after {
+            content: '';
+            position: absolute;
+            right: 3.5rem;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #e5e7eb;
+            border-top-color: var(--medical-blue);
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Screen reader only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        /* Improved touch targets for mobile */
+        @media (max-width: 768px) {
+            .search-result-item {
+                min-height: 48px;
+                padding: 1.25rem 1.5rem;
+            }
+            
+            .clear-search {
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
+        
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem 3rem;
+            }
+            
+            .category-card {
+                padding: 0 !important;
+                min-height: auto !important;
+                background: rgba(255, 255, 255, 0.7) !important;
+                backdrop-filter: blur(20px) !important;
+                -webkit-backdrop-filter: blur(20px) !important;
+                border: none !important;
+                box-shadow: 
+                    0 8px 32px rgba(31, 38, 135, 0.15),
+                    0 4px 16px rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            .category-card:hover {
+                box-shadow: 
+                    0 8px 32px rgba(31, 38, 135, 0.15),
+                    0 4px 16px rgba(0, 0, 0, 0.1) !important;
+                transform: none !important;
+            }
+            
+            .category-title {
+                font-size: 1.125rem !important;
+                line-height: 1.4 !important;
+                padding: 0 !important;
+                background: none !important;
+                background-color: transparent !important;
+                background-image: none !important;
+                -webkit-background-clip: unset !important;
+                background-clip: unset !important;
+                -webkit-text-fill-color: white !important;
+                color: white !important;
+                border: none !important;
+                box-shadow: none !important;
+                font-weight: 700 !important;
+            }
+            
+            .category-header {
+                background: linear-gradient(to right, #1C4F92, #009999) !important;
+                padding: 1.5rem 1.75rem !important;
+                margin: 0 !important;
+                border-radius: 1rem 1rem 0 0 !important;
+                position: relative !important;
+                text-align: center !important;
+            }
+            
+            .category-header::before {
+                content: '' !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%) !important;
+                pointer-events: none !important;
+            }
+            
+            .category-learn-more {
+                background: rgba(255, 255, 255, 0.5) !important;
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+                color: var(--primary-blue) !important;
+                border: none !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+                padding: 1.125rem 1.5rem !important;
+                border-radius: 0 0 1rem 1rem !important;
+                font-size: 0.9375rem !important;
+                font-weight: 600 !important;
+                cursor: pointer !important;
+                transition: all 0.3s ease !important;
+                width: 100% !important;
+                margin-top: 0 !important;
+                box-shadow: none !important;
+                position: relative !important;
+                z-index: 10 !important;
+                text-align: center !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0.5rem !important;
+                -webkit-background-clip: unset !important;
+                background-clip: unset !important;
+                -webkit-text-fill-color: var(--primary-blue) !important;
+                opacity: 1 !important;
+            }
+            
+            .category-learn-more::after {
+                content: '\f061' !important;
+                font-family: 'Font Awesome 5 Free' !important;
+                font-weight: 900 !important;
+                font-size: 0.875rem !important;
+                transition: transform 0.3s ease !important;
+            }
+            
+            .category-learn-more:hover {
+                background: rgba(1, 65, 150, 0.1) !important;
+                color: var(--primary-teal) !important;
+                -webkit-text-fill-color: var(--primary-teal) !important;
+            }
+            
+            .category-learn-more:hover::after {
+                transform: translateX(4px) !important;
+            }
+            
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-item {
+                padding: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .category-card {
+                padding: 0 !important;
+                min-height: auto !important;
+                background: rgba(255, 255, 255, 0.7) !important;
+                backdrop-filter: blur(20px) !important;
+                -webkit-backdrop-filter: blur(20px) !important;
+                border: none !important;
+                box-shadow: 
+                    0 8px 32px rgba(31, 38, 135, 0.15),
+                    0 4px 16px rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            .category-title {
+                font-size: 1rem !important;
+                line-height: 1.4 !important;
+                padding: 0 !important;
+                color: white !important;
+                -webkit-text-fill-color: white !important;
+            }
+            
+            .category-header {
+                background: linear-gradient(to right, #1C4F92, #009999) !important;
+                padding: 1.25rem 1.5rem !important;
+                margin: 0 !important;
+                border-radius: 1rem 1rem 0 0 !important;
+                position: relative !important;
+                text-align: center !important;
+            }
+            
+            .category-header::before {
+                content: '' !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%) !important;
+                pointer-events: none !important;
+            }
+            
+            .category-learn-more {
+                background: rgba(255, 255, 255, 0.5) !important;
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+                color: var(--primary-blue) !important;
+                border: none !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+                padding: 1rem 1.25rem !important;
+                border-radius: 0 0 1rem 1rem !important;
+                font-size: 0.875rem !important;
+                font-weight: 600 !important;
+                cursor: pointer !important;
+                transition: all 0.3s ease !important;
+                width: 100% !important;
+                margin-top: 0 !important;
+                box-shadow: none !important;
+                position: relative !important;
+                z-index: 10 !important;
+                text-align: center !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0.5rem !important;
+                -webkit-background-clip: unset !important;
+                background-clip: unset !important;
+                -webkit-text-fill-color: var(--primary-blue) !important;
+            }
+            
+            .category-learn-more::after {
+                content: '\f061' !important;
+                font-family: 'Font Awesome 5 Free' !important;
+                font-weight: 900 !important;
+                font-size: 0.875rem !important;
+                transition: transform 0.3s ease !important;
+            }
+            
+            .category-learn-more:hover {
+                background: rgba(1, 65, 150, 0.1) !important;
+                color: var(--primary-teal) !important;
+                -webkit-text-fill-color: var(--primary-teal) !important;
+            }
+            
+            .category-learn-more:hover::after {
+                transform: translateX(4px) !important;
+            }
+        }
+        
+        /* Category Modal Styles */
+        .category-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            overflow-y: auto;
+            padding: 2rem 1rem;
+        }
+        
+        .category-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .category-modal-content {
+            background: white;
+            border-radius: 1rem;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .category-modal.active .category-modal-content {
+            transform: scale(1);
+        }
+        
+        .category-modal-header {
+            padding: 2rem;
+            border-bottom: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary-teal);
+            color: white;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+        
+        .category-modal-header .header-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+        }
+        
+        .category-modal-header .header-icon {
+            display: none;
+        }
+        
+        .category-modal-header .header-text {
+            flex: 1;
+        }
+        
+        .category-modal-header h2 {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .category-modal-header .subtitle {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.95;
+            color: white;
+        }
+        
+        .category-modal-close {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            line-height: 1;
+            padding: 0;
+        }
+        
+        .category-modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+        
+        .category-modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+            background: white;
+        }
+        
+        .category-modal-body .modal-main-heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 1.5rem 0;
+            color: #1f2937;
+            display: block;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .category-modal-body .modal-main-heading::before {
+            content: '\f061';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary-teal);
+            font-size: 1.125rem;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.5rem;
+            display: inline-block;
+            text-align: left;
+        }
+        
+        .category-modal-body .subcategory {
+            margin-bottom: 2rem;
+        }
+        
+        .category-modal-body .subcategory-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            padding: 0;
+            padding-left: 2rem;
+            border: none;
+            display: block;
+            position: relative;
+        }
+        
+        .category-modal-body .subcategory-title::before {
+            content: '\f061';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary-teal);
+            font-size: 1rem;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.5rem;
+            display: inline-block;
+            text-align: left;
+        }
+        
+        /* Modal Service List - List Format - 2 Columns */
+        .category-modal-body .modal-service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+        
+        .category-modal-body .modal-service-item {
+            padding: 0.75rem 1rem;
+            padding-left: 2.25rem;
+            margin: 0;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            transition: all 0.2s ease;
+            position: relative;
+            color: #1f2937;
+            font-size: 0.9375rem;
+        }
+        
+        .category-modal-body .modal-service-item::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-teal);
+            font-size: 0.875rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(7, 149, 145, 0.1);
+            border-radius: 50%;
+        }
+        
+        .category-modal-body .modal-service-item:hover {
+            background: transparent;
+            color: var(--primary-teal);
+            transform: translateX(4px);
+        }
+        
+        @media (max-width: 768px) {
+            .category-modal-body .modal-service-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Legacy support for old service-list format */
+        .category-modal-body .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .category-modal-body .service-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .category-modal-body .service-item:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 4px 12px rgba(1, 65, 150, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .category-modal-footer {
+            padding: 0;
+            border-top: none;
+            display: flex;
+            justify-content: stretch;
+            gap: 0;
+            background: transparent;
+        }
+        
+        .modal-close-btn {
+            background: var(--primary-teal);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0 0 0.75rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .modal-close-btn::before {
+            content: '\f00d';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 1rem;
+        }
+        
+        .modal-close-btn:hover {
+            background: var(--primary-teal-dark);
+            transform: none;
+            box-shadow: 0 4px 12px rgba(7, 149, 145, 0.3);
+        }
+        
+        .modal-learn-more {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .modal-learn-more:hover {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+        
+        @media (max-width: 768px) {
+            .category-modal {
+                padding: 1rem 0.5rem;
+            }
+            
+            .category-modal-content {
+                max-height: 95vh;
+            }
+            
+            .category-modal-header {
+                padding: 1.5rem;
+            }
+            
+            .category-modal-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .category-modal-body {
+                padding: 1.5rem;
+            }
+            
+            .category-modal-body .modal-service-item {
+                padding: 0.75rem 0.875rem;
+                padding-left: 2rem;
+                font-size: 0.875rem;
+            }
+            
+            .category-modal-body .modal-service-item::before {
+                width: 1.125rem;
+                height: 1.125rem;
+                font-size: 0.75rem;
+            }
+            
+            .category-modal-body .service-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-content {
+                padding: 1rem 0.5rem;
+            }
+            
+            .sidebar-header h3 {
+                font-size: 1.125rem;
+            }
+            
+            .sidebar .nav-item {
+                font-size: 0.875rem;
+                padding: 0.75rem;
+            }
+        }
+    </style>
+    
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+
+    
+    <!-- Footer CSS - Load AFTER inline styles to ensure footer font takes precedence -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="dynamic-header"></header>
+    <script src="../header.js"></script>
+
+    <!-- Page Content Wrapper - Isolates page styles from header and footer -->
+    <div id="page-content-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">SSCHRC Services & Facilities</h1>
+            <p class="hero-subtitle">Comprehensive, world-class cancer care services delivered with compassion and cutting-edge technology</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" role="search" aria-label="Service search">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <label for="serviceSearch" class="sr-only">Search for medical services and facilities</label>
+                <input 
+                    type="text" 
+                    id="serviceSearch" 
+                    class="search-input" 
+                    placeholder="Search for services (e.g., MRI, Chemotherapy, Robotic Surgery, PET CT...)" 
+                    aria-label="Search services"
+                    aria-describedby="searchHelp"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-controls="searchResults"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button 
+                    type="button" 
+                    class="clear-search" 
+                    id="clearSearch" 
+                    aria-label="Clear search"
+                    title="Clear search"
+                    tabindex="-1"
+                >
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            </div>
+            <div id="searchHelp" class="sr-only">Type at least 2 characters to search. Use arrow keys to navigate results, Enter to select, Escape to close.</div>
+            <div id="searchResults" class="search-results" role="listbox" aria-label="Search results" aria-live="polite" aria-atomic="true"></div>
+            <div id="searchAnnouncement" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+                <!-- Categories Grid -->
+                <div class="categories-grid">
+                <!-- SURGICAL ONCOLOGY -->
+            <div id="surgical-oncology" class="category-card" data-category="surgical-oncology">
+                <div class="category-header">
+                    <h2 class="category-title">Surgical oncology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('surgical-oncology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">General Surgical Oncology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">BCS, MRM & All Breast Disease</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Sentinel Node Study</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Breast Oncoplasty</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Minimal Invasive Surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Breast Reconstructive Services</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Hepatobiliary Oncology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Liver Resection</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Gall Bladder Surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Pancreatic Surgery</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Upper GI & Lower GI Oncology</h3>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Thoracic Oncology</h3>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Head & Neck Oncology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Oral cavity cancer surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Oropharyngeal cancer surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Paranasal sinus cancer surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Nasal cavity cancer surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Thyroid surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Parathyroid surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Lateral skull base surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Anterior skull base surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Endoscopic skull base surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Salivary gland surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Orbital surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Laryngeal cancer surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Hypopharyngeal cancer surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Tracheal resections</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Airway surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Miscellaneous neck surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Cutaneous malignancies of head and neck and scalp</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Endolaryngeal surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">State of the art head and neck microvascular reconstruction including 3D and AI based planning</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Maxillofacial surgery</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Prosthetics and prostodontics</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Restorative dentistry</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Prehabilitation and rehabilitation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Flexible endoscopic evaluation of swallowing</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Laryngectomy and glossectomy rehabilitation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Speech and swallowing therapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Voice banking and speech rehabilitation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Bone & Soft Tissue Oncology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Limb Conservative Surgeries with Prosthesis</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Forequarter & Hindquarter Amputations</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Hemipelvectomy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Limb Reconstructions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Uro-Oncology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radical Cystectomy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Continent Urinary Diversions in bladder cancer</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radical Prostatectomy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Kidney Sparing Surgeries in Renal Cancer</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">RPLND</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Minimal Invasive Procedures</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">All other Genito Uro Oncology Procedures</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Gynaec-Oncology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radical Hysterectomy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Cytoreductive Surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">RPLND</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">NIPEC + Peritonectomy + PIPAC</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Robotic Surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Fertility sparing surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Risk reduction surgeries</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Pelvic Exenteration</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Pregnancy with cancer</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- MEDICAL ONCOLOGY -->
+            <div id="medical-oncology" class="category-card" data-category="medical-oncology">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h2 class="category-title">Medical oncology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('medical-oncology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Medical Oncology Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Daycare Chemotherapy</span>
+                        </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Immunotherapy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Targeted Therapy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Precision Therapy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Biological Therapy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Hormonal Therapy</span>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- DIAGNOSTIC SERVICES -->
+            <div id="diagnostic-services" class="category-card" data-category="diagnostic-services">
+                <div class="category-header">
+                    <h2 class="category-title">Diagnostic services</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('diagnostic-services'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Diagnostic Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Digital MRI with MRI/RT Planning</span>
+                        </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Functional MRI</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">MR Whole Body</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">MR Mammography</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">MR Angiography-Neck</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">MR Spectroscopy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">MR Basic T1 Perfusion</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Big-Bore 16 Slice CT</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">CT-Guided Biopsy/Aspiration</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">CT Angiogram-Lower limb</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">CT-Volume Rendering with 3D Images</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">CT Simulation for Radiotherapy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Routine Ultrasound</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Ultrasound Guided Diagnostic &</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">FLR and Liver Volumetry</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Color Doppler Study</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Intraoperative Ultrasound</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Digital Mammography</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Digital X-ray</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">C-Arm</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Bone Densitometry</span>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- RADIATION ONCOLOGY -->
+            <div id="radiation-oncology" class="category-card" data-category="radiation-oncology">
+                <div class="category-header">
+                    <h2 class="category-title">Radiation oncology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('radiation-oncology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">External Beam Radiotherapy (ERBT)</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">LINAC (Linear Accelerator) with Planning</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">FFF (Filter Free Beam) Beam with 6D</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Stereotactic Radiosurgery (SRS)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Stereotactic Radiotherapy (SRT)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Stereotactic Body Radiation Therapy (SBRT)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Total Body Irradiation (TBI)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">TBI Rapid Arc/ Volumetric Modulation Radiation Therapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Image Guided Radio Therapy (IGRT)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Intensity Modulated Radiotherapy (IMRT)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Electron Beam Therapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">3-D Conformal Radiation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">4-D CT & 4-D RT</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">DIBH / DEBH-Respiratory Gated Therapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Conventional Radiation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Palliative Radiotherapy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">IBRT (Internal Beam Radiotherapy / Brachytherapy)</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Interstitial Brachytherapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Intra-cavitary Brachytherapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Intraluminal Brachytherapy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NUCLEAR MEDICINE ONCOLOGY -->
+            <div id="nuclear-medicine" class="category-card" data-category="nuclear-medicine">
+                <div class="category-header">
+                    <h2 class="category-title">Nuclear medicine oncology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('nuclear-medicine'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Diagnostic Services:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">PET CT (FDG, PSMA, DOTANOC, DOPA, FAPI) for initial staging, detection of unknown primary, radiation therapy planning, response assessment, surveillance</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Sentinel Lymph Node Lymphoscintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radio-guided Occult Lesion Localization (ROLL)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">MDP Bone scan</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">MIBG, HYNIC TOC and DMSA (V) imaging for endocrine tumors</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Parathyroid imaging</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Whole body iodine scan for thyroid cancer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Therapy:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">High dose radioiodine therapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">I-131 MIBG for Neuroblastoma</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">177 Lu DOTATATE therapy for metastatic neuroendocrine tumor</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">177 Lu PSMA therapy for metastatic prostate cancer</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Samarium therapy for bone pain palliation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Skeletal scintigraphy</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">MDP Bone scan – Three phase, whole body and SPECT studies</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">18F-NaF PET</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Infection imaging (FDG PET CT and MDP Bone scan)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Metastatic workup and metabolic bone disorders</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Pulmonology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Perfusion Scintigraphy (V/Q Scan) for pulmonary embolism</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Lung perfusion scan for preoperative lung volume estimation prior to lobectomy and lung shunt quantification</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Miscellaneous</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Scrotal Scintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Dacryoscintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Pleuroperitoneal shunt evaluation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Limb lymphoscintigraphy</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- CARDIOLOGY -->
+            <div id="cardiology" class="category-card" data-category="cardiology">
+                <div class="category-header">
+                    <h2 class="category-title">Cardiology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('cardiology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Diagnostic Services:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Myocardial Perfusion Scintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Myocardial Viability Assessment (Perfusion and/or FDG PET)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radionuclide Ventriculography (MUGA Scan) for systolic and diastolic function</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">First Pass Angiography for RVEF and shunt quantification</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEUROLOGY -->
+            <div id="neurology" class="category-card" data-category="neurology">
+                <div class="category-header">
+                    <h2 class="category-title">Neurology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('neurology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Diagnostic Services:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">FDG and F-DOPA PET CT for brain tumors</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">FDG PET and Brain Perfusion SPECT for dementia and epilepsy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Blood brain barrier imaging</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Cisternography</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ENDOCRINOLOGY/DIABETES -->
+            <div id="endocrinology-diabetes" class="category-card" data-category="endocrinology-diabetes">
+                <div class="category-header">
+                    <h2 class="category-title">Endocrinology/diabetes</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('endocrinology-diabetes'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Diagnostic Services:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Thyroid Scintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">MIBG Imaging</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">FDG and DOTANOC PET CT for MTC and TENIS syndrome</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Therapy:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radioiodine therapy for Graves' disease, toxic nodular goiter and thyroid cancer</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">I-131 MIBG for Neuroblastoma</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">177 Lu DOTATATE therapy for metastatic neuroendocrine tumor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GASTROENTEROLOGY -->
+            <div id="gastroenterology" class="category-card" data-category="gastroenterology">
+                <div class="category-header">
+                    <h2 class="category-title">Gastroenterology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('gastroenterology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Diagnostic Services:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Salivary Scintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Salivogram and Gastroesophageal Reflux Scintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Esophageal Transit Scintigraphy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Gastric Emptying Study</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Gastrointestinal Bleed Study</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Ectopic Gastric Mucosa (Meckel's Scan)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Hepatobiliary Imaging (HIDA Scan)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">99mTc labeled RBC scintigraphy for liver hemangioma</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Sulfur colloid imaging of reticuloendothelial system</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Hepato-pulmonary shunt quantification</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Hepatic encephalopathy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">HSA imaging for protein-losing enteropathy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Therapy:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Trans Arterial Radio Embolization with 90Y TheraSpheres (TARE)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEPHROUROLOGY -->
+            <div id="nephrourology" class="category-card" data-category="nephrourology">
+                <div class="category-header">
+                    <h2 class="category-title">Nephrourology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('nephrourology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Diagnostic Services:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Renal cortical scintigraphy (DMSA Scan)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Diuretic Renography (EC / DTPA Scan)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">ACE Renography for renovascular hypertension</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Renal Transplant Evaluation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radionuclide cystography for VUR</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">FDG PET CT for tumor imaging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PAEDIATRIC ONCOLOGY & HAEMATOLOGY -->
+            <div id="paediatric-oncology-haematology" class="category-card" data-category="paediatric-oncology-haematology">
+                <div class="category-header">
+                    <h2 class="category-title">Paediatric oncology & haematology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('paediatric-oncology-haematology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Paediatric Oncology & Haematology Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Chemotherapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Immunotherapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Targeted Therapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Paediatric Haematology</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Paediatric Bone Marrow Transplantation</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- CLINICAL HAEMATOLOGY -->
+            <div id="clinical-haematology" class="category-card" data-category="clinical-haematology">
+                <div class="category-header">
+                    <h2 class="category-title">Clinical haematology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('clinical-haematology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Clinical Haematology Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Stem cell transplantation (Bone Marrow Transplantation) – Autologous & Allogenic</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Benign Haematology</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- MEDICAL GASTROENTEROLOGY INCLUDING HEPATOLOGY -->
+            <div id="medical-gastroenterology-hepatology" class="category-card" data-category="medical-gastroenterology-hepatology">
+                <div class="category-header">
+                    <h2 class="category-title">Medical gastroenterology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('medical-gastroenterology-hepatology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Medical Gastroenterology including hepatology Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Diagnostic Endoscopies of Upper & Lower GI</span>
+                        </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">ERCP</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Hepatobiliary Therapeutic Procedures</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Therapeutic Endoscopy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">EUS (Endoscopic Ultrasound)</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Variceal Banding & Glue</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">APC (Argon Plasma Coagulation)</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Endoscopic Banding & Snaring</span>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- NON-INTERVENTIONAL CARDIOLOGY -->
+            <div id="non-interventional-cardiology" class="category-card" data-category="non-interventional-cardiology">
+                <div class="category-header">
+                    <h2 class="category-title">Non-interventional cardiology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('non-interventional-cardiology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Non-Interventional Cardiology Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">ECG</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">TMT</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">2D ECHO</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- PULMONOLOGY -->
+            <div id="pulmonology-clinical" class="category-card" data-category="pulmonology-clinical">
+                <div class="category-header">
+                    <h2 class="category-title">Pulmonology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('pulmonology-clinical'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Pulmonology Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">PFT</span>
+                        </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Bronchoscopy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Pleuroscopy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">IPC Insertion</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">EBUS</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">TBNA</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Rigid Bronchoscopy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Tracheobronchial Stenting</span>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- INTERVENTIONAL RADIOLOGY -->
+            <div id="interventional-radiology" class="category-card" data-category="interventional-radiology">
+                <div class="category-header">
+                    <h2 class="category-title">Interventional radiology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('interventional-radiology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Interventional Oncology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Trans-arterial chemoembolisation (TACE)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Trans-arterial Radioembolisation (TARE)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Portal vein embolisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Pre-op tumor embolisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">AV malformation embolisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Venous malformation sclerotherapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radiofrequency ablation (RFA)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Microwave ablation (MWA)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Image guided biopsies/ Drainage of collections -third space/ postoperative</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">SVC stenting</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Central venous access - Central line/ PICC line/ Chemoport/ HD cath/ Hickman line/ Permcath placements</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Thyroid nodule ablation, Thyroid artery embolisation for goitre</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">GI- HPB Interventions</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Percutaneous transhepatic biliary drainage (PTBD) +/- Stenting</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Portal vein recanalisation/ stenting</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Balloon occluded trans venous obliteration (BRTO)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Transjugular liver biopsy (TJLB)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Percutaneous Liver biopsy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Hepatic venous pressure gradient measurement (HVPG)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Trans jugular intrahepatic portosystemic shunt (TIPSS)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">GI bleed embolisations</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Mesenteric angiography/ angioplasty/ thrombolysis/ stenting</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Radiologically Inserted Gastrostomy - percutaneous retrograde gastrostomy (RIG/PRG)</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Fluroscopic Nasogastric/ nasojejunal enteral feeding tubes</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Percutaneous liver abscess drainage</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Liver transplant interventions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Urolo- Gynecological Interventions</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Trans-rectal / trans-perineal prostate biopsy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Prostate Fiducial marker placement</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Percutaneous Nephrostomy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Percutaneous antegrade ureteric stenting</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Prostate artery/ Vesical artery embolisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Uterine artery embolisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Uterine AVM embolisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Fallopian tube recanalisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Endometrioma sclerotherapy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Vascular Interventions</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Varicose vein ablation/ sclerotherapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">IVC filter placement and retrieval</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">DVT/ PE thrombolysis/ thrombectomy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Intravascular Foreign body retrieval</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Adrenal venous sampling</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Parent artery sacrifice - embolisation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Arterial angioplasty/ stenting</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Venous plasty/ stenting</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Gonadal vein embolisation</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- ANAESTHESIA -->
+            <div id="anaesthesia" class="category-card" data-category="anaesthesia">
+                <div class="category-header">
+                    <h2 class="category-title">Anaesthesia</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('anaesthesia'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">All forms of anesthesia, including:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">General anesthesia</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Regional anesthesia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Ultrasound-guided nerve blocks for:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Anesthesia</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Pain management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Difficult intubation management using:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Fibreoptic bronchoscope</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Video laryngoscope</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Advanced monitoring systems, including:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Intraoperative cardiac output monitoring</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Sedation level monitoring</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Advanced vascular access, including:</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">PICC line insertion</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Chemoport insertion</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Hemodialysis (HD) catheter insertion, etc.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Additional Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Preoperative rehabilitation</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Postoperative nutritional therapy</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Advanced cardiac life support</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- LABORATORY SERVICES -->
+            <div id="laboratory-services" class="category-card" data-category="laboratory-services">
+                <div class="category-header">
+                    <h2 class="category-title">Laboratory services</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('laboratory-services'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Histopathology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Histopathology with Frozen Section</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Immuno-Histo-Chemistry</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Cytopathology</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Cytogenetics</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Next Generation Sequencing</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Tumor Markers</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Haematology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Flow Cytometry</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Fluorescence in Situ Hybridization</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Cytogenetics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Clinical Microbiology & Virology</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Real-time PCR</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Clinical Biochemistry</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Organ function and metabolic panels</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Tumor Markers</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Specialized Investigations like protein electrophoresis & immunofixation</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- BLOOD CENTRE -->
+            <div id="blood-centre" class="category-card" data-category="blood-centre">
+                <div class="category-header">
+                    <h2 class="category-title">Blood centre</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('blood-centre'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Blood Centre Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Blood Grouping</span>
+                        </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Crossmatching</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Direct Coombs Test</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Indirect Coombs Test</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Antibody Screening</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Antibody Titre</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Whole Human Blood IP</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Concentrate of Human Red Blood Cells IP</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Platelet Concentrate IP</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Fresh Frozen Plasma BP</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Cryoprecipitate AHF IP</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Single Donor Platelet by Platelet Apheresis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Single Donor Plasma by Plasma Apheresis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Peripheral Blood Stem Cells (Hematopoietic Stem Cells)</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Therapeutic Plasmapheresis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Granulocyte Concentrate (Buffycoat)</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Irradiated Red Cells</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Saline washed Red Cells</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Leucodepleted Red Cells</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Packed Red Cell Aliquot</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Irradiated Platelets</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Washed Platelets</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Leucodepleted Single Donor Platelet by Platelet Apheresis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Washed Single Donor Platelets</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Cryo Poor Plasma</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Leucapheresis (Granulocyte concentrate, Lymphocytes & Mononuclear Cells)</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Erythrocytapheresis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Platelet Rich Plasma</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Leucodepleted Platelets</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Therapeutic Plasmapheresis and Cytapheresis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Cryopreservation – PBSC</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Double Filtration Plasma Pheresis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Therapeutic Phlebotomy</span>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- HAEMATOLOGY AND CLINICAL PATHOLOGY -->
+            <div id="haematology-clinical-pathology" class="category-card" data-category="haematology-clinical-pathology">
+                <div class="category-header">
+                    <h2 class="category-title">Haematology and Clinical pathology</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('haematology-clinical-pathology'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Haematology and Clinical Pathology Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Advanced hematology and coagulation analyzers</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Peripheral smear and bone marrow morphology including special cytochemical staining</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">HPLC system for hemoglobinopathy/Thalassemia work-up</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Multicolor flow cytometry for leukemia/lymphoma immunophenotyping and DNA ploidy analysis</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Minimal residual disease (MRD) detection and stem cell enumeration</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Integrated correlation with cytogenetics and molecular results</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Complete support for the bone marrow transplant program</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Automated urinalysis</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- OTHERS -->
+            <div id="others" class="category-card" data-category="others">
+                <div class="category-header">
+                    <h2 class="category-title">Others</h2>
+                </div>
+                <button class="category-learn-more" onclick="event.stopPropagation(); if(typeof window.openCategoryModal === 'function') { window.openCategoryModal('others'); } else { console.error('openCategoryModal not available'); }">Learn More</button>
+                
+                <div class="category-content" style="display: none;">
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Other Services</h3>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fas fa-check-circle service-check"></i>
+                            <span class="service-text">Emergency Medicine</span>
+                        </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Critical Care Including Specialty ICUs</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Pain & Palliative Care</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Psycho-Oncology</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Clinical Pharmacology</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Community Oncology</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Internal Medicine</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Nutrition & Dietetics</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Ambulance Services</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Cancer Screening & Prevention Clinics</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle service-check"></i>
+                        <span class="service-text">Dental Science</span>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+    <!-- End of Page Content Wrapper -->
+
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+    <script src="../footer-main.js"></script>
+
+    <!-- Chatbox -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../chatbox.js"></script>
+    
+    <!-- Search Functionality -->
+    <script>
+        (function() {
+            'use strict';
+            
+            const searchInput = document.getElementById('serviceSearch');
+            const searchResults = document.getElementById('searchResults');
+            const clearSearchBtn = document.getElementById('clearSearch');
+            const searchAnnouncement = document.getElementById('searchAnnouncement');
+            const categoryCards = document.querySelectorAll('.category-card');
+            const serviceItems = document.querySelectorAll('.service-item');
+            
+            let searchTimeout;
+            let allServices = [];
+            let currentResultIndex = -1;
+            
+            // Build service index on page load
+            function buildServiceIndex() {
+                categoryCards.forEach(card => {
+                    const categoryTitle = card.querySelector('.category-title')?.textContent.trim() || '';
+                    const categoryId = card.getAttribute('data-category') || categoryTitle.toLowerCase().replace(/\s+/g, '-');
+                    
+                    const serviceItemsInCard = card.querySelectorAll('.service-item');
+                    serviceItemsInCard.forEach(item => {
+                        const serviceText = item.querySelector('.service-text')?.textContent.trim() || '';
+                        if (serviceText) {
+                            allServices.push({
+                                text: serviceText,
+                                category: categoryTitle,
+                                categoryId: categoryId,
+                                element: item,
+                                card: card
+                            });
+                        }
+                    });
+                });
+            }
+            
+            // Highlight text in search results
+            function highlightText(text, query) {
+                if (!query) return text;
+                const regex = new RegExp(`(${query})`, 'gi');
+                return text.replace(regex, '<span class="search-highlight">$1</span>');
+            }
+            
+            // Perform search
+            function performSearch(query) {
+                if (!query || query.length < 2) {
+                    searchResults.classList.remove('active');
+                    showAllCategories();
+                    return;
+                }
+                
+                const lowerQuery = query.toLowerCase();
+                const results = allServices.filter(service => 
+                    service.text.toLowerCase().includes(lowerQuery) ||
+                    service.category.toLowerCase().includes(lowerQuery)
+                );
+                
+                displaySearchResults(results, query);
+                filterCategories(results);
+            }
+            
+            // Display search results
+            function displaySearchResults(results, query) {
+                currentResultIndex = -1;
+                
+                if (results.length === 0) {
+                    searchResults.innerHTML = `
+                        <div class="no-results">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <p><strong>No services found</strong></p>
+                            <p>Try searching with different keywords</p>
+                        </div>
+                    `;
+                    searchAnnouncement.textContent = 'No services found. Try different keywords.';
+                    searchInput.setAttribute('aria-expanded', 'true');
+                } else {
+                    let html = `<div class="search-stats">Found ${results.length} service${results.length !== 1 ? 's' : ''}</div>`;
+                    results.forEach((service, index) => {
+                        html += `
+                            <div class="search-result-item" 
+                                 role="option" 
+                                 tabindex="0" 
+                                 data-index="${index}"
+                                 data-category-id="${service.categoryId}"
+                                 aria-selected="false"
+                                 onclick="scrollToService('${service.categoryId}', this)"
+                                 onkeydown="handleResultKeydown(event, '${service.categoryId}', this)">
+                                <div class="search-result-category">${service.category}</div>
+                                <div class="search-result-text">${highlightText(service.text, query)}</div>
+                            </div>
+                        `;
+                    });
+                    searchResults.innerHTML = html;
+                    searchAnnouncement.textContent = `Found ${results.length} service${results.length !== 1 ? 's' : ''}. Use arrow keys to navigate, Enter to select.`;
+                    searchInput.setAttribute('aria-expanded', 'true');
+                }
+                searchResults.classList.add('active');
+            }
+            
+            // Handle keyboard navigation in results
+            window.handleResultKeydown = function(e, categoryId, element) {
+                const items = Array.from(searchResults.querySelectorAll('.search-result-item'));
+                const currentIndex = parseInt(element.getAttribute('data-index'));
+                
+                switch(e.key) {
+                    case 'Enter':
+                        e.preventDefault();
+                        scrollToService(categoryId, element);
+                        break;
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        if (currentIndex < items.length - 1) {
+                            items[currentIndex + 1].focus();
+                            items[currentIndex + 1].setAttribute('aria-selected', 'true');
+                            element.setAttribute('aria-selected', 'false');
+                        }
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        if (currentIndex > 0) {
+                            items[currentIndex - 1].focus();
+                            items[currentIndex - 1].setAttribute('aria-selected', 'true');
+                            element.setAttribute('aria-selected', 'false');
+                        } else {
+                            searchInput.focus();
+                        }
+                        break;
+                    case 'Escape':
+                        e.preventDefault();
+                        searchInput.value = '';
+                        searchResults.classList.remove('active');
+                        showAllCategories();
+                        clearSearchBtn.classList.remove('active');
+                        searchInput.setAttribute('aria-expanded', 'false');
+                        break;
+                }
+            };
+            
+            // Filter categories based on search
+            function filterCategories(results) {
+                if (results.length === 0) {
+                    showAllCategories();
+                    return;
+                }
+                
+                const visibleCategoryIds = new Set(results.map(r => r.categoryId));
+                categoryCards.forEach(card => {
+                    const categoryId = card.getAttribute('data-category') || 
+                                     card.querySelector('.category-title')?.textContent.trim().toLowerCase().replace(/\s+/g, '-') || '';
+                    if (visibleCategoryIds.has(categoryId)) {
+                        card.classList.remove('hidden');
+                        card.classList.add('highlight');
+                        setTimeout(() => card.classList.remove('highlight'), 2000);
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+            
+            // Show all categories
+            function showAllCategories() {
+                categoryCards.forEach(card => {
+                    card.classList.remove('hidden');
+                });
+            }
+            
+            // Scroll to service - now opens modal instead
+            window.scrollToService = function(categoryId, element) {
+                // Clear search first
+                searchInput.value = '';
+                searchResults.classList.remove('active');
+                showAllCategories();
+                clearSearchBtn.classList.remove('active');
+                clearSearchBtn.setAttribute('tabindex', '-1');
+                searchInput.setAttribute('aria-expanded', 'false');
+                
+                // Open the modal for the category
+                if (typeof window.openCategoryModal === 'function') {
+                    window.openCategoryModal(categoryId);
+                } else {
+                    // Fallback: scroll to card if modal function not available
+                    const card = Array.from(categoryCards).find(c => {
+                        const id = c.getAttribute('data-category') || 
+                                  c.querySelector('.category-title')?.textContent.trim().toLowerCase().replace(/\s+/g, '-') || '';
+                        return id === categoryId;
+                    });
+                    
+                    if (card) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        card.classList.add('highlight');
+                        setTimeout(() => card.classList.remove('highlight'), 2000);
+                    }
+                }
+            };
+            
+            // Search input event
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.trim();
+                
+                if (query.length > 0) {
+                    clearSearchBtn.classList.add('active');
+                    clearSearchBtn.setAttribute('tabindex', '0');
+                } else {
+                    clearSearchBtn.classList.remove('active');
+                    clearSearchBtn.setAttribute('tabindex', '-1');
+                    searchResults.classList.remove('active');
+                    showAllCategories();
+                    searchInput.setAttribute('aria-expanded', 'false');
+                }
+                
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    performSearch(query);
+                }, 300);
+            });
+            
+            // Arrow key navigation from input
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowDown' && searchResults.classList.contains('active')) {
+                    e.preventDefault();
+                    const firstResult = searchResults.querySelector('.search-result-item');
+                    if (firstResult) {
+                        firstResult.focus();
+                        firstResult.setAttribute('aria-selected', 'true');
+                    }
+                }
+            });
+            
+            // Clear search
+            clearSearchBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                searchResults.classList.remove('active');
+                showAllCategories();
+                clearSearchBtn.classList.remove('active');
+                clearSearchBtn.setAttribute('tabindex', '-1');
+                searchInput.setAttribute('aria-expanded', 'false');
+                searchInput.focus();
+                searchAnnouncement.textContent = 'Search cleared.';
+            });
+            
+            // Close search results when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchInput.contains(e.target) && 
+                    !searchResults.contains(e.target) && 
+                    !clearSearchBtn.contains(e.target)) {
+                    searchResults.classList.remove('active');
+                }
+            });
+            
+            // Keyboard navigation - Escape key
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    searchInput.value = '';
+                    searchResults.classList.remove('active');
+                    showAllCategories();
+                    clearSearchBtn.classList.remove('active');
+                    clearSearchBtn.setAttribute('tabindex', '-1');
+                    searchInput.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Initialize on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                buildServiceIndex();
+                
+                // Add data attributes to all category cards if not present
+                categoryCards.forEach((card, index) => {
+                    if (!card.getAttribute('data-category')) {
+                        const categoryTitle = card.querySelector('.category-title')?.textContent.trim() || '';
+                        const categoryId = categoryTitle.toLowerCase()
+                            .replace(/[^a-z0-9]+/g, '-')
+                            .replace(/^-+|-+$/g, '');
+                        card.setAttribute('data-category', categoryId);
+                    }
+                });
+            });
+        })();
+    </script>
+    
+    <!-- Sidebar Navigation -->
+    <script>
+        (function() {
+            'use strict';
+            
+            
+            // Scroll animation observer
+            function initScrollAnimations() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, observerOptions);
+                
+                document.querySelectorAll('.category-card').forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    observer.observe(card);
+                });
+            }
+            
+            // Open category modal - ensure it's globally accessible
+            window.openCategoryModal = function(categoryId) {
+                console.log('Opening modal for category:', categoryId);
+                const card = document.getElementById(categoryId) || document.querySelector(`[data-category="${categoryId}"]`);
+                if (!card) {
+                    console.error('Category card not found:', categoryId);
+                    // Try to find by title text
+                    const allCards = document.querySelectorAll('.category-card');
+                    for (let c of allCards) {
+                        const title = c.querySelector('.category-title')?.textContent?.toLowerCase().trim();
+                        if (title && categoryId.toLowerCase().includes(title.replace(/\s+/g, '-')) || title.replace(/\s+/g, '-').includes(categoryId.toLowerCase())) {
+                            card = c;
+                            break;
+                        }
+                    }
+                }
+                if (!card) {
+                    alert('Category not found: ' + categoryId);
+                    return;
+                }
+                
+                const modal = document.getElementById('categoryModal');
+                const modalTitle = document.getElementById('modalTitle');
+                const modalSubtitle = document.getElementById('modalSubtitle');
+                const modalBody = document.getElementById('modalBody');
+                
+                if (!modal || !modalTitle || !modalSubtitle || !modalBody) {
+                    alert('Modal elements not found. Please refresh the page.');
+                    return;
+                }
+                
+                // Get category title
+                const title = card.querySelector('.category-title')?.textContent || '';
+                
+                // Get content - try category-content first, then get all siblings after header
+                let content = card.querySelector('.category-content');
+                
+                if (!content) {
+                    // Create content wrapper from all elements after header
+                    const header = card.querySelector('.category-header');
+                    if (header) {
+                        content = document.createElement('div');
+                        content.className = 'category-content';
+                        let next = header.nextElementSibling;
+                        while (next && !next.classList.contains('category-learn-more')) {
+                            const temp = next.nextElementSibling;
+                            if (!next.classList.contains('category-learn-more')) {
+                                content.appendChild(next.cloneNode(true));
+                            }
+                            next = temp;
+                        }
+                    }
+                }
+                
+                // Set modal title
+                modalTitle.textContent = title;
+                modalSubtitle.textContent = getCategoryDescription(categoryId);
+                
+                // Set modal body content - Convert to list format
+                if (content) {
+                    // Clone the content
+                    const clonedContent = content.cloneNode(true);
+                    clonedContent.style.display = 'block';
+                    
+                    // Make sure all child elements are visible
+                    const allElements = clonedContent.querySelectorAll('*');
+                    allElements.forEach(el => {
+                        // Remove inline display:none styles
+                        if (el.style.display === 'none') {
+                            el.style.display = '';
+                        }
+                        // Also check computed style
+                        const computedStyle = window.getComputedStyle(el);
+                        if (computedStyle.display === 'none') {
+                            el.style.display = 'block';
+                        }
+                    });
+                    
+                    // Convert service items to list format
+                    const subcategories = clonedContent.querySelectorAll('.subcategory');
+                    subcategories.forEach(subcategory => {
+                        const serviceList = subcategory.querySelector('.service-list');
+                        if (serviceList) {
+                            const serviceItems = serviceList.querySelectorAll('.service-item');
+                            if (serviceItems.length > 0) {
+                                // Create a new ul element
+                                const ul = document.createElement('ul');
+                                ul.className = 'modal-service-list';
+                                
+                                // Convert each service item to a list item
+                                serviceItems.forEach(item => {
+                                    const serviceText = item.querySelector('.service-text');
+                                    if (serviceText) {
+                                        const li = document.createElement('li');
+                                        li.className = 'modal-service-item';
+                                        li.textContent = serviceText.textContent.trim();
+                                        ul.appendChild(li);
+                                    }
+                                });
+                                
+                                // Replace the service-list div with the ul
+                                serviceList.parentNode.replaceChild(ul, serviceList);
+                            }
+                        }
+                    });
+                    
+                    // Clear and set modal body
+                    modalBody.innerHTML = '';
+                    modalBody.appendChild(clonedContent);
+                    
+                    console.log('Modal content set:', clonedContent.children.length, 'children');
+                } else {
+                    console.warn('No content found for category:', categoryId);
+                    modalBody.innerHTML = '<p style="padding: 2rem; text-align: center; color: #6b7280;">No content available for this category.</p>';
+                }
+                
+                // Show modal
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            
+            // Close category modal
+            window.closeCategoryModal = function() {
+                const modal = document.getElementById('categoryModal');
+                if (modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            };
+            
+            // Get category description
+            function getCategoryDescription(categoryId) {
+                const descriptions = {
+                    'surgical-oncology': 'Comprehensive surgical cancer treatment services',
+                    'medical-oncology': 'Advanced cancer treatment therapies',
+                    'diagnostic-services': 'State-of-the-art diagnostic imaging and testing',
+                    'radiation-oncology': 'Advanced radiation therapy treatments',
+                    'nuclear-medicine': 'Nuclear medicine and imaging services',
+                    'cardiology': 'Comprehensive cardiac care services',
+                    'neurology': 'Neurological diagnostic and treatment services',
+                    'endocrinology-diabetes': 'Endocrine and diabetes management',
+                    'gastroenterology': 'Gastrointestinal diagnostic and treatment services',
+                    'nephrourology': 'Kidney and urological services',
+                    'paediatric-oncology-haematology': 'Pediatric cancer and blood disorder care',
+                    'clinical-haematology': 'Blood disorder diagnosis and treatment',
+                    'medical-gastroenterology-hepatology': 'Liver and digestive system care',
+                    'non-interventional-cardiology': 'Non-invasive cardiac diagnostic services',
+                    'pulmonology-clinical': 'Clinical respiratory care services',
+                    'interventional-radiology': 'Image-guided interventional procedures',
+                    'anaesthesia': 'Anesthesia and pain management services',
+                    'laboratory-services': 'Comprehensive laboratory testing services',
+                    'blood-centre': 'Blood bank and transfusion services',
+                    'haematology-clinical-pathology': 'Advanced hematology and clinical pathology services',
+                    'others': 'Other specialized medical services'
+                };
+                return descriptions[categoryId] || 'Specialized medical services';
+            }
+            
+            // Close modal on background click
+            document.addEventListener('click', function(e) {
+                const modal = document.getElementById('categoryModal');
+                if (e.target === modal) {
+                    closeCategoryModal();
+                }
+            });
+            
+            // Close modal on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeCategoryModal();
+                }
+            });
+            
+            // Initialize on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Ensure categories are in a grid container
+                const container = document.querySelector('.main-content .container');
+                if (container) {
+                    const firstCard = container.querySelector('.category-card');
+                    if (firstCard && !firstCard.parentElement.classList.contains('categories-grid')) {
+                        const grid = document.createElement('div');
+                        grid.className = 'categories-grid';
+                        
+                        // Move all category cards into grid
+                        const cards = Array.from(container.querySelectorAll('.category-card'));
+                        cards.forEach(card => {
+                            grid.appendChild(card);
+                        });
+                        
+                        // Insert grid at the start of container
+                        container.insertBefore(grid, container.firstChild);
+                    }
+                }
+                
+                // Wrap all category content in category-content divs if not already wrapped
+                document.querySelectorAll('.category-card').forEach((card, index) => {
+                    const header = card.querySelector('.category-header');
+                    if (!header) return;
+                    
+                        // Remove any existing onclick from header
+                        header.removeAttribute('onclick');
+                        card.style.cursor = 'default';
+                        
+                        // Remove icon if present
+                        const icon = card.querySelector('.category-icon');
+                        if (icon) {
+                            icon.remove();
+                        }
+                        
+                        // Make card clickable to open modal
+                        const categoryId = card.getAttribute('data-category') || card.id;
+                        if (categoryId) {
+                        // Ensure Learn More button exists and works
+                        let learnMoreBtn = card.querySelector('.category-learn-more');
+                        if (!learnMoreBtn) {
+                            learnMoreBtn = document.createElement('button');
+                            learnMoreBtn.className = 'category-learn-more';
+                            learnMoreBtn.textContent = 'Learn More';
+                            
+                            // Insert after header, before any content
+                            const headerNext = header.nextElementSibling;
+                            if (headerNext && headerNext.classList.contains('category-content')) {
+                                header.parentNode.insertBefore(learnMoreBtn, headerNext);
+                            } else {
+                                header.parentNode.appendChild(learnMoreBtn);
+                            }
+                        }
+                        
+                        // Always update onclick to ensure it works - remove old handlers first
+                        learnMoreBtn.removeAttribute('onclick');
+                        // Remove all existing event listeners by cloning
+                        const newBtn = learnMoreBtn.cloneNode(true);
+                        learnMoreBtn.parentNode.replaceChild(newBtn, learnMoreBtn);
+                        learnMoreBtn = newBtn;
+                        
+                        // Add new event listener
+                        learnMoreBtn.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            console.log('Learn More clicked for:', categoryId);
+                            if (typeof window.openCategoryModal === 'function') {
+                                window.openCategoryModal(categoryId);
+                            } else {
+                                console.error('openCategoryModal function not available');
+                                alert('Please wait for the page to fully load.');
+                            }
+                        });
+                    }
+                    
+                    // Check if content is already wrapped
+                    if (!card.querySelector('.category-content')) {
+                        // Find all elements after header/button that should be in content
+                        const contentElements = [];
+                        let next = header.nextElementSibling;
+                        while (next && !next.classList.contains('category-card')) {
+                            // Skip the Learn More button
+                            if (!next.classList.contains('category-learn-more')) {
+                                contentElements.push(next);
+                            }
+                            next = next.nextElementSibling;
+                        }
+                        
+                        if (contentElements.length > 0) {
+                            const content = document.createElement('div');
+                            content.className = 'category-content';
+                            content.style.display = 'none';
+                            
+                            contentElements.forEach(el => {
+                                content.appendChild(el);
+                            });
+                            
+                            // Insert after Learn More button
+                            const learnMoreBtn = card.querySelector('.category-learn-more');
+                            if (learnMoreBtn) {
+                                learnMoreBtn.parentNode.insertBefore(content, learnMoreBtn.nextSibling);
+                            } else {
+                                header.parentNode.appendChild(content);
+                            }
+                        }
+                    }
+                });
+                
+                initScrollAnimations();
+            });
+        })();
+    </script>
+    
+    
+    <!-- Category Modal -->
+    <div id="categoryModal" class="category-modal">
+        <div class="category-modal-content">
+            <div class="category-modal-header">
+                <div class="header-content">
+                    <i class="fas fa-pills header-icon"></i>
+                    <div class="header-text">
+                        <h2 id="modalTitle">Category Name</h2>
+                        <div class="subtitle" id="modalSubtitle">Category description</div>
+                    </div>
+                </div>
+                <button class="category-modal-close" onclick="closeCategoryModal()" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="category-modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+            <div class="category-modal-footer">
+                <button class="modal-close-btn" onclick="closeCategoryModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+

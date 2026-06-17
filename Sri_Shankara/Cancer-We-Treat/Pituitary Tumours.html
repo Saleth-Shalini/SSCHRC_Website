@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pituitary Tumours: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pituitary Tumours
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Pituitary tumours, also known as pituitary adenomas, begin in the pituitary gland. They are almost always benign (non-cancerous), but they can lead to other serious medical conditions.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The problems caused by these tumours can be due to:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>The overproduction or underproduction of hormones.</li>
+                    <li>The tumour growing large enough to press against surrounding areas, such as the optic nerves, which can affect vision.</li>
+                </ul>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The pituitary gland, situated at the base of the brain, is about the size of a pea. Despite its small size, it is vital and is often referred to as the "master gland." It is responsible for producing:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li><strong>Growth hormone (GH):</strong> Essential for growth in children and metabolism in adults.</li>
+                    <li><strong>Prolactin:</strong> A hormone important for breast milk production.</li>
+                    <li><strong>Other controlling hormones:</strong> Hormones that regulate the function of other glands, including the thyroid, adrenal glands, ovaries (in women), and testes (in men).</li>
+                </ul>
+            </div>
+
+            <!-- Pituitary Tumour Types -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Types of Pituitary Tumours
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Pituitary tumours may be present in up to 15% to 20% of the population, but tumours requiring treatment are less common and are often not diagnosed. The two main types are:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Functioning Tumours</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3 text-sm">
+                                These tumours cause the body to produce an excessive amount of certain hormones. Hormones that may be overproduced include:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-4 text-sm">
+                                <li><strong>Prolactin:</strong> A tumour that makes too much prolactin is called a prolactinoma. This is the most frequent type of pituitary tumour and stimulates breast growth and milk production in women.</li>
+                                <li><strong>Growth hormone (GH):</strong> Tumours that overproduce GH cause acromegaly (gradual enlargement of body parts) in adults and gigantism (abnormally large growth) in children.</li>
+                                <li><strong>Adrenocorticotropic hormone (ACTH):</strong> This hormone signals the adrenal glands to produce cortisol, which manages the body's stress response, blood pressure, and heart function. Excessive ACTH leads to Cushing's disease.</li>
+                                <li><strong>Thyroid-stimulating hormone (TSH):</strong> Tumours that make too much TSH cause the thyroid to release high levels of thyroxine, resulting in hyperthyroidism (overactive thyroid). This is the most rare type of pituitary tumour.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Non-functioning Tumours</h4>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                This is the second most frequent type of pituitary tumour and does not produce hormones that cause noticeable symptoms. They can, however, cause problems if they grow large and press against surrounding structures, such as the optic or other nerves. They can also interfere with the pituitary gland's normal hormone production.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 rounded-xl p-6 border-l-4" style="border-color: #DC143C;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Pituitary Cancer (Carcinoma)</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            In rare instances, the cells within a pituitary tumour can become cancerous and metastasise (spread) to other parts of the body. Most pituitary cancers produce hormones, typically prolactin and ACTH.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pituitary Tumour Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases your probability of developing a disease. The only proven risk factor for pituitary tumours is inheriting a condition that predisposes you to developing one, such as:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Multiple Endocrine Neoplasia (MEN1)</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family Isolated Pituitary Adenoma (FIPA)</h4>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mt-6" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to note that not everyone with MEN1 or FIPA will develop a pituitary tumour. If you or someone in your family has one of these disorders, it is advisable to discuss your risk with your doctor.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pituitary Tumour Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Pituitary gland tumours often do not present with symptoms in the early stages, and when they do, they vary widely from person to person. Many patients may live with these tumours for years before they are discovered. Symptoms generally develop slowly and can often resemble those of other medical conditions.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Symptoms may occur if a tumour grows too large and:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Presses on normal pituitary tissue: This can disrupt the gland's function, causing a decrease in pituitary hormone levels.</li>
+                    <li>Presses on other structures: This can result in headaches, double vision, and loss of vision due to pressure on the optic nerves.</li>
+                </ul>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    When a pituitary tumour causes other glands to produce too much hormone, the symptoms will depend on the glands involved.
+                </p>
+            </div>
+
+            <!-- Symptoms by Hormone Type -->
+            <div class="space-y-6">
+                <!-- ACTH Symptoms -->
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Adrenocorticotropic Hormone (ACTH) - Cushing's Disease</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #2E8B57;">
+                            <p class="text-gray-700 font-semibold text-sm">Rounded "moon" face</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #FF4500;">
+                            <p class="text-gray-700 font-semibold text-sm">Weight gain, especially in the trunk and abdomen</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #1e40af;">
+                            <p class="text-gray-700 font-semibold text-sm">Thinning of the skin</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #2E8B57;">
+                            <p class="text-gray-700 font-semibold text-sm">Wide purple-red stretch marks</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #FF4500;">
+                            <p class="text-gray-700 font-semibold text-sm">Diabetes</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #1e40af;">
+                            <p class="text-gray-700 font-semibold text-sm">High blood pressure</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #2E8B57;">
+                            <p class="text-gray-700 font-semibold text-sm">Muscle weakness</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #FF4500;">
+                            <p class="text-gray-700 font-semibold text-sm">Slowing of growth (in children)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GH Symptoms -->
+                <div class="bg-gradient-to-r from-orange-50 via-white to-red-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Growth Hormone (GH) - Acromegaly (adults), Gigantism (children)</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #FF4500;">
+                            <p class="text-gray-700 font-semibold text-sm">Hands, feet, jaw, and/or forehead gradually grow larger</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #DC143C;">
+                            <p class="text-gray-700 font-semibold text-sm">Coarse facial features (e.g., thickened skin, enlarged nose or lips)</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #FF4500;">
+                            <p class="text-gray-700 font-semibold text-sm">Heart problems</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #DC143C;">
+                            <p class="text-gray-700 font-semibold text-sm">High blood pressure</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #FF4500;">
+                            <p class="text-gray-700 font-semibold text-sm">Excessive sweating</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TSH Symptoms -->
+                <div class="bg-gradient-to-r from-blue-50 via-white to-cyan-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Thyroid-Stimulating Hormone (TSH) - Hyperthyroidism</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #1e40af;">
+                            <p class="text-gray-700 font-semibold text-sm">Weight loss</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #06b6d4;">
+                            <p class="text-gray-700 font-semibold text-sm">Nervousness</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #1e40af;">
+                            <p class="text-gray-700 font-semibold text-sm">Rapid or irregular heartbeat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prolactin Symptoms -->
+                <div class="bg-gradient-to-r from-purple-50 via-white to-pink-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #9333ea;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Prolactin - Prolactinoma</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">In women:</h4>
+                            <div class="grid gap-3">
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #9333ea;">
+                                    <p class="text-gray-700 font-semibold text-sm">Milky discharge from the nipples</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #ec4899;">
+                                    <p class="text-gray-700 font-semibold text-sm">Irregular or absent menstrual periods</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #9333ea;">
+                                    <p class="text-gray-700 font-semibold text-sm">Infertility</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">In men:</h4>
+                            <div class="grid gap-3">
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #9333ea;">
+                                    <p class="text-gray-700 font-semibold text-sm">Erectile dysfunction and/or impotence</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #ec4899;">
+                                    <p class="text-gray-700 font-semibold text-sm">Infertility</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #9333ea;">
+                                    <p class="text-gray-700 font-semibold text-sm">Loss of body hair</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #ec4899;">
+                                    <p class="text-gray-700 font-semibold text-sm">Decreased sex drive</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 card-shadow hover-scale border-t-2" style="border-color: #9333ea;">
+                                    <p class="text-gray-700 font-semibold text-sm">Rarely, increased breast growth (gynecomastia)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mt-8" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    These symptoms do not automatically mean you have a pituitary tumour, but it is important to discuss any changes with your doctor as they may signal other health issues.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pituitary Tumour Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Diagnosing pituitary tumours can be challenging, especially in the early stages, leading many to remain undiagnosed for years. The blood tests required for diagnosis can be complex and demand specialised expertise. Our expert endocrinologists and neurosurgeons at SSCHRC are highly skilled and experienced in diagnosing pituitary tumours.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If you have symptoms that may suggest a pituitary tumour, your doctor will perform an examination and inquire about your personal and family health history.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    One or more of the following diagnostic tests may be used to identify a pituitary tumour, determine its size, and monitor the effectiveness of treatment:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Blood Tests</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Urine Tests</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Saliva Tests</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Specialised Testing</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Frequent sampling of blood, saliva, and/or urine
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 md:col-span-2" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Imaging Tests</h4>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 text-sm">
+                        <li>MRI (Magnetic Resonance Imaging) scans</li>
+                        <li>CT or CAT (Computed Axial Tomography) scans</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment for Pituitary Tumours
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    For the best chance of successful treatment, it is important to be under the care of experts who specialise in pituitary tumours and treat a large number of patients. The experienced physicians at SSCHRC customise care plans to provide the most advanced treatments while minimising the impact on your body.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Your specialised medical team may include neurosurgeons, endocrinologists, neuroradiologists, pathologists, neuro-ophthalmologists, and radiation oncologists. The team meets regularly to discuss your care and communicates closely with you to keep you informed of your progress.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The best treatment options will be discussed with your doctor upon diagnosis and depend on several factors, including the tumour's location, size, and the specific hormones it affects. Your treatment will be personalised to your individual needs. One or more of the following therapies may be recommended to treat the tumour or help relieve symptoms:
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        The pituitary tumour may be surgically removed. As with all surgery, pituitary tumour surgery is most successful when performed by a specialist with extensive experience in the procedure. The neurosurgeon's expertise is particularly crucial if surgery is part of your treatment, as the pituitary gland and nearby structures can be vulnerable to damage during the procedure. SSCHRC surgeons are among the most skilled and recognised globally, performing a high volume of pituitary tumour surgeries each year.
+                    </p>
+                </div>
+
+                <!-- Medicine -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Medicine</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        You may be prescribed one or more medicines to help reduce hormone levels or shrink the pituitary tumour. Hormone replacement therapy may also be administered if your natural hormone levels are low.
+                    </p>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC offers the most advanced radiation treatments for pituitary tumours. New radiation therapy techniques and exceptional skill enable SSCHRC doctors to target pituitary tumours with greater precision, delivering the maximum necessary radiation with the least damage to surrounding healthy cells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre of Excellence in Ophthalmic Oncology - Sri Shankara Cancer Hospital</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Prevent header menu from looking over-extended */
+        #dynamic-header .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-menu .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-item {
+            padding: 0.5rem 0.65rem !important;
+            gap: 0.5rem;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* FAQ Accordion Styles */
+        .faq-accordion {
+            width: 100%;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .faq-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-header:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-header.active {
+            background: #f0fdf4;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+        
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            color: #2E8B57;
+            font-size: 1.25rem;
+        }
+        
+        .faq-header.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-content.active {
+            max-height: 1000px;
+            padding: 1.5rem;
+        }
+        
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .faq-answer ul {
+            margin-top: 0.75rem;
+            margin-left: 1.5rem;
+            list-style-type: disc;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/opthalmic.jpg" 
+                alt="Ophthalmic Oncology Centre of Excellence"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/opthalmic.jpg" 
+                alt="Ophthalmic Oncology Centre of Excellence"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: Understanding Eye Cancer -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Understanding Eye Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Eye cancer, or ocular malignancy, encompasses a diverse group of cancers that can develop within the eye or in structures surrounding it. While rare compared to other malignancies, they represent serious threats to both vision and life. Modern advances in diagnostic imaging, chemotherapy delivery, radiation techniques, and surgical innovation have dramatically transformed treatment, enabling vision preservation in the majority of cases while maintaining excellent survival outcomes.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Eye cancers range from highly curable intraocular malignancies in children to more aggressive systemic cancers in adults. Early detection and specialized, multidisciplinary care are critical to achieving the best functional and survival outcomes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Common Types of Ocular Cancer -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Common Types of Ocular Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Retinoblastoma -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Retinoblastoma: The Most Common Childhood Eye Cancer</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Retinoblastoma is the most common eye cancer in children, occurring in approximately 1 in 20,000 births worldwide. It develops in the developing retina (the light-sensitive tissue at the back of the eye) and accounts for 2–3% of all childhood cancers. The disease can occur in one eye (unilateral, ~60% of cases) or both eyes (bilateral, ~40% of cases), with bilateral cases always representing hereditary disease.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Key Facts About Retinoblastoma:</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Typical presentation age:</strong> Most commonly diagnosed before age 5, with unilateral disease presenting at a mean age of 24 months and bilateral disease at 15 months.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Genetic basis:</strong> About 40% of cases are hereditary, caused by mutations in the RB1 gene (a tumor suppressor gene). Non-hereditary (sporadic) cases result from de novo mutations occurring only in eye cells.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Bilateral manifestation:</strong> All cases of bilateral retinoblastoma are hereditary, requiring genetic testing and lifelong surveillance. Rarely, trilateral retinoblastoma occurs—bilateral eye disease plus a midline brain tumor (pineal region)—in approximately 2–5% of hereditary cases.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                        <p class="text-gray-700 leading-relaxed">
+                            <strong>Outcomes:</strong> Retinoblastoma represents one of the oncological success stories: with contemporary globe-sparing treatment strategies, eye salvage rates exceed 75–95% (depending on disease stage), and overall survival rates exceed 95% in developed countries.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Uveal Melanoma -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Uveal (Intraocular) Melanoma</h3>
+                    
+                    <div class="space-y-4">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Uveal melanoma is the most common intraocular malignancy in adults, arising from melanocytes (pigmented cells) in the iris, ciliary body, or choroid (the uveal tract)—the middle pigmented layer of the eye. Unlike cutaneous melanoma, uveal melanoma is not related to sun exposure and occurs sporadically.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Landmark clinical trials have demonstrated that enucleation (eye removal) and brachytherapy (radioactive plaque therapy) result in equivalent long-term mortality rates, establishing that globe-sparing approaches are appropriate for appropriately selected tumors. Today, brachytherapy is the preferred globe-sparing treatment, allowing preservation of vision while achieving excellent disease control.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Conjunctival Cancers -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Conjunctival Cancers</h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Ocular Surface Squamous Neoplasia (OSSN) encompasses a spectrum of dysplastic and malignant lesions affecting the conjunctiva and cornea. Risk factors include chronic sun exposure, human papillomavirus (HPV) infection, and immunosuppression. Treatment has evolved from exclusively surgical excision to include topical pharmacotherapy, reducing recurrence rates and preserving ocular surface health. Other conjunctival cancers include conjunctival melanoma and rare lymphomas affecting the ocular surface.
+                    </p>
+                </div>
+
+                <!-- Lymphomas of the Orbit -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Lymphomas of the Orbit and Ocular Adnexa</h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Orbital lymphomas represent a diverse group of lymphoid malignancies affecting the space surrounding the eye. The majority are B-cell lymphomas, ranging from indolent (low-grade) to aggressive (high-grade) subtypes. Low-grade orbital lymphomas, such as follicular lymphoma and extranodal marginal zone lymphoma, have favorable prognoses with 10-year disease-specific survival rates as high as 94%, particularly when treated with external beam radiation therapy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Diagnosis and Advanced Imaging -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis and Advanced Imaging
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Accurate, timely diagnosis is essential for optimizing treatment outcomes in ocular oncology. Modern diagnosis integrates clinical examination with sophisticated imaging technologies.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Clinical Presentation -->
+                <div class="card-shadow rounded-xl p-8 bg-gray-50">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Clinical Presentation</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Symptoms vary by cancer type and location but may include:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-green-600 mr-3 mt-2"></i>
+                                <span>Blurred or distorted vision</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-green-600 mr-3 mt-2"></i>
+                                <span>Floaters or flashes of light (vitreous involvement)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-green-600 mr-3 mt-2"></i>
+                                <span>Visual field defects (peripheral vision loss)</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-green-600 mr-3 mt-2"></i>
+                                <span>Eye pain or redness (surface involvement or secondary glaucoma)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-green-600 mr-3 mt-2"></i>
+                                <span>Visible lesion or abnormal appearance of the iris or white of the eye</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-green-600 mr-3 mt-2"></i>
+                                <span>Proptosis (eye bulging, suggesting orbital tumor)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-sm text-green-600 mr-3 mt-2"></i>
+                                <span>Swollen eyelid or orbital mass (orbital or periocular involvement)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-4 font-semibold">
+                        Any persistent visual symptoms or visible eye abnormality warrants immediate evaluation by an ophthalmologist.
+                    </p>
+                </div>
+
+                <!-- Diagnostic Imaging Technologies -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Diagnostic Imaging Technologies</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-camera mr-3" style="color: #1e40af;"></i>
+                                Fundus Photography and Widefield Imaging
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Widefield fundus cameras enable capture of 200-degree fundus images (ultrawidefield), documenting the entire tumor base and its relationship to critical posterior pole structures with a single photograph. These images provide standardized documentation for monitoring tumor progression and response to treatment.
+                            </p>
+                        </div>
+
+                        <div class="bg-green-50 rounded-lg p-6 border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-wave-square mr-3" style="color: #2E8B57;"></i>
+                                B-Scan Ultrasonography
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Posterior B-scan ultrasound (10–20 MHz) characterizes tumor dimensions, internal acoustic features (including presence of internal vascularity, cystic spaces, and calcifications), and associated retinal detachments. The pathognomonic "collar-stud" appearance on B-scan is nearly diagnostic of uveal melanoma. Anterior B-scan (ultrasound biomicroscopy, UBM) using higher frequencies (35+ MHz) provides superior visualization of iris, ciliary body, and anterior choroid lesions.
+                            </p>
+                        </div>
+
+                        <div class="bg-purple-50 rounded-lg p-6 border-l-4" style="border-color: #7c3aed;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-eye mr-3" style="color: #7c3aed;"></i>
+                                Optical Coherence Tomography (OCT)
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                While standard OCT provides limited penetration, anterior segment OCT offers non-contact high-resolution imaging of iris and anterior segment tumors. OCT also evaluates secondary retinal morphologic changes such as cystoid macular edema or shallow subretinal fluid associated with intraocular tumors.
+                            </p>
+                        </div>
+
+                        <div class="bg-orange-50 rounded-lg p-6 border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-magnet mr-3" style="color: #FF4500;"></i>
+                                Magnetic Resonance Imaging (MRI)
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Fat-suppressed MRI is superior to CT for imaging orbital tumors and determining extraocular extension. MRI provides excellent soft tissue contrast and multiplanar imaging capabilities essential for treatment planning, particularly for radiation therapy.
+                            </p>
+                        </div>
+
+                        <div class="bg-teal-50 rounded-lg p-6 border-l-4" style="border-color: #14b8a6;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-vial mr-3" style="color: #14b8a6;"></i>
+                                Indocyanine Green (ICG) Angiography
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Particularly useful in characterizing uveal melanomas, ICG angiography identifies intrinsic tumor vasculature and helps differentiate melanomas from benign lesions such as nevi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tissue Diagnosis -->
+                <div class="card-shadow rounded-xl p-8 bg-gray-50">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Tissue Diagnosis and Molecular Testing</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        While many ocular cancers can be diagnosed clinically based on imaging characteristics, biopsy may be necessary for ambiguous cases or when tissue diagnosis will alter management. Modern biopsies employ:
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">Fine-needle aspiration biopsy (FNAB)</h4>
+                            <p class="text-gray-700 text-sm">Low-risk sampling technique for determining tumor histology and genetic characteristics.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">RB1 Gene Testing</h4>
+                            <p class="text-gray-700 text-sm">Genetic testing identifies RB1 mutations in retinoblastoma, confirming hereditary disease. Hereditary disease mandates lifelong ocular surveillance, genetic counseling, and screening for secondary cancers.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">Cytomorphology and Molecular Profiling</h4>
+                            <p class="text-gray-700 text-sm">Gene expression profiling and chromosomal analysis provide prognostic information, identify treatment-resistant phenotypes, and predict metastatic risk, particularly in uveal melanoma.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Treatment Approaches -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Approaches: Globe-Sparing Strategies
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Modern ophthalmic oncology prioritizes vision preservation and globe salvage whenever oncologically safe. Treatment selection depends on tumor type, size, location, and extent of disease, and is individualized through multidisciplinary tumor board review.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Intra-Arterial Chemotherapy -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-syringe text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Intra-Arterial Chemotherapy (IAC): The Revolution in Retinoblastoma Treatment</h3>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Intra-arterial chemotherapy (IAC), also called superselective ophthalmic artery chemotherapy, has revolutionized retinoblastoma treatment, achieving unprecedented globe salvage rates and reducing the need for external beam radiation and enucleation.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-cog mr-2 text-sm" style="color: #2E8B57;"></i>
+                                How It Works
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                During a brief interventional radiology procedure, a microcatheter is advanced into the ophthalmic artery supplying the affected eye. Chemotherapy (typically melphalan, cisplatin, or topotecan) is infused directly into the eye, delivering extremely high drug concentrations to the tumor while minimizing systemic exposure. This targeted delivery maximizes tumor kill while reducing toxicity to distant healthy tissues.
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6 border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-md mr-2 text-sm" style="color: #2E8B57;"></i>
+                                Exceptional Outcomes
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Eye salvage rates are high across disease stages, ranging from 95–100% for intermediate-risk eyes to 66–100% for advanced but salvageable eyes. Overall eye salvage rates range from 76.5% to 85%.
+                            </p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4" style="border-color: #1e40af;">
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-check-circle mr-2 text-sm" style="color: #1e40af;"></i>
+                                Clinical Advantages
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Shortens time to tumor control, reduces relapse rates, is effective against vitreous and subretinal disease, and preserves vision in the majority of salvaged eyes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intravitreal Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-eye-dropper text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Intravitreal Chemotherapy</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Intravitreal chemotherapy (IVC) involves direct injection of chemotherapy into the vitreous cavity, achieving high intracellular drug concentrations at the posterior segment. This approach is particularly effective for vitreous seeding—free-floating tumor cells in the gel-like vitreous fluid that are difficult to treat with systemic chemotherapy or brachytherapy. Common agents include melphalan and topotecan. IVC is often combined with other modalities (IAC, external beam radiation) as part of multimodal treatment in advanced eyes.
+                    </p>
+                </div>
+
+                <!-- Brachytherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-radiation text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Brachytherapy: Radioactive Plaque Therapy</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Episcleral brachytherapy involves surgical placement of a radioactive plaque (usually iodine-125 or ruthenium-106) against the tumor, delivering focused external radiation over several days. Careful placement, confirmed with posterior B-scan ultrasound, ensures optimal tumor coverage and minimal radiation to adjacent structures.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Brachytherapy is the gold standard for uveal melanoma, offering excellent disease control with globe salvage and vision preservation in the majority of cases. Landmark studies have established that vision-preserving treatment is oncologically sound. It is also an effective, vision-preserving option for small to medium retinoblastoma tumors, but is generally limited to tumors covering 30% or less of the globe.
+                    </p>
+                </div>
+
+                <!-- External Beam Radiation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-radiation-alt text-2xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">External Beam Radiation Therapy (EBRT)</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Traditional whole-eye external beam radiation has largely been replaced by more targeted approaches due to late effects. However, EBRT remains appropriate in select scenarios:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-purple-600 mr-3 mt-2"></i>
+                            <span>Bilateral retinoblastoma not responding to chemotherapy.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-purple-600 mr-3 mt-2"></i>
+                            <span>Extraocular disease.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-purple-600 mr-3 mt-2"></i>
+                            <span>Trilateral disease (pineal region involvement).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-purple-600 mr-3 mt-2"></i>
+                            <span>Orbital lymphoma (as primary therapy).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-purple-600 mr-3 mt-2"></i>
+                            <span>Conjunctival or ocular surface cancers.</span>
+                        </li>
+                    </ul>
+                    <p class="text-lg text-gray-700 mt-4 leading-relaxed">
+                        Modern intensity-modulated radiation therapy (IMRT) provides superior tumor conformality and reduced dose to normal structures compared to traditional techniques.
+                    </p>
+                </div>
+
+                <!-- Surgical Resection and Enucleation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ccfbf1;">
+                            <i class="fas fa-cut text-2xl" style="color: #14b8a6;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Surgical Resection and Enucleation</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Surgical resection of select iris and ciliary body melanomas may preserve the eye while achieving local control. Specialized surgical techniques allow anterior segment reconstruction while maintaining visual potential.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Enucleation (surgical removal of the entire eye) remains necessary for:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-teal-600 mr-3 mt-2"></i>
+                            <span>Large tumors unlikely to respond to globe-sparing therapy.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-teal-600 mr-3 mt-2"></i>
+                            <span>Tumors involving the optic nerve or extensive extraocular extension.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-teal-600 mr-3 mt-2"></i>
+                            <span>Painful blind eyes with secondary glaucoma.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-teal-600 mr-3 mt-2"></i>
+                            <span>Tumors causing orbital cellulitis or uncontrollable pain.</span>
+                        </li>
+                    </ul>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Following enucleation, orbital reconstruction with an orbital implant (bone, silicone, or acrylic) restores orbital volume and allows fitting of a cosmetically appealing ocular prosthesis (artificial eye).
+                    </p>
+                </div>
+
+                <!-- Topical Pharmacotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-prescription-bottle text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Topical Pharmacotherapy for Ocular Surface Tumors</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Ocular Surface Squamous Neoplasia (OSSN) treatment has evolved dramatically, with topical chemotherapy now offering excellent results with lower recurrence and fewer surgical complications compared to surgery alone.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">Topical 5-Fluorouracil (5-FU)</h4>
+                            <p class="text-gray-700 text-sm">Achieves 81–100% resolution rates with remarkably low recurrence (0–4%).</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">Topical Interferon Alfa-2b (IFN)</h4>
+                            <p class="text-gray-700 text-sm">Demonstrates 81–100% resolution rates with low recurrence, along with good tolerability.</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">Mitomycin C (MMC)</h4>
+                            <p class="text-gray-700 text-sm">Applied as topical drops or intraoperative augmentation to surgical excision, it reduces recurrence. Intraoperative mitomycin C combined with conjunctival grafting reduces recurrence to 12.5% compared to 35.6% with bare sclera technique alone.</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">Topical Cidofovir</h4>
+                            <p class="text-gray-700 text-sm">A nucleotide analog valuable as a second-line agent for OSSN resistant to other therapies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ocular Surface Reconstruction -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-hand-holding-medical text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Ocular Surface Reconstruction</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Advanced cases involving extensive conjunctival and corneal involvement may require:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span><strong>Amniotic membrane grafting:</strong> Preserves ocular surface integrity and reduces inflammation.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span><strong>Buccal mucosa grafting:</strong> Reconstructs conjunctival fornix and provides mucin-secreting epithelium.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                            <span><strong>Staged surgical procedures:</strong> For recurrent disease with symblepharon (conjunctival adhesion) and eyelid contracture, staged surgery with collaboration between anterior segment and oculoplastic specialists may be necessary.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Special Considerations and Treatment Outcomes -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Retinoblastoma: Special Considerations
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Hereditary Retinoblastoma -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Hereditary Retinoblastoma and Genetic Testing</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        About 40% of retinoblastoma cases are hereditary, caused by germline RB1 mutations. Identifying hereditary cases is critical because:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-dna mr-3" style="color: #2E8B57;"></i>
+                                Bilateral Disease Risk
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Patients with germline RB1 mutations have a 63.8% risk of bilateral manifestation.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-brain mr-3" style="color: #2E8B57;"></i>
+                                Trilateral Disease
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Approximately 2–5% of hereditary cases develop midline brain tumors (usually pineal region), requiring CNS surveillance.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-3" style="color: #2E8B57;"></i>
+                                Increased Cancer Risk
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Hereditary retinoblastoma survivors are at lifelong risk for secondary cancers (osteosarcoma, soft tissue sarcomas, melanoma), necessitating ongoing surveillance and cancer avoidance counseling.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-users mr-3" style="color: #2E8B57;"></i>
+                                Family Implications
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                First-degree relatives of germline mutation carriers have a ~50% risk of inheriting the mutation and consequent cancer risk, requiring genetic counseling and preventive monitoring.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-6 leading-relaxed">
+                        All children diagnosed with retinoblastoma should receive genetic counseling and RB1 testing to identify hereditary cases, enabling appropriate surveillance, treatment planning, and family screening.
+                    </p>
+                </div>
+
+                <!-- Treatment Intensity Stratification -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Treatment Intensity Stratification</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Contemporary management employs International Classification of Retinoblastoma (ICRB) risk stratification, which predicts outcomes based on tumor size, location, and vitreous involvement.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                            <h4 class="font-semibold text-gray-900 mb-2">Group A–D eyes</h4>
+                            <p class="text-gray-700 text-sm">Generally salvageable with globe-sparing approaches (IAC, intravitreal chemotherapy, brachytherapy).</p>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-4 border-l-4" style="border-color: #dc2626;">
+                            <h4 class="font-semibold text-gray-900 mb-2">Group E eyes</h4>
+                            <p class="text-gray-700 text-sm">Worst prognosis; high enucleation rates; reserved for eyes where vision preservation is unlikely.</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-4 leading-relaxed">
+                        This risk-stratified approach allows treatment intensity matching to disease severity, sparing systemic toxicity in low-risk cases while delivering intensive therapy for advanced disease.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5b: Treatment Outcomes -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Outcomes and Long-Term Survivor Issues
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Survival Outcomes -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Survival Outcomes</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Modern retinoblastoma management achieves extraordinary survival rates:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-green-50 rounded-lg p-6 border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Overall survival</h4>
+                            <p class="text-3xl font-bold text-green-600 mb-2">>95%</p>
+                            <p class="text-gray-700">in developed countries with access to modern treatment.</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Unilateral disease</h4>
+                            <p class="text-3xl font-bold text-blue-600 mb-2">~98%</p>
+                            <p class="text-gray-700">survival rate.</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-6 border-l-4" style="border-color: #7c3aed;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Bilateral disease</h4>
+                            <p class="text-3xl font-bold text-purple-600 mb-2">~90%</p>
+                            <p class="text-gray-700">survival rate.</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-6 border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Extraocular disease at diagnosis</h4>
+                            <p class="text-3xl font-bold text-orange-600 mb-2">~85%</p>
+                            <p class="text-gray-700">survival with intensive multimodal therapy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision Outcomes -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Vision Outcomes After Globe-Sparing Treatment</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        While enucleation eliminates cancer risk, globe-sparing treatment in successfully salvaged eyes preserves the potential for useful vision. Vision outcomes are variable and depend on tumor location, treatment modality, radiation dose to critical structures, and individual healing responses.
+                    </p>
+                </div>
+
+                <!-- Late Effects -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Late Effects After Retinoblastoma Treatment</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Successful retinoblastoma survivors face potential long-term complications related to treatment:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Ocular Late Effects:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                    <span>Cataracts: Radiation-induced; may require surgical management.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                    <span>Radiation retinopathy: Ischemic retinal changes from external beam radiation or plaque therapy.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                    <span>Optic nerve atrophy: From radiation or tumor involvement.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                    <span>Secondary glaucoma: Related to radiation, tumor-induced inflammation, or neovascularization.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-red-600 mr-3 mt-2"></i>
+                                    <span>Phthisis bulbi: End-stage eye atrophy.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Systemic Late Effects in Hereditary Retinoblastoma Survivors:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Secondary malignancies: Develop in ~50% of hereditary RB survivors by age 50, related to germline RB1 mutation and treatment-related radiation.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Growth and development: Facial/orbital asymmetry from radiation or enucleation.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Psychosocial effects: Vision loss impacts learning, socialization, and psychological adjustment.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-6 leading-relaxed">
+                        Comprehensive lifelong follow-up with ophthalmology, pediatric oncology, and other specialists is essential for hereditary retinoblastoma survivors.
+                    </p>
+                </div>
+
+                <!-- Uveal Melanoma Metastatic Disease -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Uveal Melanoma Metastatic Disease</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Despite excellent local control with globe-sparing therapy, uveal melanoma has a significant propensity for distant metastasis, most commonly to the liver. Local treatment choice does not influence systemic disease risk.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Modern management emphasizes:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Baseline surveillance imaging (liver ultrasound or CT) for occult metastases.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Regular follow-up imaging during treatment and long-term follow-up.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Referral for systemic therapy if metastases develop (immunotherapy, targeted therapy, or chemotherapy).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Multidisciplinary Team Approach -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    The Multidisciplinary Team Approach
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Optimal ocular oncology care requires seamless collaboration among numerous specialists, particularly in complex cases.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Core Medical Team -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Core Medical Team</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-eye mr-3" style="color: #1e40af;"></i>
+                                Ophthalmologist/Neuro-ophthalmologist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Leads team for intraocular disease, performing diagnostic examination under anesthesia (EUA) and directing treatment planning.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-md mr-3" style="color: #1e40af;"></i>
+                                Pediatric Oncologist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Leads for extraocular disease or systemic involvement; coordinates chemotherapy.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-microscope mr-3" style="color: #1e40af;"></i>
+                                Ocular Pathologist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Diagnoses histology and performs molecular studies on tissue samples.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-radiation mr-3" style="color: #1e40af;"></i>
+                                Radiation Oncologist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Plans and delivers radiation therapy (external beam or brachytherapy).
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-x-ray mr-3" style="color: #1e40af;"></i>
+                                Neuro-Interventional Radiologist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Performs intra-arterial chemotherapy infusions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surgical and Procedural Specialists -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Surgical and Procedural Specialists</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-cut mr-3" style="color: #2E8B57;"></i>
+                                Pediatric Surgeon
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Performs biopsies, tumor resections, and orbital procedures.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-hand-holding-medical mr-3" style="color: #2E8B57;"></i>
+                                Oculoplastic Surgeon
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Manages eyelid tumors, ocular surface reconstruction, orbital reconstruction, and orbital xenography.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-eye mr-3" style="color: #2E8B57;"></i>
+                                Orbital Surgeon
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Specialized in complex orbital disease.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-stethoscope mr-3" style="color: #2E8B57;"></i>
+                                Retinal Specialist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Manages intraocular complications and provides specialized retinal/vitreous care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supportive Care Team -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Supportive Care and Psychosocial Team</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-nurse mr-3" style="color: #FF4500;"></i>
+                                Pediatric Nurses
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Provide specialized nursing care, symptom management, family education.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-tie mr-3" style="color: #FF4500;"></i>
+                                Nurse Specialist/Coordinator
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Serves as the central point of contact, coordinating care and supporting families through diagnosis, treatment, and survivorship.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-brain mr-3" style="color: #FF4500;"></i>
+                                Clinical Psychologist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Addresses anxiety, depression, adjustment disorders, and post-traumatic stress.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-hands-helping mr-3" style="color: #FF4500;"></i>
+                                Social Worker
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Coordinates resources, addresses financial concerns, assists with practical needs.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-child mr-3" style="color: #FF4500;"></i>
+                                Child Life Specialist
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Provides emotional support, procedural preparation, and coping strategies for children.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-dna mr-3" style="color: #FF4500;"></i>
+                                Genetic Counselor
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Educates families about inheritance patterns, RB1 testing, and implications for relatives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coordinated Tumor Board -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Coordinated Tumor Board</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Every newly diagnosed child (particularly with retinoblastoma) undergoes multidisciplinary tumor board review, where the entire team collectively reviews clinical and imaging data to recommend personalized treatment plans. Cases are re-reviewed when disease recurs or when major decisions arise, ensuring the collective expertise guides each child's care pathway.
+                    </p>
+                </div>
+
+                <!-- Special Features -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Special Features and Innovative Approaches</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Examination Under Anesthesia (EUA) Protocols</h4>
+                            <p class="text-gray-700 text-sm">Standardized EUA techniques enable consistent baseline documentation and monitoring of intraocular tumors. High-quality widefield fundus photography provides objective documentation for treatment response assessment.</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Image-Guided Interventions</h4>
+                            <p class="text-gray-700 text-sm">Neuro-interventional radiologists use roadmap angiography and fluoroscopic guidance to ensure precise catheter positioning during intra-arterial chemotherapy, maximizing drug delivery to the tumor while preserving normal orbital and ocular structures.</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Enhanced Infection Prevention</h4>
+                            <p class="text-gray-700 text-sm">Sophisticated monitoring for CMV and other serious infections during chemotherapy, with preemptive antiviral therapy when appropriate.</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Survivorship Programs</h4>
+                            <p class="text-gray-700 text-sm">Comprehensive long-term follow-up clinics monitoring for late effects, secondary cancers, vision changes, and psychological well-being. Individualized survivorship care plans document treatment exposures and recommend appropriate screening intervals.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-900 mb-2">Vision Preservation Focus</h4>
+                        <p class="text-gray-700">Our primary goal is achieving cure while preserving vision and minimizing late effects—balancing oncologic success with functional and quality-of-life outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Why Choose Our Centre of Excellence -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Centre of Excellence in Ophthalmic Oncology
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-user-md text-3xl mr-4" style="color: #2E8B57;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Specialized Expertise</h3>
+                    </div>
+                    <p class="text-gray-700">Experienced ocular oncologists, neuro-interventional radiologists, radiation oncologists, and surgical specialists dedicated to eye cancer care, employing evidence-based protocols aligned with international guidelines.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-users text-3xl mr-4" style="color: #1e40af;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Multidisciplinary Collaboration</h3>
+                    </div>
+                    <p class="text-gray-700">Coordinated care among ophthalmology, pediatric oncology, neuro-interventional radiology, radiation oncology, surgical specialties, and psychosocial teams ensures comprehensive, individualized treatment planning and seamless care delivery.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-camera text-3xl mr-4" style="color: #7c3aed;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Advanced Diagnostic Capabilities</h3>
+                    </div>
+                    <p class="text-gray-700">Sophisticated imaging including widefield fundus photography, B-scan ultrasonography, anterior segment OCT, MRI, and genetic testing enables accurate diagnosis and treatment planning.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-syringe text-3xl mr-4" style="color: #FF4500;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Intra-Arterial Chemotherapy Program</h3>
+                    </div>
+                    <p class="text-gray-700">On-site neuro-interventional radiology and specialized pharmacy support enable direct delivery of chemotherapy to the eye via the ophthalmic artery—the gold standard for retinoblastoma treatment—achieving extraordinary globe salvage rates.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-radiation text-3xl mr-4" style="color: #14b8a6;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Radiation Therapy Options</h3>
+                    </div>
+                    <p class="text-gray-700">Access to conventional external beam radiation therapy and brachytherapy expertise provides comprehensive radiation oncology options optimized for each patient's anatomy and disease.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cut text-3xl mr-4" style="color: #2E8B57;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Surgical Excellence</h3>
+                    </div>
+                    <p class="text-gray-700">Comprehensive surgical capabilities including tumor biopsy, selective resection, globe reconstruction, orbital reconstruction, and ocular surface surgery preserve function and maintain cosmesis.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-heart text-3xl mr-4" style="color: #FF4500;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Family-Centered Care</h3>
+                    </div>
+                    <p class="text-gray-700">Comprehensive genetic counseling, psychosocial support, and educational coordination ensure holistic family well-being.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-dna text-3xl mr-4" style="color: #1e40af;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Genetic Testing and Counseling</h3>
+                    </div>
+                    <p class="text-gray-700">RB1 genetic testing and specialized genetic counseling identify hereditary cases, guide surveillance of at-risk relatives, and inform family planning.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-hands-helping text-3xl mr-4" style="color: #7c3aed;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Compassionate, Experienced Teams</h3>
+                    </div>
+                    <p class="text-gray-700">Specially trained ophthalmology and oncology nurses, child life specialists, and social workers support families through the intensive diagnostic and treatment journey with expertise, empathy, and hope.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-clipboard-check text-3xl mr-4" style="color: #14b8a6;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Comprehensive Survivorship Programs</h3>
+                    </div>
+                    <p class="text-gray-700">Long-term follow-up clinics, secondary cancer surveillance, vision rehabilitation, and psychological support ensure successful transitions to adulthood and healthy, fulfilling lives.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-flask text-3xl mr-4" style="color: #FF4500;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Research and Clinical Trials</h3>
+                    </div>
+                    <p class="text-gray-700">Participation in cooperative group studies and investigator-initiated research brings cutting-edge treatments to our patients while advancing knowledge benefiting future children with ocular cancer.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-eye text-3xl mr-4" style="color: #2E8B57;"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Vision Preservation Focus</h3>
+                    </div>
+                    <p class="text-gray-700">Our primary goal is achieving cure while preserving vision and minimizing late effects—balancing oncologic success with functional and quality-of-life outcomes.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                    Every child with ocular cancer deserves access to world-class, compassionate, multidisciplinary care from specialists dedicated to achieving cure while preserving vision and maximizing life potential. Our Centre of Excellence is committed to this mission.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">What causes eye cancer in children?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                The cause of retinoblastoma remains unknown in most cases. The disease is not preventable through lifestyle modifications and is not caused by parenting, environmental factors, or behaviors families control. Approximately 40% of cases are hereditary (inherited) due to RB1 gene mutations; the remainder are sporadic (arising from spontaneous mutations in eye cells).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Is my child's eye cancer inherited? Will my other children get it?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Genetic testing can determine if your child has a hereditary form. If an RB1 gene mutation is present in blood samples, the disease is hereditary, meaning each sibling has approximately a 50% risk of inheriting the mutation. However, not all carriers develop retinoblastoma. Regular eye screening of siblings beginning in infancy is essential. Genetic counseling helps families understand inheritance patterns and implications for relatives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Will my child become blind?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                With globe-sparing treatment, the majority of children with retinoblastoma retain useful vision in successfully salvaged eyes. However, vision outcomes are variable and depend on tumor location, treatment type, and individual healing responses. Even children whose eye must be removed (enucleation) retain normal vision in the other eye (if unilateral disease) or binocular vision from two remaining structures if bilateral. Educational and psychosocial support help children adapt to any vision loss.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">How long is treatment?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Treatment duration varies from 6 weeks to several months, depending on disease stage and treatment modality. Intra-arterial chemotherapy typically requires 2–4 infusions spaced weeks apart. Systemic chemotherapy may continue for several months. Following primary treatment completion, long-term follow-up is essential for monitoring disease recurrence and late effects—potentially lifelong for hereditary cases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Can my child attend school during treatment?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Yes, and we encourage attendance whenever medically feasible. Attending school maintains peer relationships, provides routine, and supports normal development. School attendance may require flexible scheduling (reduced hours, homebound periods during intensive treatment). Our team coordinates with schools regarding medical needs and educational accommodations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">What about fertility after treatment?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Chemotherapy and radiation may affect reproductive function. Adolescents receiving treatment should discuss fertility preservation options (sperm banking for males, egg/embryo cryopreservation for females) before treatment begins. Comprehensive counseling regarding reproductive health is provided to all adolescent survivors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">Is eye cancer curable?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Yes. With modern treatment coordinated by experienced ocular oncology teams, cure rates exceed 95% in developed healthcare settings. The focus is achieving cure while preserving vision and minimizing late effects. Most childhood retinoblastoma survivors become healthy, independent adults.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3 class="faq-question">What happens after my child completes treatment?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p>
+                                Children transition to long-term follow-up with regular examinations to monitor for:
+                            </p>
+                            <ul>
+                                <li>Disease recurrence (intraocular or extraocular).</li>
+                                <li>Late effects in the treated eye (cataracts, radiation retinopathy, glaucoma).</li>
+                                <li>Secondary cancers (particularly in hereditary cases).</li>
+                                <li>Vision development and function.</li>
+                                <li>Psychological well-being and social adjustment.</li>
+                            </ul>
+                            <p style="margin-top: 0.75rem;">
+                                Frequency of follow-up gradually decreases over years as disease-free interval increases. Individualized survivorship care plans document treatment exposures and recommend appropriate screening intervals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // FAQ Accordion Toggle Function
+        function toggleFaq(header) {
+            const faqItem = header.parentElement;
+            const content = faqItem.querySelector('.faq-content');
+            const isActive = header.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.querySelector('.faq-header').classList.remove('active');
+                    item.querySelector('.faq-content').classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                header.classList.remove('active');
+                content.classList.remove('active');
+            } else {
+                header.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

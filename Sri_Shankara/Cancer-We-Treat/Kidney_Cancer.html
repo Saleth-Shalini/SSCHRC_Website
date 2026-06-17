@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Cancer: Comprehensive Health Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Kidney Cancer: Overview
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Kidney cancer is a disease of the urinary tract. The good news is that most cases are diagnosed early, when the chances for successful treatment are highest, before the disease has spread to other parts of the body. As a result, the five-year survival rate for kidney cancer is approximately 75%.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    You have two kidneys, one on each side of your back, just above the waist. The kidneys perform the vital function of filtering blood. The waste collected is carried in the urine, which is produced by microscopic tubules inside the kidney. Urine then flows from the kidneys through tubes called ureters and down into the bladder.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Kidney cancer typically starts in these microscopic tubules. While the disease usually develops as a single tumour within one kidney, in rare instances, a kidney may contain more than one tumour, or tumours may be found in both kidneys.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    When the cancer has not spread, surgery offers the best chance for successful treatment. However, once the cancer has spread to distant parts of the body, such as the lungs, bones, or brain, the chance for a cure is significantly lower.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Kidney Cancer Types -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Kidney Cancer Types
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Renal Cell Carcinoma (RCC)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is the most common type of kidney cancer. There are several sub-types based on genetic changes in the cancer cells, including clear cell, papillary, chromophobe, and collecting duct carcinomas. Clear cell carcinoma accounts for 80% of all RCC cases, and most treatments focus on this type.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Wilms' Tumour</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is primarily a childhood cancer, responsible for 95% of paediatric kidney cancer cases.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Urothelial Cell Cancer of the Renal Pelvis and Ureter</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer occurring in the part of the kidney that collects urine or in the ureter is called urothelial carcinoma. Although often referred to as kidney cancer, it is medically more similar to bladder cancer, as most bladder cancers also form urothelial cells.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Renal Medullary Carcinoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is a rare form of kidney cancer, most often found in younger Black people.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Causes and Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Causes and Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases your chance of developing kidney cancer. Known risk factors include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Smoking</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is considered the biggest risk factor. Chemicals in tobacco smoke are absorbed into the blood, pass through the kidneys, and collect in the urine, potentially damaging the kidneys and increasing cancer risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Most cases occur after the age of 50.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gender</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Men are more than twice as likely to be diagnosed with kidney cancer as women.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Obesity</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Being overweight increases the risk of developing kidney cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">High Blood Pressure</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Hypertension is a known risk factor for kidney cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Advanced Kidney Disease and Long-Term Kidney Dialysis</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These conditions increase kidney cancer risk.
+                    </p>
+                </div>
+
+                
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Rare Inherited Conditions</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This includes conditions like von Hippel-Lindau disease or hereditary papillary renal cell carcinoma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History of Kidney Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Having family members with kidney cancer increases your risk.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to remember that having risk factors does not guarantee you will develop kidney cancer. If you have any risk factors, we encourage you to discuss them with your doctor. A small number of kidney cancer cases can be passed down through families, so genetic counselling may be an important consideration for you and your family.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Due to the kidneys' location, many kidney cancer symptoms do not appear until the tumour has grown quite large. Often, tumours are discovered accidentally during treatment for other medical conditions, such as kidney stones or back pain. When symptoms do occur, they can vary from person to person.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Kidney cancer symptoms may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Blood in the urine (Haematuria)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is the most common symptom. It can cause the urine to appear rusty or deep red. In other cases, it may be microscopic and not visible to the naked eye. Haematuria is not a sure sign of cancer, as it can be caused by other problems like a kidney stone or a urinary tract infection. However, anyone experiencing haematuria should consult a doctor.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">A lump or mass on the side or lower back</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A noticeable lump in the side or lower back area may indicate kidney cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">An unexplained fever that lasts for a few weeks</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Persistent fever without obvious cause may be a symptom of kidney cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Unintentional weight loss</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Losing weight without trying can be a symptom of kidney cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">A lingering dull ache or pain in the side, abdomen, or lower back</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Persistent pain in these areas may indicate kidney cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Feeling fatigued or in poor health</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        General feelings of tiredness and poor health can be symptoms.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Swelling of the ankles and legs</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This symptom occurs when the kidney tumour prevents the kidney from removing excess fluid from the body.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    If you experience any of these symptoms, it is important to discuss them with your doctor, as they may indicate other health problems that require attention.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, our experts specialise in kidney cancer and use the latest technology to accurately determine the exact extent and location of each kidney tumour.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    While most kidney tumours are malignant (cancerous), some are benign (non-cancerous). There is currently no imaging test that can reliably distinguish between a benign and cancerous kidney tumour. If you have been diagnosed with a kidney tumour or kidney cancer, it is vital to seek treatment as early as possible.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Kidney Cancer Diagnostic Process</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    If your symptoms suggest kidney cancer, your doctor will start by asking questions about your overall health, lifestyle (including smoking and drinking habits), family medical history, and specific questions related to your symptoms. They will then order tests to diagnose the problem, which may include:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Blood and Urine Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        There is no single blood or urine test that can definitively diagnose kidney cancer. However, these tests help doctors diagnose or rule out other possible causes for your symptoms, and may suggest that kidney cancer is present.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Tests</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These exams focus on the kidneys and potentially the areas where kidney cancer often spreads, such as the lungs, bones, and less commonly, the brain and spine. Imaging exams may include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>CT or CAT (Computed Axial Tomography) scans. This is the most common imaging exam for kidney cancer.</li>
+                        <li>MRI (Magnetic Resonance Imaging) scans.</li>
+                        <li>Ultrasound.</li>
+                        <li>Chest X-Ray.</li>
+                        <li>Bone Scan.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A biopsy involves removing a very small piece of suspected cancerous tissue for examination under a microscope. This is the only way to definitively diagnose kidney cancer prior to surgery. The tissue is typically retrieved using a long, thin needle guided by imaging technology, performed by an interventional radiologist. This is considered a minimally invasive procedure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Kidney Cancer Stages -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Kidney Cancer Stages
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A cancer's stage describes how large the primary tumour is and how far the cancer has spread within the patient's body. Knowing the stage helps the care team understand the disease and develop an appropriate treatment plan, and it also impacts the patient's prognosis (chance for successful treatment).
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The most common staging system is the TNM system, which describes cancer based on three main factors:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">T (Tumour)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The size of the primary tumour and whether it has invaded nearby tissues.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">N (Nodes)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The cancer's spread to nearby lymph nodes.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">M (Metastasis)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Whether the cancer has metastasised, or spread, to distant parts of the body.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Each factor is assigned a number (T: 1-4, N: 1-3, M: 0-1) reflecting the extent of the cancer. This detailed staging can often be simplified into four general stages (I-IV), with Stage 0 sometimes used for pre-cancerous cells:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Stage 0 (In-situ)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Reflects the presence of abnormal cells that have not spread to tissue immediately nearby. It is considered pre-cancerous. Not all cancers have a Stage 0.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Stage I</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Cancers are typically small and confined to the area where they began.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Stage II and Stage III</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Cancers have spread to nearby tissue and/or lymph nodes.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Stage IV (Metastatic Cancer)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Cancer has spread to distant areas of the body. Stage IV cancer is often not curable but can frequently be managed like a chronic disease.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Renal Cell Carcinoma (RCC) Stages</h3>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Stage I</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The tumour is 7 centimetres or smaller and is confined only to the kidney.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Stage II</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The tumour is larger than 7 centimetres but is still confined only to the kidney.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Stage III</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        One of the following is found:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>The cancer in the kidney is any size and has spread to nearby lymph nodes; or</li>
+                        <li>The cancer has spread to blood vessels in or near the kidney (renal vein or vena cava), to the fat around the structures in the kidney that collect urine, or to the layer of fatty tissue around the kidney. Cancer may or may not have spread to nearby lymph nodes.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Stage IV</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        One of the following is found:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>The cancer has spread beyond the layer of fatty tissue around the kidney and may have spread into the adrenal gland above the kidney with cancer or to nearby lymph nodes; or</li>
+                        <li>The cancer has spread to other parts of the body, such as the bones, liver, lungs, brain, adrenal glands, or distant lymph nodes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If you are diagnosed with kidney cancer, your doctor will discuss the best treatment options for you. This will depend on several factors, including the stage of the cancer and your general health. Your treatment plan at SSCHRC will be customised to your particular needs.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Active Surveillance -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Active Surveillance</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer treatment can be a significant physical burden for older patients or those in poor health. These patients may be good candidates for active surveillance, especially if the tumour is small. With this approach, doctors monitor the cancer through blood and urine tests, as well as imaging exams. Treatment only begins if and when the cancer progresses or if the patient's overall health improves.
+                    </p>
+                </div>
+
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Tumours that are confined to the kidney or the area immediately around it are usually removed with surgery. It is a priority for the surgeon to preserve as much of the healthy kidney as possible, although in some cases, the entire organ may need to be removed.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        At SSCHRC, these surgeries are typically performed using minimally invasive techniques, requiring only a few small incisions. Minimally invasive surgery can be performed with a laparoscope (a thin rod with a camera and surgical tools attached) or with a robot controlled by a surgeon.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Minimally invasive surgery has been shown to result in less pain, shorter hospital stays, and quicker recovery times compared to traditional "open" procedures, which require incisions ranging from 4 to 8 inches. Open surgery is usually reserved for patients who are not eligible for the minimally invasive approach due to specific aspects of their cancer.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        You can generally live with one kidney. However, if both kidneys are removed or not functioning, dialysis (a machine-based method to clean the blood) will be necessary. A kidney transplant may be an option for some patients.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The two main types of surgery for kidney cancer include:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Partial Nephrectomy (Kidney-Sparing Surgery)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Only the cancerous portion of the kidney is removed, along with a margin of healthy tissue surrounding it. High-quality pre-treatment imaging helps determine what is removed, and ultrasound can be used during surgery to check for additional tumours. This procedure is best for tumours that are 4 centimetres or less in size but can be performed for larger tumours when feasible. Candidates are chosen based on favourable tumour location, the condition of their kidneys, other health issues, and the patient's desire to save the kidney.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Radical Nephrectomy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                In this procedure, the entire kidney along with the surrounding fatty tissue is removed. Sometimes the adrenal gland and nearby lymph nodes are also removed. Radical nephrectomy is typically performed on patients with more advanced cancer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Energy Ablative Techniques -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Energy Ablative Techniques</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Other minimally invasive techniques use either heat or cold to treat tumours in place, without the need to remove any part of the kidney. These are ideal for smaller kidney tumours in patients considered at high risk for surgery.
+                    </p>
+                    <div class="space-y-3 ml-6">
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-900 mb-1">Cryoablation</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                Freezes the tumour using a long, thin probe inserted into the tumour. Intensive follow-up with X-rays or other imaging is required to ensure the tumour has been destroyed.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-900 mb-1">Radiofrequency Ablation (RFA)</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                Similar to cryoablation, but heat is used instead of cold to destroy the tumour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Targeted Therapies -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapies</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        While many medications directly kill cancer cells, targeted therapy works by stopping or slowing the growth or spread of cancer. This happens at a cellular level. Cancer cells need specific molecules (often proteins) to survive, multiply, and spread. Targeted therapies are designed to interfere with, or target, these molecules or the cancer-causing genes that create them. For kidney cancer, these therapies are mainly used for patients whose disease has spread to other organs in the body.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Most targeted therapies for kidney cancer are angiogenesis inhibitors. Angiogenesis is the process by which tumours create their own network of blood vessels to thrive and grow. Angiogenesis inhibitors disrupt this process. Other targeted therapies interrupt the cancer cell division and multiplication; these are approved for advanced kidney cancer but are less commonly used.
+                    </p>
+                </div>
+
+                <!-- Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Like targeted therapy, immunotherapy does not directly kill cancer cells. Instead, these drugs work by improving the ability of the patient's own immune system to eliminate the cancer.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Most immunotherapies for kidney cancer are known as checkpoint inhibitors. These medications help the cancer-fighting immune cells, called T cells, mount a longer-lasting response against the disease. Cytokines, such as interleukin-2, stimulate the growth of immune system cells to fight cancer, but they are used only rarely for patients with advanced kidney cancer.
+                    </p>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Most traditional chemotherapy is generally ineffective against kidney tumours, so it is currently not used often. It may be used in specific cases, such as patients with medullary kidney cancer.
+                    </p>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Kidney tumours are not very sensitive to standard forms of radiation, but healthy kidney cells are. For this reason, standard radiation therapy has a limited role in treating the primary kidney tumour.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        In rare cases, radiation oncologists may use highly focused beams to treat the tumour. These techniques include stereotactic radiosurgery. If a patient's cancer has spread beyond the kidney, standard radiation may be used to help stop the growth of metastases, relieve pain, and minimise other symptoms.
+                    </p>
+                </div>
+
+                <!-- Angiogenesis Inhibitors -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Angiogenesis Inhibitors (Anti-Angiogenic Therapy)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Angiogenesis is the process of creating new blood vessels. Some cancerous tumours are highly efficient at creating new blood vessels, which increases the blood supply to the tumour and allows it to grow rapidly. Researchers developed drugs called angiogenesis inhibitors to disrupt this growth process. These drugs work by binding themselves to VEGF molecules, which stops them from activating receptors on blood vessel cells, or by stopping VEGF receptors from sending signals to blood vessel cells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

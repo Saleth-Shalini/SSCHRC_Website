@@ -1,0 +1,12 @@
+# Protect email-config.php from direct web access
+<Files "email-config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect any config files
+<FilesMatch "^(email-config|config|credentials)\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+

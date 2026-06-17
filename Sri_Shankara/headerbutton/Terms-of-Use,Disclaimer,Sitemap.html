@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital - Policies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .policies-page {
+            --sea-green: #2E8B57;
+            --sea-green-light: #3CB371;
+            --sea-green-lighter: #E8F5EE;
+            --orange-red: #FF4500;
+            --orange-red-light: #FF6B35;
+            --dark-gray: #333;
+            --light-gray: #f5f5f5;
+            --medium-gray: #ddd;
+            background-color: #f8fbf9;
+            color: #333;
+            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .policies-page *,
+        .policies-page *::before,
+        .policies-page *::after {
+            box-sizing: border-box;
+        }
+
+        .policies-page .policies-header {
+            background: linear-gradient(135deg, var(--sea-green) 0%, var(--sea-green-light) 100%);
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+        }
+        
+        .policies-page .logo-container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .policies-page .logo1 {
+            background-color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .policies-page .logo1 i {
+            font-size: 2.5rem;
+            color: var(--sea-green);
+        }
+        
+        .policies-page h1 {
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            margin: 0;
+        }
+        
+        .policies-page .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+        
+        .policies-page .policies-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .policies-page .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .policies-page .tab {
+            padding: 15px 30px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: inherit;
+        }
+        
+        .policies-page .tab:hover {
+            background-color: var(--sea-green-lighter);
+        }
+        
+        .policies-page .tab.active {
+            background-color: var(--sea-green);
+            color: white;
+        }
+        
+        .policies-page .policy-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: none;
+        }
+        
+        .policies-page .policy-section.active {
+            display: block;
+        }
+        
+        .policies-page .policy-header {
+            color: var(--sea-green);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--orange-red);
+        }
+        
+        .policies-page .last-updated {
+            color: var(--orange-red);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .policies-page .policy-content {
+            line-height: 1.8;
+        }
+        
+        .policies-page .policy-content h2 {
+            color: var(--sea-green);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .policies-page .policy-content h3 {
+            color: var(--sea-green);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .policies-page .policy-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .policies-page .policy-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .policies-page .policy-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .policies-page .contact-info {
+            background-color: var(--sea-green-lighter);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .policies-page .contact-info h3 {
+            color: var(--sea-green);
+            margin-bottom: 1rem;
+        }
+        
+        .policies-page .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .policies-page .contact-info .policy-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .policies-page .contact-info .policy-contact-item i {
+            color: var(--orange-red);
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .policies-page h1 {
+                font-size: 2rem;
+            }
+            
+            .policies-page .tabs {
+                flex-direction: column;
+            }
+            
+            .policies-page .tab {
+                width: 100%;
+            }
+            
+            .policies-page .policy-section {
+                padding: 1.5rem;
+            }
+            
+            .policies-page .contact-details {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body>
+    <div class="policies-page">
+    <section class="policies-header">
+        <div class="logo-container1">
+            <div class="logo1">
+                <i class="fas fa-hospital"></i>
+            </div>
+            <div>
+                <h1>Sri Shankara Cancer Hospital & Research Centre</h1>
+                <p class="subtitle">Policies and Legal Information</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="policies-container">
+        <div class="tabs">
+            <button class="tab active" data-tab="privacy">Privacy Policy</button>
+            <button class="tab" data-tab="terms">Terms of Use</button>
+            <button class="tab" data-tab="disclaimer">Disclaimer</button>
+        </div>
+        
+        <section id="privacy" class="policy-section active">
+            <h2 class="policy-header">Privacy Policy</h2>
+            <span class="last-updated">Last Updated: 07-09-2025</span>
+            
+            <div class="policy-content">
+                <p>Sri Shankara Cancer Hospital & Research Centre (SSCHRC) is committed to protecting the privacy and confidentiality of visitors to our website. This Privacy Policy explains how we collect, use, and safeguard your personal information. By using our website, you consent to the practices described here.</p>
+                
+                <h3>1. Information We Collect</h3>
+                <p>We may collect the following types of information:</p>
+                
+                <h3>a) Personal Information (when voluntarily submitted)</h3>
+                <ul>
+                    <li>Name, phone number, email address, postal address</li>
+                    <li>Date of birth, gender (if provided in forms)</li>
+                    <li>Medical or appointment-related details you submit through online forms</li>
+                </ul>
+                
+                <h3>b) Non-Personal Information (collected automatically)</h3>
+                <ul>
+                    <li>IP address, browser type, device information</li>
+                    <li>Website usage data (pages visited, time spent, referring website)</li>
+                    <li>Cookies or similar tracking technologies</li>
+                </ul>
+                
+                <h3>2. How We Use Your Information</h3>
+                <p>We may use the collected information for purposes such as:</p>
+                <ul>
+                    <li>Responding to inquiries and appointment requests</li>
+                    <li>Providing information about hospital services and facilities</li>
+                    <li>Improving website functionality and user experience</li>
+                    <li>Internal research, reporting, and analytics</li>
+                    <li>Compliance with legal or regulatory requirements</li>
+                </ul>
+                <p>We will <strong>never sell or rent your personal information</strong> to third parties.</p>
+                
+                <h3>3. Data Security</h3>
+                <ul>
+                    <li>We use reasonable administrative, technical, and physical safeguards to protect personal information.</li>
+                    <li>However, no online transmission or storage system is 100% secure; we cannot guarantee absolute security.</li>
+                </ul>
+                
+                <h3>4. Sharing of Information</h3>
+                <p>We may share information only in these limited circumstances:</p>
+                <ul>
+                    <li>With authorised hospital staff for scheduling and patient support</li>
+                    <li>With trusted service providers who assist in website hosting or IT operations (bound by confidentiality agreements)</li>
+                    <li>When required by law, regulation, or court order</li>
+                </ul>
+                
+                <h3>5. Cookies & Tracking</h3>
+                <ul>
+                    <li>Our website may use cookies and similar technologies to improve user experience.</li>
+                    <li>You may disable cookies in your browser, but some website features may not function properly.</li>
+                </ul>
+                
+                <h3>6. Your Rights</h3>
+                <p>Depending on applicable law, you may have the right to:</p>
+                <ul>
+                    <li>Access, update, or correct your personal information</li>
+                    <li>Request deletion of your data (subject to legal obligations)</li>
+                    <li>Withdraw consent for certain uses of your information</li>
+                    <li>Opt out of non-essential communications</li>
+                </ul>
+                <p>Requests can be made by contacting us (see details below).</p>
+                
+                <h3>7. Children's Privacy</h3>
+                <ul>
+                    <li>Our website is not directed at children under 18.</li>
+                    <li>We do not knowingly collect personal information from children without parental/guardian consent.</li>
+                </ul>
+                
+                <h3>8. International Visitors</h3>
+                <p>While this website is primarily intended for users in <strong>India</strong>, visitors from other countries acknowledge that their information will be processed in India, where data protection laws may differ.</p>
+                
+                <h3>9. Changes to Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. The "Last Updated" date at the top will reflect changes. Please review this page periodically.</p>
+                
+                <div class="contact-info">
+                    <h3>10. Contact Us</h3>
+                    <p>If you have questions or concerns about this Privacy Policy, please contact:</p>
+                    <div class="contact-details">
+                        <div class="policy-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>#1, Shankara Math Road, Shankarapuram, Bengaluru - 560004, Karnataka, India</span>
+                        </div>
+                        <div class="policy-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>080 2698 1000</span>
+                        </div>
+                        <div class="policy-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>queries@sschrc.org</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="terms" class="policy-section">
+            <h2 class="policy-header">Terms of Use</h2>
+            <span class="last-updated">Last Updated: 07-09-2025</span>
+            
+            <div class="policy-content">
+                <p>Welcome to the official website of Sri Shankara Cancer Hospital & Research Centre (SSCHRC). By accessing or using our website, you agree to comply with and be bound by these Terms of Use. Please read them carefully.</p>
+                
+                <h3>1. Purpose of the Website</h3>
+                <p>This website is designed to:</p>
+                <ul>
+                    <li>Provide information about our hospital, services, facilities, and initiatives.</li>
+                    <li>Educate patients, caregivers, and the community about cancer awareness, prevention, and treatment.</li>
+                    <li>Offer contact details and appointment-related information.</li>
+                </ul>
+                <p>This website does <strong>not</strong> replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider with any questions about your health.</p>
+                
+                <h3>2. Acceptance of Terms</h3>
+                <p>By using this website, you confirm that:</p>
+                <ul>
+                    <li>You are at least 18 years of age, or are accessing it under the supervision of a parent/guardian.</li>
+                    <li>You agree to comply with all applicable laws and these Terms.</li>
+                </ul>
+                
+                <h3>3. Medical Disclaimer</h3>
+                <ul>
+                    <li>The content provided is for <strong>informational and educational purposes only</strong>.</li>
+                    <li>It should not be interpreted as professional medical advice.</li>
+                    <li>SSCHRC is not responsible for decisions made based on website content.</li>
+                </ul>
+                
+                <h3>4. Privacy & Confidentiality</h3>
+                <ul>
+                    <li>Any personal information submitted through contact forms, appointment requests, or other sections will be handled in accordance with our <strong>Privacy Policy</strong>.</li>
+                    <li>We take reasonable steps to protect confidentiality but cannot guarantee complete security of data transmitted online.</li>
+                </ul>
+                
+                <h3>5. Intellectual Property</h3>
+                <ul>
+                    <li>All text, graphics, logos, designs, and other content on this website are the property of SSCHRC unless otherwise stated.</li>
+                    <li>You may view, download, or print information for <strong>personal, non-commercial use only</strong>.</li>
+                    <li>Unauthorized reproduction, modification, distribution, or commercial use is strictly prohibited.</li>
+                </ul>
+                
+                <h3>6. Third-Party Links</h3>
+                <ul>
+                    <li>This website may contain links to external websites for informational purposes.</li>
+                    <li>SSCHRC is not responsible for the accuracy, reliability, or safety of content on third-party websites.</li>
+                </ul>
+                
+                <h3>7. Limitation of Liability</h3>
+                <ul>
+                    <li>SSCHRC, its trustees, doctors, or staff shall not be held liable for any damages (direct, indirect, incidental, or consequential) arising from use of this website.</li>
+                    <li>We make reasonable efforts to keep the content accurate and updated, but we do not warrant completeness or error-free information.</li>
+                </ul>
+                
+                <h3>8. User Responsibilities</h3>
+                <p>By using this website, you agree not to:</p>
+                <ul>
+                    <li>Post or transmit any unlawful, harmful, or offensive content.</li>
+                    <li>Attempt to interfere with the website's operation or security.</li>
+                    <li>Misuse information or impersonate others.</li>
+                </ul>
+                
+                <h3>9. Changes to Terms</h3>
+                <p>SSCHRC reserves the right to update or modify these Terms of Use at any time without prior notice. Updates will be posted on this page with the "Last Updated" date revised.</p>
+                
+                <h3>10. Governing Law</h3>
+                <p>These Terms of Use are governed by and construed under the laws of <strong>India</strong>. Any disputes shall fall under the jurisdiction of the courts in <strong>Bengaluru, Karnataka</strong>.</p>
+                
+                <div class="contact-info">
+                    <h3>11. Contact Us</h3>
+                    <p>For any questions about these Terms, please contact:</p>
+                    <div class="contact-details">
+                        <div class="policy-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>#1, Shankara Math Road, Shankarapuram, Bengaluru - 560004, Karnataka, India</span>
+                        </div>
+                        <div class="policy-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>080 2698 1000</span>
+                        </div>
+                        <div class="policy-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>queries@sschrc.org</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="disclaimer" class="policy-section">
+            <h2 class="policy-header">Disclaimer</h2>
+            <span class="last-updated">Last Updated: 07-09-2025</span>
+            
+            <div class="policy-content">
+                <p>The information provided on the website of Sri Shankara Cancer Hospital & Research Centre (SSCHRC) is for <strong>general informational and educational purposes only</strong>. By using this website, you acknowledge and agree to the following:</p>
+                
+                <h3>1. No Medical Advice</h3>
+                <ul>
+                    <li>The content on this website, including text, graphics, images, and other materials, is <strong>not a substitute</strong> for professional medical advice, diagnosis, or treatment.</li>
+                    <li>Always seek the guidance of your physician, oncologist, or other qualified healthcare provider with any questions you may have regarding a medical condition.</li>
+                    <li>Never disregard or delay professional medical advice because of something you have read on this website.</li>
+                </ul>
+                
+                <h3>2. Accuracy of Information</h3>
+                <ul>
+                    <li>While we make every effort to ensure the accuracy, completeness, and reliability of the information presented, <strong>SSCHRC does not guarantee or warrant</strong> that the content is error-free, up-to-date, or suitable for every individual.</li>
+                    <li>Medical knowledge is constantly evolving, and treatment outcomes may vary depending on individual circumstances.</li>
+                </ul>
+                
+                <h3>3. No Doctor-Patient Relationship</h3>
+                <ul>
+                    <li>Use of this website does not create a doctor-patient relationship between you and SSCHRC or any of its healthcare providers.</li>
+                    <li>Any interaction through contact forms, emails, or appointment requests is for administrative purposes only and does not constitute medical consultation.</li>
+                </ul>
+                
+                <h3>4. External Links</h3>
+                <ul>
+                    <li>This website may contain links to external websites for reference and convenience. SSCHRC does not endorse, control, or take responsibility for the content, accuracy, or practices of external sites.</li>
+                </ul>
+                
+                <h3>5. Limitation of Liability</h3>
+                <ul>
+                    <li>SSCHRC, its trustees, doctors, employees, and affiliates shall not be held liable for any direct, indirect, incidental, or consequential damages arising from the use of this website or reliance on its content.</li>
+                    <li>Use of this website is at your sole risk.</li>
+                </ul>
+                
+                <h3>6. Emergency Situations</h3>
+                <ul>
+                    <li>In case of a medical emergency, please call your local emergency services immediately or visit the nearest hospital.</li>
+                    <li>This website is not intended for use in urgent or emergency medical situations.</li>
+                </ul>
+                
+                <h3>7. Governing Law</h3>
+                <p>This Disclaimer is governed by and construed in accordance with the laws of <strong>India</strong>. Any disputes shall be subject to the jurisdiction of the courts in <strong>Bengaluru, Karnataka</strong>.</p>
+                
+                <div class="contact-info">
+                    <h3>8. Contact Us</h3>
+                    <p>If you have any questions regarding this Disclaimer, please contact:</p>
+                    <div class="contact-details">
+                        <div class="policy-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>#1, Shankara Math Road, Shankarapuram, Bengaluru - 560004, Karnataka, India</span>
+                        </div>
+                        <div class="policy-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>080 2698 1000</span>
+                        </div>
+                        <div class="policy-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>queries@sschrc.org</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.policies-page .tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.policies-page .tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.policies-page .policy-section').forEach(s => s.classList.remove('active'));
+
+                tab.classList.add('active');
+
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,3410 @@
+/* Header Styles for Sri Shankara Cancer Hospital */
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Custom color variables */
+:root {
+    --medical-blue: #2E8B57;
+    --medical-teal: #0891b2;
+    --medical-green: #059669;
+    --orange-500: #f97316;
+    --orange-600: #ea580c;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+      --dark-blue-text: #001d06;
+}
+
+/* Header Container */
+.header-container {
+    background: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    margin-top: 20px; /* Top margin for desktop */
+}
+
+/* Main Navigation */
+.main-nav {
+    position: relative;
+    z-index: 10000; /* Higher than mobile menu */
+}
+
+.nav-container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0rem;
+}
+
+/* Modern Slim Header Row */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 1rem;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-container {
+    width: 12rem;
+    height: 4rem;
+    /* background: linear-gradient(135deg, var(--medical-blue), #16a34a); */
+    /* border-radius: 0.5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+}
+
+.logo-img {
+    width: 12rem;
+    height: 4rem;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--gray-900);
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    font-size: 0.75rem;
+    color: var(--medical-blue);
+    font-weight: 500;
+}
+
+/* Right Side Navigation */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* About Us & Contact Us */
+.header-links {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-link {
+    /* color: var(--gray-700); */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+    background: var(--medical-blue);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 5PX;
+}
+
+.header-link:hover {
+    background: #15803D;
+}
+
+ul{
+    margin-bottom: 0px !important;
+}
+
+/* Emergency Contact */
+.emergency-contact {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff7ed;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.emergency-icon {
+    color: var(--orange-500);
+    font-size: 0.75rem;
+}
+
+.emergency-text {
+    font-size: 0.75rem;
+}
+
+.emergency-label {
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.emergency-number {
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: row;
+}
+
+.careers-donate-column {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+/* 2 columns layout on mobile: Column 1 (Careers & Donate stacked) | Column 2 (Menu) */
+@media (max-width: 1023px) {
+    .action-buttons {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem;
+        align-items: start;
+    }
+    
+    .careers-donate-column {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    .action-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.375rem 0.5rem;
+    }
+    
+    .mobile-menu-toggle {
+        width: auto;
+        min-width: 44px;
+        height: 100%;
+        align-self: stretch;
+        justify-content: center;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+.action-btn {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.careers-btn {
+    background: var(--medical-blue);
+    color: white;
+}
+
+.careers-btn:hover {
+    background: #15803d;
+}
+
+.events-btn {
+    background: #0d9488;
+    color: white;
+}
+
+.events-btn:hover {
+    background: #0f766e;
+}
+
+.donate-btn {
+    background: var(--orange-500);
+    color: white;
+}
+
+.donate-btn:hover {
+    background: var(--orange-600);
+}
+
+/* Main Navigation Row */
+.nav-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.375rem 0;
+    border-top: 1px solid var(--gray-100);
+    margin-bottom: 0;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Navigation Menu Items */
+.nav-item {
+    position: relative;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.nav-arrow {
+    font-size: 0.75rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .nav-arrow {
+    transform: rotate(180deg);
+}
+
+/* Mega Menu Dropdown */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--gray-200);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.5rem);
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.nav-item:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Cancer Care Mega Menu */
+.cancer-care-menu {
+    width: 50vw;
+    max-width: 600px;
+    margin-left: -10rem;
+    z-index: 2147483647;
+}
+
+/* Cancer Encyclopedia Content */
+.cancer-encyclopedia-content {
+    padding: 1.5rem 1.25rem;
+}
+
+.cancer-encyclopedia-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.cancer-encyclopedia-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4375rem;
+    margin-bottom: 0.3125rem;
+}
+
+.cancer-encyclopedia-icon {
+    width: 18px;
+    height: 18px;
+    background: var(--medical-green);
+    color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+.cancer-encyclopedia-title h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0;
+}
+
+.cancer-encyclopedia-description {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    margin: 0;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+}
+
+/* Cancer Types Grid */
+.cancer-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.cancer-type-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.625rem 0.375rem;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    background: white;
+    border: 1px solid var(--gray-100);
+    min-height: 75px;
+    justify-content: center;
+}
+
+.cancer-type-item:hover {
+    background: #fff7ed;
+    border-color: var(--orange-500);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cancer-type-item:hover .cancer-type-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.cancer-type-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8125rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.cancer-type-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    text-align: center;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.cancer-type-item:hover .cancer-type-name {
+    color: var(--orange-600);
+}
+
+/* Cancer Icon Colors */
+.cancer-icon-pink {
+    background: #ec4899;
+}
+
+.cancer-icon-purple {
+    background: #9333ea;
+}
+
+.cancer-icon-purple-solid {
+    background: #14b8a6;
+}
+
+.cancer-icon-purple-outline {
+    background: #9333ea;
+    border: 2px solid white;
+}
+
+.cancer-icon-blue {
+    background: #3b82f6;
+}
+
+.cancer-icon-blue-male {
+    background: #2563eb;
+}
+
+.cancer-icon-orange {
+    background: #f97316;
+}
+
+.cancer-icon-red {
+    background: #ef4444;
+}
+
+.cancer-icon-yellow {
+    background: #eab308;
+}
+
+.cancer-icon-green {
+    background: var(--medical-green);
+}
+
+.cancer-icon-teal {
+    background: var(--medical-teal);
+}
+
+.cancer-icon-dark-grey {
+    background: #4b5563;
+}
+
+.cancer-icon-lung {
+    background: #4b85d6;
+}
+
+.cancer-icon-black {
+    background: #1f2937;
+}
+
+.cancer-icon-red-colon {
+    background: #dc2626;
+}
+
+.cancer-icon-purple-pancreas {
+    background: #8b5cf6;
+}
+
+.cancer-icon-purple-brain {
+    background: #6366f1;
+}
+
+.cancer-icon-gold {
+    background: #f59e0b;
+}
+
+.cancer-icon-dark-grey-circle {
+    background: #374151;
+}
+
+.cancer-icon-grey {
+    background: #6b7280;
+}
+
+.cancer-icon-blue-urology {
+    background: #2563eb;
+}
+
+.cancer-icon-none {
+    background: transparent;
+    border: none;
+}
+
+/* Cancer Encyclopedia Footer */
+.cancer-encyclopedia-footer {
+    padding-top: 0.625rem;
+    border-top: 1px solid var(--gray-200);
+    text-align: center;
+}
+
+.cancer-encyclopedia-footer {
+    padding-top: 0.875rem;
+    border-top: 1px solid var(--gray-200);
+    text-align: center;
+}
+
+.cancer-view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--medical-green);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    transition: all 0.3s ease;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.cancer-view-all-link:hover {
+    background: #f0fdf4;
+    color: var(--medical-blue);
+    gap: 0.625rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.cancer-view-all-link i {
+    font-size: 0.75rem;
+}
+
+/* Responsive Design for Cancer Encyclopedia */
+@media (max-width: 1200px) {
+    .cancer-care-menu {
+        width: 45vw;
+        max-width: 550px;
+        margin-left: -8rem;
+    }
+    
+    .cancer-types-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cancer-care-menu {
+        width: 60vw;
+        max-width: 650px;
+        margin-left: -8rem;
+    }
+    
+    .cancer-types-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .cancer-type-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8125rem;
+    }
+    
+    .cancer-type-name {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cancer-care-menu {
+        width: 90vw;
+        max-width: 100%;
+        margin-left: -5vw;
+        left: 5vw;
+    }
+    
+    .cancer-encyclopedia-content {
+        padding: 1.25rem;
+    }
+    
+    .cancer-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.625rem;
+    }
+    
+    .cancer-type-item {
+        padding: 0.625rem 0.375rem;
+    }
+    
+    .cancer-type-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+    
+    .cancer-type-name {
+        font-size: 0.6875rem;
+    }
+    
+    .cancer-encyclopedia-title h2 {
+        font-size: 1.25rem;
+    }
+    
+    .cancer-encyclopedia-description {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cancer-care-menu {
+        width: 95vw;
+        margin-left: -2.5vw;
+        left: 2.5vw;
+    }
+    
+    .cancer-encyclopedia-content {
+        padding: 1rem 0.875rem;
+    }
+    
+    .cancer-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .cancer-type-item {
+        padding: 0.625rem 0.375rem;
+    }
+    
+    .cancer-type-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8125rem;
+    }
+    
+    .cancer-type-name {
+        font-size: 0.6875rem;
+        padding: 0 0.25rem;
+    }
+    
+    .cancer-encyclopedia-title h2 {
+        font-size: 1.125rem;
+    }
+    
+    .cancer-encyclopedia-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 0.6875rem;
+    }
+    
+    .cancer-encyclopedia-description {
+        font-size: 0.75rem;
+        padding: 0 0.5rem;
+    }
+    
+    .cancer-view-all-link {
+        font-size: 0.75rem;
+        padding: 0.5rem 0;
+    }
+}
+
+/* Additional mobile padding improvements */
+@media (max-width: 768px) {
+    .mobile-cancer-types-grid {
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .mobile-cancer-type-item {
+        padding: 0.625rem 0.375rem;
+        min-height: auto;
+    }
+    
+    .mobile-cancer-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .mobile-cancer-name {
+        font-size: 0.75rem;
+        padding: 0 0.25rem;
+        line-height: 1.3;
+    }
+    
+    .mobile-cancer-encyclopedia-header {
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-cancer-types-grid {
+        padding: 0 0.25rem;
+        gap: 0.5rem;
+    }
+    
+    .mobile-cancer-type-item {
+        padding: 0.5rem 0.25rem;
+        min-height: auto;
+    }
+    
+    .mobile-cancer-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .mobile-cancer-name {
+        font-size: 0.6875rem;
+        padding: 0 0.125rem;
+        line-height: 1.2;
+    }
+}
+
+/* Departments Mega Menu */
+.departments-menu {
+    width: 75vw;
+    max-width: 70rem;
+    margin-left: -10rem;
+    margin-top: 0.5rem;
+    left: 0;
+}
+
+.departments-menu .mega-menu-content {
+    padding: 2rem 2.5rem;
+}
+
+/* Centres Menu */
+.centres-menu {
+    width: 20rem;
+}
+
+/* Research Menu */
+.research-menu {
+    width: 20rem;
+    right: 0;
+    left: auto;
+}
+
+/* Mega Menu Content */
+.mega-menu-content {
+    padding: 2rem;
+}
+
+.mega-menu-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.mega-menu-grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.mega-menu-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.departments-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+    padding: 0;
+}
+
+.departments-grid-3 .mega-section {
+    min-width: 200px;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    min-height: 0;
+}
+
+.departments-grid-3 .mega-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+/* Departments Section Heading Colors - Match other menus */
+/* Departments Section Heading Colors - Extracted from .mega-section-title color classes */
+
+
+@media (max-width: 1200px) {
+    .departments-grid-3 {
+        gap: 2rem;
+    }
+    
+    .departments-grid-3 .mega-section {
+        min-width: 180px;
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .departments-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .departments-grid-3 .mega-section {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .departments-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Mega Menu Sections */
+.mega-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.mega-section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ================================
+   FIX: Departments menu heading color
+   Scoped ONLY to Departments menu
+================================ */
+
+.departments-grid-3 .mega-section-title {
+    color: var(--medical-blue);
+}
+
+
+
+.mega-section-title.medical-blue {
+    color: var(--medical-blue);
+}
+
+.mega-section-title.medical-teal {
+    color: var(--medical-teal);
+}
+
+.mega-section-title.medical-green {
+    color: var(--medical-green);
+}
+
+.mega-section-title.purple {
+    color: #9333ea;
+}
+
+/* Mega Menu Links */
+.mega-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mega-link {
+    color: var(--gray-600);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    display: block;
+    line-height: 1.5;
+}
+
+.mega-link:hover {
+    color: var(--orange-600);
+}
+
+.mega-link-bold {
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+.mega-link-group {
+    margin-bottom: 0rem;
+}
+
+.mega-link-group-title {
+    font-weight: 500;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.mega-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    margin-left: 0.75rem;
+}
+
+.mega-link-list li {
+    list-style: none;
+}
+
+.mega-link-list a {
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mega-link-list a:hover {
+    color: var(--orange-600);
+}
+
+/* Scrollable Content */
+.scrollable-content {
+    max-height: 22.4rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Orange Scrollbar */
+.orange-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #f97316 #fef3c7;
+}
+
+.orange-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.orange-scrollbar::-webkit-scrollbar-track {
+    background: #fef3c7;
+    border-radius: 4px;
+}
+
+.orange-scrollbar::-webkit-scrollbar-thumb {
+    background: #f97316;
+    border-radius: 4px;
+}
+
+.orange-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ea580c;
+}
+
+/* Centres Menu Items */
+.centres-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.centres-item:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.centres-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.875rem;
+}
+
+.centres-icon.medical-blue,
+.centres-icon.pink,
+.centres-icon.blue,
+.centres-icon.purple,
+.centres-icon.green,
+.centres-icon.orange,
+.centres-icon.medical-teal {
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+.centres-content {
+    flex: 1;
+}
+
+.centres-title {
+    font-weight: 600;
+    color: var(--gray-900);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+}
+
+.centres-desc {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+}
+
+/* Doctors Menu Items */
+.doctors-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.doctors-item:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.doctors-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.doctors-icon.medical-blue,
+.doctors-icon.medical-teal {
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+.doctors-content {
+    flex: 1;
+}
+
+.doctors-title {
+    font-weight: 600;
+    color: var(--gray-900);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+}
+
+.doctors-desc {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+}
+
+.doctors-arrow {
+    color: var(--gray-400);
+    transition: color 0.3s ease;
+}
+
+.doctors-item:hover .doctors-arrow {
+    color: var(--orange-600);
+}
+
+/* Patient Services Items */
+.patient-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.patient-item:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.patient-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.875rem;
+}
+
+.patient-icon.medical-blue,
+.patient-icon.medical-teal,
+.patient-icon.medical-green,
+.patient-icon.purple {
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+.patient-content {
+    flex: 1;
+}
+
+.patient-title {
+    font-weight: 600;
+    color: var(--gray-900);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+}
+
+.patient-desc {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--gray-700);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mobile-menu-btn:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.mobile-menu-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--gray-700);
+}
+
+.hamburger-line {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.close-line {
+    display: none;
+}
+
+.close-line:not(.hidden) {
+    display: block !important;
+    stroke: #ef4444 !important; /* Red color for visibility */
+    stroke-width: 3 !important; /* Thicker lines */
+}
+
+.hamburger-line.hidden {
+    display: none !important;
+}
+
+/* Mobile Menu - Redesigned: flex layout so content scrolls to last option (by display size) */
+.mobile-menu {
+    display: none !important;
+    background: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 99999 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+}
+
+.mobile-menu.show,
+.mobile-menu:not(.hidden),
+#mobileMenu:not(.hidden) {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Mobile only: ensure menu fills viewport and uses dvh when supported */
+@media (max-width: 1023px) {
+    .mobile-menu.show,
+    .mobile-menu:not(.hidden),
+    #mobileMenu:not(.hidden) {
+        height: 100vh !important;
+        height: 100dvh !important;
+        max-height: 100vh !important;
+        max-height: 100dvh !important;
+    }
+}
+
+/* Mobile Menu Header with Close Button - does not scroll */
+.mobile-menu-header {
+    flex-shrink: 0;
+    position: relative;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid var(--gray-200);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--gray-700);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5rem;
+}
+
+.mobile-menu-close:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.mobile-menu-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+    display: none !important;
+    background: transparent !important;
+    border: none;
+    cursor: pointer;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.5rem;
+    color: var(--gray-700);
+    position: relative;
+    z-index: 100000;
+    min-width: 48px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.mobile-menu-toggle:hover {
+    background: transparent !important;
+    color: var(--gray-700);
+}
+
+.mobile-menu-toggle .mobile-menu-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--gray-700);
+    stroke: var(--gray-700);
+}
+
+.mobile-menu-toggle .hamburger-line {
+    stroke: var(--gray-700);
+}
+
+.mobile-menu-toggle .close-line {
+    stroke: var(--gray-700);
+}
+
+/* Show mobile menu button on mobile */
+@media (max-width: 1023px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100%;
+        background: transparent !important;
+        color: var(--gray-700) !important;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 100001 !important;
+    }
+    
+    .mobile-menu-toggle .mobile-menu-icon {
+        color: var(--gray-700) !important;
+        stroke: var(--gray-700) !important;
+    }
+    
+    .mobile-menu-toggle .hamburger-line,
+    .mobile-menu-toggle .close-line {
+        stroke: var(--gray-700) !important;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background: transparent !important;
+        color: var(--gray-700) !important;
+    }
+    
+    .header-right {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+        width: auto;
+        min-width: 120px;
+    }
+    
+    .emergency-contact {
+        display: none;
+    }
+    
+    .header-top {
+        align-items: flex-start;
+    }
+    
+    .logo-section {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .logo-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Hide on desktop */
+@media (min-width: 1024px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Scrollable area: menu must scroll until last option (mobile) - flex child with 0 base height so it gets remaining space */
+.mobile-menu-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 0%;
+    min-height: 0;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: contain;
+    position: relative;
+    touch-action: pan-y;
+}
+
+@media (max-width: 1023px) {
+    .mobile-menu-container {
+        flex: 1 1 0% !important;
+        min-height: 0 !important;
+        max-height: calc(100vh - 60px) !important;
+        max-height: calc(100dvh - 60px) !important;
+        overflow-y: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
+        touch-action: pan-y !important;
+    }
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
+
+/* Mobile Top Navigation */
+.mobile-top-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid var(--gray-200);
+    background: white;
+}
+
+/* Mobile Top Buttons - 3 Columns Layout */
+.mobile-top-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    background: white;
+}
+
+.mobile-top-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    background: var(--medical-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    min-height: 70px;
+}
+
+.mobile-top-button:hover {
+    background: #15803d;
+    color: white;
+}
+
+.mobile-top-button i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.25rem !important;
+    color: white !important;
+    margin: 0;
+}
+
+.mobile-top-button span {
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: center;
+}
+
+.mobile-top-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.mobile-top-link:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.mobile-top-icon {
+    margin-right: 0.75rem;
+    color: var(--medical-blue);
+    font-size: 1.125rem;
+    min-width: 24px;
+    width: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mobile-top-icon i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Mobile Contact Information */
+.mobile-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    background: white;
+}
+
+.mobile-contact-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #fef2f2;
+    border-radius: 0.5rem;
+}
+
+.mobile-contact-icon {
+    color: #ef4444;
+    margin-right: 0.75rem;
+    font-size: 1.125rem;
+    min-width: 24px;
+    width: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mobile-contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-contact-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    margin: 0;
+}
+
+.mobile-contact-value {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+/* Mobile Contact Information - 2 Columns */
+.mobile-contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    background: white;
+}
+
+.mobile-contact-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: #fff7ed;
+    border-radius: 0.5rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-contact-label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-contact-card i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.25rem !important;
+    color: var(--orange-500) !important;
+    flex-shrink: 0;
+}
+
+.mobile-contact-number {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    line-height: 1.3;
+}
+
+/* Mobile Action Buttons */
+.mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    background: white;
+}
+
+.mobile-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Mobile Action Buttons - 2 Columns Layout */
+.mobile-action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    background: white;
+}
+
+.mobile-action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    text-align: center;
+}
+
+.mobile-action-button.careers {
+    background: var(--medical-blue);
+    color: white;
+}
+
+.mobile-action-button.careers:hover {
+    background: #15803d;
+    color: white;
+}
+
+.mobile-action-button.events {
+    background: #0d9488;
+    color: white;
+}
+
+.mobile-action-button.events:hover {
+    background: #0f766e;
+    color: white;
+}
+
+.mobile-action-button.donate {
+    background: var(--orange-500);
+    color: white;
+}
+
+.mobile-action-button.donate:hover {
+    background: var(--orange-600);
+    color: white;
+}
+
+.mobile-action-button i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.125rem !important;
+    color: white !important;
+    margin: 0;
+}
+
+.mobile-action-button span {
+    color: white;
+    font-weight: 600;
+}
+
+.mobile-action-btn.careers {
+    background: var(--medical-blue);
+    color: white;
+}
+
+.mobile-action-btn.careers:hover {
+    background: #15803d;
+}
+
+.mobile-action-btn.donate {
+    background: var(--orange-500);
+    color: white;
+}
+
+.mobile-action-btn.donate:hover {
+    background: var(--orange-600);
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: white;
+}
+
+.mobile-nav-item {
+    position: relative;
+}
+
+.mobile-nav-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--gray-700);
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--gray-200);
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.mobile-nav-button:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.mobile-nav-button i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.125rem !important;
+    margin-right: 0.75rem;
+    color: var(--medical-blue);
+    min-width: 24px;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+.mobile-nav-content {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav-icon {
+    margin-right: 0.75rem;
+    color: var(--medical-blue);
+    font-size: 1.125rem;
+    min-width: 24px;
+    width: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mobile-nav-icon i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.mobile-nav-arrow {
+    font-size: 0.875rem;
+}
+
+.mobile-nav-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Mobile Submenu - No animations */
+.mobile-submenu {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+
+.mobile-submenu.show,
+.mobile-submenu:not(.hidden) {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Mobile Sub-submenu - No animations */
+.mobile-sub-submenu {
+    display: none;
+    position: relative;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.mobile-sub-submenu.show,
+.mobile-sub-submenu:not(.hidden) {
+    display: block !important;
+}
+
+.mobile-sub-submenu-content {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Mobile Sub-sub-submenu - No animations */
+.mobile-sub-sub-submenu {
+    display: none;
+    position: relative;
+    background: #f3f4f6;
+    border-radius: 0.375rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.mobile-sub-sub-submenu.show,
+.mobile-sub-sub-submenu:not(.hidden) {
+    display: block !important;
+}
+
+.mobile-sub-sub-submenu-content {
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Mobile Menu Links */
+.mobile-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.mobile-link:hover {
+    color: var(--orange-600);
+    background: #fff7ed;
+}
+
+.mobile-link-bold {
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+.mobile-link-group {
+    padding-left: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Mobile Menu Buttons */
+.mobile-sub-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mobile-sub-button:hover {
+    color: var(--orange-600);
+    background: #fff7ed;
+}
+
+.mobile-sub-arrow {
+    font-size: 0.75rem;
+}
+
+.mobile-sub-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Mobile Menu Sections */
+.mobile-section {
+    margin-bottom: 0.75rem;
+}
+
+.mobile-section-title {
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.mobile-section-links {
+    padding-left: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Mobile Menu Items with Icons */
+.mobile-item-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-item-with-icon:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.mobile-item-icon {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+.mobile-item-icon.medical-blue,
+.mobile-item-icon.medical-teal,
+.mobile-item-icon.medical-green,
+.mobile-item-icon.purple {
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+.mobile-item-content {
+    flex: 1;
+}
+
+.mobile-item-title {
+    font-weight: 600;
+    color: var(--gray-900);
+    font-size: 0.875rem;
+}
+
+.mobile-item-desc {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .logo-subtitle {
+        display: block;
+    }
+    
+    .action-btn span {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-links {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .emergency-contact {
+        display: flex;
+    }
+    
+    .action-buttons {
+        margin-right: 15px;
+    }
+    
+    .desktop-nav {
+        display: flex;
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    .mobile-menu {
+        display: none !important;
+    }
+    
+    .header-container {
+        margin-top: 0;
+    }
+    
+    body.menu-open {
+        overflow: auto !important;
+        position: static !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .nav-container {
+        padding: 0 2rem;
+    }
+}
+
+/* Smooth transitions */
+.transition-all-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.rotated {
+    transform: rotate(180deg) !important;
+}
+
+/* Additional utility classes for mobile menu */
+.lg\\:hidden {
+    display: block !important;
+}
+
+@media (min-width: 1024px) {
+    .lg\\:hidden {
+        display: none !important;
+    }
+}
+
+/* Tailwind utility classes for mobile menu */
+.bg-medical-blue {
+    background-color: var(--medical-blue) !important;
+}
+
+.bg-orange-500 {
+    background-color: var(--orange-500) !important;
+}
+
+.bg-orange-50 {
+    background-color: #fff7ed !important;
+}
+
+.hover\\:bg-green-700:hover {
+    background-color: #15803d !important;
+}
+
+.hover\\:bg-orange-600:hover {
+    background-color: var(--orange-600) !important;
+}
+
+.hover\\:text-orange-600:hover {
+    color: var(--orange-600) !important;
+}
+
+.text-medical-blue {
+    color: var(--medical-blue) !important;
+}
+
+.text-medical-blue i,
+[class*="text-medical-blue"] i {
+    color: var(--medical-blue) !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.text-gray-700 {
+    color: var(--gray-700) !important;
+}
+
+.text-gray-600 {
+    color: var(--gray-600) !important;
+}
+
+.text-gray-800 {
+    color: var(--gray-800) !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+/* Additional utility classes for text handling */
+.flex-1 {
+    flex: 1 1 0% !important;
+}
+
+.min-w-0 {
+    min-width: 0 !important;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0 !important;
+}
+
+.truncate {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+
+/* Mobile menu item positioning */
+.mobile-menu-item {
+    position: relative;
+    z-index: 5;
+}
+
+/* Fix for dropdown buttons to ensure they stay above content */
+.mobile-sub-submenu button,
+.mobile-sub-sub-submenu button {
+    position: relative;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Ensure proper stacking for mobile menu items */
+.mobile-menu-item {
+    position: relative;
+    z-index: 5;
+}
+
+/* Mobile menu specific styles - No animations */
+.mobile-submenu {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+
+.mobile-submenu:not(.hidden) {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Special styling for departments submenu to make it scrollable */
+#departments-submenu:not(.hidden) {
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 0.5rem;
+}
+
+/* Department links styling - remove underlines and increase font size */
+#departments-submenu a {
+    text-decoration: none !important;
+    font-size: 0.875rem !important;
+    line-height: 1.5;
+    padding: 0 !important;
+}
+
+#departments-submenu a:hover {
+    text-decoration: none !important;
+}
+
+/* Custom scrollbar for departments submenu */
+#departments-submenu::-webkit-scrollbar {
+    width: 6px;
+}
+
+#departments-submenu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#departments-submenu::-webkit-scrollbar-thumb {
+    background: #f97316; /* Orange color to match theme */
+    border-radius: 3px;
+}
+
+#departments-submenu::-webkit-scrollbar-thumb:hover {
+    background: #ea580c; /* Darker orange on hover */
+}
+
+.mobile-sub-submenu {
+    display: none;
+    position: relative;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.mobile-sub-submenu:not(.hidden) {
+    display: block !important;
+}
+
+.mobile-sub-sub-submenu {
+    display: none;
+    position: relative;
+    background: #f3f4f6;
+    border-radius: 0.375rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.mobile-sub-sub-submenu:not(.hidden) {
+    display: block !important;
+}
+
+/* Organ-specific Cancer specific styles */
+#organ-cancers-submenu {
+    max-height: 600px !important;
+    overflow-y: auto;
+    margin-bottom: 12px;
+}
+
+#organ-cancers-submenu:not(.hidden) {
+    margin-bottom: 15px;
+}
+
+/* Ensure last menu item (e.g. Research) is scrollable into view */
+.mobile-menu-item:last-child {
+    margin-bottom: 80px;
+}
+
+/* Ensure mobile menu container has proper bottom spacing */
+.mobile-menu .container {
+    padding-bottom: 40px !important;
+}
+
+/* Fix for Research & Clinical Trials text overflow */
+.mobile-menu-item button {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+/* Specific fix for research submenu */
+#research-submenu:not(.hidden) {
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+/* Fix for research submenu items text overflow */
+#research-submenu .doctors-item {
+    padding: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: 0.5rem !important;
+    background: #f8f9fa !important;
+    border: 1px solid #e9ecef !important;
+}
+
+#research-submenu .doctors-content {
+    flex: 1 !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+    padding-right: 0.5rem !important;
+}
+
+#research-submenu .doctors-title {
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    color: var(--gray-900) !important;
+    margin-bottom: 0.25rem !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    line-height: 1.3 !important;
+}
+
+#research-submenu .doctors-desc {
+    font-size: 0.75rem !important;
+    color: var(--gray-600) !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    word-wrap: break-word !important;
+}
+
+#research-submenu .doctors-icon {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    flex-shrink: 0 !important;
+    margin-right: 0.75rem !important;
+}
+
+/* Ensure research submenu items are fully visible */
+#research-submenu .doctors-item:last-child {
+    margin-bottom: 20px !important;
+}
+
+/* Add extra spacing to research submenu */
+#research-submenu {
+    padding-bottom: 20px !important;
+}
+
+/* Mobile Cancer Encyclopedia Styles */
+#cancer-care-submenu:not(.hidden) {
+    padding-left: 1rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.mobile-cancer-encyclopedia-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.mobile-cancer-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.mobile-cancer-type-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.625rem 0.375rem;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    background: white;
+    border: 1px solid var(--gray-200);
+}
+
+.mobile-cancer-type-item:hover {
+    background: #fff7ed;
+    border-color: var(--orange-500);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-cancer-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.mobile-cancer-name {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    text-align: center;
+    line-height: 1.3;
+}
+
+.mobile-cancer-type-item:hover .mobile-cancer-name {
+    color: var(--orange-600);
+}
+
+/* Tailwind utility classes for mobile cancer icons */
+.bg-pink-500 {
+    background-color: #ec4899 !important;
+}
+
+.bg-purple-600 {
+    background-color: #9333ea !important;
+}
+
+.bg-purple-700 {
+    background-color: #7c3aed !important;
+}
+
+.bg-blue-500 {
+    background-color: #3b82f6 !important;
+}
+
+.bg-blue-600 {
+    background-color: #2563eb !important;
+}
+
+.bg-orange-500 {
+    background-color: #f97316 !important;
+}
+
+.bg-red-500 {
+    background-color: #ef4444 !important;
+}
+
+.bg-yellow-500 {
+    background-color: #eab308 !important;
+}
+
+.bg-gray-600 {
+    background-color: #4b5563 !important;
+}
+
+.bg-gray-700 {
+    background-color: #374151 !important;
+}
+
+.bg-gray-800 {
+    background-color: #1f2937 !important;
+}
+
+.bg-red-700 {
+    background-color: #dc2626 !important;
+}
+
+.bg-amber-500 {
+    background-color: #f59e0b !important;
+}
+
+.bg-gray-500 {
+    background-color: #6b7280 !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.border-2 {
+    border-width: 2px !important;
+}
+
+.border-white {
+    border-color: white !important;
+}
+
+/* Focus styles for accessibility */
+.nav-button:focus,
+.mobile-menu-btn:focus,
+.mobile-nav-button:focus,
+.mobile-sub-button:focus {
+    outline: 2px solid var(--orange-500);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .header-container {
+        display: none;
+    }
+}
+
+/* Ensure all Font Awesome icons are visible in mobile menu */
+.mobile-menu .fas,
+.mobile-menu .far,
+.mobile-menu .fab,
+.mobile-menu i,
+.mobile-menu [class*="fa-"] {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-style: normal !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Force icon visibility */
+.mobile-menu-item button i,
+.mobile-menu-item a i,
+.mobile-menu i.fas,
+.mobile-menu i.far,
+.mobile-menu i.fab,
+.mobile-menu button i,
+.mobile-menu a i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.125rem !important;
+}
+
+/* Ensure icons next to text are visible */
+.mobile-menu-item button .fas,
+.mobile-menu-item button .far,
+.mobile-menu-item button .fab,
+.mobile-menu button .fas,
+.mobile-menu button .far,
+.mobile-menu button .fab {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-right: 0.75rem;
+    min-width: 24px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Mobile menu item styles with icons */
+.mobile-centre-item,
+.mobile-doctor-item,
+.mobile-screening-item,
+.mobile-patient-item,
+.mobile-research-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.mobile-centre-item:hover,
+.mobile-doctor-item:hover,
+.mobile-screening-item:hover,
+.mobile-patient-item:hover,
+.mobile-research-item:hover {
+    background: #fff7ed;
+    color: var(--orange-600);
+}
+
+.mobile-centre-icon,
+.mobile-doctor-icon,
+.mobile-screening-icon,
+.mobile-patient-icon,
+.mobile-research-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+.mobile-centre-icon i,
+.mobile-doctor-icon i,
+.mobile-screening-icon i,
+.mobile-patient-icon i,
+.mobile-research-icon i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1rem !important;
+    color: white !important;
+}
+
+.mobile-centre-content,
+.mobile-doctor-content,
+.mobile-screening-content,
+.mobile-patient-content,
+.mobile-research-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.mobile-centre-title,
+.mobile-doctor-title,
+.mobile-screening-title,
+.mobile-patient-title,
+.mobile-research-title {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.mobile-centre-desc,
+.mobile-doctor-desc,
+.mobile-screening-desc,
+.mobile-patient-desc,
+.mobile-research-desc {
+    font-size: 0.8125rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+.hospital-banner-container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        /* 16:9 Aspect Ratio */
+        .hospital-banner-wrapper {
+            position: relative;
+            width: 100%;
+            /* padding-bottom: 45%;  */
+            padding-bottom: 45%; 
+            height: 0;
+            overflow: hidden;
+        }
+
+        .hospital-banner-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+
+        /* Background Image */
+        .hospital-banner-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Desktop Background Image */
+        .hospital-banner-background.desktop {
+            display: block;
+        }
+
+        /* Mobile Background Image */
+        .hospital-banner-background.mobile {
+            display: none;
+        }
+
+        /* Gradient Overlay */
+        .hospital-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: linear-gradient(
+                135deg,
+                rgba(0, 184, 148, 0.85) 0%,
+                rgba(0, 160, 133, 0.75) 50%,
+                rgba(0, 143, 122, 0.85) 100%
+            ); */
+            /* background: linear-gradient(
+    to top right,
+    rgb(0, 184, 147) 0%,
+    rgba(0, 160, 133, 0.515) 50%,
+    rgba(0, 143, 122, 0) 100%
+); */
+          background: none;
+            z-index: 2;
+        }
+
+        /* Logo Section */
+        .hospital-banner-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .hospital-banner-logo-image {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+        }
+
+        /* Desktop Logo */
+        .hospital-banner-logo-image.desktop {
+            display: block;
+        }
+
+        /* Mobile Logo */
+        .hospital-banner-logo-image.mobile {
+            display: none;
+        }
+
+        /* Content Section */
+        .hospital-banner-text {
+            position: relative;
+            z-index: 3;
+            color: white;
+            max-width: 100%;
+            padding: 10px 0;
+            /* margin-bottom: 30px;
+            margin-left: 150px; */
+        }
+
+        .hospital-banner-title {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .hospital-banner-subtitle {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            font-weight: 400;
+            line-height: 1.6;
+            opacity: 0.95;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .hospital-banner-cta {
+            display: inline-block;
+            padding: 6px 10px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--dark-blue-text);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            margin: 10px 20px 10px 0px;
+        }
+
+        .hospital-banner-cta:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Medical Icon */
+        .hospital-banner-icon {
+            position: absolute;
+            top: 50%;
+            right: 8%;
+            transform: translateY(-50%);
+            width: 120px;
+            height: 120px;
+            opacity: 0.3;
+            z-index: 3;
+        }
+
+        /* Text Content Below Banner (Mobile) */
+        .hospital-banner-mobile-text {
+            display: none;
+            background: linear-gradient(
+                135deg,
+                rgba(0, 184, 148, 0.05) 0%,
+                rgba(0, 160, 133, 0.03) 50%,
+                rgba(0, 143, 122, 0.05) 100%
+            );
+            padding: 0px 0px;
+            text-align: center;
+        }
+
+        .hospital-banner-mobile-text .hospital-banner-title {
+            color: #2d3748;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: none;
+        }
+
+        .hospital-banner-mobile-text .hospital-banner-subtitle {
+            color: #4a5568;
+            font-size: 1.1rem;
+            opacity: 1;
+            text-shadow: none;
+            margin-bottom: 25px;
+        }
+
+        .hospital-banner-mobile-text .hospital-banner-cta {
+            background: #00695c;
+            color: white;
+            border: none;
+            margin: 10px 0px;
+            font-size: 12px;
+        }
+
+        .hospital-banner-mobile-text .hospital-banner-cta:hover {
+            background: #00a085;
+        }
+
+        /* Tablet View */
+        @media screen and (max-width: 1024px) {
+            .hospital-banner-text {
+                max-width: 65%;
+            }
+            
+            .hospital-banner-logo {
+                top: 15px;
+                left: 15px;
+            }
+            
+            .hospital-banner-logo-image {
+                height: 50px;
+            }
+            
+            .hospital-banner-icon {
+                width: 100px;
+                height: 100px;
+                right: 5%;
+            }
+        }
+
+        /* Mobile View */
+        @media screen and (max-width: 768px) {
+            .hospital-banner-content {
+                padding: 0 20px;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 80px;
+            }
+            
+            .hospital-banner-text {
+                display: none;
+            }
+            
+            .hospital-banner-mobile-text {
+                display: block;
+            }
+            
+            .hospital-banner-logo {
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                justify-content: center;
+            }
+            
+            .hospital-banner-logo-image.desktop {
+                display: none;
+            }
+            
+            .hospital-banner-logo-image.mobile {
+                display: block;
+                height: 45px;
+            }
+            
+            .hospital-banner-background.desktop {
+                display: none;
+            }
+            
+            .hospital-banner-background.mobile {
+                display: block;
+            }
+            
+            .hospital-banner-icon {
+                display: none;
+            }
+            .hospital-banner-overlay {
+                background: local;
+                /* background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 50%); */
+            }
+
+            /* Banner CTAs in one row side by side - force row layout */
+            .hospital-banner-mobile-text {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                padding: 16px 12px;
+            }
+
+            /* Banner CTA: unique styling + 2-line wording; reduced padding; keep side by side */
+            .hospital-banner-mobile-text .hospital-banner-cta,
+            .hospital-banner-mobile-text a.hospital-banner-cta,
+            .hospital-banner-mobile-text > a {
+                display: inline-block !important;
+                flex: 0 0 auto;
+                width: auto !important;
+                max-width: 165px;
+                padding: 8px 12px;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 14px;
+                white-space: normal;
+                text-align: center;
+                line-height: 1.35;
+                min-height: 44px;
+                margin: 0 !important;
+                transition: all 0.3s ease;
+            }
+            /* First CTA: solid teal */
+            .hospital-banner-mobile-text > a:first-child,
+            .hospital-banner-mobile-text .hospital-banner-cta:first-child {
+                background: #00695c;
+                color: white;
+                border: 2px solid #005a4a;
+                box-shadow: 0 2px 10px rgba(0, 105, 92, 0.3);
+            }
+            .hospital-banner-mobile-text > a:first-child:hover,
+            .hospital-banner-mobile-text .hospital-banner-cta:first-child:hover {
+                background: #008f7a;
+                border-color: #00695c;
+                box-shadow: 0 4px 14px rgba(0, 105, 92, 0.4);
+            }
+            /* Second CTA: orange accent – unique from first */
+            .hospital-banner-mobile-text > a:last-child,
+            .hospital-banner-mobile-text .hospital-banner-cta:last-child {
+                background: #ea580c;
+                color: white;
+                border: 2px solid #c2410c;
+                box-shadow: 0 2px 10px rgba(234, 88, 12, 0.3);
+            }
+            .hospital-banner-mobile-text > a:last-child:hover,
+            .hospital-banner-mobile-text .hospital-banner-cta:last-child:hover {
+                background: #f97316;
+                border-color: #ea580c;
+                box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+            }
+        }
+
+        /* Instructions Section */
+        .hospital-banner-instructions {
+            margin: 30px auto;
+            max-width: 1200px;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .hospital-banner-instructions h3 {
+            color: #00b894;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .hospital-banner-instructions p {
+            margin-bottom: 12px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .hospital-banner-instructions code {
+            background: #f7fafc;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #2d3748;
+        }
+
+        .hospital-banner-instructions strong {
+            color: #2d3748;
+        }
+/* =========================================================
+   DEPARTMENTS MEGA MENU — TYPOGRAPHY ALIGNMENT (FIXED)
+   Matches existing main menu EXACTLY
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. MAIN MENU TITLE: "Departments"
+   Uses SAME typography as other top-level nav buttons
+---------------------------------------------------------- */
+.nav-item > .nav-button {
+    font-family: inherit;        /* already Inter */
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+    color: inherit;
+}
+
+/* Hover / focus must behave IDENTICALLY */
+.nav-item > .nav-button:hover,
+.nav-item > .nav-button:focus {
+    color: inherit;
+}
+
+
+/* ---------------------------------------------------------
+   2. SECTION HEADINGS (Cancer, Diagnostics, etc.)
+   Derived from main nav typography
+---------------------------------------------------------- */
+.departments-menu .mega-section-title {
+    font-family: inherit;        /* SAME as nav */
+    font-size: 0.9375rem;        /* derived from nav (≈15px) */
+    font-weight: 600;            /* stronger than links */
+    line-height: 1.4;
+    letter-spacing: inherit;
+    text-transform: none;
+    color: var(--gray-800);      /* stronger than submenu text */
+
+    /* Remove visual noise */
+    margin-bottom: 0.75rem;
+}
+
+
+/* ---------------------------------------------------------
+   3. SUBMENU ITEMS
+   EXACT match with other dropdown items
+---------------------------------------------------------- */
+.departments-menu .mega-link {
+    font-family: inherit;
+    font-size: 0.875rem;         /* SAME as site-wide dropdowns */
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: inherit;
+    text-transform: none;
+
+    color: var(--gray-600);
+}
+
+/* Hover behavior — same as header dropdowns */
+.departments-menu .mega-link:hover,
+.departments-menu .mega-link:focus {
+    color: var(--orange-600);
+    text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------
+   4. READABILITY — TYPOGRAPHY SAFE
+---------------------------------------------------------- */
+.departments-menu .mega-link {
+    white-space: normal;         /* allow wrapping */
+}
+
+
+
+
+
+/* =========================================================
+   DEPARTMENTS MEGA MENU
+   FINAL TYPOGRAPHY HIERARCHY (APPROVED)
+   ========================================================= */
+
+/* 5 Department section headings */
+.departments-menu .mega-section-title {
+    font-family: inherit;
+    font-size: 1rem;            /* larger than submenu links */
+    font-weight: 700;           /* matches Centres perceived boldness */
+    line-height: 1.4;
+    letter-spacing: inherit;
+    text-transform: none;
+    color: var(--gray-900);
+}
+
+/* Submenu + sub-submenu items */
+.departments-menu .mega-link {
+    font-family: inherit;
+    font-size: 0.875rem;        /* consistent across site */
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: inherit;
+    text-transform: none;
+}
+
+
+
+/* =========================================================
+   FINAL FIX: Cancer Specialities utility-class override
+   (Departments mega menu ONLY)
+   ========================================================= */
+
+/* Force ALL department headings to ignore color/size utilities */
+.departments-menu .mega-section-title,
+.departments-menu .mega-section-title.text-medical-blue,
+.departments-menu .mega-section-title.medical-blue {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--gray-900);
+}
+
+
+/* =========================================================
+   FINAL OVERRIDE — Cancer Specialities blue utility
+   (Departments mega menu ONLY)
+   ========================================================= */
+
+/* Neutralize text-medical-blue inside Departments headings */
+.departments-menu .mega-section-title,
+.departments-menu .mega-section-title.text-medical-blue,
+.departments-menu .mega-section-title.medical-blue {
+    color: var(--gray-900) !important;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+
+
+/* =========================================================
+   Departments Mega Menu — Icon Gradient Match (Centres)
+   ========================================================= */
+
+/* 1️⃣ Apply SAME gradient background as Centres icons */
+.departments-menu .centres-icon.medical-blue,
+.departments-menu .centres-icon.pink,
+.departments-menu .centres-icon.blue,
+.departments-menu .centres-icon.purple,
+.departments-menu .centres-icon.green,
+.departments-menu .centres-icon.orange,
+.departments-menu .centres-icon.medical-teal {
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+/* 2️⃣ Ensure inner icon stays white (matches Centres) */
+.departments-menu .centres-icon i,
+.departments-menu .centres-icon svg {
+    color: #ffffff;
+    fill: #ffffff;
+    stroke: #ffffff;
+}
+
+/* 3️⃣ Hover / focus — NO color change
+      (Centres icons do not change gradient on hover) */
+.departments-menu a:hover .centres-icon,
+.departments-menu a:focus-visible .centres-icon {
+    background: linear-gradient(135deg, #014196, #079591);
+}
+
+/* =========================================================
+   Departments Mega Menu — ICON COLOR ONLY
+   Multi-color gradient (same as other menu icons)
+   ========================================================= */
+
+/* Font Awesome / text icons */
+.departments-menu i {
+    background: linear-gradient(135deg, #014196, #079591);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* SVG icons (if any) */
+.departments-menu svg {
+    fill: url(#icon-gradient);
+}
+
+
+
+/* =========================================================
+   Departments Mega Menu — Reduce excess bottom space
+   Equal trim across all 3 columns
+   ========================================================= */
+
+/* Reduce global bottom padding of the mega menu box */
+.departments-menu .mega-menu {
+    padding-bottom: 12px; /* reduced from existing larger value */
+}
+
+/* Remove excess bottom margin from column lists */
+.departments-menu .mega-menu-column ul {
+    margin-bottom: 0;
+}
+
+/* Remove bottom padding inside last items (Font Awesome lists add this) */
+.departments-menu .mega-menu-column li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Ensure grid does NOT distribute extra space */
+.departments-menu .mega-menu-grid {
+    align-content: start;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   Departments → Clinical Specialities
+   Force "Transfusion Medicine & Blood Centre" to 2 lines
+   ========================================================= */
+
+/* Target ONLY the 5th item in this submenu */
+.departments-menu .mega-menu-column ul li:nth-child(5) {
+    max-width: 160px;       /* controls wrap width */
+    white-space: normal;    /* allow line break */
+    line-height: 1.3;       /* spacing between lines */
+}
+
+
+
+.departments-menu .mega-menu-column ul li:nth-child(5) {
+    max-width: 160px;
+    white-space: normal;
+    line-height: 1.3;
+}
+
+/* Force a break after "Transfusion Medicine" */
+.departments-menu .mega-menu-column ul li:nth-child(5)::after {
+    content: "\A";
+    white-space: pre;
+}
+
+
+
+/* =========================================================
+   Departments → Clinical Specialities
+   Force "Transfusion Medicine & Blood Centre" to 2 lines
+   ========================================================= */
+.departments-menu .mega-menu-column ul li:nth-child(5) a {
+    display: inline-block; /* allow wrapping inside link */
+    max-width: 160px;      /* force wrap */
+    white-space: normal;   /* allow line break */
+    line-height: 1.3;      /* spacing between lines */
+}
+
+
+/* =========================================================
+   ISOLATE HEADER & MENU BAR FROM PAGE CSS
+   Ensures individual page styles (e.g. .container, padding)
+   do not affect the header, nav, or dropdown menus.
+   All rules scoped under #dynamic-header for specificity.
+   ========================================================= */
+
+#dynamic-header {
+    box-sizing: border-box;
+}
+
+#dynamic-header *,
+#dynamic-header *::before,
+#dynamic-header *::after {
+    box-sizing: border-box;
+}
+
+/* Header & nav container – keep intended padding */
+#dynamic-header .header-container,
+#dynamic-header .main-nav {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#dynamic-header .nav-container {
+    padding: 0 !important;
+    max-width: 2000px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+#dynamic-header .nav-main,
+#dynamic-header .desktop-nav {
+    padding: 0 !important;
+}
+
+#dynamic-header .nav-items {
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0;
+}
+
+#dynamic-header .nav-item {
+    padding: 0.5rem 0.75rem !important;
+    margin: 0 !important;
+}
+
+#dynamic-header .nav-item > .nav-button {
+    padding: 0 !important;
+}
+
+/* Mega menu dropdowns – fixed padding so page .container doesn’t affect */
+#dynamic-header .mega-menu {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#dynamic-header .mega-menu-content {
+    padding: 2rem !important;
+}
+
+#dynamic-header .departments-menu .mega-menu-content {
+    padding: 2rem 2.5rem !important;
+}
+
+#dynamic-header .cancer-care-menu .cancer-encyclopedia-content,
+#dynamic-header .cancer-encyclopedia-content {
+    padding: 1.5rem 1.25rem !important;
+}
+
+/* Centres of Excellence menu – preserve card padding & spacing */
+#dynamic-header .centres-menu .mega-menu-content {
+    padding: 1.5rem 1.25rem !important;
+}
+
+#dynamic-header .centres-item {
+    padding: 0.75rem !important;
+    margin: 0 !important;
+    gap: 0.75rem !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+#dynamic-header .centres-icon {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    flex-shrink: 0 !important;
+}
+
+#dynamic-header .centres-content {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+#dynamic-header .centres-title,
+#dynamic-header .centres-desc {
+    margin: 0 !important;
+}
+
+#dynamic-header .centres-desc {
+    margin-top: 0.25rem !important;
+}
+
+/* Other mega menus (Doctors, Screening, etc.) – consistent padding */
+#dynamic-header .doctors-item {
+    padding: 1rem !important;
+}
+
+#dynamic-header .mega-menu-grid,
+#dynamic-header .departments-grid-3 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#dynamic-header .mega-section {
+    padding: 0.5rem 0.75rem !important;
+}

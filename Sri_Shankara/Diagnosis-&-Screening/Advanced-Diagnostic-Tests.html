@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Brain Tumor care at Urself Corporate Cancer Hospital. Learn about early detection, symptoms, diagnosis, treatment, and expert care.">
+    <title>Brain Tumor - Corporate Cancer Hospital</title>
+    <!-- Linking the global CSS file -->
+    <link rel="stylesheet" href="cancer-we-treat.css">
+    <!-- Linking Google Fonts for 'Inter' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Banner Section 4 -->
+ <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Cancer Care/Screening & Diagnostics/Advanced Diagnostic test.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Cancer Care/Screening & Diagnostics/Advanced Diagnostic test.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+                <!-- Desktop Logo -->
+                <!-- <img 
+                    src="../Banners/Cancer Care/Screening & Diagnostics/Advanced Diagnostic test.jpg" 
+                    alt="Hospital Desktop Logo"
+                    class="hospital-banner-logo-image desktop"
+                > -->
+                
+                <!-- Mobile Logo -->
+                <!-- <img 
+                    src="../Banners/Cancer Care/Screening & Diagnostics/Advanced Diagnostic test.jpg" 
+                    alt="Hospital Mobile Logo"
+                    class="hospital-banner-logo-image mobile"
+                > -->
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                
+                <div class="hospital-banner-text">
+                    <!-- <h1 class="hospital-banner-title">Precise & Early<br>Cancer Detection<br>with Advanced<br>Diagnostic Tests</h1>
+                    
+                    <p class="hospital-banner-subtitle">We deliver state-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+
+                <!-- Medical Icon -->
+                <!-- <svg class="hospital-banner-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 30 Q20 20 30 20 L70 20 Q80 20 80 30 L80 70 Q80 80 70 80 L30 80 Q20 80 20 70 Z" />
+                    <path d="M50 30 L50 70 M30 50 L70 50" />
+                    <circle cx="50" cy="25" r="8" />
+                    <circle cx="25" cy="50" r="6" />
+                    <circle cx="75" cy="50" r="6" />
+                </svg> -->
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <!-- <h1 class="hospital-banner-title">Precise & Early Cancer Detection</h1>
+            <p class="hospital-banner-subtitle">State-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+
+
+
+<head>
+<!-- ✅ Breadcrumb CSS -->
+<style>
+
+.breadcrumb-wrapper {
+  max-width: 1400px;     /* matches your page width */
+  margin: 0 auto;        /* centers the block */
+  padding-left: 10px;    /* ✅ add space on the left */
+  padding-right: 40px;   /* optional, keeps both sides equal */
+}
+
+.breadcrumb {
+  --sep: "›";
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 1rem 0 1.5rem;
+  color: #444;
+  font-family: Arial, sans-serif;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  color: #333;
+}
+.breadcrumb li+li::before {
+  content: var(--sep);
+  opacity: 0.6;
+  margin: 0 0.5rem 0 0.25rem;
+}
+.breadcrumb a {
+  color: #003017;
+  text-decoration: none;
+}
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.breadcrumb [aria-current="page"] {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .breadcrumb ol {
+    gap: 0.2rem 0.35rem;
+  }
+  .breadcrumb li:not(:first-child):not(:last-child) {
+    display: none;
+  }
+  .breadcrumb li:first-child::after {
+    content: "…";
+    margin: 0 0.35rem 0 0.25rem;
+    opacity: 0.6;
+  }
+}
+</style>
+<!-- ✅ Breadcrumb End -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body>
+<!-- ✅ Breadcrumb Start -->
+<div class="breadcrumb-wrapper">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../home/Sri-Shankara-Cancer-Hospital-and-Research-Centre.html" target="_blank">Home</a></li>
+    <li><a href="../cancer-we-treat/All-Types-Cancer.html" target="_blank">Diagnosis & Screening</a></li>
+    <li aria-current="page">Advanced Diagnostic Tests</li>
+  </ol>
+</nav>
+</div>
+<!-- ✅ SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yourhospital.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cancers We Treat",
+      "item": "https://yourhospital.com/Diagnosis-&-Screening"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Breast Cancer",
+      "item": "https://yourhospital.com/Diagnosis-&-Screening/Advanced-Diagnostic-Tests.html"
+    }
+  ]
+}
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Diagnostic Tests - Sri Shankara Cancer Hospital</title>
+    <style>
+        :root {
+            
+    --primary-color4: #003017;
+    --button1:#006644;
+    --accordion-summary-bg4: #C8E6C9;
+    --white: #FFFFFF;
+           --main-font: Arial, sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--main-font);
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #014196, #079591);
+            min-height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--button1);
+            outline-offset: 2px;
+        }
+
+        .page-header-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .page-header-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-header-section h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #014196;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .page-header-section .page-subtitle {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            line-height: 1.8;
+            max-width: 100%;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .page-header-section .page-intro-text {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            line-height: 1.8;
+            max-width: 100%;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        .diagnostic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-grid {
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        .left-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .diagnostic-tabs-container {
+            margin-bottom: 40px;
+        }
+
+        .diagnostic-tab-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid rgba(1, 65, 150, 0.2);
+        }
+
+        .diagnostic-tab-button {
+            background: transparent;
+            color: #014196;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            margin-bottom: -2px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+        }
+
+        .diagnostic-tab-button:hover {
+            background: rgba(7, 149, 145, 0.1);
+            color: #079591;
+        }
+
+        .diagnostic-tab-button.active {
+            background: rgba(7, 149, 145, 0.15);
+            color: #014196;
+            border-bottom: 3px solid #079591;
+        }
+
+        .diagnostic-tab-button:focus {
+            outline: 3px solid #079591;
+            outline-offset: 2px;
+        }
+
+        .diagnostic-tab-button:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        .diagnostic-tab-panel {
+            display: none;
+        }
+
+        .diagnostic-tab-panel.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .diagnostic-category-section {
+            margin-bottom: 0;
+        }
+
+        .diagnostic-category-section h3 {
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(7, 149, 145, 0.3);
+            margin-bottom: 25px;
+            color: #014196;
+        }
+
+        .diagnostic-accordion {
+            margin-bottom: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+
+        .diagnostic-accordion:hover {
+            box-shadow: 0 4px 12px rgba(0, 102, 68, 0.12);
+            border-color: #d0e8d6;
+        }
+
+        .diagnostic-accordion-header {
+            width: 100%;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border: none;
+            padding: 24px 28px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            position: relative;
+            min-height: 60px;
+        }
+
+        .diagnostic-accordion-header:focus {
+            outline: 3px solid #079591;
+            outline-offset: -3px;
+        }
+
+        .diagnostic-accordion-header:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        .diagnostic-accordion-header:focus-visible {
+            outline: 3px solid #079591;
+            outline-offset: -3px;
+        }
+
+        .diagnostic-accordion-header::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #014196, #079591);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .diagnostic-accordion-header:hover {
+            background: linear-gradient(135deg, #f0f7ff 0%, #f8f9ff 100%);
+        }
+
+        .diagnostic-accordion-header:hover::before {
+            opacity: 1;
+        }
+
+        .diagnostic-accordion-header[aria-expanded="true"] {
+            background: linear-gradient(135deg, rgba(7, 149, 145, 0.1) 0%, rgba(1, 65, 150, 0.05) 100%);
+        }
+
+        .diagnostic-accordion-header[aria-expanded="true"]::before {
+            opacity: 1;
+        }
+
+        .diagnostic-accordion-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #014196;
+            flex: 1;
+            line-height: 1.4;
+            margin-right: 20px;
+        }
+
+        .diagnostic-accordion-toggle {
+            font-size: 1.1rem;
+            color: #079591;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-left: 15px;
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            min-height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(7, 149, 145, 0.1);
+            border-radius: 50%;
+        }
+
+        .diagnostic-accordion-header[aria-expanded="true"] .diagnostic-accordion-toggle {
+            transform: rotate(180deg);
+            background: rgba(7, 149, 145, 0.2);
+        }
+
+        .diagnostic-accordion-intro {
+            padding: 0 28px 20px;
+            color: #4a4a4a;
+            font-size: 1rem;
+            line-height: 1.7;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 0;
+        }
+
+        .diagnostic-accordion-content {
+            display: none;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+        }
+
+        .diagnostic-accordion-content.active {
+            display: block;
+            max-height: 2000px;
+            padding: 24px 28px;
+            background: rgba(7, 149, 145, 0.03);
+            border-top: 1px solid rgba(1, 65, 150, 0.1);
+        }
+
+        .diagnostic-details {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .detail-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            min-width: 140px;
+            color: #014196;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+        }
+
+        .detail-value {
+            flex: 1;
+            color: #4a4a4a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+
+        .diagnostic-full-width-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .diagnostic-section-title {
+            color: #014196 !important;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* Section 1: Process Steps - Timeline Style */
+        .process-steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .process-step-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #014196;
+            box-shadow: 0 4px 12px rgba(1, 65, 150, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(1, 65, 150, 0.2);
+        }
+
+        .process-step-number {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #014196, #079591);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .process-step-card h4 {
+            color: #014196;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .process-step-card p {
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .process-highlight-box {
+            background: linear-gradient(135deg, #014196, #079591);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 6px 20px rgba(1, 65, 150, 0.3);
+        }
+
+        .process-highlight-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .process-highlight-box p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+            margin: 0;
+        }
+
+        /* Section 2: Why Choose Us - Feature Cards Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(7, 149, 145, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #079591;
+            box-shadow: 0 8px 20px rgba(7, 149, 145, 0.2);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #079591, #014196);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(7, 149, 145, 0.3);
+        }
+
+        .feature-card h4 {
+            color: #014196;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .features-highlight-box {
+            background: linear-gradient(135deg, #079591, #014196);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 6px 20px rgba(7, 149, 145, 0.3);
+        }
+
+        .features-highlight-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .features-highlight-box p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+            margin: 0;
+        }
+
+        /* Section 3: FAQs - Advanced Accordion */
+        .faq-accordion {
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-accordion:hover {
+            box-shadow: 0 4px 16px rgba(1, 65, 150, 0.15);
+            border-color: #014196;
+        }
+
+        .faq-accordion-header {
+            width: 100%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: none;
+            padding: 22px 28px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #014196;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .faq-accordion-header::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #014196, #079591);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .faq-accordion-header:hover {
+            background: linear-gradient(135deg, #f0f7ff 0%, #f8f9fa 100%);
+        }
+
+        .faq-accordion-header:hover::before {
+            opacity: 1;
+        }
+
+        .faq-accordion-header.active {
+            background: linear-gradient(135deg, #e8f4ff 0%, #f0f7ff 100%);
+            color: #014196;
+        }
+
+        .faq-accordion-header.active::before {
+            opacity: 1;
+        }
+
+        .faq-accordion-toggle {
+            font-size: 1.1rem;
+            color: #079591;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-left: 15px;
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(7, 149, 145, 0.1);
+            border-radius: 50%;
+        }
+
+        .faq-accordion-header.active .faq-accordion-toggle {
+            transform: rotate(180deg);
+            background: rgba(7, 149, 145, 0.2);
+        }
+
+        .faq-accordion-content {
+            display: none;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+        }
+
+        .faq-accordion-content.active {
+            display: block;
+            max-height: 500px;
+            padding: 24px 28px;
+            background: #fafbfa;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        .faq-accordion-content p {
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Tablet Responsiveness */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .diagnostic-container {
+                padding: 15px;
+            }
+
+            .diagnostic-accordion-header {
+                padding: 22px 24px;
+            }
+
+            .diagnostic-accordion-intro {
+                padding: 0 24px 18px;
+            }
+
+            .diagnostic-accordion-content.active {
+                padding: 22px 24px;
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .page-header-section {
+                padding: 40px 20px;
+            }
+
+            .page-header-section h1 {
+                font-size: 2rem;
+                line-height: 1.3;
+                margin-bottom: 20px;
+            }
+
+            .page-header-section .page-subtitle {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 18px;
+            }
+
+            .page-header-section .page-intro-text {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .diagnostic-container {
+                padding: 10px;
+            }
+
+            .left-content,
+            .diagnostic-full-width-section {
+                padding: 20px;
+            }
+
+            .process-steps-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .faq-accordion-header {
+                padding: 18px 20px;
+                font-size: 1rem;
+            }
+
+            .faq-accordion-content.active {
+                padding: 20px;
+            }
+
+            .diagnostic-tab-buttons {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+                margin-bottom: 25px;
+                border-bottom: none;
+            }
+
+            .diagnostic-tab-button {
+                padding: 12px 10px;
+                font-size: 0.88rem;
+                min-height: 44px;
+                flex: none;
+                width: 100%;
+                text-align: center;
+                white-space: normal;
+                line-height: 1.3;
+                margin-bottom: 0;
+                border-radius: 8px;
+            }
+
+            .diagnostic-tab-button.active {
+                border-bottom: 3px solid #079591;
+                border-radius: 8px;
+            }
+
+            .diagnostic-category-section {
+                margin-bottom: 35px;
+            }
+
+            .diagnostic-category-section h3 {
+                font-size: 1.35rem;
+                margin-bottom: 20px;
+            }
+
+            .diagnostic-section-title {
+                font-size: 1.5rem;
+            }
+
+            .accordion-header {
+                padding: 15px;
+                font-size: 1rem;
+                min-height: 48px;
+            }
+
+            .diagnostic-accordion {
+                margin-bottom: 16px;
+                border-radius: 10px;
+            }
+
+            .diagnostic-accordion-header {
+                padding: 18px 20px;
+                min-height: 56px;
+            }
+
+            .diagnostic-accordion-title {
+                font-size: 1.05rem;
+                line-height: 1.4;
+                margin-right: 15px;
+            }
+
+            .diagnostic-accordion-toggle {
+                width: 36px;
+                height: 36px;
+                min-width: 36px;
+                min-height: 36px;
+                margin-left: 10px;
+            }
+
+            .diagnostic-accordion-intro {
+                padding: 0 20px 16px;
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .diagnostic-accordion-content.active {
+                padding: 18px 20px;
+            }
+
+            .detail-row {
+                flex-direction: column;
+                margin-bottom: 14px;
+                padding-bottom: 14px;
+            }
+            
+            .detail-label {
+                margin-bottom: 6px;
+                min-width: auto;
+                font-size: 0.9rem;
+            }
+
+            .detail-value {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header-section {
+                padding: 30px 18px;
+            }
+
+            .page-header-section h1 {
+                font-size: 1.75rem;
+                line-height: 1.25;
+                margin-bottom: 18px;
+            }
+
+            .page-header-section .page-subtitle {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+
+            .page-header-section .page-intro-text {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .diagnostic-container {
+                padding: 8px;
+            }
+
+            .left-content,
+            .diagnostic-full-width-section {
+                padding: 15px;
+            }
+
+            .process-steps-container {
+                gap: 15px;
+            }
+
+            .process-step-card {
+                padding: 20px;
+            }
+
+            .process-step-number {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .features-grid {
+                gap: 15px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .faq-accordion-header {
+                padding: 16px 18px;
+                font-size: 0.95rem;
+            }
+
+            .faq-accordion-content.active {
+                padding: 18px;
+            }
+
+            .process-highlight-box,
+            .features-highlight-box {
+                padding: 30px 20px;
+            }
+
+            .process-highlight-box h3,
+            .features-highlight-box h3 {
+                font-size: 1.4rem;
+            }
+
+            .diagnostic-tab-buttons {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 6px;
+                margin-bottom: 20px;
+            }
+
+            .diagnostic-tab-button {
+                padding: 10px 6px;
+                font-size: 0.8rem;
+                min-height: 48px;
+            }
+
+            .diagnostic-category-section {
+                margin-bottom: 30px;
+            }
+
+            .diagnostic-category-section h3 {
+                font-size: 1.25rem;
+                margin-bottom: 18px;
+                padding-bottom: 10px;
+            }
+
+            .diagnostic-section-title {
+                font-size: 1.35rem;
+            }
+
+            .accordion-header {
+                padding: 14px;
+                font-size: 0.95rem;
+                min-height: 44px;
+            }
+
+            .diagnostic-accordion {
+                margin-bottom: 14px;
+                border-radius: 8px;
+            }
+
+            .diagnostic-accordion-header {
+                padding: 16px 18px;
+                min-height: 52px;
+            }
+
+            .diagnostic-accordion-title {
+                font-size: 1rem;
+                line-height: 1.35;
+                margin-right: 12px;
+            }
+
+            .diagnostic-accordion-toggle {
+                width: 36px;
+                height: 36px;
+                min-width: 36px;
+                min-height: 36px;
+                margin-left: 8px;
+                font-size: 1rem;
+            }
+
+            .diagnostic-accordion-intro {
+                padding: 0 18px 14px;
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .diagnostic-accordion-content.active {
+                padding: 16px 18px;
+            }
+
+            .detail-row {
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+            }
+
+            .detail-label {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+
+            .detail-value {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+        }
+        
+        /* Remove margin from last section before footer */
+        .diagnostic-full-width-section:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        /* Protect footer from page styles */
+        #hospital-footer h1,
+        #hospital-footer h2,
+        #hospital-footer h3,
+        #hospital-footer h4,
+        #hospital-footer h5,
+        #hospital-footer h6 {
+            color: white !important;
+        }
+        
+        #hospital-footer {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <!-- Page Header Section -->
+    <div class="page-header-section">
+        <div class="page-header-wrapper">
+            <h1>Advanced Diagnostic Tests</h1>
+            <p class="page-subtitle">Precise and early cancer detection through state-of-the-art diagnostic technology, enabling accurate diagnosis, tailored treatment planning, and improved patient outcomes.</p>
+            <p class="page-intro-text">At Sri Shankara Cancer Hospital & Research Centre, we utilize cutting-edge diagnostic technologies to provide comprehensive and accurate cancer detection. Our advanced diagnostic capabilities encompass a wide range of imaging techniques, laboratory diagnostics, and specialized tests designed to identify cancer at its earliest stages and guide personalized treatment strategies.</p>
+        </div>
+    </div>
+
+    <div class="diagnostic-container">
+        <div class="main-grid">
+            <div class="left-content">
+                <h2 style="color: #014196; margin-bottom: 30px; font-size: 1.8rem;">Our Advanced Diagnostic Capabilities</h2>
+
+                <!-- Tab Navigation -->
+                <div class="diagnostic-tabs-container">
+                    <div class="diagnostic-tab-buttons" role="tablist">
+                        <button class="diagnostic-tab-button active" type="button" role="tab" aria-selected="true" aria-controls="molecular-tab" id="molecular-tab-btn" data-tab="molecular">Molecular Diagnostics (In-house)</button>
+                        <button class="diagnostic-tab-button" type="button" role="tab" aria-selected="false" aria-controls="nuclear-tab" id="nuclear-tab-btn" data-tab="nuclear">Nuclear Medicine</button>
+                        <button class="diagnostic-tab-button" type="button" role="tab" aria-selected="false" aria-controls="imaging-tab" id="imaging-tab-btn" data-tab="imaging">Imaging Techniques</button>
+                        <button class="diagnostic-tab-button" type="button" role="tab" aria-selected="false" aria-controls="laboratory-tab" id="laboratory-tab-btn" data-tab="laboratory">Laboratory Diagnostics</button>
+                        <button class="diagnostic-tab-button" type="button" role="tab" aria-selected="false" aria-controls="functional-tab" id="functional-tab-btn" data-tab="functional">Functional & Specialized Tests</button>
+                    </div>
+
+                    <!-- Molecular Diagnostics (In-house) Tab -->
+                    <div id="molecular-tab" class="diagnostic-tab-panel active" role="tabpanel" aria-labelledby="molecular-tab-btn">
+                        <div class="diagnostic-category-section">
+                            <h3 style="color: #014196; font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">Molecular Diagnostics & Precision Medicine Platform</h3>
+                            <p style="color: #4a4a4a; font-size: 1rem; line-height: 1.7; margin-bottom: 30px;">Our NABL-accredited molecular diagnostics laboratory offers comprehensive molecular profiling services across multiple technology platforms, serving as the cornerstone of precision oncology at SSCHRC.</p>
+                            
+                            <!-- Genomic Profiling Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Genomic Profiling Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Comprehensive genomic analysis services for personalized cancer treatment and precision medicine.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Next-Generation Sequencing (NGS):</span>
+                                            <span class="detail-value">Comprehensive tumor profiling including targeted gene panels, whole exome sequencing, and transcriptome analysis for actionable mutations and therapeutic biomarkers.</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Liquid Biopsy:</span>
+                                            <span class="detail-value">Circulating tumor DNA (ctDNA) analysis for minimal residual disease monitoring, treatment response assessment, and resistance mutation detection.</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Germline Testing:</span>
+                                            <span class="detail-value">Hereditary cancer syndrome panels covering BRCA1/2, Lynch syndrome, and over 80 cancer predisposition genes.</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Pharmacogenomics:</span>
+                                            <span class="detail-value">Germline variants affecting drug metabolism to optimize therapeutic dosing and minimize toxicity.</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">PCR based Mutation testing:</span>
+                                            <span class="detail-value">PCR based Mutation testing for multiple genes like EGFR, RAS family and POL-E.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Advanced Molecular Pathology -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Advanced Molecular Pathology</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Advanced molecular pathology services for comprehensive cancer diagnosis and characterization.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Flow Cytometry:</span>
+                                            <span class="detail-value">Multi-parameter immunophenotyping for hematological malignancies with comprehensive aberrancy detection.</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Cytogenetics & FISH:</span>
+                                            <span class="detail-value">Chromosomal aberration analysis and fusion gene detection across solid and liquid tumors.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Emerging Technologies -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Emerging Technologies</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Cutting-edge technologies for advanced cancer research and diagnostics.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Mass Spectrometry-Based Proteomics:</span>
+                                            <span class="detail-value">Protein biomarker discovery, metabolomic profiling, and tissue imaging mass spectrometry for spatial molecular characterization.</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Single-Cell Genomics:</span>
+                                            <span class="detail-value">Tumor heterogeneity analysis and clonal evolution studies.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nuclear Medicine Tab -->
+                    <div id="nuclear-tab" class="diagnostic-tab-panel" role="tabpanel" aria-labelledby="nuclear-tab-btn">
+                        <div class="diagnostic-category-section">
+                            <h3 style="color: #014196; font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">Nuclear Medicine Services</h3>
+                            
+                            <!-- Oncology Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Oncology Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Comprehensive nuclear medicine services for cancer diagnosis, staging, and treatment.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">PET CT (FDG, PSMA, DOTANOC, DOPA, FAPI) for initial staging, detection of unknown primary, radiation therapy planning, response assessment, surveillance; Sentinel Lymph Node Lymphoscintigraphy; Radio-guided Occult Lesion Localization (ROLL); MDP Bone scan; MIBG, HYNIC TOC and DMSA (V) imaging for endocrine tumors; Parathyroid imaging; Whole body iodine scan for thyroid cancer</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Therapy:</span>
+                                            <span class="detail-value">High dose radioiodine therapy; I-131 MIBG for Neuroblastoma; 177 Lu DOTATATE therapy for metastatic neuroendocrine tumor; 177 Lu PSMA therapy for metastatic prostate cancer; Samarium therapy for bone pain palliation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cardiology Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Cardiology Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Nuclear medicine cardiac imaging and assessment services.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">Myocardial Perfusion Scintigraphy; Myocardial Viability Assessment (Perfusion and/or FDG PET); Radionuclide Ventriculography (MUGA Scan) for systolic and diastolic function; First Pass Angiography for RVEF and shunt quantification</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Neurology Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Neurology Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Nuclear medicine services for neurological conditions and brain imaging.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">FDG and F-DOPA PET CT for brain tumors; FDG PET and Brain Perfusion SPECT for dementia and epilepsy; Blood brain barrier imaging; Cisternography</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Endocrinology Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Endocrinology Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Nuclear medicine services for endocrine disorders and thyroid conditions.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">Thyroid Scintigraphy; MIBG Imaging; FDG and DOTANOC PET CT for MTC and TENIS syndrome</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Therapy:</span>
+                                            <span class="detail-value">Radioiodine therapy for Graves' disease, toxic nodular goiter and thyroid cancer; I-131 MIBG for Neuroblastoma; 177 Lu DOTATATE therapy for metastatic neuroendocrine tumor</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Gastroenterology Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Gastroenterology Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Nuclear medicine services for gastrointestinal and hepatobiliary conditions.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">Salivary Scintigraphy; Salivogram and Gastroesophageal Reflux Scintigraphy; Esophageal Transit Scintigraphy; Gastric Emptying Study; Gastrointestinal Bleed Study; Ectopic Gastric Mucosa (Meckel's Scan); Hepatobiliary Imaging (HIDA Scan); 99mTc labeled RBC scintigraphy for liver hemangioma; Sulfur colloid imaging of reticuloendothelial system; Hepato-pulmonary shunt quantification; Hepatic encephalopathy; HSA imaging for protein-losing enteropathy</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Therapy:</span>
+                                            <span class="detail-value">Trans Arterial Radio Embolization with 90Y TheraSpheres (TARE)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Nephrourology Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Nephrourology Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Nuclear medicine services for renal and urological conditions.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">Renal cortical scintigraphy (DMSA Scan); Diuretic Renography (EC / DTPA Scan); ACE Renography for renovascular hypertension; Renal Transplant Evaluation; Radionuclide cystography for VUR; FDG PET CT for tumor imaging</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Skeletal Scintigraphy -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Skeletal Scintigraphy</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Bone imaging and skeletal assessment services.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">MDP Bone scan – Three phase, whole body and SPECT studies; 18F-NaF PET; Infection imaging (FDG PET CT and MDP Bone scan); Metastatic workup and metabolic bone disorders</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pulmonology Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Pulmonology Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Nuclear medicine services for pulmonary conditions.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">Perfusion Scintigraphy (V/Q Scan) for pulmonary embolism; Lung perfusion scan for preoperative lung volume estimation prior to lobectomy and lung shunt quantification</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Miscellaneous Services -->
+                            <div class="diagnostic-accordion" style="margin-bottom: 20px;">
+                                <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                                    <span class="diagnostic-accordion-title">Miscellaneous Services</span>
+                                    <span class="diagnostic-accordion-toggle">▼</span>
+                                </button>
+                                <div class="diagnostic-accordion-intro">
+                                    <p>Additional specialized nuclear medicine diagnostic services.</p>
+                                </div>
+                                <div class="diagnostic-accordion-content">
+                                    <div class="diagnostic-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Diagnostic Services:</span>
+                                            <span class="detail-value">Scrotal Scintigraphy; Dacryoscintigraphy; Pleuroperitoneal shunt evaluation; Limb lymphoscintigraphy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Imaging Techniques Tab -->
+                    <div id="imaging-tab" class="diagnostic-tab-panel" role="tabpanel" aria-labelledby="imaging-tab-btn">
+                        <div class="diagnostic-category-section">
+                            <h3 style="color: #014196; font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">Advanced Imaging Techniques</h3>
+                    
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">PET-CT Scan (Positron Emission Tomography – Computed Tomography)</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Combines two powerful imaging methods to detect cancer activity at the cellular level and show detailed pictures of tumors. Essential for accurate staging and monitoring treatment response.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Detects metabolic activity of cancer cells, identifies primary tumors and metastases, evaluates treatment response</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Procedure:</span>
+                                    <span class="detail-value">Injection of radioactive tracer, waiting period for distribution, scanning process lasting 30-60 minutes</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Preparation:</span>
+                                    <span class="detail-value">Fasting for 4-6 hours, blood glucose level check, avoiding strenuous activity 24 hours prior</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Applications:</span>
+                                    <span class="detail-value">Cancer staging, detecting recurrence, monitoring therapy effectiveness, identifying unknown primary tumors</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">MRI (Magnetic Resonance Imaging)</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Uses magnetic fields and radio waves to produce detailed images of soft tissues. Ideal for identifying tumors in the brain, spine, and other organs with high precision.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Detailed visualization of soft tissues, tumor characterization, surgical planning, monitoring treatment response</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Procedure:</span>
+                                    <span class="detail-value">Patient lies on table that moves into MRI machine, contrast agent may be injected, scanning takes 30-60 minutes</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Preparation:</span>
+                                    <span class="detail-value">Remove all metal objects, screening for implants, possible fasting for abdominal studies</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Advantages:</span>
+                                    <span class="detail-value">No ionizing radiation, excellent soft tissue contrast, multiplanar imaging capabilities</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">CT Scan (Computed Tomography)</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Provides cross-sectional X-ray images of the body, helping locate tumors and assess their size and spread quickly and non-invasively.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Tumor detection and characterization, staging, guiding biopsies and treatments, emergency assessment</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Procedure:</span>
+                                    <span class="detail-value">Patient lies on table that moves through CT scanner, contrast material may be administered, scan takes 10-30 minutes</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Preparation:</span>
+                                    <span class="detail-value">Fasting may be required, allergy screening for contrast agents, removal of metal objects</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Applications:</span>
+                                    <span class="detail-value">Lung cancer screening, abdominal tumors, bone metastases, emergency diagnosis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Ultrasound Imaging</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Uses sound waves to create real-time images, especially useful for examining soft tissues and guiding biopsy procedures safely.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Initial evaluation of palpable masses, guiding biopsies, assessing blood flow with Doppler, monitoring treatment</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Procedure:</span>
+                                    <span class="detail-value">Transducer moved over skin with gel, real-time imaging, may include Doppler assessment, typically 15-45 minutes</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Preparation:</span>
+                                    <span class="detail-value">Fasting for abdominal studies, full bladder for pelvic exams, no special preparation for other areas</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Advantages:</span>
+                                    <span class="detail-value">No radiation, real-time imaging, portable, excellent for guiding procedures</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Digital Mammography</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Advanced breast imaging technology that detects abnormalities early, improving breast cancer detection with low radiation exposure.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Breast cancer screening, diagnostic evaluation of abnormalities, guiding biopsies, monitoring high-risk patients</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Procedure:</span>
+                                    <span class="detail-value">Breast compression between two plates, images taken from different angles, typically takes 20-30 minutes</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Preparation:</span>
+                                    <span class="detail-value">No deodorant or powders, wear two-piece clothing, schedule 1-2 weeks after menstrual period</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Advanced Techniques:</span>
+                                    <span class="detail-value">3D tomosynthesis, contrast-enhanced mammography, computer-aided detection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+                    <!-- Laboratory Diagnostics Tab -->
+                    <div id="laboratory-tab" class="diagnostic-tab-panel" role="tabpanel" aria-labelledby="laboratory-tab-btn">
+                        <div class="diagnostic-category-section">
+                            <h3 style="color: #014196; font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">Laboratory Diagnostics</h3>
+                    
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Biopsy and Histopathology</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Removal and microscopic examination of tissue samples to confirm the presence and type of cancer, providing a definitive diagnosis.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Definitive cancer diagnosis, tumor grading and typing, margin assessment, treatment planning</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Types:</span>
+                                    <span class="detail-value">Needle biopsy (core or fine needle), incisional biopsy, excisional biopsy, endoscopic biopsy</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Processing:</span>
+                                    <span class="detail-value">Tissue fixation, processing, embedding, sectioning, staining with H&E and special stains</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Analysis:</span>
+                                    <span class="detail-value">Microscopic evaluation by pathologist, tumor grading, assessment of invasion, margin status</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Immunohistochemistry (IHC)</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Tests tumor samples for specific protein markers, guiding targeted therapy decisions and personalized treatment.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Tumor classification, identification of origin for metastases, predictive biomarker testing, prognosis</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Common Markers:</span>
+                                    <span class="detail-value">ER/PR for breast cancer, HER2, Ki-67 proliferation index, PD-L1, CD markers for lymphomas</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Procedure:</span>
+                                    <span class="detail-value">Antigen retrieval, antibody application, detection system, counterstaining, interpretation</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Applications:</span>
+                                    <span class="detail-value">Therapy selection, prognosis determination, differential diagnosis, cancer subtyping</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Molecular Testing & Genetic Profiling</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Analyzes cancer cells' DNA to identify mutations that influence treatment choices, enabling precision medicine tailored to your tumor's unique genetic makeup.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Identify targetable mutations, assess hereditary cancer risk, predict treatment response, monitor minimal residual disease</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Techniques:</span>
+                                    <span class="detail-value">Next-generation sequencing, PCR, FISH, Sanger sequencing, microarray analysis</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Common Tests:</span>
+                                    <span class="detail-value">EGFR for lung cancer, BRAF for melanoma, BRCA for breast/ovarian cancer, MSI testing</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Applications:</span>
+                                    <span class="detail-value">Targeted therapy selection, immunotherapy eligibility, clinical trial matching, prognosis assessment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Liquid Biopsy</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>A simple blood test that detects cancer-related genetic material circulating in the bloodstream, allowing for less invasive monitoring and early detection of recurrence.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Treatment response monitoring, detection of resistance mutations, early recurrence detection, when tissue biopsy is not feasible</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Analytes:</span>
+                                    <span class="detail-value">Circulating tumor DNA (ctDNA), circulating tumor cells (CTCs), exosomes, tumor-educated platelets</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Advantages:</span>
+                                    <span class="detail-value">Minimally invasive, allows serial monitoring, captures tumor heterogeneity, faster results</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Applications:</span>
+                                    <span class="detail-value">EGFR T790M detection in lung cancer, BRCA reversion mutations, monitoring MRD, early relapse detection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Tumor Marker Tests</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Measures specific substances in blood or tissues linked to cancer, helping monitor disease progression and treatment effectiveness.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Monitoring treatment response, detecting recurrence, prognostic information, sometimes screening in high-risk individuals</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Common Markers:</span>
+                                    <span class="detail-value">PSA (prostate), CA-125 (ovarian), CEA (colorectal), CA 19-9 (pancreatic), AFP (liver)</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Limitations:</span>
+                                    <span class="detail-value">Not specific enough for screening, can be elevated in benign conditions, not all cancers produce markers</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Clinical Use:</span>
+                                    <span class="detail-value">Best used for monitoring known cancer, not for diagnosis; must be interpreted in clinical context</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+                    <!-- Functional & Specialized Tests Tab -->
+                    <div id="functional-tab" class="diagnostic-tab-panel" role="tabpanel" aria-labelledby="functional-tab-btn">
+                        <div class="diagnostic-category-section">
+                            <h3 style="color: #014196; font-size: 1.5rem; margin-bottom: 20px; font-weight: 600;">Functional & Specialized Tests</h3>
+                    
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Bone Marrow Examination</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Samples bone marrow to evaluate blood cancers and their impact on blood cell production, guiding treatment decisions.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Diagnose blood cancers, stage lymphomas, assess treatment response, evaluate unexplained blood abnormalities</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Procedure:</span>
+                                    <span class="detail-value">Aspiration and biopsy usually from pelvic bone, local anesthesia, pressure sensation during sample collection</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Analysis:</span>
+                                    <span class="detail-value">Cellularity assessment, differential count, morphology evaluation, special stains, flow cytometry, cytogenetics</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Applications:</span>
+                                    <span class="detail-value">Leukemia diagnosis, myeloma workup, lymphoma staging, myelodysplastic syndrome evaluation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Flow Cytometry</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Analyzes individual cells from blood or bone marrow to detect abnormalities, especially in leukemia and lymphoma, providing fast and detailed information.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Immunophenotyping of hematological malignancies, minimal residual disease detection, cell sorting, functional assays</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Principle:</span>
+                                    <span class="detail-value">Cells in suspension pass through laser beam, light scattering and fluorescence detected, analyzed by software</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Applications:</span>
+                                    <span class="detail-value">Leukemia/lymphoma classification, PNH diagnosis, stem cell enumeration, immunodeficiency workup</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Advantages:</span>
+                                    <span class="detail-value">Rapid multiparameter analysis, quantitative, high sensitivity, can analyze rare cell populations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-accordion">
+                        <button class="diagnostic-accordion-header" type="button" aria-expanded="false">
+                            <span class="diagnostic-accordion-title">Cytogenetics</span>
+                            <span class="diagnostic-accordion-toggle">▼</span>
+                        </button>
+                        <div class="diagnostic-accordion-intro">
+                            <p>Studies chromosomal changes in cancer cells to help diagnose certain cancers and predict how they might behave or respond to therapy.</p>
+                        </div>
+                        <div class="diagnostic-accordion-content">
+                            <div class="diagnostic-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Purpose:</span>
+                                    <span class="detail-value">Identify chromosomal abnormalities, prognostic stratification, therapy selection, monitoring treatment response</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Techniques:</span>
+                                    <span class="detail-value">Karyotyping, FISH (Fluorescence In Situ Hybridization), comparative genomic hybridization, spectral karyotyping</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Key Findings:</span>
+                                    <span class="detail-value">Philadelphia chromosome in CML, translocations in lymphomas, complex karyotypes in MDS, amplifications</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Clinical Significance:</span>
+                                    <span class="detail-value">Diagnostic criteria, prognostic classification, target identification, monitoring minimal residual disease</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="diagnostic-full-width-section">
+            <h2 class="diagnostic-section-title">How Our Diagnostic Process Works</h2>
+            
+            <div class="process-steps-container">
+                <div class="process-step-card">
+                    <div class="process-step-number">1</div>
+                    <h4>Initial Consultation & Symptom Assessment</h4>
+                    <p>Your journey begins with a detailed consultation where our specialists carefully listen to your symptoms and medical history. This helps us tailor the diagnostic tests best suited to your individual needs.</p>
+                </div>
+
+                <div class="process-step-card">
+                    <div class="process-step-number">2</div>
+                    <h4>Scheduling & Preparation for Tests</h4>
+                    <p>We prioritize your convenience by arranging appointments promptly. Our team provides clear instructions to ensure you are fully prepared for each test, minimizing any anxiety or uncertainty.</p>
+                </div>
+
+                <div class="process-step-card">
+                    <div class="process-step-number">3</div>
+                    <h4>Performing the Test with Safety & Comfort</h4>
+                    <p>All diagnostic procedures are conducted using advanced technology in a safe, hygienic environment. Our skilled staff ensure your comfort throughout, with minimal discomfort and privacy respected at every step.</p>
+                </div>
+
+                <div class="process-step-card">
+                    <div class="process-step-number">4</div>
+                    <h4>Expert Analysis by Specialized Pathologists & Radiologists</h4>
+                    <p>Samples and images are reviewed by highly trained experts who use the latest techniques to provide accurate, reliable results. Their insights are critical to understanding your condition precisely.</p>
+                </div>
+
+                <div class="process-step-card">
+                    <div class="process-step-number">5</div>
+                    <h4>Sharing Results & Treatment Planning with Oncology Team</h4>
+                    <p>We believe in clear communication. Results are shared promptly and explained in a way that is easy to understand. Our multidisciplinary oncology team collaborates to design a personalized treatment plan based on your diagnosis.</p>
+                </div>
+
+                <div class="process-step-card">
+                    <div class="process-step-number">6</div>
+                    <h4>Follow-up and Monitoring</h4>
+                    <p>Your care continues beyond diagnosis. We schedule follow-ups to monitor your progress, adjust treatments if needed, and support you throughout your cancer journey.</p>
+                </div>
+            </div>
+
+            <div class="process-highlight-box">
+                <h3>Your safety and comfort are our top priorities</h3>
+                <p>We strive to deliver fast turnaround times without compromising accuracy, ensuring you have the information you need when it matters most.</p>
+            </div>
+        </div>
+
+        <div class="diagnostic-full-width-section">
+            <h2 class="diagnostic-section-title">Why Choose Us for Diagnostics</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h4>Cutting-Edge Technology & Latest Diagnostic Equipment</h4>
+                    <p>We invest continuously in the most advanced diagnostic tools, ensuring precision and reliability in every test.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍⚕️</div>
+                    <h4>Highly Experienced Radiologists, Pathologists & Lab Technicians</h4>
+                    <p>Our dedicated team of specialists brings years of expertise and meticulous attention to detail, delivering accurate and trustworthy results.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h4>Integrated Care with Direct Communication to Oncology Specialists</h4>
+                    <p>Diagnostics are seamlessly connected to your cancer care team, allowing quick interpretation and personalized treatment planning.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Fast, Accurate Results for Timely Treatment Decisions</h4>
+                    <p>We understand the urgency of cancer care. Our streamlined processes provide rapid turnaround times without compromising quality.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Patient Comfort & Safety Prioritized</h4>
+                    <p>Your well-being is paramount. Our diagnostic procedures are designed to minimize discomfort while maintaining the highest safety standards.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h4>Accredited Labs and Internationally Recognized Standards</h4>
+                    <p>Our laboratories meet stringent national and global quality certifications, guaranteeing excellence you can trust.</p>
+                </div>
+            </div>
+
+            <div class="features-highlight-box">
+                <h3>Excellence You Can Trust</h3>
+                <p>Choosing us for your diagnostics means choosing precision, compassion, and a team committed to your best possible outcome.</p>
+            </div>
+        </div>
+
+        <div class="diagnostic-full-width-section">
+            <h2 class="diagnostic-section-title">Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>How soon will I receive my diagnostic test results?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>We prioritize quick turnaround to help start your treatment without delay.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>Are the diagnostic tests painful or uncomfortable?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>We use the latest techniques and sedation options where needed to minimize discomfort. Many imaging tests are non-invasive and painless.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>How accurate are the diagnostic tests offered?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>Our state-of-the-art equipment and expert specialists ensure the highest accuracy, essential for correct diagnosis and effective treatment planning.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>Will I need to fast or prepare in any special way for my tests?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>Preparation varies by test. Our team will provide clear instructions ahead of time to ensure your comfort and the accuracy of results.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>Can diagnostic tests detect cancer at an early stage?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>Yes, many advanced imaging and molecular tests are designed for early detection, improving the chances of successful treatment.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>How is my privacy protected during diagnostic procedures?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>Patient confidentiality is a top priority. All procedures are conducted in private settings, and your data is securely handled according to strict protocols.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>Are these diagnostic tests safe during pregnancy?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>Some imaging tests are safe, while others may be avoided. Please inform your doctor if you are pregnant so we can recommend appropriate alternatives.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+                <button class="faq-accordion-header" type="button" aria-expanded="false">
+                    <span>Can I get a second opinion on my diagnostic results?</span>
+                    <span class="faq-accordion-toggle">▼</span>
+                </button>
+                <div class="faq-accordion-content">
+                    <p>Absolutely. We encourage patients to seek second opinions and can assist with facilitating this process.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.diagnostic-tab-button');
+        const tabPanels = document.querySelectorAll('.diagnostic-tab-panel');
+
+        function switchTab(tabName) {
+            // Remove active class from all buttons and panels
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            tabPanels.forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            // Add active class to selected button and panel
+            const selectedButton = document.querySelector(`[data-tab="${tabName}"]`);
+            const selectedPanel = document.getElementById(`${tabName}-tab`);
+
+            if (selectedButton && selectedPanel) {
+                selectedButton.classList.add('active');
+                selectedButton.setAttribute('aria-selected', 'true');
+                selectedPanel.classList.add('active');
+            }
+        }
+
+        // Tab button click handlers
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.getAttribute('data-tab');
+                switchTab(tabName);
+            });
+
+            // Keyboard navigation for tabs
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const tabName = button.getAttribute('data-tab');
+                    switchTab(tabName);
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const currentIndex = Array.from(tabButtons).indexOf(button);
+                    let newIndex;
+                    if (e.key === 'ArrowLeft') {
+                        newIndex = currentIndex > 0 ? currentIndex - 1 : tabButtons.length - 1;
+                    } else {
+                        newIndex = currentIndex < tabButtons.length - 1 ? currentIndex + 1 : 0;
+                    }
+                    tabButtons[newIndex].focus();
+                    const tabName = tabButtons[newIndex].getAttribute('data-tab');
+                    switchTab(tabName);
+                }
+            });
+        });
+
+        // Diagnostic accordion functionality
+        document.querySelectorAll('.diagnostic-accordion-header').forEach(header => {
+            // Click handler
+            header.addEventListener('click', () => {
+                toggleAccordion(header);
+            });
+
+            // Keyboard handler (Enter and Space)
+            header.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAccordion(header);
+                }
+            });
+        });
+
+        function toggleAccordion(header) {
+            const accordion = header.closest('.diagnostic-accordion');
+            const content = accordion.querySelector('.diagnostic-accordion-content');
+            const toggle = header.querySelector('.diagnostic-accordion-toggle');
+            const isActive = content.classList.contains('active');
+
+            // Toggle active state
+            content.classList.toggle('active');
+            header.setAttribute('aria-expanded', !isActive);
+            
+            // Rotate toggle icon
+            if (toggle) {
+                toggle.style.transform = !isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+        }
+
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordion = header.closest('.faq-accordion');
+                const content = accordion.querySelector('.faq-accordion-content');
+                const toggle = header.querySelector('.faq-accordion-toggle');
+                const isActive = content.classList.contains('active');
+
+                // Toggle active state
+                content.classList.toggle('active');
+                header.classList.toggle('active');
+                header.setAttribute('aria-expanded', !isActive);
+                
+                // Rotate toggle icon
+                if (toggle) {
+                    toggle.style.transform = !isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+
+            // Keyboard handler
+            header.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    header.click();
+                }
+            });
+        });
+
+        // Existing accordion click events (for other accordions on the page)
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                header.classList.toggle('active');
+                content.classList.toggle('active');
+                header.setAttribute('aria-expanded', header.classList.contains('active'));
+            });
+        });
+    });
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

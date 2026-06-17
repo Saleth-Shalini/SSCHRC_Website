@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    
+
+
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bladder Cancer: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Bladder Cancer: A Comprehensive Guide
+                </h2>
+            </div>
+            
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mb-12" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    This information is intended to provide a general overview of bladder cancer. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns or before making any decisions related to your health.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Bladder cancer is a disease of the urinary tract that begins in the bladder, a hollow, elastic, and muscular organ in the lower abdomen that stores urine. Urine is produced when the kidneys filter the blood and travels to the bladder through tubes called ureters, before leaving the body through the urethra.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            The cancer starts in the innermost lining of the bladder and can grow into the muscular walls, which usually necessitates more aggressive treatment. Although bladder cancer has a high rate of recurrence, estimated at 50% to 80%, the disease is generally treatable, with over 77% of patients surviving at least five years after diagnosis. This high recurrence rate is thought to be due to the fact that the pre-cancerous conditions often impact the entire organ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Bladder Cancer Types -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Bladder Cancer Types
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Bladder cancer is classified by the type of cell in which it originates. The main types include:
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Urothelial Cell Bladder Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Also known as transitional cell bladder cancer, this is the most common type, accounting for about 90% of cases. It begins in the urothelial cells that line the inside of the bladder.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Squamous Cell Bladder Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This type develops in squamous cells, which are thin, flat cells that may form in the bladder after long-term irritation or infection. It is less common than urothelial cell cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Adenocarcinoma of the Bladder</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This disease develops in the inner lining of the bladder and typically behaves aggressively.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Urothelial Cell Carcinomas of the Upper Tract</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is technically not a bladder cancer but a cancer of the inner lining of the ureter or kidneys. Because it arises from the same cell type as most bladder cancers, many of the treatments are similar.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Other Rare Types</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These include sarcomas, neuroendocrine tumours of the bladder, and small cell carcinomas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Classification by Spread -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Classification by Spread
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Bladder cancer is also categorised based on how far it has spread:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Non-Muscle-Invasive Bladder Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is an early form where the cancer is confined to the inner lining and has not spread to the surrounding muscles. These are often treated in various ways and usually do not require bladder removal.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Muscle-Invasive Bladder Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The cancer has spread into the muscles surrounding the bladder wall. This is a more advanced stage, requiring complex treatments, but it remains treatable.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Metastatic Bladder Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The cancer has spread beyond the bladder and nearby lymph nodes to distant organs in the body. While less often curable, it can often be managed as a chronic condition.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Bladder Cancer Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases your chance of developing bladder cancer. Key risk factors include:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Smoking Tobacco</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is the most significant preventable risk factor. Smokers are two- to three-times more likely to develop bladder cancer. Chemicals from tobacco smoke pass through the kidneys and collect in the urine, damaging the bladder lining.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The risk increases with age, with most diagnoses occurring in people aged 65 or older. It is rare in those under 40.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Gender</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Men are up to four times more likely than women to develop the disease.
+                    </p>
+                </div>
+
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Personal History of Bladder Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Given the high recurrence rate (50% to 80%), a personal history is a significant risk factor for a return of the disease.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Exposure to Chemicals</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Individuals working with certain chemicals show a higher risk. This includes people in the rubber, chemical, and leather industries, as well as hairdressers, machinists, metal workers, printers, painters, textile workers, truck drivers, and dry cleaning workers.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Parasitic Infections</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Infection with certain parasites, more common in tropical climates, increases the risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Treatment with Cyclophosphamide or Arsenic</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These drugs, used for cancer and other conditions, increase the risk. Arsenic in drinking water may also contribute.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Chronic Bladder Problems</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A direct link exists between chronic bladder infections and bladder cancer. Other irritations, such as kidney stones and frequent catheterisation, may be risk factors, though a direct link is not firmly established.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Organ Transplantation</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Patients taking immune-suppressing drugs after an organ transplant may experience more frequent bladder infections, a known risk factor.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Genetic Conditions</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        People with hereditary nonpolyposis colon cancer (HNPCC, or Lynch syndrome) have an increased risk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Bladder cancer may cause several signs and symptoms, including:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Blood in the urine, medically termed haematuria.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Frequent urinary tract infections.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Pain in the flank (the section of the back between the hip bone and the ribs).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Painful urination (dysuria).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Frequent urination.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Urinary hesitancy, or difficulty initiating urination.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>A stronger-than-usual urge to urinate.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to note that these symptoms can also be caused by other less serious health issues. If you experience any of these, you should discuss them with your doctor immediately for proper evaluation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If you present with symptoms suggestive of bladder cancer, your doctor will perform a physical examination and take a detailed history regarding your lifestyle (including smoking and drinking habits), overall health, and family medical history.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    One or more of the following tests may be used to diagnose bladder cancer, determine its spread, or monitor the effectiveness of treatment:
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Blood and Urine Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These help in diagnosing bladder cancer or identifying other underlying conditions that could be causing the symptoms, such as an enlarged prostate, a urinary tract infection, or kidney stones.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Cystoscopy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        This is considered the most reliable and frequent test for bladder cancer. A thin tube with a camera (cystoscope) is passed through the urethra into the bladder. The scope can be used to take a tissue sample (biopsy) and treat superficial tumours without major surgery. Pathologists examine the tissue under a microscope to confirm the diagnosis. In some cases, a more thorough exam is performed under general anaesthesia. SSCHRC also utilises blue light cystoscopy to enhance tumour detection, where a solution is absorbed by cancer cells, making them glow when exposed to blue light.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cystoscopy is sometimes performed alongside Transurethral Resection (TUR), a procedure to remove cancer cells from the bladder.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Tests</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Imaging examinations help in visualising the urinary tract and surrounding areas. These may include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>CT Urogram (the most commonly used imaging test).</li>
+                        <li>MRI (Magnetic Resonance Imaging) scans (often used when a patient cannot have the contrasting dye required for a CT Urogram due to poor kidney function).</li>
+                        <li>PET (Positron Emission Tomography) scans.</li>
+                        <li>Bone scan.</li>
+                        <li>Chest X-ray or chest CT.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Second Opinion
+                </h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The pathologists at SSCHRC are highly experienced in diagnosing and staging all types of bladder cancer, and the centre welcomes the opportunity to provide second opinions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Bladder Cancer Stages -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Bladder Cancer Stages
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Staging is the process of determining how large the primary tumour is and how far the cancer has spread in the body. Knowing the stage is vital for the care team to develop an appropriate treatment plan and estimate the patient's prognosis (chance of successful treatment).
+                </p>
+            </div>
+
+            <!-- TNM Stages -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        TNM Stages
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The TNM staging system, used for most cancers, describes the disease based on three key factors, each assigned a numerical score:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">T (Tumour)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The size of the primary tumour and whether it has invaded nearby tissues. Scored between 1 and 4.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">N (Nodes)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The spread of the cancer to nearby lymph nodes. Scored between 1 and 3.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">M (Metastasis)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Whether the cancer has spread to distant parts of the body (metastasised). Scored 0 or 1.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-lg text-gray-700 leading-relaxed mt-6">
+                        Your doctor will determine the TNM stage after all diagnostic procedures are complete and will explain how this impacts your treatment and prognosis.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 0 to IV Stages -->
+            <div class="mb-12">
+                <div class="bg-white rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        0 to IV Stages
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The detailed TNM staging can often be simplified into five main stages (0 to IV), where larger numbers indicate a more advanced and generally more difficult-to-treat cancer.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 0</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Noninvasive bladder cancer, where cancer cells are found only in the tissue lining the inside of the bladder and have not invaded the wall. This stage is considered pre-cancerous and is also called in-situ ("in its original place"). It is divided into Stage 0a (noninvasive papillary carcinoma) and Stage 0is (carcinoma in situ), which is always high grade.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage I</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A form of non-muscle-invasive bladder cancer that has spread into the connective tissue but has not reached the muscle layers of the bladder wall.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage II</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Also known as muscle-invasive bladder cancer, the cancer has spread through the connective tissue into the muscle layers of the bladder.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage III</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Also described as locally advanced bladder cancer, it is divided into:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Stage IIIA:</strong> Cancer has grown through the muscle and bladder wall into the surrounding fat layer and may have spread to reproductive organs (prostate, seminal vesicles, uterus, or vagina), but not to lymph nodes; or it has spread to one lymph node in the pelvis not near the common iliac arteries.</li>
+                                <li><strong>Stage IIIB:</strong> Cancer has spread to more than one pelvic lymph node not near the common iliac arteries, or to at least one lymph node near the common iliac arteries.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stage IV</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The most advanced stage, divided into:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Stage IVA:</strong> Cancer has spread to the pelvic wall or abdominal wall; or it has spread to lymph nodes above the common iliac arteries.</li>
+                                <li><strong>Stage IVB:</strong> Cancer has spread to distant parts of the body, such as the liver, lung, or bone. This is also called metastatic cancer and is often managed as a chronic disease.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, patients receive personalised care from a dedicated team of specialists, which includes urologic surgeons, medical oncologists, and radiation oncologists, all working together to plan treatment and recovery. Your treatment will be customised based on several factors, including the cancer type and stage, and your general health.
+                </p>
+            </div>
+
+            <!-- Treatment Plans -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Bladder Cancer Treatment Plans
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Early-Stage Non-Metastatic Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                For cancer that has not spread to distant parts of the body and has not yet moved into the muscle wall, treatment typically involves surgery and may include intravesical therapy (washing the bladder's inside with chemotherapy or immunotherapy drugs).
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Muscle-Invasive Disease</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                There are two main treatment options:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Surgery to remove the bladder (Cystectomy):</strong> Chemotherapy may be given before surgery to shrink the tumour.</li>
+                                <li><strong>Bladder-Sparing Trimodality Treatment:</strong> A combination of three treatments designed to preserve the bladder: Transurethral Resection (TUR), followed by chemotherapy and radiation therapy. This is an option for selected patients, often with smaller tumours, or for those who are not suitable candidates for surgery.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Metastatic Disease (Spread to distant sites)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Patients usually receive systemic therapies like chemotherapy, immunotherapy, or targeted therapy, and may be eligible for clinical trials.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Specific Treatment Modalities -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Specific Treatment Modalities
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Bladder Cancer Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Surgery is a core component of most bladder cancer treatment plans, often combined with other therapies. SSCHRC surgeons use minimally invasive techniques, such as robotic reconstruction and robotic cystectomy, which may lead to shorter hospital stays, less blood loss, and faster recovery times.
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Transurethral Resection (TUR)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This procedure involves scraping the tumour from the bladder wall using a resectoscope (a thin instrument with a wire loop) passed through the urethra. TUR is used for diagnosis, treating superficial cancer on its own, or as the first step in the bladder-sparing trimodality approach for muscle-invasive cancer.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Cystectomy (Bladder Removal)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Used for more advanced bladder cancer. This typically involves removing the entire bladder and nearby lymph nodes. In men, the prostate is also usually removed, and in women, part of the vagina, uterus, ovaries, and fallopian tubes may be removed, though this is often not necessary.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bladder Reconstruction -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Bladder Reconstruction Surgery (Urinary Diversion)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        When the bladder is removed, a urinary diversion is performed concurrently to create a new way to store and eliminate urine.
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Ileal Conduit</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The most common diversion. A piece of the small intestine is used to create a tube connecting the ureters to a skin opening called a stoma. Urine drains continuously into a urostomy bag worn externally.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Ileal Neobladder</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Part of the small intestine (ileum) is used to create a new bladder, allowing the patient to urinate naturally through the urethra. It provides good daytime urinary control, though some patients may experience nighttime incontinence or require occasional catheterisation.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Continent Reservoir</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Intestinal tissue forms an internal pouch connected to the navel or nearby area. The patient uses a catheter to drain the pouch every few hours. This is an option when a neobladder is not suitable, avoiding an external stoma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Chemotherapy drugs kill cancer cells, control their growth, or relieve symptoms. A single drug or a combination may be used. It is often used with surgery for bladder tumours that have invaded the muscle wall and have a high risk of spreading, typically given before the procedure to shrink the tumour.
+                    </p>
+                </div>
+
+                <!-- Advanced Drug Therapies -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">4. Advanced Drug Therapies</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Antibody Drug Conjugates (ADCs)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These drugs link a chemotherapy agent with laboratory-designed antibodies that recognise cancer cells. This delivers a powerful dose of medication while limiting negative side effects. ADCs are currently approved for patients with metastatic bladder cancer, but research is ongoing to expand their use.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Immune Checkpoint Inhibitors (Immunotherapy)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These drugs prevent the immune system from prematurely turning off, allowing it to eliminate cancer. For bladder cancer, they are currently used only for Stage IV cancer, with clinical trials exploring their use in earlier stages.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Targeted Therapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These drugs interfere with the specific molecules (often proteins) that cancer cells need to multiply, survive, and spread. Targeted therapy is currently only approved to treat Stage IV cancers with specific genetic mutations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">5. Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Radiation therapy uses powerful, focused energy beams to kill cancer cells, with techniques like Intensity Modulated Radiation Therapy (IMRT) and Volumetric Modulated Arc Therapy used to accurately target the tumour while sparing healthy tissue. For bladder cancer, it is used in combination with chemotherapy and Transurethral Resection surgery as part of the bladder-sparing approach.
+                    </p>
+                </div>
+
+                <!-- Intravesical Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">6. Intravesical Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Used for superficial bladder cancer which has a high rate of recurrence. After surgical scraping to remove superficial tumour cells, a catheter is used to fill the bladder with medication to prevent recurrence and progression. The medication is either Bacillus Calmette-Guérin (BCG), an immunotherapy that stimulates the immune system, or a chemotherapy drug.
+                    </p>
+                </div>
+
+                <!-- Gene Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">7. Gene Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This treatment modifies a patient's DNA to help fight cancer by inserting a healthy gene copy, removing or replacing abnormal gene parts, or inhibiting the growth of disease cells. For bladder cancer, gene therapy is used to treat patients whose non-muscle-invasive disease has not responded to intravesical therapy.
+                    </p>
+                </div>
+
+                <!-- Clinical Trials -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">8. Bladder Cancer Clinical Trials</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC is committed to finding better ways to prevent, diagnose, and treat cancer through clinical trials. Trials for bladder cancer often focus on expanding the use of immunotherapy, targeted therapy, and antibody drug conjugates, as well as new combinations of treatments. Your doctor may offer a clinical trial as a treatment option.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

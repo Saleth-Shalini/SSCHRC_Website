@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS Mutation: Health Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+
+    <!-- Section 1: General Information -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    RAS Mutation: Health Information
+                </h2>
+            </div>
+            
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            RAS is classified as an oncogene, a type of gene which, when mutated, can directly contribute to the development of cancer. An abbreviation for rat sarcoma, RAS is the most frequently mutated oncogene identified across all human cancers. It is estimated that RAS mutations are found in approximately 20% of all cancer cases, accounting for a significant number of diagnoses annually worldwide.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            SSCHRC for RAS Therapeutics is dedicated to advancing the discovery of new and effective treatments for cancers driven by the RAS mutation. Our investigators have considerable experience in studying RAS and its influence on cancer in laboratory settings and have been instrumental in developing and investigating RAS inhibitors in clinical trials. They are committed to advancing RAS-targeted therapies for the benefit of cancer patients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: What a RAS Mutation Does -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What a RAS Mutation Does
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        RAS mutations essentially cause the RAS protein—which acts like a cellular 'traffic light' controlling growth—to be permanently switched to 'green'. This results in an uncontrolled, never-ending flow of growth signals within the cell. These continuous signals lead to the unchecked growth of the cell, ultimately resulting in a cancerous state.
+                    </p>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        While many possible alterations can change the protein's behaviour, most of these transform RAS into a constant growth stimulus. Furthermore, RAS mutations may also enable cancer cells to evade detection by the body's immune system. These seemingly simple mutations can lead to exceptionally complex cancers because RAS is part of an intricate network of cellular signalling interchanges. When this network is mutated, the perpetual flow of signals can make RAS-mutated cancers more challenging to treat than those without the mutation. Developing effective and durable ways to block RAS has been a long-standing, critical objective in RAS-driven cancer research.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #FF4500;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Lung Cancer</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            RAS mutations are found in approximately one in four lung cancer cases.
+                        </p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #2E8B57;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Colorectal Cancer</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            RAS mutations are found in over half of colorectal cancer cases.
+                        </p>
+                    </div>
+
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #1e40af;">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Pancreatic Cancer</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            RAS mutations are found in up to nine out of ten pancreatic cancer cases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-xl p-8 bg-gradient-to-r from-green-50 via-white to-orange-50 border-l-4" style="border-color: #2E8B57;">
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    RAS mutations are typically identified through next-generation sequencing carried out on a biopsy of the cancerous tissue. Increasingly, liquid biopsies, which involve the analysis of a blood sample, are also being utilised to detect these mutations. The mutations may be detected in one of several proteins belonging to the RAS family, including KRAS, HRAS, and NRAS.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        For many years, RAS was widely considered an 'undruggable' target, meaning a simple way to switch off the protein and block its effects on cells was not available. However, a recent revolution in drug discovery has led to the development of numerous therapeutic approaches aimed at inhibiting the function of the RAS protein. 
+                    </p>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Researchers at SSCHRC have been investigating RAS mutations in the laboratory and working to develop targeted treatments for decades. They are uniquely positioned to rapidly advance the understanding of RAS-driven cancers and accelerate the development of new treatment options.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-br from-orange-50 to-white border-l-4" style="border-color: #FF4500;">
+                    <div class="bg-white rounded-xl p-6 mb-4">
+                        <p class="text-lg text-gray-700 leading-relaxed italic">
+                            "This is an incredibly exciting period, as we now have many different types of drugs that can block RAS," states one of the Co-Directors of the RAS Therapeutics at SSCHRC. "These include small molecules that can block all forms of RAS or those specifically designed for certain RAS mutations, as well as cellular therapies and vaccines that target RAS. SSCHRC will be leading numerous clinical trials to explore how these emerging therapies can benefit patients."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Accessing RAS-Targeted Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Accessing RAS-Targeted Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Determining the most appropriate drug or drug combination for each patient requires centralised, expert knowledge. At SSCHRC, the RAS Therapeutics provides clinical trials of RAS therapeutics and works collaboratively to match patients with the most suitable clinical trials.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-r from-green-50 via-white to-orange-50 border-l-4" style="border-color: #FF4500;">
+                    <div class="bg-white rounded-xl p-6">
+                        <p class="text-lg text-gray-700 leading-relaxed italic">
+                            "RAS mutant tumours are highly complex and can often outsmart the drugs currently available," says the Chief of Strategic Partnerships and a Co-Director of the RAS Therapeutics at SSCHRC. "We anticipate that the best treatment strategies will ultimately involve combinations of therapies, customised for each individual patient's cancer. Our central goal is to integrate all our expertise to discover the optimal treatments for our patients."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CSS Custom Properties */
+:root {
+    --accent-orange: #ff6b35;
+    --primary-green: #4caf50;
+    --text-white: #ffffff;
+    --text-gray-300: #d1d5db;
+    --text-gray-400: #9ca3af;
+    --text-gray-500: #6b7280;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --black: #000000;
+}
+
+/* Footer Styles */
+#hospital-footer {
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--black) 100%);
+    color: var(--text-white) !important;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Pattern */
+#hospital-footer::before {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 128px;
+    height: 128px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    filter: blur(48px);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+#hospital-footer::after {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    width: 160px;
+    height: 160px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    filter: blur(48px);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    color: var(--saffron-primary);
+    font-size: 1.2em;
+}
+
+/* Container */
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-list span{
+    color: var(--text-white) !important;;
+    padding-left: 5px;
+}
+
+.accreditation-title h3 {
+    position: relative; /* make sure the parent is relative */
+}
+
+.accreditation-title h3::before {
+    content: "" !important;
+    position: absolute;
+    left: 0;
+    top: 0; /* adjust as needed */
+    color: var(--saffron-primary);
+    font-size: 1.2em;
+}
+
+.accreditation-title h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    color: var(--saffron-primary);
+    font-size: 1.2em;
+}
+
+/* Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Accreditation Section */
+.accreditation-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accreditation-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-white);
+    margin-bottom: 16px;
+}
+
+.accreditation-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accreditation-logos a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.accreditation-logos a:hover {
+    transform: scale(1.05);
+}
+
+.accreditation-logo {
+    width: 120px;
+    height: 120px;
+    background: var(--text-white);
+    border-radius: 8px;
+    padding: 8px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accreditation-logo:hover {
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+/* Hospital Info Section */
+.hospital-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.hospital-logo {
+    height: 64px;
+    width: auto;
+}
+
+.logo-divider {
+    width: 0px;
+    height: 0px;
+    background: linear-gradient(to bottom, var(--accent-orange), var(--primary-green));
+    border-radius: 2px;
+}
+
+.hospital-description {
+    color: var(--text-gray-300);
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    color: var(--text-gray-400);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+    color: var(--accent-orange);
+    background: rgba(255, 107, 53, 0.2);
+    transform: scale(1.1);
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.header-divider {
+    width: 4px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--accent-orange), var(--primary-green));
+    border-radius: 2px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-white);
+}
+
+/* Navigation Lists */
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.nav-link {
+    color: var(--text-gray-300);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* gap: 8px !important; */
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-orange);
+}
+
+.nav-arrow {
+    color: var(--accent-orange);
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-arrow {
+    transform: translateX(4px);
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.contact-item:hover .contact-text {
+    color: var(--accent-orange);
+}
+
+.contact-icon-wrapper {
+    padding: 8px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 107, 53, 0.2), rgba(76, 175, 80, 0.2));
+    transition: all 0.3s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item:hover .contact-icon-wrapper {
+    background: linear-gradient(45deg, rgba(255, 107, 53, 0.3), rgba(76, 175, 80, 0.3));
+}
+
+.contact-icon {
+    color: var(--accent-orange);
+    font-size: 14px;
+}
+
+.contact-text {
+    color: var(--text-gray-300);
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    margin-top: 0px;
+}
+
+.newsletter-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-white);
+    margin-bottom: 16px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+    max-width: 300px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+    color: var(--text-gray-400);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-button {
+    padding: 12px 20px;
+    background: var(--primary-green);
+    color: var(--text-white);
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Bottom Section */
+.footer-bottom {
+    border-top: 1px solid var(--gray-800);
+    margin-top: 0px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+.footer-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent-orange), var(--primary-green));
+    border-radius: 2px;
+}
+
+/* Terms Links */
+.terms-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.terms-link {
+    color: var(--text-gray-400);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.terms-link:hover {
+    color: var(--accent-orange);
+}
+
+.terms-link:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    color: var(--text-gray-500);
+}
+
+/* Copyright Section */
+.copyright-text {
+    color: var(--text-gray-400);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .accreditation-section {
+        order: -1;
+        grid-column: 1 / -1;
+    }
+    
+    .accreditation-logos {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #hospital-footer {
+        padding: 64px 0;
+    }
+    
+    .footer-container {
+        padding: 0 24px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .section-title,
+    .accreditation-title {
+        font-size: 18px;
+    }
+    
+    .hospital-description,
+    .nav-link,
+    .contact-text {
+        font-size: 14px;
+    }
+    
+    .social-link {
+        font-size: 18px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .newsletter-button {
+        align-self: flex-start;
+    }
+    
+    .terms-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .terms-link:not(:last-child)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 16px;
+    }
+    
+    .hospital-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        margin-top: 48px;
+        padding-top: 24px;
+    }
+    
+    .accreditation-logos {
+        justify-content: center;
+    }
+    
+    .accreditation-logo {
+        width: 120px;
+        height: 120px;
+    }
+}

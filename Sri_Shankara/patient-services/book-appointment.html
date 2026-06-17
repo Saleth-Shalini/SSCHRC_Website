@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<!-- start -->
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cancer - Corporate Cancer Hospital</title>
+    <link rel="stylesheet" href="cancer-we-treat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body>
+    <!-- Banner Section 4 -->
+     <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Doctors & Specialists/Request an appointment/Book your appointment.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Doctors & Specialists/Request an appointment/Book your appointment.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+                <!-- Desktop Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Desktop Logo"
+                    class="hospital-banner-logo-image desktop"
+                > -->
+                
+                <!-- Mobile Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Mobile Logo"
+                    class="hospital-banner-logo-image mobile"
+                > -->
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                
+
+
+
+
+                <div class="hospital-banner-text">
+                    <!-- <h1 class="hospital-banner-title">Precise & Early<br>Cancer Detection<br>with Advanced<br>Diagnostic Tests</h1>
+                    
+                    <p class="hospital-banner-subtitle">We deliver state-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+
+                <!-- Medical Icon -->
+                <!-- <svg class="hospital-banner-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 30 Q20 20 30 20 L70 20 Q80 20 80 30 L80 70 Q80 80 70 80 L30 80 Q20 80 20 70 Z" />
+                    <path d="M50 30 L50 70 M30 50 L70 50" />
+                    <circle cx="50" cy="25" r="8" />
+                    <circle cx="25" cy="50" r="6" />
+                    <circle cx="75" cy="50" r="6" />
+                </svg> -->
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <!-- <h1 class="hospital-banner-title">Precise & Early Cancer Detection</h1>
+            <p class="hospital-banner-subtitle">State-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+
+<head>
+<!-- ✅ Breadcrumb CSS -->
+<style>
+
+.breadcrumb-wrapper {
+  max-width: 1400px;     /* matches your page width */
+  margin: 0 auto;        /* centers the block */
+  padding-left: 10px;    /* ✅ add space on the left */
+  padding-right: 40px;   /* optional, keeps both sides equal */
+}
+
+    .breadcrumb {
+  --sep: "›";
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 1rem 0 1.5rem;
+  color: #444 !important;
+  font-family: Arial, sans-serif;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  color: #333 !important;
+}
+.breadcrumb li+li::before {
+  content: var(--sep);
+  opacity: 0.6;
+  margin: 0 0.5rem 0 0.25rem;
+}
+.breadcrumb a {
+  color: #003017 !important;
+  text-decoration: none;
+}
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.breadcrumb [aria-current="page"] {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .breadcrumb ol {
+    gap: 0.2rem 0.35rem;
+  }
+  .breadcrumb li:not(:first-child):not(:last-child) {
+    display: none;
+  }
+  .breadcrumb li:first-child::after {
+    content: "…";
+    margin: 0 0.35rem 0 0.25rem;
+    opacity: 0.6;
+  }
+}
+</style>
+<!-- ✅ Breadcrumb End -->
+</head>
+<body>
+<!-- ✅ Breadcrumb Start -->
+<div class="breadcrumb-wrapper">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html" target="_blank">Home</a></li>
+    
+    <li aria-current="page">Request An Appointment</li>
+  </ol>
+</nav>
+</div>
+<!-- ✅ SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yourhospital.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Request An Appointment",
+      "item": "https://yourhospital.com/patient-services/Book-Appointment.html"
+    }
+  ]
+}
+</script>
+</body>
+
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Request an Appointment | Sri Shankara Cancer Hospital & Research Centre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="description" content="Request an appointment at our Sri Shankara Cancer Hospital & Research Centre." />
+  <!-- Select2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <style>
+    :root{
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --text: #1a202c;
+      --muted: #4a5568;
+      --brand: #1c7ed6;         /* blue */
+      --brand-2: #ff8c39;       /* orange */    
+      --error: #c53030;
+      --success: #0f9d58;
+      --ring: rgba(28,126,214,.35);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    /* Dark mode disabled - always use light mode colors */
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #f7fafc; /* Keep light mode background */
+        --card: #ffffff; /* Keep light mode card */
+        --text: #1a202c; /* Keep light mode text */
+        --muted: #4a5568; /* Keep light mode muted */
+        --ring: rgba(28,126,214,.35); /* Keep light mode ring */
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg) !important;color:var(--text) !important;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.5}
+    html{color-scheme: light only;}
+    a{color:var(--brand)}
+    .wrap{max-width:920px;margin:24px auto;padding:16px}
+    /* header{display:flex;gap:16px;align-items:center;justify-content:space-between;} */
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    h1{font-size:clamp(22px,3vw,32px);margin:0;color:#1a202c !important;}
+    .subtitle{color:var(--muted) !important;margin-top:4px;font-size:14px}
+    .card{background:var(--card) !important;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;color:var(--text) !important;}
+    /* Scope grid class to only apply within .wrap, not footer */
+    .wrap .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .wrap .grid-1{grid-template-columns:1fr}
+    @media (max-width:720px){.wrap .grid{grid-template-columns:1fr}}
+    label{display:block;font-weight:600;margin:6px 0 6px;color:#1a202c !important;}
+    .req{color:var(--brand-2)}
+    input[type="text"],input[type="number"],input[type="tel"],input[type="email"],input[type="date"],select,textarea{
+      width:100%;padding:12px 14px;border:1px solid #d1d5db;border-radius:12px;background:#ffffff !important;color:#1a202c !important;
+      outline:none;transition:border .2s, box-shadow .2s; font-size:16px;
+    }
+    input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 4px var(--ring)}
+    textarea{min-height:112px;resize:vertical}
+    .help{font-size:12px;color:var(--muted) !important;margin-top:6px}
+    /* Select2 styling for doctor dropdown */
+    .select2-container--default .select2-selection--single{
+      height:auto;padding:12px 14px;border:1px solid #d1d5db;border-radius:12px;
+      background:#ffffff !important;font-size:16px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+      color:#1a202c !important;line-height:1.5;padding:0;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+      height:100%;right:14px;
+    }
+    .select2-container--default.select2-container--open .select2-selection--single{
+      border-color:var(--brand);box-shadow:0 0 0 4px var(--ring);
+    }
+    .select2-dropdown{
+      border:1px solid #d1d5db;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.15);
+      margin-top:4px;
+    }
+    .select2-results__options{
+      max-height:240px;overflow-y:auto;
+    }
+    .select2-container--default .select2-results__option--highlighted[aria-selected]{
+      background-color:#f3f4f6;color:#1a202c;
+    }
+    .select2-container--default .select2-search--dropdown .select2-search__field{
+      border:1px solid #d1d5db;border-radius:8px;padding:8px 12px;font-size:16px;
+    }
+    .select2-container--default .select2-search--dropdown .select2-search__field:focus{
+      border-color:var(--brand);box-shadow:0 0 0 3px var(--ring);outline:none;
+    }
+    .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .radios{display:flex;gap:16px;flex-wrap:wrap}
+    .radio{
+      display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #d1d5db;border-radius:999px;cursor:pointer;background:#ffffff !important;color:#1a202c !important;
+    }
+    .actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
+    /* Use specific class for form buttons to avoid affecting header buttons */
+    .form-btn{
+      appearance:none;border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;
+      box-shadow:var(--shadow);transition:transform .06s ease, box-shadow .2s;
+      background:linear-gradient(135deg, #014196, #079591); color:white;
+    }
+    .form-btn:hover{
+      transform:translateY(-1px);
+      background:linear-gradient(135deg, #012d6b, #057a77);
+      box-shadow:0 12px 35px rgba(1, 65, 150, 0.25);
+    }
+    .form-btn:active{transform:translateY(0)}
+    .form-btn.muted-btn{background:#e5e7eb;color:#111827}
+    .error{color:var(--error);font-size:14px;margin-top:6px}
+    .visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+    .banner{border-radius:12px;padding:12px 14px}
+    .banner.error{background:#fee2e2;color:#7f1d1d;border:1px solid #fecaca}
+    .banner.success{background:#dcfce7;color:#065f46;border:1px solid #bbf7d0}
+    .note{font-size:18px;color:var(--muted) !important}
+    
+    /* Ensure Footer Grid Uses Correct Layout - Must override page styles */
+    #hospital-footer .footer-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 48px !important;
+    }
+    
+    @media (min-width: 768px) {
+      #hospital-footer .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      #hospital-footer .footer-grid {
+        grid-template-columns: 200px 1fr 1fr 1fr 1fr !important;
+      }
+    }
+    
+    #hospital-footer .footer-container {
+      max-width: 1400px !important;
+      margin: 0 auto !important;
+      padding: 0 16px !important;
+    }
+    
+    #hospital-footer .footer-section {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header aria-label="Site header">
+      <div class="brand">
+      
+        <div>
+          <h1>Request an Appointment</h1>
+          <!-- <div class="subtitle"></div> -->
+        </div>
+      </div>
+      <div class="note" aria-hidden="true">24×7 Support: +91-7090521000</div>
+    </header>
+
+    <div id="form-status" class="banner visually-hidden" role="status" aria-live="polite"></div>
+
+  <form id="appointmentForm" class="card" action="book-appointment.php" method="post" novalidate>
+
+      <!-- Honeypot -->
+      <input type="text" name="website" autocomplete="off" tabindex="-1" class="visually-hidden" aria-hidden="true" />
+
+      <div class="grid">
+        <div>
+          <label for="full_name">Full Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="full_name" name="full_name" type="text" placeholder="Your full name" required maxlength="120" autocomplete="name" />
+          <div class="help">As per your government ID or hospital records.</div>
+        </div>
+
+        <div>
+          <label for="age">Age <span class="req" aria-hidden="true">*</span></label>
+          <input id="age" name="age" type="number" inputmode="numeric" min="0" max="120" placeholder="e.g., 45" required />
+        </div>
+
+        <div>
+          <label for="mobile">Mobile Number <span class="req" aria-hidden="true">*</span></label>
+          <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="^\d{10}$" maxlength="10" placeholder="10-digit mobile" required autocomplete="tel" />
+          <div class="help">Enter a valid 10-digit Indian mobile number.</div>
+        </div>
+
+        <div>
+          <label for="email">Email Address (optional)</label>
+          <input id="email" name="email" type="email" inputmode="email" placeholder="you@example.com" autocomplete="email" />
+          <div class="help">Used for appointment updates & confirmations.</div>
+        </div>
+
+        <div>
+          <label for="gender">Gender <span class="req" aria-hidden="true">*</span></label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="preferred_date">Preferred Date <span class="req" aria-hidden="true">*</span></label>
+          <input id="preferred_date" name="preferred_date" type="date" required min="" />
+          <div class="help">Select your preferred appointment date</div>
+          <input type="hidden" id="preferred_date_formatted" name="preferred_date_formatted" />
+        </div>
+
+      </div>
+
+      <div class="grid grid-1" style="margin-top:8px;">
+        <div>
+          <label for="selectedDoctor">Doctor Name (optional)</label>
+          <select id="selectedDoctor" name="selectedDoctor" class="doctor-select">
+            <option value="">Select a doctor</option>
+          </select>
+          <div class="help">Type to search or select a doctor from the dropdown list.</div>
+        </div>
+
+
+        <div>
+          <label for="notes">Additional Notes (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Any additional information we should know"></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="form-btn" aria-label="Book Appointment">Book Appointment</button>
+       
+        <span class="note">By submitting, you agree to be contacted for scheduling.</span>
+      </div>
+
+      <div id="clientErrors" class="error" role="alert" aria-live="assertive"></div>
+    </form>
+
+    
+  </div>
+
+  <!-- jQuery (required for Select2) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Select2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  
+  <script>
+    // Get doctor name from URL parameter
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      const results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Populate doctor name from URL parameter and setup date input
+    document.addEventListener('DOMContentLoaded', function() {
+      // Setup date input minimum date (today)
+      const dateInput = document.getElementById('preferred_date');
+      if (dateInput) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        dateInput.min = `${year}-${month}-${day}`;
+        
+        // Update formatted date on change
+        dateInput.addEventListener('change', function() {
+          if (this.value) {
+            document.getElementById('preferred_date_formatted').value = formatDateToDDMMYYYY(this.value);
+          }
+        });
+      }
+      
+      // Initialize doctor dropdown with Select2
+      const doctorSelect = document.getElementById('selectedDoctor');
+      const doctorsList = getDoctorsList();
+      
+      if (doctorSelect && doctorsList.length > 0) {
+        // Populate select with all doctors
+        doctorsList.forEach(doctorName => {
+          const option = document.createElement('option');
+          option.value = doctorName;
+          option.textContent = doctorName;
+          doctorSelect.appendChild(option);
+        });
+        
+        // Initialize Select2 with search functionality
+        $(doctorSelect).select2({
+          placeholder: 'Select a doctor',
+          allowClear: true,
+          width: '100%',
+          dropdownAutoWidth: false,
+          minimumResultsForSearch: 0, // Always show search box
+          language: {
+            noResults: function() {
+              return "No doctors found";
+            },
+            searching: function() {
+              return "Searching...";
+            }
+          }
+        });
+        
+        // Populate doctor name from URL parameter
+        const doctorName = getUrlParameter('doctor');
+        if (doctorName) {
+          $(doctorSelect).val(doctorName).trigger('change');
+        }
+      }
+    });
+    
+    // All doctor names from Cancer-Specialists.html
+    const allDoctorNames = [
+      "Dr. Aathma Prasanna",
+      "Dr. Abhay K Kattepur",
+      "Dr. Adithi Raghunathan",
+      "Dr. Akhileshwar Namani",
+      "Dr. Anand KC",
+      "Ananya M",
+      "Dr. Annapurna V",
+      "Dr. Anulatha Holla",
+      "Dr. L Appaji",
+      "Dr. Archana S",
+      "Dr. Arjun S Kashyap",
+      "Dr. Aruna Korlimarla",
+      "Dr. Ashitha N N",
+      "Dr. Avinash C Madhukar",
+      "Dr. Avinash",
+      "Dr. Bhargav Raj MS",
+      "Dr. Chaitra V",
+      "Dr. Chandrakant B Patil",
+      "Dr. Deepanwita Chakraborty",
+      "Dr. Divya Santhosh",
+      "Dr. Divya V",
+      "Dr. Divya Vasudevan",
+      "Dr. Divya Vishwanatha Kini",
+      "Dr. Ganesh Nayak",
+      "Dr. Gayathri J",
+      "Dr. Giri G V",
+      "Dr.Girish Rao",
+      "Dr. Govinda Babu K",
+      "Dr. Harish B S",
+      "Dr. Harshitha K",
+      "Dr. Janaki P Kumar",
+      "Jananiee R Punith",
+      "Dr. Janardhan D. C.",
+      "Dr. Jayashree D Kulkarni",
+      "Dr. Jismy Mary Mathew",
+      "Dr. John C",
+      "Dr. Kanyadhara Lohita Krishna",
+      "Dr. Karthik N Rao",
+      "Dr. Karthik S Rishi",
+      "Dr. Karthick R.G",
+      "Dr. Kavitha S Rao",
+      "Ms Krithi",
+      "Ms Krithika N Shetty",
+      "Mr T V Kumareshwar",
+      "Dr. Kundalam Furkhan Ahmed",
+      "Dr. Lakshmi Krishnamoorthy",
+      "Dr. B K Madhusudan",
+      "Dr. Mallika Ganesh",
+      "Dr. Manasa C",
+      "Ms M Manila",
+      "Dr. Manjunath Sastry",
+      "Dr. Moupia Goswami",
+      "Dr. Muddappa P",
+      "B Munikrishna",
+      "Dr. Nandini N Inamdar",
+      "Dr. Nanjundappa",
+      "Dr. Naveen S Shetty",
+      "Dr. Nethra R",
+      "Niby Jacob",
+      "Dr. Nithin K R",
+      "Dr. Parvesh Kumar Jain",
+      "Dr. Paturu Kondaiah",
+      "Dr. Pavithra H",
+      "Dr Pradeep Kumar N",
+      "Dr. Pradeep Kumar Reddy",
+      "Dr. Prahlad",
+      "Dr. Prajwal S D",
+      "Dr. Prakash Ramachandra",
+      "Dr. Prasanna Kumari",
+      "Dr Prashanth Kesari",
+      "Dr. Prashanth R Putran",
+      "Dr. Praveen K S",
+      "Dr. Prithvi B.S",
+      "Dr. Priyanka P",
+      "Dr.Radhika Kapahtia",
+      "Dr. Raghavendra G",
+      "Dr. Raghunath BV",
+      "Dr. Raghunath S K",
+      "Dr. Raksha Nadig",
+      "Ms Rakshatha J",
+      "Dr. Ramesh S.",
+      "Dr. Ramkiran S",
+      "Dr. Ranjani Shamsundar",
+      "Dr. Raveesh Hegde",
+      "Dr. Ravi B. Diwakar",
+      "Dr.Ravneet Chabbra",
+      "Dr. Rekha BR",
+      "Dr. Rekha V. Kumar",
+      "Dr Roopa Acharya",
+      "Dr. Ruchitha Rungta",
+      "Ms Sahithi Guntamadugu",
+      "Dr Sainath J. V.",
+      "Dr. Sandhya Appachu M",
+      "Dr. Sandeep M B Desai",
+      "Dr. Sanjeev Kulkarni",
+      "Dr. Santosh H. S.",
+      "Dr. O S Santhosh",
+      "Dr. Santosh Subramanian R",
+      "Dr. Sasi Mouli V. V. H. P. K.",
+      "Dr. Savitha S Sharma",
+      "Dr. Shanthi Velusamy",
+      "Dr. Sharath Chandra K S",
+      "Dr. Shashank B",
+      "Dr. Shashirekha",
+      "Dr. Shilpa V",
+      "Dr. Shubham",
+      "Dr. Smitha S.",
+      "Dr. Somashekar G.",
+      "Dr. Somashekar N",
+      "Dr. Sonal Asthana",
+      "Dr. Sreekala K N",
+      "Dr. Sreelakshmi B.",
+      "Dr. Sushmitha M",
+      "Dr.Sreeram MP",
+      "Dr. B S Srinath",
+      "Dr. Sriram V",
+      "Dr. Srivatsa H G",
+      "Dr. Srivatsa N",
+      "Dr. Subhashree T",
+      "Dr Sudha Sah",
+      "Dr. Sulakshana M S",
+      "Dr. Sunil Kalmath",
+      "Dr. Sunitha B. S.",
+      "Dr. Sunitha",
+      "Dr. R N Supreeth",
+      "Dr. S Sruthy",
+      "Dr. Tapas Patra",
+      "Dr. Teertha S Shetty",
+      "Dr. Veerabhadra Guptha.K",
+      "Dr. Venkatachala K",
+      "Dr. Venkatesh P",
+      "Dr. Vijaisimha",
+      "Dr. Vijayaraghavan R L",
+      "Dr. Vinayak M",
+      "Dr. Vinu Priya D",
+      "Dr. N.K. Vinod",
+      "Dr. Vishnu Kurpad",
+      "Dr. Vishnupriya M",
+      "Dr. Zankhanna Bush"
+    ];
+    
+    // Function to get doctors list (now using embedded list)
+    function getDoctorsList() {
+      return allDoctorNames;
+    }
+
+    // Convert date to dd-mm-yyyy in hidden field
+    function formatDateToDDMMYYYY(val){
+      if(!val) return "";
+      const [y,m,d] = val.split("-");
+      if (y && m && d) return `${d.padStart(2,'0')}-${m.padStart(2,'0')}-${y}`;
+      return val;
+    }
+
+    // Function to clear/reset the appointment form (similar to closeBookingModal in reference)
+    function clearAppointmentForm() {
+      // Clear all form fields explicitly
+      document.getElementById('full_name').value = '';
+      document.getElementById('age').value = '';
+      document.getElementById('mobile').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('gender').value = '';
+      document.getElementById('preferred_date').value = '';
+      document.getElementById('preferred_date_formatted').value = '';
+      document.getElementById('selectedDoctor').value = '';
+      document.getElementById('notes').value = '';
+      
+      // Reset Select2 doctor dropdown
+      const doctorSelect = document.getElementById('selectedDoctor');
+      if (doctorSelect && $(doctorSelect).hasClass('select2-hidden-accessible')) {
+        $(doctorSelect).val(null).trigger('change');
+      }
+      
+      // Clear any error messages
+      const clientErrors = document.getElementById('clientErrors');
+      if (clientErrors) {
+        clientErrors.textContent = '';
+      }
+    }
+
+    // Client-side validation
+    const form = document.getElementById('appointmentForm');
+    const clientErrors = document.getElementById('clientErrors');
+    const formStatus = document.getElementById('form-status');
+
+    form.addEventListener('submit', function(e){
+      clientErrors.textContent = "";
+      let errors = [];
+
+      // Native HTML5 validity
+      if (!form.checkValidity()) {
+        errors.push("Please complete all required fields correctly.");
+      }
+
+      // Mobile number strict validation
+      const mobile = document.getElementById('mobile').value.trim();
+      if (!/^\d{10}$/.test(mobile)) {
+        errors.push("Mobile number must be exactly 10 digits.");
+      }
+
+      // Age range validation
+      const age = parseInt(document.getElementById('age').value, 10);
+      if (isNaN(age) || age < 0 || age > 120) {
+        errors.push("Please enter a valid age (0–120).");
+      }
+
+      // Gender validation
+      if (!document.getElementById('gender').value) {
+        errors.push("Please select your gender.");
+      }
+
+      // Preferred date validation
+      const rawDate = document.getElementById('preferred_date').value;
+      if (!rawDate) {
+        errors.push("Please select a preferred date.");
+      } else {
+        document.getElementById('preferred_date_formatted').value = formatDateToDDMMYYYY(rawDate);
+      }
+
+      // Doctor name is optional, no validation needed
+
+      if (errors.length) {
+        e.preventDefault();
+        clientErrors.innerHTML = errors.map(x => `• ${x}`).join("<br>");
+        formStatus.className = "banner error";
+        formStatus.textContent = "Please fix the highlighted issues and try again.";
+        formStatus.classList.remove('visually-hidden');
+        formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        return false;
+      }
+
+      // Prevent default form submission and use AJAX
+      e.preventDefault();
+      
+      // Show submitting status
+      formStatus.className = "banner success";
+      formStatus.textContent = "Submitting your request…";
+      formStatus.classList.remove('visually-hidden');
+      
+      // Disable submit button
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting...';
+      
+      // Create FormData object
+      const formData = new FormData(form);
+      
+      // Submit via AJAX
+      fetch('book-appointment.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        // Check if response is JSON
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          return response.json();
+        } else {
+          // Handle non-JSON response (legacy error format)
+          return response.text().then(text => ({
+            status: response.ok ? 'success' : 'error',
+            message: text || 'An error occurred'
+          }));
+        }
+      })
+      .then(data => {
+          
+           console.log("DATA:", data);
+  console.log("STATUS:", data.status);
+  
+  
+        if (data.status === 'success') {
+            
+            console.log("SUCCESS BLOCK HIT");
+          // Show success popup (blocking - waits for user to click OK)
+          gtag('event', 'appointment_submit');
+          alert('✓ ' + data.message);
+          
+          // After user clicks OK on alert, clear the form (similar to closeBookingModal in reference)
+          clearAppointmentForm();
+          
+          // Hide status banner
+          formStatus.classList.add('visually-hidden');
+          
+          // Scroll to top of form
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          // Show error popup
+          alert('✗ Error: ' + data.message);
+          
+          // Show error in form
+          formStatus.className = "banner error";
+          formStatus.textContent = data.message;
+          formStatus.classList.remove('visually-hidden');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('✗ An error occurred while submitting your request. Please try again later.');
+        formStatus.className = "banner error";
+        formStatus.textContent = "An error occurred. Please try again.";
+        formStatus.classList.remove('visually-hidden');
+      })
+      .finally(() => {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      });
+    });
+  </script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

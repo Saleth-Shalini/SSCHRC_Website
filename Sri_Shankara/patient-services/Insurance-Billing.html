@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cancer - Corporate Cancer Hospital</title>
+    <link rel="stylesheet" href="cancer-we-treat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body>
+    <!-- Banner Section 4 -->
+     <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Patient Services/Insurance & Billing/financial support.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Patient Services/Insurance & Billing/financial support.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+                <!-- Desktop Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Desktop Logo"
+                    class="hospital-banner-logo-image desktop"
+                > -->
+                
+                <!-- Mobile Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Mobile Logo"
+                    class="hospital-banner-logo-image mobile"
+                > -->
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                
+
+
+
+
+                <div class="hospital-banner-text">
+                    <!-- <h1 class="hospital-banner-title">Precise & Early<br>Cancer Detection<br>with Advanced<br>Diagnostic Tests</h1>
+                    
+                    <p class="hospital-banner-subtitle">We deliver state-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+
+                <!-- Medical Icon -->
+                <!-- <svg class="hospital-banner-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 30 Q20 20 30 20 L70 20 Q80 20 80 30 L80 70 Q80 80 70 80 L30 80 Q20 80 20 70 Z" />
+                    <path d="M50 30 L50 70 M30 50 L70 50" />
+                    <circle cx="50" cy="25" r="8" />
+                    <circle cx="25" cy="50" r="6" />
+                    <circle cx="75" cy="50" r="6" />
+                </svg> -->
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <!-- <h1 class="hospital-banner-title">Precise & Early Cancer Detection</h1>
+            <p class="hospital-banner-subtitle">State-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    generateMenu1(); 
+  });
+</script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance & Corporate Empanelment Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8fbf9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            background-color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: #2E8B57;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Scope section-title to only apply to page content, not footer */
+        .section .section-title {
+            color: #2E8B57 !important;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #FF4500;
+            display: inline-block;
+        }
+        
+        /* Protect footer headings from page styles */
+        #hospital-footer .section-title {
+            color: var(--text-white) !important;
+            font-size: 20px !important;
+            font-weight: bold !important;
+            margin-bottom: 8px !important;
+            padding-bottom: 0 !important;
+            border-bottom: none !important;
+            display: block !important;
+        }
+        
+        .search-box {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .search-input {
+            flex-grow: 1;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            min-width: 250px;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #2E8B57;
+            box-shadow: 0 0 0 2px rgba(46, 139, 87, 0.2);
+        }
+        
+        .counter {
+            background-color: #FF4500;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background-color: #2E8B57;
+            color: white;
+            text-align: left;
+            padding: 15px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f9f5;
+        }
+        
+        tr:hover {
+            background-color: #e6f7ee;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .insurance-icon {
+            color: #2E8B57;
+            margin-right: 10px;
+        }
+        
+        .corporate-icon {
+            color: #FF4500;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div>
+                <h1>Empanelment Directory</h1>
+                <p class="subtitle">Insurance Companies, TPAs & Corporate Partners</p>
+            </div>
+        </div>
+    </header> -->
+    
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Insurance Companies & Third Party Administrators</h2>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search insurance companies or TPAs..." id="insuranceSearch">
+                <div class="counter" id="insuranceCounter">Total: 32</div>
+            </div>
+            
+            <div class="table-container">
+                <table id="insuranceTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Insurance Company / TPA Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Aditya Birla Health Insurance Co. Limited</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Bajaj Allianz General Insurance Co. Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Cholamandalam MS General Insurance Co. Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> ERICSON INSURANCE TPA PVT.LIMITED</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Family Health Plan [TPA] Limited</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> FUTURE GENERAL INSURANCE COMPANY</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Genins India TPA Ltd.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Good health TPA Pvt ltd</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Go Digit GENERAL INSURANCE COMPANY LIMITED</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> HDFC ERGO General Insurance Company Limited</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> HEALTH INDIA TPA SERVICE PVT LTD</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Health Insurance TPA of India Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Heritage Health Insurance TPA Pvt. Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> ICICI Lombard General Insurance Company Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Liberty General Insurance Limited</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> MD INDIA HEALTHCARE SERVICES (TPA) PVT. LTD</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Medi Assist Insurance IndiaTPA Pvt Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> MEDICARE TPA SERVICES (I) PVT LTD</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> MedSave Health Insurance (TPA) Ltd.</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Nivabupa Health Insurance</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Paramount Health Services & Insurance TPA Pvt Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Raksha TPA Private Limited</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Reliance General Insurance</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Religare Health Insurance Co. Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Safeway Insurance TPA Pvt. Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> STAR HEALTH AND ALLIED INSURANCE CO LTD</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> SBI GENERAL INSURANCE COMPANY</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> TATA AIG GENERAL INSURANCE COMPANY LIMITED</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> United HealthCare Parekh (UHC)</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Universal Sampo General Insurance Company limited</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Vidal Health TPA Pvt Ltd</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td><i class="fas fa-hospital-user insurance-icon"></i> Vipul Medcorp TPA Pvt. Ltd</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Corporate Partners</h2>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search corporate names..." id="corporateSearch">
+                <div class="counter" id="corporateCounter">Total: 13</div>
+            </div>
+            
+            <div class="table-container">
+                <table id="corporateTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Corporate Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><i class="fas fa-building corporate-icon"></i> AERONAUTICAL DEVELOPMENT AGENCY (ADA)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><i class="fas fa-building corporate-icon"></i> BHARATH ELECTONICS LIMITED (BEL)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><i class="fas fa-building corporate-icon"></i> BOSCH LTD</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><i class="fas fa-building corporate-icon"></i> BESCOM</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><i class="fas fa-building corporate-icon"></i> CENTRAL GOVERNMENT HEALTH SCHEME (CGHS)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><i class="fas fa-building corporate-icon"></i> CUTCHI MENON JAMATH</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><i class="fas fa-building corporate-icon"></i> Employees' State Insurance Corporation (ESIC)</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><i class="fas fa-building corporate-icon"></i> INDIAN SPACE RESEARCH ORGANISATION (ISRO)</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><i class="fas fa-building corporate-icon"></i> KARNATAKA STATE ROAD TRANSPORT CORPORATION (KSRTC)</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><i class="fas fa-building corporate-icon"></i> KARNATAKA POWER TRANSMISSION CORPORATION LIMITED (KPTCL)</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><i class="fas fa-building corporate-icon"></i> RANGADORAI MEMORIAL HOSPITAL (RMH)</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><i class="fas fa-building corporate-icon"></i> RESERVE BANK OF INDIA (RBI)</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><i class="fas fa-building corporate-icon"></i> Sparsh super speciality hospital</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    
+
+
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality for insurance table
+            const insuranceSearch = document.getElementById('insuranceSearch');
+            const insuranceCounter = document.getElementById('insuranceCounter');
+            const insuranceTable = document.getElementById('insuranceTable');
+            
+            if (insuranceSearch && insuranceTable) {
+                insuranceSearch.addEventListener('input', function() {
+                    const searchValue = this.value.toLowerCase().trim();
+                    const rows = insuranceTable.querySelectorAll('tbody tr');
+                    let visibleCount = 0;
+                    
+                    rows.forEach(row => {
+                        const text = row.textContent.toLowerCase();
+                        const isVisible = text.includes(searchValue);
+                        row.style.display = isVisible ? '' : 'none';
+                        if (isVisible) visibleCount++;
+                    });
+                    
+                    // Update counter
+                    if (insuranceCounter) {
+                        insuranceCounter.textContent = searchValue ? `Found: ${visibleCount}` : 'Total: 32';
+                    }
+                });
+            }
+            
+            // Search functionality for corporate table
+            const corporateSearch = document.getElementById('corporateSearch');
+            const corporateCounter = document.getElementById('corporateCounter');
+            const corporateTable = document.getElementById('corporateTable');
+            
+            if (corporateSearch && corporateTable) {
+                corporateSearch.addEventListener('input', function() {
+                    const searchValue = this.value.toLowerCase().trim();
+                    const rows = corporateTable.querySelectorAll('tbody tr');
+                    let visibleCount = 0;
+                    
+                    rows.forEach(row => {
+                        const text = row.textContent.toLowerCase();
+                        const isVisible = text.includes(searchValue);
+                        row.style.display = isVisible ? '' : 'none';
+                        if (isVisible) visibleCount++;
+                    });
+                    
+                    // Update counter
+                    if (corporateCounter) {
+                        corporateCounter.textContent = searchValue ? `Found: ${visibleCount}` : 'Total: 13';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

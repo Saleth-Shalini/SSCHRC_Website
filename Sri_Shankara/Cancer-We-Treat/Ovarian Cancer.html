@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovarian Cancer: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Ovarian Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Ovarian cancer originates in the ovaries, the female reproductive organs responsible for producing and storing eggs. It develops when abnormal ovarian cells divide and multiply uncontrollably.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    "Ovarian cancer" is a general term for any primary malignant tumour in the ovary. It is not a single disease, but rather a collection of many types, some of which are exceptionally rare and require specialised management. Accurate and timely diagnosis is therefore paramount. The main types of ovarian cancer are named after the cells in which the disease first forms:
+                </p>
+            </div>
+
+            <!-- Ovarian Cancer Types -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Types of Ovarian Cancer
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Epithelial Ovarian Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Constituting about 90% of cases, these cancers start in the epithelium tissue and may arise from the fallopian tube, ovarian cells, or implanted tissue like endometriosis. The risk increases with age, particularly after 50.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                <strong>Subtypes include:</strong> serous, mucinous, endometrioid, clear cell, transitional, and undifferentiated types.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Germ Cell Ovarian Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                These tumours account for about 5% of ovarian cancers and begin in the egg-producing cells. They typically occur in younger women, with approximately 80% found in those under 30.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                <strong>Main subtypes:</strong> teratoma, dysgerminoma, endodermal sinus tumour, and choriocarcinoma.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Stromal Ovarian Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Representing about 5% of cases, these tumours develop in the connective tissue of the ovary that produces oestrogen and progesterone. They are most often found in older women but can affect girls. Stromal tumours generally spread slower than other types.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                <strong>Subtypes include:</strong> granulosa, theca, and Sertoli-Leydig cell tumours.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #9333ea;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Primary Peritoneal Ovarian Cancer</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is a rare form of cancer whose cells resemble high-grade serous ovarian cancer. It begins in the lining of the pelvis or abdomen and can occur even in women who have had their ovaries removed. Its symptoms and treatment are similar to epithelial ovarian cancer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Ovarian Cancer Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Anything that increases your chance of developing ovarian cancer is considered a risk factor. These include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The risk increases with age, with about half of all ovarian cancers diagnosed in women over 60.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Family history of ovarian cancer increases risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Genetic Factors</h4>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        Approximately 10% to 15% of ovarian cancers are linked to inherited genes such as:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 text-sm">
+                        <li>BRCA1 or BRCA2 mutations</li>
+                        <li>Lynch syndrome (hereditary nonpolyposis colorectal cancer)</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Reproductive History</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Never having children: Having more children is associated with a lower risk of developing ovarian cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 md:col-span-2" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Close Relative with Ovarian Cancer</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Having a close relative with ovarian cancer and a suspected BRCA1 or BRCA2 mutation increases risk.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Having a risk factor does not mean you will certainly develop ovarian cancer. It is advisable to discuss any risk factors with your healthcare provider.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Ovarian Cancer Symptoms & Signs
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Most women with ovarian cancer experience symptoms that are often vague, and these can overlap with signs of less serious conditions such as indigestion, weight gain, or ageing. Even in the early stages, symptoms may be non-specific.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Symptoms and signs of ovarian cancer vary but may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-red-50 to-white border-l-4 hover-scale" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Abdominal Discomfort</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        General abdominal discomfort or pain (e.g., gas, indigestion, pressure, swelling, bloating, cramps).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white border-l-4 hover-scale" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Bloating</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Bloating and/or feeling full quickly, even after a light meal.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-yellow-50 to-white border-l-4 hover-scale" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Digestive Issues</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Nausea, diarrhoea, constipation, or frequent urination.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-green-50 to-white border-l-4 hover-scale" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Weight Changes</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Unexplained weight loss or gain.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white border-l-4 hover-scale" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Loss of Appetite</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-purple-50 to-white border-l-4 hover-scale" style="border-color: #9333ea;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Abnormal Vaginal Bleeding</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-pink-50 to-white border-l-4 hover-scale" style="border-color: #ec4899;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Unusual Fatigue</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-indigo-50 to-white border-l-4 hover-scale" style="border-color: #6366f1;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Back Pain</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-teal-50 to-white border-l-4 hover-scale" style="border-color: #14b8a6;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Pain During Intercourse</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Pain during sexual intercourse.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-rose-50 to-white border-l-4 hover-scale" style="border-color: #f43f5e;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Menstrual Changes</h4>
+                </div>
+            </div>
+
+            <div class="bg-red-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>Important:</strong> While these symptoms do not automatically indicate ovarian cancer, it is strongly recommended that you consult your healthcare provider if they:
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
+                    <li>Are new symptoms.</li>
+                    <li>Persist for more than a few weeks.</li>
+                    <li>Occur more than 12 times a month.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Ovarian Cancer Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, our experts utilise advanced and accurate equipment for ovarian cancer diagnosis to precisely determine if and where the cancer has spread. Our team has vast experience with all forms of ovarian cancer, including rare types. Early and accurate diagnosis significantly improves the chances for successful treatment.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If you present with symptoms that may suggest ovarian cancer, your doctor will conduct an examination and ask about your health and family medical history. One or more of the following tests may be used to diagnose the disease, assess its spread, or monitor the effectiveness of treatment:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pelvic Exam</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        The doctor performs a bimanual examination to feel deep within the pelvis for any masses on either side of the uterus, which can be a sign of ovarian cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Blood Test for Ovarian Cancer (CA-125)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        The specific blood tests ordered will depend on the suspected or diagnosed type of ovarian cancer. For epithelial ovarian cancer, the CA-125 test is common. This test measures the level of CA-125, a protein tumour marker often found in higher levels in women with ovarian cancer.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        CA-125 testing is most reliable for monitoring cancer recurrence after treatment by tracking changes in levels over time. It can also be used to check if treatment is working or to predict its potential effectiveness. However, the CA-125 test alone cannot confirm ovarian cancer, as other conditions can raise its level, and some ovarian cancers produce low or no CA-125.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Ovarian Cancer Biopsy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        The only definitive way to confirm if a growth is cancer is through a biopsy, where tissue is removed and examined under a microscope. This can be done via:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Surgery</li>
+                        <li>Laparoscopy</li>
+                        <li>Fine needle aspiration (FNA)</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        If a mass appears confined to the ovary, surgical removal is often the most appropriate next step, with the mass being biopsied after its removal.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Ovarian Cancer Imaging</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Various imaging exams may be used for diagnosis:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>CT (Computed Axial Tomography) or CAT scans</li>
+                        <li>MRI (Magnetic Resonance Imaging) scans</li>
+                        <li>PET (Positron Emission Tomography) scans</li>
+                        <li>Chest X-rays</li>
+                        <li>Transvaginal ultrasound (using a wand-shaped scanner inserted into the vagina)</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Genetic Testing for Ovarian Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        If you have a high risk due to personal or family history, your doctor may recommend tests for genes like BRCA1 or BRCA2, or those involved in Lynch syndrome. Genetic counselling and testing are routinely recommended for many types of ovarian cancer patients. You should discuss the benefits and risks of genetic testing with your doctor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Staging -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Ovarian Cancer Stages
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Cancer staging explains the size of the primary tumour and how far the cancer has spread. This information is crucial for understanding the disease and developing a treatment plan. The stages of ovarian cancer, along with fallopian tube and primary peritoneal cancer, are set by FIGO (International Federation of Gynecology and Obstetrics) and range from Stage I to Stage IV, where higher numbers indicate more advanced disease that is generally more challenging to treat.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-green-50 to-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage I</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer is found in one or both ovaries or fallopian tubes.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage II</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer is found in one or both ovaries or fallopian tubes and has spread to other areas within the pelvis (e.g., uterus, fallopian tubes) or to other pelvic organs in the peritoneal cavity.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage III</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer is found in one or both ovaries or fallopian tubes, or is primary peritoneal cancer, and has spread outside the pelvis to other parts of the abdomen and/or to nearby lymph nodes.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-red-50 to-white border-l-4" style="border-color: #DC143C;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage IV</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer has spread beyond the abdomen to distant organs and tissues, such as the lungs or lymph nodes in the groin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment for Ovarian Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, a multidisciplinary team of experts provides customised care, collaborating at every step to ensure the highest chance for successful treatment with the least possible impact on your body. Our physicians are highly experienced in treating all types of ovarian cancer, including rare and recurring cases, offering the latest and most advanced therapies.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Treatment options will depend on several factors, including:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>The exact type of ovarian cancer.</li>
+                    <li>The stage of the cancer.</li>
+                    <li>The size of any remaining tumour after surgery (debulking).</li>
+                    <li>Your desire to have children.</li>
+                    <li>Your age and overall health.</li>
+                </ul>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Surgery is the main treatment for ovarian cancer, often followed by chemotherapy. It is often performed to remove or biopsy a mass to determine if it is cancerous. Once cancer is confirmed, the surgeon stages the disease based on how far it has spread.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        <strong>Debulking:</strong> If the cancer has spread, the surgeon will remove as much of the tumour as possible. This procedure, called debulking, can help other treatments work more effectively. During debulking, the ovaries, uterus, cervix, fallopian tubes, omentum (fatty tissue), and any other visible tumours in the pelvic and abdominal areas may be removed. In some cases, parts or the entirety of the spleen, lymph nodes, liver, or intestines may also be removed. If debulking is not feasible due to the patient's health or the tumour's attachment to other organs, any remaining tumour is treated with chemotherapy.
+                    </p>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Chemotherapy drugs are used to kill cancer cells, control their growth, or relieve symptoms. Treatment may involve a single drug or a combination of two or more, depending on the cancer type and its rate of growth. Chemotherapy is typically administered after surgery to destroy any remaining cancer cells in the body.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Intraperitoneal Chemotherapy (IP Therapy):</strong> This method may be used if a small tumour is left after debulking. Highly concentrated chemotherapy drugs are delivered directly into the abdominal cavity through a catheter or implanted port. This allows for direct contact with the cancer and surrounding areas, while the drugs also enter the bloodstream and travel throughout the body.
+                    </p>
+                </div>
+
+                <!-- Radiation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Radiation therapy uses powerful, focused energy beams to destroy cancer cells, employing techniques that target the tumour accurately while minimising damage to healthy tissue. Although rarely used for the primary treatment of ovarian cancer, it may be beneficial for destroying any cancer cells that remain in the pelvic area.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Targeted therapy drugs are specifically designed to stop or slow the growth and spread of cancer at a cellular level. Cancer cells depend on specific molecules (often proteins) for survival, multiplication, and spread. Targeted therapies work by interfering with, or targeting, these molecules or the cancer-causing genes that produce them. SSCHRC is one of a limited number of centres offering targeted therapy for certain types of ovarian cancer.
+                    </p>
+                </div>
+
+                <!-- Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        The immune system is the body's defence against infection and disease. Cancer is a complex disease that can evade the immune system. Immunotherapy is a treatment that improves the immune system's ability to locate and eliminate cancer cells. There are various types of immunotherapy, some of which are currently available only through clinical trials.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

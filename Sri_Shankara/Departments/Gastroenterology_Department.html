@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastrointestinal (GI) Cancers Department</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Mobile fix for icon layout - make icon inline with heading only, remove wasted left space */
+        @media (max-width: 768px) {
+            /* Cards with icon and content - optimize layout for mobile */
+            .bg-white.rounded-xl .flex.items-start.mb-4 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            
+            /* Make icon smaller and position it next to heading */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 {
+                margin-right: 0;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div {
+                width: 2.25rem !important;
+                height: 2.25rem !important;
+                min-width: 2.25rem !important;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div > i {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Remove left margin, make content full width */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 {
+                margin-left: 0 !important;
+                flex: 1;
+                min-width: 0;
+            }
+            
+            /* Make heading compact and allow text wrapping */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 > h4 {
+                font-size: 1.05rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0.75rem !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Reduce gap between icon and content */
+            .bg-white.rounded-xl .flex.items-start.mb-4 {
+                gap: 0.625rem !important;
+            }
+            
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Reduce excessive margins on mobile */
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-12 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Reduce grid gaps on mobile */
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Reduce space-y spacing on mobile */
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+            
+            .space-y-12 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            /* Reduce padding in cards and containers on mobile */
+            .p-8 {
+                padding: 1rem !important;
+            }
+            
+            .rounded-2xl.p-8 {
+                padding: 1.25rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Gastroenterology.jpg" 
+                alt="Gastrointestinal (GI) Cancers Department"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Gastroenterology.jpg" 
+                alt="Gastrointestinal (GI) Cancers Department"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What Does Our GI Cancers Department Do? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Does Our GI Cancers Department Do?
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Gastrointestinal (GI) Cancers Department offers highly specialized, multidisciplinary care for all tumors affecting the digestive tract, from the esophagus and stomach to the colon, rectum, and anus. Our integrated team of surgical, medical, and radiation oncologists is focused on combining curative intent with functional preservation. We utilize advanced technologies like Robotic Surgery, precision SBRT (Stereotactic Body Radiation Therapy), and molecularly tailored Immunotherapy to provide personalized treatment plans that strictly follow NCCN guidelines.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The GI tract is a complex pathway essential for life, extending from the esophagus to the anus. Cancers developing in these organs require a team approach due to the necessity of combining surgery with sophisticated drug and radiation therapies.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Core Scope and Mission:</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-2 h-2 rounded-full mt-2 mr-4" style="background: #2E8B57;"></div>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong>Comprehensive Cancer Management:</strong> We treat the full spectrum of GI malignancies, including Colorectal Cancer, Esophageal Cancer, Gastric (Stomach) Cancer, and Anal Cancer.
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-2 h-2 rounded-full mt-2 mr-4" style="background: #2E8B57;"></div>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong>Integrated Team Approach:</strong> Our specialists—including GI Surgical Oncologists, Medical Oncologists, Radiation Oncologists, and Gastroenterologists—meet regularly in a dedicated Tumor Board to confirm the diagnosis, review advanced imaging, and map out a coordinated treatment plan that is often multimodal (using different therapies in sequence).
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-2 h-2 rounded-full mt-2 mr-4" style="background: #2E8B57;"></div>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong>Functional Outcomes:</strong> We prioritize not only eradicating the tumor but also preserving vital digestive and elimination functions. For example, in rectal cancer, we aim to preserve the anal sphincter to avoid a permanent ostomy whenever possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Services: Advanced Techniques and Precision Medicine
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our services integrate the latest advancements in surgical robotics, targeted radiation, and molecularly guided drug therapies to improve both local control and long-term survival.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Robotic & Minimally Invasive Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-robot text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Robotic & Minimally Invasive Surgery</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Utilizes Robotic-Assisted Surgery (e.g., for Colorectal Resections and Gastrectomy). The robotic platform provides the surgeon with enhanced 3D visualization, filtration of hand tremors, and instruments with 360-degree articulation, leading to superior precision and functional outcomes (like nerve sparing).
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Keyhole Precision:</strong> We use the latest robotic surgical systems to remove tumors through very small incisions. This high level of precision means less pain, less blood loss, a shorter hospital stay, and a much faster return to normal life compared to traditional open surgery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neoadjuvant and Primary Chemoradiation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-radiation text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Neoadjuvant and Primary Chemoradiation</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Utilizing chemotherapy and advanced radiation techniques (IMRT, IGRT) delivered before surgery (neoadjuvant) to shrink large tumors (especially in the esophagus and rectum) or as the sole primary curative treatment (e.g., for Anal Cancer) to preserve the organ.
+                            </p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4 border-l-4" style="border-color: #FF4500;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Shrinking the Target:</strong> We often give you chemotherapy and focused radiation before the operation to make the tumor smaller and easier to remove completely. For Anal Cancer, this combination is often used to cure the disease without needing major surgery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cytoreductive Surgery (CRS) with HIPEC -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-temperature-high text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Cytoreductive Surgery (CRS) with HIPEC</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                A highly specialized procedure for select patients with peritoneal surface malignancies (cancer spread lining the abdomen, often from colorectal or gastric origins). It combines aggressive surgical removal of tumors (CRS) with the direct application of heated chemotherapy (HIPEC) inside the abdominal cavity.
+                            </p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Heated Wash Therapy:</strong> For cancer cells that have spread to the lining of the abdomen, we surgically remove all visible tumors, then bathe the area with heated chemotherapy liquid to kill any remaining microscopic cells. Robotic-assisted HIPEC is an emerging option for select patients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Precision Medicine & Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-dna text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Precision Medicine & Immunotherapy</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Systemic therapies are guided by molecular profiling of the tumor to identify specific mutations (e.g., MSI-H, RAS, BRAF). This allows for the selection of personalized drugs, including Targeted Agents (Biologics) and Immunotherapy (Checkpoint Inhibitors), which can double survival in metastatic disease.
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Personalized Attack Plan:</strong> We test your cancer's DNA to find its unique weaknesses. We then use powerful, modern drugs—including Immunotherapy that harnesses your own immune system—to attack those specific weaknesses, leading to highly effective, individualized treatment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Unique Strengths (USPs) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our GI Cancers Department?
+                </h2>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- A. High-Volume Surgical Expertise -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57;">
+                                <i class="fas fa-user-md text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">A. High-Volume Surgical Expertise</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-robot mr-3" style="color: #2E8B57;"></i>
+                                Robotic Colorectal and Gastric Surgery
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our surgeons are experts in high-volume, minimally invasive robotic resections, including Total Mesorectal Excision (TME) for rectal cancer, which minimizes nerve damage and preserves functional outcomes.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-procedures mr-3" style="color: #2E8B57;"></i>
+                                Complex Multi-Organ Resection
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We specialize in technically demanding operations for Esophageal and Gastric cancers, with the expertise necessary for safe centralization of care, which is proven to improve survival rates in these complex diseases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- B. Advanced Loco-Regional Control -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500;">
+                                <i class="fas fa-crosshairs text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">B. Advanced Loco-Regional Control</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-bullseye mr-3" style="color: #FF4500;"></i>
+                                Precision Radiation
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We utilize advanced SBRT (Stereotactic Body Radiation Therapy) for highly focused, high-dose treatment of localized tumors or liver/lung metastases, often sparing non-target GI organs.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-microscope mr-3" style="color: #FF4500;"></i>
+                                Advanced Endoscopic Therapy
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our therapeutic gastroenterologists perform advanced procedures, such as Endoscopic Ultrasound (EUS) for staging and internal biopsy, and endoscopic submucosal dissection/endoscopic mucosal resection for large polyps and early-stage cancers, often avoiding the need for surgery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- C. Integrated Supportive Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #1e40af;">
+                                <i class="fas fa-hands-helping text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">C. Integrated Supportive Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-heartbeat mr-3" style="color: #1e40af;"></i>
+                            Nutritional and Palliative Support
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Recognizing the high impact of GI cancer and its treatment on a patient's nutrition and digestion, we integrate dedicated Oncology Nutritionists and Early Palliative Care Services from the time of diagnosis to maximize quality of life and treatment tolerance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Gastrointestinal (GI) Cancers Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our specialized GI oncology experts dedicated to integrated and personalized treatment.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+                    
+                     <!-- Doctor 1 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Prof. Dr. Parvesh Kumar Jain.webp" alt="Prof. Dr. Parvesh Kumar Jain" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Prof.+Dr.+Parvesh+Kumar+Jain'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Prof. Dr. Parvesh Kumar Jain</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-General Medicine (June 2003), DM - Gastroenterology (Feb 2008)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant & HOD</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Gastroenterology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>23 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Parvesh Kumar Jain.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Nithin K. R.webp" alt="Dr. Nithin K. R." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Nithin+K.+R.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Nithin K. R.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-General Medicine (May 2018), DM - Gastroenterology (Aug 2022)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Gastroenterology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Saturday: 9:00 AM to 4:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>8 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Nithin K. R.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Doctor Card Styles - Scoped to doctors section only */
+        #doctors .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        #doctors .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        #doctors .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        #doctors .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        #doctors .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            #doctors .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            #doctors .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            #doctors .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            #doctors .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            #doctors .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            #doctors .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        #doctors .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        #doctors .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        #doctors .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        #doctors .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        #doctors .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #doctors .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        #doctors .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        #doctors .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        #doctors .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        #doctors .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        #doctors .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                    resetAutoRotate();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselTrack = document.getElementById('carouselTrack');
+        if (carouselTrack) {
+            carouselTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

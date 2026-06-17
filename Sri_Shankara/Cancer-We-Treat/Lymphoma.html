@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lymphoma: Understanding the Cancer of the Lymphatic System</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+
+    <!-- Section 1: General Information -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Lymphoma: Overview
+                </h2>
+            </div>
+            
+            <div class="mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Lymphoma is a general term for cancers that originate in the lymphatic system, which forms a crucial part of the body's immune system. The lymphatic system is responsible for carrying disease-fighting white blood cells throughout the body and is composed of several key structures:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-gray-700"><strong>Lymph:</strong> A fluid that carries lymphocytes (a type of white blood cell) through a network of tiny lymph vessels. The lymph is essential for fighting against infection and cancer.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-gray-700"><strong>Lymph Nodes:</strong> Small, bean-shaped masses found in areas like the neck, underarm, groin, pelvis, and abdomen. They filter lymph fluid and store white blood cells to aid in disease combat.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-gray-700"><strong>Spleen:</strong> An organ situated on the left side of the abdomen that helps lymphocytes to develop, stores blood cells, and eliminates old blood cells.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-gray-700"><strong>Thymus:</strong> A small organ located in the chest that assists in the making and development of lymphocytes.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-gray-700"><strong>Tonsils:</strong> Nodes at the back of the throat that store white blood cells.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-gray-700"><strong>Bone Marrow:</strong> The material inside bones that produces all types of blood cells, including white blood cells.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Types of Lymphoma -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Types of Lymphoma
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The two primary categories of lymphoma are Hodgkin lymphoma and Non-Hodgkin lymphoma. They develop from different types of lymphocytes:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hodgkin Lymphoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This type typically begins in B lymphocytes and is nearly always characterised by abnormal B lymphocytes known as Reed-Sternberg cells.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Non-Hodgkin Lymphoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This can originate from various types of lymphocytes, including both B and T lymphocytes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Waldenström's Macroglobulinemia is another form of lymphoma that is usually slow-spreading and often easy to manage when detected early.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Indolent vs. Aggressive Lymphoma -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Indolent vs. Aggressive Lymphoma
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Lymphomas are also classified based on their growth rate and behaviour:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-br from-green-50 to-white border-l-4 hover-scale" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Indolent Lymphoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This grows slowly, often presenting with few or no symptoms. Most indolent lymphomas start in B-cell lymphocytes. Patients with these slow-growing tumours typically have a favourable outlook, and in some cases, doctors may recommend monitoring the disease (active surveillance) instead of immediate treatment.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-br from-orange-50 to-white border-l-4 hover-scale" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Aggressive Lymphoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This type grows rapidly, and its symptoms are usually more obvious and severe. Patients with aggressive lymphomas require immediate treatment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mt-8" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Both Hodgkin and Non-Hodgkin lymphomas can fall into either the indolent or aggressive category.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors for Lymphoma
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-8">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Factors that may increase an individual's chance of developing lymphoma include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Biological Sex</h4>
+                    <p class="text-gray-700 leading-relaxed">Lymphoma is slightly more prevalent in males.</p>
+                </div>
+
+                
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">It is most common in young adults (15 to 40 years old) and older adults (over 55 years old).</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Weakened Immune System</h4>
+                    <p class="text-gray-700 leading-relaxed">Due to conditions like HIV/AIDS or immunosuppressive therapy (e.g., post-organ transplant).</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Infection</h4>
+                    <p class="text-gray-700 leading-relaxed">Previous infection with certain viruses and bacteria, such as Epstein-Barr virus (EBV), infectious mononucleosis, Human Immunodeficiency Virus (HIV), Human T-cell lymphocytotropic virus (HTLV), and Helicobacter pylori.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                    <p class="text-gray-700 leading-relaxed">Having a close relative (parent, sibling, or child) with lymphoma slightly increases the risk.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hereditary Cancer Syndromes</h4>
+                    <p class="text-gray-700 leading-relaxed">Certain inherited conditions can elevate the risk.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Exposure to Chemicals</h4>
+                    <p class="text-gray-700 leading-relaxed">Including pesticides, herbicides, and solvents, although the link is still under investigation.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Autoimmune Diseases</h4>
+                    <p class="text-gray-700 leading-relaxed">Such as celiac disease or Sjögren's syndrome.</p>
+                </div>
+            </div>
+
+            <div class="card-shadow rounded-xl p-6 bg-white border-l-4 mt-6" style="border-color: #2E8B57;">
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Radiation Exposure</h4>
+                <p class="text-gray-700 leading-relaxed">Including previous cancer treatment involving radiation therapy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Lymphoma symptoms vary significantly among individuals, and some patients may experience no noticeable symptoms for a prolonged period. However, recognising the potential signs is crucial for early diagnosis and effective treatment.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Signs and symptoms of lymphoma may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Painless swelling of lymph nodes in the neck, underarm, or groin, which is often the first symptom.</li>
+                        <li>Fevers.</li>
+                        <li>Heavy night sweats.</li>
+                        <li>Fatigue that does not improve with rest.</li>
+                        <li>Loss of appetite.</li>
+                        <li>Unexplained weight loss (often 10% or more of the body weight).</li>
+                        <li>Dry, persistent itchy skin, sometimes without a rash.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <ul class="space-y-2 text-gray-700">
+                        <li>A red rash, particularly in cases of skin lymphomas.</li>
+                        <li>Nausea, vomiting, or abdominal pain.</li>
+                        <li>Coughing or shortness of breath, typically caused by swollen lymph nodes in the chest.</li>
+                        <li>Headaches and problems with concentration.</li>
+                        <li>Confusion or weakness in the arms and/or legs.</li>
+                        <li>A feeling of fullness in the abdomen, which may be caused by an enlarged liver or spleen.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to remember that these signs can also signal other health problems. You should consult a healthcare provider if you experience persistent or unexplained swelling of lymph nodes, fever, night sweats, or weight loss that does not improve, or any combination of these symptoms lasting more than two weeks. Early evaluation can help determine the cause and guide appropriate care.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    An accurate and precise diagnosis is essential for doctors to select the most effective course of treatment. SSCHRC maintains a highly experienced team, including specialised doctors known as hematopathologists who focus on diagnosing lymphoma and other blood cancers, to ensure the highest degree of diagnostic accuracy.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If lymphoma is suspected, your doctor will perform a physical examination and take a detailed medical history. One or more of the following diagnostic tests may be used to confirm a cancer diagnosis, determine its spread, or monitor treatment effectiveness:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Lymph Node Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A small tissue sample, or sometimes the entire lymph node, is removed and examined under a microscope.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Tests</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        These provide detailed images of the inside of the body and may include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>X-rays</li>
+                        <li>CT (computed tomography) or CAT (computed axial tomography) scans</li>
+                        <li>PET (positron emission tomography) scans</li>
+                        <li>MRI (magnetic resonance imaging) scans</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Blood Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These are conducted to assess the number and appearance of blood cells and check for normal blood chemistry. Specific blood tests can also help doctors determine the patient's outlook once lymphoma is diagnosed.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Bone Marrow Aspiration and Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A long needle is used to collect a sample of bone marrow from a large bone, usually the pelvic bone, for analysis.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Liver and Kidney Function Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These tests help diagnose the disease and support the prognosis.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Echocardiogram and Pulmonary Function Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These assess the health of the heart and lungs, respectively, before treatment begins, which informs doctors about the intensity of treatment a patient can safely undergo.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Immunophenotyping</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cells from a lymph node, blood, or bone marrow are examined to determine the specific subtype of lymphoma, which is vital for planning the best possible treatment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC is committed to providing world-class care, with physicians, nurses, and advanced practice providers specialising exclusively in lymphoma and myeloma. This focused expertise is used to design a treatment plan specifically tailored to each patient and their disease.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Treatment options include advanced therapies and access to clinical trials for cutting-edge treatments not available elsewhere.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs used to kill cancer cells, control their growth, or alleviate disease-related symptoms. It may involve a single drug or a combination, depending on the type and growth rate of the cancer.
+                    </p>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Uses powerful, focused beams of energy to destroy cancer cells. It is often used for early-stage lymphoma or to help with symptoms like pain, though it is rarely the sole treatment.
+                    </p>
+                </div>
+
+                
+
+                <!-- Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A treatment that improves the immune system's natural ability to find and eliminate cancer cells. Types used for lymphoma include:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Immune Checkpoint Inhibitors</h4>
+                            <p class="text-gray-700">These prevent the immune system from prematurely shutting down, allowing cancer-fighting T cells to mount a longer-lasting response against the disease.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">CAR T Cell Therapy (Chimeric Antigen Receptor T-cell therapy)</h4>
+                            <p class="text-gray-700">The patient's T cells are genetically modified in a laboratory to specifically recognise and attack cancer cells. This is used to treat various types of lymphoma, including certain kinds of B-cell non-Hodgkin lymphoma.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Immune Modulators</h4>
+                            <p class="text-gray-700">These drugs modify the tumour cell environment, making it easier for the immune system to kill the cancer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs designed to interfere with or target specific molecules or the cancer-causing genes they are based on. This stops or slows the growth and spread of cancer at a cellular level.
+                    </p>
+                </div>
+
+                <!-- Stem Cell Transplantation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Stem Cell Transplantation (Bone Marrow Transplant)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A procedure that replaces cancerous bone marrow with new, healthy bone marrow stem cells, which may come from a donor or the patient. It is typically administered after intense chemotherapy to treat some types of lymphoma.
+                    </p>
+                </div>
+
+                <!-- Clinical Trials -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Clinical Trials</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        These are an integral part of SSCHRC's mission, used to discover better ways to prevent, diagnose, and treat cancer. A doctor may offer a clinical trial as a treatment option.
+                    </p>
+                </div>
+
+                <!-- Active Surveillance -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Active Surveillance</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This involves closely monitoring certain types of indolent or low-grade lymphomas without immediate active treatment, which may be suitable for some patients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

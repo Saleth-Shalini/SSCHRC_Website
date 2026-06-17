@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Myeloma: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Multiple Myeloma (Kahler's Disease)
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Multiple myeloma, sometimes referred to as Kahler's disease, is a relatively rare type of blood cancer. It primarily originates in the bone marrow, the spongy tissue inside your bones where blood cells are produced, and can potentially impact the kidney's function.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The condition is a cancer of the plasma cells. Normally, plasma cells are a vital part of your immune system, a type of white blood cell situated in the bone marrow. Their role is to produce antibodies (proteins) that help the body fight off infections from viruses and bacteria.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    In multiple myeloma, a plasma cell becomes cancerous and begins to multiply uncontrollably. These malignant cells can take up space in the bone marrow, thereby hindering the production of healthy blood cells. Furthermore, instead of creating beneficial, infection-fighting antibodies, the cancerous cells produce an abnormal, non-functional protein known as a monoclonal protein (M protein) or paraprotein. When detected in the urine, this is referred to as a Bence Jones protein. These abnormal proteins are ineffective at combating infections.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Multiple Myeloma Risk Factors and Causes
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The precise cause of multiple myeloma remains unknown, and there are currently no proven avoidable risk factors identified. However, certain factors are associated with an increased likelihood of developing the disease.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Risk factors for multiple myeloma include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Being over 65 years old.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gender</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Men have a slightly higher probability of developing myeloma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Race</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Black people are observed to be twice as likely to develop myeloma compared to white people.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Radiation Exposure</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Exposure to radiation increases the risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Occupational Factors</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Working in oil-related industry: While some studies suggest this, it has not been definitively proven.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Obesity</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Obesity is associated with increased risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Though uncommon, having an immediate relative (parent, brother, or sister) with the disease can increase your risk fourfold.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 md:col-span-2" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Other Plasma Cell Disorders</h4>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        A history of certain related conditions places you at a higher risk, such as:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 text-sm">
+                        <li>Monoclonal gammopathy of undetermined significance (MGUS), a pre-cancerous condition.</li>
+                        <li>Solitary plasmacytoma, a single tumour of plasma cells.</li>
+                        <li>Smouldering myeloma, a pre-cancerous condition that can progress to multiple myeloma.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Multiple Myeloma Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Multiple myeloma can be challenging to diagnose early as it often presents with no initial symptoms. When symptoms do appear, they may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-red-50 to-white border-l-4 hover-scale" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Fractures</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Myeloma cells can initiate the breakdown of surrounding bone tissue, weakening the bone and making it more susceptible to breaking (Pathological Fracture).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white border-l-4 hover-scale" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Bone Pain</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Pain is commonly experienced, particularly in the middle or lower back, rib cage, or hips. The severity can vary based on the extent of the disease.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-yellow-50 to-white border-l-4 hover-scale" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Fatigue & Shortness of Breath</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        The disease can lead to a reduction in red blood cells (anaemia), resulting in unusual tiredness or breathlessness upon exertion.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white border-l-4 hover-scale" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Confusion</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        High levels of calcium in the blood or kidney impairment can lead to episodes of confusion. Overly thick blood (hyperviscosity) is another potential cause.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-purple-50 to-white border-l-4 hover-scale" style="border-color: #9333ea;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Numbness or Weakness</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        The condition is sometimes linked to compressed nerves, causing numbness in the limbs. Hyperviscosity may also cause weakness or numbness in the face, arms, or legs.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-green-50 to-white border-l-4 hover-scale" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Leg Swelling</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Kidney damage caused by multiple myeloma can impair the body's ability to excrete excess salts and fluids, resulting in swelling.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-pink-50 to-white border-l-4 hover-scale" style="border-color: #ec4899;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Appetite Changes</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Decreased appetite, weight loss, and nausea can occur due to high blood calcium levels or kidney failure.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-indigo-50 to-white border-l-4 hover-scale" style="border-color: #6366f1;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Frequent Infection</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        As the cancerous plasma cells crowd out normal infection-fighting white blood cells, the risk of common infections—such as pneumonia, bladder or kidney infections, sinusitis, and skin infections—is increased.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-teal-50 to-white border-l-4 hover-scale" style="border-color: #14b8a6;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Excessive Thirst</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        This is typically a result of high blood calcium levels and damage to the kidneys.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Complications -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Potential Complications
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    As a systemic blood cancer, multiple myeloma can affect various other organ systems, leading to a number of potential complications, including:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-red-50 to-white border-l-4 hover-scale" style="border-color: #DC143C;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Anaemia</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A deficiency of red blood cells, which occurs when the abnormal plasma cells displace healthy blood-producing cells in the bone marrow.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white border-l-4 hover-scale" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Leukopenia</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A low count of white blood cells, which can weaken the immune system.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white border-l-4 hover-scale" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Bone Erosion or Lesions</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Myeloma cells can destroy surrounding bone tissue. Significant bone destruction may appear as bone thinning (osteoporosis) or dark spots (lytic lesions) on X-rays.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-yellow-50 to-white border-l-4 hover-scale" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hypercalcaemia</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        High blood calcium levels linked to bone erosion. Calcium stored in the bones is released into the bloodstream, which can negatively affect other body systems.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-purple-50 to-white border-l-4 hover-scale md:col-span-2" style="border-color: #9333ea;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hyperviscosity</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        In some cases, a high volume of M proteins can make the blood thicker, which impedes its smooth flow, especially into smaller blood vessels.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Multiple Myeloma Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If your symptoms suggest multiple myeloma, your physician will conduct a thorough examination and review your medical history. A combination of the following tests may be used to establish a diagnosis, as well as to monitor the effectiveness of your ongoing treatment:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Blood Tests: A blood test known as serum protein electrophoresis (SPEP) is used to detect paraproteins (M proteins) in the blood. Other blood tests may be used to check calcium levels.</li>
+                    <li>Urine Tests: Your doctor may request a 24-hour urine sample for a urine protein electrophoresis (UPEP) test to identify Bence Jones proteins, the abnormal protein fragments found in the urine.</li>
+                    <li>Bone Marrow Aspiration and Biopsy: The procedure involves removing a small sample of the bone marrow using a long needle for laboratory analysis. Examining the sample helps the doctor confirm the presence of cancerous cells, assess their aggressiveness, and aid in determining the prognosis and appropriate treatment plan.</li>
+                    <li>Tumour Biopsy: Multiple myeloma can sometimes lead to tumour masses called plasmacytomas. These tumours can be biopsied or surgically removed and examined for the presence of cancer cells.</li>
+                    <li>Imaging Tests: Various imaging procedures may be employed to detect complications like bone lesions and determine if the cancer has spread. These could include:
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-6 mt-2">
+                            <li>X-rays</li>
+                            <li>PET (Positron Emission Tomography) scans</li>
+                            <li>MRI (Magnetic Resonance Imaging) scans</li>
+                            <li>Bone Density scans</li>
+                            <li>CT or CAT (Computed Axial Tomography) scans</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment for Multiple Myeloma
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Following a multiple myeloma diagnosis, your doctor will discuss the optimal treatment plan, which is always tailored to your specific needs. The approach depends on various factors, including the cancer's type, stage, and your overall health. One or more of the following therapies may be recommended to manage the myeloma or help alleviate symptoms:
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Watchful Waiting -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Watchful Waiting</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This approach, which involves closely monitoring the multiple myeloma without active treatment, may be suitable for patients with asymptomatic myeloma (smouldering myeloma) or monoclonal gammopathy of undetermined significance (MGUS).
+                    </p>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is often the initial step in treating multiple myeloma. It involves using specialised drugs to destroy fast-growing cells, such as myeloma cells. SSCHRC provides the latest and most advanced chemotherapy options.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC is one of the cancer centres capable of offering targeted therapies for certain types of multiple myeloma. This category of drugs is designed to specifically attack vulnerabilities in the cancer cells, helping to halt the cancer's growth and spread.
+                    </p>
+                </div>
+
+                <!-- Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Immunotherapy is one of the innovative targeted treatments available at SSCHRC. This method harnesses your body's own immune system to combat the cancer cells. Methods used in immunotherapy include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Monoclonal antibodies (e.g., Darzalex (daratumumab) and Empliciti (elotuzumab))</li>
+                        <li>Chimeric Antigen Receptor (CAR) T cells, which are genetically engineered T cells to directly fight the myeloma.</li>
+                        <li>Bispecific T-cell Engagers, which help activate your own immune cells.</li>
+                        <li>Cytokine therapies.</li>
+                        <li>Vaccine therapy.</li>
+                    </ul>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        This therapy is valuable for providing prompt pain relief and reducing the risk of bone fractures. It uses a high-energy beam to rapidly destroy cancer cells in a focused area. Radiation therapy is effective for targeting plasma cell tumours in one location (solitary plasmacytoma) and can also help prevent nerve compressions by attacking soft tissue masses of myeloma cells (plasmacytomas).
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        At SSCHRC, a typical radiation plan for a patient with multiple myeloma involves approximately two weeks of treatment, with five sessions per week. We utilise Computed Tomography (CT) scan-based radiation planning, along with immobilisation devices to ensure minimal patient movement during treatment. Our ultimate goal is to administer effective, safe, and modern radiation therapy while strictly limiting toxicity.
+                    </p>
+                </div>
+
+                <!-- Stem Cell Transplants -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Stem Cell Transplants</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A stem cell transplant (also known as a bone marrow transplant) replaces damaged or diseased bone marrow cells with your own healthy blood-forming cells. The process involves first removing some of your healthy stem cells, followed by high-dose chemotherapy to eliminate the diseased bone marrow cells. Finally, the healthy stem cells are re-introduced to replace the diseased tissue. SSCHRC operates one of the nation's most active and advanced programmes for patients requiring a stem cell transplant.
+                    </p>
+                </div>
+
+                <!-- Plasma Exchange -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Plasma Exchange</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        High levels of abnormal proteins can lead to a thickening of the blood (hyperviscosity). In a plasma exchange, the liquid component of the blood (plasma) is removed and replaced with normal plasma from a healthy donor. This procedure offers rapid relief from symptoms related to increased blood thickness until other treatments can destroy the myeloma cells producing the abnormal protein.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

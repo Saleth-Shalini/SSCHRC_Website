@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre of Excellence in Gynaecologic Oncology | Sri Shankara Cancer Hospital</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Scoped to page content only – do not affect header, footer or other global elements */
+        #gynaecologic-page-content {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        #gynaecologic-page-content h1,
+        #gynaecologic-page-content h2,
+        #gynaecologic-page-content h3,
+        #gynaecologic-page-content h4,
+        #gynaecologic-page-content h5,
+        #gynaecologic-page-content h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #2E8B57 0%, #1e40af 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2E8B57 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+    <!-- Page content wrapper: font styles apply only inside this block -->
+    <main id="gynaecologic-page-content">
+
+    <!-- Hero Section -->
+    <!-- <section class="relative bg-gradient-to-br from-green-600 via-green-700 to-blue-800 text-white py-20 md:py-32 overflow-hidden">
+        
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white opacity-10 rounded-full -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-10 rounded-full -ml-48 -mb-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center animate-slide-up">
+                <div class="inline-block mb-6">
+                    <div class="bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full">
+                        <span class="text-sm font-semibold uppercase tracking-wider">Centre of Excellence</span>
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-shadow">
+                    Gynaecologic Oncology
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                    Comprehensive, specialized care for cancers of the female reproductive system
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <a href="#overview" class="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+                        Learn More
+                    </a>
+                    <a href="#services" class="bg-green-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-900 transition-colors border-2 border-white">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/Gynaec Oncology.jpg" 
+                alt="Breast Cancer Centre of Excellence"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/Gynaec Oncology.jpg" 
+                alt="Breast Cancer Centre of Excellence"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <span class="gradient-text">Comprehensive Cancer Care</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        A Centre of Excellence in Gynaecologic Oncology provides comprehensive, specialized care for cancers of the female reproductive system. Our department focuses on precise diagnosis, individualized treatment planning, and long-term survivorship support for women with cervical, ovarian, uterine, vulvar, vaginal and other rare complex abdominopelvic malignancies.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        We also treat pregnancy with cancer. We use advanced surgical techniques, robotic surgeries, minimally invasive surgeries, systemic chemotherapies, and radiation therapies—guided by evidence-based international oncology standards.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 card-shadow hover-scale">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Multidisciplinary Team</h3>
+                    <p class="text-gray-700 mb-4">
+                        The Centre of Excellence in Gynaecologic Oncology brings together a multidisciplinary team of:
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Gynecologic oncologists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Radiation oncologists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Medical oncologists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Pathologists & Radiologists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Genetic counselors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Fertility specialists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Supportive care specialists</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 mt-4">
+                        This collaborative team manages all aspects of women's reproductive cancers under one roof.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <span class="gradient-text">Comprehensive Services</span>
+                </h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Services span the full continuum of care, from prevention to survivorship
+                </p>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 card-shadow hover-scale">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cancer Prevention & Screening</h3>
+                   
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 card-shadow hover-scale">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-stethoscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Early Diagnosis</h3>
+                    <p class="text-gray-600">Ferility sparing surgeries </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 card-shadow hover-scale">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Complex and radical pelvoabdominal surgeries and palliative surgeries</h3>
+                    <p class="text-gray-600">Molecular tumor boards and molecular classification of tumors, multidisciplinary tumor board discussions for complex cases</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 card-shadow hover-scale">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-user-md text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Chemotherapy, targeted therapy, and immunotherapy</h3>
+                    
+                </div>
+            
+                
+                <div class="bg-white rounded-xl p-6 card-shadow hover-scale">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-radiation text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Image Guided Radiation therapy</h3>
+                    <p class="text-gray-600">NIPEC and PIPAC for advanced ovarian /fallopian tubal/peritoneal malignancies </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 card-shadow hover-scale">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-clipboard-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Clinical Trials & Survivorship Programs</h3>
+                    
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-2xl p-8 card-shadow">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Quality of Life Focus</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    We maintain a strong focus on quality of life and functional outcomes. The team treats all cancers and precancerous conditions of the female reproductive tract. Premalignant conditions like high-grade cervical dysplasia and vulval precancerous conditions are offered treatment and followed up to eliminate cancer.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Women with known genetic mutations are offered risk reduction surgeries at our centre. A team of gynecologic oncologist, genetic counsellor, and psychooncologist together plan the treatment flow for the woman, including her family into the discussions. Our care pathways strictly follow evidence-based algorithms from leading national and international oncology organizations regarding cancer risk reduction surgeries.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Cancers Treated Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <span class="gradient-text">Key Cancers Treated</span>
+                </h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Comprehensive care for all gynecologic cancers and precancerous conditions
+                </p>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 card-shadow border-l-4 border-green-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-circle text-green-600 mr-3 text-xs"></i>
+                        Cervical Cancer
+                    </h3>
+                    <p class="text-gray-700">
+                        From precancerous CIN to locally advanced, recurrent and metastatic disease
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 card-shadow border-l-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-circle text-blue-600 mr-3 text-xs"></i>
+                        Ovarian, Fallopian Tube & Peritoneal Cancers
+                    </h3>
+                    <p class="text-gray-700">
+                        Epithelial, germ cell, sex-cord stromal tumours, and rare tumors of mullerian origin
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 card-shadow border-l-4 border-purple-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-circle text-purple-600 mr-3 text-xs"></i>
+                        Uterine Cancers
+                    </h3>
+                    <p class="text-gray-700">
+                        Endometrial carcinoma including carcinosarcoma, undifferentiated carcinoma, dedifferentiated carcinoma and uterine sarcomas like leiomyosarcoma, endometrial stromal sarcoma, adenosarcoma, rare tumors of endometrium
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-white rounded-xl p-6 card-shadow border-l-4 border-red-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-circle text-red-600 mr-3 text-xs"></i>
+                        Vulvar & Vaginal Cancers
+                    </h3>
+                    <p class="text-gray-700">
+                        Including HPV-associated and independent squamous cell carcinoma and rare subtypes
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-white rounded-xl p-6 card-shadow border-l-4 border-yellow-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-circle text-yellow-600 mr-3 text-xs"></i>
+                        Benign & Borderline Tumours
+                    </h3>
+                    <p class="text-gray-700">
+                        Ovarian/fallopian tube tumours and high-risk benign pelvic masses requiring oncologic-level surgery
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-white rounded-xl p-6 card-shadow border-l-4 border-indigo-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-circle text-indigo-600 mr-3 text-xs"></i>
+                        Hereditary Cancer Syndromes
+                    </h3>
+                    <p class="text-gray-700">
+                        BRCA, Lynch syndrome and others affecting the gynecologic tract, with risk-reducing strategies and surveillance
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Treatments Section -->
+    <section id="treatments" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <span class="gradient-text">Core Treatments</span>
+                </h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Advanced treatment modalities tailored to each patient's unique needs
+                </p>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Treatment 1: Surgery -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-user-md text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">1. Gynaecologic Oncology Surgery</h3>
+                        <p class="text-gray-600 mb-4"><strong>What it is:</strong> Specialized cancer surgery focused on organs of the female reproductive system, performed by gynecologic oncologists trained in both complex pelvic surgery and cancer care.</p>
+                    </div>
+                </div>
+                <div class="ml-24">
+                    <p class="text-gray-700 mb-4"><strong>How it works:</strong> Depending on the diagnosis and stage, surgery may involve removal of the uterus (simple/radical hysterectomy), ovaries and fallopian tubes (bilateral salpingo-oophorectomy), part of the cervix (conization/trachelectomy), sentinel lymph node mapping, pelvic and paraaortic lymph node mapping and dissection, debulking of tumour deposits in the abdomen, which may include omentectomy, parametrectomy, liver resection, diaphragm stripping, peritonectomy, splenectomy, bowel resection.</p>
+                    <p class="text-gray-700 mb-4">For vulval cancers, simple or radical vulvectomy is offered. Groin node dissection is done for cancers of vulva/recurrent/metastatic disease as per requirement of the patient. In rare cases or recurrent tumors, anterior/posterior/total pelvic exenteration may be offered. The recurrent cases are offered repeat surgeries in ovarian cancers. In cervical cancers with recurrence, we offer pelvic exenterative surgeries when applicable. Palliative surgeries, as diversion colostomy, hysterectomy are also performed. The procedures are tailored as per diagnosis of the case.</p>
+                    <p class="text-gray-700 mb-4">Minimally invasive techniques, such as laparoscopy and robotic surgery, are used whenever appropriate to reduce blood loss, surgical site infection and recovery time—while following all the principles for oncologic surgeries. Minimally invasive surgery leads to less pain, shorter hospital stays, and faster recovery.</p>
+                    <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-600">
+                        <p class="text-gray-800"><strong>Benefits & advantages of surgery done by a gynecologic oncologist:</strong> Allows for precise staging to guide further therapy. Primary surgery with maximal tumour reduction in ovarian cancer surgery is strongly linked with improved survival in ovarian cancer. The women live longer when operated by gynecologic oncologist than other surgeons.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Treatment 2: Chemotherapy -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-pills text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">2. Chemotherapy (Systemic and Intraperitoneal)</h3>
+                        <p class="text-gray-600 mb-4"><strong>What it is:</strong> Chemotherapy uses anti-cancer medicines to kill rapidly dividing cancer cells or stop their growth. It can be given intravenously, orally, or directly into the abdominal cavity (intraperitoneal chemotherapy) for selected ovarian cancers.</p>
+                    </div>
+                </div>
+                <div class="ml-24">
+                    <p class="text-gray-700 mb-4"><strong>How it works:</strong> Intravenous chemotherapy drugs circulate through the bloodstream to treat cancer cells throughout the body. Chemotherapy is given for enhancing the effect of radiation therapy in cervical and vaginal cancers. In ovarian cancers, chemotherapy is essential. Intraperitoneal chemotherapy delivers high local concentrations of chemotherapeutic drugs to the peritoneal surfaces inside the abdomen.</p>
+                    <p class="text-gray-700 mb-4">These treatments are offered to advanced ovarian/fallopian tubal cancers and peritoneal cancers. NIPEC is routinely offered to patients of advanced ovarian cancer. PIPAC is offered as a palliative procedure to decrease fluid and masses in abdomen in advanced ovarian cancer cases. Regimens and schedules are chosen based on evidence-based guidelines for each cancer type.</p>
+                    <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+                        <p class="text-gray-800 mb-2"><strong>Benefits & advantages:</strong></p>
+                        <ul class="list-disc list-inside text-gray-800 space-y-1">
+                            <li>Treats microscopic disease not visible on scans, which reduces the chance of cancer recurrence risk</li>
+                            <li>It may shrink tumours before surgery (neoadjuvant chemotherapy), potentially making them ready for operations that are less extensive, with lesser complications during surgery and better post-operative outcome</li>
+                            <li>Chemotherapy when added to radiotherapy in post-operative settings help prolong life of women with cancer</li>
+                            <li>Intraperitoneal chemotherapy with NIPEC, normothermic intraperitoneal chemotherapy, in our ongoing study, has so far, shown good disease control and has prolonged life of women with advanced ovarian cancer</li>
+                            <li>PIPAC improves quality of life in ovarian cancer women</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Treatment 3: Targeted Therapy -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-dna text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">3. Targeted Therapy and PARP Inhibitors</h3>
+                        <p class="text-gray-600 mb-4"><strong>What it is:</strong> Medicines that act on specific molecular pathways driving cancer growth. This includes PARP inhibitors for BRCA-mutated or homologous recombination–deficient ovarian cancer, and agents targeting specific receptors.</p>
+                    </div>
+                </div>
+                <div class="ml-24">
+                    <p class="text-gray-700 mb-4"><strong>How it works:</strong> PARP inhibitors block DNA repair in cancer cells already deficient in other repair pathways, leading to cell death. Other therapies focus on inhibiting blood vessel growth (angiogenesis) or signalling molecules on cancer cells, often combined with chemotherapy.</p>
+                    <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-600">
+                        <p class="text-gray-800"><strong>Benefits & advantages:</strong> Can prolong progression-free survival and delay relapse in ovarian cancer when used as maintenance therapy. Often better tolerated than traditional chemotherapy alone, with a more targeted effect.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Treatment 4: Immunotherapy -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-shield-virus text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">4. Immunotherapy (Immune Checkpoint Inhibitors)</h3>
+                        <p class="text-gray-600 mb-4"><strong>What it is:</strong> Immunotherapy, specifically immune checkpoint inhibitors, helps the body's immune system recognize and attack cancer cells by blocking inhibitory pathways.</p>
+                    </div>
+                </div>
+                <div class="ml-24">
+                    <p class="text-gray-700 mb-4"><strong>How it works:</strong> Checkpoint inhibitors release "brakes" on immune cells, making them more active against tumour cells. They are particularly relevant in PD-L1–positive cervical cancer and certain endometrial cancers with mismatch repair deficiency (dMMR) or high microsatellite instability (MSI-H).</p>
+                    <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-600">
+                        <p class="text-gray-800"><strong>Benefits & advantages:</strong> Offers durable responses in a subset of patients with advanced or previously treated recurrent disease. Can be combined with radiation to enhance both local and systemic immune response.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Treatment 5: Molecular Characterization -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-microscope text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">5. Molecular Characterization</h3>
+                        <p class="text-gray-600 mb-4">Molecular characterization of all gynecologic tumors are carried out by IHC/Sanger sequencing/NGS—for confirming diagnosis, prognostication and treatment planning. Cases are discussed in molecular tumor boards.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Treatment 6: Radiation Therapy -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-radiation text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">6. Radiation Therapy (IMRT, Brachytherapy)</h3>
+                        <p class="text-gray-600 mb-4"><strong>What it is:</strong> Radiation therapy uses high-energy beams to destroy cancer cells or stop them from multiplying. External beam radiation is often combined with internal radiation (brachytherapy).</p>
+                    </div>
+                </div>
+                <div class="ml-24">
+                    <p class="text-gray-700 mb-4"><strong>How it works:</strong> External beam radiation therapy (EBRT), including intensity-modulated radiation therapy (IMRT), shapes the dose around the tumour to limit exposure to nearby organs. Brachytherapy places a radiation source inside or close to the tumour to deliver a high dose directly to cancer cells while sparing normal tissue.</p>
+                    <div class="bg-teal-50 rounded-lg p-4 border-l-4 border-teal-600">
+                        <p class="text-gray-800"><strong>Benefits & advantages:</strong> Organ-preserving treatment for many stages of cervical, vaginal, and vulvar cancers. It can be used as primary treatment for unfit women with endometrial cancers or when pelvic tumor bleeding is excessively. Brachytherapy improves local control and survival in cervical cancer.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Treatment 7: Fertility-Sparing -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">7. Fertility-Sparing and Reconstructive Options</h3>
+                        <p class="text-gray-600 mb-4"><strong>What they are:</strong> Specialized surgical and medical strategies designed to treat cancer while preserving fertility and pelvic function whenever safely possible.</p>
+                    </div>
+                </div>
+                <div class="ml-24">
+                    <p class="text-gray-700 mb-4"><strong>How they work:</strong> Includes fertility-sparing surgery in ovarian and cervical cancers (e.g., conization, radical trachelectomy, preserving one ovary or uterus) and hormonal management for selected early-stage endometrial cancers. Onco-fertility counselling and referral for oocyte, embryo, or ovarian tissue preservation are provided prior to chemotherapy or radiation therapy or at the time of surgery. Reconstructive procedures restore pelvic structure and function after extensive surgery or radiation therapy.</p>
+                    <div class="bg-pink-50 rounded-lg p-4 border-l-4 border-pink-600">
+                        <p class="text-gray-800"><strong>Benefits & advantages:</strong> Offers the possibility of future pregnancy for eligible patients without compromising oncologic safety. Improves body image, sexual health, and quality of life after radical surgery.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Treatment 8: Research -->
+            <div class="bg-white rounded-2xl p-8 mb-8 card-shadow">
+                <div class="flex items-start mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-flask text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">8. Research in Gynecologic Cancers</h3>
+                        <p class="text-gray-700">The team doctors actively are engaged in research activities on gynecologic cancers to understand the cause of recurrence in gynec cancers and ways to improve the quality of life of the women with gynec cancers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Strengths Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <span class="gradient-text">Unique Strengths of Our Centre of Excellence</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Strength 1 -->
+                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 card-shadow border-t-4 border-green-600 hover-scale">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Multidisciplinary, Guideline-Driven Care</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>All cases are discussed in tumour boards involving a full spectrum of specialists: gynecologic oncologists, radiation oncologists, medical oncologists, pathologists, radiologists, geneticists, and fertility experts.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Treatment plans strictly follow guidance from NCCN, NCI, ESMO, ASCO, and WHO—adapted to each patient's stage, comorbidities and personal priorities.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Strength 2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 card-shadow border-t-4 border-blue-600 hover-scale">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Advanced Surgical and Radiation Technologies</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>We utilize minimally invasive and robotic gynaecologic oncology surgery for appropriate cases, enhancing recovery while maintaining oncologic quality.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>IMRT-based pelvic radiation and image-guided brachytherapy maximize tumour control and minimize normal tissue damage.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Strength 3 -->
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 card-shadow border-t-4 border-purple-600 hover-scale">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-dna text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Integrated Systemic and Precision Medicine</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>We offer the full spectrum of systemic therapies: chemotherapy, intraperitoneal Chemotherapy—NIPEC, hormonal therapy, targeted therapy (including PARP inhibitors), and immunotherapy.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Molecular profiling and genetic testing are used to tailor treatment based on tumour biology and hereditary cancer risk (BRCA, Lynch, and other syndromes).</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Strength 4 -->
+                <div class="bg-gradient-to-br from-pink-50 to-white rounded-2xl p-8 card-shadow border-t-4 border-pink-600 hover-scale">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Fertility, Sexual Health, and Survivorship Focus</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-600 mr-3 mt-1"></i>
+                            <span>Dedicated onco-fertility counselling and fertility-sparing treatment options are available for eligible young women.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-600 mr-3 mt-1"></i>
+                            <span>The GynecOnco team addresses the menopausal symptoms, sexual health, pelvic floor function, lymphedema, and psychosocial support during and after treatment.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Strength 5 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-8 card-shadow border-t-4 border-yellow-600 hover-scale">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-clipboard-check text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Access to Clinical Trials and Innovative Therapies</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-600 mr-3 mt-1"></i>
+                            <span>We participate in national and international clinical trials evaluating new chemotherapy combinations, targeted agents, immunotherapy, and novel chemo-radiation strategies.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-600 mr-3 mt-1"></i>
+                            <span>Patients have early access to promising therapies under rigorous ethical and safety oversight.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Strength 6 -->
+                <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 card-shadow border-t-4 border-teal-600 hover-scale">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-hands-helping text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Comprehensive Supportive and Palliative Care</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Symptom control (pain, bleeding, ascites), nutritional support, psychological counselling, and social work support are integrated from diagnosis through survivorship or end-of-life care as appropriate.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>We prioritize clear communication, shared decision-making, and support for caregivers throughout the treatment journey.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    </main>
+    <!-- End page content wrapper -->
+
+    <footer id="hospital-footer"></footer>
+    
+    <!-- Footer JavaScript -->
+    <script src="../footer.js"></script>
+    <script src="../footer-main.js"></script>
+    
+    <!-- Chatbox FAB Button -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Chatbox JavaScript - Load after chatbot HTML elements -->
+    <script src="../chatbox.js"></script>
+</body>
+</html>
+

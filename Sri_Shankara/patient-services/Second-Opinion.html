@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    
+    
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+
+
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<!-- start -->
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cancer - Corporate Cancer Hospital</title>
+    <link rel="stylesheet" href="cancer-we-treat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+   
+</head>
+<body>
+    <!-- Banner Section 4 -->
+     <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Patient Services/Second opinion/Second Opiniion.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Patient Services/Second opinion/Second Opiniion.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+                <!-- Desktop Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Desktop Logo"
+                    class="hospital-banner-logo-image desktop"
+                > -->
+                
+                <!-- Mobile Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Mobile Logo"
+                    class="hospital-banner-logo-image mobile"
+                > -->
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                
+
+
+
+
+                <div class="hospital-banner-text">
+                    <!-- <h1 class="hospital-banner-title">Precise & Early<br>Cancer Detection<br>with Advanced<br>Diagnostic Tests</h1>
+                    
+                    <p class="hospital-banner-subtitle">We deliver state-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+
+                <!-- Medical Icon -->
+                <!-- <svg class="hospital-banner-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 30 Q20 20 30 20 L70 20 Q80 20 80 30 L80 70 Q80 80 70 80 L30 80 Q20 80 20 70 Z" />
+                    <path d="M50 30 L50 70 M30 50 L70 50" />
+                    <circle cx="50" cy="25" r="8" />
+                    <circle cx="25" cy="50" r="6" />
+                    <circle cx="75" cy="50" r="6" />
+                </svg> -->
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <!-- <h1 class="hospital-banner-title">Precise & Early Cancer Detection</h1>
+            <p class="hospital-banner-subtitle">State-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+
+<head>
+<!-- ✅ Breadcrumb CSS -->
+<style>
+
+.breadcrumb-wrapper {
+  max-width: 1400px;     /* matches your page width */
+  margin: 0 auto;        /* centers the block */
+  padding-left: 10px;    /* ✅ add space on the left */
+  padding-right: 40px;   /* optional, keeps both sides equal */
+}
+
+.breadcrumb {
+  --sep: "›";
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 1rem 0 1.5rem;
+  color: #444;
+  font-family: Arial, sans-serif;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  color: #333;
+}
+.breadcrumb li+li::before {
+  content: var(--sep);
+  opacity: 0.6;
+  margin: 0 0.5rem 0 0.25rem;
+}
+.breadcrumb a {
+  color: #003017;
+  text-decoration: none;
+}
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.breadcrumb [aria-current="page"] {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Keep breadcrumb colors consistent in dark mode */
+@media (prefers-color-scheme: dark) {
+  .breadcrumb { color: #444; }
+  .breadcrumb li { color: #333; }
+  .breadcrumb a { color: #003017; }
+  .breadcrumb [aria-current="page"] { color: #000; }
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .breadcrumb ol {
+    gap: 0.2rem 0.35rem;
+  }
+  .breadcrumb li:not(:first-child):not(:last-child) {
+    display: none;
+  }
+  .breadcrumb li:first-child::after {
+    content: "…";
+    margin: 0 0.35rem 0 0.25rem;
+    opacity: 0.6;
+  }
+}
+</style>
+<!-- ✅ Breadcrumb End -->
+</head>
+<body>
+<!-- ✅ Breadcrumb Start -->
+<div class="breadcrumb-wrapper">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html" target="_blank">Home</a></li>
+    <li><a href="../cancer-we-treat/All-Types-Cancer.html" target="_blank">Patient Services</a></li>
+    <li aria-current="page">Second Opinion</li>
+  </ol>
+</nav>
+</div>
+<!-- ✅ SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yourhospital.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cancers We Treat",
+      "item": "https://yourhospital.com/patient-services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Breast Cancer",
+      "item": "https://yourhospital.com/patient-services/Second-Opinion.html"
+    }
+  ]
+}
+</script>
+</body>
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Request a Second Opinion | Sri Shankara Cancer Hospital & Research Centre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Get a medical second opinion from our expert oncology team." />
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --text: #1a202c;
+      --muted: #4a5568;
+      --brand: #1c7ed6;
+      --brand-2: #ff8c39;
+      --error: #c53030;
+      --success: #0f9d58;
+      --ring: rgba(28, 126, 214, .35);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    /* Dark mode overrides removed - using same colors as light mode */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* Keep light mode colors in dark mode */
+        --bg: #f7fafc;
+        --card: #ffffff;
+        --text: #1a202c;
+        --muted: #4a5568;
+        --ring: rgba(28, 126, 214, .35);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.5}
+    /* Force light mode colors in dark mode */
+    @media (prefers-color-scheme: dark) {
+      html,body{background:#f7fafc;color:#1a202c}
+    }
+    a{color:var(--brand)}
+    .wrap{max-width:920px;margin:24px auto;padding:16px}
+    /* header{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:16px} */
+    .brand{display:flex;gap:0px;align-items:center}
+    h1{font-size:clamp(22px,3vw,32px);margin:0}
+    .subtitle{color:var(--muted);margin-top:4px;font-size:14px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    @media (prefers-color-scheme: dark) {
+      .card{background:#ffffff}
+    }
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .grid-1{grid-template-columns:1fr}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+    label{display:block;font-weight:600;margin:6px 0 6px}
+    .req{color:var(--brand-2)}
+    input[type="text"],input[type="number"],input[type="tel"],input[type="email"],select,textarea{
+      width:100%;padding:12px 14px;border:1px solid #d1d5db;border-radius:12px;background:#ffffff;color:#1a202c;
+      outline:none;transition:border .2s, box-shadow .2s; font-size:16px;
+    }
+    /* Prevent browser autofill from changing colors */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+      -webkit-text-fill-color: #1a202c !important;
+      box-shadow: 0 0 0 30px #ffffff inset !important;
+      background-color: #ffffff !important;
+      color: #1a202c !important;
+    }
+    /* Ensure input colors stay consistent in dark mode */
+    @media (prefers-color-scheme: dark) {
+      input[type="text"],input[type="number"],input[type="tel"],input[type="email"],select,textarea{
+        color:#1a202c;
+        background:#ffffff;
+      }
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+        -webkit-text-fill-color: #1a202c !important;
+        box-shadow: 0 0 0 30px #ffffff inset !important;
+        background-color: #ffffff !important;
+        color: #1a202c !important;
+      }
+    }
+    input:focus,select:focus,textarea:focus{
+      border-color:var(--brand);
+      box-shadow:0 0 0 4px var(--ring);
+      background:#ffffff;
+      color:#1a202c;
+    }
+    textarea{min-height:112px;resize:vertical}
+    .help{font-size:12px;color:var(--muted);margin-top:6px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
+    /* Use specific class for form buttons to avoid affecting header buttons */
+    .form-btn{
+      appearance:none;border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;
+      box-shadow:var(--shadow);transition:transform .06s ease, box-shadow .2s;
+      background:linear-gradient(135deg, #014196, #079591); color:white;
+    }
+    /* Keep button colors consistent in dark mode */
+    @media (prefers-color-scheme: dark) {
+      .form-btn{background:linear-gradient(135deg, #014196, #079591); color:white}
+    }
+    .form-btn:hover{
+      transform:translateY(-1px);
+      background:linear-gradient(135deg, #012d6b, #057a77);
+      box-shadow:0 12px 35px rgba(1, 65, 150, 0.25);
+    }
+    .form-btn:active{transform:translateY(0)}
+    .form-btn.muted-btn{background:#e5e7eb;color:#111827}
+    /* Keep muted button colors consistent in dark mode */
+    @media (prefers-color-scheme: dark) {
+      .form-btn.muted-btn{background:#e5e7eb;color:#111827}
+    }
+    .error{color:var(--error);font-size:14px;margin-top:6px}
+    .visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+    .banner{border-radius:12px;padding:12px 14px}
+    .banner.error{background:#fee2e2;color:#7f1d1d;border:1px solid #fecaca}
+    .banner.success{background:#dcfce7;color:#065f46;border:1px solid #bbf7d0}
+    /* Keep banner colors consistent in dark mode */
+    @media (prefers-color-scheme: dark) {
+      .banner.error{background:#fee2e2;color:#7f1d1d;border:1px solid #fecaca}
+      .banner.success{background:#dcfce7;color:#065f46;border:1px solid #bbf7d0}
+    }
+    .note{font-size:18px;color:var(--muted)}
+    .files-note{font-size:12px;color:var(--muted);margin-top:4px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header aria-label="Site header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Request a Second Opinion</h1>
+          <!-- <div class="subtitle">Sri Shankara Cancer Hospital & Research Centre</div> -->
+        </div>
+      </div>
+      <div class="note" aria-hidden="true">24×7 Support: +91-7090521000</div>
+    </header>
+
+    <div id="form-status" class="banner visually-hidden" role="status" aria-live="polite"></div>
+
+   <form id="secondOpinionForm" class="card" action="second-opinion.php" method="post" enctype="multipart/form-data" novalidate>
+
+      <!-- Honeypot -->
+      <input type="text" name="website" autocomplete="off" tabindex="-1" class="visually-hidden" aria-hidden="true" />
+
+
+      <div class="grid">
+        <div>
+          <label for="full_name">Full Name <span class="req">*</span></label>
+          <input id="full_name" name="full_name" type="text" required maxlength="120" autocomplete="name" />
+        </div>
+        <div>
+          <label for="age">Age <span class="req">*</span></label>
+          <input id="age" name="age" type="number" min="1" max="120" required />
+        </div>
+        <div>
+          <label for="mobile">Mobile (with country code) <span class="req">*</span></label>
+          <input id="mobile" name="mobile" type="tel" pattern="^\+?[0-9\s\-]{7,15}$" required autocomplete="tel" />
+        </div>
+        <div>
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+        <div>
+          <label for="patient_name">Patient Name (if different)</label>
+          <input id="patient_name" name="patient_name" type="text" maxlength="120" />
+        </div>
+        <div>
+  <label for="country">Country <span class="req">*</span></label>
+  <select id="country" name="country" required>
+    <option value="">Select your country</option>
+    <option value="India" selected>India</option>
+    <option value="United States">United States</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="Canada">Canada</option>
+    <option value="Australia">Australia</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <!-- Hidden text input for 'Other' country -->
+  <input id="other_country" name="other_country" type="text" 
+         placeholder="Please specify your country"
+         style="display:none; margin-top:8px;" />
+</div>
+
+
+
+
+
+      </div>
+
+      <div class="grid grid-1" style="margin-top:8px;">
+        <div>
+          <label for="diagnosis">Diagnosis / Suspected Condition</label>
+          <input id="diagnosis" name="diagnosis" type="text" maxlength="200" />
+        </div>
+        <div>
+          <label for="symptoms">Symptoms & History</label>
+          <textarea id="symptoms" name="symptoms"></textarea>
+        </div>
+        <div>
+          <label for="medical_reports">Upload Medical Reports</label>
+          <input id="medical_reports" name="medical_reports[]" type="file" accept=".pdf,.jpg,.jpeg,.png" multiple />
+          <div class="files-note">Allowed: PDF, JPG, PNG. Max size: 5 MB per file.</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;">
+          <input id="consent" name="consent" type="checkbox" required />
+          <label for="consent">I authorize the hospital to review my medical data securely <span class="req">*</span></label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="form-btn">Submit Request</button>
+        <!-- <button type="reset" class="form-btn muted-btn">Clear</button> -->
+        <span class="note">By submitting, you agree to be contacted regarding this request.</span>
+      </div>
+
+      <div id="clientErrors" class="error" role="alert" aria-live="assertive"></div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('secondOpinionForm');
+    const clientErrors = document.getElementById('clientErrors');
+    const formStatus = document.getElementById('form-status');
+
+    function validateFiles(input, allowed, maxSizeMB){
+      const files = input.files;
+      if (!files || !files.length) return "";
+      const max = maxSizeMB * 1024 * 1024;
+      for (const f of files){
+        const ext = f.name.toLowerCase().split('.').pop();
+        if (f.size > max) return `File "${f.name}" exceeds ${maxSizeMB} MB.`;
+        if (!allowed.includes(ext)) return `File "${f.name}" extension/type not allowed.`;
+      }
+      return "";
+    }
+
+    // Function to clear/reset the second opinion form (similar to clearAppointmentForm in reference)
+    function clearSecondOpinionForm() {
+      // Clear all form fields explicitly
+      document.getElementById('full_name').value = '';
+      document.getElementById('age').value = '';
+      document.getElementById('mobile').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('patient_name').value = '';
+      document.getElementById('country').value = 'India';
+      document.getElementById('other_country').value = '';
+      document.getElementById('other_country').style.display = 'none';
+      document.getElementById('other_country').required = false;
+      document.getElementById('diagnosis').value = '';
+      document.getElementById('symptoms').value = '';
+      
+      // Clear file inputs (reset doesn't clear file inputs)
+      const medicalReportsInput = document.getElementById('medical_reports');
+      if (medicalReportsInput) {
+        medicalReportsInput.value = '';
+      }
+      
+      // Clear checkbox
+      const consentCheckbox = document.getElementById('consent');
+      if (consentCheckbox) {
+        consentCheckbox.checked = false;
+      }
+      
+      // Clear any error messages
+      if (clientErrors) {
+        clientErrors.textContent = '';
+      }
+    }
+
+    // Show/hide "Other Country" input
+const countrySelect = document.getElementById('country');
+const otherCountryInput = document.getElementById('other_country');
+
+countrySelect.addEventListener('change', function() {
+  if (this.value === 'Other') {
+    otherCountryInput.style.display = 'block';
+    otherCountryInput.required = true;
+  } else {
+    otherCountryInput.style.display = 'none';
+    otherCountryInput.required = false;
+    otherCountryInput.value = ""; // reset
+  }
+});
+
+
+
+
+
+    form.addEventListener('submit', function(e){
+      clientErrors.textContent = "";
+      let errors = [];
+
+      if (!form.checkValidity()){
+        errors.push("Please complete all required fields correctly.");
+      }
+
+      const mobile = document.getElementById('mobile').value.trim();
+      if (!/^\+?[0-9\s\-]{7,15}$/.test(mobile)) errors.push("Enter a valid mobile number with country code.");
+
+      const ageVal = parseInt(document.getElementById('age').value, 10);
+      if (isNaN(ageVal) || ageVal < 1 || ageVal > 120) errors.push("Please enter a valid age.");
+
+      const reportsErr = validateFiles(document.getElementById('medical_reports'), ['pdf','jpg','jpeg','png'], 5);
+      if (reportsErr) errors.push(reportsErr);
+
+      if (!document.getElementById('consent').checked) errors.push("You must provide consent to proceed.");
+ 
+      // ✅ Add this check here:
+  if (countrySelect.value === 'Other' && !otherCountryInput.value.trim()) {
+    errors.push("Please specify your country.");
+  }
+
+
+      if (errors.length){
+        e.preventDefault();
+        clientErrors.innerHTML = errors.map(x => `• ${x}`).join("<br>");
+        formStatus.className = "banner error";
+        formStatus.textContent = "Please fix the issues and try again.";
+        formStatus.classList.remove('visually-hidden');
+        formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        return false;
+      }
+
+      // Prevent default form submission and use AJAX
+      e.preventDefault();
+      
+      // Show submitting status
+      formStatus.className = "banner success";
+      formStatus.textContent = "Submitting your request…";
+      formStatus.classList.remove('visually-hidden');
+      
+      // Disable submit button
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting...';
+      
+      // Create FormData object
+      const formData = new FormData(form);
+      
+      // Submit via AJAX
+      fetch('second-opinion.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        // Check if response is JSON
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          return response.json();
+        } else {
+          // Handle non-JSON response (legacy error format)
+          return response.text().then(text => ({
+            status: response.ok ? 'success' : 'error',
+            message: text || 'An error occurred'
+          }));
+        }
+      })
+      .then(data => {
+        if (data.status === 'success') {
+          // Show success popup (blocking - waits for user to click OK)
+           if (typeof gtag === 'function') {
+  gtag('event', 'second_opinion_submit', {
+    transport_type: 'beacon'
+  });
+}
+          
+          
+          
+          alert('✓ ' + data.message);
+          
+          // After user clicks OK on alert, clear the form (similar to clearAppointmentForm in reference)
+          clearSecondOpinionForm();
+          
+          // Hide status banner
+          formStatus.classList.add('visually-hidden');
+          
+          // Scroll to top of form
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          // Show error popup
+          alert('✗ Error: ' + data.message);
+          
+          // Show error in form
+          formStatus.className = "banner error";
+          formStatus.textContent = data.message;
+          formStatus.classList.remove('visually-hidden');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('✗ An error occurred while submitting your request. Please try again later.');
+        formStatus.className = "banner error";
+        formStatus.textContent = "An error occurred. Please try again.";
+        formStatus.classList.remove('visually-hidden');
+      })
+      .finally(() => {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      });
+    });
+  </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

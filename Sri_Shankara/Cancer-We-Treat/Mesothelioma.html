@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesothelioma: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Mesothelioma: A Comprehensive Guide
+                </h2>
+            </div>
+            
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mb-12" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    This information is intended to provide a general overview of mesothelioma. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns or before making any decisions related to your health.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Mesothelioma is a rare form of cancer that originates in the mesothelium, a protective layer of tissue that lines many of the body's internal organs. Most commonly, it starts in the pleura, the tissue lining the outside of the lungs and the inside of the chest wall, known as malignant pleural mesothelioma. A less common type, malignant peritoneal mesothelioma, starts in the abdomen.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Unlike many tumours with clear, defined edges, mesothelioma tends to surround organs and fill the chest and abdominal cavity, which can compress the lungs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Causes and Risk Factors
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            The primary cause of mesothelioma is past exposure to asbestos, a fibrous mineral historically used across various sectors, including construction, automotive, military, marine, and manufacturing. When tiny asbestos particles are disturbed, they can be inhaled or swallowed. These fibres can remain in the body for decades, sometimes causing genetic changes to mesothelial cells that lead to cancer. The disease typically develops 30 to 50 years after the initial exposure, and patients are often unaware of this history.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed mb-3">
+                            Other risk factors include:
+                        </p>
+                        
+                        <ul class="space-y-2 text-gray-700 ml-6">
+                            <li><strong>Gender:</strong> Mesothelioma is more common in men, likely due to a higher prevalence of men working in asbestos-using industries.</li>
+                            <li><strong>Genetic Changes:</strong> A small number of cases are linked to a mutation in the BAP1 gene, which is believed to increase the risk in individuals exposed to asbestos.</li>
+                            <li><strong>Radiation Exposure:</strong> Individuals who have received radiation treatment for other cancers may have a slightly increased risk later in life.</li>
+                        </ul>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            It is important to note that asbestos exposure can also cause other serious health issues, including cancers of the lung, larynx, and kidney, as well as asbestosis (a non-cancerous, chronic lung disease).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Mesothelioma Cell Types
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Mesothelioma is also categorised by the type of cell involved, which influences the patient's outlook:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Epithelioid</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Accounts for 60% to 70% of cases and generally has the best outcomes.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Sarcomatoid</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Accounts for about 10% to 15% of cases and is a more aggressive type.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Biphasic or Mixed</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Contains both epithelioid and sarcomatoid cells and is an extremely aggressive form of the disease, making up 10% to 15% of cases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Because symptoms can resemble those of other illnesses, mesothelioma is often not diagnosed until it has advanced. The signs typically vary among individuals, with many symptoms caused by fluid accumulating in the chest (pleural effusion) or the tumour pressing on the lungs.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Common Symptoms may include:
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Shortness of breath</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Constant, uninterrupted chest or abdominal pain</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Fatigue</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Collapsed lung</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Less Common Symptoms may include:
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Persistent coughing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Unexplained weight loss</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Blood in sputum (phlegm) coughed up from the lungs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Difficulty swallowing</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Prolonged hoarseness</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Nausea</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Low oxygen levels</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is essential to discuss any new or concerning symptoms with your doctor, as they may indicate other underlying health problems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The overlapping symptoms with other diseases, such as lung cancer, heart failure, and pneumonia, can make mesothelioma challenging to diagnose. Early and precise diagnosis is crucial for effective treatment.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The diagnostic process involves a thorough examination and a discussion of your health history, lifestyle, and any past exposure to asbestos. One or more of the following tests may be used:
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        This is typically the only way to definitively diagnose mesothelioma and involves removing suspected tissue for microscopic study.
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Needle biopsy:</strong> Doctors insert a needle to sample part of the tumour or drain fluid from the area, which is then examined for cancer cells.</li>
+                        <li><strong>Thoracoscopic surgical biopsy:</strong> A small incision is made in the chest to insert a tube with a camera, allowing for the removal of a tissue sample.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Exams</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Used to help determine the extent of the disease and plan treatment.
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>CT or CAT (computed axial tomography) scans</li>
+                        <li>MRI (magnetic resonance imaging) scans</li>
+                        <li>PET (positron emission tomography) scans</li>
+                        <li>Chest X-ray</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Lung Function Test</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These are not used for diagnosis but help determine the condition of the patient's lungs, which is important for assessing suitability for surgery.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Pathologists at SSCHRC have special expertise in diagnosing mesothelioma and its subtypes, ensuring an accurate diagnosis from the start to inform the best possible treatment plan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Mesothelioma treatment is typically a multi-modal approach, combining different therapies to reduce the amount of cancer, slow its progression, and relieve symptoms. Treatment plans are highly personalised based on: the type and stage of mesothelioma, the cancer's location, and the patient's age and general health.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Surgical Procedures
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Surgery alone rarely cures the disease but is intended to reduce the tumour burden to minimal levels. Two main types of surgery are performed:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Extrapleural Pneumonectomy (EPP)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                An extensive procedure involving the removal of the entire pleura (lining of the lung and chest wall), the affected lung, the diaphragm, and the pericardium (the sac surrounding the heart). This provides a more complete tumour removal but has a higher risk of complications and is generally reserved for physically fit patients.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Pleurectomy/Decortication (P/D)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This involves removing the affected areas of the pleura, lymph glands, diaphragm, and pericardium, but the lung remains in place. P/D is a safer option for older patients and often offers a higher quality of life, though the tumour may be more likely to return compared to EPP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Systemic and Local Therapies
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Chemotherapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Works by directly killing cancer cells. It is proven to prolong life and is often given before surgery to shrink the tumour, or as the main treatment for patients who are not suitable candidates for surgery.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Radiation Therapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Uses high-energy beams to destroy cancer cells. It is commonly used after surgery to eliminate any microscopic residual disease, usually delivered as Intensity-Modulated Radiation Therapy (IMRT). It can also be used for palliative care, such as 3D conformal radiation therapy, to relieve pain or discomfort.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Immunotherapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Improves the body's immune system to fight cancer. Immune checkpoint therapy is an option for some patients, helping cancer-fighting T cells mount a longer-lasting response against the disease.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Targeted Therapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Designed to interfere with specific molecules or genes that cancer cells rely on to survive, multiply, and spread, thereby stopping or slowing the disease's progression.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Clinical Trials
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        As a leading cancer centre, SSCHRC conducts multiple mesothelioma clinical trials, offering patients access to pioneering and novel treatments. Doctors only recommend a clinical trial when they believe it offers the best treatment option for the patient's specific condition.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

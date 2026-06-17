@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Cancer: Comprehensive Health Information</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Liver Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Liver cancer is an aggressive disease that is unfortunately increasing in prevalence. It develops when tumour cells form in the liver and divide uncontrollably, which can ultimately prevent the liver and other vital organs from functioning correctly.
+                </p>
+            </div>
+
+            <!-- Liver Structure and Function -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Liver Structure and Function
+                    </h3>
+                    
+                    <div class="space-y-4 text-gray-700 leading-relaxed">
+                        <p>
+                            The liver is the body's largest solid organ, situated beneath the right ribcage. It is pyramid-shaped and has two main sections, known as lobes. The liver receives blood from two sources: the hepatic artery, which supplies oxygen-rich blood, and the portal vein, which delivers nutrient-rich blood from the intestines.
+                        </p>
+                        
+                        <p class="font-semibold mt-4">The liver performs many critical processes, including:</p>
+                        <ul class="space-y-2 ml-6">
+                            <li>• Breaking down and storing nutrients from the intestine.</li>
+                            <li>• Creating clotting factors essential for stopping bleeding.</li>
+                            <li>• Producing bile, which aids the intestine in absorbing nutrients.</li>
+                            <li>• Helping the body eliminate waste products.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Types of Liver Cancer -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Types of Liver Cancer
+                </h2>
+            </div>
+
+            <!-- Primary Liver Cancer -->
+            <div class="mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">1. Primary Liver Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Cancers that originate in the liver are known as primary liver cancers and are named according to the type of cell where the cancer first develops. These include:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Hepatocellular Carcinoma (HCC)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is the most common form of primary liver cancer, beginning in the liver's hepatocyte cells. It may start as a single tumour or, more commonly, in multiple spots (multifocal), particularly in patients with liver inflammation such as cirrhosis.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Fibrolamellar HCC</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A rare subtype of HCC that typically occurs in younger patients without underlying liver inflammation or known risk factors. It often carries a higher chance of successful treatment than general HCC.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Angiosarcomas and Hemangiosarcomas</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These are rare, fast-growing cancers that begin in the liver's blood vessels. They are usually diagnosed at an advanced stage.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Hepatoblastoma</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A very rare type of liver cancer predominantly found in children. Early detection yields a survival rate of over 90%.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">
+                            <strong>Important Note:</strong> Some liver tumours are benign (non-cancerous). These may require surgery if they are difficult to diagnose or grow large enough to cause problems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary Liver Cancer -->
+            <div class="mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">2. Secondary (Metastatic) Liver Cancer</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Metastatic liver tumours are those that begin in another part of the body and subsequently spread to the liver. The liver is a common site for cancer to spread due to its large size and high blood flow, which makes it a target for tumour cells moving through the bloodstream. While any cancer can spread to the liver, it is most common with colorectal, breast, and lung cancers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Liver Cancer Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases the chance of developing liver cancer. Risk factors for primary liver cancers are detailed below:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Cirrhosis of the liver</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Scarring or damage to the liver (cirrhosis) is the primary cause of HCC. Conditions or activities that lead to cirrhosis are also risks for liver cancer, including:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-4">
+                        <li>• Chronic Hepatitis B or C virus infection: These are the most common risk factors for liver cancer globally.</li>
+                        <li>• Non-alcoholic Steatohepatitis (NASH): This form of fatty liver disease, linked to obesity, diabetes, and high cholesterol, causes fat to infiltrate the liver and can progress to cirrhosis.</li>
+                        <li>• Alcohol use: Drinking excessive amounts of alcohol can lead to cirrhosis.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Most individuals diagnosed with liver cancer are over 55, although rare types such as fibrolamellar HCC and hepatoblastomas are almost exclusively found in younger patients.
+                    </p>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gender</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Primary liver cancers are more common in men than women.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Medical Conditions</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Several other conditions may increase your risk, including:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-4">
+                        <li>• Obesity, Diabetes, High cholesterol</li>
+                        <li>• Hereditary haemochromatosis</li>
+                        <li>• Alpha-1 antitrypsin deficiency</li>
+                        <li>• Acute intermittent porphyria</li>
+                        <li>• Wilson disease</li>
+                        <li>• Primary sclerosing cholangitis (PSC)</li>
+                        <li>• Liver fluke infection</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Exposure to Chemicals and Toxins</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Exposure to certain substances may increase risk, especially when other risk factors are present. These include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-4">
+                        <li>• Aflatoxins (poisons produced by fungi on some crops)</li>
+                        <li>• Betel nut chewing</li>
+                        <li>• Arsenic</li>
+                        <li>• Thorotrast</li>
+                        <li>• Vinyl chloride</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Tobacco</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Using tobacco products can increase the risk of liver cancer.
+                    </p>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Anabolic Steroids</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The use of anabolic steroids has been associated with benign liver tumours called adenomas, some of which may progress to HCC.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        In rare instances, liver cancer may be passed down through generations. Genetic counselling may be appropriate in these cases.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    In its early stages, primary liver cancer often does not produce noticeable symptoms. When symptoms do occur, they can vary from person to person as the tumour grows. These may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Common Symptoms</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• Unintended weight loss.</li>
+                        <li>• Pain in the upper right side of the abdomen or radiating around the right shoulder blade.</li>
+                        <li>• Loss of appetite or feeling full after only a small meal.</li>
+                        <li>• Swelling or bloating in the abdomen, or a hard lump below the ribs on the right side.</li>
+                        <li>• Tiredness, weakness, nausea, or vomiting.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Additional Symptoms</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• <strong>Jaundice:</strong> A yellowing of the skin and the whites of the eyes, caused by an excess of bilirubin (a yellow pigment) in the blood, which can signal liver or bile duct malfunction.</li>
+                        <li>• Itching of the skin (caused by excess bilirubin reaching the skin).</li>
+                        <li>• Pale stools and dark urine.</li>
+                        <li>• Swollen veins on the abdomen.</li>
+                        <li>• A worsening condition in people who already have hepatitis or cirrhosis.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Hormonal Effects</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Certain types of liver cancer can produce hormones that may lead to other effects, such as:
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• High blood-calcium levels, which may cause constipation, nausea, or confusion.</li>
+                        <li>• Low blood-sugar levels, potentially causing tiredness or feeling faint.</li>
+                        <li>• Hormonal changes in men, like enlarged breasts or shrinking of testicles.</li>
+                        <li>• A high red-blood cell count, which may cause redness in the face.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    While these symptoms do not always indicate liver cancer, it is vital to discuss any new or concerning symptoms with your doctor as they may signal other health issues.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Due to the lack of early symptoms and the small size of early-stage tumours, liver cancer can be challenging to detect. SSCHRC's highly skilled specialists employ advanced techniques to find and diagnose even the smallest lesions.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">1. Physical Examination</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        If liver cancer is suspected, the initial step is a physical examination, where the doctor will:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>• Feel the abdomen to check the liver, spleen, and nearby organs.</li>
+                        <li>• Check for an abnormal accumulation of fluid in the abdomen (ascites).</li>
+                        <li>• Examine the skin and eyes for signs of jaundice.</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        If cancer is suspected, one or more of the following tests may be performed to diagnose the disease and determine if it has spread:
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">2. Blood Tests</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A common blood test checks for alpha-fetoprotein (AFP), which can be a marker for liver cancer. Other blood tests are also conducted to assess how well the liver is functioning.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">3. Imaging Tests</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        These help doctors visualise the liver and surrounding structures:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>• <strong>CAT (Computed Axial Tomography) Scans:</strong> Often the first test used to assess the extent of the cancer. SSCHRC employs triple-phase CT scans with special protocols for studying liver or biliary tract tumours.</li>
+                        <li>• <strong>MRI (Magnetic Resonance Imaging):</strong> Highly helpful for studying liver cancers, sometimes including the use of contrast material and x-rays of the bile ducts.</li>
+                        <li>• <strong>Ultrasound</strong></li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">4. Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        A tissue sample from the tumour is removed and examined under a microscope. Healthy tissue may also be tested to check liver function. Biopsy techniques include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>• <strong>Fine Needle Aspiration (FNA):</strong> A thin needle is inserted into the liver to remove a small amount of tissue.</li>
+                        <li>• <strong>Core Biopsy:</strong> Similar to FNA but uses a thicker needle to remove small, cylinder-shaped samples (cores).</li>
+                        <li>• <strong>Laparoscopy:</strong> A thin, illuminated tube is inserted through a small cut in the abdomen to view the tumour and retrieve a sample.</li>
+                        <li>• <strong>Surgical Biopsy:</strong> Tissue is removed during an operation.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">5. Genomic/Molecular Profiling</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This testing is used to identify specific biomarkers, which help in selecting the most effective liver cancer treatments and clinical trials.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        If a diagnosis is confirmed, your doctor will determine the stage of the disease, classifying the amount of cancer in the body and its spread. This staging helps the care team decide on the most appropriate treatment plan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    SSCHRC offers innovative treatments provided by leading liver cancer experts. Your personalised treatment plan is based on several factors, including:
+                </p>
+                <ul class="space-y-2 text-lg text-gray-700 ml-6">
+                    <li>• The size of the tumour.</li>
+                    <li>• Whether cirrhosis is present in the liver.</li>
+                    <li>• Your general health.</li>
+                    <li>• The stage of the cancer.</li>
+                </ul>
+                <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                    Treatments aiming for a cure are typically reserved for early-stage cancers. For tumours found at a later stage, non-surgical treatment options may be used. Your care team will determine the most suitable therapy.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    One or more of the following therapies may be used to treat liver cancer or help alleviate symptoms:
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Surgery offers the best chance for successful treatment in patients with early-stage disease, particularly if the entire cancer can be removed. However, complete removal is sometimes not possible if the cancer is large, has spread to other parts of the liver or body, or if the liver is damaged by other conditions. Surgeons strive to remove as much of the tumour as possible while ensuring enough healthy liver remains to function.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-3 font-semibold">
+                        The main types of surgery for liver cancer are:
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Hepatectomy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The portion of the liver containing the tumour is removed. A partial hepatectomy removes only the tumour and a rim of surrounding tissue, while a major hepatectomy removes a larger section.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Liver Transplant</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The diseased liver is removed and replaced with a healthy donor liver. This is an option for patients with advanced cirrhosis or when a tumour cannot be surgically removed. Liver transplants carry a risk of serious infection and other health issues.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        SSCHRC has pioneered several liver cancer surgery techniques, including two-stage operations for liver disease and minimally invasive procedures, leading to reduced blood transfusions, fewer complications, shorter hospital stays, quicker recovery, and less pain post-surgery.
+                    </p>
+
+                    <div class="bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                        <p class="text-gray-700 leading-relaxed">
+                            <strong>Life after liver cancer surgery:</strong> Possible post-operative symptoms may include fatigue (as the liver regenerates) and an accumulation of fluid in the abdomen (ascites). These symptoms often subside over time. Your physician will carefully monitor you for any signs of cancer recurrence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interventional Oncology -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Interventional Oncology</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        These are minimally invasive, image-guided procedures typically performed on an outpatient basis, resulting in much shorter hospital stays than major surgery. An interventional radiologist targets tumours via small injections or needle placements.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Tumour Ablation</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Uses heat (radiofrequency or microwave ablation) or extreme cold (cryosurgery) to freeze or burn the liver cancer away. This is used when surgical removal of a tumour is not an option.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Embolization</h4>
+                            <p class="text-gray-700 leading-relaxed mb-2">
+                                Material is injected into the artery supplying blood to the tumour. This can deliver chemotherapy or radiation directly to the tumour, or in some cases, block the blood flow to the tumour, causing the cancer cells to die from a lack of blood. Embolization treatments include:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>• <strong>Chemoembolization:</strong> Tiny pellets soaked in chemotherapy are injected into the tumour-feeding arteries.</li>
+                                <li>• <strong>Radioembolization:</strong> Tiny particles carrying radiation are delivered into the tumour-feeding arteries to kill cancer cells, helping to preserve as much normal liver as possible.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        SSCHRC's Interventional Oncology Clinic performs these treatments for liver cancer and liver metastases.
+                    </p>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        New techniques allow SSCHRC doctors to target liver tumours more precisely, delivering the maximum radiation dose with minimal damage to healthy cells. Options include:
+                    </p>
+                    
+                    <ul class="space-y-3 text-gray-700">
+                        <li>• <strong>Stereotactic Body Radiation Therapy (SBRT):</strong> Highly focused beams deliver very high doses of radiation to the tumour, with technology used to protect nearby organs.</li>
+                        <li>• <strong>Magnetic Resonance Imaging Guided Radiation Therapy (MR-guided RT):</strong> Uses imaging to view the tumour while the radiation beam is on, providing a higher degree of certainty during treatment.</li>
+                       
+                    </ul>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">4. Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Chemotherapy drugs are used to kill cancer cells, control their growth, or relieve disease-related symptoms. The treatment may involve a single drug or a combination, depending on the type and growth rate of the cancer. SSCHRC experts are researching new methods to deliver chemotherapy drugs directly to the liver.
+                    </p>
+                </div>
+
+                <!-- Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">5. Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This therapy works by engaging the patient's own immune system to fight the cancer. It can be used alone or in combination with other treatments.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapies -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">6. Targeted Therapies</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Unlike treatments that kill cancer cells directly, targeted therapies work on a cellular level to stop or slow the growth and spread of cancer. They are designed to interfere with specific molecules (often proteins) or the cancer-causing genes that these cells need to survive and multiply.
+                    </p>
+                </div>
+
+                <!-- Histotripsy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">7. Histotripsy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This advanced technique uses a robotic machine to target cancerous tumours with precise sound waves, breaking them apart without the need for surgery, needles, or radiation. Patients undergo the procedure under general anaesthesia to ensure minimal movement. At SSCHRC, histotripsy is currently used in cases where more established treatments are not viable options.
+                    </p>
+                </div>
+
+                <!-- Clinical Trials -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">8. Clinical Trials</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC offers clinical trials for new treatments across every type and stage of liver cancer, providing patients with access to the latest therapeutic advancements.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Note on Unproven Therapies -->
+            <div class="mt-12 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">A Note on Unproven Therapies (e.g., Castor Oil)</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    While it may be tempting to explore unproven remedies, such as those popularised on social media, SSCHRC experts emphasise that products like castor oil are not a validated cancer treatment or liver detox strategy. If you are considering using any unconventional therapy while undergoing cancer treatment, it is best to discuss it with your care team so they can assess safety, potential drug interactions, and toxicity. Focus on a healthy lifestyle, including proper diet, regular exercise, and adequate sleep, to support your body's natural mechanisms for healing and recovery.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

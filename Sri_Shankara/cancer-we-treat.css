@@ -1,0 +1,2073 @@
+/* Color Palette 4 */
+:root {
+    --primary-color4: #003017;
+    --button1:#006644;
+    --accordion-summary-bg4: #C8E6C9;
+    --secondary-color4: #00583a;
+    --accent-color4: #006644; /* Used for "Book an Appointment" */
+    --background-light4: #ffffff;
+    --background-medium4: #f7fafa;
+    --background-dark4: #ffffff;
+    --text-dark4: #333;
+    --text-medium4: #444;
+    --text-light4: #ffffff;
+    --border-color4: #ffffff;
+    --shadow-color4: rgba(0, 0, 0, 0.08);
+    --hover-shadow-color4: rgba(0, 0, 0, 0.1);
+    --button-hover-bg4: #004d40; /* Darker primary for hover */
+    --link-color4: #1abc9c; /* For doctor profile links */
+    --button-color4: #006644;
+    --button-red-hover4: #00583a; /* Darker red for hover */
+    
+    --accordion-summary-open-bg4: #C8E6C9;
+    --accordion-details-bg4: #ffffff;
+           /* background: linear-gradient(135deg, var(--button1), var(--button2)); */
+       
+       --button2:#006644;
+       --main-font: Arial, sans-serif;
+}
+
+/* General Styles 4 */
+body {
+    font-family: var(--main-font) !important; /* Ensures all elements use the main font */
+    background: var(--background-medium4);
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark4);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color4);
+    font-weight: 700;
+}
+
+/* Banner Section 4 */
+.banner-section4 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Blood+Cancer+Banner'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light4);
+    padding: 0 10px;
+}
+
+.banner-content4 {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text readability */
+    border-radius: 12px;
+}
+
+.banner-heading4 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--text-light4); /* Ensure heading is white */
+}
+
+.banner-paragraph4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 600px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--text-light4); /* Ensure paragraph is white */
+}
+
+/* Overview Section 4 */
+.overview-section4 {
+    padding: 20px 20px;
+    /* background-color: var(--background-light4); */
+    color: var(--text-dark4);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+.overview-container4 {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.overview-title4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color4);
+    text-align: left;
+    font-weight: 700;
+    text-align: center;
+}
+
+.overview-subheading4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: var(--text-medium4);
+    text-align: left;
+}
+
+.overview-text4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.overview-list4 {
+    margin: 10px 0 20px 20px;
+    padding-left: 20px;
+}
+
+.overview-list4 li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Risk Factors & Prevention Section 4 */
+.risk-prevention-wrapper4 {
+    /* background: var(--background-light4); */
+    width: 100%;
+    padding: 0px 0;
+}
+
+.risk-prevention-container4 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.risk-prevention-heading4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color4);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.tab-content-container4 {
+    padding: 1rem 0;
+}
+
+.tab-button-group4 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-button4 {
+    background: #ddd;
+    border: none;
+    padding: 8px 25px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--text-dark4);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tab-button4.active4 {
+    background: linear-gradient(135deg, var(--button1), var(--button2));
+    color: var(--text-light4);
+}
+
+.tab-pane4 {
+    display: none;
+}
+
+.tab-pane4.active4 {
+    display: block;
+}
+
+.card-grid4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.info-card4 {
+    background: var(--text-light4);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color4);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.info-card4:hover {
+    transform: scale(1.03);
+}
+
+.info-card4 .card-title4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 0.5rem;
+    color: var(--primary-color4);
+}
+
+.info-card4 .card-paragraph4 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-dark4);
+}
+
+.call-to-action4 {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.cta-heading4 {
+    font-size: 24px; /* 24px */
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color4);
+}
+
+.cta-paragraph4 {
+    font-size: 1rem;
+    color: var(--text-dark4);
+    margin-bottom: 1rem;
+}
+
+.cta-link4 {
+    display: inline-block;
+    margin: 0.5rem 0.5rem;
+    padding: 8px 25px;
+    background: linear-gradient(135deg, var(--button1), var(--button2));
+    color: var(--text-light4);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.cta-link4:hover {
+    background: var(--button-hover-bg4);
+}
+
+/* Diagnosis Section 4 */
+.diagnosis-section4 {
+    padding: 40px;
+    /* background-color: var(--background-light4); */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.diagnosis-heading4 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color4);
+}
+
+.diagnosis-tab-group4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.diagnosis-button4 {
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    color: var(--text-dark4);
+}
+
+.diagnosis-button4.active4,
+.diagnosis-button4:hover {
+    background-color: var(--button-color4);
+    color: var(--text-light4);
+}
+
+.diagnosis-content4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--text-light4);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color4);
+}
+
+.diagnosis-content4 .diagnosis-title4 {
+    margin-top: 0;
+    color: var(--secondary-color4);
+    font-size: 20px;
+}
+
+.diagnosis-content4 .diagnosis-paragraph4 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark4);
+}
+
+/* Treatment Options Section 4 */
+.treatment-section-container4 {
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.treatment-section-heading4 {
+    text-align: center;
+    color: var(--primary-color4);
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.treatment-intro-paragraph4 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-dark4);
+}
+
+.treatment-box4 {
+    background-color: var(--text-light4);
+    margin-bottom: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color4);
+    overflow: hidden;
+}
+
+.treatment-summary4 {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 24px;
+    cursor: pointer;
+    background-color: var(--accordion-summary-bg4);
+    color: var(--primary-color4);
+    transition: background-color 0.3s;
+}
+
+.treatment-box4[open] .treatment-summary4 {
+    background-color: var(--accordion-summary-open-bg4);
+}
+
+.treatment-details4 {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border-color4);
+    background-color: var(--accordion-details-bg4);
+}
+
+.treatment-title4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary-color4);
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.treatment-text4 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-medium4);
+    margin-bottom: 10px;
+}
+
+.treatment-cta4 {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: var(--primary-color4);
+    color: var(--text-light4);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.treatment-cta4:hover {
+    background-color: var(--button-hover-bg4);
+}
+
+/* Oncologist Carousel Section 4 */
+.oncologist-carousel-section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 ;
+    /* background-color: var(--background-medium4); */
+}
+
+.oncologist-header4 {
+    background-color: var(--accordion-summary-bg4);
+    color: var(--primary-color4);
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.oncologist-heading4 {
+    margin: 0;
+    /* color: var(--text-light4); */
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.oncologist-paragraph4 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--text-dark4); /* Slightly off-white for contrast */
+    font-weight: 600;
+}
+
+.oncologist-carousel-container4 {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.oncologist-carousel-wrapper4 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.doctor-card4 {
+    background-color: var(--text-light4);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--shadow-color4);
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 0;
+    transition: transform 0.3s;
+    width: 310px;
+    margin: 0 10px;
+}
+
+.doctor-card4:hover {
+    transform: translateY(-10px);
+}
+
+.doctor-card4 img {
+    width: 310px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 0%;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.doctor-card4 .doctor-name4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #2c3e50 !important; /* Specific dark grey */
+}
+
+.doctor-card4 .doctor-education4,
+.doctor-card4 .doctor-specialization4,
+.doctor-card4 .doctor-timing4 {
+    font-size: 14px;
+    color: #34495e; /* Slightly lighter dark grey */
+    margin:5px
+}
+
+.doctor-card4 .doctor-bio4 {
+    font-size: 13px;
+    color: #777; /* Medium grey */
+    margin: 5px;
+    line-height: 1.6;
+}
+
+.doctor-profile-link4 {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--text-light4) !important;
+    font-weight: bold;
+}
+/* 
+view profile css */
+
+.doctor-card4 a {
+  margin-top: auto; /* Pushes to bottom */
+  padding: 8px 25px;
+  background: linear-gradient(135deg, var(--button1), var(--button2));
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 8px #00664460;
+      margin-bottom: 10px;
+}
+
+.doctor-card4 a:hover {
+  background-color: var(--primary-color4);
+  box-shadow: 0 6px 12px #00664460;
+  transform: translateY(-2px);
+}
+
+.oncologist-prev4,
+.oncologist-next4 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: var(--text-light4) !important;
+    border: none;
+    font-size: 24px;
+    padding: 12px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.oncologist-prev4 {
+    left: 1px;
+}
+
+.oncologist-next4 {
+    right: 1px;
+}
+
+.oncologist-prev4:hover,
+.oncologist-next4:hover {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.oncologist-appointment-btn4 {
+    background: linear-gradient(135deg, var(--button1), var(--button2));
+    color: var(--text-light4) !important;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.oncologist-appointment-btn4:hover {
+    background-color: var(--button-red-hover4) !important;
+}
+
+/* Why Choose Us Section 4 */
+.choose-us-section4 {
+    max-width: 1400px;
+    margin: 10px auto;
+    padding: 20px;
+    /* background-color: var(--background-light4); */
+    border-radius: 12px;
+}
+
+.choose-us-heading4 {
+    text-align: center;
+    color: var(--primary-color4);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.feature-grid4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted minmax for better spacing */
+    gap: 24px;
+    /* overflow-x: auto; /* Removed as grid handles overflow better */
+    justify-content: center; /* Center items when they don't fill a row */
+}
+
+.feature-card4 {
+    background-color: var(--text-light4);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--shadow-color4);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card4:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon4 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--button-color4);
+}
+
+.feature-title4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--primary-color4);
+}
+
+.feature-description4 {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* FAQ Section 4 */
+.faq-section-container4 {
+    /* background-color: var(--background-light4); */
+    padding: 30px 20px;
+    margin-bottom: 5px;
+}
+
+.faq-content-wrapper4 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.faq-section-heading4 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color4);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.faq-details-box4 {
+    background-color: var(--text-light4);
+    margin-bottom: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color4);
+    overflow: hidden;
+}
+
+.faq-summary-button4 {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 24px;
+    cursor: pointer;
+    background-color: var(--accordion-summary-bg4);
+    color: var(--primary-color4);
+    transition: background-color 0.3s;
+    display: block; /* Ensures summary takes full width */
+    position: relative; /* For custom arrow styling */
+    list-style: none; /* Removes default browser arrow */
+}
+
+/* Custom arrow for summary */
+.faq-summary-button4::-webkit-details-marker {
+    display: none;
+}
+.faq-summary-button4::after {
+    content: '\25BC'; /* Down arrow */
+    font-size: 0.8em;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.faq-details-box4[open] .faq-summary-button4 {
+    background-color: var(--accordion-summary-open-bg4);
+}
+
+.faq-details-box4[open] .faq-summary-button4::after {
+    transform: translateY(-50%) rotate(180deg); /* Up arrow when open */
+}
+
+.faq-details-content4 {
+    padding: 10px 24px;
+    border-top: 1px solid var(--border-color4);
+    background-color: var(--accordion-details-bg4);
+}
+
+.faq-text-paragraph4 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-dark4);
+    margin-bottom: 0px;
+}
+
+.faq-text-list4 {
+    list-style: disc;
+    margin: 0 0 0 20px;
+    padding: 0;
+    color: var(--text-medium4);
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+.faq-call-to-action-container4 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.faq-call-to-action-button4 {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--button1), var(--button2));
+    color: var(--text-light4);
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.faq-call-to-action-button4:hover {
+    background-color: var(--button-hover-bg4);
+}
+
+
+/* Responsive Styles 4 */
+@media (max-width: 1024px) {
+    .banner-heading4 {
+        font-size: 2.5rem;
+    }
+    .banner-paragraph4 {
+        font-size: 1.1rem;
+    }
+    .overview-title4 {
+        font-size: 28px;
+    }
+    .overview-subheading4 {
+        font-size: 22px;
+    }
+    .risk-prevention-heading4 {
+        font-size: 1.8rem;
+    }
+    .tab-button4 {
+        padding: 0.7rem 1.2rem;
+        font-size: 14px;
+    }
+    .card-grid4 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .info-card4 .card-title4 {
+        font-size: 1rem;
+    }
+    .info-card4 .card-paragraph4 {
+        font-size: 0.95rem;
+    }
+    .diagnosis-heading4 {
+        font-size: 24px;
+    }
+    .diagnosis-button4 {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .treatment-section-heading4 {
+        font-size: 1.8rem;
+    }
+    .treatment-summary4 {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+    .treatment-details4 {
+        padding: 18px 20px;
+    }
+    .oncologist-carousel-wrapper4 {
+        gap: 15px;
+    }
+    .doctor-card4 {
+        width: 310px;
+    }
+    .oncologist-prev4, .oncologist-next4 {
+        font-size: 20px;
+        padding: 10px 14px;
+    }
+    .oncologist-header4 h1 {
+        font-size: 24px;
+    }
+    .oncologist-header4 p {
+        font-size: 14px;
+    }
+    .choose-us-heading4 {
+        font-size: 2rem;
+    }
+    .feature-grid4 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .feature-icon4 {
+        font-size: 36px;
+    }
+    .feature-title4 {
+        font-size: 1rem;
+    }
+    .feature-description4 {
+        font-size: 0.9rem;
+    }
+    .faq-section-heading4 {
+        font-size: 2rem;
+    }
+    .faq-summary-button4 {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+    .faq-details-content4 {
+        padding: 18px 20px;
+    }
+    .faq-call-to-action-button4 {
+        padding: 10px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-heading4 {
+        font-size: 2rem;
+    }
+    .banner-paragraph4 {
+        font-size: 1rem;
+    }
+    .overview-section4 {
+        padding: 40px 15px;
+    }
+    .overview-title4 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .overview-subheading4 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .overview-list4 {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    .risk-prevention-heading4 {
+        font-size: 1.5rem;
+    }
+    .tab-button-group4 {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .tab-button4 {
+        width: 100%;
+        text-align: center;
+    }
+    .card-grid4 {
+        grid-template-columns: 1fr;
+    }
+    .diagnosis-section4 {
+        padding: 30px 15px;
+    }
+    .diagnosis-heading4 {
+        font-size: 22px;
+    }
+    .diagnosis-tab-group4 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .diagnosis-button4 {
+        width: 100%;
+    }
+    .diagnosis-content4 {
+        padding: 20px;
+    }
+    .treatment-section-heading4 {
+        font-size: 1.6rem;
+    }
+    .treatment-summary4 {
+        font-size: 0.9rem;
+        padding: 14px 18px;
+    }
+    .treatment-details4 {
+        padding: 16px 18px;
+    }
+    .oncologist-carousel-wrapper4 {
+        gap: 10px;
+    }
+    .doctor-card4 {
+        width: 310px;
+    }
+    .oncologist-prev4, .oncologist-next4 {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+    .oncologist-header4 h1 {
+        font-size: 22px;
+    }
+    .oncologist-header4 p {
+        font-size: 12px;
+    }
+    .choose-us-section4 {
+        padding: 15px;
+    }
+    .choose-us-heading4 {
+        font-size: 1.6rem;
+    }
+    .feature-grid4 {
+        grid-template-columns: 1fr;
+    }
+    .feature-icon4 {
+        font-size: 32px;
+    }
+    .feature-title4 {
+        font-size: 1rem;
+    }
+    .feature-description4 {
+        font-size: 0.9rem;
+    }
+    .faq-section-heading4 {
+        font-size: 1.6rem;
+    }
+    .faq-summary-button4 {
+        font-size: 0.9rem;
+        padding: 14px 18px;
+    }
+    .faq-details-content4 {
+        padding: 16px 18px;
+    }
+    .faq-text-paragraph4, .faq-text-list4 li {
+        font-size: 0.9rem;
+    }
+    .faq-call-to-action-button4 {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-heading4 {
+        font-size: 1.5rem;
+    }
+    .banner-paragraph4 {
+        font-size: 0.9rem;
+    }
+    .overview-title4 {
+        font-size: 20px;
+    }
+    .overview-subheading4 {
+        font-size: 18px;
+    }
+    .overview-text4, .overview-list4 li {
+        font-size: 14px;
+    }
+    .risk-prevention-heading4 {
+        font-size: 1.3rem;
+    }
+    .tab-button4 {
+        font-size: 12px;
+        padding: 0.6rem 1rem;
+    }
+    .info-card4 .card-title4 {
+        font-size: 0.9rem;
+    }
+    .info-card4 .card-paragraph4 {
+        font-size: 0.85rem;
+    }
+    .cta-heading4 {
+        font-size: 1.2rem;
+    }
+    .cta-paragraph4 {
+        font-size: 0.9rem;
+    }
+    .cta-link4 {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    .diagnosis-heading4 {
+        font-size: 18px;
+    }
+    .diagnosis-button4 {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .diagnosis-content4 .diagnosis-title4 {
+        font-size: 18px;
+    }
+    .diagnosis-content4 .diagnosis-paragraph4 {
+        font-size: 14px;
+    }
+    .treatment-section-heading4 {
+        font-size: 1.4rem;
+    }
+    .treatment-summary4 {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+    .treatment-details4 {
+        padding: 14px 15px;
+    }
+    .treatment-title4 {
+        font-size: 1.1rem;
+    }
+    .treatment-text4 {
+        font-size: 0.8rem;
+    }
+    .treatment-cta4 {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+    .doctor-card4 {
+        width: 300px;
+        padding: 0px;
+    }
+    .doctor-card4 img {
+        width: 300px;
+        height: 380px;
+    }
+    .doctor-card4 .doctor-name4 {
+        font-size: 16px;
+    }
+    .doctor-card4 .doctor-education4,
+    .doctor-card4 .doctor-specialization4,
+    .doctor-card4 .doctor-timing4 {
+        font-size: 12px;
+    }
+    .doctor-card4 .doctor-bio4 {
+        font-size: 11px;
+    }
+    .doctor-profile-link4 {
+        font-size: 12px;
+    }
+    .oncologist-prev4, .oncologist-next4 {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+    .oncologist-appointment-btn4 {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .choose-us-heading4 {
+        font-size: 1.4rem;
+    }
+    .feature-icon4 {
+        font-size: 28px;
+    }
+    .feature-title4 {
+        font-size: 0.9rem;
+    }
+    .feature-description4 {
+        font-size: 0.8rem;
+    }
+    .faq-section-heading4 {
+        font-size: 1.4rem;
+    }
+    .faq-summary-button4 {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+    .faq-details-content4 {
+        padding: 14px 15px;
+    }
+    .faq-text-paragraph4, .faq-text-list4 li {
+        font-size: 13px;
+    }
+    .faq-call-to-action-button4 {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
+
+.footerabove-section {
+    margin-top: 0;
+    /* background-color: #ffffff;  */
+    padding: 0px 0PX 20px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Footer CTA Container */
+.footerabove-cta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Footer Heading */
+.footerabove-cta-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Footer Button Container */
+.footerabove-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+}
+
+/* Footer Button Styles */
+.footerabove-cta-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, var(--button1), var(--button2)); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footerabove-cta-btn:hover {
+    background-color: var(--secondary-color4); /* Darker pink */
+}
+
+
+
+
+
+
+
+/* Advanced Treatment Options Section */
+        .advanced-treatment-section4 {
+            padding: 40px 20px 0px 20px;
+            /* background-color: var(--background-light4); */
+            color: var(--text-dark4);
+        }
+
+        .advanced-treatment-container4 {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advanced-treatment-header4 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .advanced-treatment-title4 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color4);
+            margin-bottom: 15px;
+        }
+
+        .advanced-treatment-subtitle4 {
+            font-size: 1.1rem;
+            color: var(--text-medium4);
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .treatment-grid4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 0px;
+        }
+
+        .treatment-card4 {
+            background-color: var(--background-light4);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px var(--shadow-color4);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .treatment-card4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--hover-shadow-color4);
+        }
+
+        .treatment-card-header4 {
+            background-color: var(--accordion-summary-bg4);
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .treatment-card-header4:hover {
+            background-color: #b8d6ba;
+        }
+
+        .treatment-card-title4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-color4);
+            margin: 0;
+        }
+
+        .treatment-expand-icon4 {
+            font-size: 1.5rem;
+            color: var(--primary-color4);
+            transition: transform 0.3s ease;
+        }
+
+        .treatment-card4.expanded .treatment-expand-icon4 {
+            transform: rotate(45deg);
+        }
+
+        .treatment-card-content4 {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .treatment-card4.expanded .treatment-card-content4 {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .treatment-description4 {
+            font-size: 14px;
+            color: var(--text-dark4);
+            margin-bottom: 15px;
+            line-height: 1.6;
+            max-height: fit-content;
+        }
+
+        .treatment-benefits4 {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-icon4 {
+            color: #28a745;
+            font-size: 1.2rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .benefit-text4 {
+            font-size: 0.95rem;
+            color: var(--text-dark4);
+            line-height: 1.5;
+        }
+
+        .treatment-cta-buttons4 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .treatment-cta-btn4 {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            color: var(--text-light4);
+            background: linear-gradient(135deg, var(--button1), var(--button2));
+        }
+
+        .treatment-cta-btn4:hover {
+            background: var(--button-hover-bg4);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 102, 68, 0.3);
+        }
+
+        .treatment-cta-btn4.secondary {
+            background: transparent;
+            color: var(--primary-color4);
+            border: 2px solid var(--primary-color4);
+        }
+
+        .treatment-cta-btn4.secondary:hover {
+            background: var(--primary-color4);
+            color: var(--text-light4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .advanced-treatment-title4 {
+                font-size: 2rem;
+            }
+            
+            .treatment-grid4 {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .advanced-treatment-section4 {
+                padding: 40px 15px;
+            }
+            
+            .advanced-treatment-title4 {
+                font-size: 1.8rem;
+            }
+            
+            .advanced-treatment-subtitle4 {
+                font-size: 1rem;
+            }
+            
+            .treatment-grid4 {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .treatment-card-header4 {
+                padding: 15px;
+            }
+            
+            .treatment-card-title4 {
+                font-size: 1.1rem;
+            }
+            
+            .treatment-cta-buttons4 {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .treatment-cta-btn4 {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .advanced-treatment-title4 {
+                font-size: 1.5rem;
+            }
+            
+            .advanced-treatment-subtitle4 {
+                font-size: 0.9rem;
+            }
+            
+            .treatment-card-title4 {
+                font-size: 1rem;
+            }
+            
+            .treatment-description4 {
+                font-size: 0.9rem;
+            }
+            
+            .benefit-text4 {
+                font-size: 0.9rem;
+            }
+        }
+
+
+        
+
+
+         /* Patient Testimonials Section */
+        .testimonials-section4 {
+            padding: 40px 20px;
+            /* background-color: var(--background-light4); */
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials-heading4 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color4);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .testimonials-carousel-container4 {
+            position: relative;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 40px 60px;
+            box-shadow: 0 4px 12px var(--shadow-color4);
+            overflow: hidden;
+            min-height: 200px;
+        }
+
+        .testimonials-carousel-wrapper4 {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .testimonial-slide4 {
+            min-width: 100%;
+            text-align: center;
+            padding: 0 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial-quote4 {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-dark4);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .testimonial-quote4:before {
+            content: '"';
+            font-size: 2rem;
+            color: var(--accent-color4);
+            position: absolute;
+            left: -20px;
+            top: -10px;
+        }
+
+        .testimonial-quote4:after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--accent-color4);
+            position: absolute;
+            right: -20px;
+            bottom: -10px;
+        }
+
+        .testimonial-author4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color4);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-description4 {
+            font-size: 0.9rem;
+            color: var(--text-medium4);
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonials-nav4 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 102, 68, 0.8);
+            color: var(--text-light4);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .testimonials-nav4:hover {
+            background-color: var(--accent-color4);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .testimonials-prev4 {
+            left: 10px;
+        }
+
+        .testimonials-next4 {
+            right: 10px;
+        }
+
+        .testimonials-indicators4 {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .testimonial-indicator4 {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-indicator4.active4 {
+            background-color: var(--accent-color4);
+            transform: scale(1.2);
+        }
+
+        .testimonial-indicator4:hover {
+            background-color: var(--secondary-color4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .testimonials-heading4 {
+                font-size: 1.8rem;
+            }
+
+            .testimonial-quote4 {
+                font-size: 1.1rem;
+            }
+
+            .testimonials-carousel-container4 {
+                padding: 30px 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-section4 {
+                padding: 30px 15px;
+            }
+
+            .testimonials-heading4 {
+                font-size: 1.6rem;
+                text-align: center;
+            }
+
+            .testimonials-carousel-container4 {
+                padding: 30px 15px;
+            }
+
+            .testimonial-slide4 {
+                padding: 0 0px;
+            }
+
+            .testimonial-quote4 {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+
+            .testimonial-quote4:before,
+            .testimonial-quote4:after {
+                font-size: 1.5rem;
+            }
+
+            .testimonial-quote4:before {
+                left: -15px;
+                top: -5px;
+            }
+
+            .testimonial-quote4:after {
+                right: -15px;
+                bottom: -5px;
+            }
+
+            .testimonials-nav4 {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .testimonials-prev4 {
+                left: 5px;
+            }
+
+            .testimonials-next4 {
+                right: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-heading4 {
+                font-size: 1.4rem;
+            }
+
+            .testimonial-quote4 {
+                font-size: 0.9rem;
+            }
+
+            .testimonial-author4 {
+                font-size: 0.9rem;
+            }
+
+            .testimonial-description4 {
+                font-size: 0.8rem;
+            }
+
+            .testimonials-carousel-container4 {
+                padding: 20px 10px;
+            }
+
+            .testimonials-nav4 {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+
+            .testimonial-indicator4 {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+
+
+
+
+
+
+         /* Chemotherapy Units Section */
+        .chemo-units-section4 {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            /* background-color: var(--background-light4); */
+        }
+
+        .chemo-units-heading4 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color4);
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.3;
+        }
+
+        .chemo-carousel-container4 {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .chemo-carousel-wrapper4 {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 20px;
+        }
+
+        .chemo-unit-card4 {
+            background-color: var(--background-light4);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px var(--shadow-color4);
+            flex: 0 0 auto;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 280px;
+            margin: 0 10px;
+            border-top: 4px solid var(--accent-color4);
+        }
+
+        .chemo-unit-card4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--hover-shadow-color4);
+        }
+
+        .chemo-unit-title4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color4);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .chemo-unit-subtitle4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-color4);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .chemo-unit-description4 {
+            font-size: 14px;
+            color: var(--text-dark4);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .chemo-features-list4 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chemo-features-list4 li {
+            font-size: 13px;
+            color: var(--text-medium4);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .chemo-features-list4 li::before {
+            content: '|';
+            color: var(--accent-color4);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .chemo-nav-btn4 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 102, 68, 0.8);
+            color: var(--text-light4);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .chemo-nav-btn4:hover {
+            background-color: var(--accent-color4);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .chemo-prev4 {
+            left: 1px;
+        }
+
+        .chemo-next4 {
+            right: 1px;
+        }
+
+        .chemo-indicators4 {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .chemo-indicator4 {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chemo-indicator4.active4 {
+            background-color: var(--accent-color4);
+            transform: scale(1.2);
+        }
+
+        .chemo-indicator4:hover {
+            background-color: var(--secondary-color4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .chemo-units-heading4 {
+                font-size: 1.8rem;
+            }
+            
+            .chemo-unit-card4 {
+                width: 250px;
+            }
+            
+            .chemo-nav-btn4 {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chemo-units-section4 {
+                padding: 30px 15px;
+            }
+            
+            .chemo-units-heading4 {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+            
+            .chemo-unit-card4 {
+                width: 220px;
+                padding: 20px;
+            }
+            
+            .chemo-unit-title4 {
+                font-size: 16px;
+            }
+            
+            .chemo-unit-subtitle4 {
+                font-size: 12px;
+            }
+            
+            .chemo-unit-description4 {
+                font-size: 13px;
+            }
+            
+            .chemo-features-list4 li {
+                font-size: 12px;
+            }
+            
+            .chemo-nav-btn4 {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .chemo-prev4 {
+                left: -20px;
+            }
+            
+            .chemo-next4 {
+                right: -20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chemo-units-heading4 {
+                font-size: 1.4rem;
+            }
+            
+            .chemo-unit-card4 {
+                width: 180px;
+                padding: 15px;
+            }
+            
+            .chemo-unit-title4 {
+                font-size: 15px;
+            }
+            
+            .chemo-unit-description4 {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .chemo-features-list4 li {
+                font-size: 11px;
+                margin-bottom: 6px;
+            }
+            
+            .chemo-nav-btn4 {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+            
+            .chemo-prev4 {
+                left: -15px;
+            }
+            
+            .chemo-next4 {
+                right: -15px;
+            }
+            
+            .chemo-indicator4 {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+
+
+
+
+
+
+
+        /* New Section: Beautiful HTML Table */
+.table-section4 {
+    padding: 40px 20px;
+    background-color: var(--background-medium4); /* Use a background color from the palette */
+    color: var(--text-dark4);
+    font-family: var(--main-font) !important;
+}
+
+.table-container4 {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    /* background-color: var(--background-light4);  */
+    border-radius: 12px;
+    /* box-shadow: 0 4px 12px var(--shadow-color4); */
+    padding: 30px;
+}
+
+.table-heading4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color4);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.table-wrapper4 {
+    overflow-x: auto; /* Ensures responsiveness for small screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.data-table4 {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 400px; /* Ensures table is readable on very small screens */
+    background-color: var(--background-light4);
+}
+
+.data-table4 thead th {
+    background-color: var(--secondary-color4); /* Green header from palette */
+    color: var(--text-light4);
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 2px solid var(--primary-color4);
+}
+
+.data-table4 tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0; /* Light grey border */
+    color: var(--text-dark4);
+    font-size: 15px;
+    text-align: left;
+}
+
+.data-table4 tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Slightly different background for even rows */
+}
+
+.data-table4 tbody tr:hover {
+    background-color: #e6f7f0; /* Light green on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-container4 {
+        padding: 20px;
+    }
+
+    .table-heading4 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .data-table4 thead th,
+    .data-table4 tbody td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-container4 {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .table-heading4 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .data-table4 thead th,
+    .data-table4 tbody td {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+
+
+
+        /* Main Heading Section */
+.main-heading-section4 {
+    padding: 20px 20px;
+   
+    color: var(--text-dark4);
+    text-align: center;
+    
+}
+
+.main-heading-container4 {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.main-heading-title4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color4);
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    text-transform: none;
+    letter-spacing: -0.02em;
+}
+
+.main-heading-subtitle4 {
+    font-size: 1rem;
+    color: var(--text-medium4);
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Responsive Design for Main Heading */
+@media (max-width: 1024px) {
+    .main-heading-title4 {
+        font-size: 2rem;
+    }
+    
+    .main-heading-subtitle4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-heading-section4 {
+        padding: 17px 10px;
+    }
+    
+    .main-heading-title4 {
+        font-size: 2rem;
+    }
+    
+    .main-heading-subtitle4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading-section4 {
+        padding: 15px 5px;
+    }
+    
+    .main-heading-title4 {
+        font-size: 1.6rem;
+    }
+    
+    .main-heading-subtitle4 {
+        font-size: 1rem;
+    }
+}
+

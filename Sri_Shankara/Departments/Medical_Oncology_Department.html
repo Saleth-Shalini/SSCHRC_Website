@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Oncology Department</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Doctor Card Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+        
+        /* Mobile spacing optimizations */
+        @media (max-width: 768px) {
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Reduce excessive margins on mobile */
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-12 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Reduce grid gaps on mobile */
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Reduce space-y spacing on mobile */
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+            
+            .space-y-12 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            /* Reduce padding in cards and containers on mobile */
+            .p-8 {
+                padding: 1rem !important;
+            }
+            
+            .rounded-2xl.p-8 {
+                padding: 1.25rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Medical Oncology.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Medical Oncology.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                   <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+          <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What Does Our Medical Oncology Department Do? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Does Our Medical Oncology Department Do?
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Medical Oncology Department is the nexus of systemic cancer treatment, specializing in cutting-edge drug therapies to fight cancer throughout the body. Our expert medical oncologists develop personalized treatment plans utilizing Chemotherapy, Immunotherapy, Targeted Therapy, and Precision Medicine. We integrate world-class research and clinical trials to offer our patients the safest, most advanced, and most hopeful treatment options available today.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Medical Oncology Department provides compassionate clinical care while coordinating the systemic management of your cancer. Our mission is to integrate outstanding cancer research with clinical practice, translating groundbreaking scientific discoveries into direct patient benefits—a philosophy often referred to as "bench to bedside and back."
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Our medical oncologists are not just experts in administering medication; they are deeply knowledgeable about the genetics and molecular biology of cancer. They lead your care team, determining the most effective systemic approach for your specific disease, whether the goal is eradication, control, or symptom relief. This department serves as the central hub, ensuring that all aspects of your treatment—including surgery, radiation, and supportive care—are harmonized for the best possible outcome, guided by the authoritative standards.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Medical Oncology Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Medical Oncology Services: Advanced Systemic Treatments
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our department specializes in a range of systemic therapies, which use drugs or biological agents to treat cancer cells throughout the body. The goal is to maximize tumor response while minimizing side effects.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-dna text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900">Precision Medicine & Targeted Therapy</h4>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Working Mechanism:</h5>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Requires genomic sequencing to identify specific molecular targets (mutations, proteins) unique to your tumor. Targeted drugs (like small molecule inhibitors or ADCs) are then precisely matched to interfere with these growth pathways.
+                        </p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">What it means for Patient:</h5>
+                        <p class="text-gray-700 leading-relaxed font-medium" style="color: #2E8B57;">
+                            <strong>Custom-Fit Medication:</strong> We test your tumor's DNA to find its specific weaknesses. We then choose drugs that act like smart bombs, targeting only the cancer's unique flaws, which often means fewer side effects than traditional chemo.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-shield-virus text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900">Immunotherapy</h4>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Working Mechanism:</h5>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Utilizes Immune Checkpoint Inhibitors to activate or unleash the patient's own immune system (T-cells) to recognize and destroy cancer cells.
+                        </p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">What it means for Patient:</h5>
+                        <p class="text-gray-700 leading-relaxed font-medium" style="color: #FF4500;">
+                            <strong>Harnessing Your Immunity:</strong> Instead of attacking the cancer directly, this treatment wakes up your body's own defense system to fight the cancer. It's a powerful, long-lasting way to teach your immunity to find and kill cancer cells.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-pills text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900">Chemotherapy</h4>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Working Mechanism:</h5>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            The traditional method uses cytotoxic agents to kill rapidly dividing cells. While newer therapies are available, chemotherapy remains a crucial foundational treatment, often used in combination with targeted or immune agents.
+                        </p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">What it means for Patient:</h5>
+                        <p class="text-gray-700 leading-relaxed font-medium" style="color: #1e40af;">
+                            <strong>Foundation of Treatment:</strong> This uses powerful drugs to destroy fast-growing cancer cells. We use the latest protocols, often in combination with modern medicines, to make it as effective and tolerable as possible.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-heartbeat text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900">Hormonal Therapy</h4>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Working Mechanism:</h5>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Used for hormone-sensitive cancers (e.g., breast, prostate). This involves agents that block hormones or prevent the body from producing them, thereby starving the cancer cells of essential growth signals.
+                        </p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">What it means for Patient:</h5>
+                        <p class="text-gray-700 leading-relaxed font-medium" style="color: #2E8B57;">
+                            <strong>Blocking Growth Signals:</strong> For cancers that rely on hormones (like estrogen or testosterone) to grow, we use medications to block those signals, essentially cutting off the cancer's food supply.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Unique Strengths (USPs) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Medical Oncology Department?
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our commitment to integrating clinical care with transformative research sets our department apart, providing patients with access to therapies before they become widely available.
+                </p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- A. Research-Driven, Patient-Centered Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57;">
+                                <i class="fas fa-flask text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">A. Research-Driven, Patient-Centered Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-vial mr-3" style="color: #2E8B57;"></i>
+                                Participating in multicentric Clinical Trials
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                As an academic center, we are actively engaged in groundbreaking clinical research. This provides our patients early access to novel therapeutics.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-exchange-alt mr-3" style="color: #2E8B57;"></i>
+                                Bench-to-Bedside Integration
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our clinicians are involved in laboratory research and vice versa. This tight integration means your oncologist has a deep understanding of the molecular basis of your disease, enabling them to make treatment decisions based on the most current scientific knowledge, not just standard textbooks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- B. Highest Standards of Multidisciplinary Expertise -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500;">
+                                <i class="fas fa-users text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">B. Highest Standards of Multidisciplinary Expertise</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-award mr-3" style="color: #FF4500;"></i>
+                                Internationally Recognized Leadership
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our clinical divisions are led by specialists who are recognized national and international experts in their fields (e.g., GI, Lung, Breast, Hematologic Malignancies).
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-handshake mr-3" style="color: #FF4500;"></i>
+                                Collaborative Tumor Boards
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Every complex case is reviewed weekly twice, in a multidisciplinary tumor board meeting. Your medical oncologist, surgeon, radiation oncologist, and pathologist collaborate to craft a unified, consensus-based treatment strategy that adheres to stringent global standards (NCCN, ESMO).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- C. Focus on Outcomes and Quality of Life -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #1e40af;">
+                                <i class="fas fa-heartbeat text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">C. Focus on Outcomes and Quality of Life</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-md mr-3" style="color: #1e40af;"></i>
+                                Symptom Management Expertise
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our team works closely with Supportive Care specialists to proactively manage side effects and maintain quality of life throughout treatment, addressing the entire patient, not just the disease.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-shield-alt mr-3" style="color: #1e40af;"></i>
+                                Safety and Quality
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We uphold the highest standards of safety in drug administration and monitoring, ensuring that every treatment step is precise, secure, and delivered with compassionate oversight.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Medical Oncology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our medical oncology specialists dedicated to providing advanced systemic cancer treatment.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Ravi B. Diwakar.webp" alt="Dr. Ravi B. Diwakar" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Ravi+B.+Diwakar'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Ravi B. Diwakar</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-General Medicine (1993), DM - Medical Oncology (1996)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>33 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Ravi B. Diwakar.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sandhya Appachu M..webp" alt="Dr. Sandhya Appachu M." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sandhya+Appachu+M'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sandhya Appachu M.</h3>
+                            <p class="text-sm text-gray-600 mb-4">MBBS, MD-General Medicine (June 2009), DM - Medical Oncology (July 2014) | HOD, Senior Consultant</p>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>17 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sandhya Appachu M..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Vinayak Munirathnam.webp" alt="Dr. Vinayak Munirathnam" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Vinayak+Munirathnam'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Vinayak Munirathnam</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-Paediatrics (2010), DM - Medical Oncology (2016), ESMO - Medical Oncology (2016)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>16 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Vinayak Munirathnam.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 4 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Vijaisimha.webp" alt="Dr. Vijaisimha" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Vijaisimha'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Vijaisimha</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD - Radiotherapy (Dec 2012), DM - Medical Oncology (July 2019), Post Graduate Diploma in Medical Law & Ethics (2014)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Monday to Saturday: 9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>14 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Vijaisimha.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 5 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. R. N. Supreeth.webp" alt="Dr. R. N. Supreeth" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+R.+N.+Supreeth'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. R. N. Supreeth</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, DNB - General Medicine (2019), DrNB - Medical Oncology (2023)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>7 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. R. N. Supreeth.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Doctor 6 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Aditi Raghunathan.webp" alt="Dr. Aditi Raghunathan" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Aditi+Raghunathan'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Aditi Raghunathan</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-General Medicine (2019), DM - Medical Oncology (2025)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Junior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>7 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Aditi Raghunathan.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- Doctor 7 -->
+                     <div class="doctor-card doctor-card-desktop">  
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Guruprasad Shenoy.webp" alt="Dr. Guruprasad Shenoy" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Guruprasad+Shenoy'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Guruprasad C Shenoy</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-General Medicine (July 2021), DNB - General Medicine (June 2021), DM - Medical Oncology (Nov 2025)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Junior Consultant</span>
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>5 yrs exp</span>
+                                </div>
+                            </div>
+                            <a href="../Doctors/Dr. Guruprasad Shenoy.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 8 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Govinda Babu K.webp" alt="Dr. Govinda Babu K" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Govinda+Babu+K'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Govinda Babu K</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-General Medicine (1986), DM - Medical Oncology (1995)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Medical Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Part-time</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>40 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Govinda Babu K.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+   
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            const track = document.getElementById('carouselTrack');
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        document.getElementById('carouselTrack').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        document.getElementById('carouselTrack').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <!-- Footer JavaScript -->
+    <script src="../footer.js"></script>
+    <script src="../footer-main.js"></script>
+    
+    <!-- Chatbox FAB Button -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Chatbox JavaScript - Load after chatbot HTML elements -->
+    <script src="../chatbox.js"></script>
+</body>
+</html>
+
+

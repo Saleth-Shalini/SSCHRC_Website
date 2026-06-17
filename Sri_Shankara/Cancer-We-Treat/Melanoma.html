@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melanoma: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Melanoma
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Melanoma is a serious, aggressive form of skin cancer that develops in the melanocytes—the cells responsible for producing melanin, the pigment that gives your skin its colour. This cellular change is often the result of damage, most commonly caused by exposure to the sun's ultraviolet (UV) radiation.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    While melanoma accounts for approximately 3% of all skin cancer cases, it is responsible for the majority of skin cancer deaths and has a higher likelihood of spreading (metastasising) to other parts of the body if not caught early. It is also one of the more frequently occurring cancers in young adults aged 20 to 30 and is the primary cause of cancer death in women between 25 and 30 years old.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The initial sign of melanoma is usually:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>An irregular brown, black, and/or red spot.</li>
+                    <li>An existing mole that starts to change in colour, size, or shape.</li>
+                </ul>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    For fair-skinned men, melanoma is most commonly found on the trunk, and for fair-skinned women, it is typically on the lower legs. In darker-skinned individuals, it most often appears on the palms of the hands, the soles of the feet, and beneath the nails. When detected and treated early, melanoma is often curable.
+                </p>
+            </div>
+
+            <!-- Melanoma Types -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Melanoma Types
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Melanoma is generally classified into three main types:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Cutaneous Melanoma</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                This is the most common form of melanoma, with four major subtypes:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li><strong>Superficial Spreading Melanoma:</strong> This is the most common type, accounting for about 70% of cases. It typically begins in an existing mole.</li>
+                                <li><strong>Nodular Melanoma:</strong> The second most common type (15% to 30% of cases), this is generally more aggressive and tends to grow faster than superficial spreading melanomas.</li>
+                                <li><strong>Lentigo Maligna Melanoma:</strong> Making up 4% to 10% of cases, this appears as large, flat lesions and is most often found on the faces of light-skinned women over 50. It carries a lower risk of spreading compared to other types.</li>
+                                <li><strong>Acral Lentiginous Melanoma:</strong> This occurs on the palms, soles of the feet, or beneath the nail beds. It accounts for 2% to 8% of melanomas in light-skinned patients but up to 60% in darker-skinned patients. These lesions are often large, with an average diameter of 3 centimetres.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Mucosal Melanoma</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is a rare type, comprising about 1% of melanoma cases. It develops in the mucosal tissue that lines body cavities and hollow organs. Common sites include the head and neck region (nasal cavity, mouth, and oesophagus), rectum, urinary tract, and vagina. It is often very difficult to detect, and even with diagnosis and treatment, the prognosis can often be poor.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Ocular Melanoma</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                As melanocytes are present in the eyes, they can also be susceptible to melanoma. The two main types are Uveal Melanoma and Conjunctival Melanoma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Risk Factors -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Melanoma Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases the likelihood of developing melanoma. While not everyone with risk factors will develop the cancer, it is advisable to discuss them with your healthcare provider.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The primary risk factor is sun damage, particularly a history of peeling sunburns. Exposure to artificial sunlight from tanning beds carries the same risk as natural sunlight.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Other risk factors for melanoma include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Fair Complexion</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Individuals with light skin, blond or red hair, and blue eyes who tend to sunburn easily are at increased risk.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Previous Melanoma</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A personal history of melanoma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Moles (Nevi)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Having a large number of benign (non-cancerous) moles.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Having a close family member who has had melanoma.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Atypical Mole and Melanoma Syndrome (AMS)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This condition, previously known as dysplastic nevus syndrome, is characterised by having a large number of atypical moles. Regular screening is recommended for you and your family members if you have AMS.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mt-8" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    In addition to managing these risk factors, behavioural and lifestyle changes can help prevent melanoma. If you have an elevated risk, please review the appropriate screening guidelines and consider genetic counselling, as some cases of melanoma can be inherited.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Melanoma Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The signs and symptoms of melanoma can vary between patients. A helpful and easy way to remember the early warning signs of melanoma skin cancer is using the ABCDEFs guide:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Asymmetry</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        One half of the mole or spot does not match the other half.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Border Irregularity</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The edges are ragged, blurred, or irregular.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Colour Variation</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The colour is uneven, or the spot contains multiple colours, such as shades of brown, black, red, white, or blue.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Diameter</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The lesion is larger than the diameter of a pencil eraser (about 6 millimetres).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Evolution</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The mole or spot is changing in size, shape, or height.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Feeling</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        There is a change in sensation, such as itching, tenderness, or pain around the mole or spot.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-red-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Important:</strong> It is crucial to show any suspicious area of skin, non-healing sore, or any new or changing mole or freckle to a medical doctor immediately.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Melanoma Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    An early and accurate diagnosis is vital for effective melanoma skin cancer treatment, as it helps determine the extent of spread and informs your doctor's choice of therapy.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    SSCHRC employs advanced, accurate technology and highly skilled staff, including pathologists and diagnostic radiologists, to diagnose melanoma and detect any spread, thereby increasing the likelihood of successful treatment.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If you present with signs or symptoms of melanoma, your doctor will conduct a physical examination and ask about your health, lifestyle, and family history. If a spot is suspected to be melanoma, a biopsy will be performed.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Melanoma Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Melanoma skin cancer cannot be diagnosed by visual examination alone. If a pigmented area changes or appears abnormal, your doctor will take a tissue sample for microscopic examination by a pathologist. It is important that suspicious areas are not simply removed by shaving or cauterisation before a biopsy confirms if the area is malignant (cancerous).
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Common biopsy methods include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Local Excision/Excisional Biopsy:</strong> The entire suspicious area is removed with a scalpel under local anaesthetic. This may be done in a doctor's office or as an outpatient hospital procedure. Stitches are used to close the site.</li>
+                        <li><strong>Punch Biopsy:</strong> A special tool is used to remove a round cylinder of tissue that includes deeper layers of the skin.</li>
+                        <li><strong>Shave Biopsy:</strong> The doctor shaves off a piece of the growth for examination.</li>
+                    </ul>
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        The pathologist will examine the sample for cancer cells. Abnormal results may indicate melanoma, as well as other conditions like benign growths (moles, warts), squamous cell carcinoma, or basal cell carcinoma. Given that melanoma can be challenging to diagnose, a second pathology review of your biopsy is often recommended.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Important Biopsy Considerations</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Side Effects:</strong> As with any skin procedure, there is a small risk of infection. Contact your doctor if you experience fever, increased pain, redness, swelling at the site, or continued bleeding.</li>
+                        <li><strong>Scarring:</strong> The biopsy may leave a scar. For sensitive areas like the face, a surgeon or dermatologist specialising in scar reduction methods may be preferred.</li>
+                        <li><strong>Medication:</strong> Always inform your doctor about all medications you are taking, including anti-inflammatory drugs (which can alter the biopsy's appearance to the pathologist) or blood thinners (such as aspirin or Coumadin), which can increase the risk of bleeding.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Other Tests for Disease Spread</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Once melanoma is confirmed, further tests may be advised to determine if cancer cells have spread within the skin or to other parts of the body. These may include:
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        <strong>Imaging Tests:</strong> Such as Chest X-ray, Lymphoscintigraphy, Ultrasound, CT (Computed Axial Tomography) scans, MRI (Magnetic Resonance Imaging) scans, and PET (Positron Emission Tomography) scans.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Staging -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Melanoma Staging
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Staging classifies the extent of the disease and is essential for determining the most effective treatment plan and predicting the outlook for recovery (prognosis). Melanoma staging is based on:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>The location(s) of the melanoma.</li>
+                    <li>The thickness of the primary melanoma tumour and other microscopic features.</li>
+                    <li>Whether it has spread to nearby lymph nodes (and if so, how many and what size).</li>
+                    <li>Whether it has spread (metastasised) to distant parts of the body.</li>
+                    <li>A blood test called lactate dehydrogenase (LDH), specifically for Stage IV melanoma.</li>
+                </ul>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Stages I and II are primarily based on the thickness and microscopic features of the primary tumour. Stages III and IV are based on how far the melanoma has spread from the skin, with Stage III indicating regional spread and Stage IV indicating distant spread.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-green-50 to-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage 0 (Melanoma in Situ)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Abnormal melanocytes are found only in the epidermis (the top layer of skin).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage I</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer has formed and is divided into Stages IA (tumour ≤1 mm thick) and IB (tumour >1 mm to ≤2 mm thick, without ulceration).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-yellow-50 to-white border-l-4" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage II</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Divided into Stages IIA, IIB, and IIC, based on tumour thickness and presence of ulceration.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage III</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer has spread regionally and is divided into Stages IIIA, IIIB, IIIC, and IIID, based on factors including primary tumour, affected lymph nodes, and presence of microsatellite/satellite/in-transit metastases.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-red-50 to-white border-l-4" style="border-color: #DC143C;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Stage IV</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The cancer has spread to distant parts of the body (e.g., lungs, liver, brain, bone, digestive tract, or distant lymph nodes) or to distant skin areas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment for Melanoma
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Upon diagnosis of melanoma skin cancer, your doctor will discuss the best treatment options. At SSCHRC, your treatment plan will be carefully customised to your specific needs. One or more of the following therapies may be recommended to treat the cancer or manage symptoms:
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        The surgical approach depends on the thickness of the melanoma tumour and whether it has spread.
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li><strong>Melanomas less than 1 millimetre thick:</strong> The most common procedure is a wide excision of the primary tumour.</li>
+                        <li><strong>Melanomas more than 1 millimetre thick:</strong> The principal procedure is also a wide excision. If a large area of skin is removed, a skin graft may be performed simultaneously to replace the removed skin and minimise scarring.</li>
+                        <li><strong>Lymphatic Mapping and Sentinel Lymph Node Biopsy (SLNB):</strong> This procedure involves removing and checking the "sentinel" lymph nodes—the first nodes that receive drainage from the primary tumour site—for cancer spread.</li>
+                        <li><strong>Regional Lymph Node Metastasis (Lymph Node Dissection):</strong> If the melanoma has spread to the regional lymph nodes, a surgical procedure called a lymph node dissection (or lymphadenectomy) is often performed.</li>
+                    </ul>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer radiation therapy uses high-energy beams to destroy cancer cells and may be used as part of your treatment plan, sometimes combined with chemotherapy.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        These innovative treatments are designed to target the specific genetic and molecular alterations within melanoma tumour cells. Treatment may include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>B-RAF inhibitors</li>
+                        <li>KIT inhibitors</li>
+                        <li>Other novel treatments available through clinical trials</li>
+                    </ul>
+                </div>
+
+                <!-- Immunotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immunotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Immunotherapy is an advanced treatment that harnesses the body's natural immune system to fight the cancer. It is generally used for advanced melanoma that has spread to distant parts of the body. Treatment options may include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Interferon-alpha</li>
+                        <li>Anti-CTLA-4</li>
+                        <li>Vaccines</li>
+                        <li>Interleukin 2</li>
+                        <li>T Cell therapy</li>
+                        <li>Biochemotherapy</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-3">
+                        In some cases, chemotherapy may be combined with Interleukin 2, Interferon, or T-cell therapy.
+                    </p>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC offers the most modern and effective chemotherapy options, which may be used to treat the cancer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Follow-up -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Follow-up After Treatment
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-xl p-8 bg-gradient-to-r from-blue-50 to-green-50 border-l-4" style="border-color: #2E8B57;">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Patients who have had melanoma have an increased risk of developing new melanomas or experiencing a recurrence (the cancer returning) in nearby skin or other parts of the body. To ensure early detection of any new or recurrent melanoma, you must adhere to your doctor's schedule for regular check-ups. For patients at high risk of recurrence, follow-up care may include X-rays, blood tests, and imaging scans of the chest, liver, bones, and brain. Regular checks for melanoma are also advised for your family members.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+

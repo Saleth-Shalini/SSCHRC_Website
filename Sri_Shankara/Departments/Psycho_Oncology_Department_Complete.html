@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Psycho-Oncology: Caring for the Mind and Spirit</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+    
+    <!-- Additional Meta Tags -->
+    <meta name="description" content="Department of Psycho-Oncology: Caring for the Mind and Spirit">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Mobile spacing optimizations */
+        @media (max-width: 768px) {
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Reduce excessive margins on mobile */
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-12 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Reduce grid gaps on mobile */
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Reduce space-y spacing on mobile */
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+            
+            .space-y-12 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            /* Reduce padding in cards and containers on mobile */
+            .p-8 {
+                padding: 1rem !important;
+            }
+            
+            .rounded-2xl.p-8 {
+                padding: 1.25rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Onco-Psychiatry.jpg" 
+                alt="Department of Psycho-Oncology"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Onco-Psychiatry.jpg" 
+                alt="Department of Psycho-Oncology"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: Department Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Psycho-Oncology Department Overview
+                </h2>
+                <!-- <p class="text-2xl text-gray-700 mt-4">
+                    Full Department Name: PSYCHO ONCOLOGY
+                </p> -->
+            </div>
+            
+            <!-- Mission & Vision -->
+            <div class="mb-12">
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-bullseye mr-3" style="color: #1e40af;"></i>
+                        Mission & Vision of the Department
+                    </h4>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h5 class="text-xl font-bold text-gray-900 mb-3">Mission</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                To provide compassionate, evidence-based psychological support that enhances the quality of life and emotional well-being of cancer patients and their families across all stages of treatment and survivorship.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h5 class="text-xl font-bold text-gray-900 mb-3">Vision</h5>
+                            <p class="text-gray-700 leading-relaxed">
+                                To be a nationally recognized leader in psycho-oncological care, training, and research, committed to holistic healing and equitable mental health access within oncology.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brief History of the Department -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Brief History of the Department</h3>
+                
+                <div class="space-y-6 mb-8">
+                    <!-- <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-green-50 to-white">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-calendar-alt mr-3" style="color: #2E8B57;"></i>
+                            When was it established?
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            The Department of Psycho-Oncology at SSCHRC, Bengaluru was formally established in 2018 with the aim of integrating psychological care into the comprehensive treatment of cancer patients and their families.
+                        </p>
+                    </div> -->
+                    
+                    <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-orange-50 to-white">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-history mr-3" style="color: #FF4500;"></i>
+                            Background / Context of How It Started
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            Recognizing the profound psychological impact that a cancer diagnosis and treatment can have on patients and caregivers, the department was founded to address the unmet emotional, cognitive, and psychosocial needs of oncology patients. The initiative began as a collaboration between oncologists and mental health professionals who saw the need for a dedicated psycho-oncological service within the cancer care framework.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Major Upgrades or Changes Over Time -->
+                <!-- <div class="mb-8">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-arrow-up mr-3" style="color: #FF4500;"></i>
+                        Major Upgrades or Changes Over Time
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-orange-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Digital Mental Health:</strong> Introduction of digital mental health support and telepsychology services during the COVID-19 pandemic.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Research Expansion:</strong> Expansion into research on distress screening, dignity therapy, quality of life, and mental health outcomes in cancer care.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Mindfulness Integration:</strong> Integration of mindfulness-based interventions into routine psycho-oncological care. Along with using evidence based practices.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Specialized Services:</strong> Addition of specialized services like trauma-informed therapy, LGBTQIA+ affirmative care, and end-of-life communication training with grief and bereavement counselling.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Psychosocial Screening:</strong> Psychosocial screening of all new registration patients or along the trajectory of treatment.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-xl p-6 border-l-4" style="border-color: #FF4500;">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Pre-Treatment Evaluation:</strong> Psychosocial evaluation prior to treatment (mainly head and neck surgeries, colostomy, mastectomy and chemotherapy).
+                            </p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-xl p-6 border-l-4 md:col-span-2" style="border-color: #FF4500;">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Follow-up Care:</strong> Follow up of patients at every trajectory of treatment.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Department's Role within the Hospital -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Department's Role within the Hospital
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Assessment & Intervention -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-clipboard-check mr-3" style="color: #2E8B57;"></i>
+                        Assessment & Intervention
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Screening and assessment of psychological distress and associated symptoms.
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Addressing treatment adherence and distress management to improve quality of life and outcomes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Providing emotional and psychological support and psychotherapy for patients and caregivers during treatment and survivorship</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Comprehensive screening and assessment of psychological distress, treatment-related anxiety, depression, cognitive changes, and other psychosocial challenges.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Paediatric Psycho-Oncology -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-child mr-3" style="color: #FF4500;"></i>
+                        Paediatric Psycho-Oncology
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>Comprehensive emotional, behavioural, developmental and family-centered psychological support to children with cancer and their caregivers through assessment, psycho education and intervention across ill trajectory.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>Collaborated with Pediatric Oncology to celebrate Mother's Day and Christmas, creating therapeutic spaces for joy, bonding, and emotional support for children and their families.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Palliative & End-of-Life Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-heart mr-3" style="color: #1e40af;"></i>
+                        Palliative & End-of-Life Care
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Providing palliative care psychotherapeutic interventions with Supporting end-of-life discussions with sensitivity and patient-centered approaches</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Dignity Therapy for patients</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Navigating caregiver distress and burden</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Providing Grief & Bereavement Therapy to family members</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Specialized psychotherapeutic support in palliative and terminal care settings.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Comprehensive caregiver support addressing anticipatory grief, emotional burden, and bereavement through structured interventions.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Support Group Meetings -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-users mr-3" style="color: #9333ea;"></i>
+                        Support Group Meetings
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Regular psychoeducation sessions to assist patients and caregivers in understanding and coping with emotional and psychological challenges during treatment.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Structured support group meetings for patients with shared diagnoses to foster peer connection and communal resilience.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Ongoing FREE SUPPORT GROUP MEETINGS include: Chemotherapy Support, Breast Cancer Support, Caregivers Group, and Stoma Support Group.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- De-Addiction Clinic -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-pills mr-3" style="color: #14b8a6;"></i>
+                        De-Addiction Clinic
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Started 3 months ago.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Identification of prevalence of substance use disorders, evaluation of underlying psychological concerns, awareness on benefits of de-addiction, assessment of motivation and dependence levels</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Treatment: Providing required detoxification with pharmacological intervention along with evidence-based practices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Family dynamics & intervention: Evaluating the perpetuating factors and expressed emotions hindering the rehabilitation process, and offering long-term recovery plan to enhance family functioning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Rehabilitation & Relapse prevention</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Wigs & Prosthesis -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-user-md mr-3" style="color: #dc2626;"></i>
+                        Wigs & Prosthesis
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+                            <span>Awareness about wigs for patients who have experienced hair loss due to treatment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+                            <span>Awareness about breast prosthesis for patients who have undergone mastectomy (breast surgery) and other available resources.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departmental Profile -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Departmental Profile
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Type of Unit</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The Department of Psycho-Oncology functions as a specialized service line and collaborative referral center, actively supporting all oncology units—including medical, surgical, head & neck, pediatric, and palliative care—by offering integrated psychological care.
+                    </p>
+                </div>
+                
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Interdepartmental Collaboration</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Works in tandem with oncology, palliative medicine, radiation oncology, head & neck oncology and other teams for holistic, multidisciplinary patient management.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Participates in tumor boards, case discussions, and end-of-life care planning.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Contributes to research, training, and capacity-building initiatives across departments.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Departmental Strengths</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>Holistic, lifespan approach addressing psychological needs from pediatric diagnosis to end-of-life care and beyond.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>Integrated, multidisciplinary model embedded within cancer care units for timely intervention.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-600 mr-3 mt-1"></i>
+                            <span>Evidence-based and inclusive practices, including trauma-informed, LGBTQIA+ affirmative, and family-centered care.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-purple-50 to-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Recent Developments & Highlights</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Launch of a dedicated De-Addiction Clinic to support oncology patients with substance use disorders.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Expansion of support groups to address niche populations like stoma and caregivers.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Integration of Dignity Therapy and grief support into palliative care protocols.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                            <span>Training modules introduced for staff in emotional communication, stress management, trauma-informed care, and burnout prevention.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Services & Specialties -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Services & Specialties
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    List of Services Offered – Psycho-Oncology Department
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Psychological Assessment -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Psychological Assessment</h3>
+                    <p class="text-gray-700 text-sm mb-3">Evaluation of distress, anxiety, depression, trauma responses, and cognitive concerns</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / IP</p>
+                </div>
+                
+                <!-- Psychotherapy Sessions -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Psychotherapy Sessions (Outpatient)</h3>
+                    <p class="text-gray-700 text-sm mb-3">Individual therapy addressing anxiety, depression, adjustment, grief, trauma, and identity concerns</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP</p>
+                </div>
+                
+                <!-- Trauma-Informed Care -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Trauma-Informed Care</h3>
+                    <p class="text-gray-700 text-sm mb-3">Therapy and support designed with sensitivity to patients' past trauma, ensuring emotional safety</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / IP</p>
+                </div>
+                
+                <!-- Queer-Affirmative Therapy -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #9333ea;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Queer-Affirmative Therapy</h3>
+                    <p class="text-gray-700 text-sm mb-3">Psychotherapy that is inclusive, identity-affirming, and sensitive to the needs of LGBTQIA+ individuals</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP</p>
+                </div>
+                
+                <!-- Family & Caregiver Counseling -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Family & Caregiver Counseling</h3>
+                    <p class="text-gray-700 text-sm mb-3">Emotional support and guidance for caregivers, focusing on coping, burnout, and family dynamics</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / IP</p>
+                </div>
+                
+                <!-- Pediatric Psycho-Oncology Interventions -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pediatric Psycho-Oncology Interventions</h3>
+                    <p class="text-gray-700 text-sm mb-3">Emotional and developmental support for children with cancer and their families</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / IP</p>
+                </div>
+                
+                <!-- Support Group Therapy -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Support Group Therapy</h3>
+                    <p class="text-gray-700 text-sm mb-3">Facilitated group sessions for patients and caregivers (e.g., chemo, breast, stoma)</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP</p>
+                </div>
+                
+                <!-- Dignity Therapy -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #9333ea;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dignity Therapy</h3>
+                    <p class="text-gray-700 text-sm mb-3">Structured life review sessions that promote meaning-making at the end of life</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> IP / Palliative</p>
+                </div>
+                
+                <!-- Grief & Bereavement Counseling -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Grief & Bereavement Counseling</h3>
+                    <p class="text-gray-700 text-sm mb-3">Support for family members coping with loss and complicated grief</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP</p>
+                </div>
+                
+                <!-- Palliative Care Psychological Support -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Palliative Care Psychological Support</h3>
+                    <p class="text-gray-700 text-sm mb-3">Counseling for patients in palliative and terminal phases, focused on quality of life</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> IP</p>
+                </div>
+                
+                <!-- De-Addiction Services -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">De-Addiction Services</h3>
+                    <p class="text-gray-700 text-sm mb-3">Therapy and pharmacological support for substance use, including family involvement and rehab planning</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / IP</p>
+                </div>
+                
+                <!-- Mental Health Screening -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mental Health Screening</h3>
+                    <p class="text-gray-700 text-sm mb-3">Routine distress screening for patients undergoing cancer treatment</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / IP / Daycare</p>
+                </div>
+                
+                <!-- Crisis Counseling -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #9333ea;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Crisis Counseling</h3>
+                    <p class="text-gray-700 text-sm mb-3">Immediate psychological intervention for acute emotional distress</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> IP / Emergency</p>
+                </div>
+                
+                <!-- Psychoeducation Sessions -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Psychoeducation Sessions</h3>
+                    <p class="text-gray-700 text-sm mb-3">Educational sessions on coping strategies, mental health literacy, and emotional preparedness</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / Daycare</p>
+                </div>
+                
+                <!-- Art and Expressive Therapies -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Art and Expressive Therapies</h3>
+                    <p class="text-gray-700 text-sm mb-3">Creative therapeutic tools (e.g., drawing, storytelling) for emotional expression, especially in children</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP / Pediatric / Daycare</p>
+                </div>
+                
+                <!-- Yoga and Mindfulness Sessions -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Yoga and Mindfulness Sessions</h3>
+                    <p class="text-gray-700 text-sm mb-3">Evidence-based relaxation practices to enhance coping and emotional regulation</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> OP</p>
+                </div>
+                
+                <!-- Training & Supervision for Interns -->
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 md:col-span-2" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Training & Supervision for Interns</h3>
+                    <p class="text-gray-700 text-sm mb-3">Hands-on clinical training, case discussions, and supervision for psychology interns and fellows</p>
+                    <p class="text-sm text-gray-600"><strong>Available:</strong> Academic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Sets Our Department Apart -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Sets Our Department Apart
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-green-50 to-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-heart mr-3" style="color: #2E8B57;"></i>
+                        Holistic, Patient-Centered Care
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We address the psychological, emotional, social, and cultural needs of cancer patients and their families—not just the illness. Our care extends from diagnosis through survivorship, palliative care, and bereavement, ensuring continuous psychological support throughout the cancer journey.
+                    </p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-orange-50 to-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-user-md mr-3" style="color: #FF4500;"></i>
+                        Specialized & Inclusive Psychotherapies
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our team is trained in trauma-informed care, queer-affirmative therapy, dignity therapy, and grief counseling, making our services sensitive, inclusive, and aligned with global best practices in psycho-oncology.
+                    </p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-blue-50 to-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-users mr-3" style="color: #1e40af;"></i>
+                        Collaborative & Integrated Model
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We work closely with oncology, pediatric, surgical, and palliative care teams, participating in multidisciplinary case discussions and treatment planning to ensure psychological support is embedded in medical care.
+                    </p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-purple-50 to-white border-l-4" style="border-color: #9333ea;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-hands-helping mr-3" style="color: #9333ea;"></i>
+                        Focus on Under-Served Populations
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our services extend beyond the hospital through outreach in geriatric care homes, support groups, and community awareness, and we are actively involved in de-addiction interventions within the oncology population—an area often overlooked.
+                    </p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-teal-50 to-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-graduation-cap mr-3" style="color: #14b8a6;"></i>
+                        Academic and Research Contributions
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        With paper presentations at national conferences (ASCO, APPON, IPOS) and award-winning research publications, our department contributes to the academic and clinical advancement of psycho-oncology in India.
+                    </p>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-r from-indigo-50 to-white border-l-4" style="border-color: #6366f1;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-chalkboard-teacher mr-3" style="color: #6366f1;"></i>
+                        Commitment to Training Future Professionals
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We provide structured training and supervision to interns, postgraduate students, and fellows, helping shape the next generation of mental health professionals in oncology care.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Patient Group, Collaborations, Specialties, USPs -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-12">
+                <!-- Target Patient Group -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Target Patient Group</h3>
+                    <ul class="grid md:grid-cols-2 gap-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>All age groups: children to elderly</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>All gender identities, LGBTQIA+ inclusive</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Patients across all cancer types and stages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Caregivers and families</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Multidisciplinary Collaborations -->
+                <!-- <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Multidisciplinary Collaborations</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Work closely with: Medical, Surgical, Radiation & Pediatric Oncology, Palliative Care, Nursing, Nutrition, Physiotherapy, Social Work
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-600 mr-3 mt-1"></i>
+                            <span>Participate in tumor boards and care planning</span>
+                        </li>
+                    </ul>
+                </div> -->
+                
+                <!-- Specialties & Sub-Specialties -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Specialties & Sub-Specialties</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                                <span>Pediatric Psycho-Oncology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                                <span>Palliative & End-of-Life Care</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                                <span>Trauma-Informed Therapy</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                                <span>Queer-Affirmative Psychotherapy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                                <span>Grief & Bereavement Counseling</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                                <span>Oncology-focused De-Addiction Services</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Advanced Interventions -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Advanced Interventions</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                                <span>Dignity Therapy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                                <span>End-of-life communication support</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                                <span>De-addiction counseling in cancer patients</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-3 mt-1"></i>
+                                <span>Trauma-informed and identity-affirming psychotherapy</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Patient Flow Pathway -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Patient Flow Pathway</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Referral → Screening → Assignment → Therapy → Review → Specialized Support → Follow-up
+                    </p>
+                </div>
+                
+                <!-- USPs -->
+                <!-- <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">USPs (What Makes Us Stand Out)</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-green-600 mr-3 mt-1"></i>
+                            <span>Full continuum of psychological care from diagnosis to survivorship or end-of-life</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-green-600 mr-3 mt-1"></i>
+                            <span>Inclusive, trauma-informed, and LGBTQIA+ affirmative approach</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-green-600 mr-3 mt-1"></i>
+                            <span>Integrated into medical care for seamless support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-green-600 mr-3 mt-1"></i>
+                            <span>Recognized nationally for training, research, and advocacy</span>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Milestones or Recognitions -->
+        <div class="mb-8">
+            <h4 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-trophy mr-3" style="color: #2E8B57;"></i>
+                Milestones or Recognitions
+            </h4>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>2018:</strong> The department was among the first in the region as a charitable hospital to implement structured psychological screening protocols in oncology settings. Using NCCN distress thermometer as screening for all cases at the hospital.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Service Expansion:</strong> It has since expanded its services to include pediatric psycho-oncology, palliative care support, grief counseling, and various support groups.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>COVID-19 Pandemic:</strong> The department played a vital role during the COVID-19 pandemic, providing ongoing psychological support to patients, caregivers, and frontline healthcare workers.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Education:</strong> Regularly conducts nursing education sessions for students at Shankara Nursing College, enhancing their understanding of psychosocial aspects in oncology care.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Policy Advocacy:</strong> Represented the department as a panelist in a strategic health policy discussion with the Honorable Health Minister of Karnataka, Mr. Dinesh Gundu Rao, advocating for the integration of Psycho-Oncology services in all hospitals.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>ASCO Bengaluru 2024:</strong> Participated as a panelist at ASCO Bengaluru 2024, addressing psychosocial determinants of suicidal ideation in patients with lung cancer.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Community Outreach:</strong> Delivered a session on psychological well-being and quality of life for elderly residents and their families at a local geriatric care home.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>IPOS Conference 2020:</strong> Attended the IPOS Psycho-Oncology international Conference in Chennai (2020), staying abreast of global best practices and research in the field.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>APPON 2025:</strong> At APPON 2025, Chennai, department members actively contributed through paper presentations and panel discussions. One team member was honored with the Best Paper Presentation Award.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Research Publication:</strong> Published a research paper titled "Barriers to Seeking Psychological Support and Its Associated Socio-Cultural Factors in an Oncology Setting: A Mixed Methods Study" in the book "Breaking Barriers: Advancing Psychological Well-being Across Borders" (ISBN: 978-93-341-6827-3).
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>APPON 2024:</strong> Authored and published three research papers in the APPON 2024 conference proceedings.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Mental Health Day:</strong> Organizes annual Mental Health Day celebrations to foster awareness, dialogue, and well-being among hospital staff.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Survivor's Day:</strong> Hosts Survivor's Day Celebrations every year, honoring the journeys and resilience of cancer survivors and their families.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Training Programs:</strong> The department is actively involved in training psychology interns, postgraduate students, and fellows, offering hands-on experience in psycho-oncology in a multi-disciplinary team. Interns receive structured guidance in assessment, intervention planning, psychotherapy delivery, and interdisciplinary collaboration, with regular supervision and case-based learning to build clinical competence and confidence.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 rounded-xl p-6 border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong>Pediatric Collaboration:</strong> Collaborated with Pediatric Oncology to celebrate Mother's Day and Christmas, creating therapeutic spaces for joy, bonding, and emotional support for children and their families.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Psycho-Oncology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our specialized psycho-oncology experts dedicated to caring for the mind and spirit.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Doctor 1: Dr. Pavithra H -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Pavithra H.webp" alt="Dr. Pavithra H" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Pavithra+H'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Pavithra H</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, DPM (May 2018)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Psycho-Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Friday</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>8 years of experience</span>
+                                </div>
+                               
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Pavithra H.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2: Ms Rakshatha J -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Ms. Rakshatha J.webp" alt="Ms Rakshatha J" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Ms+Rakshatha+J'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Ms Rakshatha J</h3>
+                            <p class="text-sm text-gray-600 mb-2">MSc - Clinical Psychology (2022)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Psychologist</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Psycho-Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Saturday: 9:00 AM to 6:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>4 years of experience</span>
+                                </div>
+                                
+                            </div>
+                            
+                            <a href="../Doctors/Ms. Rakshatha J.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Doctor Card Styles - Scoped to doctors section only */
+        #doctors .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        #doctors .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        #doctors .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        #doctors .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        #doctors .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            #doctors .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            #doctors .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            #doctors .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            #doctors .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            #doctors .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            #doctors .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        #doctors .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        #doctors .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        #doctors .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        #doctors .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        #doctors .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #doctors .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        #doctors .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        #doctors .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        #doctors .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        #doctors .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        #doctors .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                    resetAutoRotate();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselTrack = document.getElementById('carouselTrack');
+        if (carouselTrack) {
+            carouselTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer id="hospital-footer"></footer>
+    <script src="../footer.js"></script>
+
+    <!-- Chatbox -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="../chatbox.js"></script>
+    <script src="../footer-main.js"></script>
+
+</body>
+</html>
+

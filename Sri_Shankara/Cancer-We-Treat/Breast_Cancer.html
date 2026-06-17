@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast cancer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: General Information -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    General Information
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Breast cancer begins when a cell within the breast undergoes a mutation and starts to multiply at an uncontrolled rate. With over many breast cancer diagnoses each year in India, new and advanced treatments have fortunately elevated the disease's five-year survival rate to approximately 90%.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Anatomy of the Breast -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Anatomy of the Breast
+                </h2>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Every individual, irrespective of biological sex, possesses some amount of breast tissue. The breast rests atop the pectoral (chest) muscles and is primarily composed of fatty tissue and connective tissue, which determine its shape. Breasts also contain small, bean-shaped organs called lymph nodes, which are vital for transporting immune cells and eliminating waste. In women, specialised glands known as lobules produce milk. These lobules connect to the nipple via small channels called ducts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Understanding the Disease -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Understanding the Disease
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Breast cancer results from the uncontrolled growth and multiplication of breast tissue cells. While it predominantly affects women, it can also occur in men. Your prognosis and treatment options are determined by several key factors:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <p class="text-gray-700 leading-relaxed">
+                        The origin point of the cancer within the breast.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <p class="text-gray-700 leading-relaxed">
+                        Whether the cancer is invasive or non-invasive.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <p class="text-gray-700 leading-relaxed">
+                        The molecular receptor status of the cancer cells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Where Breast Cancer Starts -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Where Breast Cancer Starts
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Although breast cancer can originate in various tissue types, most cases are categorised as either:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Ductal carcinomas</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer that begins in the ducts.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Lobular carcinomas</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer that begins in the lobule glands.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Non-Invasive vs. Invasive Cancer -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Non-Invasive vs. Invasive Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Both ductal and lobular carcinomas are further classified based on whether they have spread to the surrounding tissue:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Non-invasive ductal carcinoma (Ductal Carcinoma in Situ or DCIS)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is an early stage of cancer that remains confined within the ducts. It is often detected during routine screening. If it spreads to surrounding tissue, it becomes invasive ductal carcinoma, which is the most commonly diagnosed form of breast cancer.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Non-invasive lobular carcinoma (Lobular Carcinoma in Situ)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is less common and is not strictly classified as cancer, but it indicates a higher risk for developing breast cancer later. If it spreads to other tissue or lymph nodes within the breast, it is considered invasive lobular carcinoma.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Molecular Receptor Status -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Molecular Receptor Status of Cancer Cells
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Receptors are molecules produced on the surface of cancer cells. They are capable of binding with specific proteins and hormones in the patient's body, a process termed 'recognition'. Researchers have identified certain receptors that accelerate the growth and spread of the disease. Interrupting this recognition process with targeted medications can slow or stop the cancer's progression.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The three main receptor subtypes, which significantly influence prognosis and treatment, are:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">HER2-positive</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Indicates much higher than normal levels of the HER2 protein, which promotes cell growth and multiplication.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hormone receptor-positive</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Recognises the hormones oestrogen and progesterone.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Triple-negative</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Does not recognise HER2, oestrogen, or progesterone. Lacking a molecular receptor to target, this is often the most challenging subtype to treat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Male Breast Cancer -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Male Breast Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Though less frequent, thousands of men are diagnosed with breast cancer. The average age at diagnosis for men is 67, compared to 62 for women. The five-year survival rate is slightly lower for men, often because the cancer is typically more advanced when diagnosed—tumours are larger, and the cancer is more likely to have spread to regional lymph nodes. This is often attributed to a general lack of awareness and the absence of widespread screening for the disease in men.
+                </p>
+            </div>
+
+            <!-- Risk Factors for Male Breast Cancer -->
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Risk Factors for Male Breast Cancer</h3>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Factors that increase a man's chance of developing breast cancer include:
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <h5 class="font-bold text-gray-900 mb-2">BRCA Mutations</h5>
+                        <p class="text-gray-700 leading-relaxed">
+                            Mutations in the BRCA1 and BRCA2 genes, which normally suppress tumours, are present in 8%-15% of male breast cancer patients.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <h5 class="font-bold text-gray-900 mb-2">Family History</h5>
+                        <p class="text-gray-700 leading-relaxed">
+                            The risk doubles for men with a parent, sibling, or child who has had the disease.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <h5 class="font-bold text-gray-900 mb-2">Age</h5>
+                        <p class="text-gray-700 leading-relaxed">
+                            The risk increases as men get older.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <h5 class="font-bold text-gray-900 mb-2">Obesity</h5>
+                        <p class="text-gray-700 leading-relaxed">
+                            Increased body weight is a risk factor.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <h5 class="font-bold text-gray-900 mb-2">Gynecomastia</h5>
+                        <p class="text-gray-700 leading-relaxed">
+                            Enlarged breasts caused by hormone imbalance or specific medications.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <h5 class="font-bold text-gray-900 mb-2">Radiation Exposure</h5>
+                        <p class="text-gray-700 leading-relaxed">
+                            Often as a result of treatment for a different cancer.
+                        </p>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Breast cancer symptoms vary greatly from person to person, and there is no fixed definition of how a lump or mass should feel. The most important step is to become familiar with your breasts so you know what is normal for you and to inform your doctor immediately if you notice any changes. While self-exams are important, many breast cancers are detected via regular screening mammograms before symptoms become apparent.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Common Breast Cancer Symptoms May Include:</h3>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            A lump or mass in the breast.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            A lump or mass in the armpit.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Changes to the breast skin, such as redness and thickening, which can result in a texture resembling an orange peel.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Dimpling or puckering on the breast surface.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Discharge from the nipple.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Scaliness on the nipple, sometimes extending to the areola.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Changes to the nipple, including turning inward, pulling to one side, or changing direction.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            An ulcer on the breast or nipple, occasionally extending to the areola.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-4 card-shadow">
+                        <p class="text-gray-700 leading-relaxed">
+                            Swelling of the breast.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to note that these symptoms do not definitively mean breast cancer, but they must be discussed with your doctor as they may signal other health issues.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If you experience symptoms, notice changes in your breasts, or have an abnormal screening result, your doctor will need to conduct a thorough investigation to reach a definitive diagnosis.
+                </p>
+            </div>
+
+            <!-- Initial Examination and Imaging -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Initial Examination and Imaging</h3>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The diagnostic process typically begins with a breast exam, where your doctor manually checks your breasts and armpits for lumps or abnormalities. If breast cancer is suspected, imaging tests will be ordered for a closer look:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Mammogram</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                X-ray pictures of the breasts are taken from different angles to look for signs of cancer.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Ultrasound</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A device uses high-energy sound waves to create a picture (sonogram) of the tissue.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Magnetic Resonance Imaging (MRI)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Occasionally, more specialised examinations like an MRI may be used.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biopsy -->
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        If imaging reveals a suspicious mass or skin thickening, a tissue sample is required for a definitive diagnosis. This process, called a biopsy, involves retrieving and examining the tissue under a microscope.
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>For breast cancer, an image-guided core needle biopsy is typically performed, where live imaging is used to guide the needle precisely to the suspected cancerous tissue.</li>
+                        <li>If the biopsy confirms cancerous tissue, further images and biopsies may be needed to determine the exact extent of the disease, including whether it has spread to nearby lymph nodes or other parts of the body (staging).</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Molecular Diagnosis</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Once a patient is diagnosed, the cancer cells will be analysed to determine the disease's molecular receptor subtype. Understanding this subtype is crucial for developing a comprehensive, personalised treatment plan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Treatment Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Breast cancer treatment is highly individualised and depends on the cancer type, stage, hormone receptor status, and the patient's overall health. Treatment is primarily delivered through surgery, often combined with chemotherapy, radiation therapy, or both, and may also include targeted therapy, hormone therapy, and immunotherapy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Surgery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Surgery
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Surgery is often the first step in treatment. In some cases, chemotherapy or targeted therapy may be given beforehand (neoadjuvant) to shrink the tumour and lymph nodes, making the procedure easier.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The two main types of breast surgery are:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Lumpectomy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The tumour and a small margin of surrounding healthy tissue are removed. This may be an option for early-stage, smaller tumours and is typically followed by radiation therapy.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Mastectomy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The entire breast, including the nipple and areola, is removed. There are various types, and reconstruction can often be performed simultaneously. In high-risk cases (e.g., due to a BRCA mutation), a double mastectomy may be recommended to prevent new cancer development.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Axillary Surgery -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Axillary Surgery</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        This focuses on checking or removing the lymph nodes in the armpit to see if the cancer has spread:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Sentinel Lymph Node Biopsy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A special dye or radioactive tracer locates the sentinel node (the first node to which cancer would likely spread), which is then removed and tested for cancer.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Axillary Lymph Node Dissection</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                If cancer is found in the lymph nodes, several nodes under the arm may be removed to help prevent further spread.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Surgery Side Effects may include:</strong> Pain or swelling in the chest, scarring and potential change in chest shape, numbness or tingling from nerve damage, and lymphedema (arm swelling) if lymph nodes are removed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12: Chemotherapy -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Chemotherapy
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Chemotherapy uses powerful drugs to kill cancer cells, control their growth, or alleviate symptoms. It can be administered as pills, injections, or intravenously (IV), usually in cycles over several months.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Neoadjuvant chemotherapy (before surgery)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Used to shrink larger tumours.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Adjuvant chemotherapy (after surgery)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Helps reduce the risk of the cancer returning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-8 bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <p class="text-gray-700 leading-relaxed">
+                    Chemotherapy is often recommended for larger or aggressive tumours, cancer that has spread to lymph nodes, or HER2-positive or triple-negative cancers.
+                </p>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Chemotherapy Side Effects may include:</strong> Fatigue, hair loss, nausea or vomiting, increased risk of infection, mouth sores, and temporary or long-term fertility issues.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 13: Radiation Therapy -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Radiation Therapy
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Radiation therapy uses powerful, focused energy beams to kill cancer cells, precisely targeting the tumour while minimising damage to healthy tissue. It can be used alone or combined with other therapies, either before surgery to shrink tumours or after surgery to destroy any remaining cancer cells. After a lumpectomy, patients often receive three to four weeks of daily radiation; a mastectomy or lymph node involvement may require six weeks.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Specialised techniques offered at SSCHRC include:</h3>
+                
+                <div class="space-y-3 text-gray-700">
+                    <p>3D conformal radiation therapy, Intensity-Modulated Radiation Therapy (IMRT), Volumetric Arc Therapy (VMAT), Accelerated Partial Breast Irradiation (APBI), Stereotactic Body Radiation Therapy, and Stereotactic Radiosurgery. SSCHRC breast radiation oncologists are dedicated exclusively to breast cancer care.</p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Radiation Therapy Side Effects may include:</strong> Skin redness or peeling in the treatment area, fatigue, chest wall discomfort, and rarely, long-term risk of damage to nearby organs like the lungs or heart.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 14: Targeted Therapy -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Targeted Therapy
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Targeted therapies interfere with the specific molecules or genes that cancer cells need to survive, multiply, and spread. They have become a significant tool, particularly for subtypes that historically had a poor prognosis.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Hormone Therapy (Endocrine Therapy)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Given for hormone receptor-positive breast cancer, this treatment blocks hormones or prevents their production. It is often a long-term treatment (five to ten years) after initial therapy to prevent recurrence.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">HER2-Targeted Therapies</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Patients with HER2-positive breast cancer receive specific targeted drugs before and after surgery.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Angiogenesis Inhibitors</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        These drugs disrupt the process of new blood vessel creation (angiogenesis) that some tumours use to grow rapidly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Targeted Therapy Side Effects may include:</strong> Fever or chills, heart problems (especially with certain HER2 drugs), diarrhoea, and skin rashes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 15: Immunotherapy -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Immunotherapy
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-8">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Immunotherapy aims to boost the immune system's ability to detect and destroy cancer cells. This treatment may be used for patients diagnosed with triple-negative breast cancer and is often combined with chemotherapy for more effective results.
+                </p>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Immunotherapy Side Effects may include:</strong> Fatigue, skin problems (rashes, itching), fever and chills, nausea, and diarrhoea.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 16: Survivorship Care for Men -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Survivorship Care for Men with Breast Cancer
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    After completing treatment, consistent follow-up care is essential to maintain health and monitor for any signs of recurrence. Male breast cancer survivors are advised to:
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Get Regular Checkups</h4>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Undergo physical exams and blood tests.</li>
+                        <li>Have mammograms (for men with remaining breast tissue).</li>
+                        <li>Undergo imaging tests, if necessary.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Monitor for Recurrence</h4>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Report any new lumps, chest pain, or swelling immediately.</li>
+                        <li>Track any persistent symptoms or side effects.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Manage Long-Term Side Effects</h4>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Receive care for lymphedema (if lymph nodes were removed).</li>
+                        <li>Seek sexual health support.</li>
+                        <li>Utilise mental health counselling, if needed.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Maintain a Healthy Lifestyle</h4>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Eat a balanced diet.</li>
+                        <li>Exercise regularly.</li>
+                        <li>Limit alcohol and avoid tobacco.</li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Prepare for Possible Fertility and Hormonal Changes</h4>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Be aware that some men may experience lower testosterone levels.</li>
+                        <li>Discuss sperm banking or hormone testing with a doctor before starting treatment if fertility is a concern.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9a799cbb2b81d86d","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>

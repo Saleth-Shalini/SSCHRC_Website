@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+  <!-- Header will be dynamically generated here -->
+  <header id="dynamic-header"></header>
+  
+  <!-- Header JavaScript -->
+  <script src="../header.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancer-We-Treat - Cancer Information Database</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --glass-bg: rgba(255, 247, 237, 0.3);
+      --glass-border: rgba(253, 179, 90, 0.3);
+      --glass-shadow: rgba(253, 179, 90, 0.2);
+      --primary: #fdb35a;
+      --primary-dark: #fdbb6d;
+      --secondary: #fec47f;
+      --accent: #fecc91;
+      --text-light: #1a202c;
+      --text-dark: #1a202c;
+      --hover-bg: rgba(253, 179, 90, 0.15);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%);
+      min-height: 100vh;
+      color: var(--text-dark);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animated background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(253, 179, 90, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(254, 204, 145, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(253, 187, 109, 0.2) 0%, transparent 50%);
+      animation: gradientShift 15s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Glass container */
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header with glass effect */
+    .header {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px var(--glass-shadow);
+      animation: slideDown 0.6s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ff8c00 0%, #ff8c00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      color: var(--text-dark);
+    }
+
+    /* Controls section */
+    .controls {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px var(--glass-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      animation: fadeIn 0.6s ease 0.2s both;
+    }
+    
+    .controls-top {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Search input */
+    .search-input {
+      flex: 1;
+      min-width: 250px;
+      padding: 0.875rem 1.25rem;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(253, 179, 90, 0.3);
+      border-radius: 12px;
+      color: var(--text-dark);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .search-input::placeholder {
+      color: rgba(26, 32, 44, 0.5);
+    }
+
+    .search-input:focus {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(253, 179, 90, 0.2);
+    }
+
+    /* Alphabet filter buttons */
+    .alphabet-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .alphabet-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(253, 179, 90, 0.3);
+      color: var(--text-dark);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(253, 179, 90, 0.2);
+    }
+
+    .alphabet-btn:hover {
+      background: rgba(253, 179, 90, 0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(253, 179, 90, 0.3);
+    }
+
+    .alphabet-btn.active {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      box-shadow: 0 4px 12px rgba(253, 179, 90, 0.4);
+      transform: scale(1.1);
+    }
+
+    .alphabet-btn.active:hover {
+      transform: scale(1.15) translateY(-2px);
+    }
+
+    .alphabet-btn.view-all {
+      width: 120px;
+      height: 45px;
+      border-radius: 25px;
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+
+    .alphabet-btn.view-all.active {
+      transform: scale(1.05);
+    }
+
+    .alphabet-btn.view-all.active:hover {
+      transform: scale(1.1) translateY(-2px);
+    }
+
+    /* Stats bar */
+    .stats {
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat-item {
+      flex: 1;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(253, 179, 90, 0.3);
+    }
+
+    .stat-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      margin-top: 0.25rem;
+      color: var(--text-dark);
+    }
+
+    /* Two column layout */
+    .tables-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      animation: fadeIn 0.6s ease 0.4s both;
+    }
+
+    /* Cancer table */
+    .cancer-table {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px var(--glass-shadow);
+    }
+
+    .table-header {
+      display: grid;
+      grid-template-columns: 80px 2fr;
+      padding: 1.25rem 1.5rem;
+      background: rgba(253, 179, 90, 0.2);
+      border-bottom: 1px solid rgba(253, 179, 90, 0.3);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dark);
+    }
+
+    /* Cancer row */
+    .cancer-row {
+      border-bottom: 1px solid rgba(253, 179, 90, 0.15);
+      transition: all 0.3s ease;
+      animation: slideIn 0.4s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .cancer-row:hover {
+      background: var(--hover-bg);
+    }
+
+    .cancer-row:last-child {
+      border-bottom: none;
+    }
+
+    .cancer-main {
+      display: grid;
+      grid-template-columns: 80px 2fr;
+      padding: 1.25rem 1.5rem;
+      align-items: center;
+    }
+
+    .row-number {
+      font-weight: 600;
+      opacity: 0.6;
+      font-size: 0.875rem;
+      color: var(--text-dark);
+    }
+
+    .cancer-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+    }
+
+    .cancer-name a {
+      transition: all 0.3s ease;
+      color: var(--text-dark);
+    }
+
+    .cancer-name a:hover {
+      color: var(--primary) !important;
+      transform: translateX(5px);
+    }
+
+    /* Empty state */
+    .empty-state {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .empty-state-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    .empty-state-text {
+      font-size: 1.25rem;
+      opacity: 0.8;
+      color: var(--text-dark);
+    }
+
+    /* Responsive design */
+    @media (max-width: 1200px) {
+      .tables-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tables-container .cancer-table:nth-child(2) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .table-header,
+      .cancer-main {
+        grid-template-columns: 70px 1.5fr;
+        gap: 0.75rem;
+      }
+      
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .header {
+        padding: 1.5rem;
+      }
+      
+      .header h1 {
+        font-size: 1.75rem;
+      }
+      
+      .controls-top {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .search-input {
+        width: 100%;
+      }
+      
+      .alphabet-filter {
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+      
+      .alphabet-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 0.8rem;
+      }
+      
+      .alphabet-btn.view-all {
+        width: 100px;
+        height: 38px;
+        font-size: 0.85rem;
+      }
+      
+      .stats {
+        flex-direction: row;
+        gap: 0.75rem;
+      }
+
+      .stat-item {
+        flex: 1;
+        padding: 0.75rem;
+      }
+
+      .stat-value {
+        font-size: 1.25rem;
+      }
+
+      .stat-label {
+        font-size: 0.75rem;
+      }
+      
+      .table-header {
+        grid-template-columns: 60px 1fr;
+        padding: 1rem;
+        font-size: 0.75rem;
+      }
+      
+      .cancer-main {
+        grid-template-columns: 60px 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+      
+      .row-number {
+        font-size: 0.75rem;
+      }
+      
+      .cancer-name {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Scrollbar styling - more visible */
+    ::-webkit-scrollbar {
+      width: 14px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 247, 237, 0.5);
+      border-radius: 10px;
+      border: 1px solid rgba(253, 179, 90, 0.2);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 10px;
+      border: 2px solid rgba(255, 247, 237, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+    }
+
+    /* Firefox scrollbar */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary) rgba(255, 247, 237, 0.5);
+    }
+
+    /* Selection styling */
+    ::selection {
+      background: var(--primary);
+      color: white;
+    }
+
+    ::-moz-selection {
+      background: var(--primary);
+      color: white;
+    }
+  </style>
+  
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Cancers You Should Know</h1>
+      <p>Comprehensive directory of cancer types and their information</p>
+    </div>
+
+    <div class="controls">
+      <div class="controls-top">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search cancer types..."
+        />
+        
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-value" id="totalCount">0</span>
+            <span class="stat-label">Total Cancers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="displayedCount">0</span>
+            <span class="stat-label">Displayed</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="alphabet-filter" id="alphabetFilter">
+      </div>
+    </div>
+
+    <div class="tables-container">
+      <div class="cancer-table">
+        <div class="table-header">
+          <div>Sl. No.</div>
+          <div>Cancer Name</div>
+        </div>
+        <div id="cancerTableBodyLeft">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading cancer data...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cancer-table">
+        <div class="table-header">
+          <div>Sl. No.</div>
+          <div>Cancer Name</div>
+        </div>
+        <div id="cancerTableBodyRight">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading cancer data...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to convert filename to display name
+    function filenameToDisplayName(filename) {
+      // Remove .html extension
+      let name = filename.replace(/\.html$/, '');
+      // Replace underscores with spaces
+      name = name.replace(/_/g, ' ');
+      // Handle special cases with parentheses
+      name = name.replace(/\s*\(/g, ' (');
+      // Capitalize first letter of each word, but preserve acronyms in parentheses
+      name = name.split(' ').map(word => {
+        if (word.startsWith('(') && word.length > 1) {
+          return '(' + word.charAt(1).toUpperCase() + word.slice(2);
+        }
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }).join(' ');
+      // Fix common acronyms
+      name = name.replace(/\bAll\b/gi, 'ALL');
+      name = name.replace(/\bAml\b/gi, 'AML');
+      name = name.replace(/\bCll\b/gi, 'CLL');
+      name = name.replace(/\bCml\b/gi, 'CML');
+      name = name.replace(/\bAlcl\b/gi, 'ALCL');
+      name = name.replace(/\bDsrct\b/gi, 'DSRCT');
+      name = name.replace(/\bIbc\b/gi, 'IBC');
+      name = name.replace(/\bNsclc\b/gi, 'NSCLC');
+      name = name.replace(/\bSclc\b/gi, 'SCLC');
+      name = name.replace(/\bGist\b/gi, 'GIST');
+      name = name.replace(/\bMalt\b/gi, 'MALT');
+      name = name.replace(/\bMcl\b/gi, 'MCL');
+      name = name.replace(/\bMzl\b/gi, 'MZL');
+      name = name.replace(/\bDlbcl\b/gi, 'DLBCL');
+      name = name.replace(/\bSll\b/gi, 'SLL');
+      name = name.replace(/\bMgus\b/gi, 'MGUS');
+      name = name.replace(/\bPnets\b/gi, 'PNETs');
+      name = name.replace(/\bIpmn\b/gi, 'IPMN');
+      name = name.replace(/\bRars\b/gi, 'RARS');
+      name = name.replace(/\bRcmd\b/gi, 'RCMD');
+      name = name.replace(/\bRaeb\b/gi, 'RAEB');
+      name = name.replace(/\bCmml\b/gi, 'CMML');
+      name = name.replace(/\bPv\b/gi, 'PV');
+      name = name.replace(/\bEt\b/gi, 'ET');
+      name = name.replace(/\bPmf\b/gi, 'PMF');
+      name = name.replace(/\bCup\b/gi, 'CUP');
+      name = name.replace(/\bIdh\b/gi, 'IDH');
+      name = name.replace(/\bMds\b/gi, 'MDS');
+      name = name.replace(/\bRas\b/gi, 'RAS');
+      return name;
+    }
+
+    // Get category from first letter of display name
+    function getCategory(displayName) {
+      const firstLetter = displayName.charAt(0).toUpperCase();
+      return firstLetter;
+    }
+
+    // Actual cancer pages that exist in the Cancer-We-Treat folder
+    const cancerFiles = [
+      'Acoustic_Neuroma.html',
+      'Acute Lymphocytic Leukaemia (ALL).html',
+      'Acute_Myeloid_Leukaemia_AML.html',
+      'Adrenal_Tumours.html',
+      'adult_histiocyte_disorders.html',
+      'anal_cancer_webpage.html',
+      'Appendix_Cancer_Comprehensive_Overview.html',
+      'Astrocytoma_IDH_Mutant.html',
+      'B_cell_Lymphoma.html',
+      'basal_cell_carcinoma.html',
+      'Biliary_and_Gallbladder_Cancer.html',
+      'bladder_cancer.html',
+      'bone_cancer_webpage.html',
+      'brain_tumours.html',
+      'Breast_Cancer.html',
+      'Breast_Implant_Associated_ALCL.html',
+      'Cancer_of_Unknown_Primary_CUP.html',
+      'Cervical_Cancer.html',
+      'Childhood_Acute_Lymphocytic_Leukemia.html',
+      'Childhood_Acute_Myeloid_Leukaemia.html',
+      'Childhood_Brain_and_Spine_Tumours.html',
+      'Childhood_Germ_Cell_Tumours.html',
+      'Childhood_Haematology_Disorders.html',
+      'Childhood_Liver_Cancer.html',
+      'Childhood_Lymphoma.html',
+      'Childhood_Melanoma.html',
+      'Chronic_Lymphocytic_Leukemia_CLL.html',
+      'Chronic_Myeloid_Leukemia_CML.html',
+      'Colorectal_Cancer.html',
+      'Cutaneous_T_cell_Lymphoma.html',
+      'Desmoplastic_Small_Round_Cell_Tumours.html',
+      'Ductal_Carcinoma_in_Situ.html',
+      'Endometrial_Cancer.html',
+      'Esophageal_Cancer.html',
+      'ewing_sarcoma.html',
+      'Eye_Cancer.html',
+      'gallbladder_cancer.html',
+      'gastrointestinal_cancer.html',
+      'Gestational_Trophoblastic_Disease.html',
+      'Glioblastoma.html',
+      'Gynecologic_Cancers.html',
+      'Head_and_Neck_Cancer.html',
+      'Histiocytosis.html',
+      'Hodgkin_Lymphoma.html',
+      'Hypopharyngeal_Cancer.html',
+      'Inflammatory_Breast_Cancer.html',
+      'Kidney_Cancer.html',
+      'Laryngeal_Cancer.html',
+      'Leukaemia.html',
+      'Liver_Cancer.html',
+      'Lung_Cancer.html',
+      'Lymphoma.html',     
+      'Mantle_Cell_Lymphoma.html',
+      'Medulloblastoma.html',
+      'Melanoma.html',
+      'Merkel Cell Carcinoma.html',
+      'Mesothelioma.html',
+      'Multiple Myeloma.html',
+      'Multiple_Endocrine_Neoplasia.html',
+      'Myelodysplastic_Syndrome_MDS.html',
+      'Myeloproliferative_Neoplasms.html',
+      'Nasopharyngeal_Throat_Cancer.html',
+      'Neuroblastoma.html',
+      'Neuroendocrine_Tumours.html',
+      'Neurofibromatosis.html',
+      'Non_Hodgkin_Lymphoma.html',
+      'Oral_Cancer.html',
+      'Oropharyngeal_Cancer.html',
+      'Osteosarcoma.html',
+      'Ovarian Cancer.html',
+      'Paediatric_Soft_Tissue_Sarcomas.html',
+      'Paget_Disease_of_the_Breast.html',
+      'Pancreatic_Cancer.html',
+      'Parathyroid Disease.html',
+      'Penile Cancer.html',
+      'Pituitary Tumours.html',
+      'Prostate_Cancer.html',
+      'Retinoblastoma.html',
+      'Salivary Gland Cancer.html',
+      'Skin Cancer.html',
+      'Skull_Base_Tumours.html',
+      'Soft Tissue Sarcoma.html',
+      'Spinal_Tumours.html',
+      'Squamous_Cell_Carcinoma_of_the_Skin.html',
+      'Stomach_Cancer.html',
+      'Testicular_Cancer.html',
+      'Throat_Cancer.html',
+      'Thymoma_and_Thymic_Carcinoma.html',
+      'Thyroid_Cancer.html',
+      'Triple_Negative_Breast_Cancer.html',
+      'Vaginal_Cancer.html',
+      'Von_Hippel_Lindau_Disease.html',
+      'Vulvar_Cancer.html',
+      'Waldenstrom_Macroglobulinemia.html',
+      'Wilms_Tumour.html'
+    ];
+
+    // Build cancer data from actual files
+    const allCancers = cancerFiles.map(filename => {
+      const displayName = filenameToDisplayName(filename);
+      return {
+        id: filename.replace(/\.html$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        name: displayName,
+        filename: filename,
+        category: getCategory(displayName)
+      };
+    }).sort((a, b) => {
+      // Sort by name alphabetically
+      return a.name.localeCompare(b.name);
+    });
+    let filteredCancers = [...allCancers];
+
+    // Update statistics
+    function updateStats() {
+      document.getElementById('totalCount').textContent = allCancers.length;
+      document.getElementById('displayedCount').textContent = filteredCancers.length;
+    }
+
+    // Update alphabet filter buttons
+    function updateCategoryFilter() {
+      const alphabetFilter = document.getElementById('alphabetFilter');
+      const categories = [...new Set(allCancers.map(c => c.category))].sort();
+      
+      // Clear existing buttons
+      alphabetFilter.innerHTML = '';
+      
+      // Add alphabet buttons first
+      categories.forEach(category => {
+        const button = document.createElement('button');
+        button.className = 'alphabet-btn';
+        button.setAttribute('data-letter', category);
+        button.textContent = category;
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          document.querySelectorAll('.alphabet-btn').forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          filterCancers();
+        });
+        alphabetFilter.appendChild(button);
+      });
+      
+      // Add "View All" button at the end (bigger size)
+      const viewAllButton = document.createElement('button');
+      viewAllButton.className = 'alphabet-btn view-all active';
+      viewAllButton.setAttribute('data-letter', '');
+      viewAllButton.textContent = 'View All';
+      viewAllButton.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.alphabet-btn').forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+        filterCancers();
+      });
+      alphabetFilter.appendChild(viewAllButton);
+    }
+
+    // Check if mobile view
+    function isMobileView() {
+      return window.innerWidth <= 768;
+    }
+
+    // Render cancer rows in two columns (or one on mobile)
+    function renderCancers() {
+      const leftBody = document.getElementById('cancerTableBodyLeft');
+      const rightBody = document.getElementById('cancerTableBodyRight');
+      
+      if (filteredCancers.length === 0) {
+        leftBody.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">🔍</div>
+            <p class="empty-state-text">No cancers found matching your criteria</p>
+          </div>
+        `;
+        rightBody.innerHTML = '';
+        return;
+      }
+
+      // On mobile, render all in first table
+      if (isMobileView()) {
+        leftBody.innerHTML = filteredCancers.map((cancer, index) => `
+          <div class="cancer-row" data-id="${cancer.id}">
+            <div class="cancer-main">
+              <div class="row-number">${index + 1}</div>
+              <div class="cancer-name">
+                <a href="${cancer.filename}" style="color: inherit; text-decoration: none; display: block; width: 100%;">${cancer.name}</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        rightBody.innerHTML = '';
+      } else {
+        // Split into two halves for desktop
+        const midPoint = Math.ceil(filteredCancers.length / 2);
+        const leftCancers = filteredCancers.slice(0, midPoint);
+        const rightCancers = filteredCancers.slice(midPoint);
+
+        // Render left column
+        leftBody.innerHTML = leftCancers.map((cancer, index) => `
+          <div class="cancer-row" data-id="${cancer.id}">
+            <div class="cancer-main">
+              <div class="row-number">${index + 1}</div>
+              <div class="cancer-name">
+                <a href="${cancer.filename}" style="color: inherit; text-decoration: none; display: block; width: 100%;">${cancer.name}</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        // Render right column
+        rightBody.innerHTML = rightCancers.map((cancer, index) => `
+          <div class="cancer-row" data-id="${cancer.id}">
+            <div class="cancer-main">
+              <div class="row-number">${index + midPoint + 1}</div>
+              <div class="cancer-name">
+                <a href="${cancer.filename}" style="color: inherit; text-decoration: none; display: block; width: 100%;">${cancer.name}</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Add staggered animation
+      document.querySelectorAll('.cancer-row').forEach((row, i) => {
+        row.style.animationDelay = `${i * 0.02}s`;
+      });
+    }
+
+    // Filter cancers
+    function filterCancers() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      const activeButton = document.querySelector('.alphabet-btn.active');
+      const category = activeButton ? activeButton.getAttribute('data-letter') : '';
+
+      filteredCancers = allCancers.filter(cancer => {
+        // Search filter
+        const matchesSearch = cancer.name.toLowerCase().includes(searchTerm);
+        
+        // Category filter
+        const matchesCategory = !category || cancer.category === category;
+
+        return matchesSearch && matchesCategory;
+      });
+
+      updateStats();
+      renderCancers();
+    }
+
+    // Event listeners
+    document.getElementById('searchInput').addEventListener('input', filterCancers);
+    
+    // Handle window resize to update layout
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        renderCancers();
+      }, 250);
+    });
+
+    // Load data on page load
+    updateCategoryFilter();
+    updateStats();
+    renderCancers();
+  </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

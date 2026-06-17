@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<!-- start -->
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Brain Tumor care at Urself Corporate Cancer Hospital. Learn about early detection, symptoms, diagnosis, treatment, and expert care.">
+    <title>Brain Tumor - Corporate Cancer Hospital</title>
+    <!-- Linking the global CSS file -->
+    <link rel="stylesheet" href="cancer-we-treat.css">
+    <!-- Linking Google Fonts for 'Inter' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Banner Section 4 -->
+ <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Doctors & Specialists/Our Doctors/Doctors.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Doctors & Specialists/Our Doctors/Doctors.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+                <!-- Desktop Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Desktop Logo"
+                    class="hospital-banner-logo-image desktop"
+                > -->
+                
+                <!-- Mobile Logo -->
+                <!-- <img 
+                    src="Banner/advanced technology.png" 
+                    alt="Hospital Mobile Logo"
+                    class="hospital-banner-logo-image mobile"
+                > -->
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                
+                <div class="hospital-banner-text">
+                    <!-- <h1 class="hospital-banner-title">Precise & Early<br>Cancer Detection<br>with Advanced<br>Diagnostic Tests</h1>
+                    
+                    <p class="hospital-banner-subtitle">We deliver state-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+
+                <!-- Medical Icon -->
+                <!-- <svg class="hospital-banner-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 30 Q20 20 30 20 L70 20 Q80 20 80 30 L80 70 Q80 80 70 80 L30 80 Q20 80 20 70 Z" />
+                    <path d="M50 30 L50 70 M30 50 L70 50" />
+                    <circle cx="50" cy="25" r="8" />
+                    <circle cx="25" cy="50" r="6" />
+                    <circle cx="75" cy="50" r="6" />
+                </svg> -->
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <!-- <h1 class="hospital-banner-title">Precise & Early Cancer Detection</h1>
+            <p class="hospital-banner-subtitle">State-of-the-art technology for accurate diagnosis, tailored treatment planning, and improved patient outcomes</p> -->
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctors - Cancer Hospital</title>
+ <style>
+  :root{
+    --main-font: Arial, sans-serif;
+  }
+    /* Base styles for all devices */
+    body {
+      font-family: var(--main-font) !important;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    
+    /* Container to limit width to 1400px for desktop */
+    .responsive-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+
+    /* Search section */
+    .search-section {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .search-section input {
+      width: 100%;
+      max-width: 600px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    /* Main content layout */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+    
+    /* Filters section */
+    .filters {
+      width: 100%;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .filter-group {
+      margin-bottom: 15px;
+    }
+    
+    .filter-group h3 {
+      margin-top: 0;
+    }
+    
+    .filter-group h4 {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #00695c;
+      font-size: 16px;
+      padding-top: 10px;
+      border-top: 1px solid #e0e0e0;
+    }
+    
+    .filter-group h4:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+    
+    .filter-group input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    
+    .filter-group label {
+      display: block;
+      margin: 5px 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+    /* Doctor list */
+    .doctor-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .doctor-card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .doctor-card img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+    
+    .doctor-info {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    
+    .doctor-info h3 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+    }
+    
+    .doctor-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .doctor-actions a {
+      width: 100%;
+      text-decoration: none;
+    }
+    
+    .doctor-actions button {
+      background-color: #00695c;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      width: 100%;
+      min-width: 180px;
+    }
+    
+    .doctor-actions button:hover {
+      background-color: #005a4f;
+    }
+    
+    /* Pagination */
+    .pagination {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .pagination button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      background-color: #ddd;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .pagination button.active {
+      background-color: #00695c;
+      color: white;
+    }
+    
+    /* Modal styles (unchanged) */
+    .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            margin-top: 100px !important;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .close-btn {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+        
+        .modal-content h3 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #00695c;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            flex: 1;
+        }
+        
+        .modal-content label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .modal-content input,
+        .modal-content select,
+        .modal-content textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .modal-content textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .modal-content button {
+            background-color: #00695c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .modal-content button:hover {
+            background-color: #00695c;
+        }
+    
+    /* Tablet styles */
+    @media (min-width: 768px) {
+      .main-content {
+        flex-direction: row;
+      }
+      
+      .filters {
+        width: 30%;
+      }
+      
+      .doctor-list {
+        width: 70%;
+      }
+      
+      .doctor-card {
+        flex-direction: row;
+        gap: 20px;
+      }
+      
+      .doctor-card img {
+        width: 150px;
+        height: 200px;
+      }
+      
+      .doctor-actions {
+        align-items: center;
+        width: auto;
+      }
+      
+      .doctor-actions a {
+        width: auto;
+      }
+      
+      .doctor-actions button {
+        min-width: 180px;
+        width: 180px;
+      }
+    }
+    
+    /* Desktop styles */
+    @media (min-width: 992px) {
+      .doctor-card {
+        gap: 40px;
+        align-items: center;
+      }
+      
+      .doctor-card img {
+        width: 300px;
+        height: 380px;
+      }
+      
+      .doctor-info {
+        margin-left: 20px;
+      }
+      
+      .doctor-actions {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: auto;
+      }
+      
+      .doctor-actions a {
+        width: auto;
+      }
+      
+      .doctor-actions button {
+        min-width: 180px;
+        width: 180px;
+      }
+    }
+    
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</style>
+</head>
+<body>
+  <!-- unchanged HTML content -->
+ <!-- <section class="hero">Find Your Specialist</section> -->
+  <section class="search-section">
+    <input type="text" id="doctorSearch" placeholder="Search for Doctors or Specialities...">
+  </section>
+  <div class="main-content">
+    <aside class="filters">
+      <div class="filter-group">
+        <h3>Specialities</h3>
+        <input type="text" id="specialitySearch" placeholder="Search Specialities">
+        
+        <h4>Health Administration</h4>
+        <label><input type="checkbox" class="speciality-filter" value="Health Administration"> Administration</label>
+        
+        <h4>Cancer Specialities</h4>
+        <label><input type="checkbox" class="speciality-filter" value="Surgical Oncology" checked> Surgical Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Medical Oncology"> Medical Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Radiation Oncology"> Radiation Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Haemato-Oncology"> Haemato-Oncology & BMT</label>
+        <label><input type="checkbox" class="speciality-filter" value="Paediatric Oncology & BMT"> Paediatric Oncology & BMT</label>
+        <label><input type="checkbox" class="speciality-filter" value="Head & Neck Oncology"> Head & Neck Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Oral & Maxillofacial Surgery"> Oral & Maxillofacial Surgery</label>
+        <label><input type="checkbox" class="speciality-filter" value="Gynec Oncology"> Gynaec Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Uro Oncology"> Genito-Urinary Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Bone & Soft Tissue Oncology"> Bone & Soft Tissue Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Neuro-Oncology"> Neuro-Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Neurology"> Neurology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Plastic & Reconstructive Surgery"> Plastic & Reconstructive Surgery</label>
+        <label><input type="checkbox" class="speciality-filter" value="Pain & Palliative Care"> Pain & Palliative Care</label>
+        <label><input type="checkbox" class="speciality-filter" value="Interventional Pulmonology"> Interventional Pulmonology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Ophthalmic Oncology"> Ophthalmic Oncology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Anaesthesiology"> Anaesthesiology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Intensive Care"> Intensive Care</label>
+        <label><input type="checkbox" class="speciality-filter" value="Community Oncology"> Preventive Onology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Psycho-Oncology"> Psycho-Oncology</label>
+        
+        <h4>Diagnostics Specialities</h4>
+        <label><input type="checkbox" class="speciality-filter" value="Radiology & Radio Diagnosis"> Radiology & Radiodiagnosis</label>
+        <label><input type="checkbox" class="speciality-filter" value="Nuclear Medicine"> Nuclear Medicine</label>
+        <label><input type="checkbox" class="speciality-filter" value="Interventional Radiology"> Interventional Radiology</label>
+        
+        <h4>Clinical Specialities</h4>
+        <label><input type="checkbox" class="speciality-filter" value="Endocrinology"> Endocrinology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Cardiology"> Cardiology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Gastroenterology"> Gastroenterology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Nephrology"> Nephrology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Transfusion Medicine & Blood Centre"> Transfusion Medicine & Blood Centre</label>
+        <label><input type="checkbox" class="speciality-filter" value="Dermatology"> Dermatology</label>
+        
+        <h4>Pathology & Laboratory Medicine</h4>
+        <label><input type="checkbox" class="speciality-filter" value="Histopathology"> Histopathology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Haemato Pathology"> Haematopathology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Molecular Diagnostics & Research"> Molecular Diagnostics</label>
+        <label><input type="checkbox" class="speciality-filter" value="Biochemistry"> Biochemistry</label>
+        <label><input type="checkbox" class="speciality-filter" value="Microbiology & Virology"> Microbiology & Virology</label>
+        
+        <h4>Supportive Services</h4>
+        <label><input type="checkbox" class="speciality-filter" value="Clinical Pharmacology"> Clinical Pharmacology</label>
+        <label><input type="checkbox" class="speciality-filter" value="Physiotherapy"> Physiotherapy & Rehabilitation</label>
+        <label><input type="checkbox" class="speciality-filter" value="Nutrition & Dietetics"> Nutrition & Dietetics</label>
+        <label><input type="checkbox" class="speciality-filter" value="Speech & Swallowing Therapy" data-department="Head & Neck Oncology"> Speech & Swallowing Therapy</label>
+        <label><input type="checkbox" class="speciality-filter" value="Integrative Oncology"> Integrative Oncology</label>
+        
+      </div>
+    </aside>
+    <section class="doctor-list" id="doctorList"></section>
+  </div>
+  <div class="pagination" id="pagination" style=" align-items: center; justify-content: center; "></div>
+
+  <!-- <div class="modal" id="appointmentModal" >
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>Book Appointment</h3>
+      <label>Patient Name</label>
+      <input type="text" id="patientName" required>
+      <label>Contact Number</label>
+      <input type="text" id="contactNumber" required>
+      <label>Preferred Date/Time</label>
+      <input type="datetime-local" id="preferredDateTime" required>
+      <label>Doctor</label>
+      <input type="text" id="selectedDoctor" readonly>
+      <label>Cancer Type / Concern</label>
+      <input type="text" id="cancerConcern">
+      <button onclick="submitAppointment()">Submit</button>
+      <p id="successMessage" style="color: green; display: none;">Your appointment request has been received. Our team will call you shortly.</p>
+    </div>
+  </div> -->
+
+
+ <div class="modal" id="appointmentModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3>Book Appointment</h3>
+
+    <!-- ✅ FORM START -->
+    <form action="book-appointment.php" method="POST">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Patient Name*</label>
+          <input type="text" id="patientName" name="patientName" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input type="text" id="patientAge" name="patientAge" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Gender*</label>
+          <select id="patientGender" name="patientGender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Contact Number*</label>
+          <input type="tel" id="contactNumber" name="contactNumber" placeholder="Mobile number" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address*</label>
+          <input type="email" id="patientEmail" name="patientEmail" placeholder="Email address" required>
+        </div>
+        <div class="form-group">
+          <label>Visit Type*</label>
+          <select id="visitType" name="visitType" required>
+            <option value="">Select Visit Type</option>
+            <option value="New Patient">New Patient</option>
+            <option value="Follow-Up">Follow-Up</option>
+            <option value="Second Opinion">Second Opinion</option>
+            <option value="Emergency">Emergency</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Doctor</label>
+        <input type="text" id="selectedDoctor" name="selectedDoctor"
+               value="Dr. Aarthi N. - Pediatric Oncology & BMT" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Select Appointment Date*</label>
+        <input type="text" id="appointmenttext" name="appointmenttext" required>
+      </div>
+
+      <div class="form-group">
+        <label>Medical Concern / Cancer Type*</label>
+        <input type="text" id="cancerConcern" name="cancerConcern"
+               placeholder="Briefly describe the medical concern" required>
+      </div>
+
+      <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea id="additionalNotes" name="additionalNotes"
+                  placeholder="Any other information we should know"></textarea>
+      </div>
+
+      <!-- ✅ REAL SUBMIT BUTTON -->
+      <button type="submit">Submit Appointment Request</button>
+
+    </form>
+    <!-- ✅ FORM END -->
+
+  </div>
+</div>
+
+
+  <script>
+    const specialities = ["Oncology", "Surgical Oncology", "Medical Oncology", "Radiation Oncology", "Hematology"];
+    const languages = ["English", "Kannada", "Hindi", "Tamil", "Telugu"];
+
+    // const doctors = Array.from({ length: 50 }, (_, i) => ({
+    //   photo: `images/doctors/doctor${(i % 20) + 1}.webp`,
+    //   name: `Dr. Doctor ${i + 1}`,
+    //   experience: `${5 + (i % 15)} years`,
+    //   specialist: specialities[i % specialities.length],
+    //   education: 'MBBS, MD',
+    //   language: languages.filter((_, j) => j % (i % 5 + 1) === 0).join(", "),
+    //   timing: '10:00 - 16:00, Mon-Sat'
+    // }));
+
+
+const doctors = 
+  
+[
+  {
+    photo: "../Doctors_Photo/Dr. R V Prabhakara Rao.webp",
+    name: "Dr. R V Prabhakara Rao",
+    specialist: "Health Administration",
+    designation: "Director - SSCHRC",
+    language: "",
+    experience: "Extensive experience in hospital operations",
+    education: "MBBS, DA, PGD in Hospital & Health Management, PGD in Medico Legal Systems, NABH Certified Assessor",
+    consultationFee: 0,
+    timing: "Full time",
+    page: "Dr. R V Prabhakara Rao.html",
+    department_hidden: "Health Administration"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. B. S. Srinath.webp",
+    name: "Dr. B S Srinath",
+    specialist: "Surgical Oncology",
+    designation: "HOD,Senior Consultant Surgical Oncologist",
+    language: "Kannada, Hindi, English, Telugu, Tamil, Malayalam, Odia",
+    experience: 50,
+    education: "MBBS, MS-Gen Surg (1976), FRCS (Edin)(1981), FRCS(Glas)(1981)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. B. S. Srinath.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Ganesh Nayak.webp",
+    name: "Dr. Ganesh Nayak",
+    specialist: "Surgical Oncology",
+    designation: "Senior Consultant Surgical Oncologist",
+    language: "",
+    experience: 54,
+    education: "MBBS, MS - Gen Surgery (March 1972), DABS (1977), M.Ch, FICS (1985)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Ganesh Nayak.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Manjunath Sastry.webp",
+    name: "Dr. Manjunath Sastry",
+    specialist: "Surgical Oncology",
+    designation: "Senior Consultant Surgical Oncologist",
+    language: "",
+    experience: 33,
+    education: "MBBS, DNB Gen Surg (1993), Fellow Adv Lap & Robotic Surg (2005)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Manjunath Sastry.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Srivatsa H G.webp",
+    name: "Dr. Srivatsa H G",
+    specialist: "Surgical Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 21,
+    education: "MBBS, MS-Gen Surgery (Oct 2005), MCh-Surgical Oncology (July 2014)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Srivatsa H. G.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sanjeev Kulkarni.webp",
+    name: "Dr. Sanjeev Kulkarni",
+    specialist: "Surgical Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Malayalam, Konkani, Marathi",
+    experience: 14,
+    education: "MBBS, MS-Gen Surgery (May 2012), MCh-Surgical Oncology (July 2017)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sanjeev Kulkarni.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Vishnu Kurpad.webp",
+    name: "Dr. Vishnu Kurpad",
+    specialist: "Surgical Oncology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 13,
+    education: "MBBS, MS-Gen Surgery (June 2013), MCh-Surgical Oncology (July 2016)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Vishnu Kurpad.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Abhay K Kattepur.webp",
+    name: "Dr. Abhay K Kattepur",
+    specialist: "Surgical Oncology",
+    designation: "Consultant",
+    language: "",
+    experience: 14,
+    education: "MBBS, MS-Gen Surgery (2012), DNB-Gen Surgery (2012), MRCS (2014), DNB - Surgical Oncology (2017), MCh-Surgical Oncology (2017)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Abhay K Kattepur.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sasi Mouli V. V. H. P. K..webp",
+    name: "Dr. Sasi Mouli V. V. H. P. K.",
+    specialist: "Surgical Oncology",
+    designation: "Consultant",
+    language: "",
+    experience: 11,
+    education: "MBBS, MS - Gen Surgery (June 2015), DNB - Gen Surgery, MCh - Endocrine Surgery (Nov 2020), Fellowship in Minimal Access Surgery",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sasi Mouli V. V. H. P. K..html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Kanyadhara Lohita Krishna.webp",
+    name: "Dr. Kanyadhara Lohita Krishna",
+    specialist: "Surgical Oncology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 9,
+    education: "MBBS, MS-Gen Surgery (2017), Fellowship in Breast Cancer Diseases (July 2019), MCh Breast Oncoplasty (Dec 2022)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Kanyadhara Lohitha Krishna.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Raksha Nadig.webp",
+    name: "Dr. Raksha Nadig",
+    specialist: "Surgical Oncology",
+    designation: "Junior Consultant",
+    language: "",
+    experience: 8,
+    education: "MBBS, MS-Gen Surgery (Jun 2018), MCh-Surgical Oncology (Jan 2024)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Raksha Nadig.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Venkatachala.webp",
+    name: "Dr. Venkatachala K",
+    specialist: "Surgical Oncology",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 24,
+    education: "MBBS, MS-Gen Surgery (May 2002), MCh-Surgical Oncology (July 2005)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Venkatachala.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sriram V.webp",
+    name: "Dr. Sriram V",
+    specialist: "Surgical Oncology",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 16,
+    education: "MBBS, MS - General Surgery (2010), MCh-Cardio Thoracic and Vascular Surgery (Aug 2014), Surgical Oncology - Thoracic Fellowship (2019), MTI Fellowship Thoracic Surgery (Mar 2020), Minimally Invasive Thoracic Surgery (June 2024)",
+    consultationFee: 1,
+    timing: "Part-time",
+    page: "Dr. Sriram V.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sonal Asthana.webp",
+    name: "Dr. Sonal Asthana",
+    specialist: "Surgical Oncology",
+    designation: "Consultant",
+    language: "",
+    experience: 29,
+    education: "MBBS, MS-Gen Surgery (1997), ASTS Abdominal Organ transplant fellowship (2009), Masters in Experimental Surgery (2011)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Sonal Asthana.html",
+    department_hidden: "Surgical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Ravi B. Diwakar.webp",
+    name: "Dr. Ravi B. Diwakar",
+    specialist: "Medical Oncology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 33,
+    education: "MBBS, MD-General Medicine (1993), DM - Medical Oncology (1996)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 5:00 P.M.",
+    page: "Dr. Ravi B. Diwakar.html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sandhya Appachu M..webp",
+    name: "Dr. Sandhya Appachu M",
+    specialist: "Medical Oncology",
+    designation: "HOD, Senior Consultant",
+    language: "",
+    experience: 17,
+    education: "MBBS, MD-General Medicine (June 2009), DM - Medical Oncology (July 2014)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sandhya Appachu M..html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Vinayak Munirathnam.webp",
+    name: "Dr. Vinayak M",
+    specialist: "Medical Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 16,
+    education: "MBBS, MD-Paediatrics (2010), DM - Medical Oncology (2016), ESMO - Medical Oncology (2016)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Vinayak Munirathnam.html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Vijai Simha.webp",
+    name: "Dr. Vijaisimha",
+    specialist: "Medical Oncology",
+    designation: "Consultant",
+    language: "",
+    experience: 14,
+    education: "MBBS, MD - Radiotherapy (Dec 2012), DM - Medical Oncology (July 2019), Post Graduate Diploma in Medical Law & Ethics (2014)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Vijai Simha.html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. R. N. Supreeth.webp",
+    name: "Dr. R N Supreeth",
+    specialist: "Medical Oncology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil, Malayalam, Marathi",
+    experience: 7,
+    education: "MBBS, DNB - General Medicine (2019), DrNB - Medical Oncology (2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. R. N. Supreeth.html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Aditi Raghunathan.webp",
+    name: "Dr. Adithi Raghunathan",
+    specialist: "Medical Oncology",
+    designation: "Junior Consultant",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 7,
+    education: "MBBS, MD-General Medicine (2019), DM - Medical Oncology (2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Aditi Raghunathan.html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Guruprasad Shenoy.webp",
+    name: "Dr. Guruprasad C Shenoy",
+    specialist: "Medical Oncology",
+    designation: "Junior Consultant",
+    language: "",
+    experience: 5,
+    education: "MBBS, MD-General Medicine (July 2021), DNB - General Medicine (June 2021), DM - Medical Oncology (Nov 2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Guruprasad Shenoy.html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Govinda Babu K.webp",
+    name: "Dr. Govinda Babu K",
+    specialist: "Medical Oncology",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 40,
+    education: "MBBS, MD-General Medicine (1986), DM - Medical Oncology (1995)",
+    consultationFee: 1,
+    timing: "Part-time",
+    page: "Dr. Govinda Babu K.html",
+    department_hidden: "Medical Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. L. Appaji.webp",
+    name: "Dr. L Appaji",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Emeritus Professor & Senior Consultant",
+    language: "",
+    experience: 43,
+    education: "MBBS, MD-Paediatric Medicine (1983), DM - Medical Oncology (1991)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. L. Appaji.html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Anand K C.webp",
+    name: "Dr. Anand KC",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Senior Consultant & HOD",
+    language: "Kannada, English, Hindi, Telugu, Marathi",
+    experience: 13,
+    education: "MBBS, MD-Paediatrics (2013), DM - Paediatric Oncology (2017)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Anand K. C.html",
+    department_hidden: "Paediatric Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Shashank Bhojaraja.webp",
+    name: "Dr. Shashank B",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Consultant",
+    language: "",
+    experience: 10,
+    education: "MBBS, MD-Paediatrics (2016), MRCPCH (2019), HBNI Fellowship - Paediatric Hematology & Oncology (2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Shashank Bhojaraja.html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Surekha T M.webp",
+    name: "Dr. Surekha T M",
+    specialist: "Paediatric Oncology",
+    designation: "Junior Consultant",
+    language: "",
+    experience: 5,
+    education: "MBBS, MD-Paediatrics (May 2021), DM - Paediatric Oncology (Nov 2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Surekha T M.html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sathya Murugasamy.webp",
+    name: "Dr. Sathya Murugasamy",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Junior Consultant",
+    language: "",
+    experience: 5,
+    education: "MBBS, DNB - Paediatrics (2017), DM - Paediatric Oncology (Mar 2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sathya Murugasamy.html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Ramesh S..webp",
+    name: "Dr. Ramesh S.",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: "",
+    education: "MBBS, MS(Gen Surgery), M.Ch (Paediatric Surgery), DNB",
+    consultationFee: 1,
+    timing: "On Call",
+    page: "Dr. Ramesh S..html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Raghunath B. V..webp",
+    name: "Dr. Raghunath BV",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 18,
+    education: "MBBS, MS-Gen Surgery (2008), M.Ch - Paediatric Surgery (2011), Fellowship in Paediatric Minimally Invasive Surgery (2013)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Raghunath B. V..html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Ravneet Chhabra.webp",
+    name: "Dr. Ravneet Chabbra",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 11,
+    education: "MBBS, MS-Gen Surgery (2015), M.Ch - Paediatric Surgery (2021)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Ravneet Chhabra.html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Santosh O. S..webp",
+    name: "Dr. O S Santhosh",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 24,
+    education: "MBBS, DCH (Mar 2002), MRCPCH (June 2006), Certificate of completion of Speciality training (Aug 2012), Specialty Certificate Examination in Endocrinology & Diabetes (Jun 2017)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Santosh O. S..html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Vinu Priya D..webp",
+    name: "Dr. Vinu Priya D",
+    specialist: "Paediatric Oncology & BMT",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 11,
+    education: "MBBS, MS-Gen Surgery (April 2015), M.Ch - Paediatric Surgery (July 2021), TMC Fellow in Paediatric Surgery (Sep 2023)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Vinu Priya D..html",
+    department_hidden: "Paediatric Oncology & BMT"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Muddappa Pathikonda.webp",
+    name: "Dr. Muddappa P",
+    specialist: "Radiation Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 52,
+    education: "MBBS, DMRT - Radiotherapy (1974), MD (RT) - Radiotherapy (1975)",
+    consultationFee: 1,
+    timing: "Part-time with Regular OPD",
+    page: "Dr. Muddappa Pathikonda.html",
+    department_hidden: "Radiation Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. G V Giri.webp",
+    name: "Dr. Giri G V",
+    specialist: "Radiation Oncology",
+    designation: "Senior Consultant & HOD",
+    language: "Kannada, English, Hindi, Telugu, Tamil, Marathi",
+    experience: 41,
+    education: "MBBS, DMRT (1985), MD - Radiotherapy (1988), DNB - Radiotherapy (1992)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Giri G. V.html",
+    department_hidden: "Radiation Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Karthik .S. Rishi.webp",
+    name: "Dr. Karthik S Rishi",
+    specialist: "Radiation Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 18,
+    education: "MBBS, MD - Radiotherapy (2008), DNB - Radiotherapy (2010), PGDMLS",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Karthik S. Rishi.html",
+    department_hidden: "Radiation Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Pradeep Kumar Reddy D..webp",
+    name: "Dr. Pradeep Kumar Reddy",
+    specialist: "Radiation Oncology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 14,
+    education: "MBBS, MD - Radiotherapy (May 2012)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Pradeep Kumar Reddy D..html",
+    department_hidden: "Radiation Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Harshita. K.webp",
+    name: "Dr. Harshitha K",
+    specialist: "Radiation Oncology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi",
+    experience: 6,
+    education: "MBBS, MD - Radiation Oncology (2020), DNB (Radiotherapy)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Harshitha K.html",
+    department_hidden: "Radiation Oncology"
+  },  
+  {
+    photo: "../Doctors_Photo/Dr. V Annapurna.webp",
+    name: "Dr. Annapurna V",
+    specialist: "Gynaec Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil, Gujarati, Bengali",
+    experience: 28,
+    education: "MBBS, MD - OB AND GYN (1998), DNB - OB & GYN (1999), Fellowship (Gynec Oncology)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Annapurna V.html",
+    department_hidden: "Gynec Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Rekha B. R.webp",
+    name: "Dr. Rekha BR",
+    specialist: "Gynaec Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 19,
+    education: "MBBS, DNB - OBG (2007), Fellowship - Gynaecological Oncology",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Rekha B. R.html",
+    department_hidden: "Gynec Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Srivatsa Narasimha.webp",
+    name: "Dr. Srivatsa N",
+    specialist: "Genito-Urinary Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil, Malayalam",
+    experience: 21,
+    education: "MBBS, MS - Gen Surgery (2005), DNB - Gen Surgery (2005), DNB - Genitourinary Surgery (2010), Fellowship in Gynae-uro-oncology & Robotic Surgery (2012)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Srivatsa Narasimha.html",
+    department_hidden: "Uro Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Raghunath S. K..webp",
+    name: "Dr. Raghunath S K",
+    specialist: "Genito-Urinary Oncology",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 28,
+    education: "MBBS, MS - Gen Surgery (Mar 1998), DNB - Urology (June 2004), Fellow in Advanced Laproscopic Urology (June 2007)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Raghunath S. K..html",
+    department_hidden: "Uro Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Kundalam Furkhan Ahmed.webp",
+    name: "Dr. Kundalam Furkhan Ahmed",
+    specialist: "Genito-Urinary Oncology",
+    designation: "Consultant",
+    language: "",
+    experience: 14,
+    education: "MBBS, MS (General Surgery), M.Ch (Urology),DNB - General Surgery (Feb 2012), M.Ch (Urology)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case",
+    page: "Dr. Kundalam Furkhan Ahmed.html",
+    department_hidden: "Uro Oncology"
+  }, 
+  {
+    photo: "../Doctors_Photo/Dr. Praveen K. S..webp",
+    name: "Dr. Praveen K S",
+    specialist: "Neuro Onco Surgery",
+    designation: "Visiting Senior Consultant",
+    language: "",
+    experience: 22,
+    education: "MBBS, MS - General Surgery (2004), DNB - General Surgery (2004), MCh - Neuro Surgery (2007), Fellow in Spine Surgery (2015)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Praveen K. S..html",
+    department_hidden: "Neuro-Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Prahlad S. T..webp",
+    name: "Dr. Prahlad",
+    specialist: "Neuro Onco Surgery",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 13,
+    education: "MBBS, MS (Gen Surgery), DNB - Gen Surgery (June 2013), DNB - Neuro Surgery (Dec 2018)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Prahlad S. T..html",
+    department_hidden: "Neuro-Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Nanjundappa.webp",
+    name: "Dr. Nanjundappa",
+    specialist: "Head & Neck Oncology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 38,
+    education: "MBBS, MS - ENT (Jun 1988), DLO - Laryngo-oncology (Aug 1982)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Nanjundappa.html",
+    department_hidden: "Head & Neck Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Karthik N. Rao.webp",
+    name: "Dr. Karthik N Rao",
+    specialist: "Head & Neck Oncology",
+    designation: "Consultant & HOD",
+    language: "Kannada, English, Hindi",
+    experience: 8,
+    education: "MBBS, MS, MCh (Head Neck Surgery and Oncology), FHNS, FACS, FAHNS, eFASCO, DEBEORLHNS",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Karthik N. Rao.html",
+    department_hidden: "Head & Neck Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sreeram MP.webp",
+    name: "Dr. Sreeram MP",
+    specialist: "Head & Neck Oncology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Tamil, Malayalam",
+    experience: 11,
+    education: "MDS (Apr 2015), Fellow in oral Oncology (RGUHS)(June 2020), FAHNS (USA), EACMF- HNPG (Europe), AOCMF-Oral Cancer Dip, FHNO Travel Fellow" ,
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sreeram M. P.html",
+    department_hidden: "Head & Neck Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Prajwal S. Dange.webp",
+    name: "Dr. Prajwal S D",
+    specialist: "Head & Neck Oncology",
+    designation: "Junior Consultant",
+    language: "Kannada, English, Hindi",
+    experience: 6,
+    education: "MBBS, MS - Otorhinlaryngology & Head - Neck Surgery (Aug 2020), DNB - Otorhinlaryngology & Head - Neck Surgery (Jan 2021), MCh - Head Neck Surgery & Oncology (Jan 2022)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Prajwal S. D.html",
+    department_hidden: "Head & Neck Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Teertha Shetty.webp",
+    name: "Dr. Teertha S Shetty",
+    specialist: "Head & Neck Oncology",
+    designation: "Senior Resident",
+    language: "",
+    experience: 7,
+    education: "BDS, MDS (2019), Fellow in Head & Neck Oncology (2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Teertha Shetty.html",
+    department_hidden: "Head & Neck Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Mr. T. V. Kumareshwar.webp",
+    name: "Mr T V Kumareshwar",
+    specialist: "Head & Neck Oncology",
+    designation: "Speech and Swallow Specialist",
+    language: "",
+    experience: 7,
+    education: "MSc - Audiology & Speech Language Pathology (June 2019)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 5:00 P.M.",
+    page: "Mr. T. V. Kumareshwar.html",
+    department_hidden: "Head & Neck Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Girish Rao.webp",
+    name: "Dr. Girish Rao",
+    specialist: "Oral & Maxillofacial Surgery",
+    designation: "Visiting Senior Consultant",
+    language: "",
+    experience: 35,
+    education: "MDS (Sep 1991), FFDRCSI (Nov 1993), FDSRCS (Jun 1994)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Girish Rao.html",
+    department_hidden: "Oral & Maxillofacial Surgery"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Prithvi B. S..webp",
+    name: "Dr. Prithvi B.S",
+    specialist: "Oral & Maxillofacial Surgery",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 18,
+    education: "BDS, MDS (2008), Fellowship in Oral Oncology (Feb 2013)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Prithvi B. S..html",
+    department_hidden: "Oral & Maxillofacial Surgery"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sudha Sah.webp",
+    name: "Dr Sudha Sah",
+    specialist: "Oral & Maxillofacial Surgery",
+    designation: "Dental Specialist",
+    language: "Kannada, English, Hindi",
+    experience: 27,
+    education: "BDS (1999), FAD (University of medicine greifswald,Germany)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sudha Sah.html",
+    department_hidden: "Oral & Maxillofacial Surgery"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sainath J. V..webp",
+    name: "Dr Sainath J. V.",
+    specialist: "Oral & Maxillofacial Surgery",
+    designation: "Prosothodontist",
+    language: "",
+    experience: 7,
+    education: "BDS, MDS (2019), MBA-Hospital Administration (2011)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sainath J. V..html",
+    department_hidden: "Oral & Maxillofacial Surgery"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Radhika Kapahtia.webp",
+    name: "Dr. Radhika Kapahtia",
+    specialist: "Plastic & Reconstructive Surgery",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Punjabi",
+    experience: 11,
+    education: "MBBS, MS - General Surgery (2015), MCh - Plastic and Reconstructive Surgery (2018)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Radhika Kapahtia.html",
+    department_hidden: "Plastic & Reconstructive Surgery"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Prashanth Kesari.webp",
+    name: "Dr Prashanth Kesari",
+    specialist: "Plastic & Reconstructive Surgery",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 21,
+    education: "MBBS, MS - General Surgery (May 2005), DNB - General Surgery (Jan 2006), MRCS (Apr 2007), M.Ch - Plastic & Reconstructive Surgery (Aug 2008), Diploma in Medico Law & Ethics (Aug 2007)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Prashanth Kesari.html",
+    department_hidden: "Plastic & Reconstructive Surgery"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Pradeep Kumar N..webp",
+    name: "Dr Pradeep Kumar N",
+    specialist: "Plastic & Reconstructive Surgery",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 7,
+    education: "MBBS, DNB Plastic Surgery (2019)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Pradeep Kumar N..html",
+    department_hidden: "Plastic & Reconstructive Surgery"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. N K Vinod.webp",
+    name: "Dr. N.K. Vinod",
+    specialist: "Anaesthesiology",
+    designation: "Senior Consultant & HOD",
+    language: "Kannada, English, Hindi, Telugu, Tamil, Malayalam, Marathi",
+    experience: 27,
+    education: "MBBS, MD - Anaesthesiology (Dec 1999), PDCCA (Aug 2001)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. N. K. Vinod.html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. S. Ramkiran.webp",
+    name: "Dr. Ramkiran S",
+    specialist: "Anaesthesiology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 18,
+    education: "MBBS, DA- Anaesthesiology (2005), DNB - Anaesthesiology (2008)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. S. Ramkiran.html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Raghavendra G..webp",
+    name: "Dr. Raghavendra G.",
+    specialist: "Anaesthesiology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 15,
+    education: "MBBS, DA- Anaesthesiology (Aug 2008), DNB - Anaesthesiology (Aug 2011)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 4:00 P.M.",
+    page: "Dr. Raghavendra G..html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Mallika Ganesh.webp",
+    name: "Dr. Mallika Ganesh",
+    specialist: "Anaesthesiology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 8,
+    education: "MBBS, MD - Anaesthesiology (June 2018)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Mallika Ganesh.html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Venkatesh P.webp",
+    name: "Dr. Venkatesh P",
+    specialist: "Anaesthesiology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 7,
+    education: "MBBS, DA - Anaesthesiology (June 2017), DNB - Anaesthesiology (Nov 2019)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Venkatesh P.html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Archana S.webp",
+    name: "Dr. Archana S",
+    specialist: "Anaesthesiology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu, Sanskrit",
+    experience: 6,
+    education: "MBBS, DA - Anaesthesiology (2018), DNB - Anaesthesiology (Oct 2020)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Archana S..html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Janaki Padmakumar.webp",
+    name: "Dr. Janaki P Kumar",
+    specialist: "Anaesthesiology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Malayalam",
+    experience: 7,
+    education: "MBBS, MD-Anaesthesiology (2019), DNB - Anaesthesiology (2022)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Janaki Padmakumar.html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Divya Vasudevan.webp",
+    name: "Dr. Divya Vasudevan",
+    specialist: "Anaesthesiology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 5,
+    education: "MBBS, DNB - Anaesthesiology (Sep 2021)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Divya Vasudevan.html",
+    department_hidden: "Anaesthesiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Raveesh Hegde.webp",
+    name: "Dr. Raveesh Hegde",
+    specialist: "Anaesthesia & Critical Care Medicine",
+    designation: "Consultant",
+    language: "",
+    experience: 9,
+    education: "MBBS, MD-Anaesthesiology (Aug 2017), FNB- Critical Care Medicine (Aug 2021)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 6:00 P.M.",
+    page: "Dr. Raveesh Hegde.html",
+    department_hidden: "Intensive Care"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Arjun S Kashyap.webp",
+    name: "Dr. Arjun S Kashyap",
+    specialist: "Interventional Pulmonology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil, Malayalam, Tulu",
+    experience: 10,
+    education: "MBBS, DNB - Respiratory Medicine (May 2016), PDCC – Interventional Pulmonology (Sep 2018)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Arjun S. Kashyap.html",
+    department_hidden: "Interventional Pulmonology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sharath Chandra K S.webp",
+    name: "Dr. Sharath Chandra K S",
+    specialist: "Interventional Pulmonology",
+    designation: "Junior Consultant",
+    language: "Kannada, English, Hindi, Tamil, Malayalam",
+    experience: 6,
+    education: "MBBS, MD - Respiratory Medicine (June 2020), DNB - Respiratory Medicine (Dec 2020), Fellowship in Interventional Pulmonology (Nov 2022)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:30 PM",
+    page: "Dr. Sharath Chandra K. S.html",
+    department_hidden: "Interventional Pulmonology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Chandrakant B Patil.webp",
+    name: "Dr. Chandrakant B Patil",
+    specialist: "Cardiology",
+    designation: "Senior Consultant & HOD",
+    language: "Kannada, English, Hindi",
+    experience: 50,
+    education: "MBBS, MD-General Medicine (Jun 1976), DM Cardiology (Sep 1993)",
+    consultationFee: 1,
+    timing: "Part-time with Regular OPD",
+    page: "Dr. Chandrakanta B Patil.html",
+    department_hidden: "Cardiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Somashekar N.webp",
+    name: "Dr. Somashekar N",
+    specialist: "Cardiology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 16,
+    education: "MBBS, Post Graduate Diploma in Clinical Cardiology (Sep 2010), Post Graduate Diploma in Diabetology (June 2008)",
+    consultationFee: 1,
+    timing: "Monday to Friday: 1:00 PM to 4:00 PM and on call",
+    page: "Dr. Somashekar N.html",
+    department_hidden: "Cardiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Avinash K..webp",
+    name: "Dr. Avinash",
+    specialist: "Cardiology",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 11,
+    education: "MBBS, MD-General Medicine, Post Graduate Diploma in Clinical Cardiology (Jun 2015)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Avinash K..html",
+    department_hidden: "Cardiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Veerabhadra Gupta.webp",
+    name: "Dr. Veerabhadra Guptha.K",
+    specialist: "Nephrology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 23,
+    education: "MBBS, MD - General Medicine (May 2003), DM-Nephrology (Oct 2006)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Veerabhadra Gupta.html",
+    department_hidden: "Nephrology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Naveen S Shetty.webp",
+    name: "Dr. Naveen S Shetty",
+    specialist: "Bone & Soft Tissue Oncology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 15,
+    education: "MBBS, DNB - Ortho Surg (2011), D'Ortho (2009), Fellowship (Orthopaedic Oncology & Paediatric Orthopaedics)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Naveen S. Shetty.html",
+    department_hidden: "Bone & Soft Tissue Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Prof. Dr. Parvesh Kumar Jain.webp",
+    name: "Dr. Parvesh Kumar Jain",
+    specialist: "Gastroenterology",
+    designation: "Senior Consultant & HOD",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 23,
+    education: "MBBS, MD-General Medicine (June 2003), DM - Gastroenterology (Feb 2008)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Parvesh Kumar Jain.html",
+    department_hidden: "Gastroenterology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Nithin K. R.webp",
+    name: "Dr. Nithin K R",
+    specialist: "Gastroenterology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 8,
+    education: "MBBS, MD-General Medicine (May 2018), DM - Gastroenterology (Aug 2022)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Nithin K. R.html",
+    department_hidden: "Gastroenterology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Kavitha S Rao.webp",
+    name: "Dr. Kavitha S Rao",
+    specialist: "Ophthalmic Oncology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Telugu",
+    experience: 26,
+    education: "MBBS, DNB - Ophthalmology (2000), Fellowship - Vitero Retinal Surgery (2003)",
+    consultationFee: 1,
+    timing: "Monday to Friday: 10:30 AM to 2:00 PM",
+    page: "Dr. Kavitha S Rao.html",
+    department_hidden: "Ophthalmic Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Moupia Goswami.webp",
+    name: "Dr. Moupia Goswami",
+    specialist: "Ophthalmic Oncology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 19,
+    education: "MBBS, DNB - Ophthalmology (June 2007), Fellow in Orbit & Oculoplasty (Oct 2009)",
+    consultationFee: 1,
+    timing: "Visiting on case-to-case basis",
+    page: "Dr. Moupia Goswami.html",
+    department_hidden: "Ophthalmic Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Aathma Prasanna.webp",
+    name: "Dr. Aathma Prasanna",
+    specialist: "Pain & Palliative Care Medicine",
+    designation: "Senior Consultant & former director - Palliative care",
+    language: "",
+    experience: "",
+    education: "MBBS, MD-Anaesthesiology, MNAMS",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Aathma Prasanna.html",
+    department_hidden: "Pain & Palliative Care"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Prashanth R Putran.webp",
+    name: "Dr. Prashanth R Putran",
+    specialist: "Pain & Palliative Care Medicine",
+    designation: "Consultant",
+    language: "",
+    experience: 11,
+    education: "MBBS, MD-Anaesthesiology (2015), Post Doctoral Fellowship - Regional Anaesthesia & Pain Management (Dec 2017), Fellowship in Chronc Pain Management (Feb 2021)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Prashanth R Putran.html",
+    department_hidden: "Pain & Palliative Care"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sunitha B. S..webp",
+    name: "Dr. Sunitha B S",
+    specialist: "Pain & Palliative Care Medicine",
+    designation: "Consultant",
+    language: "",
+    experience: 18,
+    education: "MBBS, MD-Physiology (Oct 2008), Fellowship Palliative Care (July 2019)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 4:00 P.M.",
+    page: "Dr. Sunitha B. S..html",
+    department_hidden: "Pain & Palliative Care"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Karthick R.G.webp",
+    name: "Dr. Karthick R G",
+    specialist: "Haemato-Oncology & BMT",
+    designation: "Consultant",
+    language: "Kannada, English, Tamil",
+    experience: 4,
+    education: "MBBS, DrNB - Clinical Haematology (2022), DCP - Clinical Pathology (2015), DNB - Pathology (2018)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:00 PM",
+    page: "Dr. Karthick R. G.html",
+    department_hidden: "Haemato-Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Vishnupriya.M.webp",
+    name: "Dr. Vishnupriya M",
+    specialist: "Haemato-Oncology & BMT",
+    designation: "Jr. Consultant",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 8,
+    education: "MBBS, DCP - Diploma Clinical Pathology (2015), DNB - Pathology (2018), Fellowship in Hematology & BMT (2021)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Vishnupriya M.html",
+    department_hidden: "Haemato-Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Santosh Subramanian Rajasekar.webp",
+    name: "Dr. Santosh Subramanian R",
+    specialist: "Haemato-Oncology & BMT",
+    designation: "Jr. Consultant",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 3,
+    education: "MBBS, MD Paediatrics (May 2023), DCH - Diploma in Child Health (May 2018), DrNB - Clinical Haematology (2025)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:00 PM",
+    page: "Dr. Santhosh Subramanian R.html",
+    department_hidden: "Haemato-Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Santosh H. S..webp",
+    name: "Dr. Santosh H.S",
+    specialist: "Endocrinology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 20,
+    education: "MBBS, MRCP (July 2006), FRCP (Oct 2016)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 5:00 P.M.",
+    page: "Dr. Santosh H. S..html",
+    department_hidden: "Endocrinology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Janardhan D. C..webp",
+    name: "Dr. Janardhan D C",
+    specialist: "Neurology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 17,
+    education: "MBBS, MD - Gen Medicine (May 2009), DM - Neurology (July 2014)",
+    consultationFee: 1,
+    timing: "On Call",
+    page: "Dr. Janardhan D. C..html",
+    department_hidden: "Neurology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Pavithra H.webp",
+    name: "Dr. Pavithra. H",
+    specialist: "Psychiatry",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi",
+    experience: 8,
+    education: "MBBS, DPM (May 2018)",
+    consultationFee: 1,
+    timing: "Monday to Friday",
+    page: "Dr. Pavithra H.html",
+    department_hidden: "Psycho-Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Rekha V. Kumar.webp",
+    name: "Dr. Rekha V Kumar",
+    specialist: "Histopathology",
+    designation: "Senior Consultant & HOD",
+    language: "Kannada, English, Hindi",
+    experience: 40,
+    education: "MBBS, MD Pathology (Aug 1986)",
+    consultationFee: 1,
+    timing: "Monday to Friday",
+    page: "Dr. Rekha V. Kumar.html",
+    department_hidden: "Histopathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Shanthi Velusamy.webp",
+    name: "Dr. Shanthi Velusamy",
+    specialist: "Histopathology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 13,
+    education: "MBBS, MD-Pathology (2013), DNB - PATH (2016), PDF in Oncopathology (2016)",
+    consultationFee: 1,
+    timing: "Monday to Friday: 8:00 AM to 4:00 PM",
+    page: "Dr. Shanthi Velusamy.html",
+    department_hidden: "Histopathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Divya V.webp",
+    name: "Dr. Divya V",
+    specialist: "Histopathology",
+    designation: "Senior Consultant & HOD",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 13,
+    education: "MBBS, MD - Pathology (2013), PDF (Oncopathology)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:00 PM",
+    page: "Dr. Divya V.html",
+    department_hidden: "Histopathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sulakshana M S.webp",
+    name: "Dr. Sulakshana M S",
+    specialist: "Histopathology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 12,
+    education: "MBBS, MD - Pathology (June 2014)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sulakshana M. S.html",
+    department_hidden: "Histopathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Chaitra V.webp",
+    name: "Dr. Chaitra V",
+    specialist: "Histopathology",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 16,
+    education: "MBBS, MD - Pathology (May 2010), PDF - Tumour Pathology (2021)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Chaitra V.html",
+    department_hidden: "Histopathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Nethra R.webp",
+    name: "Dr. Nethra R",
+    specialist: "Histopathology",
+    designation: "Registrar",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 3,
+    education: "MBBS, MD (Pathology)",
+    consultationFee: 1,
+    timing: "Monday to Friday",
+    page: "Dr. Nethra R.html",
+    department_hidden: "Histopathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Jayashree D. Kulkarni.webp",
+    name: "Dr. Jayashree D Kulkarni",
+    specialist: "Haematopathology",
+    designation: "Senior Consultant & Lab Director",
+    language: "Kannada, English, Hindi",
+    experience: 21,
+    education: "MBBS, MD - Pathology (Apr 2005), MBA- HCS (2012)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Jayashree D. Kulkarni.html",
+    department_hidden: "Haemato Pathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Gayathri J..webp",
+    name: "Dr. Gayathri J",
+    specialist: "Haematopathology",
+    designation: "Consultant",
+    language: "",
+    experience: 6,
+    education: "MBBS, MD (Pathology), PDCC in Advanced Haematology",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Gayathri J..html",
+    department_hidden: "Haemato Pathology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Nandini N Inamdar.webp",
+    name: "Dr. Nandini N Inamdar",
+    specialist: "Transfusion Medicine & Blood Centre",
+    designation: "Blood Bank Officer & Head - Transfusion Medicine",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 25,
+    education: "MBBS, DCP - Clinical Pathology (Sep 2001)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 10:00 AM to 6:00 PM",
+    page: "Dr. Nandini N. Inamdar.html",
+    department_hidden: "Transfusion Medicine & Blood Centre"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Priyanka P.webp",
+    name: "Dr. Priyanka P",
+    specialist: "Transfusion Medicine & Blood Centre",
+    designation: "Junior Consultant",
+    language: "Kannada, English, Hindi",
+    experience: 1,
+    education: "MBBS, MD - Transfusion Medicine (Jan 2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Priyanka P.html",
+    department_hidden: "Transfusion Medicine & Blood Centre"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Smitha S..webp",
+    name: "Dr. Smitha S",
+    specialist: "Microbiology & Virology",
+    designation: "Senior Consultant",
+    language: "",
+    experience: 18,
+    education: "MBBS, MD - Microbiology (Oct 2008)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 5:00 P.M.",
+    page: "Dr. Smitha S..html",
+    department_hidden: "Microbiology & Virology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sandeep M B Desai.webp",
+    name: "Dr. Sandeep MB Desai",
+    specialist: "Radiology & Radiodiagnosis",
+    designation: "Senior Consultant & HOD",
+    language: "",
+    experience: 18,
+    education: "MBBS, MD - Radiodiagnosis (2008)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sandeep M. B. Desai.html",
+    department_hidden: "Radiology & Radio Diagnosis"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Harish B. S.webp",
+    name: "Dr. Harish B S",
+    specialist: "Radiology & Radiodiagnosis",
+    designation: "Senior Consultant",
+    language: "Kannada, English, Hindi, Marathi",
+    experience: 20,
+    education: "MBBS, MD - Radiology (Oct 2006)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Harish B. S.html",
+    department_hidden: "Radiology & Radio Diagnosis"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Shubham Padashetty.webp",
+    name: "Dr. Shubham",
+    specialist: "Radiology & Radiodiagnosis",
+    designation: "Jr. Consultant",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 3,
+    education: "MBBS, MD - Radiodiagnosis (2023)",
+    consultationFee: 1,
+    timing: "Monday to Friday: 10:00 AM to 6:00 PM",
+    page: "Dr. Shubham Padashetty.html",
+    department_hidden: "Radiology & Radio Diagnosis"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Anulatha Holla.webp",
+    name: "Dr. Anulatha Holla",
+    specialist: "Radiology & Radiodiagnosis",
+    designation: "Junior Consultant",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 3,
+    education: "MBBS, MD - Radiodiagnosis (June 2023), Fellowship in Body Imaging in MSMC (2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Anulatha Holla.html",
+    department_hidden: "Radiology & Radio Diagnosis"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Somashekar G..webp",
+    name: "Dr. Somashekar G",
+    specialist: "Radiology & Radiodiagnosis",
+    designation: "Consultant",
+    language: "",
+    experience: 42,
+    education: "MBBS, DMRD - Radiodiagnosis (Aug 1979), MD - Radiotherapy (1984)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 5:00 P.M.",
+    page: "Dr. Somashekar G..html",
+    department_hidden: "Radiology & Radio Diagnosis"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Jismy Mary Mathew.webp",
+    name: "Dr. Jismy Mary Mathew",
+    specialist: "Radiology & Radiodiagnosis",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 4,
+    education: "MBBS, DNB - Radiodiagnosis (Mar 2022), Fellowship in Breast Imaging & Onco Imaging (Jun 2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Jismy Mary Mathew.html",
+    department_hidden: "Radiology & Radio Diagnosis"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Divya Vishwanatha Kini.webp",
+    name: "Dr. Divya Vishwanatha Kini",
+    specialist: "Radiology & Radiodiagnosis",
+    designation: "Junior Consultant",
+    language: "Kannada, English, Hindi, Konkani, Tamil",
+    experience: 4,
+    education: "MBBS, MD Radiodiagnosis (2022), DNB - Radiodiology (2023), FNB Breast Imaging & Interventions (2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Divya Vishwanatha Kini.html",
+    department_hidden: "Radiology & Radio Diagnosis"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sunil Kalmath.webp",
+    name: "Dr. Sunil Kalmath",
+    specialist: "Interventional Radiology",
+    designation: "Consultant",
+    language: "",
+    experience: 9,
+    education: "MBBS, MD - Radiodiagnosis (2017), Fellowship in Interventional Radiology (Nov 2019), EBIR (Mar 2022)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sunil Kalmath.html",
+    department_hidden: "Interventional Radiology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Vijayaraghavan R L.webp",
+    name: "Dr. Vijayaraghavan R L",
+    specialist: "Nuclear Medicine",
+    designation: "Senior Consultant & HOD",
+    language: "",
+    experience: 14,
+    education: "MBBS, DNB - Nuclear Medicine (2012), RSO Nuclear Medicine, FASNC (2014), MICNM (2021)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Vijayaraghavan R. L.html",
+    department_hidden: "Nuclear Medicine"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Ruchitha Rungta.webp",
+    name: "Dr. Rachita Rungta",
+    specialist: "Nuclear Medicine",
+    designation: "Junior Consultant",
+    language: "",
+    experience: 3,
+    education: "MBBS, DNB - Nuclear Medicine (2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Ruchitha Rungta.html",
+    department_hidden: "Nuclear Medicine"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Manasa C.webp",
+    name: "Dr. Manasa .C",
+    specialist: "Clinical Pharmacology",
+    designation: "Clinical Pharmacologist & HOD",
+    language: "Kannada, English, Hindi, Tamil",
+    experience: 8,
+    education: "Pharm D (2018), Fellowship in Oncology Pharmacy (2019), PG Diploma in Clinical Research (2020)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Manasa C.html",
+    department_hidden: "Clinical Pharmacology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Bhargav Raj MS.webp",
+    name: "Dr Bhargav Raj M S",
+    specialist: "Clinical Pharmacology",
+    designation: "Clinical Pharmacologist",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 5,
+    education: "Pharm D (2021), Fellowship in Oncology Pharmacy (2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Bhargav Raj.html",
+    department_hidden: "Clinical Pharmacology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sushmitha M.webp",
+    name: "Dr Sushmitha M",
+    specialist: "Clinical Pharmacology",
+    designation: "Clinical Pharmacologist",
+    language: "",
+    experience: 2,
+    education: "Pharm D (Dec 2024)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sushmitha M.html",
+    department_hidden: "Clinical Pharmacology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Roopa Acharya.webp",
+    name: "Dr Roopa Acharya",
+    specialist: "Clinical Pharmacology",
+    designation: "Clinical Pharmacologist",
+    language: "",
+    experience: 2,
+    education: "Pharm D (Apr 2024), Fellowship in Infectious Diseases (Apr 2025)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Roopa Acharya.html",
+    department_hidden: "Clinical Pharmacology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Lakshmi Krishnamoorthy.webp",
+    name: "Dr Lakshmi Krishnamurthy",
+    specialist: "Biochemistry",
+    designation: "Senior Consultant & HOD",
+    language: "",
+    experience: 35,
+    education: "MSc - Biochemistry, Ph.D - Biochemistry (1991)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Lakshmi Krishnamoorthy.html",
+    department_hidden: "Biochemistry"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Shilpa V.webp",
+    name: "Dr. Shilpa V",
+    specialist: "Biochemistry",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi",
+    experience: 12,
+    education: "MSc - Biotechnology, Ph.D - Medical Biochemistry (2014)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 8:00 AM to 4:00 PM",
+    page: "Dr. Shilpa V.html",
+    department_hidden: "Biochemistry"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sreelakshmi B..webp",
+    name: "Dr. Sreelakshmi B",
+    specialist: "Dermatology",
+    designation: "Visiting Consultant",
+    language: "",
+    experience: 3,
+    education: "MBBS, MD - Dermatology, Venerology & Leprosy (June 2023)",
+    consultationFee: 1,
+    timing: "9:00 A.M. - 5:00 P.M.",
+    page: "Dr. Sreelakshmi B..html",
+    department_hidden: "Dermatology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Paturu Kondaiah.webp",
+    name: "Dr Paturu Kondaiah",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Advisor",
+    language: "",
+    experience: 49,
+    education: "MSc - Genetics (1977), Ph.D - Genetics (1982)",
+    consultationFee: 1,
+    timing: "Part-time with Regular OPD",
+    page: "Dr. Paturu Kondaiah.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Aruna Korlimarla.webp",
+    name: "Dr. Aruna Korlimarla",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Principal Scientist",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 28,
+    education: "MSc - Microbiology (1998), Ph.D (2015), PGD - Molecular Genetics (2001)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Aruna Korlimarla.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Savitha S. Sharma.webp",
+    name: "Dr. Savitha Sharma",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Senior Scientist",
+    language: "Kannada, English, Hindi, Tulu",
+    experience: 13,
+    education: "MSc - Biochemistry, Ph.D - molecular Oncology (2013), Postdoctoral Fellow (Molecular Oncology)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Savitha S. Sharma.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Akhileshwar Namani.webp",
+    name: "Dr. Akhileshwar Namani",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Scientist",
+    language: "",
+    experience: "",
+    education: "M.Sc (Biotechnology), PhD (Biochemistry & Molecular Biology)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Akhileshwar Namani.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Tapas Patra.webp",
+    name: "Dr. Tapas Patra",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Scientist",
+    language: "",
+    experience: 22,
+    education: "MSc - Microbiology (2004), PhD - Molecular Microbiology (2012)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Tapas Patra.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sreekala.webp",
+    name: "Dr Sreekala K N",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Post Doctoral Scientist",
+    language: "",
+    experience: 17,
+    education: "MSc - Biochemistry (2009), PhD (Feb 2021)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sreekala.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Ashitha N. N..webp",
+    name: "Dr. Ashitha N N",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Research Pathologist",
+    language: "",
+    experience: 10,
+    education: "MBBS, MD - Pathology (2016)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Ashitha N. N..html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Prasanna Kumari.webp",
+    name: "Dr. Prasannakumari",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Senior Scientist",
+    language: "",
+    experience: 44,
+    education: "MSc - Zoology (1982), Ph.D - Mammalian Cytogenetics (1990)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Prasanna Kumari.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Ranjani Shamsundar.webp",
+    name: "Dr Ranjani Shamsundar",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Senior Scientist",
+    language: "Kannada, English, Hindi",
+    experience: 32,
+    education: "MBBS, MD - Microbiology (Jan 1994), Diploma in Medical Virology (1997)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Ranjani Shamsundar.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Niby Jacob.webp",
+    name: "Ms Niby Jacob",
+    specialist: "Molecular Diagnostics & Research",
+    designation: "Visiting Consultant & Geneticist",
+    language: "Kannada, English, Hindi, Malayalam",
+    experience: 16,
+    education: "MSc - Genetic Counselling (2010), PGD in Counselling Psychology",
+    consultationFee: 1,
+    timing: "Part-time with Regular OPD",
+    page: "Mrs. Niby J. E.html",
+    department_hidden: "Molecular Diagnostics & Research"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Sunitha Bhosle.webp",
+    name: "Dr Sunitha",
+    specialist: "Community Oncology",
+    designation: "Public Health Dentist",
+    language: "",
+    experience: 6,
+    education: "BDS, MDS - Oral Medicine & Radiology (2020)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Sunitha Bhosle.html",
+    department_hidden: "Community Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Dipanwita Chakraborty.webp",
+    name: "Dr Deepanwita Chakraborthy",
+    specialist: "Community Oncology",
+    designation: "Public Health Dentist",
+    language: "",
+    experience: 5,
+    education: "BDS, MDS - Oral Medicine & Radiology (Dec 2021)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Dipanwita Chakraborty.html",
+    department_hidden: "Community Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Subhashree T.webp",
+    name: "Dr. Subhashree T",
+    specialist: "Community Oncology",
+    designation: "Public Health Dentist",
+    language: "",
+    experience: "",
+    education: "BDS, MDS - Public Health Dentistry",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Subhashree T.html",
+    department_hidden: "Community Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. S Sruthy.webp",
+    name: "Dr S Sruthy",
+    specialist: "Community Oncology",
+    designation: "Public Health Dentist",
+    language: "",
+    experience: 3,
+    education: "BDS, MDS - Public Health Dentistry (Jul 2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. S Sruthy.html",
+    department_hidden: "Community Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. John Chungath.webp",
+    name: "Dr. John C",
+    specialist: "Physiotherapy",
+    designation: "Physiotherapist & HOD",
+    language: "",
+    experience: 29,
+    education: "BPT (May 1997), MHA (Sep 2011)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. John Chungath.html",
+    department_hidden: "Physiotherapy"
+  },
+  {
+    photo: "../Doctors_Photo/Mr. Burusu Muni Krishna.webp",
+    name: "B Munikrishna",
+    specialist: "Physiotherapy",
+    designation: "Physiotherapist",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 22,
+    education: "Bachelor of Physiotherapy (June 2004)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Munikrishna B.html",
+    department_hidden: "Physiotherapy"
+  },
+  // {
+  //   photo: "../Doctors_Photo/Dr. Shree N.webp",
+  //   name: "Shree N Deshpande",
+  //   specialist: "Nutrition & Dietetics",
+  //   designation: "Incharge - N & D",
+  //   language: "",
+  //   experience: "",
+  //   education: "",
+  //   consultationFee: 1,
+  //   timing: "Full time",
+  //   page: "Shree N Deshpande.html",
+  //   department_hidden: "Nutrition & Dietetics"
+  // },
+  {
+    photo: "../Doctors_Photo/Sahithi Guntamadugu.webp",
+    name: "Ms Sahithi Guntamadugu",
+    specialist: "Nutrition & Dietetics",
+    designation: "Senior Clinical Dietitian",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 4,
+    education: "MSc - Clinical Nutrition and Dietetics (2022)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:00 PM",
+    page: "Sahithi Guntamadugu.html",
+    department_hidden: "Nutrition & Dietetics"
+  },
+  {
+    photo: "../Doctors_Photo/Ananya M.webp",
+    name: "Ms Ananya M",
+    specialist: "Nutrition & Dietetics",
+    designation: "Clinical Dietitian",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 3,
+    education: "MSc - Food and Nutrition (2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Ms. Ananya M.html",
+    department_hidden: "Nutrition & Dietetics"
+  },
+  {
+    photo: "../Doctors_Photo/Jananiee R Punith.webp",
+    name: "Ms Jananiee R Punith",
+    specialist: "Nutrition & Dietetics",
+    designation: "Clinical Dietitian",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 3,
+    education: "MSc - Nutrition and Dietetics (Oct 2023)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Ms. Jananiee R. Punith.html",
+    department_hidden: "Nutrition & Dietetics"
+  },
+  {
+    photo: "../Doctors_Photo/Krithi.webp",
+    name: "Ms Krithi",
+    specialist: "Nutrition & Dietetics",
+    designation: "Clinical Dietitian",
+    language: "Kannada, English, Hindi, Tamil, Malayalam, Tulu",
+    experience: 2,
+    education: "MSc - Food Science Nutrition and Dietetics (2024)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:00 PM",
+    page: "Ms. Krithi.html",
+    department_hidden: "Nutrition & Dietetics"
+  },
+  {
+    photo: "../Doctors_Photo/Krithika N Shetty.webp",
+    name: "Ms Krithika N Shetty",
+    specialist: "Nutrition & Dietetics",
+    designation: "Clinical Dietitian",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 2,
+    education: "MSc - Food Science Nutrition (2024)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:00 PM",
+    page: "Ms. Krithika N. Shetty.html",
+    department_hidden: "Nutrition & Dietetics"
+  },
+  {
+    photo: "../Doctors_Photo/M. Manila.webp",
+    name: "Ms M Manila",
+    specialist: "Nutrition & Dietetics",
+    designation: "Clinical Dietitian",
+    language: "Kannada, English, Hindi, Marathi, Bengali, Konkani",
+    experience: 3,
+    education: "MSc - Dietetics and Applied Nutrition (Aug 2023)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 5:00 PM",
+    page: "Ms. M. Manila.html",
+    department_hidden: "Nutrition & Dietetics"
+  },
+  {
+    photo: "../Doctors_Photo/Shree Deshpande.webp",
+    name: "Ms Shree Deshpande",
+    specialist: "Nutrition & Dietetics",
+    designation: "Incharge - Dietitian",
+    language: "",
+    experience: 5,
+    education: "MSc - Clinical Nutrition & Dietetics (2020)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Shree Deshpande.html",
+    department_hidden: "Nutrition & Dietetics"
+  },
+  {
+    photo: "../Doctors_Photo/Ms. Rakshatha J.webp",
+    name: "Ms Rakshatha J",
+    specialist: "Psycho-Oncology",
+    designation: "Psychologist",
+    language: "Kannada, English, Hindi, Telugu",
+    experience: 4,
+    education: "MSc - Clinical Psychology (2022)",
+    consultationFee: 1,
+    timing: "Monday to Saturday: 9:00 AM to 6:00 PM",
+    page: "Ms. Rakshatha J.html",
+    department_hidden: "Psycho-Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Zankhanna Bush.webp",
+    name: "Dr Zankhanna Bush",
+    specialist: "Integrative Oncology",
+    designation: "Consultant",
+    language: "",
+    experience: "",
+    education: "",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Zankhanna Bush.html",
+    department_hidden: "Integrative Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. B K Madhusudan.webp",
+    name: "Dr. B K Madhusudan",
+    specialist: "Integrative Oncology",
+    designation: "Consultant",
+    language: "Kannada, English, Hindi, Telugu, Tamil",
+    experience: 28,
+    education: "Homoeopathic Practitioner (Jan 1998)",
+    consultationFee: 1,
+    timing: "Monday to Friday: 10:00 AM to 5:00 PM",
+    page: "Dr. B. K. Madhusudan.html",
+    department_hidden: "Integrative Oncology"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Shashirekha.webp",
+    name: "Dr Shashirekha",
+    specialist: "Administration",
+    designation: "Asst Medical Superintendent",
+    language: "",
+    experience: 13,
+    education: "MBBS (Oct 2003), MBA (May 2013)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Shashirekha.html",
+    department_hidden: "Administration"
+  },
+  {
+    photo: "../Doctors_Photo/Dr. Avinash C M.webp",
+    name: "Dr Avinash C Madhukar",
+    specialist: "Administration",
+    designation: "Asst Medical Superintendent",
+    language: "Kannada, English",
+    experience: 15,
+    education: "MBBS (Apr 2007), MHA (Nov 2011)",
+    consultationFee: 1,
+    timing: "Full time",
+    page: "Dr. Avinash C M.html",
+    department_hidden: "Administration"
+  } 
+  
+]
+
+
+    const perPage = 20;
+    let currentPage = 1;
+
+    function getSelectedFilters(className) {
+      return Array.from(document.querySelectorAll(`.${className}:checked`)).map(input => input.value);
+    }
+
+    function filterDoctors() {
+      const searchTerm = document.getElementById("doctorSearch").value.toLowerCase().trim();
+      const selectedSpecialities = getSelectedFilters("speciality-filter");
+
+      // When user types in search: search across ALL doctors (entire list) - any doctor can be found
+      if (searchTerm) {
+        return doctors.filter(doc => {
+          return doc.name.toLowerCase().includes(searchTerm) || 
+                 (doc.specialist && doc.specialist.toLowerCase().includes(searchTerm)) ||
+                 (doc.designation && doc.designation.toLowerCase().includes(searchTerm)) ||
+                 (doc.education && doc.education.toLowerCase().includes(searchTerm));
+        });
+      }
+
+      // No search text: filter by department/speciality only (at least one department always selected)
+      const specialitiesToUse = selectedSpecialities.length > 0 ? selectedSpecialities : ["Surgical Oncology"];
+      const specialityMapping = {};
+      document.querySelectorAll('.speciality-filter').forEach(checkbox => {
+        const value = checkbox.value;
+        const dataDept = checkbox.getAttribute('data-department');
+        if (dataDept) {
+          specialityMapping[value] = dataDept;
+        }
+      });
+
+      return doctors.filter(doc => {
+        const departmentToCheck = doc.department_hidden || doc.specialist;
+        let matchesSpeciality = true;
+        if (specialitiesToUse.length > 0) {
+          matchesSpeciality = specialitiesToUse.some(selected => {
+            if (specialityMapping[selected]) {
+              if (selected === "Speech & Swallowing Therapy") {
+                return departmentToCheck === specialityMapping[selected] && 
+                       (doc.specialist.toLowerCase().includes("speech") || 
+                        doc.specialist.toLowerCase().includes("swallow") ||
+                        doc.designation.toLowerCase().includes("speech") ||
+                        doc.designation.toLowerCase().includes("swallow"));
+              }
+              return departmentToCheck === specialityMapping[selected];
+            }
+            return departmentToCheck === selected;
+          });
+        }
+        return matchesSpeciality;
+      });
+    }
+    function renderDoctors(page) {
+      const filtered = filterDoctors();
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+      const list = filtered.slice(start, end);
+      const container = document.getElementById('doctorList');
+      container.innerHTML = '';
+
+      list.forEach(doc => {
+        container.innerHTML += `
+          <div class="doctor-card">
+            <img src="${doc.photo}" alt="${doc.name}">
+            <div class="doctor-info">
+              <h3>${doc.name}</h3>
+              ${doc.experience && doc.experience.toString().trim() ? `<p><strong>Experience (years):</strong> ${doc.experience}</p>` : ''}
+              <p><strong>Specialist:</strong> ${doc.specialist}</p>
+              <p><strong>Designation:</strong> ${doc.designation}</p>
+              <p><strong>Education:</strong> ${doc.education}</p>
+              
+            </div>
+            <div class="doctor-actions">
+              <a href="${doc.page}" target="_blank"><button>Doctor Information</button></a>
+              <a href="tel:7090521000"><button>Call</button></a>
+              <a href="../patient-services/book-appointment.html?doctor=${encodeURIComponent(doc.name)}" target="_blank"><button style="background-color: #dc3545; color: #ffffff;">Request an Appointment</button></a>
+            </div>
+          </div>`;
+      });
+      renderPagination(filtered.length);
+    }
+    // ${doc.language && doc.language.trim() ? `<p><strong>Languages:</strong> ${doc.language}</p>` : ''}
+
+
+    function renderPagination(totalItems) {
+      const totalPages = Math.ceil(totalItems / perPage);
+      const container = document.getElementById('pagination');
+      container.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const activeClass = (i === currentPage) ? 'active' : '';
+        container.innerHTML += `<button class="${activeClass}" onclick="changePage(${i})">${i}</button>`;
+      }
+    }
+
+    function changePage(page) {
+      currentPage = page;
+      renderDoctors(currentPage);
+    }
+
+      function openModal(doctorName) {
+  const doctor = doctors.find(doc => doc.name === doctorName);
+  const doctorDisplay = doctor ? `${doctor.name} - ${doctor.specialist}` : doctorName;
+  const doctorField = document.getElementById('selectedDoctor');
+  if (doctorField) {
+    doctorField.value = doctorDisplay;
+  }
+
+  // Reset form fields
+  const form = document.querySelector('#appointmentModal form');
+  if (form) {
+    form.reset();
+    if (doctorField) doctorField.value = doctorDisplay; // Reset doctor field after form reset
+  }
+
+  document.querySelector(".modal-content").style.marginTop = "20px"; // optional spacing at top
+  document.getElementById('appointmentModal').style.display = 'flex';
+}
+
+    function closeModal() {
+      document.getElementById('appointmentModal').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'none';
+    }
+
+    function submitAppointment() {
+      document.getElementById('successMessage').style.display = 'block';
+    }
+
+    function handleCall(name) {
+      if (window.innerWidth <= 768) {
+        window.location.href = 'tel:+919999999999';
+      } else {
+        alert(`Call us now at +91-9999999999 (Dr. ${name})`);
+      }
+    }
+
+    // Function to filter specialities based on search
+    function filterSpecialities() {
+      const searchTerm = document.getElementById("specialitySearch").value.toLowerCase().trim();
+      const filterGroup = document.querySelector('.filter-group');
+      const allElements = Array.from(filterGroup.children);
+      
+      if (searchTerm === '') {
+        // Show all elements when search is empty
+        allElements.forEach(element => {
+          element.style.display = '';
+        });
+      } else {
+        // Track which headings should be visible
+        const visibleHeadings = new Set();
+        
+        // First pass: check labels and mark their headings as visible if they match
+        allElements.forEach((element, index) => {
+          if (element.tagName === 'LABEL') {
+            const labelText = element.textContent.trim().toLowerCase();
+            const checkbox = element.querySelector('input');
+            const checkboxValue = checkbox ? checkbox.value.toLowerCase() : '';
+            
+            // Check if label text or checkbox value matches search term
+            if (labelText.includes(searchTerm) || checkboxValue.includes(searchTerm)) {
+              element.style.display = 'block';
+              
+              // Find the heading before this label
+              for (let i = index - 1; i >= 0; i--) {
+                if (allElements[i].tagName === 'H4') {
+                  visibleHeadings.add(allElements[i]);
+                  break;
+                }
+              }
+            } else {
+              element.style.display = 'none';
+            }
+          }
+        });
+        
+        // Second pass: show/hide headings
+        allElements.forEach(element => {
+          if (element.tagName === 'H4') {
+            if (visibleHeadings.has(element)) {
+              element.style.display = 'block';
+            } else {
+              element.style.display = 'none';
+            }
+          }
+        });
+      }
+    }
+
+    // Ensure at least one department is always selected
+    function ensureOneDepartmentSelected() {
+      const checked = document.querySelectorAll(".speciality-filter:checked");
+      if (checked.length === 0) {
+        const surgicalOncology = document.querySelector('.speciality-filter[value="Surgical Oncology"]');
+        if (surgicalOncology) surgicalOncology.checked = true;
+      }
+    }
+
+    document.getElementById("doctorSearch").addEventListener("input", () => renderDoctors(1));
+    document.getElementById("specialitySearch").addEventListener("input", filterSpecialities);
+    document.querySelectorAll(".speciality-filter").forEach(el =>
+      el.addEventListener("change", () => {
+        ensureOneDepartmentSelected();
+        renderDoctors(1);
+      })
+    );
+
+    renderDoctors(currentPage);
+
+    // --------------------
+    // APPOINTMENT FORM HANDLING
+    // --------------------
+
+    // Handle form submission
+    const appointmentForm = document.querySelector('#appointmentModal form');
+    if (appointmentForm) {
+      appointmentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Client-side validation
+        const patientName = document.getElementById('patientName').value.trim();
+        const patientGender = document.getElementById('patientGender').value;
+        const contactNumber = document.getElementById('contactNumber').value.trim();
+        const patientEmail = document.getElementById('patientEmail').value.trim();
+        const visitType = document.getElementById('visitType').value;
+        const appointmentDate = document.getElementById('appointmenttext').value.trim();
+        const cancerConcern = document.getElementById('cancerConcern').value.trim();
+        
+        const validationErrors = [];
+        
+        if (!patientName) validationErrors.push('Patient name is required');
+        if (!patientGender) validationErrors.push('Gender is required');
+        if (!contactNumber || contactNumber.length < 10) validationErrors.push('Valid contact number is required (minimum 10 digits)');
+        if (!patientEmail || !patientEmail.includes('@')) validationErrors.push('Valid email address is required');
+        if (!visitType) validationErrors.push('Visit type is required');
+        if (!appointmentDate) validationErrors.push('Appointment date is required');
+        if (!cancerConcern) validationErrors.push('Medical concern / Cancer type is required');
+        
+        if (validationErrors.length > 0) {
+          alert('Please fill in all required fields:\n\n' + validationErrors.join('\n'));
+          return;
+        }
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Show loading state
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton ? submitButton.textContent : '';
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Submitting...';
+        }
+        
+        // Send AJAX request
+        fetch('book-appointment.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          // Check if response is ok
+          if (!response.ok) {
+            return response.text().then(text => {
+              try {
+                return JSON.parse(text);
+              } catch (e) {
+                return { success: false, message: text || 'Server error occurred' };
+              }
+            });
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.success) {
+            // Show success message
+            alert(data.message || 'Appointment request submitted successfully!');
+            
+            // Reset form
+            this.reset();
+            const doctorField = document.getElementById('selectedDoctor');
+            if (doctorField) {
+              doctorField.value = doctorField.value; // Keep doctor name after reset
+            }
+            
+            // Close modal after 2 seconds
+            setTimeout(() => {
+              closeModal();
+            }, 2000);
+          } else {
+            // Show error message with details
+            let errorMsg = data.message || 'Failed to submit appointment. Please try again.';
+            if (data.errors && Array.isArray(data.errors)) {
+              errorMsg += '\n\nErrors:\n' + data.errors.join('\n');
+            }
+            alert(errorMsg);
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = originalButtonText;
+            }
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          let errorMsg = 'An error occurred while submitting your appointment request.\n\n';
+          errorMsg += 'Please try again or contact us directly.\n\n';
+          errorMsg += 'Error details: ' + (error.message || 'Network or server error');
+          alert(errorMsg);
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+        });
+      });
+    }
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Support Prostate Cancer Awareness &amp; Treatment</title>
+    <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+.footerabove-section {
+    margin-top: 0;
+    background-color: #f8f8f8; /* Light background for footer */
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Footer CTA Container */
+.footerabove-cta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Footer Heading */
+.footerabove-cta-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Footer Button Container */
+.footerabove-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+}
+
+/* Footer Button Styles */
+.footerabove-cta-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff6b81; /* Pink color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footerabove-cta-btn:hover {
+    background-color: #e4556b; /* Darker pink */
+}
+
+
+</style>
+
+
+   <!-- Footer Section -->
+<!-- <footer class="footerabove-section">
+    <div class="footerabove-cta-container">
+        <h2>Support Colorectal Cancer Awareness &amp; Treatment</h2>
+        <div class="footerabove-cta-buttons">
+            <button class="footerabove-cta-btn" id="donate-btn">Donate for Screening</button>
+            <button class="footerabove-cta-btn" id="csr-btn">Partner through CSR</button>
+            <button class="footerabove-cta-btn" id="volunteer-btn">Volunteer with Us</button>
+        </div>
+    </div>
+</footer> -->
+
+    <script>
+
+// Interactivity for Footer Buttons
+document.getElementById('donate-btn').addEventListener('click', function() {
+    alert('Thank you for donating!');
+});
+
+document.getElementById('csr-btn').addEventListener('click', function() {
+    alert('Thank you for considering CSR partnerships!');
+});
+
+document.getElementById('volunteer-btn').addEventListener('click', function() {
+    alert('Thank you for volunteering with us!');
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

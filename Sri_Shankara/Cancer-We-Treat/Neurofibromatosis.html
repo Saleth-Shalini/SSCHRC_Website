@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurofibromatosis (NF): Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Neurofibromatosis (NF): A Comprehensive Guide
+                </h2>
+            </div>
+            
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mb-12" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    This information is intended to provide a general overview of Neurofibromatosis (NF). It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns or before making any decisions related to your health.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Neurofibromatosis (NF) is a rare, progressive, and unpredictable group of inherited conditions that cause tumours to grow in the nervous system, typically in and around nerve cells. These tumours can develop in various parts of the body, including the brain, spinal cord, adrenal gland, eyes, and muscle tissue.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            While most neurofibromatosis tumours are benign (non-cancerous), they can still pose significant health risks, such as leading to disfigurement. Growths on or near the spinal cord and surrounding nerves may cause paralysis. In approximately 10% of cases, these tumours can become malignant (cancerous). Early detection is vital for patients whose tumours present a serious health risk.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Neurofibromatosis is classified as a collection of three distinct genetic disorders. Each type is caused by a gene mutation that can either be inherited from a parent or occur as a new, random change in an individual's DNA. In both scenarios, the condition can be passed down to the patient's children.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Types of Neurofibromatosis
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Neurofibromatosis Type 1 (NF1)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is the most frequently diagnosed type, affecting roughly 1 in every 3,500 births. While most NF1 patients have mild to moderate symptoms, it is a progressive disorder that may lead to disfigurement, skeletal abnormalities, and learning disabilities.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Neurofibromatosis Type 2 (NF2)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This type is much rarer and is primarily characterised by tumours that form on the vestibular nerve, a nerve responsible for hearing and balance. NF2 also carries an increased risk of other nervous system tumours and may cause severe vision problems.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Schwannomatosis</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is also a very rare form, defined by the presence of multiple schwannomas—tumours that grow around nerves without involving the skin or other organs—everywhere in the body except on the vestibular nerve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The symptoms of Neurofibromatosis vary significantly depending on the type of the disorder.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Neurofibromatosis Type 1 (NF1)
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The most common symptoms of NF1, which almost always appears by the age of 10, include:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Skin Changes:</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>Six or more brown spots on the skin (known as café-au-lait spots), measuring more than 5 millimetres in children and more than 15 millimetres in adolescents.</li>
+                                <li>Freckling in the armpit or groin areas.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Tumours:</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>Two or more neurofibromas (slow-growing tumours of the nervous system) or one plexiform neurofibroma (a peripheral nerve tumour) which can cause disfigurement.</li>
+                                <li>An optic glioma, a type of tumour affecting the optic nerves or where the nerves cross.</li>
+                                <li>Two or more growths on the iris of the eye, known as Lisch nodules.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Skeletal/Other Issues:</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>Skeletal or spinal abnormalities such as scoliosis (curvature of the spine) or thinning of the shin bone.</li>
+                                <li>Larger than normal head circumference.</li>
+                                <li>Higher-than-normal rates of epilepsy.</li>
+                                <li>Higher-than-normal rates of Attention Deficit Hyperactivity Disorder (ADHD) and learning disabilities.</li>
+                                <li>A family history of NF1.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Neurofibromatosis Type 2 (NF2)
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        NF2 is distinguished by tumours that grow on the hearing nerves, usually manifesting between the ages of 18 and 22. This can lead to:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Partial or complete deafness.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                                    <span>Tinnitus (a ringing in the ears).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                                    <span>Balance problems.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Schwannomatosis
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        This form of the disease is genetically distinct from NF1 and NF2. It results in benign nerve cell tumours called schwannomas, which can occur anywhere on the body except the vestibular nerve. Symptoms primarily involve:
+                    </p>
+                    
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 mt-6" style="border-color: #2E8B57;">
+                        <p class="text-gray-700 leading-relaxed">
+                            Sometimes-serious pain caused by the growths pressing on nerves and surrounding tissue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Diagnosing Neurofibromatosis is a precise process. Our specialists primarily rely on a thorough physical examination. In addition, for more complex cases, our experts may perform specialised investigations to confirm the diagnosis and determine the risk for tumour development. The diagnostic process may include:
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Physical Examination</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A detailed check for characteristic signs and symptoms, such as café-au-lait spots and neurofibromas.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Genetic Testing</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Specialised tests to identify mutations in the genes associated with NF.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Scans</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Magnetic Resonance Imaging (MRI) and Computed Tomography (CT) scans to locate and assess tumours within the nervous system.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Paediatric Neuropsychological Assessment</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        For children, a paediatric neuropsychologist is available at SSCHRC's Cancer Hospital to determine any learning disabilities the patient may be facing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    The physicians at SSCHRC are highly specialised in diagnosing and managing neurofibromatosis and the cancers that can arise from the condition. We welcome the opportunity to provide second opinions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Neurofibromatosis is a progressive disease, meaning patients require continuous, long-term monitoring to manage their specific symptoms and complications. Treatment is always highly personalised and depends on the location, size, and type of tumour(s) present.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    At SSCHRC, our comprehensive programme for NF patients is designed to address the many potential complications of the disorder, which can include hearing and vision problems, learning disabilities, and chronic pain.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Our Treatment Approach includes:
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Multidisciplinary Team</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Patients are cared for by a team of experts, including specialists in treating tumours affecting the eyes and ears, and surgeons who can operate on tumours throughout the body.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Surgery and Systemic Therapies</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>For growing brain tumours in children, the standard treatment is chemotherapy, though surgery and radiation may also be necessary.</li>
+                                <li>Peripheral nerve and spinal tumours are treated with surgery. If these tumours are malignant, a combination of surgery, radiation, and chemotherapy is used.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Specialist Management</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Orthopaedic Centre:</strong> Manages treatments for bone abnormalities in the arms and legs, and for conditions like scoliosis.</li>
+                                <li><strong>Endocrine Service:</strong> Manages NF-related growth disorders.</li>
+                                <li><strong>Pain Management:</strong> Specialists are available to manage NF-related chronic pain.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Support and Education</h4>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>For children with NF, SSCHRC's Cancer Hospital offers a dedicated programme that works with schools to develop an educational plan and provide support for learning.</li>
+                                <li>Genetic counselling is offered to adult NF patients who are considering starting a family.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Access to Oncology Care</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Should a tumour become cancerous, our NF patients have access to all the care available at SSCHRC, a top-tier cancer centre.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Clinical Trials</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The most innovative treatments for neurofibromatosis are often offered through clinical trials, which are carefully monitored studies to test the safety and effectiveness of new therapies. You may speak to your doctor to see if you or your child are eligible for one of these trials.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

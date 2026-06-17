@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acute Lymphocytic Leukaemia (ALL) - Sri Shankara Cancer Hospital & Research Centre</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .hospital-banner-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hospital-banner-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .hospital-banner-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hospital-banner-background.desktop {
+            display: block;
+        }
+
+        .hospital-banner-background.mobile {
+            display: none;
+        }
+
+        .hospital-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(46,139,87,0.7) 0%, rgba(255,69,0,0.6) 100%);
+        }
+
+        .hospital-banner-content {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 90%;
+            max-width: 1200px;
+            z-index: 10;
+        }
+
+        .hospital-banner-text {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .hospital-banner-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #FF4500;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+        }
+
+        .hospital-banner-cta:hover {
+            background-color: #2E8B57;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
+            color: white;
+        }
+
+        .hospital-banner-mobile-text {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .hospital-banner-background.desktop {
+                display: none;
+            }
+
+            .hospital-banner-background.mobile {
+                display: block;
+            }
+
+            .hospital-banner-content {
+                display: none;
+            }
+
+            .hospital-banner-mobile-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.5rem;
+                background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+            }
+
+            .hospital-banner-cta {
+                width: 100%;
+                max-width: 350px;
+                text-align: center;
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+</head>
+<body class="bg-gray-50">
+
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Acute Lymphocytic Leukaemia (ALL)
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Acute lymphocytic leukaemia (ALL) is a form of cancer affecting the blood and blood-forming tissues of the body. It progresses rapidly if left untreated and is the most common leukaemia in children, while being the rarest of the four common types overall.
+                </p>
+            </div>
+
+            <!-- About ALL -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        About Acute Lymphocytic Leukaemia (ALL)
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            ALL develops from lymphoid stem cells. These cancerous cells multiply quickly and are poor at fighting infection. They crowd out healthy cells, leaving patients weak and prone to illness.
+                        </p>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            The two main subtypes are B cell ALL, which accounts for approximately 85% of cases, and T cell ALL, accounting for 15%. These are further categorised based on genetic markers. An important subtype is Philadelphia chromosome-positive B-ALL, which occurs when segments of chromosome 9 and chromosome 22 swap places in a blood cell. This genetic change causes the cancerous cell to produce a protein (from the tyrosine kinase family) that encourages rapid multiplication. Leukaemias with the Philadelphia chromosome can be treated with targeted therapies known as tyrosine kinase inhibitors, which interfere with this protein.
+                        </p>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            In India, around many cases are diagnosed annually, with over half affecting paediatric patients. Among adults, the risk begins to increase around age 50. The five-year survival rate for ALL is about 70%, largely due to a 90% survival rate among paediatric patients. For adults, the survival rate declines with age, partly due to chromosome changes linked to poorer outcomes, which are more prevalent in adults, as well as the presence of other health conditions in older patients that can affect care and prognosis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Blood Cell Creation and Leukaemia Classification -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Blood Cell Creation and Leukaemia Classification
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The body produces millions of blood cells daily, primarily in the bone marrow, which contains immature stem cells. These stem cells first become either lymphoid stem cells or myeloid stem cells.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Lymphoid Stem Cells</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Lymphoid stem cells develop into white blood cells (lymphocytes, including B cells and T cells) that are part of the immune system. B cells produce antibodies, while T cells alert other immune cells or directly fight infection.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Myeloid Stem Cells</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Myeloid stem cells develop into other white blood cells (monocytes and granulocytes, such as neutrophils, which also fight disease), red blood cells (which transport oxygen), and platelets (which aid blood clotting).
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Leukaemia occurs when a mutation in the DNA of a bone marrow stem cell causes it to become cancerous, multiplying uncontrollably and crowding out healthy cells. These diseased cells can also gather in areas like the liver, lymph nodes, spleen, and skin.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Leukaemias are typically classified by the type of cancerous stem cell (lymphoid or myeloid) and by their progression rate (acute or chronic):
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Acute Leukaemia</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Acute leukaemia affects immature cells, preventing them from developing properly. These cells multiply rapidly, making acute leukaemia more aggressive.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Chronic Leukaemia</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Chronic leukaemia involves mature or partially mature cells. These cells multiply more slowly and are less aggressive than acute leukaemia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Risk Factors -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases the likelihood of developing a disease, though not everyone with risk factors will develop it. Risk factors for ALL include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sex</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Men are slightly more likely to develop ALL than women.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The risk for adults starts to increase around age 50.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Past Treatment</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Past treatment with chemotherapy or radiation therapy for a previous cancer (though the benefits of these therapies far outweigh this risk).
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Genetic Disorders</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Including Ataxia telangiectasia, Bloom syndrome, Down syndrome, Fanconi anaemia, Klinefelter syndrome, Li-Fraumeni syndrome (a hereditary cancer syndrome), and Wiskott-Aldrich syndrome.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Chemical Exposure</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Long-term exposure to benzene, a chemical used in the petroleum industry (more commonly linked to acute myeloid leukaemia).
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Important Note:</strong> Some cases of leukaemia can be passed down through generations. Genetic counselling may be right for you. Learn more about the risk to you and your family on our genetic testing page at SSCHRC.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    While there are many different types of leukaemia, the symptoms are often similar. Many symptoms arise from a lack of properly functioning blood cells needed to carry oxygen, fight infection, and stop bleeding, or from low levels of haemoglobin (a protein that helps move oxygen).
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Common leukaemia symptoms include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #2E8B57;">•</span>
+                            <span>Weakness, tiredness, and fatigue (potentially due to the leukaemia itself or low haemoglobin).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #2E8B57;">•</span>
+                            <span>Fever and frequent infections (due to low counts of healthy white blood cells).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #2E8B57;">•</span>
+                            <span>Excessive sweating or night sweats.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #2E8B57;">•</span>
+                            <span>Easy bleeding and bruising, including bleeding of the gums (due to low platelet levels).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #2E8B57;">•</span>
+                            <span>Recurrent nosebleeds.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #2E8B57;">•</span>
+                            <span>Petechiae (a rash-like collection of pinpoint spots on the skin caused by bleeding into the skin, also due to low platelets).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #FF4500;">•</span>
+                            <span>Shortness of breath (due to low haemoglobin levels or lung infections).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #FF4500;">•</span>
+                            <span>Swollen lymph nodes in the neck, underarm, stomach, or groin.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #FF4500;">•</span>
+                            <span>Loss of appetite or a full feeling after consuming very little food (due to enlargement of the spleen).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #FF4500;">•</span>
+                            <span>Unexplained weight loss.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #FF4500;">•</span>
+                            <span>Bone and joint pain.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3" style="color: #FF4500;">•</span>
+                            <span>For female patients, menstruation that is longer or heavier than normal.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Important Note:</strong> Some cases of leukaemia can be passed down through generations. Genetic counselling may be right for you. Learn more about the risk to you and your family on our genetic testing page at SSCHRC.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A definitive diagnosis of leukaemia is often achieved through a bone marrow biopsy, which involves using a needle to take a sample of bone marrow from the hip.
+                </p>
+            </div>
+
+            <!-- Diagnosing Leukaemia -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Diagnosing Leukaemia
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            A diagnosis typically begins with a complete blood count (CBC), ordered after a doctor evaluates a patient's symptoms or as part of a routine check-up.
+                        </p>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            If the test results show the presence of leukaemia cells or abnormal levels of red blood cells, white blood cells, or platelets, doctors will order additional tests. These tests offer a definitive diagnosis, determine the extent of the disease, and are used to monitor progress and track response to treatment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Biopsy</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        For leukaemia, a bone marrow biopsy is performed, requiring a sample from the hip to check for cancerous cells.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Genetic and Molecular Testing</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        If leukaemia is diagnosed, additional tests (sometimes called molecular profiling) determine if specific chromosomes, gene mutations, proteins, or molecules are present in the diseased cells. This helps determine the exact type of leukaemia and prognosis, enabling doctors to create the most effective, individualised treatment plan.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Lumbar Puncture (Spinal Tap)</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        As leukaemia can spread to the central nervous system (brain and spinal cord), most commonly in ALL, a lumbar puncture is performed to examine the patient's spinal fluid for evidence of spread. A small dose of chemotherapy may also be administered into the spinal fluid during this procedure.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Imaging Exams</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Doctors may order various imaging exams to look for the presence of cancer in different parts of the body.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mt-8" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    Successful leukaemia treatment begins with an accurate and precise diagnosis. At SSCHRC, suspected leukaemia cells are examined by pathologists who focus exclusively on diagnosing leukaemia and its many subtypes. This specialisation allows SSCHRC to offer patients the most effective treatment for their specific disease.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: ALL Descriptions (Adult Staging) -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    ALL Descriptions (Adult Staging)
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Staging is the process of determining how far a cancer has spread, impacting the patient's prognosis and treatment plan. There is no standard staging system for adult ALL; instead, the disease is described as:
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Untreated Adult ALL</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Newly diagnosed ALL that has not been treated (except for symptom relief). The complete blood count is abnormal, more than 5% of cells in the bone marrow are blasts (leukaemia cells), and there are signs and symptoms of leukaemia.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Adult ALL in Remission</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The ALL has been treated. The complete blood count is normal, 5% or fewer of the cells in the bone marrow are blasts, and there are no signs or symptoms of leukaemia outside of the bone marrow.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Recurrent Adult ALL</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cancer that has returned after going into remission. It may come back in the blood, bone marrow, or other parts of the body.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Important Note:</strong> Some cases of leukaemia can be passed down through generations. Genetic counselling may be right for you. Learn more about the risk to you and your family on our genetic testing page at SSCHRC.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Treatment Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The goal of leukaemia treatment is to achieve remission and ultimately cure the patient. Complete remission usually means no detectable microscopic evidence of the disease in the bone marrow and a return to normal blood counts. Even with normal blood counts, ongoing maintenance therapy may be required to sustain remission, sometimes involving a stem cell transplant. Patients who remain in continuous complete remission for an extended period, typically measured in years, are considered cured with an extremely low chance of recurrence.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    As home to a leading leukaemia programme, SSCHRC bring together internationally renowned physicians with a specialised support team to customise patient care. These highly experienced experts communicate and collaborate daily, ensuring comprehensive leukaemia treatment. Many doctors focus on specific types of leukaemia, offering a deep level of knowledge and experience for designing treatment plans.
+                </p>
+            </div>
+
+            <!-- ALL Treatment Plans -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Acute Lymphocytic Leukaemia (ALL) Treatment Plans
+                    </h3>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        Newly diagnosed adult ALL patients typically undergo chemotherapy, administered in three phases. Depending on the features of the cancer, targeted therapy may also be prescribed. If the cancer returns or does not respond to treatment, patients may undergo a stem cell transplant. Patients who have been treated unsuccessfully with other therapies may also qualify for CAR T cell therapy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Treatment Modalities -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Modalities
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Drugs used to kill cancer cells, control their growth, or relieve symptoms. Chemotherapy for ALL is usually given in three phases:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Remission Induction</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                An intense phase, often requiring a hospital stay, designed to kill leukaemia cells in the blood and bone marrow and bring the cancer into remission.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Consolidation</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A phase, usually lasting a few months, meant to kill any remaining cancer cells that survived the induction phase.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Maintenance</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A lower dose of chemotherapy given to stop the cancer from returning. ALL patients receive maintenance chemotherapy for approximately two years.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        Chemotherapy may also be administered directly into the central nervous system to prevent the disease from spreading there, or it may be used to prepare the body for a stem cell transplant.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Drugs designed to interfere with specific molecules (often proteins) that cancer cells need to survive, multiply, and spread. They are designed to 'target' these molecules or the cancer-causing genes that create them.
+                    </p>
+                </div>
+
+                <!-- Stem Cell Transplantation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Stem Cell Transplantation (Bone Marrow Transplant)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A procedure that replaces cancerous bone marrow with new, healthy stem cells. It is typically performed after intense chemotherapy to eliminate the patient's existing bone marrow cells. A transplant may be recommended for patients whose leukaemia has returned, has not responded to standard treatments, or if they have a high-risk form of leukaemia. This treatment can be physically challenging and is typically not given to older or otherwise unhealthy patients.
+                    </p>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Uses powerful beams of energy to kill cancer cells. Since leukaemia cells travel in the bloodstream, radiation is primarily used when the disease has spread to the central nervous system.
+                    </p>
+                </div>
+
+                <!-- CAR T Cell Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">CAR T cell therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A treatment option for ALL patients who have been treated unsuccessfully with other therapies. T cells, a type of immune system cell, are modified so they can specifically recognise and attack cancer cells.
+                    </p>
+                </div>
+
+                <!-- Clinical Trials -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Clinical Trials</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC offers multiple clinical trials for ALL, exploring new drug combinations and new drugs, including targeted therapies and immunotherapies, many of which are exclusive to the centre.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mt-8" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Important Note:</strong> Some cases of leukaemia can be passed down through generations. Genetic counselling may be right for you. Learn more about the risk to you and your family on our genetic testing page at SSCHRC.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

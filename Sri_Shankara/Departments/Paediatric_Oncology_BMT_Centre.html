@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Oncology Department</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Doctor Card Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .role-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sea-green), #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, var(--sea-green));
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: var(--sea-green);
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: var(--sea-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+        
+        /* Mobile spacing optimizations */
+        @media (max-width: 768px) {
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Reduce excessive margins on mobile */
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-12 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Reduce grid gaps on mobile */
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Reduce space-y spacing on mobile */
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+            
+            .space-y-12 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            /* Reduce padding in cards and containers on mobile */
+            .p-8 {
+                padding: 1rem !important;
+            }
+            
+            .rounded-2xl.p-8 {
+                padding: 1.25rem !important;
+            }
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Paediatric Oncology & BMT.jpg" 
+                alt="Hospital Desktop Background"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Paediatric Oncology & BMT.jpg" 
+                alt="Hospital Mobile Background"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                   <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+          <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What Does Our Pediatric Oncology Department Do? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Does Our Pediatric Oncology Department Do?
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Pediatric Oncology Department provides specialized, comprehensive care for infants, children, adolescents, and young adults (AYAs) facing cancer. Recognizing that a child's cancer and their response to treatment are unique, our department focuses on curative strategies that prioritize minimizing long-term side effects and preserving quality of life. We integrate the latest Precision Medicine, CAR T-cell therapy, and Proton Therapy protocols, following the gold standards.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The mission of our Pediatric Oncology Department transcends treating the disease; it is to ensure every child has the potential for a healthy, long-lasting life. We operate on a Total Care Model—a philosophy pioneered in pediatric oncology—which encompasses expert clinical treatment, groundbreaking research, and extensive psychological and developmental support.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mt-8">
+                    <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-green-50 to-white">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background: #2E8B57;">
+                            <i class="fas fa-child text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Distinct Care</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Children are not small adults. Our specialized team is trained to manage the unique biology of childhood cancers (like Leukemia and Neuroblastoma) and to understand the specific impact treatment has on a developing body (brain, heart, growth plates).
+                        </p>
+                    </div>
+                    
+                    <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background: #FF4500;">
+                            <i class="fas fa-users text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Multidisciplinary Excellence</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            The Pediatric Oncologist leads a dedicated team that includes pediatric surgeons, radiation oncologists, pathologists, and specialists in genetics, ensuring every treatment decision adheres to internationally recognized guidelines (COG, SIOP, NCCN).
+                        </p>
+                    </div>
+                    
+                    <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background: #1e40af;">
+                            <i class="fas fa-heart text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Holistic Outcome</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            We not only focus on achieving high survival rates but also on maximizing quality of life, using risk-based therapy to ensure children with the highest risk receive intensive therapy, while those at lower risk have treatment intensity minimized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Services: Advanced, Child-Focused Treatments -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Services: Advanced, Child-Focused Treatments
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our services include a full spectrum of treatments tailored to a child's specific cancer, often incorporating novel therapies developed through cooperative group clinical trials.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-dna text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900">Cellular Therapy (CAR T-cell)</h4>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Working Mechanism:</h5>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            A highly personalized form of Immunotherapy where the patient's own T-cells are collected, genetically modified ex vivo to express a Chimeric Antigen Receptor (CAR), and re-infused to selectively target and destroy cancer cells (e.g., CD19-positive leukemia).
+                        </p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Benefit for Patients:</h5>
+                        <p class="text-gray-700 leading-relaxed font-medium" style="color: #2E8B57;">
+                            <strong>Immune System Upgrade:</strong> We take some of your child's own immune cells, teach them to recognize the cancer cell as an enemy, multiply them into millions, and put them back. These "super-charged" cells actively hunt and eliminate the cancer.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-bone text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900">Stem Cell / Bone Marrow Transplant</h4>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Working Mechanism:</h5>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            A medical procedure used for high-risk or relapsed cancers (Leukemia, Lymphoma, Neuroblastoma) involving high-dose chemotherapy followed by the infusion of healthy stem cells (autologous or allogeneic) to restore the bone marrow's function.
+                        </p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Benefit for Patients:</h5>
+                        <p class="text-gray-700 leading-relaxed font-medium" style="color: #FF4500;">
+                            <strong>Bone Marrow Renewal:</strong> For very aggressive cancers, we replace the unhealthy, damaged bone marrow with healthy cells, often from a donor or the child themselves. This allows the child to receive the strong therapy needed to fight the cancer.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-bullseye text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900">Precision & Targeted Medicine</h4>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Working Mechanism:</h5>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Uses advanced tumor-profiling techniques to genetically define the patient's specific tumor characteristics and match them with targeted small molecule inhibitors or novel agents.
+                        </p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">Benefit for Patients:</h5>
+                        <p class="text-gray-700 leading-relaxed font-medium" style="color: #1e40af;">
+                            <strong>Pinpointing the Weakness:</strong> We use highly detailed genetic tests to find the cancer's "switch." We then use custom medications designed to flip that switch off, stopping the cancer's growth with less impact on the rest of the body.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Unique Strengths (USPs) for Pediatric Care -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Pediatric Oncology Department?
+                </h2>
+            </div>
+            
+            <div class="space-y-12">
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57;">
+                                <i class="fas fa-user-md text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">A. Specialized Multidisciplinary Team for Children</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-stethoscope mr-3" style="color: #2E8B57;"></i>
+                                Dedicated Pediatric Specialists
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our team includes pediatric oncologists, pediatric surgeons, pediatric radiologists, and specialized nurses with additional training in managing childhood cancers and chemotherapy administration.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-heart mr-3" style="color: #2E8B57;"></i>
+                                Full Psychosocial & Developmental Support
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We integrate Child Life Specialists (using play and art to help children cope), Pediatric Psychologists, and Social Workers from diagnosis through survivorship, addressing the emotional, developmental, and social needs of the patient and family.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500;">
+                                <i class="fas fa-chart-line text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">B. Long-Term Health and Survivorship Focus</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-clipboard-check mr-3" style="color: #FF4500;"></i>
+                                Late Effects and Survivorship Program
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We recognize the importance of long-term monitoring for potential side effects (late effects) of treatment, such as cardiac risk or fertility issues. Our dedicated Survivorship Division develops customized surveillance plans to ensure our patients remain healthy decades after treatment completion.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-globe mr-3" style="color: #FF4500;"></i>
+                                International Research Collaboration
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We actively participate in the Children's Oncology Group (COG) and similar research consortia, ensuring our patients benefit from the largest, most successful clinical trials globally, which have elevated pediatric cure rates to over 80% for many types of childhood cancer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #1e40af;">
+                                <i class="fas fa-hands-helping text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">C. Integrated Palliative and Quality of Life Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-heartbeat mr-3" style="color: #1e40af;"></i>
+                            Early Integrated Palliative Care
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            We proactively incorporate palliative and supportive care specialists early in the treatment trajectory, focusing on pain and symptom management, communication, and emotional support to optimize the child's quality of life from day one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Pediatric Oncology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our dedicated team of pediatric oncology specialists providing specialized, comprehensive care for children and teens facing cancer.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                     <!-- Doctor 1 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. L. Appaji.webp" alt="Dr. L. Appaji" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+L.+Appaji'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. L. Appaji</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-Paediatric Medicine (1983), DM - Medical Oncology (1991)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Emeritus Professor & Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>43 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. L. Appaji.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Anand K C.webp" alt="Dr. Anand K. C." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Anand+K.+C.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Anand K. C.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-Paediatrics (2013), DM - Paediatric Oncology (2017)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant & HOD</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>13 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Anand K. C.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Shashank Bhojaraja.webp" alt="Dr. Shashank Bhojaraja" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Shashank+Bhojaraja'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Shashank B</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-Paediatrics (2016), MRCPCH (2019), HBNI Fellowship - Paediatric Hematology & Oncology (2023)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>10 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Shashank Bhojaraja.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 4 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Surekha T M.webp" alt="Dr. Surekha T M" onerror="this.src='../Doctors_Photo/Dr. Surekha TM.webp'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Surekha T M</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD-Paediatrics (May 2021), DM - Paediatric Oncology (Nov 2025)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Junior Consultant</span>
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>5 yrs exp</span>
+                                </div>
+                            </div>
+                            <a href="../Doctors/Dr. Surekha T M.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- Doctor 11 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sathya Murugasamy.webp" alt="Dr. Sathya Murugasamy" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sathya+Murugasamy'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sathya Murugasamy</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, DNB - Paediatrics (2017), DM - Paediatric Oncology (Mar 2025)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Junior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>5 yrs exp</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sathya Murugasamy.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                     <!-- Doctor 5 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Ramesh S..webp" alt="Dr. Ramesh S." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Ramesh+S.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Ramesh S.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS (Gen Surgery), M.Ch (Paediatric Surgery), DNB</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>On Call</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Ramesh S..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+   
+                    <!-- Doctor 6 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Raghunath B. V..webp" alt="Dr. Raghunath B. V." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Raghunath+B.+V.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Raghunath B. V.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (2008), M.Ch - Paediatric Surgery (2011), Fellowship in Paediatric Minimally Invasive Surgery (2013)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>On Call</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>18 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Raghunath B. V..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Doctor 7 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Ravneet Chhabra.webp" alt="Dr. Ravneet Chhabra" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Ravneet+Chhabra'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr.Ravneet Chabbra</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (2015), M.Ch - Paediatric Surgery (2021)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>On Call</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>11 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Ravneet Chhabra.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 8 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Santosh O. S..webp" alt="Dr. Santosh O. S." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Santosh+O.+S.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Santosh O. S.</h3>
+                            <p class="text-sm text-gray-600 mb-4">MBBS, DCH, MRCPCH</p>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Wednesday: 5:00 P.M. - 6:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>22 years experience | Visiting Consultant | Paediatric Oncology Specialist</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Santosh O. S..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Doctor 10 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Vinu Priya D..webp" alt="Dr. Vinu Priya D." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Vinu+Priya+D.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Vinu Priya D.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS-Gen Surgery (April 2015), M.Ch - Paediatric Surgery (July 2021), TMC Fellow in Paediatric Surgery (Sep 2023)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Paediatric Oncology and BMT
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>11 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Vinu Priya D..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                   
+                    
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            const track = document.getElementById('carouselTrack');
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                    resetAutoRotate();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        document.getElementById('carouselTrack').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        document.getElementById('carouselTrack').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <!-- Footer JavaScript -->
+    <script src="../footer.js"></script>
+    <script src="../footer-main.js"></script>
+    
+    <!-- Chatbox FAB Button -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Chatbox JavaScript - Load after chatbot HTML elements -->
+    <script src="../chatbox.js"></script>
+</body>
+</html>
+

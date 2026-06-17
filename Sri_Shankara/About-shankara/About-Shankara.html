@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Sri Shankara Cancer Hospital & Research Centre</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    
+    <!-- Chatbox CSS -->
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+  <link rel="canonical" href="https://srishankaracancerhospital.org/About-shankara/About-Shankara" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+    
+    
+    
+</head>
+<body>
+  <!-- Header will be dynamically generated here -->
+  <header id="dynamic-header"></header>
+  
+  <!-- Header JavaScript -->
+  <script src="../header.js"></script>
+  
+  <!-- Enhanced About Page Styles -->
+  <style>
+    /* Modern Design System with Brand Colors */
+    :root {
+      --secondary-green: #004d40;
+      --secondary-green: #004d40;
+      --accent-red: #ff6600;
+      --accent-orange: #ff8c00;
+      --light-green: #e8f5e8;
+      --light-red: #fff3e0;
+      --white: #ffffff;
+      --light-gray: #f8f9fa;
+      --dark-gray: #2c3e50;
+      --text-primary: #2c3e50;
+      --text-secondary: #5a6c7d;
+      --shadow-light: 0 4px 6px rgba(0, 105, 92, 0.1);
+      --shadow-medium: 0 8px 25px rgba(0, 105, 92, 0.15);
+      --shadow-heavy: 0 15px 35px rgba(0, 105, 92, 0.2);
+      --gradient-primary: linear-gradient(135deg, var(--secondary-green) 0%, var(--secondary-green) 100%);
+      --gradient-accent: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-orange) 100%);
+    }
+
+    /* Enhanced Typography */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: var(--gradient-primary);
+      color: var(--white);
+      padding: 120px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 15px 40px;
+      background: var(--accent-red);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-medium);
+      margin: 8px;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .hero-cta:hover {
+      background: var(--accent-orange);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-heavy);
+      color: var(--white);
+    }
+
+    /* Main Container */
+    .about-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Enhanced Navigation Tabs */
+    .about-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 40px 0;
+      gap: 15px;
+      padding: 20px;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: var(--shadow-light);
+    }
+
+    .about-nav a {
+      padding: 15px 25px;
+      background: var(--light-green);
+      color: var(--secondary-green);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid transparent;
+    }
+
+    .about-nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-accent);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .about-nav a:hover::before {
+      left: 0;
+    }
+
+    .about-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background: var(--accent-red);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .about-nav a:hover::after {
+      width: 80%;
+    }
+
+    .about-nav a:hover {
+      color: var(--white);
+      border-color: var(--accent-red);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    /* Enhanced Section Styles */
+    .about-section {
+      padding: 80px 40px;
+      margin: 40px 0;
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: var(--shadow-light);
+      position: relative;
+      overflow: visible;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 105, 92, 0.1);
+      display: block;
+      visibility: visible;
+      opacity: 1 !important;
+    }
+
+    .about-section:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-heavy);
+      border-color: var(--accent-red);
+    }
+
+    .about-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient-accent);
+    }
+
+    .about-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 30px 30px 0;
+      border-color: transparent var(--secondary-green) transparent transparent;
+      opacity: 0.1;
+    }
+
+    .about-section:nth-child(even) {
+      background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+    }
+
+    .section-title1 {
+      color: var(--secondary-green) !important;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .section-title1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--gradient-accent);
+      border-radius: 2px;
+    }
+
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+      margin-top: 40px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 300px;
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    .text-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+      position: relative;
+      z-index: 1;
+    }
+
+    .text-content strong {
+      color: var(--secondary-green);
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0, 105, 92, 0.1);
+    }
+
+    .text-content em {
+      color: var(--accent-red);
+      font-style: italic;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(255, 102, 0, 0.1);
+    }
+
+    .text-content p:first-of-type {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--secondary-green);
+    }
+
+    .image-content {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    .image-content img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: var(--shadow-medium);
+      transition: all 0.3s ease;
+    }
+
+    .image-content:hover img {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-heavy);
+    }
+
+    /* Enhanced Leadership Cards */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .leader-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-light);
+      transition: all 0.3s ease;
+      position: relative;
+      border: 3px solid transparent;
+    }
+
+    .leader-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-heavy);
+      border-color: var(--accent-red);
+    }
+
+    .leader-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      z-index: 1;
+    }
+
+    .leader-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .leader-img {
+      width: 100%;
+    height: 300px;
+    background-size: contain;  /* show full image */
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .leader-img::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(transparent, transparent);
+    }
+
+    .leader-info {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .leader-name {
+      margin: 0 0 10px 0;
+      color: var(--secondary-green);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .leader-position {
+      color: var(--accent-red);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .leader-info p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Enhanced Mission & Vision */
+    .mission-vision {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .mission-card, .vision-card {
+      padding: 40px;
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: var(--shadow-light);
+      position: relative;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mission-card:hover, .vision-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-heavy);
+    }
+
+    .mission-card::before, .vision-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 102, 0, 0.1) 0%, transparent 70%);
+      transform: scale(0);
+      transition: transform 0.6s ease;
+      z-index: 0;
+    }
+
+    .mission-card:hover::before, .vision-card:hover::before {
+      transform: scale(1);
+    }
+
+    .mission-card {
+      border-color: #16a34a;
+    }
+
+    .vision-card {
+      border-color: #ea580c;
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-icon i {
+      font-size: 2.5rem;
+      color: white;
+      display: block;
+    }
+
+    .mission-card .card-icon i {
+      color: #fbbf24;
+    }
+
+    .vision-card .card-icon i {
+      color: white;
+    }
+
+    .mission-card h3, .vision-card h3 {
+      color: #16a34a;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    .mission-card p, .vision-card p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Enhanced Lists */
+    .text-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .text-content li {
+      padding: 12px 0;
+      padding-left: 30px;
+      position: relative;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .text-content li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent-red);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .hero-cta {
+        display: block;
+        margin: 12px auto;
+        width: 90%;
+        max-width: 280px;
+        min-width: auto;
+      }
+
+      .section-content {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .text-content, .image-content {
+        width: 100%;
+      }
+
+      /* Founder's Message: image on top of text in mobile view (below heading) */
+      #founder .section-content {
+        display: flex;
+        flex-direction: column;
+      }
+      #founder .image-content {
+        order: 1;
+      }
+      #founder .text-content {
+        order: 2;
+      }
+
+      /* Who We Are: image (Logo) on top of text in mobile view */
+      #who-are-we .section-content {
+        display: flex;
+        flex-direction: column;
+      }
+      #who-are-we .image-content {
+        order: 1;
+      }
+      #who-are-we .text-content {
+        order: 2;
+      }
+
+      .about-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+      }
+
+      .about-section {
+        padding: 40px 20px;
+        margin: 20px 0;
+      }
+
+      .section-title1 {
+        font-size: 2rem;
+      }
+
+      .leadership-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-vision {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section {
+        padding: 60px 15px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-cta {
+        width: 95%;
+        max-width: 260px;
+        padding: 12px 30px;
+        font-size: 0.95rem;
+      }
+
+      .about-container {
+        padding: 0 15px;
+      }
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Loading Animation - Content visible by default */
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    /* Enhanced animation when visible class is added */
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Enhanced Focus States */
+    .about-nav a:focus,
+    .hero-cta:focus {
+      outline: 3px solid var(--accent-red);
+      outline-offset: 2px;
+    }
+
+    /* Medical Infrastructure Carousel Styles */
+    .medical-carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow-heavy);
+      background: var(--white);
+    }
+
+    .medical-carousel {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      overflow: hidden;
+      background: #000;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateX(100%);
+      z-index: 1;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 2;
+    }
+
+    .carousel-slide.prev {
+      transform: translateX(-100%);
+      z-index: 1;
+    }
+
+    .carousel-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+
+    .carousel-slide.active .carousel-image {
+      transform: scale(1);
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, transparent 0%, transparent 50%, transparent 100%);
+      padding: 40px 30px 30px;
+      color: var(--white);
+      transform: translateY(0);
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      color: var(--white);
+    }
+
+    .carousel-description {
+      font-size: 1rem;
+      margin: 0;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    /* Navigation Arrows */
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.95);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      color: var(--secondary-green);
+      font-size: 1.2rem;
+    }
+
+    .carousel-nav:hover {
+      background: var(--white);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      color: var(--accent-red);
+    }
+
+    .carousel-nav:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    .carousel-prev {
+      left: 20px;
+    }
+
+    .carousel-next {
+      right: 20px;
+    }
+
+    /* Dot Indicators */
+    .carousel-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 10px 20px;
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+    }
+
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid var(--white);
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+      margin: 0;
+    }
+
+    .carousel-dot:hover {
+      background: rgba(255, 255, 255, 0.7);
+      transform: scale(1.2);
+    }
+
+    .carousel-dot.active {
+      background: var(--accent-red);
+      border-color: var(--accent-red);
+      width: 32px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+    }
+
+    /* Responsive Carousel */
+    @media (max-width: 768px) {
+      .medical-carousel {
+        padding-bottom: 60%; /* Slightly taller on mobile */
+      }
+
+      .carousel-title {
+        font-size: 1.4rem;
+        padding: 0 15px;
+      }
+
+      .carousel-description {
+        font-size: 0.9rem;
+        padding: 0 15px;
+      }
+
+      .carousel-overlay {
+        padding: 30px 20px 20px;
+      }
+
+      .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+
+      .carousel-prev {
+        left: 10px;
+      }
+
+      .carousel-next {
+        right: 10px;
+      }
+
+      .carousel-dots {
+        bottom: 15px;
+        gap: 8px;
+        padding: 8px 15px;
+      }
+
+      .carousel-dot {
+        width: 10px;
+        height: 10px;
+      }
+
+      .carousel-dot.active {
+        width: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .medical-carousel {
+        padding-bottom: 65%;
+      }
+
+      .carousel-title {
+        font-size: 1.2rem;
+      }
+
+      .carousel-description {
+        font-size: 0.85rem;
+      }
+
+      .carousel-nav {
+        width: 35px;
+        height: 35px;
+      }
+
+      .carousel-dots {
+        gap: 6px;
+        padding: 6px 12px;
+      }
+    }
+
+    /* Carousel Loading State */
+    .carousel-image {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    .carousel-image[src] {
+      background: transparent;
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Sri Shankara Cancer Hospital and Research Centre</h1>
+      <p class="hero-subtitle">Leading the fight against cancer with compassion, innovation, and hope</p>
+      <a href="#founder" class="hero-cta">Discover Our Story</a>
+      <a target="_blank" href="Why-Sri-Shankara.html" class="hero-cta">Why Sri Shankara</a>
+      <a target="_blank" href="about-journey.html" class="hero-cta">Our Journey</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="about-container">
+    <!-- Navigation Tabs -->
+    <div class="about-nav">
+      <a href="#founder">Founder's Message</a>
+      <a href="#our-hospital">Our Hospital</a>
+      <a href="#who-are-we">Who We Are</a>
+      <a href="#our-leadership">Our Leadership</a>
+      <a href="#mission-vision">Mission & Vision</a>
+      <a href="#From">From Vision to Reality</a>
+    </div>
+
+    <!-- Founder's Message Section -->
+    <section id="founder" class="about-section fade-in">
+      <h2 class="section-title1">Founder's Message</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p><strong>Dr. B.S. Srinath</strong></p>
+          <p><em>Senior Consultant, Surgical Oncology & Head of the Institution</em></p>
+          <p><em>Sri Shankara Cancer Hospital and Research Centre</em></p>
+          <p>Namaskara,</p>
+          <p>At Sri Shankara Cancer Hospital and Research Centre, we began with a simple yet powerful belief: that quality cancer care should not be a privilege, but a right for every Indian, regardless of their background or means.</p>
+          <p>When this hospital was founded, it was not just built with brick and mortar, it was built on compassion, ethics, and a deep sense of service. Inspired by the blessings of Jagadguru Sri Sri Sri Bharati Tirtha Mahaswamiji and Godess Mother Sharada of Sringeri, our vision was to create a cancer hospital that offers world-class care, steeped in Indian values, where every patient feels safe, heard, and supported.</p>
+          <p>Over the years, we've grown into a leading comprehensive cancer centre in India, offering cutting-edge treatments, advanced diagnostics, holistic patient support and also cancer prevention and cancer research, all under one roof. Even as we embrace the latest in science and technology, we remain deeply rooted in our mission:</p>
+          <p><strong>To serve with compassion. To treat with dignity. To heal with hope.</strong></p>
+          <p>As a surgeon, educator, and fellow human being, I've seen firsthand how a timely diagnosis, the right treatment, and a kind word can transform outcomes. That's why we place equal emphasis on awareness, early detection, education, and research—alongside clinical care.</p>
+          <p>To every patient and caregiver who walks through our doors:<br>You are not alone. We are with you—every step of the way.</p>
+          <p>With gratitude and commitment,<br>
+            Dr. B.S. Srinath<br>
+            Senior Consultant, Surgical Oncologist & Head of the Institution<br>
+            Sri Shankara Cancer Hospital and Research Centre
+          </p>
+        </div>
+        <div class="image-content">
+          <img src="../Doctors_Photo/Dr. Srinath B S.webp" alt="Dr. B.S. Srinath - Founder Medical Director">
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Hospital Section -->
+    <section id="our-hospital" class="about-section fade-in">
+      <h2 class="section-title1">Our Hospital</h2>
+      <div class="section-content">
+        <div class="image-content">
+          <!-- Medical Infrastructure Carousel -->
+          <div class="medical-carousel-container">
+            <div class="medical-carousel">
+              <!-- Slide 1: Modern Radiotherapy Unit -->
+              <div class="carousel-slide active">
+                <div class="carousel-image-wrapper">
+                  <img src="../video/ABOUT-US/Modern radiotherapy units, including linear accelerators and brachytherapy facilities_3_11zon.webp" alt="Modern Radiotherapy Unit - State-of-the-art linear accelerator (LINAC) in radiation therapy suite" class="carousel-image">
+                  <div class="carousel-overlay">
+                    <h3 class="carousel-title">Modern radiotherapy units, including linear accelerators and brachytherapy</h3>
+                    <!-- <p class="carousel-description">Modern radiotherapy units, including linear accelerators and brachytherapy</p> -->
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 2: Brachytherapy Suite -->
+              <div class="carousel-slide">
+                <div class="carousel-image-wrapper">
+                  <img src="../video/ABOUT-US/Modular operation theatres equipped for complex oncological surgeries_4_11zon.webp" alt="Brachytherapy Suite - Specialized brachytherapy room with precision radiation delivery systems" class="carousel-image">
+                  <div class="carousel-overlay">
+                    <h3 class="carousel-title">Modular operation theatres equipped for complex oncological surgeries</h3>
+                    <!-- <p class="carousel-description">Modular operation theatres equipped for complex oncological surgeries</p> -->
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 3: Modular Operation Theatre -->
+              <div class="carousel-slide">
+                <div class="carousel-image-wrapper">
+                  <img src="../video/ABOUT-US/Dedicated Day Care Chemotherapy and Inpatient Units_1_11zon.webp" alt="Modular Operation Theatre - Fully modular oncology operation theatre for complex cancer surgeries" class="carousel-image">
+                  <div class="carousel-overlay">
+                    <h3 class="carousel-title">Dedicated Day Care Chemotherapy and Inpatient Units</h3>
+                    <!-- <p class="carousel-description">Dedicated Day Care Chemotherapy and Inpatient Units</p> -->
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 4: Day Care Chemotherapy Unit -->
+              <div class="carousel-slide">
+                <div class="carousel-image-wrapper">
+                  <img src="../video/ABOUT-US/Fully equipped Oncopathology and Molecular Diagnostics Laboratory_2_11zon.webp" alt="Day Care Chemotherapy Unit - Patient-friendly day care chemotherapy unit with comfortable facilities" class="carousel-image">
+                  <div class="carousel-overlay">
+                    <h3 class="carousel-title">A fully equipped Oncopathology and Molecular Diagnostics Lab</h3>
+                    <!-- <p class="carousel-description">A fully equipped Oncopathology and Molecular Diagnostics Lab</p> -->
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 5: Inpatient Oncology Ward -->
+              <div class="carousel-slide">
+                <div class="carousel-image-wrapper">
+                  <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&h=1080&fit=crop&q=90" alt="Inpatient Oncology Ward - Modern inpatient cancer ward with private rooms" class="carousel-image">
+                  <div class="carousel-overlay">
+                    <h3 class="carousel-title">Modern inpatient cancer ward with private rooms and recovery-focused environment</h3>
+                    <!-- <p class="carousel-description">Modern inpatient cancer ward with private rooms and recovery-focused environment</p> -->
+                  </div>
+                </div>
+              </div>
+              
+       
+              
+              <!-- Slide 7: Research & Academic Infrastructure -->
+              <div class="carousel-slide">
+                <div class="carousel-image-wrapper">
+                  <img src="../video/ABOUT-US/Research and academic infrastructure supporting clinical trials and cancer education_5_11zon.webp" alt="Research & Academic Infrastructure - Professional cancer research and academic environment" class="carousel-image">
+                  <div class="carousel-overlay">
+                    <h3 class="carousel-title">Professional cancer research and academic environment for clinical trials and education</h3>
+                    <!-- <p class="carousel-description">Professional cancer research and academic environment for clinical trials and education</p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-nav carousel-prev" aria-label="Previous slide">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-nav carousel-next" aria-label="Next slide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Dot Indicators -->
+            <div class="carousel-dots">
+              <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" aria-label="Go to slide 3"></button>
+              <button class="carousel-dot" aria-label="Go to slide 4"></button>
+              <button class="carousel-dot" aria-label="Go to slide 5"></button>
+              <button class="carousel-dot" aria-label="Go to slide 6"></button>
+              <button class="carousel-dot" aria-label="Go to slide 7"></button>
+            </div>
+          </div>
+        </div>
+        <div class="text-content">
+          <p>Sri Shankara Cancer Hospital and Research Centre is a leading tertiary care cancer facility, located in the heart of Bengaluru, Karnataka.</p>
+          <p>We offer integrated, multidisciplinary cancer care—from early screening and diagnosis to advanced treatments like surgery, chemotherapy, immunotherapy, radiation, and bone marrow transplantation. Our facilities include:</p>
+          <ul>
+            <li>Advanced Robotic Surgery: Sri Shankara Cancer Hospital is equipped with state-of-the-art robotic surgical systems, enabling highly precise, minimally invasive cancer surgeries</li>
+            <li>Modern radiotherapy units, including linear accelerators and brachytherapy</li>
+            <li>Modular operation theatres equipped for complex oncological surgeries</li>
+            <li>Dedicated Day Care Chemotherapy and Inpatient Units</li>
+            <li>A fully equipped Oncopathology and Molecular Diagnostics Lab</li>
+            <li>NABH-accredited standards of quality and safety</li>
+            <li>Research and academic infrastructure for clinical trials and cancer education</li>
+          </ul>
+          <p>We serve all sections of society, ensuring that financial constraints do not deny access to quality cancer treatment, thanks to our charitable arm and the generosity of donors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Are We Section -->
+    <section id="who-are-we" class="about-section fade-in">
+      <h2 class="section-title1">Who We Are</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>At Sri Shankara Cancer Hospital and Research Centre, we are dedicated to one mission: Delivering world-class, compassionate cancer care at an environment that feels like a second home..</p>
+          <p>We are deeply committed to raising awareness about cancer, educating communities, and reaching even the most remote corners of India, with the vision of a cancer-free nation in the near future.</p>
+          <p>Founded with the blessings of Jagadguru Sri Sri Sri Bharati Tirtha Mahaswamiji and Godess Mother Sharada of Sringeri and rooted in the timeless values of seva (service) and karuna (compassion), our hospital stands as a beacon of hope, healing, and humanity for patients from across the country and beyond.</p>
+          <p>As a not-for-profit, comprehensive cancer centre located in Bengaluru, we are devoted to the holistic advancement of cancer treatment, research, and education—all under one roof.</p>
+          <p>Our approach blends cutting-edge medical innovation with the wisdom of empathy, ensuring that every patient is cared for not just as a case, but as a human being with a story, a family, and a future.</p>
+        </div>
+        <div class="image-content">
+          <img src="../Images/Logo.webp" alt="Sri Shankara Cancer Hospital Building">
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Leadership Section -->
+    <section id="our-leadership" class="about-section fade-in">
+      <h2 class="section-title1">Our Leadership</h2>
+      <div class="text-content" style="text-align: center; margin-bottom: 40px;">
+        <p>At the helm of Sri Shankara Cancer Hospital and Research Centre is a leadership team grounded in clinical excellence, ethical commitment, and a deep sense of service. Our governing board, medical directors, and administrative heads bring decades of experience from India's most respected healthcare institutions.</p>
+        <p>The hospital was envisioned and nurtured under the spiritual guidance of Jagadguru Sri Sri Sri Bharati Tirtha Mahaswamiji, the 36th Pontiff of the Sringeri Sharada Peetham and Jagadguru Sri Sri Vidhushekhara Bharati Mahaswamiji.</p>
+        <p>Our clinical leadership includes renowned oncologists, surgeons, radiation experts, pathologists, and scientists, many of whom are leaders in their fields nationally and internationally. This multidisciplinary expertise ensures evidence-based care tailored to every patient's unique needs.</p>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- Leader 1 -->
+        <div class="leader-card">
+          <div class="leader-img" style="background-image: url('../Trustee/Dr.BS Srinath.webp');"></div>
+          <div class="leader-info">
+            <h3 class="leader-name">Dr. B S Srinath</h3>
+            <p>Founder & Chairman, and renowned surgical oncologist with 45+ years of expertise in cancer care, research, and patient advocacy.</p>
+          </div>
+        </div>
+
+        <!-- Leader 2 -->
+        <div class="leader-card">
+          <div class="leader-img" style="background-image: url('../Trustee/SMT. TEJASWINI ANANTHKUMAR.webp');"></div>
+          <div class="leader-info">
+            <h3 class="leader-name">Smt. Tejaswini Ananthkumar</h3>
+            <p>Software engineer and philanthropist dedicated to child nutrition, education, and women's empowerment.</p>
+          </div>
+        </div>
+
+        <!-- Leader 3 -->
+        <div class="leader-card">
+          <div class="leader-img" style="background-image: url('../Trustee/SRI. RAM MOHAN.webp');"></div>
+          <div class="leader-info">
+            <h3 class="leader-name">Sri. Ram Mohan</h3>
+            <p>Industrialist with a background in engineering and management.</p>
+          </div>
+        </div>
+
+        <!-- Leader 4 -->
+        <div class="leader-card">
+          <div class="leader-img" style="background-image: url('../Trustee/SRI. SANDEEP AGARWAL.webp');"></div>
+          <div class="leader-info">
+            <h3 class="leader-name">Sri. Sandeep Agarwal</h3>
+            <p>Industrialist and philanthropist from Bangalore, dedicated to humanitarian service.</p>
+          </div>
+        </div>
+
+        <!-- Leader 5 -->
+        <div class="leader-card">
+          <div class="leader-img" style="background-image: url('../Trustee/SRI. B R NAGARAJ.webp');"></div>
+          <div class="leader-info">
+            <h3 class="leader-name">Sri. B R Nagaraj</h3>
+            <p>B.E, PGDRBPM, RPA (USA); Chairman of the Board and COO, Phi Property Management Services Pvt. Ltd.</p>
+          </div>
+        </div>
+
+        <!-- Leader 6 -->
+        <div class="leader-card">
+          <div class="leader-img" style="background-image: url('../Trustee/Sri. ABHINAV RAMANAND.webp');"></div>
+          <div class="leader-info">
+            <h3 class="leader-name">Sri. Abhinav Ramanand</h3>
+            <p>L.L.B; young High Court advocate dedicated to justice and social upliftment of the disadvantaged.</p>
+          </div>
+        </div>
+
+        <!-- Leader 7 -->
+        <div class="leader-card">
+          <div class="leader-img" style="background-image: url('../Trustee/Trusty-7.webp');"></div>
+          <div class="leader-info">
+            <h3 class="leader-name">Sri Manandi Ramesh</h3>
+            <p>Trustee and Industrialist with over 45 years of experience, actively engaged in social welfare, healthcare, and educational initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section id="mission-vision" class="about-section fade-in">
+      <h2 class="section-title1">Mission & Vision</h2>
+      
+      <div class="mission-vision">
+        <div class="mission-card">
+          <div class="card-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Our Mission</h3>
+          <p>To be an acknowledged leader in the field of cancer cure and research by ensuring that high-quality care reaches the common man.</p>
+        </div>
+        
+        <div class="vision-card">
+          <div class="card-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Our Vision</h3>
+          <p>To be a pioneer in cancer cure and research through innovation and being sensitive to the environment in which we all exist.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Generate the header
+      generateHeader();
+
+      // Fade in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      // Make all sections visible immediately (fallback)
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.classList.add('visible');
+        observer.observe(el);
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('.about-nav a, .hero-cta').forEach(link => {
+        link.addEventListener('click', (e) => {
+          // Don't prevent default for links that should open in new tab
+          if (link.getAttribute('target') === '_blank') {
+            return; // Allow normal link behavior
+          }
+          
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Medical Infrastructure Carousel Functionality
+      (function initMedicalCarousel() {
+        const carousel = document.querySelector('.medical-carousel');
+        if (!carousel) return;
+
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        
+        let currentSlide = 0;
+        let autoPlayInterval = null;
+        const autoPlayDelay = 5000; // 5 seconds
+
+        // Function to show a specific slide
+        function showSlide(index) {
+          // Remove active class from all slides and dots
+          slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev');
+            if (i < index) {
+              slide.classList.add('prev');
+            }
+          });
+          dots.forEach(dot => dot.classList.remove('active'));
+
+          // Add active class to current slide and dot
+          if (slides[index]) {
+            slides[index].classList.add('active');
+          }
+          if (dots[index]) {
+            dots[index].classList.add('active');
+          }
+
+          currentSlide = index;
+        }
+
+        // Function to go to next slide
+        function nextSlide() {
+          const next = (currentSlide + 1) % slides.length;
+          showSlide(next);
+        }
+
+        // Function to go to previous slide
+        function prevSlide() {
+          const prev = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(prev);
+        }
+
+        // Auto-play functionality
+        function startAutoPlay() {
+          stopAutoPlay();
+          autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+        }
+
+        function stopAutoPlay() {
+          if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+          }
+        }
+
+        // Event listeners for navigation buttons
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            nextSlide();
+            startAutoPlay(); // Restart auto-play after manual navigation
+          });
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            prevSlide();
+            startAutoPlay(); // Restart auto-play after manual navigation
+          });
+        }
+
+        // Event listeners for dot indicators
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            showSlide(index);
+            startAutoPlay(); // Restart auto-play after manual navigation
+          });
+        });
+
+        // Pause auto-play on hover
+        const carouselContainer = document.querySelector('.medical-carousel-container');
+        if (carouselContainer) {
+          carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+          carouselContainer.addEventListener('mouseleave', startAutoPlay);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (carouselContainer && carouselContainer.offsetParent !== null) {
+            if (e.key === 'ArrowLeft') {
+              prevSlide();
+              startAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+              nextSlide();
+              startAutoPlay();
+            }
+          }
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (carouselContainer) {
+          carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          }, { passive: true });
+
+          carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+          }, { passive: true });
+
+          function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+              if (diff > 0) {
+                // Swipe left - next slide
+                nextSlide();
+              } else {
+                // Swipe right - previous slide
+                prevSlide();
+              }
+              startAutoPlay();
+            }
+          }
+        }
+
+        // Initialize carousel
+        showSlide(0);
+        startAutoPlay();
+
+        // Pause auto-play when page is not visible (tab switching)
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            stopAutoPlay();
+          } else {
+            startAutoPlay();
+          }
+        });
+      })();
+    });
+  </script>
+
+
+
+  <!-- Timeline Section Styles -->
+  <style>
+/* CSS Reset and Base Styles */
+
+
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.6s forwards, bounce 2s 1s infinite;
+    cursor: pointer;
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 1rem 0;
+    background-color: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-year {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.timeline-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.timeline-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-card.latest {
+    border: 2px solid #f39c12;
+    position: relative;
+}
+
+.timeline-card.latest::before {
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.card-icon.research {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.card-icon.education {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card-icon.allied {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #333;
+}
+
+.card-icon.support {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+}
+
+.card-icon.latest-icon {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.card-title-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.card-location {
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card-location i {
+    margin-right: 0.5rem;
+}
+
+.card-acronym {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.card-description p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.card-stats .stat-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-box {
+    background: rgba(102, 126, 234, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 0.3rem;
+}
+
+.stat-desc {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.card-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.highlight-item {
+    background: rgba(17, 153, 142, 0.1);
+    color: #11998e;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-focus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.focus-item {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-accreditation {
+    margin-top: 1rem;
+}
+
+.accred-badge {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #333;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-network {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.network-item {
+    background: rgba(168, 237, 234, 0.3);
+    color: #11998e;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Ecosystem Section */
+.ecosystem-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 5rem 0;
+   margin-bottom: 3rem;
+}
+
+.ecosystem-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.ecosystem-header h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.ecosystem-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.ecosystem-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flow-item {
+    text-align: center;
+    min-width: 120px;
+}
+
+.flow-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.flow-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.flow-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: #667eea;
+}
+
+
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-stats {
+        gap: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .ecosystem-flow {
+        gap: 1.5rem;
+    }
+    
+    .flow-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        flex-direction: row;
+        padding-left: 80px;
+    }
+    
+    .timeline-marker {
+        position: absolute;
+        left: 0;
+        margin: 0;
+    }
+    
+    .timeline-content {
+        max-width: 100%;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-stats .stat-row {
+        flex-direction: column;
+    }
+    
+    .ecosystem-flow {
+        flex-direction: column;
+    }
+    
+    .flow-item {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .timeline-card {
+        padding: 1.5rem;
+    }
+    
+    .card-title-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #2c2929, #383838);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #000000, #000000);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+  </style>
+
+  <!-- Main Timeline Section -->
+  <main class="timeline-section" id="From">
+    <div class="container">
+      <div class="section-header">
+        <h2>From Vision to Reality</h2>
+       
+      </div>
+
+
+
+ <!-- Ecosystem Overview -->
+  <section class="ecosystem-section">
+    <div class="container">
+      <div class="ecosystem-header">
+        <h2>Complete Healthcare Ecosystem</h2>
+        <p>Covering the entire journey from prevention to treatment with operational excellence</p>
+      </div>
+      <div class="ecosystem-flow">
+        <div class="flow-item">
+          <div class="flow-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4>Awareness & Prevention</h4>
+        </div>
+        <div class="flow-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h4>Screening</h4>
+        </div>
+        <div class="flow-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h4>Diagnosis</h4>
+        </div>
+        <div class="flow-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <h4>Treatment</h4>
+        </div>
+        <div class="flow-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h4>Survivorship</h4>
+        </div>
+        
+        <div class="flow-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h4>Education</h4>
+        </div>
+        <div class="flow-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h4>Research</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item" data-year="2012">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2012</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-hospital"></i>
+                </div>
+                <div class="card-title-section">
+                  <h3>Sri Shankara Cancer Hospital & Research Centre</h3>
+                  <div class="card-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Bangalore
+                  </div>
+                </div>
+              </div>
+              <div class="card-description">
+                <p>With 12 years of excellence, renowned for world class, personalised,acessible & affordable cancer care.</p>
+              </div>
+               <div class="card-stats">
+                <div class="stat-row">
+                  <div class="stat-box">
+                    <span class="stat-value">520</span>
+                    <span class="stat-desc">Bed Comprehesive cancer care hospital</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-value">12%</span>
+                    <span class="stat-desc">Karnataka's New Cancer Patients Treated Each Year </span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-value">48%</span>
+                    <span class="stat-desc">Patients supported with Free/Subsidized Treatment</span>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item" data-year="2016">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2016</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="card-icon research">
+                  <i class="fas fa-microscope"></i>
+                </div>
+                <div class="card-title-section">
+                  <h3>Sri Shankara National Centre for Cancer Prevention and Research</h3>
+                  <div class="card-acronym">SSNCCPR</div>
+                </div>
+              </div>
+              <div class="card-description">
+                <p>Under Sri Shankara Cancer Foundation,SSNCCPR is a DSIR recognized centre advancing cancer prevention, detection & treatment to reduce the global cancer burden.</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item" data-year="2019">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2019</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="card-icon education">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="card-title-section">
+                  <h3>Sri Shankara College of Nursing</h3>
+                  <div class="card-acronym">SSCON</div>
+                </div>
+              </div>
+              <div class="card-description">
+                <p>Nurturing the next generation of compassionate nurses who excel in the specialised skills required in oncology nursing, Sri Shankara  College of Nursing is a Rajiv Gandhi University of Health Sciences (RGUHS) affiliated institute offering undergraduate, postgraduate and certification programs in nursing and oncology care.</p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item" data-year="2023">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2023</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="card-icon allied">
+                  <i class="fas fa-user-md"></i>
+                </div>
+                <div class="card-title-section">
+                  <h3>Sri Shankara Institute of Allied Health Sciences</h3>
+                  <div class="card-acronym">SSIAHS</div>
+                </div>
+              </div>
+              <div class="card-description">
+                <p>Focused on excellence in allied health education, the institute is equipping healthcare professionals with the skills needed in the ever-evolving field of medicine, especially, cancer care, through bachelor’s programs under Rajiv Gandhi University of Health Sciences (RGUHS) Karnataka.</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="timeline-item" data-year="2023-b">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2023</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="card-icon support">
+                  <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="card-title-section">
+                  <h3>CanAid</h3>
+                  <div class="card-acronym">Volunteer Network For Cancer Care</div>
+                </div>
+              </div>
+              <div class="card-description">
+                <p>At the heart of our foundation's mission is CanAid, a volunteer network spread across the world, dedicated to providing unwavering support, assistance and care for individuals and families affected by cancer.</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 6 -->
+        <div class="timeline-item" data-year="2024">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2024</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card latest">
+              <div class="card-header">
+                <div class="card-icon latest-icon">
+                  <i class="fas fa-hospital-alt"></i>
+                </div>
+                <div class="card-title-section">
+                  <h3>Bagchi Sri Shankara Cancer Centre and Research Institute</h3>
+                  <div class="card-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Bhubaneswar
+                  </div>
+
+                </div>
+              </div>
+              <div class="card-description">
+                <p>Comprehensive cancer hospital in Bhubaneswar, inaugurated on 15th February 2024. It is backed by the legacy of more than a decade of excellence in cancer care. Bagchi Sri Shankara Cancer Centre and Research Institute, Bhubaneswar is the torch of hope for cancer patients in eastern India.</p>
+              </div>
+               <div class="card-stats">
+                <div class="stat-row">
+                  <div class="stat-box">
+                    <span class="stat-value">750</span>
+                    <span class="stat-desc">Beds state-of-the-art super-specialty hospital</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-value">55K</span>
+                    <span class="stat-desc">Designed to cater to 50% of 55,000 new cancer patients of Odisha annually with modern technology and expert oncologists.</span>
+                  </div>
+                  
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div> <!-- /timeline -->
+    </div>
+  </main>
+
+ 
+
+ 
+
+  <!-- Inline JS (timeline reveal + scroll + hero stats count) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Timeline reveal
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // optionally unobserve for performance
+            timelineObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      timelineItems.forEach(it => timelineObserver.observe(it));
+
+      // Scroll indicator click -> scroll to timeline
+      const scrollIndicator = document.querySelector('.scroll-indicator');
+      if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+          const target = document.querySelector('.timeline-section');
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // Animate hero stats when they come into view
+      const heroStats = document.querySelectorAll('.hero-stats .stat-number');
+      const statsContainer = document.querySelector('.hero-stats');
+      if (statsContainer) {
+        const statsObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              heroStats.forEach(el => {
+                const raw = el.getAttribute('data-target') || el.textContent;
+                const target = parseInt(String(raw).replace(/\D/g,''), 10) || 0;
+                const duration = 900;
+                let start = 0;
+                const stepTime = Math.max(12, Math.floor(duration / Math.max(target, 1)));
+                const increment = Math.ceil(target / (duration / stepTime));
+                const tick = () => {
+                  start += increment;
+                  if (start >= target) {
+                    el.textContent = String(target);
+                  } else {
+                    el.textContent = String(start);
+                    requestAnimationFrame(tick);
+                  }
+                };
+                // zero-target guard
+                if (target === 0) el.textContent = "0";
+                else requestAnimationFrame(tick);
+              });
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+        statsObserver.observe(statsContainer);
+      }
+    });
+  </script>
+    
+
+    
+  <!-- Footer container - content will be dynamically generated by JavaScript -->
+  <footer id="hospital-footer"></footer>
+  
+  <!-- Chatbox -->
+  <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+    <svg viewBox="0 0 24 24">
+      <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+    </svg>
+  </button>
+
+  <div id="chatbox-container3">
+    <div id="chatbox-header3">
+      <div class="header-content3">
+        <div class="avatar3">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+          </svg>
+        </div>
+      </div>
+      <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+    </div>
+
+    <div id="chatbox-body3">
+      <div id="chatbox-messages3" style="display:none;"></div>
+      <div id="chatbox-faq-buttons3" style="display:none;"></div>
+    </div>
+
+    <form id="chatbox-form3" style="display:none;">
+      <div id="chatbox-input-area3">
+        <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+        <button type="submit" id="chatbox-send-btn3">
+          <svg viewBox="0 0 24 24">
+            <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Additional Scripts -->
+  <script src="../chatbox.js"></script>
+  <script src="../footer-main.js"></script>
+  <script src="../footer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

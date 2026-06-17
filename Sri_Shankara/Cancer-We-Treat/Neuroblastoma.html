@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroblastoma: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Neuroblastoma
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Neuroblastoma is a type of cancer that develops from immature nerve cells, or neurons, of the sympathetic nervous system. This system is part of the autonomic nervous system, which plays a vital role in controlling essential body functions such as breathing, blood pressure, and digestion.
+                </p>
+                
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Incidence:</strong> Neuroblastoma is the most common cancer diagnosed in infants and the fourth most common cancer overall in children. It accounts for approximately 7% of all paediatric cancers.</li>
+                        <li><strong>Age of Onset:</strong> It almost always develops before a child reaches five years of age, with the average age of diagnosis being between one and two years. It can occasionally be detected on an ultrasound scan before a baby is born.</li>
+                        <li><strong>Formation:</strong> Most neuroblastomas start in the adrenal glands, the abdomen, or in nerve cell clusters (called ganglia) located next to the spinal cord. They can also occur in the neck, chest, or spine.</li>
+                        <li><strong>Growth Pattern:</strong> Some tumours grow quickly, while others are slow-growing. Neuroblastoma diagnosed in infancy often tends to be less aggressive and may even regress and become benign. However, in children older than 18 months, the cancer is typically more aggressive.</li>
+                        <li><strong>Terminology:</strong> If the neuroblastoma continues to grow during treatment, it is termed progressive neuroblastoma. If the cancer returns after a period of remission, it is called recurrent neuroblastoma.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Symptoms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Neuroblastoma Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Neuroblastoma can sometimes present with no obvious symptoms, and its signs can often be mistaken for those of other, more common conditions. The symptoms a child experiences depend on the tumour's location, size, whether the cancer has spread, and if it is producing hormones.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Possible symptoms may include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-red-50 to-white border-l-4 hover-scale" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Bruising</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-orange-50 to-white border-l-4 hover-scale" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Diarrhoea</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-yellow-50 to-white border-l-4 hover-scale" style="border-color: #FFA500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Loss of Appetite & Weight Loss</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-green-50 to-white border-l-4 hover-scale" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Fatigue</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-blue-50 to-white border-l-4 hover-scale" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Lumps</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        In the abdomen, lower back, neck, or chest
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-purple-50 to-white border-l-4 hover-scale" style="border-color: #9333ea;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Bone Pain</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        If the cancer has spread to the bone
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-pink-50 to-white border-l-4 hover-scale" style="border-color: #ec4899;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Eye Changes</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Bulging eyes, drooping eyelid, or dark circles under or around the eyes
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-indigo-50 to-white border-l-4 hover-scale" style="border-color: #6366f1;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Swollen Stomach</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        A swollen, distended stomach
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-teal-50 to-white border-l-4 hover-scale" style="border-color: #14b8a6;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Breathing Issues</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Breathing difficulties or coughing
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-cyan-50 to-white border-l-4 hover-scale" style="border-color: #06b6d4;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Difficulty Swallowing</h4>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-rose-50 to-white border-l-4 hover-scale" style="border-color: #f43f5e;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Weakness or Paralysis</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        In the lower limbs
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-amber-50 to-white border-l-4 hover-scale" style="border-color: #f59e0b;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Systemic Symptoms</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Fever, anaemia, and high blood pressure
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-violet-50 to-white border-l-4 hover-scale" style="border-color: #8b5cf6;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Swelling</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Of the legs or scrotum
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-sky-50 to-white border-l-4 hover-scale" style="border-color: #0ea5e9;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Urinary/Bowel Issues</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Problems with urination or bowel movements
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-gradient-to-br from-emerald-50 to-white border-l-4 hover-scale" style="border-color: #10b981;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Headaches & Dizziness</h4>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Important:</strong> It is important to remember that most children with these symptoms do not have neuroblastoma; they are typically caused by less serious issues. However, it is always advisable to consult a paediatrician to address any health concerns.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Diagnosis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Neuroblastoma Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Neuroblastoma can be challenging to diagnose. The highly specialised experts at SSCHRC possess extensive experience and employ the most advanced technology to accurately pinpoint the disease. This commitment helps ensure the delivery of the most effective treatments with minimal impact on your child's developing body.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    As neuroblastoma often has few early symptoms, it may metastasise (spread) to other parts of the body before it is discovered. In rare early stages, it might be found during routine medical examinations.
+                </p>
+                
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4 mt-6" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Neuroblastoma Diagnostic Tests</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        If your child's doctor suspects neuroblastoma, the initial step involves a thorough physical examination, along with a detailed discussion about your child's health history.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        One or more of the following diagnostic tests may be used to confirm a diagnosis, determine if the cancer has spread, and monitor the effectiveness of treatment:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">1. Imaging Tests</h4>
+                            <p class="text-gray-700 leading-relaxed mb-2">
+                                Several imaging methods can be used to visualise the tumour and check for spread:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 ml-6">
+                                <li>CT (computed tomography) scans</li>
+                                <li>MRI (magnetic resonance imaging) scans</li>
+                                <li>MIBG scan (A chemical called MIBG, combined with radioactive iodine, is injected into a vein; images are then taken with a special camera as it travels to the tumour cells)</li>
+                                <li>X-rays</li>
+                                <li>Bone scans</li>
+                                <li>Ultrasound</li>
+                                <li>PET (positron emission tomography) scans</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">2. Biopsy</h4>
+                            <p class="text-gray-700 leading-relaxed mb-2">
+                                If an imaging test detects a tumour, a biopsy is performed to confirm if it is neuroblastoma. This involves a doctor removing a small sample of cells for examination under a microscope. A biopsy is typically performed in one of two ways:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 ml-6">
+                                <li>Surgery: An incision is made near the tumour, and cells are removed.</li>
+                                <li>Needle Biopsy: A thin, hollow needle is inserted into the tumour, and suction is used to remove tissue. A CT scan may be used to guide the needle if the tumour is difficult to access.</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">3. Other Tests</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 ml-6">
+                                <li>Bone marrow aspiration and biopsy</li>
+                                <li>Blood and urine tests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Treatment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Neuroblastoma Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Treatment for neuroblastoma is often complex and requires a multi-speciality approach. SSCHRC offers a comprehensive team approach, bringing together leading oncologists, surgeons, radiologists, and radiation oncologists, along with highly specialised support staff, to personalise your child's treatment plan. Their goal is to deliver therapies that offer the highest chance of success while minimising the impact on the child's growing body.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Key factors influencing treatment options are:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Your child's age and overall health</li>
+                    <li>The size, location, and characteristics of the tumour</li>
+                    <li>Whether the cancer has spread to other parts of the body</li>
+                </ul>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    While some low-risk neuroblastoma tumours may resolve without treatment, and others can be cured by surgery alone, aggressive treatment combinations are often required if the cancer has spread.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Treatment modalities include:
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Surgery</h3>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Surgical intervention is commonly used to remove as much of the tumour as possible. Nearby lymph nodes may also be removed to check for cancer spread.</li>
+                        <li>In some cases, the entire tumour can be removed. If the tumour is near vital organs or large blood vessels, only partial removal may be possible, followed by chemotherapy and radiation therapy.</li>
+                        <li>Chemotherapy is sometimes administered before surgery to shrink the tumour, making it easier and safer to remove (neoadjuvant chemotherapy).</li>
+                    </ul>
+                </div>
+
+                <!-- Chemotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chemotherapy</h3>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>Neuroblastoma frequently spreads to other parts of the body, such as the lymph nodes, bone marrow, liver, bones, or lungs, before diagnosis. Since chemotherapy travels throughout the body, it is a highly effective systemic treatment.</li>
+                        <li>SSCHRC provides the most advanced chemotherapy options, which may be given before surgery (neoadjuvant), after surgery (adjuvant), or as the main treatment if the tumour cannot be removed surgically.</li>
+                    </ul>
+                </div>
+
+                <!-- Radiation Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Radiation Therapy (Radiotherapy)</h3>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li>This treatment uses high-energy beams to destroy cancer cells. Modern techniques allow SSCHRC doctors to target tumours more precisely, delivering the maximum radiation dose while sparing healthy cells.</li>
+                        <li>Radiotherapy may be used after surgery, after a stem-cell transplant, or to alleviate symptoms such as pain and breathing difficulties.</li>
+                    </ul>
+                </div>
+
+                <!-- MIBG Radiotherapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">MIBG Radiotherapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Children with advanced neuroblastoma may benefit from this specialised form of treatment. A radioactive chemical is injected into the bloodstream, travelling directly to the neuroblastoma tumour cells throughout the body.
+                    </p>
+                </div>
+
+                <!-- Stem Cell Transplant -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">High-Dose Chemotherapy/Radiation Therapy and Stem Cell Transplant</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A stem cell transplant may be beneficial for children with treatment-resistant or advanced neuroblastoma.
+                    </p>
+                </div>
+
+                <!-- Retinoid Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Retinoid Therapy</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Treatment involving Vitamin A or a Vitamin A-like compound may be prescribed for some patients.
+                    </p>
+                </div>
+
+                <!-- Targeted Therapies -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Targeted Therapies</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        SSCHRC is at the forefront of neuroblastoma treatment, developing innovative targeted therapies. These agents are specifically designed to attack the unique genetic and molecular profile of each cancer to help a child's body fight the disease. Many doctors who treat neuroblastoma at SSCHRC are dedicated researchers who actively lead national and international clinical trials for these novel agents.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

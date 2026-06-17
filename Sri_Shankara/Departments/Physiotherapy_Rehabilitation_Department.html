@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Physiotherapy and Oncology Rehabilitation: Restoring Function and Strength</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Mobile fix for icon layout - make icon inline with heading only, remove wasted left space */
+        @media (max-width: 768px) {
+            /* Cards with icon and content - optimize layout for mobile */
+            .bg-white.rounded-xl .flex.items-start.mb-4 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            
+            /* Make icon smaller and position it next to heading */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 {
+                margin-right: 0;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div > i {
+                font-size: 1rem !important;
+            }
+            
+            /* Remove left margin, make content full width */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 {
+                margin-left: 0 !important;
+                flex: 1;
+                min-width: 0;
+            }
+            
+            /* Make heading display inline with icon */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 > h4 {
+                display: inline;
+                margin-bottom: 0.75rem;
+            }
+            
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
+    
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Physiotherapy.jpg" 
+                alt="Department of Physiotherapy and Oncology Rehabilitation"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Physiotherapy.jpg" 
+                alt="Department of Physiotherapy and Oncology Rehabilitation"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What Does Our Biochemistry Department Do? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Does Our Rehabilitation Department Do?
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Physiotherapy and Oncology Rehabilitation Department specializes in restoring physical function and maximizing the quality of life for individuals throughout and after cancer treatment. Our services are based on the latest evidence supporting Cancer Rehabilitation, which aims to mitigate treatment side effects, such as Cancer-Related Fatigue (CRF) and pain. Our expert physical therapists and rehabilitation specialists offer personalized programs, including Lymphedema Management, Prehabilitation (Prehab), and therapeutic exercise, ensuring patients regain the strength and independence needed for a full recovery.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Cancer rehabilitation is a crucial, often overlooked, aspect of comprehensive oncology care. It is a specialized area of medicine focused on preventing and treating the functional deficits that arise from the cancer itself, or from intensive treatments like surgery, chemotherapy, and radiation.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-bullseye mr-3" style="color: #2E8B57;"></i>
+                        Core Scope and Mission
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-8 mt-2">
+                        Our department is dedicated to restoring physical function, maximizing quality of life, and minimizing long-term disability through evidence-based rehabilitation programs tailored to each patient's unique needs.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Monitoring Treatment Safety -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #2E8B57, #3cb371);">
+                                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4 flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900 mb-3">Maximizing Physical Function</h4>
+                                    <p class="text-gray-700 leading-relaxed mb-3">
+                                        Our goal is to assess and treat impairments related to strength, endurance, mobility, and pain. We focus on restoring patients' ability to perform daily activities, improving physical fitness, and minimizing long-term disability.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                            <span>Comprehensive functional assessment</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                            <span>Restoration of daily activity independence</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                            <span>Physical fitness and strength improvement</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diagnosis and Prognosis Support -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #FF4500, #ff6347);">
+                                        <i class="fas fa-stethoscope text-white text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4 flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900 mb-3">Mitigating Treatment Side Effects</h4>
+                                    <p class="text-gray-700 leading-relaxed mb-3">
+                                        We actively address common, debilitating side effects like Cancer-Related Fatigue (CRF), which affects quality of life, and Chemotherapy-Induced Peripheral Neuropathy (CIPN), which impairs balance and sensation.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                            <span>Cancer-Related Fatigue (CRF) management</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                            <span>Chemotherapy-Induced Peripheral Neuropathy (CIPN) treatment</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                            <span>Radiation-induced fibrosis management</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Evaluating Efficacy -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+                                        <i class="fas fa-chart-line text-white text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4 flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900 mb-3">Integrated Care Model</h4>
+                                    <p class="text-gray-700 leading-relaxed mb-3">
+                                        Rehabilitation begins early, often before treatment starts (Prehabilitation), and continues through survivorship, working seamlessly with surgical, medical, and radiation oncologists.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                            <span>Prehabilitation before treatment begins</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                            <span>Continuous support through survivorship</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                            <span>Seamless collaboration with oncology teams</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Services: Specialized Oncology Rehabilitation
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our program utilizes a multidisciplinary team to provide individualized therapeutic interventions tailored to the patient's diagnosis and treatment phase.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Tumor Marker Assays -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-vial text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Prehabilitation (Prehab)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-cog mr-2 text-xs" style="color: #2E8B57;"></i>
+                                Key Principles
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                An evidence-based strategy involving targeted physical training, nutritional optimization, and psychological support delivered before surgery or chemotherapy begins. Prehab is proven to improve physiological reserve, making patients fitter and stronger to withstand the stress of treatment and accelerate post-operative recovery.
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-user-md mr-2 text-xs" style="color: #2E8B57;"></i>
+                                Benefit for Patients
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Getting Fit for Treatment:</strong> We start a personalized exercise program before your surgery or chemo begins. Getting fitter beforehand strengthens your body, allowing you to better tolerate treatment and helping you bounce back much faster afterward.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lymphedema Management -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-hand-holding-medical text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Lymphedema Management</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-cog mr-2 text-xs" style="color: #FF4500;"></i>
+                                Key Principles
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                A specialized service addressing chronic swelling (lymphedema) that often occurs when lymph nodes are removed or damaged by radiation (e.g., following breast, head & neck, or gynecologic surgery). Techniques include Manual Lymphatic Drainage (MLD), compression bandaging/garments, and therapeutic exercise.
+                            </p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4 border-l-4" style="border-color: #FF4500;">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-user-md mr-2 text-xs" style="color: #FF4500;"></i>
+                                Benefit for Patients
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Managing Swelling:</strong> This involves specialized massage techniques, Triple layer compression bandage with magnesium sulphate and custom garments to manage persistent swelling, often in the arms or legs. This treatment is essential for reducing discomfort, controlling swelling, and maintaining mobility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fatigue and Deconditioning Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-battery-half text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Fatigue and Deconditioning Therapy</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-cog mr-2 text-xs" style="color: #1e40af;"></i>
+                                Key Principles
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Targeted, individualized exercise prescription (cardiovascular and resistance training) specifically designed to combat Cancer-Related Fatigue (CRF). Evidence shows that supervised exercise is the most effective intervention for CRF.
+                            </p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-user-md mr-2 text-xs" style="color: #1e40af;"></i>
+                                Benefit for Patients
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Fighting Fatigue with Fitness:</strong> While it seems counterintuitive, supervised, light-to-moderate exercise is the best medicine for the severe tiredness that comes with cancer. We create a plan to help you safely regain your energy and stamina.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Functional and Musculoskeletal Restoration -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <i class="fas fa-walking text-2xl" style="color: #7c3aed;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Functional and Musculoskeletal Restoration</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-cog mr-2 text-xs" style="color: #7c3aed;"></i>
+                                Key Principles
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Focuses on improving range of motion (ROM), joint mobility, stability, and muscle strength impaired by surgery, scarring, or radiation-induced fibrosis. Includes pain management via modalities (e.g., TENS) and exercises to improve gait, balance, and fine motor skills.
+                            </p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4 border-l-4" style="border-color: #7c3aed;">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center text-sm">
+                                <i class="fas fa-user-md mr-2 text-xs" style="color: #7c3aed;"></i>
+                                Benefit for Patients
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Regaining Daily Life:</strong> We use targeted exercises and physical therapy to address stiffness and pain, helping you improve your balance, walk safely, and regain the strength needed to perform everyday tasks like lifting or reaching.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Unique Strengths (USPs) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Oncology Rehabilitation Department?
+                </h2>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- A. High-Throughput Automation and Safety -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57;">
+                                <i class="fas fa-cogs text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">A. Specialized Oncology Training and Protocols</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-md mr-3" style="color: #2E8B57;"></i>
+                                Dedicated Certification
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our therapists possess specialized training in Oncology Rehabilitation, understanding the precise physiological effects of different chemotherapies (e.g., neurotoxicity) and radiation doses, ensuring treatment is tailored to the patient's medical safety profile.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-clinic-medical mr-3" style="color: #2E8B57;"></i>
+                                Evidence-Based Prehab/Rehabilitation
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We integrate established protocols like Prehabilitation and Early Post-Operative Mobilization, which are scientifically proven to reduce surgical complications, shorten hospital stays, and enhance long-term functional recovery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- B. Comprehensive Symptom Management -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500;">
+                                <i class="fas fa-heartbeat text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">B. Comprehensive Symptom Management</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-friends mr-3" style="color: #FF4500;"></i>
+                                Addressing Long-Term Effects
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We specialize in managing the unique and chronic late effects of treatment, including Chemotherapy-Induced Peripheral Neuropathy (CIPN), radiation fibrosis, and chronic musculoskeletal pain, restoring sensation and mobility where possible.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-bone mr-3" style="color: #FF4500;"></i>
+                                Psychosocial and Nutritional Integration
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our team works seamlessly with supportive care, providing not only physical exercise but also counseling and collaboration with Oncology Nutritionists to ensure rehabilitation success is supported by optimal metabolic health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C. Continuum of Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #1e40af;">
+                                <i class="fas fa-hospital text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">C. Continuum of Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-microscope mr-3" style="color: #1e40af;"></i>
+                                Inpatient and Outpatient Access
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We provide care across the entire continuum—from inpatient therapy immediately following complex surgery to comprehensive outpatient rehabilitation and long-term survivorship programs—guaranteeing continuous support during the transition back to daily life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Rehabilitation Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our specialized physiotherapy and rehabilitation experts dedicated to restoring function and strength.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                     <!-- Doctor 1 -->
+                     <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. John Chungath.webp" alt="Dr. John Chungath" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+John+Chungath'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. John C</h3>
+                            <p class="text-sm text-gray-600 mb-2">BPT (May 1997), MHA (Sep 2011)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Physiotherapist & HOD</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Physiotherapy
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | 9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>29 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. John Chungath.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Mr. Burusu Muni Krishna.webp" alt="Mr. Burusu Muni Krishna" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Mr.+Burusu+Muni+Krishna'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">B Munikrishna</h3>
+                            <p class="text-sm text-gray-600 mb-2">Bachelor of Physiotherapy (June 2004)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Physiotherapist</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Physiotherapy
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | 9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>22 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Munikrishna B.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                   
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Doctor Card Styles - Scoped to doctors section only */
+        #doctors .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        #doctors .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        #doctors .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        #doctors .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        #doctors .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            #doctors .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            #doctors .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            #doctors .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            #doctors .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            #doctors .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            #doctors .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        #doctors .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        #doctors .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        #doctors .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        #doctors .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        #doctors .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #doctors .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        #doctors .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        #doctors .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        #doctors .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        #doctors .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        #doctors .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                    resetAutoRotate();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselTrack = document.getElementById('carouselTrack');
+        if (carouselTrack) {
+            carouselTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

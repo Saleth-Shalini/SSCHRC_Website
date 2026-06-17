@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interventional Pulmonology in Oncology: Minimally Invasive Airway Care</title>
+    
+    <!-- This file serves as template - creating Interventional Radiology next -->
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Mobile fix for icon layout - make icon inline with heading only, remove wasted left space */
+        @media (max-width: 768px) {
+            /* Cards with icon and content - optimize layout for mobile */
+            .bg-white.rounded-xl .flex.items-start.mb-4 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            
+            /* Make icon smaller and position it next to heading */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 {
+                margin-right: 0;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div {
+                width: 2.25rem !important;
+                height: 2.25rem !important;
+                min-width: 2.25rem !important;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div > i {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Remove left margin, make content full width */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 {
+                margin-left: 0 !important;
+                flex: 1;
+                min-width: 0;
+            }
+            
+            /* Make heading compact and allow text wrapping */
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 > h4 {
+                font-size: 1.05rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0.75rem !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Reduce gap between icon and content */
+            .bg-white.rounded-xl .flex.items-start.mb-4 {
+                gap: 0.625rem !important;
+            }
+            
+            /* Reduce section spacing on mobile for better consistency */
+            section.py-20 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Reduce excessive margins on mobile */
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-12 {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-8 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+            
+            /* Reduce grid gaps on mobile */
+            .gap-8 {
+                gap: 1rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.75rem !important;
+            }
+            
+            /* Reduce space-y spacing on mobile */
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+            
+            .space-y-12 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            /* Reduce padding in cards and containers on mobile */
+            .p-8 {
+                padding: 1rem !important;
+            }
+            
+            .rounded-2xl.p-8 {
+                padding: 1.25rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Interventional Pulmonology.jpg" 
+                alt="Interventional Pulmonology in Oncology"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Interventional Pulmonology.jpg" 
+                alt="Interventional Pulmonology in Oncology"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: What Does Our Interventional Pulmonology Department Do? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    1. What Does Our Interventional Pulmonology Department Do?
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Interventional Pulmonology Department provides highly specialized, minimally invasive, endoscopic procedures for the diagnosis, staging, and treatment of lung cancer and other thoracic malignancies. Our interventional pulmonologists use advanced technologies like Endobronchial Ultrasound (EBUS) to accurately access tumors and lymph nodes without open surgery. We focus on rapid, high-precision diagnosis and immediate relief of airway obstruction, a crucial service for both curative and palliative cancer care.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Interventional Pulmonology (IP) is a subspecialty that uses flexible and rigid endoscopic tools to perform procedures within the lungs, airways (trachea and bronchi), and chest cavity (pleura). In oncology, the IP team is essential for ensuring accurate, timely diagnosis and providing immediate symptom relief for airway-related issues.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-bullseye mr-3" style="color: #2E8B57;"></i>
+                        Core Scope and Mission
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-8 mt-2">
+                        Our department is dedicated to providing minimally invasive, precision-based diagnostic and therapeutic interventions for thoracic malignancies, ensuring optimal patient outcomes through advanced endoscopic techniques.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Precise, Minimally Invasive Diagnosis -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #2E8B57;">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #2E8B57, #3cb371);">
+                                        <i class="fas fa-microscope text-white text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4 flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900 mb-3">Precise, Minimally Invasive Diagnosis</h4>
+                                    <p class="text-gray-700 leading-relaxed mb-3">
+                                        We specialize in obtaining tissue samples (biopsies) from hard-to-reach central and peripheral lung nodules and mediastinal lymph nodes. Our goal is to secure a definitive diagnosis and accurate staging (NCCN standard) for lung cancer along with adequate tissue for molecular diagnostics including NGS with the least invasive method possible.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                            <span>EBUS-TBNA for mediastinal lymph node sampling</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                            <span>Navigational bronchoscopy for peripheral nodules</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                            <span>NCCN-compliant staging protocols</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Airway Restoration and Palliative Care -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #FF4500;">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #FF4500, #ff6347);">
+                                        <i class="fas fa-lungs text-white text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4 flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900 mb-3">Airway Restoration and Palliative Care</h4>
+                                    <p class="text-gray-700 leading-relaxed mb-3">
+                                        A primary function is managing airway obstruction caused by tumors growing into the windpipe or main bronchi. We restore breathing, which dramatically improves a patient's quality of life and allows systemic treatments to proceed.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                            <span>Rigid bronchoscopy for tumor debulking</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                            <span>Airway stenting for persistent obstruction</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-orange-600 mr-2 mt-1"></i>
+                                            <span>Immediate symptom relief and improved QOL</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Multidisciplinary Staging -->
+                        <div class="bg-white rounded-xl p-6 card-shadow hover-scale border-t-4" style="border-color: #1e40af;">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+                                        <i class="fas fa-users text-white text-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4 flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900 mb-3">Multidisciplinary Staging</h4>
+                                    <p class="text-gray-700 leading-relaxed mb-3">
+                                        We are an integral part of the Thoracic Oncology Tumor Board, working closely with surgical, medical, and radiation oncologists to provide essential staging data that dictates whether a patient is a candidate for curative surgery.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                            <span>Active participation in tumor board discussions</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                            <span>Real-time staging information for treatment planning</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                            <span>Seamless integration with oncology teams</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    2. Comprehensive Services: Advanced Diagnostics and Therapeutic Interventions
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our services leverage advanced endoscopic imaging and precision tools to treat malignancies and related complications within the chest.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- EBUS-TBNA -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-procedures text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">EBUS-TBNA (Endobronchial Ultrasound) including CPEBUS & RP-EBUS</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                A minimally invasive technique utilizing a bronchoscope equipped with an ultrasound probe to visualize lung masses and lymph nodes in the chest (mediastinum). It enables real-time, highly accurate needle biopsy (Transbronchial Needle Aspiration) for precise staging and diagnosis. Also Radial probe helps in localising peripheral pulmonary modules with precision.
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>The Ultrasound Biopsy:</strong> We use a flexible tube with a tiny ultrasound tip inserted through your mouth to look inside the chest. This lets us see and sample lymph nodes next to the windpipe, giving doctors the precise diagnosis and staging information needed without surgery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigational Bronchoscopy -->
+                <!-- <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-map-marked-alt text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Navigational Bronchoscopy</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-cog mr-2 text-sm" style="color: #FF4500;"></i>
+                                Key Principles
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                A cutting-edge technique that uses electromagnetic tracking (like GPS) or thin steering scopes to create a virtual 3D map of the lung, guiding the biopsy instrument to small, peripheral lung nodules that are otherwise inaccessible.
+                            </p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4 border-l-4" style="border-color: #FF4500;">
+                            <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-user-md mr-2 text-sm" style="color: #FF4500;"></i>
+                                Benefit for Patients
+                            </h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Guided Precision for Nodules:</strong> For tiny suspicious spots on the edge of the lung, we use a GPS-like tracking system to precisely guide the sampling tools. This ensures we reach the smallest targets with high accuracy, often avoiding the need for surgical biopsy.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Airway Recanalization and Stenting -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-lungs text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Airway Recanalization and Stenting</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                The process of reopening a blocked airway using tools like Rigid Bronchoscopy, Laser, Argon Plasma Coagulation (APC), or Electrocautery to debulk (remove) obstructing tumor tissue. Airway Stents (metal or silicone) are then placed to maintain the airway patency.
+                            </p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                           
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Restoring Breathing:</strong> If a tumor is blocking your windpipe, we use specialized tools (laser, cryotherapy) to quickly clear the obstruction. We then place a small stent (a tiny tube) to hold the airway open, providing immediate, crucial relief from shortness of breath.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pleural Disease Management -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-syringe text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Pleural Disease Management</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Minimally invasive management of malignant fluid build-up (Pleural Effusion) around the lung using Thoracoscopy (Pleuroscopy) for diagnosis or placement of long-term tunneled Pleural Catheters to allow at-home drainage. Pleurodesis is a procedure that prevents fluid Accumilation by causing adhesion of both the layers of pleura.
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                <strong>Fluid Relief:</strong> If cancer causes fluid to build up around the lung, we can safely drain it and often place a soft, flexible tube (catheter) that allows for easy, comfortable drainage at home, improving your breathing and avoiding repeat hospital visits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Unique Strengths (USPs) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    3. Our Unique Strengths (USPs)
+                </h2>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- A. Highest Standard in Diagnostic Staging -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57;">
+                                <i class="fas fa-microscope text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">A. Highest Standard in Diagnostic Staging</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-md mr-3" style="color: #2E8B57;"></i>
+                                Multimodality Diagnostics
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We combine state-of-the-art EBUS with Rapid On-Site Evaluation (ROSE) by a pathologist to ensure the highest possible diagnostic yield and the most accurate staging possible, reducing the time from diagnosis to the start of treatment.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-clinic-medical mr-3" style="color: #2E8B57;"></i>
+                                Minimally Invasive Focus
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                By specializing in advanced endoscopic techniques, we help patients avoid more invasive procedures like mediastinoscopy or diagnostic thoracotomy, resulting in faster recovery and fewer complications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- B. Rapid and Effective Palliative Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500;">
+                                <i class="fas fa-heartbeat text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">B. Rapid and Effective Palliative Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user-friends mr-3" style="color: #FF4500;"></i>
+                                Immediate Symptom Relief
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our expertise in Airway Recanalization using rigid bronchoscopy and stenting means we can provide immediate relief from debilitating tumor-related breathlessness, which is a key measure of quality of life in advanced thoracic oncology.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-bone mr-3" style="color: #FF4500;"></i>
+                                Seamless Thoracic Collaboration
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                We work hand-in-glove with our Radiation and Medical Oncology teams, using our diagnostic data to guide precision radiation plans (SBRT) and ensuring patients are stable for systemic therapy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Interventional Pulmonology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our specialized interventional pulmonology experts dedicated to minimally invasive airway care.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Arjun S Kashyap.webp" alt="Dr. Arjun S. Kashyap" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Arjun+S.+Kashyap'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Arjun S. Kashyap</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, DNB - Respiratory Medicine (May 2016), PDCC – Interventional Pulmonology (Sep 2018)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Pulmonary medicine and interventional pulmonology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Friday</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>10 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Arjun S. Kashyap.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Sharath Chandra K S.webp" alt="Dr. Sharath Chandra K. S." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Sharath+Chandra'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Sharath Chandra K. S.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD - Respiratory Medicine (June 2020), DNB - Respiratory Medicine (Dec 2020), Fellowship in Interventional Pulmonology (Nov 2022)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Junior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Pulmonary Medicine
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Saturday: 9:00 AM to 5:30 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>6 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Sharath Chandra K. S.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Doctor Card Styles - Scoped to doctors section only */
+        #doctors .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        #doctors .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        #doctors .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        #doctors .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        #doctors .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            #doctors .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            #doctors .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            #doctors .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            #doctors .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            #doctors .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            #doctors .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        #doctors .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        #doctors .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        #doctors .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        #doctors .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        #doctors .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #doctors .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        #doctors .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        #doctors .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        #doctors .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        #doctors .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        #doctors .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselTrack = document.getElementById('carouselTrack');
+        if (carouselTrack) {
+            carouselTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+
+    <!-- Chatbox -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../chatbox.js"></script>
+    <script src="../footer-main.js"></script>
+</body>
+</html>
+

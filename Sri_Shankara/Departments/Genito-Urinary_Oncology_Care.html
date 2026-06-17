@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genitourinary Oncology - Sri Shankara Cancer Hospital</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Icon container constraints */
+        .flex.items-start .flex-shrink-0 {
+            flex-shrink: 0;
+            flex-grow: 0;
+            max-width: fit-content;
+        }
+        
+        .flex.items-start .flex-shrink-0 > div {
+            width: 3rem;
+            height: 3rem;
+            min-width: 3rem;
+            max-width: 3rem;
+        }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .bg-white.rounded-xl .flex.items-start.mb-4 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 {
+                margin-right: 0;
+                margin-bottom: 0;
+                flex-shrink: 0;
+                flex-grow: 0;
+                max-width: fit-content;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+                min-width: 2.5rem !important;
+                max-width: 2.5rem !important;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div > i {
+                font-size: 1rem !important;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 {
+                margin-left: 0 !important;
+                flex: 1;
+                min-width: 0;
+            }
+            
+            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 > h4 {
+                display: inline;
+                margin-bottom: 0.75rem;
+            }
+            
+            section.py-20 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Uro-Oncology.jpg" 
+                alt="Genitourinary Oncology"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Uro-Oncology.jpg" 
+                alt="Genitourinary Oncology"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Genitourinary Oncology: Precision Care and Functional Preservation
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Genitourinary (GU) cancers affect the urinary tract and male reproductive system, including prostate, kidney, bladder, testicular, and penile cancers. At Sri Shankara Cancer Foundation, our GU Oncology Department provides specialized, multidisciplinary care focused on achieving optimal cancer control while prioritizing preservation of urinary continence, sexual function, and overall quality of life.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Drawing from guidelines by the National Comprehensive Cancer Network (NCCN) and American Society of Clinical Oncology (ASCO), we integrate advanced surgical techniques, systemic therapies, and radiation oncology to tailor treatments for localized, advanced, and metastatic disease.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Our team—led by <strong>Dr. Srivatsa Narasimha</strong>, comprising urologic surgeons, medical oncologists, radiation oncologists, pathologists, radiologists, and supportive care specialists—collaborates through weekly tumor boards to develop consensus-driven, evidence-based plans. This approach aligns with practices at leading oncology centers across the world, emphasizing personalized medicine, clinical research, and patient-centered outcomes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Treatments and Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Treatments and Services
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    We offer a full spectrum of innovative therapies, supported by advanced technology and molecular profiling, to target tumors effectively while minimizing side effects.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-1 gap-8 mb-8">
+                <!-- Robotic-Assisted Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7; min-width: 3.5rem; max-width: 3.5rem;">
+                                <i class="fas fa-robot text-2xl" style="color: #2E8B57;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 flex-1" style="min-width: 0;">Robotic-Assisted Surgery</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Utilizes the da Vinci system for advanced procedures such as Retzius-sparing radical prostatectomy, complex nephron-sparing partial nephrectomy, radical cystectomy with intracorporeal urinary diversion, and nerve-sparing techniques with intraoperative NeuroSAFE frozen-section analysis.
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4" style="border-color: #2E8B57;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Enhanced precision reduces blood loss and complications; superior preservation of erectile function and continence (up to 90-95% at 1 year in eligible patients); shorter hospital stays (1-3 days) and faster recovery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bladder and Organ Preservation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1; min-width: 3.5rem; max-width: 3.5rem;">
+                                <i class="fas fa-shield-alt text-2xl" style="color: #FF4500;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 flex-1" style="min-width: 0;">Bladder and Organ Preservation</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Trimodality therapy for muscle-invasive bladder cancer: transurethral resection (TURBT) followed by concurrent chemoradiation. Focal therapies for prostate cancer include high-intensity focused ultrasound (HIFU) and cryotherapy.
+                            </p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4 border-l-4" style="border-color: #FF4500;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Avoids radical surgery in select cases; maintains bladder function and quality of life; 5-year survival rates comparable to cystectomy (70-80% for appropriate candidates).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Systemic Therapies -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe; min-width: 3.5rem; max-width: 3.5rem;">
+                                <i class="fas fa-pills text-2xl" style="color: #1e40af;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 flex-1" style="min-width: 0;">Systemic Therapies</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Immunotherapy (e.g., PD-1/PD-L1 inhibitors for kidney and bladder cancers), targeted agents (e.g., tyrosine kinase inhibitors for renal cell carcinoma), antibody-drug conjugates (ADCs), and hormone therapy. Guided by biomarker testing, including circulating tumor DNA (ctDNA).
+                            </p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4" style="border-color: #1e40af;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Targets specific mutations for durable responses; improves progression-free survival in metastatic disease; fewer side effects than traditional chemotherapy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radiation Oncology -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff; min-width: 3.5rem; max-width: 3.5rem;">
+                                <i class="fas fa-radiation text-2xl" style="color: #7c3aed;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 flex-1" style="min-width: 0;">Radiation Oncology</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Intensity-modulated radiation therapy (IMRT), stereotactic body radiotherapy (SBRT), and brachytherapy, often combined with systemic agents.
+                            </p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4 border-l-4" style="border-color: #7c3aed;">
+                            
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Precise tumor targeting spares healthy tissues; effective for localized prostate cancer with low risk of incontinence or impotence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Surveillance and Supportive Care -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #059669;">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #d1fae5; min-width: 3.5rem; max-width: 3.5rem;">
+                                <i class="fas fa-heartbeat text-2xl" style="color: #059669;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 flex-1" style="min-width: 0;">Active Surveillance and Supportive Care</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                           
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                For low-risk prostate cancer (e.g., Gleason 6), protocols include multiparametric MRI, fusion biopsies, and PSA monitoring. Comprehensive support addresses sexual health, fertility, and psychosocial needs.
+                            </p>
+                        </div>
+                        <div class="bg-emerald-50 rounded-lg p-4 border-l-4" style="border-color: #059669;">
+                          
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Delays unnecessary treatment; preserves function; integrated counseling and rehabilitation improve long-term well-being.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Distinctive Strengths -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Our Distinctive Strengths
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our program stands out for its innovation, high-volume expertise, and commitment to accessible, high-quality care
+                </p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Center of Excellence -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #2E8B57; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-trophy text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Recognized Center of Excellence in Robotic Uro-Oncology</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Our department is acknowledged as a center of excellence in robotic uro-oncology, attracting consultants from across the country and internationally for year-round observership-based learning of advanced surgical techniques.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Globally Accredited Training -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #FF4500; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-graduation-cap text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Globally Accredited Robotic Uro-Oncology Training Program</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            We run a globally accredited training program in robotic uro-oncology, available in only a few select centers across India, fostering the next generation of specialists.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Leadership in Advanced Surgery -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #1e40af; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-user-md text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Leadership in Advanced and Complex Surgical Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Expertise in delivering procedures like Retzius-sparing radical prostatectomy, complex nephron-sparing surgeries, and intracorporeal urinary diversions for bladder cancer management, achieving high rates of continence (90-95% at 1 year) and potency preservation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cost Optimization -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-purple-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #7c3aed; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-dollar-sign text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Innovative Cost Optimization Techniques</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Our department has pioneered novel strategies to optimize costs in robotic surgery, earning appreciation and acknowledgment on global platforms for making advanced care more accessible.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-emerald-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #059669; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-microscope text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Commitment to Molecular and Original Research</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                            Dedicated efforts in core molecular and translational research focused on bladder, prostate, and kidney cancers, contributing to advancements in personalized therapies.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            <strong>Dr. Srivatsa Narasimha</strong> has published 7 Original Articles, 11 Review articles and authored several chapters in 3 text books. He also serves as a National proctor for Robotic Urologic Oncological Surgeries and serves as a reviewer in National & international PubMed indexed journals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Personalized Care -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-pink-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #ec4899; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-heart text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Personalized and Ethical Care</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            We are deeply committed to delivering truly personalized treatment plans tailored to each patient's unique clinical profile, values, preferences, and socioeconomic context. Our ethical approach ensures shared decision-making, avoidance of overtreatment (e.g., through rigorous active surveillance), transparent counseling on risks and benefits, and equitable access to advanced therapies—placing patient dignity, autonomy, and long-term well-being at the forefront of every decision.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Advanced Personalized Medicine -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-cyan-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #06b6d4; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-dna text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Advanced Personalized Medicine</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Biomarker-driven strategies, including genomic sequencing and liquid biopsies, enable targeted therapies and reduce overtreatment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Research and Clinical Trials -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-amber-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #f59e0b; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-flask text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Research and Clinical Trials</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Active involvement in trials for novel immunotherapies, ADCs, and ablative technologies, offering patients access to emerging treatments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Multidisciplinary Integration -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-indigo-50 to-white">
+                    <div class="flex items-start mb-6">
+                        <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: #6366f1; min-width: 4rem; max-width: 4rem;">
+                                <i class="fas fa-users-cog text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6 flex-1" style="min-width: 0;">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Multidisciplinary Integration</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Seamless coordination with advanced imaging (e.g., PSMA-PET) ensures superior accuracy and outcomes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Why Choose Us -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our GU Oncology Program?
+                </h2>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                <div class="flex items-center mb-6">
+                    <div class="flex-shrink-0" style="flex-grow: 0; max-width: fit-content;">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #2E8B57; min-width: 3.5rem; max-width: 3.5rem;">
+                            <i class="fas fa-star text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 flex-1" style="min-width: 0;">Our Commitment</h3>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    At Sri Shankara Cancer Foundation, we deliver compassionate, evidence-based care aligned with standards at leading oncology centers across the world. Our high-volume expertise in robotic techniques, innovative training programs, research contributions, and unwavering focus on personalized, ethical care, functional outcomes, and accessibility ensure exceptional results.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed font-semibold">
+                    We invite you to schedule a consultation for a personalized evaluation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Genitourinary Oncology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our specialized genitourinary oncology experts dedicated to precision care and functional preservation.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Srivatsa Narasimha.webp" alt="Dr. Srivatsa Narasimha" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Srivatsa+Narasimha'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Srivatsa Narasimha</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS - Gen Surgery (2005), DNB - Gen Surgery (2005), DNB - Genitourinary Surgery (2010), Fellowship in Gynae-uro-oncology & Robotic Surgery (2012)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Genitourinary Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Monday to Friday: 9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>21 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Srivatsa Narasimha.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Raghunath S. K..webp" alt="Dr. Raghunath S. K." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Raghunath+S.+K.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Raghunath S. K.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS - Gen Surgery (Mar 1998), DNB - Urology (June 2004), Fellow in Advanced Laproscopic Urology (June 2007)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Visiting Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Genitourinary Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>On Call</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>28 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Raghunath S. K..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Kundalam Furkhan Ahmed.webp" alt="Dr. Kundalam Furkhan Ahmed" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Kundalam+Furkhan+Ahmed'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Kundalam Furkhan Ahmed</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MS (General Surgery), M.Ch (Urology), DNB - General Surgery (Feb 2012), M.Ch (Urology)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Uro Oncology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Visiting on case-to-case</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>14 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Kundalam Furkhan Ahmed.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+    
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Doctor Card Styles - Scoped to doctors section only */
+        #doctors .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        #doctors .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        #doctors .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        #doctors .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        #doctors .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            #doctors .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            #doctors .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            #doctors .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            #doctors .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            #doctors .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            #doctors .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        #doctors .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        #doctors .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        #doctors .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        #doctors .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        #doctors .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #doctors .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        #doctors .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        #doctors .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        #doctors .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        #doctors .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .carousel-dot.active {
+            background: #2E8B57;
+            width: 32px;
+            border-radius: 6px;
+        }
+        
+        #doctors .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                    resetAutoRotate();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselTrack = document.getElementById('carouselTrack');
+        if (carouselTrack) {
+            carouselTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer id="hospital-footer"></footer>
+    <script src="../footer.js"></script>
+
+    <!-- Chatbox -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../chatbox.js"></script>
+    <script src="../footer-main.js"></script>
+</body>
+</html>

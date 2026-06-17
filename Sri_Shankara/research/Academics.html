@@ -1,0 +1,3076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSCF Academics & Training | Sri Shankara Cancer Foundation</title>
+    <meta name="description" content="Sri Shankara Cancer Hospital and Research Centre - Comprehensive Academic Programs, Research & Training in Oncology">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        /* Academics Page Styles - Use scoped variables to avoid header conflicts */
+        .academics-page {
+            --primary-blue: #014196;
+            --primary-teal: #079591;
+            --primary-green: #2E8B57;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+            --transition: all 0.3s ease;
+        }
+
+        /* Only override body styles that don't conflict with header */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a; /* Use direct color instead of variable */
+            background-color: #ffffff; /* Use direct color instead of variable */
+            overflow-x: hidden;
+        }
+
+        /* Ensure header styles are protected from page conflicts */
+        #dynamic-header {
+            /* Preserve header positioning and display */
+            position: relative;
+            display: block;
+        }
+
+        #dynamic-header * {
+            /* Only reset problematic properties, keep header styling intact */
+            box-sizing: border-box;
+        }
+
+        /* Prevent page margins from affecting header */
+        #dynamic-header .main-nav,
+        #dynamic-header .header-top,
+        #dynamic-header .nav-container {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Container styles - moved outside of scoped rules */
+        .container-academics {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .scroll-top.show {
+            display: flex;
+        }
+
+        /* Footer - Academics2 page only: restore icons and logo visibility */
+        #hospital-footer i.fas,
+        #hospital-footer i.far {
+            font-family: "Font Awesome 6 Free" !important;
+            font-weight: 900;
+        }
+        #hospital-footer i.fab {
+            font-family: "Font Awesome 6 Brands" !important;
+        }
+        #hospital-footer .hospital-logo {
+            filter: brightness(1.15) contrast(1.05);
+        }
+
+        
+        /* Side Navigation */
+        .academics-page .side-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 998;
+            display: none;
+        }
+
+        .academics-page .side-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .academics-page .side-link {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .academics-page .side-link:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .academics-page .side-link::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 60px;
+            background: var(--text-dark);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            font-size: 0.875rem;
+        }
+
+        .academics-page .side-link:hover::before {
+            opacity: 1;
+        }
+
+        /* Hero Section */
+        .academics-page .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .academics-page .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .academics-page .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .academics-page .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .academics-page .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .academics-page .hero-description {
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .academics-page .hero-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .academics-page .stat-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            flex: 1;
+        }
+
+        .academics-page .stat-card i {
+            font-size: 2rem;
+            opacity: 0.9;
+        }
+
+        .academics-page .stat-card div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .academics-page .stat-card strong {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .academics-page .stat-card span {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .academics-page .hero-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-height: 600px;
+        }
+
+        .circular-diagram {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: visible;
+        }
+
+        .diagram-wheel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: visible;
+            background: conic-gradient(
+                rgba(255, 255, 255, 0.1) 0deg 45deg,
+                rgba(255, 255, 255, 0.12) 45deg 90deg,
+                rgba(255, 255, 255, 0.1) 90deg 135deg,
+                rgba(255, 255, 255, 0.12) 135deg 180deg,
+                rgba(255, 255, 255, 0.1) 180deg 225deg,
+                rgba(255, 255, 255, 0.12) 225deg 270deg,
+                rgba(255, 255, 255, 0.1) 270deg 315deg,
+                rgba(255, 255, 255, 0.12) 315deg 360deg
+            );
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            mask: radial-gradient(circle, transparent 36%, black 36%);
+            -webkit-mask: radial-gradient(circle, transparent 36%, black 36%);
+        }
+
+        .diagram-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: transparent;
+            backdrop-filter: none;
+            border-radius: 50%;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            border: none;
+            padding: 12px;
+            box-shadow: none;
+            visibility: visible !important;
+            opacity: 1 !important;
+            pointer-events: none;
+        }
+
+        .center-logo {
+            width: 160px;
+            height: 100px;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .center-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .center-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.4;
+            padding: 0 8px;
+            color: white !important;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.4px;
+            display: block !important;
+            width: 100%;
+            margin: 0;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .diagram-segment {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0 0;
+            overflow: visible;
+            cursor: pointer;
+        }
+        
+        .diagram-segment:hover {
+            z-index: 5;
+        }
+
+        .segment-content {
+            position: absolute;
+            top: 20%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            pointer-events: auto;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Reduce the "selection/hover area" to the label only */
+        .diagram-segment:hover .segment-content {
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(6px);
+        }
+
+        .segment-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.3;
+            margin-bottom: 0.4rem;
+            color: white;
+        }
+
+        .segment-number {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: white;
+            margin-top: 0.2rem;
+        }
+
+        /* Position each segment at 45-degree intervals (8 segments = 360/8 = 45 degrees each) */
+        .segment-1 {
+            transform: rotate(-90deg);
+        }
+        .segment-1 .segment-content {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        .segment-2 {
+            transform: rotate(-45deg);
+        }
+        .segment-2 .segment-content {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .segment-3 {
+            transform: rotate(0deg);
+        }
+        .segment-3 .segment-content {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        .segment-4 {
+            transform: rotate(45deg);
+        }
+        .segment-4 .segment-content {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .segment-5 {
+            transform: rotate(90deg);
+        }
+        .segment-5 .segment-content {
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+
+        .segment-6 {
+            transform: rotate(135deg);
+        }
+        .segment-6 .segment-content {
+            transform: translate(-50%, -50%) rotate(-135deg);
+        }
+
+        .segment-7 {
+            transform: rotate(180deg);
+        }
+        .segment-7 .segment-content {
+            transform: translate(-50%, -50%) rotate(-180deg);
+        }
+
+        .segment-8 {
+            transform: rotate(225deg);
+        }
+        .segment-8 .segment-content {
+            transform: translate(-50%, -50%) rotate(-225deg);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header-academics {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title-academics {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+        }
+
+        /* Overview Section */
+        .overview-section {
+            background: var(--bg-light);
+        }
+
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .overview-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .expandable-content.expanded {
+            max-height: 2000px;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+
+        .read-more-btn:hover {
+            gap: 12px;
+        }
+
+        .read-more-btn i {
+            transition: var(--transition);
+        }
+
+        .read-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .highlight-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .highlight-card i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .highlight-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Academics Division */
+        .academics-division {
+            background: var(--white);
+        }
+
+        .division-intro {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .academic-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue);
+        }
+
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .pillar-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Vision & Mission block */
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 1.5rem 0 2.5rem;
+            align-items: stretch;
+        }
+
+        .vision-mission-grid .pillar-card {
+            height: 100%;
+        }
+
+        .mission-list {
+            margin: 0;
+            padding-left: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .mission-list li {
+            margin: 0 0 0.75rem;
+        }
+
+        .mission-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .vision-mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-list {
+                padding-left: 1.25rem;
+            }
+        }
+
+        .pillar-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .pillar-link:hover {
+            gap: 12px;
+        }
+
+        /* Milestones Section */
+        .milestones-section {
+            background: var(--bg-light);
+        }
+
+        .timeline-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: var(--white);
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary-blue), var(--primary-teal));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            opacity: 0.5;
+            transition: var(--transition);
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-marker {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 4px rgba(1, 65, 150, 0.2);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            width: 45%;
+            margin: 0 2.5%;
+        }
+
+        .timeline-year {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Programmes Section */
+        .programmes-section {
+            background: var(--white);
+        }
+
+        .programme-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: var(--bg-light);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            color: white;
+            border-color: transparent;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tab-header h3 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+        }
+
+        .tab-subtitle {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .search-box {
+            padding: 10px 15px;
+            border: 2px solid var(--bg-light);
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 300px;
+            transition: var(--transition);
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .programme-search-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            margin: 1rem 0 2rem;
+        }
+
+        .programme-search-results {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            left: auto;
+            width: min(520px, 100%);
+            background: #fff;
+            border: 1px solid var(--bg-light);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            max-height: 240px;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .programme-search-results.hidden {
+            display: none;
+        }
+
+        .programme-search-item {
+            padding: 12px 14px;
+            cursor: pointer;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .programme-search-item:last-child {
+            border-bottom: none;
+        }
+
+        .programme-search-item:hover {
+            background: #f6f8fb;
+        }
+
+        .programme-search-item .programme-name {
+            font-weight: 700;
+            color: var(--text-dark);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .programme-search-item .programme-meta {
+            margin-top: 2px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .programme-search-hit {
+            animation: programmeHit 1.4s ease;
+            background: #fff7e6;
+        }
+
+        @keyframes programmeHit {
+            0% { background: #ffe7b3; }
+            100% { background: #fff; }
+        }
+
+        .recognition-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .accordion-section {
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--bg-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            background: #e9ecef;
+        }
+
+        .accordion-header i:last-child {
+            transition: var(--transition);
+        }
+
+        .accordion-section.active .accordion-header i:last-child {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-section.active .accordion-content {
+            max-height: 2000px;
+        }
+
+        .programme-table {
+            overflow-x: auto;
+        }
+
+        .programme-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .programme-table th,
+        .programme-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .programme-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .programme-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .programme-link {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .programme-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Make programme links clickable across the full table cell */
+        .programme-table td .programme-link {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin: -1rem; /* offset the td padding so the whole cell is clickable */
+        }
+
+        .programme-table .application-btn {
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            background: var(--primary-blue);
+            color: #fff;
+            border: 2px solid var(--primary-blue);
+            white-space: nowrap;
+        }
+
+        .programme-table .application-btn:hover {
+            background: #0b4aa6;
+            border-color: #0b4aa6;
+            transform: translateY(-1px);
+        }
+
+        .notification-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        /* Scoped button colors for notifications (white card background) */
+        .notification-actions .btn-primary {
+            background: var(--primary-blue);
+            color: #fff;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .notification-actions .btn-primary:hover {
+            background: #0b4aa6;
+            border-color: #0b4aa6;
+        }
+
+        .notification-actions .btn-outline {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .notification-actions .btn-outline:hover {
+            background: var(--primary-blue);
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .badge-rguhs {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-nbems {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .badge-inst {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-soapc {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .badge-mahe {
+            background: #fff9c4;
+            color: #f9a825;
+        }
+
+        /* Nursing Cards */
+        .nursing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .course-header i {
+            font-size: 2rem;
+        }
+
+        .course-header h4 {
+            font-size: 1.25rem;
+        }
+
+        .course-body {
+            padding: 2rem;
+        }
+
+        .course-body h5 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .course-body ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-body ul li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .course-body ul li i {
+            color: var(--primary-green);
+        }
+
+        .course-footer {
+            margin-top: 1.5rem;
+        }
+
+        /* Allied Health Grid */
+        .allied-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .allied-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .allied-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .allied-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .allied-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .allied-name {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .allied-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+
+        .allied-card ul li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .allied-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        /* PhD Cards */
+        .phd-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .phd-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            gap: 2rem;
+            transition: var(--transition);
+        }
+
+        .phd-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .phd-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .phd-content {
+            flex: 1;
+        }
+
+        .phd-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .phd-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .phd-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .detail-item i {
+            color: var(--primary-blue);
+        }
+
+        .enquiry-cta {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .enquiry-cta h4 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .enquiry-cta p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .enquiry-cta .btn {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        /* Collaborations Section */
+        .collaborations-section {
+            background: var(--bg-light);
+        }
+
+        .collab-text {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .collaboration-logos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .collab-logo-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .collab-logo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .collab-logo-card i {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .collab-logo-card h5 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .collab-logo-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-brand p {
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+        }
+
+        /* Responsive Design - Enhanced for Mobile, Tablet, Desktop */
+        
+
+        
+        /* Tablet & Smaller Desktop (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            .academics-page .side-nav { display: none; }
+            .academics-page .hero { padding: 80px 0 60px; }
+            .academics-page .hero-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+            .academics-page .hero-visual { min-height: 500px; margin-top: 2rem; }
+            .academics-page .circular-diagram { width: 500px; height: 500px; }
+            .academics-page .diagram-center { width: 160px; height: 160px; padding: 10px; }
+            .academics-page .center-logo { width: 130px; height: 85px; margin-bottom: 12px; }
+            .academics-page .center-title { font-size: 0.7rem; }
+            .academics-page .segment-text { font-size: 0.75rem; }
+            .academics-page .hero-stats { justify-content: center; gap: 1rem; }
+            .academics-page .hero-actions { justify-content: center; flex-wrap: wrap; }
+            
+            .academics-page .section { padding: 60px 0; }
+            .academics-page .section-title-academics { font-size: 2.2rem; }
+            .academics-page .overview-content { grid-template-columns: 1fr; gap: 2rem; }
+            .academics-page .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .academics-page .academic-pillars { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            
+            .academics-page .programme-tabs { flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+            .academics-page .tab-btn { padding: 10px 20px; font-size: 0.9rem; }
+            .academics-page .nursing-cards,
+            .academics-page .allied-grid,
+            .academics-page .phd-cards { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .academics-page .collaboration-logos { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+            .academics-page .footer-content { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        }
+        
+        /* Mobile (max-width: 768px) */
+        @media (max-width: 768px) {
+            .academics-page .hero { padding: 60px 0 40px; }
+            .academics-page .hero-title { font-size: 2rem; line-height: 1.2; margin-bottom: 0.8rem; }
+            .academics-page .hero-subtitle { font-size: 1.25rem; }
+            .academics-page .hero-description { font-size: 1rem; margin: 1rem 0; line-height: 1.6; }
+            
+            .academics-page .hero-visual { min-height: 400px; }
+            .academics-page .circular-diagram { width: 400px; height: 400px; }
+            .academics-page .diagram-center { width: 140px; height: 140px; padding: 8px; }
+            .academics-page .center-logo { width: 110px; height: 75px; margin-bottom: 10px; }
+            .academics-page .center-title { font-size: 0.7rem; }
+            .academics-page .segment-text { font-size: 0.7rem; }
+            
+            .academics-page .hero-stats { flex-direction: column; align-items: center; }
+            .academics-page .stat-card { width: 100%; max-width: 300px; justify-content: center; }
+            .academics-page .hero-actions { flex-direction: column; align-items: center; }
+            .academics-page .btn { width: 100%; max-width: 250px; justify-content: center; }
+            
+            .academics-page .section-title-academics { font-size: 1.8rem; margin-bottom: 0.8rem; }
+            .academics-page .section-subtitle { font-size: 1.1rem; }
+            
+            .academics-page .highlights-grid,
+            .academics-page .academic-pillars,
+            .academics-page .nursing-cards,
+            .academics-page .allied-grid,
+            .academics-page .phd-cards,
+            .academics-page .footer-content { grid-template-columns: 1fr; gap: 1.5rem; }
+            
+            .academics-page .phd-card { flex-direction: column; text-align: center; align-items: center; }
+            .academics-page .phd-details { align-items: center; }
+            .academics-page .collaboration-logos { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            
+            /* Vertical Timeline for Mobile */
+            .academics-page .timeline::before { left: 20px; }
+            .academics-page .timeline-marker { left: 20px !important; transform: translateX(-50%) !important; }
+            .academics-page .timeline-item, 
+            .academics-page .timeline-item:nth-child(odd), 
+            .academics-page .timeline-item:nth-child(even) { flex-direction: column !important; align-items: flex-start !important; padding-left: 50px; text-align: left !important; }
+            .academics-page .timeline-content { width: calc(100% - 20px) !important; margin: 0 !important; }
+            
+            .academics-page .programme-tabs { flex-direction: column; align-items: center; }
+            .academics-page .tab-btn { width: 100%; justify-content: center; max-width: 300px; }
+            .academics-page .search-box { width: 100%; }
+        }
+        
+        /* Small Mobile (max-width: 480px) */
+        @media (max-width: 480px) {
+            .academics-page .hero { padding: 40px 0 30px; }
+            .academics-page .hero-title { font-size: 1.75rem; }
+            
+            .academics-page .hero-visual { min-height: 350px; }
+            .academics-page .circular-diagram { width: 320px; height: 320px; }
+            .academics-page .diagram-center { width: 110px; height: 110px; padding: 6px; }
+            .academics-page .center-logo { width: 85px; height: 55px; margin-bottom: 8px; }
+            .academics-page .center-title { font-size: 0.6rem; line-height: 1.1; }
+            .academics-page .segment-text { font-size: 0.6rem; }
+            
+            .academics-page .section { padding: 30px 0; }
+            .academics-page .section-title-academics { font-size: 1.5rem; }
+            
+            .academics-page .collaboration-logos { grid-template-columns: 1fr; }
+            .academics-page .accordion-header { padding: 1rem; font-size: 0.95rem; }
+        }
+    </style>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+
+
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Page Navigation -->
+    <!-- <nav class="page-nav">
+        <div class="container-academics">
+            <div class="page-nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SSCF Academics</span>
+            </div>
+            <button class="page-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="page-nav-menu">
+                <li><a href="#overview" class="page-nav-link">Overview</a></li>
+                <li><a href="#academics" class="page-nav-link">Academics</a></li>
+                <li><a href="#milestones" class="page-nav-link">Milestones</a></li>
+                <li><a href="#programmes" class="page-nav-link">Programmes</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <!-- Main Content with Scoped Styles -->
+    <div class="academics-page">
+
+    <!-- Side Navigation (Desktop) -->
+    <aside class="side-nav">
+        <ul>
+            <li><a href="#overview" class="side-link" data-tooltip="Overview"><i class="fas fa-info-circle"></i></a></li>
+            <li><a href="#academics" class="side-link" data-tooltip="Academics"><i class="fas fa-book"></i></a></li>
+            <li><a href="#milestones" class="side-link" data-tooltip="Milestones"><i class="fas fa-trophy"></i></a></li>
+            <li><a href="#programmes" class="side-link" data-tooltip="Programmes"><i class="fas fa-certificate"></i></a></li>
+        </ul>
+    </aside>
+
+    <!-- Hero Section -->
+    <section class="hero" id="overview">
+        <div class="container-academics">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Academics & Training<br>
+                        <span class="hero-subtitle">Sri Shankara Cancer Foundation</span>
+                    </h1>
+                    <p class="hero-description">
+                        Building a comprehensive ecosystem of oncology education, research, and training through world-class academic programmes and strategic collaborations.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <strong>50+</strong>
+                                <span>Years Leadership</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>30+</strong>
+                                <span>Programmes</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-hospital"></i>
+                            <div>
+                                <strong>Not-for-Profit</strong>
+                                <span>Organization</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#programmes" class="btn btn-primary">
+                            <i class="fas fa-book"></i> Explore Programmes
+                        </a>
+                        <a href="#academics" class="btn btn-outline">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="circular-diagram">
+                        <!-- Central Core - Outside wheel to avoid mask issues -->
+                        <div class="diagram-center">
+                            <div class="center-logo">
+                                <img src="../Images/SSCHRCHospital-logo.jpg" alt="Sri Shankara Logo" onerror="this.onerror=null; this.src='../Images/Logo.webp';" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                            </div>
+                            <div class="center-title">DIVISION OF ACADEMICS and TRAINING</div>
+                        </div>
+                        
+                        <div class="diagram-wheel">
+                            <!-- Segment 1: VISION, MISSION, GOALS -->
+                            <div class="diagram-segment segment-1">
+                                <a href="#vision-mission" class="segment-content">
+                                    <div class="segment-text">VISION<br>MISSION<br>GOALS</div>
+                                    <div class="segment-number">1</div>
+                                </a>
+                            </div>
+                            
+                            <!-- Segment 2: NOTIFICATIONS -->
+                            <div class="diagram-segment segment-2">
+                                <a href="#notifications" class="segment-content">
+                                    <div class="segment-text">NOTIFICATIONS</div>
+                                    <div class="segment-number">2</div>
+                                </a>
+                            </div>
+                            
+                            <!-- Segment 3: SSIAHS -->
+                            <div class="diagram-segment segment-3">
+                                <a href="#allied-health" class="segment-content">
+                                    <div class="segment-text">SSIAHS</div>
+                                    <div class="segment-number">3</div>
+                                </a>
+                            </div>
+                            
+                            <!-- Segment 4: SSCON -->
+                            <div class="diagram-segment segment-4">
+                                <a href="#nursing" class="segment-content">
+                                    <div class="segment-text">SSCON</div>
+                                    <div class="segment-number">4</div>
+                                </a>
+                            </div>
+                            
+                            <!-- Segment 5: PhD ENDEAVOURS -->
+                            <div class="diagram-segment segment-5">
+                                <a href="#phd" class="segment-content">
+                                    <div class="segment-text">PhD ENDEAVOURS</div>
+                                    <div class="segment-number">5</div>
+                                </a>
+                            </div>
+                            
+                            <!-- Segment 6: INSTITUTION RUN COURSES -->
+                            <div class="diagram-segment segment-6">
+                                <a href="#pg-medical" class="segment-content">
+                                    <div class="segment-text">INSTITUTION RUN COURSES</div>
+                                    <div class="segment-number">6</div>
+                                </a>
+                            </div>
+                            
+                            <!-- Segment 7: Redirect to PG Fellowship Programmes -->
+                            <div class="diagram-segment segment-7">
+                                <a href="#pg-medical" class="segment-content">
+                                    <div class="segment-text">RGUHS Affiliated Courses</div>
+                                    <div class="segment-number">7</div>
+                                </a>
+                            </div>
+                            
+                            <!-- Segment 8: NBE COURSES -->
+                            <div class="diagram-segment segment-8">
+                                <a href="#nbems" class="segment-content">
+                                    <div class="segment-text">NBE COURSES</div>
+                                    <div class="segment-number">8</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Detailed Section -->
+    <section class="overview-section section">
+        <div class="container-academics">
+            <div class="section-header-academics">
+                <h2 class="section-title-academics">About SSCF</h2>
+                <p class="section-subtitle">Comprehensive Cancer Care & Academic Excellence</p>
+            </div>
+            
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>
+                        Sri Shankara Cancer Foundation (SSCF) is a not-for-profit organization, registered under Section 12A. 
+                        Sri Shankara Cancer Foundation was conceived in 2008, by a group of forward-thinking individuals, 
+                        under the visionary leadership of Managing Trustee, Dr. B.S. Srinath, a seasoned professional with 
+                        50 years of experience in surgical oncology.
+                    </p>
+                    <div class="expandable-content" id="overviewMore">
+                        <p>
+                            SSCF was established to provide inclusive cancer treatment to each and every patient, with a 
+                            specific emphasis on providing the best cancer treatment regardless of their socio-economic background. 
+                            Sri Shankara Cancer Foundation is committed to alleviating the physical, emotional, and financial 
+                            burdens faced by cancer patients and their families, while also addressing the broader societal 
+                            impact of this disease.
+                        </p>
+                        <p>
+                            Sri Shankara Cancer Hospital and Research Centre, Bangalore & Bagchi Sri Shankara Cancer Centre 
+                            and Research Institute, Bhubaneswar are the epicenters of comprehensive and transformative oncology. 
+                            It is the nucleus where cutting-edge technology and compassionate expertise come together to deliver 
+                            the best cancer treatment and care. Within our distinct departments, experts equipped with 
+                            state-of-the-art facilities focus on a specialized aspect of care, ensuring personalized and 
+                            top-tier treatment for cancer patients. Explore our integrated specialties covering cancer prevention, 
+                            screening, diagnosis, treatment, and support, all thoughtfully curated under one roof.
+                        </p>
+                    </div>
+                    <button class="read-more-btn" data-target="overviewMore">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <i class="fas fa-heart"></i>
+                        <h4>Not-for-Profit</h4>
+                        <p>Registered under Section 12A, dedicated to serving society</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h4>50+ Years Leadership</h4>
+                        <p>Led by Dr. B.S. Srinath, pioneer in surgical oncology</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-building"></i>
+                        <h4>Multi-Campus</h4>
+                        <p>Bangalore & Bhubaneswar centers of excellence</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Academic Ecosystem</h4>
+                        <p>Comprehensive training & research infrastructure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Division of Academics Section -->
+    <section class="academics-division section" id="academics">
+        <div class="container-academics">
+            <div class="section-header-academics">
+                <h2 class="section-title-academics">Division of Academics & Training</h2>
+                <p class="section-subtitle">Comprehensive Educational Ecosystem</p>
+            </div>
+
+            <div class="division-intro">
+                <p>
+                    Our mission extends to the implementation of effective cancer prevention strategies and spearheading 
+                    cutting-edge research in oncology through our daughter institutions - Sri Shankara National Centre for 
+                    Cancer Prevention & Research and the training of healthcare personnel for optimal patient care through 
+                    our association with National Board of Examinations in Medical Sciences (for DNB, DrNB and FNB Programmes) 
+                    and Rajiv Gandhi University of Health Sciences (Super specialty Fellowship Programmes), Sri Shankara 
+                    College of Nursing and Sri Shankara Institute of Allied Health Sciences.
+                </p>
+            </div>
+
+            <div class="vision-mission-grid" id="vision-mission">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Vision</h3>
+                    <ul class="mission-list">
+                        <li>To become a center of excellence in education, aiming for international standards in clinical practice and research.</li>
+                        <li>To train professionals who are not only technically competent but also deeply compassionate and ethical human beings.</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Mission</h3>
+                    <ul class="mission-list">
+                        <li><strong style="color: var(--text-dark);">Quality Education:</strong> To provide comprehensive education that integrates practical skills and theoretical knowledge.</li>
+                        <li><strong style="color: var(--text-dark);">Holistic Care:</strong> To prepare who provide "Service with a Healing Touch" across promotive, preventive, curative, and rehabilitative areas.</li>
+                        <li><strong style="color: var(--text-dark);">Professional Development:</strong> To foster skills in communication, leadership, and clinical practice, keeping updated with global standards.</li>
+                        <li><strong style="color: var(--text-dark);">Service-Oriented Care:</strong> To focus on training students to serve society, particularly focusing on cancer care and supporting the needy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="academic-pillars">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Cancer Prevention & Research</h3>
+                    <p>Advanced research programs in molecular oncology, radiation physics, and cancer biology</p>
+                    <a href="#programmes" class="pillar-link">Explore Research <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Medical Education</h3>
+                    <p>DNB, DrNB, and FNB programmes accredited by NBEMS for specialized oncology training</p>
+                    <a href="#pg-medical" class="pillar-link">View Programmes <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Nursing Education</h3>
+                    <p>B.Sc and M.Sc Nursing programmes affiliated with RGUHS</p>
+                    <a href="#nursing" class="pillar-link">Nursing Courses <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Allied Health Sciences</h3>
+                    <p>Specialized programs in Medical Imaging, Radiotherapy, Laboratory, and OT Technology</p>
+                    <a href="#allied-health" class="pillar-link">Allied Health <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Fellowships & Training</h3>
+                    <p>Specialized fellowship programs in various oncology subspecialties</p>
+                    <a href="#fellowships" class="pillar-link">Fellowships <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Collaborations</h3>
+                    <p>Partnerships with Maastricht University, MAHE, and international institutions</p>
+                    <a href="#milestones" class="pillar-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Timeline Section -->
+    <section class="milestones-section section" id="milestones">
+        <div class="container-academics">
+            <div class="section-header-academics">
+                <h2 class="section-title-academics">Milestones of Development</h2>
+                <p class="section-subtitle">Our Journey in Academic Excellence</p>
+            </div>
+
+            <div class="timeline-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="foundation">Foundation</button>
+                <button class="filter-btn" data-filter="academics">Academics</button>
+                <button class="filter-btn" data-filter="research">Research</button>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-year="2008" data-category="foundation">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2008</span>
+                        <h4>Foundation Established</h4>
+                        <p>Establishment of Sri Shankara Cancer Foundation</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2012" data-category="foundation">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2012</span>
+                        <h4>Hospital Launch</h4>
+                        <p>Establishment of Sri Shankara Cancer Hospital and Research Centre</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2017" data-category="academics">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2017</span>
+                        <h4>Academic Programs Begin</h4>
+                        <p>Initiated courses accredited with NBE, RGUHS, and established Sri Shankara College of Nursing</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2018" data-category="research">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h4>PhD Programme Launch</h4>
+                        <p>Initiation of PhD programme in Bio-Chemistry under RGUHS</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2019" data-category="academics">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2019</span>
+                        <h4>Allied Health & Research Expansion</h4>
+                        <p>Allied Health Sciences Institute, Institutional Fellowships, Research Methodology & Basic Science teaching, NCG membership</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2020" data-category="research">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h4>International Collaboration</h4>
+                        <p>Meetings with Maastricht University, The Netherlands & PhD in Radiation Physics under RGUHS</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2022" data-category="research">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h4>Customized Courses</h4>
+                        <p>First customized courses on Research Methodology, Epidemiology, Biostatistics & Molecular Oncology</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2024" data-category="foundation">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h4>Bhubaneswar Centre</h4>
+                        <p>Establishment of Bagchi-Sri Shankara Cancer Centre and Research Institute</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2025" data-category="research">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h4>MAHE Partnership</h4>
+                        <p>Initiation of PhD endeavors with Manipal Academy of Higher Education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programmes Section -->
+    <section class="programmes-section section" id="programmes">
+        <div class="container-academics">
+            <div class="section-header-academics">
+                <h2 class="section-title-academics">Academic Programmes 2026</h2>
+                <p class="section-subtitle">Comprehensive Range of Specialized Courses</p>
+            </div>
+
+            <!-- Programme Tabs -->
+            <div class="programme-tabs">
+                <button class="tab-btn active" data-tab="pg-medical">
+                    <i class="fas fa-user-md"></i>
+                    <span>PG Medical & Fellowships</span>
+                </button>
+                <button class="tab-btn" data-tab="nbems">
+                    <i class="fas fa-award"></i>
+                    <span>NBEMS Programmes</span>
+                </button>
+                <button class="tab-btn" data-tab="nursing">
+                    <i class="fas fa-user-nurse"></i>
+                    <span>Nursing</span>
+                </button>
+                <button class="tab-btn" data-tab="allied-health">
+                    <i class="fas fa-flask"></i>
+                    <span>Allied Health</span>
+                </button>
+                <button class="tab-btn" data-tab="phd">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>PhD Programmes</span>
+                </button>
+            </div>
+
+            <!-- Global Programme Search (applies to all tabs below) -->
+            <div class="programme-search-wrapper">
+                <input type="text" class="search-box" placeholder="Search programmes..." id="searchProgrammes" autocomplete="off">
+                <div id="programme-search-results" class="programme-search-results hidden" aria-live="polite"></div>
+            </div>
+
+            <!-- Tab Content: PG Medical & Fellowships -->
+            <div class="tab-content active" id="pg-medical">
+                <div class="tab-header">
+                    <h3>Post-Graduate Fellowship Programmes</h3>
+                </div>
+
+                <!-- RGUHS Fellowships (Medical) -->
+                <div class="accordion-section">
+                    <button class="accordion-header">
+                        <span><i class="fas fa-stethoscope"></i> Fellowship Programmes - RGUHS</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="programme-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SN</th>
+                                        <th>Programme Name</th>
+                                        <th>Recognition Authority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Fellowship in Breast Cancer Diseases</td>
+                                        <td><span class="badge badge-rguhs">RGUHS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Fellowship in Tumour Pathology</td>
+                                        <td><span class="badge badge-rguhs">RGUHS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Fellowship in Onco Pharmacy</td>
+                                        <td><span class="badge badge-rguhs">RGUHS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Fellowship in Onco Imaging</td>
+                                        <td><span class="badge badge-rguhs">RGUHS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Fellowship in Clinical Psychology</td>
+                                        <td><span class="badge badge-rguhs">RGUHS</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Institutional Fellowships -->
+                <div class="accordion-section">
+                    <button class="accordion-header">
+                        <span><i class="fas fa-hospital"></i> Institutional Fellowship Programmes</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="programme-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SN</th>
+                                        <th>Programme Name</th>
+                                        <th>Application Forms</th>
+                                        <th>Recognition Authority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Fellowship in Interventional Radiology</td>
+                                        <td></td>
+                                        <td><span class="badge badge-inst">SSCHRC</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Fellowship in Oncopathology</td>
+                                        <td></td>
+                                        <td><span class="badge badge-inst">SSCHRC</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Fellowship in Hemato Oncopathology</td>
+                                        <td></td>
+                                        <td><span class="badge badge-inst">SSCHRC</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>
+                                            <a class="programme-link" href="#notif-plastic-reconstructive">
+                                                Fellowship in Head and Neck Onco Surgery
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="btn application-btn" href="SSCHRC Fellowship-Application 2026.doc" target="_blank" rel="noopener">
+                                                Application Form
+                                            </a>
+                                        </td>
+                                        <td><span class="badge badge-inst">SSCHRC</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>
+                                            <a class="programme-link" href="#notif-plastic-reconstructive">
+                                                Fellowship in Oral Oncology
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="btn application-btn" href="SSCHRC Fellowship-Application 2026.doc" target="_blank" rel="noopener">
+                                                Application Form
+                                            </a>
+                                        </td>
+                                        <td><span class="badge badge-inst">SSCHRC</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Post Doctoral Fellowship in Robotic Uro-oncology</td>
+                                        <td></td>
+                                        <td><span class="badge badge-inst">SSCHRC</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>
+                                            <a class="programme-link" href="#notif-plastic-reconstructive">
+                                                Fellowship in Plastic and Reconstructive Surgery
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="btn application-btn" href="SSCHRC Fellowship-Application 2026.doc" target="_blank" rel="noopener">
+                                                Application Form
+                                            </a>
+                                        </td>
+                                        <td><span class="badge badge-inst">SSCHRC</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NBEMS Fellowships -->
+                <div class="accordion-section">
+                    <button class="accordion-header">
+                        <span><i class="fas fa-award"></i> Fellowship Programmes - NBEMS</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="programme-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SN</th>
+                                        <th>Programme Name</th>
+                                        <th>Recognition Authority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Fellowship in Paediatric Hemato-Oncology</td>
+                                        <td><span class="badge badge-nbems">NBEMS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Fellowship in Onco-Anaesthesia</td>
+                                        <td><span class="badge badge-nbems">NBEMS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Fellowship in Head and Neck Oncology</td>
+                                        <td><span class="badge badge-nbems">NBEMS</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOAPC Fellowship -->
+                <div class="accordion-section">
+                    <button class="accordion-header">
+                        <span><i class="fas fa-procedures"></i> Fellowship Programme - SOAPC</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="programme-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SN</th>
+                                        <th>Programme Name</th>
+                                        <th>Recognition Authority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Fellowship in Oncoanaesthesia and Perioperative Medicine</td>
+                                        <td><span class="badge badge-soapc">SOAPC</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: NBEMS -->
+            <div class="tab-content" id="nbems">
+                <div class="tab-header">
+                    <h3>NBEMS Post Graduate & Super Specialty Courses</h3>
+                    <div class="recognition-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Nationally Recognized by NBEMS, New Delhi</span>
+                    </div>
+                </div>
+
+                <div class="programme-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SN</th>
+                                <th>Programme Name</th>
+                                <th>Recognition Authority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>DrNB Surgical Oncology</td>
+                                <td><span class="badge badge-nbems">NBEMS</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>DrNB Medical Oncology</td>
+                                <td><span class="badge badge-nbems">NBEMS</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>DrNB Gynaecological Oncology</td>
+                                <td><span class="badge badge-nbems">NBEMS</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>DNB Radiation Oncology</td>
+                                <td><span class="badge badge-nbems">NBEMS</span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>DNB Radio-diagnosis</td>
+                                <td><span class="badge badge-nbems">NBEMS</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab Content: Nursing -->
+            <div class="tab-content" id="nursing">
+                <div class="tab-header">
+                    <h3>Sri Shankara College of Nursing</h3>
+                    <p class="tab-subtitle">Affiliated with Rajiv Gandhi University of Health Sciences, Karnataka</p>
+                </div>
+
+                <div class="nursing-cards">
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="fas fa-user-nurse"></i>
+                            <h4>Undergraduate Programme</h4>
+                        </div>
+                        <div class="course-body">
+                            <h5>B.Sc Nursing</h5>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Comprehensive oncology nursing training</li>
+                                <li><i class="fas fa-check"></i> Clinical practice in cancer care</li>
+                                <li><i class="fas fa-check"></i> RGUHS Affiliation</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="badge badge-rguhs">RGUHS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Postgraduate Programmes</h4>
+                        </div>
+                        <div class="course-body">
+                            <h5>M.Sc Nursing Specializations</h5>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Medical Surgical Nursing</li>
+                                <li><i class="fas fa-check"></i> Community Health Nursing</li>
+                                <li><i class="fas fa-check"></i> Pediatric Nursing (Child Health Nursing)</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="badge badge-rguhs">RGUHS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Allied Health -->
+            <div class="tab-content" id="allied-health">
+                <div class="tab-header">
+                    <h3>Sri Shankara Institute of Allied Health Sciences (Affiliated to Rajiv Gandhi University of Health Sciences, Karnataka)</h3>
+                    <p class="tab-subtitle">Undergraduate Programmes in Allied Health Sciences</p>
+                </div>
+
+                <div class="allied-grid">
+                    <div class="allied-card">
+                        <div class="allied-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h4>B.Sc MIT</h4>
+                        <p class="allied-name">Medical Imaging Technology</p>
+                        <ul>
+                            <li>Diagnostic imaging techniques</li>
+                            <li>Advanced radiological equipment</li>
+                            <li>Clinical training in oncology imaging</li>
+                        </ul>
+                        <span class="badge badge-rguhs">RGUHS</span>
+                    </div>
+
+                    <div class="allied-card">
+                        <div class="allied-icon">
+                            <i class="fas fa-radiation"></i>
+                        </div>
+                        <h4>B.Sc RTT</h4>
+                        <p class="allied-name">Radiotherapy Technology</p>
+                        <ul>
+                            <li>Radiation therapy principles</li>
+                            <li>Treatment planning & delivery</li>
+                            <li>Cancer care specialization</li>
+                        </ul>
+                        <span class="badge badge-rguhs">RGUHS</span>
+                    </div>
+
+                    <div class="allied-card">
+                        <div class="allied-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h4>B.Sc MLT</h4>
+                        <p class="allied-name">Medical Laboratory Technology</p>
+                        <ul>
+                            <li>Clinical laboratory procedures</li>
+                            <li>Diagnostic testing</li>
+                            <li>Oncology lab specialization</li>
+                        </ul>
+                        <span class="badge badge-rguhs">RGUHS</span>
+                    </div>
+
+                    <div class="allied-card">
+                        <div class="allied-icon">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                        <h4>B.Sc A&OT</h4>
+                        <p class="allied-name">Anaesthesia & Operation Theatre Technology</p>
+                        <ul>
+                            <li>Anaesthesia administration</li>
+                            <li>OT management</li>
+                            <li>Surgical oncology support</li>
+                        </ul>
+                        <span class="badge badge-rguhs">RGUHS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: PhD -->
+            <div class="tab-content" id="phd">
+                <div class="tab-header">
+                    <h3>PhD Research Programmes</h3>
+                    <p class="tab-subtitle">Advanced Research in Oncology Sciences</p>
+                </div>
+
+                <div class="phd-cards">
+                    <div class="phd-card">
+                        <div class="phd-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="phd-content">
+                            <h4>PhD Programme (Molecular Research)</h4>
+                            <p class="phd-description">
+                                Advanced research in molecular oncology, cancer genetics, and translational medicine. 
+                                Focus on cutting-edge research in cancer biology and precision medicine.
+                            </p>
+                            <div class="phd-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-university"></i>
+                                    <span>Manipal Academy of Higher Education (MAHE)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-flask"></i>
+                                    <span>Research Focus: Molecular Biology, Cancer Genetics, Biomarkers</span>
+                                </div>
+                            </div>
+                            <span class="badge badge-mahe">MAHE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enquiry-cta">
+                    <h4>Interested in PhD Research?</h4>
+                    <p>Join our research community and contribute to groundbreaking cancer research</p>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Enquire for PhD
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notifications Section -->
+    <section class="section" id="notifications" style="background: var(--bg-light);">
+        <div class="container-academics">
+            <div class="section-header-academics">
+                <h2 class="section-title-academics">Notifications</h2>
+                <p class="section-subtitle">Important Announcements & Updates</p>
+            </div>
+            <div class="container-academics" style="text-align: center; padding: 2rem 0;">
+                <p style="color: var(--text-light); font-size: 1.1rem;">Stay updated with the latest notifications and announcements from the Division of Academics and Training.</p>
+            </div>
+
+            <div class="highlights-grid" style="max-width: 1000px; margin: 0 auto; padding-bottom: 2rem;">
+                <div class="highlight-card" id="notif-plastic-reconstructive" style="text-align: left;">
+                    <i class="fas fa-bullhorn"></i>
+                    <h4>Fellowship Application Forms and Brochers</h4>
+                    <p>Download the application form and course details.</p>
+                    <div class="notification-actions">
+                        <a class="btn btn-primary" href="SSCHRC Fellowship-Application 2026.doc" target="_blank" rel="noopener">
+                            SSCHRC Fellowship-Application 2026.doc
+                        </a>
+                        <a class="btn btn-outline" href="1. Fellowship Courses 2026 (1).pdf" target="_blank" rel="noopener">
+                            Fellowship Courses 2026.pdf
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section class="collaborations-section section">
+        <div class="container-academics">
+            <div class="section-header-academics">
+                <h2 class="section-title-academics">Global Collaborations & Research</h2>
+                <p class="section-subtitle">International Partnerships for Excellence</p>
+            </div>
+
+            <div class="collaboration-content">
+                <p class="collab-text">
+                    SSCF has established strategic partnerships with leading international institutions to advance 
+                    oncology research and education. Our collaborations with Maastricht University (The Netherlands), 
+                    Manipal Academy of Higher Education (MAHE), and other global institutions foster knowledge exchange, 
+                    joint research initiatives, and academic excellence.
+                </p>
+
+                <div class="collaboration-logos">
+                    <div class="collab-logo-card">
+                        <i class="fas fa-university"></i>
+                        <h5>Maastricht University</h5>
+                        <p>The Netherlands</p>
+                    </div>
+                    <div class="collab-logo-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h5>MAHE</h5>
+                        <p>Manipal Academy</p>
+                    </div>
+                    <div class="collab-logo-card">
+                        <i class="fas fa-hospital"></i>
+                        <h5>RGUHS</h5>
+                        <p>Karnataka</p>
+                    </div>
+                    <div class="collab-logo-card">
+                        <i class="fas fa-award"></i>
+                        <h5>NBEMS</h5>
+                        <p>New Delhi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div> <!-- End of .academics-page wrapper -->
+
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <!-- Footer JavaScript -->
+    <script src="../footer.js"></script>
+
+    <!-- Chatbot -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../chatbox.js"></script>
+
+    <script>
+        // Academics Page JavaScript
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Active Navigation Link (only for side navigation now)
+        const sections = document.querySelectorAll('section[id]');
+        const sideLinks = document.querySelectorAll('.side-link');
+
+        function setActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            sideLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+        window.addEventListener('load', setActiveLink);
+
+        // Programme Tabs - Define early for use in scrolling
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // Navigation Links (no smooth scrolling)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                
+                // Check if it's a tab link (pg-medical, nbems, nursing, allied-health, phd)
+                const tabIds = ['pg-medical', 'nbems', 'nursing', 'allied-health', 'phd'];
+                const tabId = href.substring(1);
+                
+                if (tabIds.includes(tabId)) {
+                    // Activate the corresponding tab FIRST (before scrolling)
+                    const tabButton = document.querySelector(`button[data-tab="${tabId}"]`);
+                    const targetTabContent = document.getElementById(tabId);
+                    
+                    if (tabButton && targetTabContent && tabButtons.length > 0 && tabContents.length > 0) {
+                        // Remove active class from all buttons and contents
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        tabContents.forEach(content => content.classList.remove('active'));
+                        
+                        // Add active class to the correct button and content
+                        tabButton.classList.add('active');
+                        targetTabContent.classList.add('active');
+                    }
+                    
+                    // Then scroll to the actual tab content (so it lands correctly)
+                    if (targetTabContent) {
+                        // If it's the PG tab, open the first accordion for visibility
+                        if (tabId === 'pg-medical') {
+                            const firstAccordion = targetTabContent.querySelector('.accordion-section');
+                            if (firstAccordion) firstAccordion.classList.add('active');
+                        }
+
+                        // Wait a tick so layout updates after tab activation
+                        setTimeout(() => {
+                            targetTabContent.scrollIntoView({
+                                behavior: 'auto',
+                                block: 'start'
+                            });
+                        }, 0);
+                    }
+                } else if (target) {
+                    // Regular smooth scroll for other sections (non-tab sections)
+                    target.scrollIntoView({
+                        behavior: 'auto',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Read More Button
+        const readMoreBtn = document.querySelector('.read-more-btn');
+        if (readMoreBtn) {
+            readMoreBtn.addEventListener('click', () => {
+                const targetId = readMoreBtn.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                
+                if (targetContent) {
+                    targetContent.classList.toggle('expanded');
+                    readMoreBtn.classList.toggle('expanded');
+                    
+                    const span = readMoreBtn.querySelector('span');
+                    if (targetContent.classList.contains('expanded')) {
+                        span.textContent = 'Read Less';
+                    } else {
+                        span.textContent = 'Read More';
+                    }
+                }
+            });
+        }
+
+        // Timeline Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                timelineItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.add('visible');
+                    } else {
+                        item.classList.remove('visible');
+                    }
+                });
+            });
+        });
+
+        // Initialize all timeline items as visible
+        timelineItems.forEach(item => {
+            item.classList.add('visible');
+        });
+
+        // Programme Tabs - Event Listeners
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                const targetContent = document.getElementById(targetTab);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+                
+                // Scroll to programmes section
+                const programmesSection = document.getElementById('programmes');
+                if (programmesSection) {
+                    programmesSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Accordion Functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionSection = header.parentElement;
+                const isActive = accordionSection.classList.contains('active');
+                
+                // Close all accordions
+                document.querySelectorAll('.accordion-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Open clicked accordion if it wasn't active
+                if (!isActive) {
+                    accordionSection.classList.add('active');
+                }
+            });
+        });
+
+        // Global Programme Search (covers everything under "Academic Programmes 2026")
+        const programmeSearchInput = document.getElementById('searchProgrammes');
+        const programmeSearchResults = document.getElementById('programme-search-results');
+        const programmesSection = document.getElementById('programmes');
+
+        function getTabLabel(tabId) {
+            const btn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+            if (!btn) return tabId;
+            const span = btn.querySelector('span');
+            return (span ? span.textContent : btn.textContent).trim();
+        }
+
+        function buildProgrammeIndex() {
+            if (!programmesSection) return [];
+            const entries = [];
+            const tabContents = programmesSection.querySelectorAll('.tab-content');
+
+            tabContents.forEach(tab => {
+                const tabId = tab.id || '';
+                const tabLabel = getTabLabel(tabId);
+
+                // Table rows (Programme Name typically in 2nd <td>)
+                tab.querySelectorAll('tbody tr').forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    const nameCell = cells.length >= 2 ? cells[1] : row;
+                    const name = (nameCell.textContent || '').trim();
+                    if (!name) return;
+                    entries.push({ name, tabId, tabLabel, element: row });
+                });
+
+                // Nursing cards
+                tab.querySelectorAll('.course-card h5').forEach(h => {
+                    const name = (h.textContent || '').trim();
+                    if (!name) return;
+                    const card = h.closest('.course-card') || h;
+                    entries.push({ name, tabId, tabLabel, element: card });
+                });
+
+                // Allied cards (short code + full name)
+                tab.querySelectorAll('.allied-card').forEach(card => {
+                    const parts = [];
+                    const h4 = card.querySelector('h4');
+                    const p = card.querySelector('.allied-name');
+                    if (h4) parts.push(h4.textContent.trim());
+                    if (p) parts.push(p.textContent.trim());
+                    const name = parts.filter(Boolean).join(' — ').trim();
+                    if (!name) return;
+                    entries.push({ name, tabId, tabLabel, element: card });
+                });
+
+                // PhD cards
+                tab.querySelectorAll('.phd-card h4').forEach(h => {
+                    const name = (h.textContent || '').trim();
+                    if (!name) return;
+                    const card = h.closest('.phd-card') || h;
+                    entries.push({ name, tabId, tabLabel, element: card });
+                });
+            });
+
+            // De-dupe by name+tabId+element
+            const seen = new Set();
+            return entries.filter(e => {
+                const key = `${e.tabId}||${e.name}||${e.element && e.element.tagName}`;
+                if (seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
+        }
+
+        function showProgrammeResults(items) {
+            if (!programmeSearchResults) return;
+            if (!items.length) {
+                programmeSearchResults.innerHTML = '<div class="programme-search-item"><div class="programme-name">No results</div><div class="programme-meta">Try a different keyword.</div></div>';
+                programmeSearchResults.classList.remove('hidden');
+                return;
+            }
+
+            programmeSearchResults.innerHTML = items.map((it, idx) => {
+                const safeName = it.name.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                const safeMeta = it.tabLabel.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                return `
+                    <div class="programme-search-item" data-hit-index="${idx}">
+                        <div class="programme-name">${safeName}</div>
+                        <div class="programme-meta">${safeMeta}</div>
+                    </div>
+                `;
+            }).join('');
+
+            programmeSearchResults.classList.remove('hidden');
+        }
+
+        function hideProgrammeResults() {
+            if (!programmeSearchResults) return;
+            programmeSearchResults.classList.add('hidden');
+        }
+
+        function openAccordionForElement(el) {
+            const section = el.closest && el.closest('.accordion-section');
+            if (section) section.classList.add('active');
+        }
+
+        function focusProgrammeHit(el) {
+            if (!el) return;
+            openAccordionForElement(el);
+            el.scrollIntoView({ behavior: 'auto', block: 'center' });
+            el.classList.add('programme-search-hit');
+            window.setTimeout(() => el.classList.remove('programme-search-hit'), 1500);
+        }
+
+        if (programmeSearchInput && programmesSection) {
+            const programmeIndex = buildProgrammeIndex();
+
+            programmeSearchInput.addEventListener('input', (e) => {
+                const term = (e.target.value || '').toLowerCase().trim();
+                if (!term) {
+                    hideProgrammeResults();
+                    return;
+                }
+
+                const matches = programmeIndex
+                    .filter(it => it.name.toLowerCase().includes(term))
+                    .slice(0, 30);
+
+                showProgrammeResults(matches);
+                programmeSearchResults._currentMatches = matches;
+            });
+
+            programmeSearchResults.addEventListener('click', (e) => {
+                const item = e.target.closest('.programme-search-item');
+                if (!item) return;
+                const idx = Number(item.getAttribute('data-hit-index'));
+                const matches = programmeSearchResults._currentMatches || [];
+                const hit = matches[idx];
+                if (!hit) return;
+
+                const tabButton = document.querySelector(`.tab-btn[data-tab="${hit.tabId}"]`);
+                if (tabButton) tabButton.click();
+
+                window.setTimeout(() => {
+                    focusProgrammeHit(hit.element);
+                }, 200);
+
+                hideProgrammeResults();
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!programmeSearchInput.contains(e.target) && !programmeSearchResults.contains(e.target)) {
+                    hideProgrammeResults();
+                }
+            });
+        }
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.pillar-card, .highlight-card, .allied-card, .phd-card, .course-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Initialize first tab content as active
+        if (tabContents.length > 0) {
+            tabContents[0].classList.add('active');
+        }
+
+        // Pillar Link Scroll
+        document.querySelectorAll('.pillar-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // If it's a tab link, switch to that tab first
+                    if (targetId.startsWith('#pg-medical') || targetId.startsWith('#nursing') || 
+                        targetId.startsWith('#allied-health') || targetId.startsWith('#phd')) {
+                        const tabId = targetId.substring(1);
+                        const tabButton = document.querySelector(`[data-tab="${tabId}"]`);
+                        if (tabButton) {
+                            tabButton.click();
+                        }
+                    }
+                    
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'auto',
+                            block: 'start'
+                        });
+                    }, 300);
+                }
+            });
+        });
+
+        console.log('Academics page script loaded successfully');
+    </script>
+</body>
+</html>
+
+    </section>

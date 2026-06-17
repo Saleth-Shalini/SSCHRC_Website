@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Hemato-Pathology - Precision Diagnostics for Blood and Lymphoid Cancers</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Haematopathology.jpg" 
+                alt="Department of Hemato-Pathology"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Departments/Haematopathology.jpg" 
+                alt="Department of Hemato-Pathology"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- NABL Accreditation Section -->
+    <section class="py-8 bg-gradient-to-r from-blue-50 via-white to-teal-50 border-b-2" style="border-color: #079591;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 py-4">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white rounded-lg p-3 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="../Images/nabl.png" alt="NABL Accreditation" class="h-16 w-auto object-contain" style="max-width: 120px;">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl md:text-2xl font-bold" style="color: #014196; margin-bottom: 0.5rem;">
+                            NABL Accredited Laboratory
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">
+                            Our Haematopathology Department is NABL accredited, ensuring the highest standards of quality and precision in diagnostic services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Role of the Hemato-Pathology Department -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Role of the Hemato-Pathology Department
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 card-shadow">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The Department of Hemato-Pathology forms the diagnostic foundation for diseases of the blood, bone marrow, and lymphoid system, including leukemias, lymphomas, and plasma cell disorders such as multiple myeloma. Accurate diagnosis at this level is essential, as treatment decisions in modern hematologic oncology are increasingly guided by the biological and genetic features of the disease.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 card-shadow">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Our hematopathologists combine microscopic evaluation with advanced technologies such as <strong>flow cytometry</strong>, <strong>cytogenetics (FISH)</strong>, and <strong>molecular diagnostics</strong>, enabling precise classification of hematologic malignancies in accordance with the latest WHO guidelines. Beyond establishing a diagnosis, these investigations provide critical prognostic and predictive information that directly influences therapy selection, risk stratification, and decisions regarding stem cell (bone marrow) transplantation and targeted therapies.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        While the hemato-oncologist manages patient care, the hematopathologist plays a pivotal role behind the scenes—interpreting complex laboratory data to define the exact nature and behavior of the disease.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Core Scope and Mission -->
+            <div class="mt-16 mb-8">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+                    Core Scope and Mission
+                </h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #3b82f6;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-microscope text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Definitive Diagnosis</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        We examine peripheral blood, bone marrow aspirates, and trephine biopsies to diagnose leukemias, detect bone marrow involvement by lymphomas, and identify metastatic or secondary marrow infiltrations, ensuring precise disease classification.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #8b5cf6;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Prognostic Evaluation</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        By assessing cellular lineage, immunophenotype, and genetic alterations, we identify disease-specific risk factors that help clinicians tailor therapy and predict treatment response.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #ec4899;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-pink-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Multidisciplinary Integration</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        Our hematopathologists work in close collaboration with hemato-oncologists, transplant physicians, and clinical teams to interpret findings in a clinical context, ensuring that laboratory insights translate into optimal patient management.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Diagnostic and Monitoring Services -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Comprehensive Diagnostic and Monitoring Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our department integrates traditional morphology with highly sensitive cellular and molecular techniques to support diagnosis, treatment planning, and disease monitoring.
+                </p>
+            </div>
+
+            <!-- Key Diagnostic Technologies -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Key Diagnostic Technologies</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Flow Cytometry -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #3b82f6;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-flask text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Flow Cytometry (Immunophenotyping)</h4>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            This rapid and highly sensitive technique analyzes thousands of cells individually, identifying abnormal cell populations based on their surface and intracellular markers. It is a cornerstone in the diagnosis and classification of leukemias and lymphomas and plays a vital role in therapy monitoring.
+                        </p>
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <p class="text-sm font-semibold text-blue-900 mb-1">Patient Perspective:</p>
+                            <p class="text-sm text-gray-700">This test helps identify the exact type of abnormal blood cells and may also reveal targets for immunotherapy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cytogenetic and Molecular Testing -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #8b5cf6;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-dna text-purple-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Cytogenetic and Molecular Testing</h4>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Advanced genetic techniques (FISH, PCR, NGS) detect chromosomal rearrangements, gene mutations, and molecular signatures that define disease subtypes and prognosis. These findings often determine eligibility for targeted therapies.
+                        </p>
+                        <div class="bg-purple-50 rounded-lg p-4">
+                            <p class="text-sm font-semibold text-purple-900 mb-1">Patient Perspective:</p>
+                            <p class="text-sm text-gray-700">By studying the DNA of cancer cells, we uncover genetic changes that guide personalized treatment decisions.</p>
+                        </div>
+                    </div>
+
+                    <!-- MRD Assessment -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #10b981;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-search-plus text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Minimal Residual Disease (MRD) Assessment</h4>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Using multiparameter flow cytometry and sensitive molecular assays, MRD testing detects very low levels of residual disease after treatment—often invisible under the microscope. MRD status is a powerful predictor of relapse and long-term outcome.
+                        </p>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <p class="text-sm font-semibold text-green-900 mb-1">Patient Perspective:</p>
+                            <p class="text-sm text-gray-700">Even when tests appear normal, these methods look for tiny numbers of remaining cancer cells to help doctors decide whether further treatment is needed.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bone Marrow Aspirate and Biopsy -->
+                    <div class="card-shadow rounded-xl p-6 bg-white border-l-4 hover-scale" style="border-color: #f59e0b;">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-syringe text-yellow-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Bone Marrow Aspirate and Biopsy</h4>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            These procedures remain the gold standard for diagnosing and evaluating hematologic malignancies. They allow assessment of marrow cellularity, blast percentage, and tissue architecture, forming the basis for all advanced ancillary studies.
+                        </p>
+                        <div class="bg-yellow-50 rounded-lg p-4">
+                            <p class="text-sm font-semibold text-yellow-900 mb-1">Patient Perspective:</p>
+                            <p class="text-sm text-gray-700">This test provides the essential sample needed to confirm the diagnosis and perform detailed genetic and molecular analyses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Strengths in Hemato-Pathology -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Our Strengths in Hemato-Pathology
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- A. Expertise in Precision Diagnostics -->
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-br from-blue-50 to-white border-t-4 hover-scale" style="border-top-color: #3b82f6;">
+                    <div class="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-microscope text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">A. Expertise in Precision Diagnostics</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                Advanced MRD Monitoring
+                            </h4>
+                            <p class="text-gray-700">
+                                We have established high-sensitivity MRD protocols for leukemias and plasma cell disorders, enabling risk-adapted treatment strategies that are central to contemporary hematology practice.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                Integrated Diagnostic Interpretation
+                            </h4>
+                            <p class="text-gray-700">
+                                Our team synthesizes findings from morphology, immunophenotyping, cytogenetics, and molecular studies, ensuring accurate diagnosis even in complex or rare hematologic neoplasms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B. Enabling Advanced and Targeted Therapies -->
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-br from-purple-50 to-white border-t-4 hover-scale" style="border-top-color: #8b5cf6;">
+                    <div class="w-20 h-20 rounded-full bg-purple-600 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-pills text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">B. Enabling Advanced and Targeted Therapies</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-purple-600 mr-2"></i>
+                                Comprehensive Support for Transplant and Cellular Therapies
+                            </h4>
+                            <p class="text-gray-700">
+                                We provide essential diagnostic and monitoring support for bone marrow transplantation and CAR T-cell therapy, including pre-transplant risk assessment and post-therapy disease surveillance.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-purple-600 mr-2"></i>
+                                Identification of Therapeutic Targets
+                            </h4>
+                            <p class="text-gray-700">
+                                Detection of disease-specific antigens and genetic alterations helps determine eligibility for targeted drugs and immunotherapies, ensuring precision-based treatment selection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C. Timely and Clinically Relevant Reporting -->
+                <div class="card-shadow rounded-xl p-8 bg-gradient-to-br from-pink-50 to-white border-t-4 hover-scale" style="border-top-color: #ec4899;">
+                    <div class="w-20 h-20 rounded-full bg-pink-600 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-clock text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">C. Timely and Clinically Relevant Reporting</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-pink-600 mr-2"></i>
+                                Rapid Turnaround for Critical Diagnoses
+                            </h4>
+                            <p class="text-gray-700">
+                                Acute leukemias and other high-risk conditions require immediate clinical decisions. Our streamlined workflows ensure prompt reporting of critical results.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle text-pink-600 mr-2"></i>
+                                Alignment with Research and Global Standards
+                            </h4>
+                            <p class="text-gray-700">
+                                Active engagement in clinical research and continuous updates of diagnostic protocols ensure that our testing strategies reflect current WHO classifications and emerging biomarkers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Hemato-Pathology Specialists</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Meet our specialized hematopathology experts dedicated to precision blood cancer diagnosis.
+                </p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Jayashree D. Kulkarni.webp" alt="Dr. Jayashree D. Kulkarni" onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Jayashree+D.+Kulkarni'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Jayashree D. Kulkarni</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD - Pathology (Apr 2005), MBA- HCS (2012)</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Senior Consultant & Lab Director</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Hematopathology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | Monday to Saturday: 9:00 AM to 5:00 PM</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>21 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Jayashree D. Kulkarni.html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card doctor-card-desktop">
+                        <div class="doctor-photo-frame">
+                            <img src="../Doctors_Photo/Dr. Gayathri J..webp" alt="Dr. Gayathri J." onerror="this.src='https://via.placeholder.com/350x350/2E8B57/ffffff?text=Dr.+Gayathri+J.'">
+                            <div class="doctor-photo-overlay"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Gayathri J.</h3>
+                            <p class="text-sm text-gray-600 mb-2">MBBS, MD (Pathology), PDCC in Advanced Haematology</p>
+                            <span class="doctor-designation block text-sm font-semibold text-gray-800 mb-4">Consultant</span>
+                            
+                            <div class="mb-4">
+                                <p class="text-green-600 font-semibold mb-2">
+                                    <i class="fas fa-stethoscope mr-2"></i>Haematopathology
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 mb-4">
+                                <!-- <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>Available | 9:00 A.M. - 5:00 P.M.</span>
+                                </div> -->
+                                <div class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-award text-green-600 mr-2"></i>
+                                    <span>6 years of experience</span>
+                                </div>
+                            </div>
+                            
+                            <a href="../Doctors/Dr. Gayathri J..html" class="btn-primary w-full text-center">
+                                <i class="fas fa-user-md mr-2"></i>View Profile
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Doctor Card Styles - Scoped to doctors section only */
+        #doctors .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        
+        #doctors .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        #doctors .doctor-card {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        #doctors .doctor-card-desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #doctors .doctor-card .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        #doctors .doctor-card .btn-primary {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            #doctors .carousel-container {
+                margin: 0 -1rem;
+                overflow: hidden;
+                width: 100vw;
+            }
+            
+            #doctors .carousel-track {
+                gap: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            #doctors .doctor-card {
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                width: calc(100vw - 2rem);
+                height: 750px;
+                margin: 0;
+            }
+            
+            #doctors .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            #doctors .carousel-nav.prev {
+                left: 0.5rem;
+            }
+            
+            #doctors .carousel-nav.next {
+                right: 0.5rem;
+            }
+        }
+        
+        #doctors .doctor-photo-frame {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        #doctors .doctor-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        #doctors .doctor-card:hover .doctor-photo-frame img {
+            transform: scale(1.05);
+        }
+        
+        #doctors .doctor-photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        #doctors .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E8B57, #3cb371);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        #doctors .carousel-nav:hover {
+            background: linear-gradient(135deg, #3cb371, #2E8B57);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        #doctors .carousel-nav.prev {
+            left: 1rem;
+        }
+        
+        #doctors .carousel-nav.next {
+            right: 1rem;
+        }
+        
+        #doctors .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        #doctors .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .carousel-dot.active {
+            background: #2E8B57;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        #doctors .btn-primary {
+            display: inline-block;
+            background: #2E8B57;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #doctors .btn-primary:hover {
+            background: #3cb371;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        let slidesPerView = 3;
+        let autoRotateInterval = null;
+        
+        function updateSlidesPerView() {
+            if (window.innerWidth < 768) {
+                slidesPerView = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            
+            updateCarousel();
+            updateDots();
+        }
+        
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            if (totalSlides === 0) return;
+            
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            currentSlide = Math.min(currentSlide, maxSlide);
+            
+            // Get actual card width and gap from the first card
+            const firstCard = cards[0];
+            if (!firstCard) return;
+            
+            let cardWidth, gap;
+            
+            if (window.innerWidth < 768) {
+                // Mobile: use actual rendered card width for accuracy
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
+            } else {
+                // Desktop: use actual rendered width
+                cardWidth = firstCard.offsetWidth;
+                const trackStyle = window.getComputedStyle(track);
+                gap = parseFloat(trackStyle.gap) || 24;
+            }
+            
+            const offset = currentSlide * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const maxSlide = totalSlides - slidesPerView;
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlide;
+            } else if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
+            
+            updateCarousel();
+            updateDots();
+            resetAutoRotate();
+        }
+        
+        function startAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            
+            autoRotateInterval = setInterval(() => {
+                const track = document.getElementById('carouselTrack');
+                if (!track) return;
+                const cards = track.getElementsByClassName('doctor-card-desktop');
+                const totalSlides = cards.length;
+                if (totalSlides === 0) return;
+                
+                const maxSlide = totalSlides - slidesPerView;
+                currentSlide += 1;
+                
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                
+                updateCarousel();
+                updateDots();
+            }, 5000);
+        }
+        
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+            }
+        }
+        
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+        
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!dotsContainer) return;
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const cards = track.getElementsByClassName('doctor-card-desktop');
+            const totalSlides = cards.length;
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlide = i * slidesPerView;
+                    updateCarousel();
+                    updateDots();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateSlidesPerView();
+            updateDots();
+            startAutoRotate();
+            
+            // Pause auto-rotation on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+                carouselContainer.addEventListener('mouseleave', startAutoRotate);
+            }
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            updateSlidesPerView();
+            resetAutoRotate();
+        });
+        
+        // Touch support for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const carouselTrack = document.getElementById('carouselTrack');
+        if (carouselTrack) {
+            carouselTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carouselTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../chatbox.css" />
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <!-- Chatbot -->
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+            </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="../footer.js"></script>
+    <script src="../chatbox.js"></script>
+</body>
+</html>
+

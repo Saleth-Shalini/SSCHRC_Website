@@ -1,0 +1,7 @@
+# Server/runtime logs
+error_log
+**/error_log
+
+# Local email credentials (never commit)
+email_credentials.php
+**/email_credentials.php

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prostate Cancer: Comprehensive Cancer Information</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <style>
+        :root {
+            --sea-green: #2E8B57;
+            --orange-red: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile padding reduction */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .max-w-7xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            h2 {
+                font-size: 1.875rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Section 1: Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Prostate Cancer: A Comprehensive Guide
+                </h2>
+            </div>
+            
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 mb-12" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    This information is intended to provide a general overview of prostate cancer. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns or before making any decisions related to your health.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        General Information
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Prostate cancer begins in the prostate, a small, walnut-sized gland that is part of the male reproductive system and is responsible for producing semen and nourishing sperm. The cancer develops when cells within the prostate become abnormal and begin to multiply uncontrollably.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            The prostate is situated directly below the bladder and in front of the rectum, wrapping around a section of the urethra, the tube that drains urine from the bladder. The vast majority of prostate cancers are classified as adenocarcinomas, which are cancers that originate in the gland cells that line many organs, including the prostate.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Though it only affects males, prostate cancer is one of the most common cancers diagnosed, and it is also one of the most treatable, boasting a high five-year survival rate. This high success rate is typically attributed to several factors: the disease often grows slowly, effective and established treatments are available, and most cases are identified before the cancer has spread outside the prostate gland.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Risk Factors and Prevention -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Risk Factors and Prevention
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A risk factor is anything that increases your chance of developing prostate cancer. Key risk factors include:
+                </p>
+            </div>
+
+            <div class="space-y-6 mb-12">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Age</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        This is the most significant risk factor. Over 90% of cases are diagnosed in men aged 55 or older.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Family History</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        The risk increases if a close relative (father, brother, or son) has or had prostate cancer, especially if they were diagnosed at a younger age.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hereditary Cancer Syndromes</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Certain genetic mutations, such as those associated with Lynch syndrome and the BRCA1 and BRCA2 genes, can elevate a man's risk.
+                    </p>
+                </div>
+
+                
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Diet</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        A diet high in fat, particularly animal fats, may increase risk, while a diet rich in fruits and vegetables may help decrease it.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Nationality</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Prostate cancer is more common in North America and northwestern Europe than in other regions globally.
+                    </p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Other Potential Factors</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        Some research suggests a role for prostate inflammation (prostatitis), and sexually transmitted diseases are also being investigated as possible risk factors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Preventative Measures
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        While no action guarantees prevention, certain lifestyle choices can help lower your risk:
+                    </p>
+                    
+                    <ul class="space-y-2 text-gray-700 ml-6 mb-6">
+                        <li>Consume at least five servings of fruits and vegetables daily and reduce red meat intake.</li>
+                        <li>Decrease overall fat consumption.</li>
+                        <li>Maintain a healthy weight and exercise regularly.</li>
+                        <li>Discuss any supplements you take with your doctor, as some may affect your Prostate-Specific Antigen (PSA) level.</li>
+                    </ul>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Additionally, certain substances like lycopenes (found in tomatoes, pink grapefruit, and watermelon) are being studied for their potential to help prevent cell damage. Medications such as Proscar® (finasteride) or Avodart® (dutasteride) may also reduce the risk of low-grade prostate cancer. If you are at a high risk, consult with your urologist or healthcare provider about these options.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Symptoms -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Symptoms
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Prostate cancer often produces no symptoms in its early stages. In more advanced cases, symptoms may appear, although they vary significantly from person to person. Because the prostate is close to the bladder and surrounds the urethra, most symptoms are related to urination.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Inability to urinate or difficulty initiating urination</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Trouble emptying the bladder completely</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Weak or interrupted urine flow</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Painful or burning sensation during urination</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #2E8B57;">•</span>
+                            <span>Difficulty holding back urination</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Frequent or urgent need to urinate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Blood present in the urine or semen</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Difficulty achieving or maintaining an erection (erectile dysfunction or ED)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1" style="color: #FF4500;">•</span>
+                            <span>Continuous bone pain, particularly in the lower back, pelvis, hips, or thighs. This specific symptom is usually only experienced by patients whose cancer has spread to the bones (metastatic prostate cancer).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    It is important to remember that these symptoms are not always an indicator of prostate cancer. They may also be caused by non-cancerous conditions like benign prostatic hyperplasia (BPH), a common condition in which the prostate gland enlarges. If you experience any of these symptoms, it is vital to consult with your doctor for proper evaluation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Diagnosis -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diagnosis
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Early and accurate diagnosis is crucial for increasing the chances of successful treatment and recovery.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    If prostate cancer symptoms are present, your doctor will discuss your health, lifestyle, and family medical history with you. One or more of the following tests may be used to determine if cancer is present and if it has spread:
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Screening and Initial Tests
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Digital Rectal Exam (DRE)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A simple screening test where a healthcare provider gently inserts a gloved finger into the rectum to feel the prostate gland for enlargement or abnormal areas, such as a lump. Although not a definitive test, regular DREs help detect changes over time and can find cancer even if the PSA level is normal.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Prostate-Specific Antigen (PSA) Test</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This blood test measures the amount of PSA protein, which is produced by prostate gland cells, circulating in the blood. A PSA level of 4 nanograms per millilitre (ng/mL) or lower is typically considered normal; a higher level suggests an increased chance of prostate cancer. High PSA levels can also be caused by non-cancerous factors like an enlarged prostate (BPH), infection (prostatitis), or age. Certain conditions like obesity or taking some medications/supplements can also lower the PSA level. Despite its limitations, PSA testing has dramatically improved the detection of early-stage prostate cancer. It is also used to help plan treatment, monitor for cancer spread or recurrence, and aid in active surveillance. Doctors usually do not recommend the PSA test for men over 75 or those with other significant health issues.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Advanced Imaging and Confirmation
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Imaging Exams</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                These tests provide a better view of the prostate. They help identify areas for biopsy sampling and determine if the cancer has spread outside the gland. Imaging tests may include:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Transrectal Ultrasound (TRUS):</strong> A small probe is inserted into the rectum to create a picture of the prostate gland using high-energy sound waves.</li>
+                                <li><strong>Magnetic Resonance Imaging (MRI):</strong> Uses magnetic fields and radio waves to generate detailed pictures of soft tissue and organs to check for cancer spread.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Biopsy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is the only way to confirm a prostate cancer diagnosis. A small sample of suspected cancerous tissue is removed and examined under a microscope. Prostate biopsies are usually outpatient procedures performed using a TRUS guide, though SSCHRC also conducts biopsies through the perineum (the skin between the scrotum and anus) and Fusion Biopsies, which use special software to target abnormalities seen on an MRI. If a biopsy does not show cancer but reveals abnormal changes in cell size and shape, called prostatic intraepithelial neoplasia (PIN), regular screenings are recommended, especially for high-grade PIN.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Grading and Risk Assessment
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Gleason Grading System</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                If cancer is found, it is graded to help doctors choose the best treatment and predict the rate of growth. A specialist compares the cancer cells to normal prostate cells, assigning a grade from 1 (nearly normal) to 5 (highly irregular). The Gleason score is the sum of the two most common cell grades in the sample. The most common lowest grade is 3.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Gleason Scores:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>3+3 (Grade Group 1):</strong> Low grade, lowest risk of harm.</li>
+                                <li><strong>3+4 and 4+3 (Grade Groups 2 and 3):</strong> Intermediate risk (4+3 is more aggressive).</li>
+                                <li><strong>4+4 through 5+5 (Grade Groups 4 and 5):</strong> Highest risk.</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Prostate Cancer Risk Assessment</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Once diagnosed, your doctor will assess the risk of the disease becoming harmful using the Gleason score, PSA level, and the clinical stage (based on DRE/imaging findings). This assessment places the cancer into three main risk groups to guide treatment:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li><strong>Low Risk:</strong> PSA < 10 ng/mL, Gleason score of 6 or lower, tumour contained within the prostate, and less than a 10% chance of spread.</li>
+                                <li><strong>Intermediate Risk:</strong> PSA 10-20 ng/mL, Gleason score of 7, tumour felt on one or both sides but seemingly contained, and a 10% to 15% chance of spread.</li>
+                                <li><strong>High Risk:</strong> PSA over 20 ng/mL, Gleason score of 8 to 10, tumour felt and seemingly spread outside the gland, with aggressive features and a high chance of spreading.</li>
+                            </ul>
+                            <p class="text-gray-700 leading-relaxed mt-3">
+                                For intermediate or high-risk cancer, further imaging, such as bone scans or CAT/MRI scans, may be used to confirm if the cancer has spread.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Treatment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Your treatment plan is highly individualised, depending on your overall health, age, the cancer's grade and associated risk, and your personal goals for treatment outcomes. It is important to discuss all available options and their potential effects with your doctor.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    One or more of the following therapies may be used:
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Non-Interventional and Localised Treatments
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Active Surveillance or Watchful Waiting</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Recommended for older patients or those with a very low-risk form of the disease due to its slow growth. It involves closely monitoring the cancer with repeat PSA tests and biopsies at set intervals. Treatment is initiated only if tests indicate the disease is progressing.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Surgery (Radical Prostatectomy)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                The surgical removal of the entire prostate gland. Lymph nodes near the prostate may also be removed to check for spread. Surgeons at SSCHRC are highly experienced and often use minimally invasive, robotic surgical procedures, which result in smaller incisions, less blood loss and pain, and shorter hospital stays. Patients typically wear a catheter for about one week post-procedure.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Radiation Therapy</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Uses high-energy beams to destroy cancer cells and is one of the two most common primary treatments (along with surgery). It generally offers better urinary control than surgery but may cause more bowel and bladder irritation; both can lead to erectile dysfunction. SSCHRC offers advanced types of radiation therapy, including:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6">
+                                <li>Intensity-Modulated Radiation Therapy (IMRT)</li>
+                                <li>Stereotactic Body Radiation Therapy (SBRT) (a shorter course of treatment)</li>
+                                <li>Brachytherapy (placing small radioactive pellets inside the body close to the tumour)</li>
+                                
+                                <li>Radionuclide Therapy (administered via IV to treat cancer that has spread to the bones).</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Cryotherapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A treatment where a thin probe is inserted into the tumour to freeze and kill cancer cells with heat generated by focused ultrasound waves. It is rarely used but can be the best option for small, localised tumours when surgery is not suitable.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">High-Intensity Focused Ultrasound (HIFU)</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Uses focused heat waves to kill cancer tissue. Typically offered to patients with early-stage, low- to intermediate-risk tumours that are confined to the prostate and visible on MRI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Systemic Treatments
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Hormone Therapy (Androgen Deprivation Therapy)</h4>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Since most prostate cancers are hormone-sensitive (male hormones like testosterone fuel their growth), this therapy aims to reduce or block these hormones. It can slow growth and reduce tumour size but does not cure the disease. The two main types are:
+                            </p>
+                            <ul class="space-y-2 text-gray-700 ml-6 mb-3">
+                                <li><strong>Antiandrogens:</strong> Medications taken orally every day that block hormones from interacting with cancer cells.</li>
+                                <li><strong>Androgen Synthesis Inhibitors:</strong> Drugs, typically delivered by injection or small implants, that reduce the body's production of hormones.</li>
+                            </ul>
+                            <p class="text-gray-700 leading-relaxed">
+                                Hormone therapy is often used for late-stage, high-grade, recurrent, or metastatic tumours, or to shrink the cancer before surgery or radiation. Side effects can include impotence, hot flashes, depression, loss of muscle and bone mass, and fatigue. Many side effects are successfully treatable, and you should always report them to your doctor.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Chemotherapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Drugs designed to kill fast-growing cells, including cancer cells. It is most often used for patients with high-risk disease or those whose cancer has recurred or spread.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Immunotherapy</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                A treatment that harnesses a patient's own immune system to fight the cancer, sometimes involving engineering immune cells in a lab. This approach is particularly useful for advanced prostate cancer that is unresponsive to hormone therapy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-50 via-white to-orange-50 rounded-2xl p-8 card-shadow border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Treatment Plans by Progression
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Low-Risk Treatment</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Active surveillance is often recommended. Treatment (surgery or radiation) may be chosen by younger patients or those with a large volume of cancer tissue.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Intermediate-Risk Treatment</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Treatment is generally advised, typically with surgery or radiation therapy, sometimes combined with hormone therapy.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">High-Risk Treatment</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                Usually involves a combination of therapies (surgery, radiation, hormone therapy, and chemotherapy). It may be curable, or it may be managed as a chronic disease.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Recurrent Cancer Treatment</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                If cancer returns after initial treatment (surgery or radiation), the other primary option may be used, along with systemic therapies like hormone therapy and possibly chemotherapy. Elevated PSA levels without visible cancer (biochemical recurrence) are often managed with intermittent hormone therapy and close monitoring.
+                            </p>
+                        </div>
+
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Metastatic Cancer Treatment</h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                If cancer has spread beyond the prostate, systemic therapies like hormone therapy and chemotherapy are used. Cancer that responds is castrate-sensitive; if it becomes less responsive, it is called castrate-resistant disease, which requires additional therapies, including new drug combinations and immunotherapy, often accessed through clinical trials.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4" style="border-color: #1e40af;">
+                <p class="text-gray-700 leading-relaxed">
+                    As a world-leading cancer centre, SSCHRC is home to numerous clinical trials for prostate cancer. Your care team may discuss a clinical trial with you if they believe it offers the best chance for a positive outcome, improved survival, minimal side effects, and a higher quality of life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

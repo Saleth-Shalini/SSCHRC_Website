@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre of Excellence in Pediatric Oncology</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Prevent header menu from looking over-extended */
+        #dynamic-header .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-menu .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-item {
+            padding: 0.5rem 0.65rem !important;
+            gap: 0.5rem;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* FAQ Accordion Styles */
+        .faq-accordion {
+            width: 100%;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .faq-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-header:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-header.active {
+            background: #f0fdf4;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+        
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            color: #2E8B57;
+            font-size: 1.25rem;
+        }
+        
+        .faq-header.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-content.active {
+            max-height: 1000px;
+            padding: 1.5rem;
+        }
+        
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .faq-answer ul {
+            margin-top: 0.75rem;
+            margin-left: 1.5rem;
+            list-style-type: disc;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/paediatric oncology.jpg" 
+                alt="Pediatric Oncology Centre of Excellence"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/paediatric oncology.jpg" 
+                alt="Pediatric Oncology Centre of Excellence"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: Understanding Childhood Cancer -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Understanding Childhood Cancer: A Story of Hope and Progress
+                </h2>
+            </div>
+            
+            <div class="space-y-6 mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Cancer in children is profoundly different from adult cancer. Pediatric malignancies develop rapidly and often originate in actively growing and dividing cells. The excellent news is that treatment for childhood cancers has seen dramatic improvements in outcomes over the past five decades. Today, with access to specialized care, the majority of children diagnosed with cancer survive at least five years, and many are cured completely. This remarkable progress is a direct result of advances in treatment protocols, precision diagnostics, and world-class supportive care—achievements earned through decades of dedicated, collaborative international research.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Globally, an estimated 400,000 children and adolescents develop cancer each year. In healthcare systems with comprehensive, specialized services, cure rates for childhood cancer exceed 80%. These variable outcomes underscore the critical importance of timely diagnosis, specialized treatment, and access to a multidisciplinary care team.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Common Types of Childhood Cancer -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Common Types of Childhood Cancer
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    The three most common types of childhood cancer account for the majority of diagnoses:
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Leukemia -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <i class="fas fa-tint text-2xl" style="color: #2E8B57;"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Leukemia</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        As the most common childhood cancer (approximately 25–30% of pediatric cancers), Leukemia originates in the bone marrow. Acute Lymphoblastic Leukemia (ALL) accounts for about 75% of childhood leukemias and has achieved remarkable cure rates, with five-year survival rates exceeding 90% in recent years. Acute Myeloid Leukemia (AML), the second most common, is also increasingly treatable with contemporary multimodal approaches.
+                    </p>
+                </div>
+
+                <!-- CNS and Brain Tumors -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <i class="fas fa-brain text-2xl" style="color: #1e40af;"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Central Nervous System (CNS) and Brain Tumors</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Representing the most common solid malignancy in children, these tumors vary widely. With modern surgical techniques, chemotherapy, and radiation, five-year survival rates for pediatric brain tumors now range from 70% to over 84%.
+                    </p>
+                </div>
+
+                <!-- Lymphomas -->
+                <div class="card-shadow rounded-2xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <i class="fas fa-virus text-2xl" style="color: #FF4500;"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Lymphomas</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Hodgkin Lymphoma and Non-Hodgkin Lymphoma (NHL) together represent 10–15% of pediatric cancers. Hodgkin Lymphoma is highly curable, with five-year survival rates exceeding 90%. Non-Hodgkin Lymphoma survival has improved dramatically, with cure rates now exceeding 90% thanks to advanced chemotherapy regimens and risk-adapted strategies.
+                    </p>
+                </div>
+
+                <!-- Other Important Pediatric Cancers -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Other Important Pediatric Cancers</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Other important pediatric cancers include neuroblastoma, Wilms tumor (kidney cancer), osteosarcoma (bone cancer), Ewing's sarcoma, and rhabdomyosarcoma (soft tissue sarcoma). Each requires specialized treatment protocols developed through international collaborative research networks like the Children's Oncology Group (COG), with steadily improving outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: How We Treat Childhood Cancer -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    How We Treat Childhood Cancer: The Multimodal Approach
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Modern pediatric oncology employs multimodal therapy—combining traditional methods with innovative new treatments—to maximize cure rates while minimizing long-term side effects. The specific treatment plan is carefully tailored to each child's cancer type, stage, age, and unique biological characteristics.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Core Treatment Modalities -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8">Core Treatment Modalities</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Surgery -->
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-3" style="background: #dcfce7;">
+                                    <i class="fas fa-cut text-xl" style="color: #2E8B57;"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900">Surgery</h4>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Surgical resection remains a cornerstone, removing the primary tumor and helping to determine the extent of disease. Our modern pediatric surgical techniques prioritize complete tumor removal while preserving function and minimizing complications.
+                            </p>
+                        </div>
+
+                        <!-- Chemotherapy -->
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #1e40af;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-3" style="background: #dbeafe;">
+                                    <i class="fas fa-syringe text-xl" style="color: #1e40af;"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900">Chemotherapy</h4>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Chemotherapy is often highly effective against pediatric cancers because most childhood malignancies grow rapidly, and chemotherapy targets fast-growing cells. Children generally recover well from intensive regimens, leading to high cure rates.
+                            </p>
+                        </div>
+
+                        <!-- Radiation Therapy -->
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-3" style="background: #ffe4e1;">
+                                    <i class="fas fa-radiation text-xl" style="color: #FF4500;"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900">Radiation Therapy</h4>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Targeted radiation therapy uses high-energy beams to kill cancer cells at specific tumor sites. We use modern techniques such as Intensity-Modulated Radiation Therapy (IMRT), Proton Therapy, and Stereotactic Radiosurgery to allow for precise tumor targeting while reducing exposure to surrounding healthy tissues.
+                            </p>
+                        </div>
+
+                        <!-- HSCT -->
+                        <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-3" style="background: #f3e8ff;">
+                                    <i class="fas fa-exchange-alt text-xl" style="color: #7c3aed;"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900">Hematopoietic Stem Cell Transplantation (HSCT)</h4>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                For certain high-risk or recurrent cancers (including specific leukemias, lymphomas, and neuroblastoma), HSCT offers intensified therapy. This allows for the delivery of ultra-high-dose chemotherapy followed by a 'rescue' with healthy stem cells.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Immunotherapy and Targeted Therapy -->
+                <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-green-50 to-white">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Immunotherapy and Targeted Therapy—The Frontier of Precision Medicine</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-dna mr-3" style="color: #2E8B57;"></i>
+                                CAR-T Cell Therapy and Immunotherapy
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                This revolutionary approach involves genetically engineering a child's own T cells (immune cells) to recognize and attack cancer cells. CAR-T cell therapy has transformed treatment for relapsed or refractory leukemias and other blood cancers, achieving high rates of complete and durable remission.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-bullseye mr-3" style="color: #1e40af;"></i>
+                                Targeted Therapies
+                            </h4>
+                            <p class="text-gray-700 leading-relaxed">
+                                These therapies exploit specific genetic mutations found in cancer cells, attacking the cancer at the molecular level. Agents such as tyrosine kinase inhibitors and pathway inhibitors offer improved efficacy with reduced toxicity compared to traditional chemotherapy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Treatment Outcomes and Clinical Trials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Outcomes and Survival Rates
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Overall Outcomes -->
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Global pediatric oncology data is highly encouraging, showing exceptional five-year survival rates, which often exceed 85% across all age groups from 1 to 19 years old.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Key Outcomes from International Studies:</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-green-50 rounded-lg p-6 border-l-4" style="border-color: #2E8B57;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Lymphoid Leukemias (mostly ALL)</h4>
+                            <p class="text-3xl font-bold text-green-600 mb-2">94–96%</p>
+                            <p class="text-gray-700">Survival rates are exceptionally high, often 94–96% in younger children.</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4" style="border-color: #1e40af;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Hodgkin Lymphoma</h4>
+                            <p class="text-3xl font-bold text-blue-600 mb-2">>90%</p>
+                            <p class="text-gray-700">Excellent prognosis with greater than 90% five-year survival.</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-6 border-l-4" style="border-color: #7c3aed;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Non-Hodgkin Lymphoma</h4>
+                            <p class="text-3xl font-bold text-purple-600 mb-2">>90%</p>
+                            <p class="text-gray-700">Five-year survival is now over 90%.</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-6 border-l-4" style="border-color: #FF4500;">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Brain and CNS tumors</h4>
+                            <p class="text-3xl font-bold text-orange-600 mb-2">74–84%</p>
+                            <p class="text-gray-700">Five-year survival is typically 74–84%, depending on the specific tumor type and extent.</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-6 leading-relaxed font-semibold">
+                        These statistics underscore that with appropriate treatment by experienced pediatric oncologists, the majority of children with cancer today are cured and become long-term survivors.
+                    </p>
+                </div>
+
+                <!-- Clinical Trials -->
+                <div class="card-shadow rounded-xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">The Role of Clinical Trials</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        A critical factor in the success of pediatric cancer treatment is the exceptionally high enrollment in cooperative group clinical trials. More than 50% of children diagnosed with cancer are treated on research protocols. This extensive trial participation, coordinated by international groups like the Children's Oncology Group (COG), enables systematic learning, uniform therapy administration, and the consistent advancement of treatment over decades. Families interested in clinical trial enrollment are encouraged to discuss options with their oncology team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Treatment Side Effects and Survivorship -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Treatment Side Effects and Long-Term Survivorship
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    While cure rates are excellent, the management of treatment side effects requires careful attention.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Side Effects Table -->
+                <div class="card-shadow rounded-2xl p-8 bg-white overflow-x-auto">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Treatment Side Effects</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Short-Term Side Effects</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Nausea, vomiting, and loss of appetite</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Hair loss</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Mouth sores and oral complications</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Infection risk (during neutropenia)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-blue-600 mr-3 mt-2"></i>
+                                    <span>Anemia, bleeding, and fatigue</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Late Effects (Potential long-term complications)</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Growth and developmental delays</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Secondary cancers (rare but serious)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Heart and lung dysfunction</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Infertility and reproductive issues</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Neurocognitive effects</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-sm text-orange-600 mr-3 mt-2"></i>
+                                    <span>Psychological challenges (anxiety, depression, PTSD)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-6 bg-green-50 rounded-lg border-l-4" style="border-color: #2E8B57;">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong>Important:</strong> Two of every three childhood cancer survivors will develop at least one late-effect complication, emphasizing the need for comprehensive long-term follow-up care. Your oncology team will provide an individualized Survivorship Care Plan to monitor for and manage these potential issues.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Multidisciplinary Team Approach -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    The Multidisciplinary Team Approach
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Optimal pediatric cancer care requires seamless collaboration among a vast network of specialists and professionals operating under a family-centered care model.
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="card-shadow rounded-2xl p-8 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Your Team Includes:</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Core Medical Team</h4>
+                            <p class="text-gray-700">Pediatric Oncologists, Pediatric Surgeons, Radiation Oncologists, and Pediatric Pathologists.</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Supportive Care Specialists</h4>
+                            <p class="text-gray-700">Pediatric Hematologists, Infectious Disease Specialists, Nutritionists, Palliative Care Specialists, Specialized Nursing Staff, and Pharmacists.</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Psychosocial Support Team</h4>
+                            <p class="text-gray-700">Pediatric Psychologists/Psychiatrists, Social Workers, Child Life Specialists, Mental Health Counselors, and Spiritual Support staff.</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Educational and Developmental Support</h4>
+                            <p class="text-gray-700">School Liaison Specialists and Neuropsychologists.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            We recognize that the cancer experience affects the entire family—parents, siblings, and extended networks. We employ sophisticated psychosocial support systems to identify specific family needs and provide appropriate interventions, from universal education to specialized mental health services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Special Services and Why Choose Our Centre -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Special Services and Innovative Features
+                </h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Precision Medicine -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Precision Medicine & Molecular Diagnosis</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        We use advanced genetic sequencing and molecular testing to characterize each child's cancer at the deepest molecular level. This information is critical for:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Guiding the intensity of therapy (risk-stratification).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Identifying candidates for targeted therapy or immunotherapy.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span>Participating in precision medicine decision-making.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Child Life and Developmental Support -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Child Life and Developmental Support</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Our Child Life Specialists provide age-appropriate emotional support, distraction techniques, and procedural preparation to reduce anxiety and improve cooperation during treatment. We also focus on School Reintegration and Academic Support, coordinating with schools to facilitate a return to normalcy and arranging neuropsychological testing to identify any learning needs.
+                    </p>
+                </div>
+
+                <!-- Sibling and Family Support -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Sibling and Family Support Programs</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We offer support groups, counseling, and education specifically designed for siblings to acknowledge their unique challenges and foster healthy family functioning.
+                    </p>
+                </div>
+
+                <!-- Survivorship Care Planning -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Survivorship Care Planning</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Upon treatment completion, every family receives an individualized Survivorship Care Plan. This detailed document outlines the cancer diagnosis, treatment history, potential late effects, and recommended long-term screening schedules, ensuring coordinated care between all specialists as the child transitions into long-term survivorship.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Why Choose Our Centre -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Centre of Excellence in Pediatric Oncology
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-white mb-8">
+                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                    Our Centre of Excellence is committed to providing evidence-based, compassionate, family-centered care that achieves the highest chance of cure and a healthy future.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-user-md text-2xl mr-4 mt-1" style="color: #2E8B57;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Specialized Expertise</h3>
+                            <p class="text-gray-700">Our experienced pediatric oncologists, surgeons, and specialists are dedicated exclusively to children's cancer care, employing protocols aligned with leading international guidelines (NCCN, ESMO, ASCO, COG).</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-users text-2xl mr-4 mt-1" style="color: #1e40af;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Multidisciplinary Collaboration</h3>
+                            <p class="text-gray-700">We ensure coordinated care among all medical, supportive, and psychosocial specialists.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-microscope text-2xl mr-4 mt-1" style="color: #7c3aed;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Diagnostics</h3>
+                            <p class="text-gray-700">We offer rapid tumor characterization, including molecular testing, to guide precision medicine.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-flask text-2xl mr-4 mt-1" style="color: #FF4500;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Innovative Therapies</h3>
+                            <p class="text-gray-700">We provide access to the latest therapies, including CAR-T cell programs and clinical trials.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-heart text-2xl mr-4 mt-1" style="color: #2E8B57;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Family-Centered Care</h3>
+                            <p class="text-gray-700">Our comprehensive psychosocial support, financial counseling, and sibling support ensure holistic family well-being.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-star text-2xl mr-4 mt-1" style="color: #FF4500;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Hope and Outcome</h3>
+                            <p class="text-gray-700">With modern, multimodal therapy coordinated by experienced teams, the majority of children with cancer survive and thrive, leading fulfilling adult lives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

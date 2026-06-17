@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre of Excellence in Lung Cancer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Prevent header menu from looking over-extended */
+        #dynamic-header .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-menu .mega-menu-content {
+            padding: 1rem 1.25rem !important;
+        }
+        #dynamic-header .centres-item {
+            padding: 0.5rem 0.65rem !important;
+            gap: 0.5rem;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .gradient-sea-orange {
+            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* FAQ Accordion Styles */
+        .faq-accordion {
+            width: 100%;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .faq-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-header:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-header.active {
+            background: #f0fdf4;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+        
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            color: #2E8B57;
+            font-size: 1.25rem;
+        }
+        
+        .faq-header.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-content.active {
+            max-height: 1000px;
+            padding: 1.5rem;
+        }
+        
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .faq-answer ul {
+            margin-top: 0.75rem;
+            margin-left: 1.5rem;
+            list-style-type: disc;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/Lung oncology.jpg" 
+                alt="Centre of Excellence in Lung Cancer"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Centres of Excellence/Lung oncology.jpg" 
+                alt="Centre of Excellence in Lung Cancer"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+
+    <!-- Section 1: Mission and Commitment -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Our Mission and Commitment
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The Sri Shankara Cancer Foundation's Centre of Excellence in Lung Cancer is committed to delivering life-changing, evidence-based care for patients with lung-related diagnoses. We understand that a lung cancer diagnosis can be overwhelming. Our integrated team of specialists offers compassionate care and comprehensive guidance through every step of the treatment journey, combining the latest medical innovations with a supportive environment, ensuring personalized attention for every patient.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Lung Care Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What We Do: Comprehensive Lung Care Services
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Our integrated approach encompasses five core service pillars:
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Pillar 1: Lung Cancer Screening -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dcfce7;">
+                            <span class="text-2xl font-bold" style="color: #2E8B57;">1</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Lung Cancer Screening</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Early detection of lung cancer fundamentally transforms patient outcomes. When identified at early stages, five-year survival improves significantly from 18% to 64% compared to advanced-stage disease. Our screening program is specifically designed for individuals at high risk based on their age and smoking history.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        We follow internationally recognized, evidence-based screening criteria, which recommend annual low-dose computed tomography (LDCT) screening for high-risk adults. This proven approach has been shown to reduce lung cancer mortality by approximately 20% in this population.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Our protocol utilizes optimized low-dose CT imaging with minimal radiation exposure to maintain diagnostic accuracy. All screening findings are reported using a standardized system, ensuring clear, consistent interpretation and management recommendations.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Lung Nodule Clinic -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #dbeafe;">
+                            <span class="text-2xl font-bold" style="color: #1e40af;">2</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Lung Nodule Clinic</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Incidental lung nodules are frequently discovered during imaging performed for other reasons, with an estimated 1.6 million new nodules identified annually. Specialized evaluation is critical.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Our Lung Nodule Clinic provides a comprehensive assessment using a structured risk-stratification protocol that guides the appropriate follow-up schedule. Low-risk nodules may require follow-up imaging in 12 months, while higher-risk lesions necessitate closer surveillance or definitive diagnostic evaluation. This systematic approach prevents both unnecessary procedures and harmful delays in diagnosing malignancy.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        When diagnostic tissue sampling is required, our clinic coordinates seamless referral to advanced interventional procedures (outlined below), minimizing delays and reducing the number of procedures a patient must undergo.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Advanced Diagnostic and Therapeutic Bronchoscopy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #FF4500;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ffe4e1;">
+                            <span class="text-2xl font-bold" style="color: #FF4500;">3</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Advanced Diagnostic and Therapeutic Bronchoscopy</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Our Interventional Pulmonology Program employs cutting-edge bronchoscopy technologies to safely diagnose and treat complex lung lesions:
+                    </p>
+                    
+                    <div class="bg-orange-50 rounded-lg p-6 mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Radial EBUS for localization of peripheral pulmanary nodule</h4>
+                        
+                       
+                    </div>
+
+                    <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Single-Anesthesia, Integrated Diagnostic and Therapeutic Approach</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            By combining diagnostic bronchoscopy with advanced surgical capability in a unified procedure, eligible patients benefit from fewer appointments, faster diagnostic answers, reduced exposure to anesthesia, and accelerated treatment planning.
+                        </p>
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Therapeutic Applications</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            For patients with central airway obstruction from lung cancer, interventional bronchoscopy offers minimally invasive therapeutic options including endobronchial resection and brachytherapy. These approaches effectively alleviate airway obstruction, improve breathing, reduce bleeding, and enable patients to proceed with additional systemic treatments. Studies show that patients receiving this treatment achieve survival outcomes comparable to patients without airway involvement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Thoracic Surgery -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #f3e8ff;">
+                            <span class="text-2xl font-bold" style="color: #7c3aed;">4</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Thoracic Surgery with Minimally Invasive and Robotic Techniques</h3>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <strong>Surgical Resection for Cure:</strong> Surgery remains the most effective treatment for early-stage lung cancer and offers the opportunity for cure. Our thoracic surgical program, led by experienced specialists, offers both traditional open techniques and advanced minimally invasive approaches tailored to each patient's unique characteristics.
+                    </p>
+
+                    <div class="bg-purple-50 rounded-lg p-6 mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">da Vinci Robotic-Assisted Thoracoscopic Surgery (RATS)</h4>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            This advanced platform allows surgeons to perform complex thoracic procedures—including lobectomy, segmentectomy, and pneumonectomy—through small incisions with exceptional precision. Robotic assistance provides three-dimensional visualization, improved maneuverability, and superior stability compared to conventional video-assisted surgery (VATS).
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Comparative evidence demonstrates that robotic-assisted approaches yield several advantages:
+                        </p>
+                        <ul class="space-y-2 text-gray-700 ml-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Superior lymph node dissection:</strong> A higher number of lymph nodes are retrieved, which is critical for accurate cancer staging and treatment planning.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Reduced postoperative complications:</strong> Including lower rates and shorter duration of chest tube drainage.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Faster recovery:</strong> Shorter postoperative hospital stays and quicker return to normal activities.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Decreased postoperative pain:</strong> Significantly lower pain scores in the first 72 hours post-surgery.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                                <span><strong>Equivalent or superior oncologic outcomes:</strong> Long-term survival rates are equivalent to open surgery.</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            For early-stage lung cancer, robotic VATS pneumonectomy demonstrates a high success rate with a very low complication rate. Hospital stays average 3–7 days with substantially less blood loss than open surgery.
+                        </p>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Minimally Invasive Extended Resection</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            For complex cases requiring extended lobectomy (resection across multiple lobes or with chest wall involvement), our experienced surgical team can perform these demanding procedures via minimally invasive approaches. Recent analysis confirms that minimally invasive extended lobectomy achieves equivalent outcomes to open surgery—including complete tumor removal and long-term survival—while maintaining the benefits of minimally invasive technique.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 5: Smoking Cessation -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4" style="background: #ccfbf1;">
+                            <span class="text-2xl font-bold" style="color: #14b8a6;">5</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Comprehensive Smoking Cessation Program</h3>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        <strong>Prevention as Foundation:</strong> Smoking tobacco remains the leading preventable cause of lung cancer, yet quitting at any point provides substantial benefit.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Our integrated smoking cessation program combines evidence-based behavioral counseling, pharmacologic support, and ongoing monitoring to maximize the likelihood of sustained abstinence. The program is available to all screening participants and cancer patients at any stage of treatment.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        <strong>Impact on Outcomes:</strong> The evidence is compelling—combining smoking cessation with lung cancer screening provides dramatically amplified benefits, with data demonstrating a combined 38% reduction in lung cancer mortality. Even for patients diagnosed with lung cancer, smoking cessation improves treatment tolerance, reduces treatment-related toxicity, and enhances overall health outcomes.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        For every quit attempt, there is approximately a 5–10% success rate for permanent cessation, emphasizing the value of structured program support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Advanced Treatment Modalities -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Advanced Treatment Modalities
+                </h2>
+                <p class="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
+                    Beyond diagnosis and surgical resection, our Centre offers access to comprehensive multimodal therapies guided by multidisciplinary team expertise:
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Systemic Therapy -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Systemic Therapy: Targeted and Immunologic Approaches</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Modern lung cancer treatment is increasingly driven by tumor biology and molecular characteristics. Our Centre coordinates comprehensive molecular testing to assess for specific genetic alterations, including:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-dna text-green-600 mr-3 mt-1"></i>
+                                <span>EGFR mutations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-dna text-green-600 mr-3 mt-1"></i>
+                                <span>ALK rearrangements</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-dna text-green-600 mr-3 mt-1"></i>
+                                <span>NTRK fusions</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-dna text-green-600 mr-3 mt-1"></i>
+                                <span>PD-L1 expression</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-dna text-green-600 mr-3 mt-1"></i>
+                                <span>Tumor mutational burden</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-6 mb-4">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Immunotherapy (Checkpoint Inhibitors)</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            For patients with specific tumor markers, immune checkpoint inhibitors reactivate the body's anti-cancer immune response. These agents have dramatically improved survival in advanced lung cancer by blocking pathways that cancer cells use to evade immunity.
+                        </p>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Targeted Therapies</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            For lung cancers with specific molecular drivers, targeted therapies provide superior response rates and improved survival compared to chemotherapy. Recent advances include new agents for resistant mutations and combination regimens that enhance benefit.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Radiation Oncology -->
+                <div class="card-shadow rounded-xl p-8 bg-white border-l-4" style="border-color: #1e40af;">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Radiation Oncology: Precision and Intensity-Modulated Approaches</h3>
+                    <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Stereotactic Body Radiation Therapy (SBRT)</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            For patients with early-stage lung cancer who are medically inoperable or decline surgery, SBRT delivers highly focused, high-dose radiation using advanced targeting and planning. Clinical evidence demonstrates that SBRT achieves high three-year primary tumor control rates and is a preferred treatment option for early-stage lung cancer, especially in patients with high surgical risk.
+                        </p>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Image Guided Radiotherapy (IGRT)</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            For more advanced cancers of the lung, combined modality treatment with chemoradiation and immunotherapy have improved survival. Advanced technique like IGRT takes into consideration the movement of the tumour with respiration and targets only the tumour and avoiding dose to the normal critical structures like heart and spinal cord. This precise radiotherapy allows for increasing the dose to the cancer thus improving cure rates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Integrated Care Model -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Our Integrated Care Model: Multidisciplinary Expertise
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-white mb-8">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    What fundamentally distinguishes our Centre is our structured multidisciplinary team (MDT) approach. Instead of sequential consultations with individual specialists, our experts regularly convene to collaboratively develop integrated treatment recommendations tailored to each patient's unique clinical situation.
+                </p>
+                
+                <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Evidence of MDT Benefit</h3>
+                    <p class="text-gray-700 mb-4">Research consistently demonstrates that MDT care:</p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span><strong>Increases guideline adherence:</strong> Ensuring patients receive evidence-based recommendations aligned with international standards.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span><strong>Shortens diagnostic-to-treatment intervals:</strong> Reducing delays and enabling timely intervention.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span><strong>Improves treatment optimization:</strong> Complex cases benefit from cross-disciplinary insights, preventing missed opportunities.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span><strong>Enhances patient communication:</strong> Unified care plans presented by the entire team reduce confusion and build patient confidence.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our MDT includes specialists across:</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Interventional Pulmonology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Thoracic Surgery</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Medical Oncology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Radiation Oncology</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Diagnostic Radiology and Imaging</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Pathology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Nursing and Care Coordination</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user-md text-green-600 mr-3 mt-1"></i>
+                                <span>Palliative Care and Psychosocial Support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-gray-700 mt-4 leading-relaxed">
+                        Quality standards ensuring effective MDT include regular meeting frequency, standardized documentation, and direct communication of the care plan to the patient.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Key Differentiators -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Key Differentiators and Unique Strengths
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #FF4500;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Advanced Robotic Surgical Capability</h3>
+                    <p class="text-gray-700">da Vinci robotic-assisted surgery with three-dimensional visualization and enhanced precision enables complex resections with superior lymph node dissection and reduced patient complications compared to traditional approaches.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #7c3aed;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Single-Anesthesia Integrated Diagnosis and Treatment</h3>
+                    <p class="text-gray-700">For eligible patients, combining diagnostic bronchoscopy and definitive surgical intervention under unified anesthesia reduces healthcare visits and accelerates treatment planning.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #14b8a6;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Comprehensive Molecular Testing and Personalized Therapy</h3>
+                    <p class="text-gray-700">Systematic biomarker assessment enables precise patient stratification and selection of targeted therapies and immunotherapies most likely to benefit individual patients.</p>
+                </div>
+
+                <div class="card-shadow rounded-xl p-6 bg-white border-l-4" style="border-color: #2E8B57;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Evidence-Based Smoking Cessation Integration</h3>
+                    <p class="text-gray-700">We recognize that smoking cessation is integral to lung cancer prevention and treatment success, with structured programs available to all patients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Patient-Centered Care -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Patient-Centered Care Philosophy
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-white">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Every patient deserves clear answers, respectful communication, and active participation in treatment decisions. Our Centre emphasizes:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-calendar-check mr-3" style="color: #1e40af;"></i>
+                            Accessible Consultations
+                        </h4>
+                        <p class="text-gray-700">Streamlined scheduling minimizing waiting time between diagnostic findings and specialist evaluation.</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-comments mr-3" style="color: #2E8B57;"></i>
+                            Clear Communication
+                        </h4>
+                        <p class="text-gray-700">Medical information presented in understandable language, with visual aids and written materials supporting informed decision-making.</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-sync-alt mr-3" style="color: #7c3aed;"></i>
+                            Coordinated Care Logistics
+                        </h4>
+                        <p class="text-gray-700">Unified scheduling reducing multiple visits and the provider coordination burden on patients and families.</p>
+                    </div>
+                    <div class="bg-pink-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-heart mr-3" style="color: #ec4899;"></i>
+                            Holistic Support
+                        </h4>
+                        <p class="text-gray-700">Addressing not only cancer treatment but also symptom management, nutritional support, psychological wellness, and quality-of-life concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Clinical Expertise -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Clinical Expertise and Accreditation
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-white">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Our Centre operates within NABH-accredited infrastructure, meeting over 600 objective standards spanning admission protocols, operative procedures, postoperative care, and follow-up coordination. This ensures that every patient benefits from systems designed to optimize safety, reduce errors, and enhance outcomes at every step of their care journey.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    All our treatment recommendations are aligned with current international oncology guidelines from leading global bodies (including NCCN, ESMO, ASCO, ASTRO, and WHO), ensuring that our patients receive evidence-based care reflecting global best practices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Your Next Step -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Your Next Step
+                </h2>
+            </div>
+            
+            <div class="card-shadow rounded-2xl p-8 bg-white">
+                <p class="text-xl text-gray-700 leading-relaxed text-center">
+                    If you or a loved one requires lung cancer screening, nodule evaluation, or comprehensive treatment planning, we invite you to contact our Centre. Our team is prepared to answer your questions, coordinate all necessary evaluations, and develop a personalized care plan designed for your individual needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-shadow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

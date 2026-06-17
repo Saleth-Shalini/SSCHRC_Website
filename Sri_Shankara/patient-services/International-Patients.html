@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="International Patient Services at Sri Shankara Cancer Hospital. World-class cancer care for patients from around the globe with advanced treatments and personalized support.">
+    <title>International Patient Services | Sri Shankara Cancer Hospital</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="cancer-we-treat.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    
+    <!-- Bootstrap (for footer/chatbox) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+
+
+
+
+
+
+
+
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Patient Services/International Patients/International Patients.jpg" 
+                alt="International Patient Services"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Patient Services/International Patients/International Patients.jpg" 
+                alt="International Patient Services"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists</a>
+        </div>
+    </div>
+    
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-wrapper">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../cancer-we-treat/All-Types-Cancer.html">Patient Services</a></li>
+                <li aria-current="page">International Patients</li>
+            </ol>
+        </nav>
+    </div>
+    
+    <!-- SEO Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://yourhospital.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Patient Services",
+                "item": "https://yourhospital.com/patient-services"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "International Patients",
+                "item": "https://yourhospital.com/patient-services/International-Patients.html"
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        /* Breadcrumb Styles */
+        .breadcrumb-wrapper {
+  max-width: 1400px;     /* matches your page width */
+  margin: 0 auto;        /* centers the block */
+  padding-left: 10px;    /* ✅ add space on the left */
+  padding-right: 40px;   /* optional, keeps both sides equal */
+}
+
+.breadcrumb {
+  --sep: "›";
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 1rem 0 1.5rem;
+  color: #444;
+  font-family: Arial, sans-serif;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  color: #333;
+}
+.breadcrumb li+li::before {
+  content: var(--sep);
+  opacity: 0.6;
+  margin: 0 0.5rem 0 0.25rem;
+}
+.breadcrumb a {
+  color: #003017;
+  text-decoration: none;
+}
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.breadcrumb [aria-current="page"] {
+  color: #000;
+  font-weight: 600;
+}
+
+
+
+
+/* Small screens */
+@media (max-width: 520px) {
+  .breadcrumb ol {
+    gap: 0.2rem 0.35rem;
+  }
+  .breadcrumb li:not(:first-child):not(:last-child) {
+    display: none;
+  }
+  .breadcrumb li:first-child::after {
+    content: "…";
+    margin: 0 0.35rem 0 0.25rem;
+    opacity: 0.6;
+  }
+}
+</style>
+<!-- ✅ Breadcrumb End -->
+</head>
+<body>
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Patient Services | Sri Shankara Cancer Hospital</title>
+    <style>
+        /* Base Typography System */
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography Scale */
+        :root {
+            --font-size-xs: 12px;
+            --font-size-sm: 14px;
+            --font-size-base: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 20px;
+            --font-size-2xl: 24px;
+            --font-size-3xl: 28px;
+            --font-size-4xl: 32px;
+            --font-size-5xl: 42px;
+            
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.6;
+            --line-height-relaxed: 1.7;
+            --line-height-loose: 1.8;
+            
+            --spacing-xs: 8px;
+            --spacing-sm: 12px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 40px;
+            --spacing-3xl: 60px;
+            --spacing-4xl: 80px;
+        }
+        
+        .container1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-lg);
+            gap: var(--spacing-xl);
+        }
+        
+        .content-section1 {
+            flex: 2;
+            padding-right: var(--spacing-xl);
+            min-width: 0;
+            order: 1;
+        }
+        
+        .form-section {
+            flex: 1;
+            min-width: 320px;
+            max-width: 400px;
+            background: #ffffff;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+            order: 2;
+        }
+        
+        .form-section::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #014196, #079591);
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .form-section form {
+            padding: 25px;
+        }
+        
+        .form-section h3 {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: #014196;
+            margin: 0 0 var(--spacing-md) 0;
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid #e0e0e0;
+            line-height: var(--line-height-tight);
+        }
+        
+        .full-width-section {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Typography Hierarchy */
+        h1, h2, h3, h4, h5, h6 {
+            color: #014196;
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            margin-top: 0;
+            letter-spacing: -0.02em;
+        }
+        
+        h1 {
+            font-size: var(--font-size-5xl);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 800;
+        }
+        
+        h2 {
+            font-size: var(--font-size-3xl);
+            margin-top: var(--spacing-3xl);
+            margin-bottom: var(--spacing-xl);
+            border-bottom: 2px solid;
+            border-image: linear-gradient(135deg, #014196, #079591) 1;
+            padding-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-size: var(--font-size-2xl);
+            margin-top: var(--spacing-2xl);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: var(--font-size-xl);
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+            font-weight: 600;
+        }
+        
+        /* Paragraph Typography */
+        p {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-lg);
+            color: #444;
+        }
+        
+        /* Section Spacing */
+        section {
+            margin-bottom: var(--spacing-4xl);
+        }
+        
+        section:last-child {
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f9f8 0%, #e0f2f1 100%);
+            padding: 40px;
+            border-left: 4px solid #014196;
+            margin: 30px 0;
+            border-radius: 8px;
+            text-align: justify;
+        }
+        
+        .highlight-box p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 10px 0;
+            color: #014196;
+            text-align: justify;
+        }
+        
+        .highlight-box p:first-child {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .closing-quote-section {
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            display: block;
+            margin-bottom: 15px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #014196, #079591);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #012d6b, #057a77);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(1, 65, 150, 0.3);
+        }
+        
+        .cta-button strong {
+            color: white;
+        }
+        
+        .accordion {
+            background-color: #ffffff;
+            color: #014196;
+            cursor: pointer;
+            padding: 20px 25px;
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+            outline: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 8px 0;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .accordion::after {
+            content: "+";
+            font-size: 24px;
+            font-weight: bold;
+            color: #014196;
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion.active::after {
+            content: "−";
+        }
+        
+        .active, .accordion:hover {
+            background-color: #f0f9f8;
+            border-color: #014196;
+            border-left: 4px solid #014196;
+        }
+        
+        .panel {
+            padding: 0 25px;
+            background-color: #ffffff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-left: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            border-radius: 0 0 6px 6px;
+            margin: 0 0 8px 0;
+        }
+        
+        .panel p {
+            padding: var(--spacing-xl) 0;
+            margin: 0;
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: #666;
+        }
+        
+        .accordion {
+            font-size: var(--font-size-base);
+        }
+        
+        .tab-content li,
+        .facilities-list li {
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-loose);
+        }
+        
+        /* Facilities and Expertise Section */
+        .facilities-expertise-section {
+            margin-bottom: 60px;
+        }
+        
+        .facilities-tab-container {
+            margin-top: 30px;
+        }
+        
+        .facilities-tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .facilities-tab-button {
+            background-color: #f5f5f5;
+            border: 2px solid transparent;
+            color: #014196;
+            padding: 14px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .facilities-tab-button:hover {
+            background-color: rgba(1, 65, 150, 0.1);
+            border-color: #014196;
+        }
+        
+        .facilities-tab-button.active {
+            background: linear-gradient(135deg, #014196, #079591);
+            color: white;
+            border-color: #014196;
+        }
+        
+        .facilities-tab-content {
+            display: none;
+            padding: 0;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .facilities-tab-content.active {
+            display: block;
+        }
+        
+        .facilities-content-wrapper {
+            padding: 35px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+        
+        .facilities-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #014196, #079591);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .facilities-list {
+            flex: 1;
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .facilities-list li {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .facilities-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #079591;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* FAQs Section */
+        .faqs-section {
+            margin-bottom: 60px;
+        }
+        
+        .faqs-container {
+            margin-top: 30px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            background-color: #f5f5f5;
+            border: 2px solid transparent;
+            color: #014196;
+            padding: 14px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #014196, #079591);
+            color: white;
+            border-color: #014196;
+        }
+        
+        .tab-button:hover {
+            background-color: rgba(1, 65, 150, 0.1);
+            border-color: #014196;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 35px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-top: 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tab-content ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .tab-content li {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .tab-content li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #079591;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .grid-item {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-left: 3px solid #014196;
+        }
+        
+        .three-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .form-section label {
+            display: block;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: #014196;
+            margin-bottom: 4px;
+            margin-top: var(--spacing-md);
+            line-height: var(--line-height-normal);
+        }
+        
+        .form-section label:first-of-type {
+            margin-top: 0;
+        }
+        
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 8px 12px;
+            margin-bottom: 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: var(--font-size-sm);
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            color: #333;
+            line-height: var(--line-height-normal);
+        }
+        
+        form input:focus, form select:focus, form textarea:focus {
+            outline: none;
+            border-color: #014196;
+            box-shadow: 0 0 0 4px rgba(1, 65, 150, 0.1);
+            background-color: #fafafa;
+        }
+        
+        form input::placeholder, form textarea::placeholder {
+            color: #999;
+        }
+        
+        form textarea {
+            height: 70px;
+            resize: vertical;
+            min-height: 70px;
+        }
+        
+        form select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23014196' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        
+        .checkbox-group {
+            margin: 15px 0;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            gap: 8px;
+        }
+        
+        .checkbox-item:first-child {
+            margin-top: 0;
+        }
+        
+        .checkbox-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: #014196;
+            flex-shrink: 0;
+        }
+        
+        .checkbox-group label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 500;
+            color: #444;
+            cursor: pointer;
+            line-height: 1.4;
+            flex: 1;
+            margin: 0;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #014196, #079591);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(1, 65, 150, 0.2);
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #012d6b, #057a77);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(1, 65, 150, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .file-upload {
+            margin: 12px 0;
+        }
+        
+        .file-upload label {
+            margin-bottom: 4px;
+        }
+        
+        .file-upload input[type="file"] {
+            padding: 6px;
+            border: 2px dashed #e0e0e0;
+            background-color: #fafafa;
+            cursor: pointer;
+            font-size: var(--font-size-sm);
+        }
+        
+        .file-upload input[type="file"]:hover {
+            border-color: #014196;
+            background-color: #f0f9f8;
+        }
+        
+        .file-upload p {
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+            margin-bottom: 0;
+            font-style: italic;
+        }
+        
+        #form-status {
+            border-radius: 8px;
+            font-weight: 500;
+            padding: 12px 16px;
+        }
+        
+        #clientErrors {
+            display: none;
+            padding: 12px 16px;
+            background-color: transparent;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+        
+        .visually-hidden:not(:focus):not(:active) {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+        
+        /* Main Content Wrapper */
+        .main-content-wrapper {
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        /* Page Header Section */
+        .page-header-section {
+            margin-bottom: 0px;
+            padding: var(--spacing-3xl) 0;
+        }
+        
+        .page-header-section h1 {
+            font-size: var(--font-size-5xl);
+            font-weight: 800;
+            color: #014196;
+            margin-bottom: var(--spacing-lg);
+            line-height: var(--line-height-tight);
+        }
+        
+        .page-tagline {
+            font-size: var(--font-size-xl);
+            color: #079591;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xl);
+            line-height: var(--line-height-normal);
+        }
+        
+        .page-intro {
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-loose);
+            color: #444;
+            max-width: 900px;
+            margin-bottom: 0;
+        }
+        
+        /* Content Image Section */
+        .content-image-section {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .content-image-wrapper {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        
+        /* Comfort Priority Section */
+        .comfort-priority-section {
+            margin-bottom: var(--spacing-4xl);
+        }
+        
+        .comfort-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .comfort-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 35px;
+            text-align: left;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comfort-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(1, 65, 150, 0.15);
+            border-color: #014196;
+        }
+        
+        .comfort-card-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #014196, #079591);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 28px;
+        }
+        
+        .comfort-card-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: #014196;
+            margin-bottom: var(--spacing-md);
+            line-height: var(--line-height-tight);
+        }
+        
+        .comfort-card-text {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: #666;
+            margin: 0;
+        }
+        
+        .comfort-card-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        
+        .comfort-card-list li {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: #666;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            text-align: left;
+        }
+        
+        .comfort-card-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .comfort-card-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #079591;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* Journey CTA Section */
+        .journey-cta-section {
+            margin-bottom: var(--spacing-4xl);
+        }
+        
+        .journey-cta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .journey-cta-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .journey-cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #014196, #079591);
+        }
+        
+        .journey-cta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(1, 65, 150, 0.2);
+            border-color: #014196;
+        }
+        
+        .journey-cta-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #014196, #079591);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 32px;
+        }
+        
+        .journey-cta-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: #014196;
+            margin-bottom: var(--spacing-md);
+            line-height: var(--line-height-tight);
+        }
+        
+        .journey-cta-text {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: #666;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .journey-cta-link {
+            display: inline-block;
+            padding: var(--spacing-md) var(--spacing-xl);
+            background: linear-gradient(135deg, #014196, #079591);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: var(--font-size-base);
+            transition: all 0.3s ease;
+        }
+        
+        .journey-cta-link:hover {
+            background: linear-gradient(135deg, #012d6b, #057a77);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(1, 65, 150, 0.3);
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose-section {
+            margin-bottom: var(--spacing-4xl);
+        }
+        
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .why-choose-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid #014196;
+            border-radius: 8px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .why-choose-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(1, 65, 150, 0.15);
+        }
+        
+        .why-choose-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #014196, #079591);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 24px;
+        }
+        
+        .why-choose-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: #014196;
+            margin-bottom: var(--spacing-md);
+            line-height: var(--line-height-tight);
+        }
+        
+        .why-choose-text {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: #666;
+            margin: 0;
+        }
+        
+        /* Facilities and FAQs Typography */
+        .facilities-expertise-section {
+            margin-bottom: var(--spacing-4xl);
+        }
+        
+        .facilities-tab-container {
+            margin-top: var(--spacing-xl);
+        }
+        
+        .faqs-section {
+            margin-bottom: var(--spacing-4xl);
+        }
+        
+        .faqs-container {
+            margin-top: var(--spacing-xl);
+        }
+        
+        .closing-quote-section {
+            margin-top: var(--spacing-4xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        /* Responsive Design for Cards */
+        @media (max-width: 768px) {
+            :root {
+                --font-size-5xl: 32px;
+                --font-size-4xl: 28px;
+                --font-size-3xl: 24px;
+                --font-size-2xl: 20px;
+                --spacing-4xl: 48px;
+                --spacing-3xl: 40px;
+            }
+            
+            .page-header-section h1 {
+                font-size: var(--font-size-4xl);
+            }
+            
+            .page-tagline {
+                font-size: var(--font-size-lg);
+            }
+            
+            .page-intro {
+                font-size: var(--font-size-base);
+            }
+            
+            .content-image-section {
+                margin: 0;
+            }
+            
+            .content-image-wrapper {
+                border-radius: 6px;
+            }
+            
+            .comfort-cards-grid,
+            .journey-cta-grid,
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .comfort-card,
+            .journey-cta-card,
+            .why-choose-card {
+                padding: 25px;
+            }
+            
+            .button-group,
+            .facilities-tab-buttons {
+                flex-direction: column;
+            }
+            
+            .tab-button,
+            .facilities-tab-button {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .tab-content,
+            .facilities-tab-content {
+                padding: 25px;
+            }
+            
+            .accordion {
+                padding: 16px 20px;
+                font-size: 15px;
+            }
+            
+            .container1 {
+                flex-direction: column;
+            }
+            
+            .content-section1 {
+                padding-right: 0;
+                width: 100%;
+                order: 1;
+            }
+            
+            .form-section {
+                width: 100%;
+                max-width: 100%;
+                min-width: auto;
+                position: relative;
+                top: 0;
+                margin-top: 40px;
+                margin-bottom: 0;
+                order: 2;
+            }
+            
+            .form-section form {
+                padding: 20px;
+            }
+        }
+        /* Accessibility: Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #014196;
+            color: #ffffff;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 0 0 4px 0;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Keyboard Navigation: Focus Styles */
+        *:focus-visible {
+            outline: 3px solid #014196;
+            outline-offset: 2px;
+        }
+        
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid #014196;
+            outline-offset: 2px;
+        }
+        
+        /* Prevent content overflow */
+        * {
+            box-sizing: border-box;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Tablet Breakpoints */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container1 {
+                padding: var(--spacing-lg);
+                gap: var(--spacing-lg);
+            }
+            
+            .content-section1 {
+                padding-right: var(--spacing-lg);
+            }
+            
+            .form-section {
+                max-width: 380px;
+                min-width: 320px;
+            }
+            
+            .comfort-cards-grid,
+            .journey-cta-grid,
+            .why-choose-grid {
+                gap: var(--spacing-lg);
+            }
+        }
+        
+        /* Large Desktop - Keep at 1400px */
+        @media (min-width: 1400px) {
+            .container1 {
+                max-width: 1400px;
+            }
+        }
+        
+        /* Photo Carousel Section */
+        .photo-carousel-section {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0px auto;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            background-color: #ffffff;
+        }
+        
+        .carousel-container {
+            width: 100%;
+        }
+        
+        .carousel-heading {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: #014196;
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+            border-bottom: 2px solid;
+            border-image: linear-gradient(135deg, #014196, #079591) 1;
+            padding-bottom: var(--spacing-sm);
+        }
+        
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .carousel-slides {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(1, 65, 150, 0.8);
+            color: #ffffff;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .carousel-btn:hover {
+            background: rgba(1, 65, 150, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-btn:focus {
+            outline: 3px solid #014196;
+            outline-offset: 2px;
+        }
+        
+        .carousel-btn-prev {
+            left: 20px;
+        }
+        
+        .carousel-btn-next {
+            right: 20px;
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: var(--spacing-xl);
+            z-index: 10;
+        }
+        
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #014196;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+        
+        .carousel-indicator.active {
+            background-color: #014196;
+            transform: scale(1.2);
+        }
+        
+        .carousel-indicator:hover {
+            background-color: rgba(1, 65, 150, 0.5);
+        }
+        
+        .carousel-indicator:focus {
+            outline: 3px solid #014196;
+            outline-offset: 2px;
+        }
+        
+        /* Carousel Responsive Styles */
+        @media (max-width: 768px) {
+            .photo-carousel-section {
+                padding: var(--spacing-xl) var(--spacing-md);
+                margin: var(--spacing-3xl) auto;
+            }
+            
+            .carousel-heading {
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--spacing-xl);
+            }
+            
+            .carousel-slides {
+                height: 350px;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .carousel-btn-prev {
+                left: 10px;
+            }
+            
+            .carousel-btn-next {
+                right: 10px;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .carousel-slides {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <main class="main-content-wrapper" id="main-content">
+        <div class="container1">
+            <div class="content-section1">
+                <!-- Page Header Section -->
+                <section class="page-header-section" aria-labelledby="page-title">
+                    <h1 id="page-title">Global Cancer Care</h1>
+                   
+                    <p class="page-intro">At Sri Shankara Cancer Hospital & Research Centre, we are more than just a hospital; we are a beacon of hope for patients worldwide. As a national-level referral centre, we combine cutting-edge technology, world-renowned oncologists, and a profound commitment to compassion to deliver seamless, end-to-end care for our international patients.</p>
+                </section>
+
+                <!-- Image Section -->
+                <section class="content-image-section" aria-label="Content Image">
+                    <div class="content-image-wrapper">
+                        <img 
+                            src="../Images/international-patient.jpeg" 
+                            alt="International Patient Services" 
+                            class="content-image"
+                        >
+                    </div>
+                </section>
+
+                <!-- Your Personalized Care Journey Section -->
+                <section class="comfort-priority-section" aria-labelledby="care-journey-heading">
+                    <h2 id="care-journey-heading">Your Personalized Care Journey Starts Here</h2>
+                    
+                    <div class="comfort-cards-grid">
+                        <div class="comfort-card">
+                            <div class="comfort-card-icon">
+                                <i class="fas fa-file-medical" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="comfort-card-title">Effortless Medical History Analysis</h3>
+                            <ul class="comfort-card-list">
+                                <li>Simply share your medical records online.</li>
+                                <li>Our world-class experts will meticulously review your case and recommend the most effective, personalized treatment options.</li>
+                                <li>Receive a comprehensive, tailored care roadmap before you even begin your journey.</li>
+                                <li><strong>Global Standards, Local Compassion:</strong> Our tumour boards adhere to stringent international protocols, guaranteeing you the same exceptional level of care found in leading global centres.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="comfort-card">
+                            <div class="comfort-card-icon">
+                                <i class="fas fa-video" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="comfort-card-title">Confidential Pre-Travel E-Consultation</h3>
+                            <ul class="comfort-card-list">
+                                <li>Connect directly with your specialist through a secure video consultation from the comfort of your home.</li>
+                                <li>Gain a clear understanding of your diagnosis, proposed treatment plan, and transparent cost estimates.</li>
+                                <li>Ask every question, build complete confidence, and make informed travel decisions with peace of mind.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="comfort-cards-grid" style="margin-top: 30px;">
+                        <div class="comfort-card">
+                            <div class="comfort-card-icon">
+                                <i class="fas fa-plane" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="comfort-card-title">Comprehensive Travel & Visa Concierge</h3>
+                            <ul class="comfort-card-list">
+                                <li>Our dedicated International Desk provides full support for visa applications and all necessary paperwork.</li>
+                                <li>Enjoy complimentary airport pickup/drop-off and personalized assistance with hotel bookings for you and your family.</li>
+                                <li>Benefit from transparent financial counselling and clear cost estimates, ensuring no hidden surprises.</li>
+                                <li><strong>Unmatched Value:</strong> We proudly offer an unparalleled combination of affordability and global excellence in cancer care.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="comfort-card">
+                            <div class="comfort-card-icon">
+                                <i class="fas fa-language" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="comfort-card-title">Empathetic Multilingual Translation Services</h3>
+                            <ul class="comfort-card-list">
+                                <li>Access in-house translators fluent in Arabic, French, Swahili, Russian, and many more languages, ensuring clear communication at every step.</li>
+                                <li>Receive dedicated cultural liaison support to cater to your dietary, religious, and personal comfort needs, making you feel at home.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="comfort-cards-grid" style="margin-top: 30px;">
+                        <div class="comfort-card">
+                            <div class="comfort-card-icon">
+                                <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="comfort-card-title">Streamlined Admission & Discharge Experience</h3>
+                            <ul class="comfort-card-list">
+                                <li>A dedicated Patient Care Executive will guide you through a smooth admission, billing, and discharge process.</li>
+                                <li>Receive comprehensive family assistance services throughout your inpatient stay, ensuring their comfort and support.</li>
+                                <li>Benefit from streamlined medical documentation, facilitating hassle-free post-travel insurance and reimbursement.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="comfort-card">
+                            <div class="comfort-card-icon">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="comfort-card-title">Continuous Follow-Up E-Consultation</h3>
+                            <ul class="comfort-card-list">
+                                <li>Maintain a strong, ongoing connection with your treating doctor online, no matter where you are.</li>
+                                <li>Receive expert post-treatment monitoring, personalized medication advice, and essential recovery guidance.</li>
+                                <li>Experience accessible, anytime care – long after you return home, ensuring your continued well-being.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            
+            
+            
+            
+            
+                <!-- Our Facilities and Expertise Section -->
+                <section class="facilities-expertise-section" aria-labelledby="why-choose-heading">
+                    <h2 id="why-choose-heading">Why International Patients Choose Us: The Sri Shankara Advantage</h2>
+                    
+                    <div class="why-choose-grid">
+                        <div class="why-choose-card">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="why-choose-title">Global Quality, Local Affordability</h3>
+                            <p class="why-choose-text">Achieve outcomes benchmarked against the world's top cancer centres, all at a fraction of the cost.</p>
+                        </div>
+                        
+                        <div class="why-choose-card">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-hospital" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="why-choose-title">One-Stop Holistic Cancer Care</h3>
+                            <p class="why-choose-text">From proactive prevention and screening to advanced surgery, cutting-edge radiotherapy, and pioneering clinical trials – we offer comprehensive care under one roof.</p>
+                        </div>
+                        
+                        <div class="why-choose-card">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="why-choose-title">Trusted by Thousands</h3>
+                            <p class="why-choose-text">Join a global family of patients, who have already entrusted us with their care and experienced life-changing results.</p>
+                        </div>
+                        
+                        <div class="why-choose-card">
+                            <div class="why-choose-icon">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="why-choose-title">Holistic Support System</h3>
+                            <p class="why-choose-text">We provide unparalleled medical, emotional, and logistical care, all seamlessly integrated for your peace of mind.</p>
+                        </div>
+                    </div>
+            
+                </section>
+
+                <!-- Our Unwavering Promise Section -->
+                <section class="closing-quote-section" aria-label="Our Unwavering Promise">
+                    <h2 id="promise-heading">Our Unwavering Promise</h2>
+                    <div class="highlight-box">
+                        <p>We believe in treating more than just the disease. We are dedicated to caring for <strong>you and your entire family</strong> with unwavering compassion, profound dignity, and world-class precision. From your very first call to your safe return home, our dedicated team stands by your side, every step of the way.</p>
+                    </div>
+                </section>
+            </div>
+            
+            <aside class="form-section" aria-label="Request Expert Opinion Form">
+                <form id="international-second-opinion" action="international-patients.php" method="POST" enctype="multipart/form-data" novalidate>
+                    <h3>Request Expert Opinion</h3>
+                    <input type="hidden" name="source_page" value="International Second Opinion" />
+
+
+
+
+
+
+
+
+
+  <!-- Status banner for form feedback -->
+  <div id="form-status" style="display: none; padding: 8px; margin-bottom: 10px; border-radius: 4px; text-align: center; font-size: 13px;"></div>
+  
+  <!-- Client-side validation errors -->
+  <div id="clientErrors" style="display: none; margin-bottom: 10px; font-size: 12px;"></div>
+
+  <label for="full-name">Full Name</label>
+  <input type="text" id="full-name" name="full-name" required>
+
+ <!-- Age (number) -->
+<label for="age">Age</label>
+<input type="number" id="age" name="age" min="0" max="120" placeholder="Enter age" required>
+
+  <label for="mobile">Phone Number (with country code)</label>
+  <input type="tel" id="mobile" name="mobile" placeholder="+91 9876543210" pattern="^\+?[0-9\s\-]{7,15}$" />
+
+  <label for="email">Contact Email (mandatory)</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="gender">Gender</label>
+  <select id="gender" name="gender" required>
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+  <label for="country">Country of Residence</label>
+  <input type="text" id="country" name="country" required>
+
+
+
+  <label for="symptoms">Current Symptoms or Complaints</label>
+  <textarea id="symptoms" name="symptoms"></textarea>
+
+  <div class="file-upload">
+    <label for="reports">Upload Your Reports</label>
+    <input type="file" id="reports" name="reports[]" multiple accept=".pdf,.jpg,.jpeg,.png,.zip" aria-describedby="file-help" />
+    <p id="file-help">Allowed formats: PDF, JPG, PNG, ZIP (max 20MB total)</p>
+  </div>
+
+  
+
+  <label for="questions">Any Questions?</label>
+  <textarea id="questions" name="questions"></textarea>
+
+  <div class="checkbox-group">
+    <div class="checkbox-item">
+      <input type="checkbox" id="confirm-accuracy" name="confirm-accuracy" required>
+      <label for="confirm-accuracy">I confirm the info is accurate.</label>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" id="preliminary-opinion" name="preliminary-opinion" required>
+      <label for="preliminary-opinion">I understand this is a preliminary opinion.</label>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">I consent to use my medical info.</label>
+    </div>
+  </div>
+
+                <button type="submit" id="submitBtn" class="submit-btn">Submit & Get Expert Opinion</button>
+            </form>
+        </aside>
+        </div>
+    </main>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const cancerType = document.getElementById('cancer-type');
+  const otherInput = document.getElementById('other-cancer');
+
+  cancerType.addEventListener('change', function () {
+    otherInput.style.display = this.value === 'other' ? 'block' : 'none';
+  });
+});
+</script>
+
+
+   
+
+    <script>
+        // Accordion functionality with keyboard support
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            // Get existing ARIA attributes or set defaults
+            var panel = acc[i].nextElementSibling;
+            if (panel && panel.classList.contains("panel")) {
+                var controlsId = acc[i].getAttribute("aria-controls");
+                if (!controlsId) {
+                    acc[i].setAttribute("aria-controls", "panel-" + i);
+                    panel.setAttribute("id", "panel-" + i);
+                }
+                if (!panel.getAttribute("aria-labelledby")) {
+                    var buttonId = acc[i].id || "accordion-" + i;
+                    acc[i].id = buttonId;
+                    panel.setAttribute("aria-labelledby", buttonId);
+                }
+            }
+            
+            // Ensure aria-expanded is set
+            if (!acc[i].hasAttribute("aria-expanded")) {
+                acc[i].setAttribute("aria-expanded", "false");
+            }
+            
+            // Click handler
+            acc[i].addEventListener("click", function() {
+                var isActive = this.classList.contains("active");
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                this.setAttribute("aria-expanded", !isActive);
+                
+                if (panel && panel.classList.contains("panel")) {
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                        panel.setAttribute("hidden", "true");
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        panel.removeAttribute("hidden");
+                    }
+                }
+            });
+            
+            // Keyboard navigation (Enter and Space)
+            acc[i].addEventListener("keydown", function(e) {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        }
+        
+        // Tab functionality with keyboard navigation and ARIA support
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            
+            // Handle both click and keyboard events
+            var targetButton = evt.currentTarget || evt.target;
+            
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+                tabcontent[i].setAttribute("hidden", "true");
+            }
+            
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+                tabbuttons[i].setAttribute("aria-selected", "false");
+                tabbuttons[i].setAttribute("tabindex", "-1");
+            }
+            
+            var selectedTab = document.getElementById(tabName);
+            if (selectedTab) {
+                selectedTab.classList.add("active");
+                selectedTab.removeAttribute("hidden");
+            }
+            
+            targetButton.classList.add("active");
+            targetButton.setAttribute("aria-selected", "true");
+            targetButton.setAttribute("tabindex", "0");
+        }
+        
+        // Add keyboard navigation for tabs (Arrow keys)
+        document.addEventListener("DOMContentLoaded", function() {
+            var tabLists = document.querySelectorAll('[role="tablist"]');
+            tabLists.forEach(function(tabList) {
+                var tabs = tabList.querySelectorAll('[role="tab"]');
+                tabs.forEach(function(tab, index) {
+                    tab.addEventListener("keydown", function(e) {
+                        var currentIndex = Array.from(tabs).indexOf(this);
+                        var nextIndex;
+                        
+                        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+                            e.preventDefault();
+                            nextIndex = (currentIndex + 1) % tabs.length;
+                        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+                            e.preventDefault();
+                            nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+                        } else if (e.key === "Home") {
+                            e.preventDefault();
+                            nextIndex = 0;
+                        } else if (e.key === "End") {
+                            e.preventDefault();
+                            nextIndex = tabs.length - 1;
+                        }
+                        
+                        if (nextIndex !== undefined) {
+                            var tabId = tabs[nextIndex].getAttribute("aria-controls");
+                            if (tabId) {
+                                openTab({currentTarget: tabs[nextIndex], target: tabs[nextIndex]}, tabId);
+                                tabs[nextIndex].focus();
+                            }
+                        }
+                    });
+                });
+            });
+        });
+        
+        // Tab functionality for full width section
+        function openTabFull(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            tabbuttons = document.querySelectorAll(".full-width-section .tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        
+        // Show/hide other cancer type field
+        var cancerTypeEl = document.getElementById("cancer-type");
+        if (cancerTypeEl) {
+            cancerTypeEl.addEventListener("change", function() {
+                var otherField = document.getElementById("other-cancer");
+                if (otherField) {
+                    if (this.value === "other") {
+                        otherField.style.display = "block";
+                        otherField.required = true;
+                    } else {
+                        otherField.style.display = "none";
+                        otherField.required = false;
+                    }
+                }
+            });
+        }
+    </script>
+
+    <!-- Form submission handling -->
+    <script>
+        const form = document.getElementById('international-second-opinion');
+        const clientErrors = document.getElementById('clientErrors');
+        const formStatus = document.getElementById('form-status');
+
+        // Function to clear/reset the international patients form
+        function clearInternationalPatientsForm() {
+            // Clear all form fields explicitly
+            document.getElementById('full-name').value = '';
+            document.getElementById('age').value = '';
+            document.getElementById('mobile').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('gender').value = '';
+            document.getElementById('country').value = '';
+            document.getElementById('symptoms').value = '';
+            document.getElementById('questions').value = '';
+            
+            // Clear file input (reset doesn't clear file inputs)
+            const reportsInput = document.getElementById('reports');
+            if (reportsInput) {
+                reportsInput.value = '';
+            }
+            
+            // Clear checkboxes
+            document.getElementById('confirm-accuracy').checked = false;
+            document.getElementById('preliminary-opinion').checked = false;
+            document.getElementById('consent').checked = false;
+            
+            // Clear any error messages
+            if (clientErrors) {
+                clientErrors.textContent = '';
+            }
+        }
+
+        // Form submission handler
+        form.addEventListener('submit', function(e) {
+            clientErrors.textContent = "";
+            let errors = [];
+
+            // Client-side validation
+            if (!form.checkValidity()) {
+                errors.push("Please complete all required fields correctly.");
+            }
+
+            const mobile = document.getElementById('mobile').value.trim();
+            if (mobile && !/^\+?[0-9\s\-]{7,15}$/.test(mobile)) {
+                errors.push("Enter a valid mobile number with country code.");
+            }
+
+            const ageVal = parseInt(document.getElementById('age').value, 10);
+            if (isNaN(ageVal) || ageVal < 1 || ageVal > 120) {
+                errors.push("Please enter a valid age (1-120).");
+            }
+
+            // Check checkboxes
+            if (!document.getElementById('confirm-accuracy').checked) {
+                errors.push("Please confirm the accuracy of your information.");
+            }
+            if (!document.getElementById('preliminary-opinion').checked) {
+                errors.push("Please acknowledge that this is a preliminary opinion.");
+            }
+            if (!document.getElementById('consent').checked) {
+                errors.push("Please provide consent to use your medical information.");
+            }
+
+            if (errors.length) {
+                e.preventDefault();
+                clientErrors.innerHTML = errors.map(x => `• ${x}`).join("<br>");
+                formStatus.className = "banner error";
+                formStatus.style.backgroundColor = "#f8d7da";
+                formStatus.style.color = "#721c24";
+                formStatus.style.border = "1px solid #f5c6cb";
+                formStatus.textContent = "Please fix the issues and try again.";
+                formStatus.style.display = 'block';
+                formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                return false;
+            }
+
+            // Prevent default form submission and use AJAX
+            e.preventDefault();
+            
+            // Show submitting status
+            formStatus.className = "banner success";
+            formStatus.style.backgroundColor = "#d4edda";
+            formStatus.style.color = "#155724";
+            formStatus.style.border = "1px solid #c3e6cb";
+            formStatus.textContent = "Submitting your request…";
+            formStatus.style.display = 'block';
+            
+            // Disable submit button
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Submitting...';
+            
+            // Create FormData object
+            const formData = new FormData(form);
+            
+            // Submit via AJAX
+            fetch('international-patients.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Check if response is JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    // Handle non-JSON response (legacy error format)
+                    return response.text().then(text => ({
+                        status: response.ok ? 'success' : 'error',
+                        message: text || 'An error occurred'
+                    }));
+                }
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    
+                    
+                     if (typeof gtag === 'function') {
+    gtag('event', 'international_patient_submit', {
+      transport_type: 'beacon'
+    });
+  }
+                    // Show success popup (blocking - waits for user to click OK)
+                    alert('✓ ' + data.message);
+                    
+                    // After user clicks OK on alert, clear the form
+                    clearInternationalPatientsForm();
+                    
+                    // Hide status banner
+                    formStatus.style.display = 'none';
+                    
+                    // Scroll to top of form
+                    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    // Show error popup
+                    alert('✗ Error: ' + data.message);
+                    
+                    // Show error in form
+                    formStatus.className = "banner error";
+                    formStatus.style.backgroundColor = "#f8d7da";
+                    formStatus.style.color = "#721c24";
+                    formStatus.style.border = "1px solid #f5c6cb";
+                    formStatus.textContent = data.message;
+                    formStatus.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('✗ An error occurred while submitting your request. Please try again later.');
+                formStatus.className = "banner error";
+                formStatus.style.backgroundColor = "#f8d7da";
+                formStatus.style.color = "#721c24";
+                formStatus.style.border = "1px solid #f5c6cb";
+                formStatus.textContent = "An error occurred. Please try again.";
+                formStatus.style.display = 'block';
+            })
+            .finally(() => {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <!-- Photo Carousel Section -->
+    <section class="photo-carousel-section" aria-label="International Patient Wards Gallery">
+        <div class="carousel-container">
+            <h2 class="carousel-heading">International Patient Wards & Dedicated Floor</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Previous image">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="carousel-slides">
+                    <div class="carousel-slide active">
+                        <img src="../Images/international-caro-1.webp" alt="International Patient Ward 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../Images/international-caro-2.webp" alt="International Patient Ward 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../Images/international-caro-3.webp" alt="International Patient Ward 3" class="carousel-image">
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" aria-label="Next image">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+                <div class="carousel-indicators" role="tablist" aria-label="Carousel navigation">
+                    <button class="carousel-indicator active" aria-label="Go to slide 1" data-slide="0" role="tab" aria-selected="true"></button>
+                    <button class="carousel-indicator" aria-label="Go to slide 2" data-slide="1" role="tab" aria-selected="false"></button>
+                    <button class="carousel-indicator" aria-label="Go to slide 3" data-slide="2" role="tab" aria-selected="false"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Photo Carousel JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const prevBtn = document.querySelector('.carousel-btn-prev');
+            const nextBtn = document.querySelector('.carousel-btn-next');
+            let currentSlide = 0;
+            let autoSlideInterval;
+            
+            // Function to show a specific slide
+            function showSlide(index) {
+                // Remove active class from all slides and indicators
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => {
+                    indicator.classList.remove('active');
+                    indicator.setAttribute('aria-selected', 'false');
+                });
+                
+                // Add active class to current slide and indicator
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                indicators[index].setAttribute('aria-selected', 'true');
+                
+                currentSlide = index;
+            }
+            
+            // Function to go to next slide
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+            
+            // Function to go to previous slide
+            function prevSlide() {
+                const prev = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prev);
+            }
+            
+            // Auto-advance slides
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            }
+            
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+            
+            // Event listeners for navigation buttons
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function() {
+                    nextSlide();
+                    stopAutoSlide();
+                    startAutoSlide(); // Restart auto-slide
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function() {
+                    prevSlide();
+                    stopAutoSlide();
+                    startAutoSlide(); // Restart auto-slide
+                });
+            }
+            
+            // Event listeners for indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    showSlide(index);
+                    stopAutoSlide();
+                    startAutoSlide(); // Restart auto-slide
+                });
+                
+                // Keyboard navigation for indicators
+                indicator.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        showSlide(index);
+                        stopAutoSlide();
+                        startAutoSlide();
+                    }
+                });
+            });
+            
+            // Pause auto-slide on hover
+            const carouselWrapper = document.querySelector('.carousel-wrapper');
+            if (carouselWrapper) {
+                carouselWrapper.addEventListener('mouseenter', stopAutoSlide);
+                carouselWrapper.addEventListener('mouseleave', startAutoSlide);
+            }
+            
+            // Keyboard navigation (Arrow keys)
+            document.addEventListener('keydown', function(e) {
+                if (carouselWrapper && document.activeElement.closest('.carousel-wrapper')) {
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        nextSlide();
+                        stopAutoSlide();
+                        startAutoSlide();
+                    } else if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        prevSlide();
+                        stopAutoSlide();
+                        startAutoSlide();
+                    }
+                }
+            });
+            
+            // Start auto-slide on page load
+            startAutoSlide();
+        });
+    </script>
+
+    <!-- Footer and Chatbox Scripts -->
+    <script src="../footer.js"></script>
+    <script src="../chatbox.js"></script>
+    <script src="../footer-main.js"></script>
+</body>
+</html>

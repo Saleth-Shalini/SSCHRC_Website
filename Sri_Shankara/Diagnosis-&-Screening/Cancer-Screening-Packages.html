@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <!-- Header will be dynamically generated here -->
+    <header id="dynamic-header"></header>
+    
+    <!-- Header JavaScript -->
+    <script src="../header.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Screening Packages - Complete Medical Check-ups</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script>
+    <style>
+        /* Custom Styles - Using Approved Brand Colors Only */
+        :root {
+          --primary-green: #014196;
+          --primary-orange: #079591;
+          --light-green: #014196;
+          --light-orange: #079591;
+          --dark-green: #014196;
+          --dark-orange: #079591;
+          --bg-light: #F0FFF0;
+          --bg-orange-light: #FFF5F0;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          background: linear-gradient(135deg, #f9fafb 0%, #ffffff 50%, #f9fafb 100%);
+          min-height: 100vh;
+        }
+
+        /* FIXED: Modal overlay with highest z-index to ensure it's above all header/nav elements */
+        .modal-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 99999 !important; /* Ensure modal is above all elements */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+        }
+
+        /* FIXED: Modal container with proper positioning */
+        .modal-container {
+          background: white;
+          border-radius: 0.5rem;
+          max-width: 28rem;
+          width: 100%;
+          max-height: 90vh;
+          overflow-y: auto;
+          position: relative;
+          z-index: 100000;
+        }
+
+        /* FIXED: Prevent body scroll when modal is open */
+        body.modal-open {
+          overflow: hidden;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+
+        .animate-fadeInUp {
+          animation: fadeInUp 0.6s ease-out;
+        }
+
+        .animate-slideInLeft {
+          animation: slideInLeft 0.6s ease-out;
+        }
+
+        .animate-pulse {
+          animation: pulse 2s infinite;
+        }
+
+        /* Header Styles */
+        .header-gradient {
+          background: linear-gradient(135deg, #014196, #079591);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .header-gradient::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+          0% {
+            left: -100%;
+          }
+          100% {
+            left: 100%;
+          }
+        }
+
+        /* Navigation Dropdown */
+        .nav-dropdown {
+          position: relative;
+        }
+
+        .nav-dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          min-width: 280px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          transition: all 0.3s ease;
+          z-index: 1000;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        /* Package Cards */
+        .package-card {
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .package-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: linear-gradient(135deg, #014196, #079591);
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+
+        .package-card:hover::before {
+          transform: scaleX(1);
+        }
+
+        .package-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-card.expanded {
+          transform: scale(1);
+        }
+
+        /* Icon Container - Base Styles */
+        .icon-container {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 28px;
+          color: white;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Unique Icon Styles - Gradient Variations */
+        .icon-container.gradient-primary {
+          background: linear-gradient(135deg, #014196, #079591);
+          border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .icon-container.gradient-reverse {
+          background: linear-gradient(135deg, #079591, #014196);
+          border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .icon-container.gradient-radial {
+          background: radial-gradient(circle at 30% 30%, #079591, #014196);
+          border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .icon-container.gradient-diagonal {
+          background: linear-gradient(45deg, #014196 0%, #079591 50%, #014196 100%);
+          background-size: 200% 200%;
+          animation: gradientShift 3s ease infinite;
+          border: 3px solid rgba(255, 255, 255, 0.25);
+        }
+
+        @keyframes gradientShift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+
+        .icon-container.gradient-vertical {
+          background: linear-gradient(180deg, #014196, #079591);
+          border: 3px solid rgba(255, 255, 255, 0.3);
+          box-shadow: 0 6px 20px rgba(1, 65, 150, 0.3);
+        }
+
+        .icon-container.gradient-horizontal {
+          background: linear-gradient(90deg, #014196, #079591);
+          border: 3px solid rgba(255, 255, 255, 0.3);
+          box-shadow: 0 6px 20px rgba(7, 149, 145, 0.3);
+        }
+
+        .icon-container.gradient-conic {
+          background: conic-gradient(from 45deg, #014196, #079591, #014196);
+          border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .icon-container.gradient-diamond {
+          background: linear-gradient(135deg, #014196, #079591);
+          border: 3px solid rgba(255, 255, 255, 0.4);
+          box-shadow: 
+            0 0 0 2px rgba(255, 255, 255, 0.1),
+            0 8px 25px rgba(1, 65, 150, 0.25);
+        }
+
+        .icon-container.gradient-pulse {
+          background: linear-gradient(135deg, #014196, #079591);
+          border: 3px solid rgba(255, 255, 255, 0.3);
+          animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+          0%, 100% { 
+            transform: scale(1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          }
+          50% { 
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(1, 65, 150, 0.3);
+          }
+        }
+
+        .icon-container.gradient-shine {
+          background: linear-gradient(135deg, #014196, #079591);
+          border: 3px solid rgba(255, 255, 255, 0.3);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .icon-container.gradient-shine::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: linear-gradient(
+            45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 70%
+          );
+          animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+          0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+          100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        /* Hover Effects */
+        .package-card:hover .icon-container {
+          transform: translateY(-5px) scale(1.1);
+          box-shadow: 0 8px 30px rgba(1, 65, 150, 0.4);
+        }
+
+        .package-card:hover .icon-container::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          transform: scale(1.5);
+          opacity: 0;
+          animation: ripple 0.6s ease-out;
+        }
+
+        @keyframes ripple {
+          0% {
+          transform: scale(0);
+            opacity: 1;
+        }
+          100% {
+          transform: scale(1.5);
+          opacity: 0;
+          }
+        }
+
+        /* Test List Styles */
+        .test-list {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease;
+        }
+
+        .test-list.expanded {
+          max-height: 2000px;
+        }
+
+        .test-item {
+          padding: 12px 16px;
+          background: #FAFAFA;
+          border-radius: 8px;
+          margin-bottom: 8px;
+          border-left: 3px solid transparent;
+          transition: all 0.3s ease;
+          transform: translateX(-20px);
+          opacity: 0;
+          animation: slideInLeft 0.4s ease forwards;
+        }
+
+        .test-item:hover {
+          background: #F0F0F0;
+          border-left-color: #014196;
+          transform: translateX(4px);
+        }
+
+        .test-list.expanded .test-item {
+          transform: translateX(0);
+          opacity: 1;
+        }
+
+        /* Compare Mode */
+        .compare-mode .package-card {
+          border: 2px solid transparent;
+          transition: all 0.3s ease;
+        }
+
+        .compare-mode .package-card.selected {
+          border-color: #014196;
+          background: #f9fafb;
+        }
+
+        .compare-mode .package-card.selected .icon-container {
+          animation: pulse 2s infinite;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+          background: white;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th {
+          background: linear-gradient(135deg, #014196, #079591);
+          color: white;
+          padding: 16px;
+          text-align: left;
+          font-weight: 600;
+        }
+
+        .comparison-table td {
+          padding: 12px 16px;
+          border-bottom: 1px solid #E0E0E0;
+        }
+
+        .comparison-table tr:hover {
+          background: #FAFAFA;
+        }
+
+        .comparison-table .check-mark {
+          color: #014196;
+          font-size: 20px;
+        }
+
+        .comparison-table .cross-mark {
+          color: #CCC;
+          font-size: 20px;
+        }
+
+        /* Search Bar */
+        .search-container {
+          position: relative;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .search-input {
+          width: 100%;
+          padding: 16px 20px 16px 50px;
+          border: 2px solid #E0E0E0;
+          border-radius: 50px;
+          font-size: 16px;
+          transition: all 0.3s ease;
+          background: white;
+        }
+
+        .search-input:focus {
+          outline: none;
+          border-color: #014196;
+          box-shadow: 0 0 0 4px rgba(1, 65, 150, 0.1);
+        }
+
+        .search-icon {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #999;
+          font-size: 18px;
+        }
+
+        .search-suggestions {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          margin-top: 8px;
+          max-height: 300px;
+          overflow-y: auto;
+          z-index: 100;
+        }
+
+        .search-suggestion-item {
+          padding: 12px 20px;
+          cursor: pointer;
+          transition: background 0.2s ease;
+        }
+
+        .search-suggestion-item:hover {
+          background: #f9fafb;
+        }
+
+        /* Filter Tags */
+        .filter-tag {
+          display: inline-block;
+          padding: 8px 16px;
+          background: white;
+          border: 2px solid #E0E0E0;
+          border-radius: 50px;
+          margin: 4px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .filter-tag:hover {
+          border-color: #014196;
+          background: #f9fafb;
+        }
+
+        .filter-tag.active {
+          background: linear-gradient(135deg, #014196, #079591);
+          color: white;
+          border-color: #014196;
+        }
+
+        /* View Toggle Buttons */
+        .view-toggle {
+          display: inline-flex;
+          background: white;
+          border-radius: 50px;
+          padding: 4px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .view-toggle button {
+          padding: 8px 20px;
+          border: none;
+          background: transparent;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-weight: 500;
+        }
+
+        .view-toggle button.active {
+          background: linear-gradient(135deg, #014196, #079591);
+          color: white;
+        }
+
+        /* Mobile: hide View 1/View 2 toggle and always use View 1 (grid) */
+        @media (max-width: 768px) {
+          .view-toggle {
+            display: none !important;
+          }
+        }
+
+        /* Stats Card */
+        .stats-card {
+          background: white;
+          border-radius: 12px;
+          padding: 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+          text-align: center;
+          transition: all 0.3s ease;
+        }
+
+        .stats-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .stats-number {
+          font-size: 36px;
+          font-weight: bold;
+          background: linear-gradient(135deg, #014196, #079591);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .nav-dropdown-menu {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            border-radius: 0;
+          }
+          
+          .comparison-table {
+            display: block;
+            overflow-x: auto;
+          }
+        }
+
+        /* FIXED: Hidden class utility */
+        .hidden {
+          display: none !important;
+        }
+
+        /* Footer Social Media Icons - Ensure proper display */
+        #hospital-footer .social-links {
+          display: flex !important;
+          gap: 16px !important;
+          flex-wrap: nowrap !important;
+          align-items: center !important;
+          white-space: nowrap !important;
+        }
+
+        #hospital-footer .social-link {
+          width: 40px !important;
+          height: 40px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: rgba(255, 255, 255, 0.1) !important;
+          color: rgba(255, 255, 255, 0.7) !important;
+          text-decoration: none !important;
+          transition: all 0.3s ease !important;
+          position: relative !important;
+        }
+
+        #hospital-footer .social-link:hover {
+          color: #079591 !important;
+          background: rgba(7, 149, 145, 0.2) !important;
+          transform: scale(1.1) !important;
+        }
+
+        #hospital-footer .social-link i,
+        #hospital-footer .social-link .fab,
+        #hospital-footer .social-link .fas {
+          font-size: 20px !important;
+          line-height: 1 !important;
+          display: inline-block !important;
+          font-style: normal !important;
+          font-variant: normal !important;
+          text-rendering: auto !important;
+          -webkit-font-smoothing: antialiased !important;
+        }
+
+        /* Ensure Font Awesome icons are visible and properly styled */
+        #hospital-footer .social-link .fa-facebook-f:before {
+          content: "\f39e" !important;
+        }
+
+        #hospital-footer .social-link .fa-twitter:before {
+          content: "\f099" !important;
+        }
+
+        #hospital-footer .social-link .fa-linkedin-in:before {
+          content: "\f0e1" !important;
+        }
+
+        #hospital-footer .social-link .fa-youtube:before {
+          content: "\f167" !important;
+        }
+
+        #hospital-footer .social-link .fa-instagram:before {
+          content: "\f16d" !important;
+        }
+    </style>
+    
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9EM0LW3CT3');
+</script>
+</head>
+<body>
+    <!-- Banner Section -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <!-- Desktop Background Image (16:9) -->
+            <img 
+                src="../Banners/Diagnostics-&-screening/Screening.jpg" 
+                alt="Breast Cancer Centre of Excellence"
+                class="hospital-banner-background desktop"
+            >
+            
+            <!-- Mobile Background Image (16:9) -->
+            <img 
+                src="../Banners/Diagnostics-&-screening/Screening.jpg" 
+                alt="Breast Cancer Centre of Excellence"
+                class="hospital-banner-background mobile"
+            >
+            
+            <!-- Gradient Overlay -->
+            <div class="hospital-banner-overlay"></div>
+            
+            <!-- Logo Section -->
+            <div class="hospital-banner-logo">
+            </div>
+            
+            <!-- Banner Content -->
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Text Content (Below Banner) -->
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="../Doctors/Cancer-Specialists.html" class="hospital-banner-cta">Consult our Cancer Specialists </a>
+        </div>
+    </div>
+    <div id="app"></div>
+    
+    <!-- FIXED: Modal moved to body root with proper structure -->
+    <div id="bookingModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-container">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-gray-800" id="modalTitle">Book Health Package</h3>
+                    <button onclick="closeBookingModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close modal">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-4 p-3 bg-gray-50 rounded-lg">
+                    <div class="flex items-center">
+                        <div id="modalIcon" class="icon-container mr-3" style="width: 40px; height: 40px; font-size: 16px;">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div>
+                            <h4 id="modalPackageName" class="font-semibold">Package Name</h4>
+                            <p id="modalPackageTests" class="text-sm text-gray-600">0 tests included</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                        <input type="text" id="patientName" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#014196] focus:border-[#014196]" placeholder="Enter your full name">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+                        <input type="tel" id="patientPhone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#014196] focus:border-[#014196]" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="patientEmail" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#014196] focus:border-[#014196]" placeholder="Enter your email">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Age *</label>
+                        <input type="number" id="patientAge" required min="1" max="120" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#014196] focus:border-[#014196]" placeholder="Enter your age">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Gender *</label>
+                        <select id="patientGender" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#014196] focus:border-[#014196]">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#014196] focus:border-[#014196]">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Special Instructions</label>
+                        <textarea id="specialInstructions" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#014196] focus:border-[#014196]" placeholder="Any special requests or medical conditions we should know about?"></textarea>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 mt-6">
+                    <button onclick="closeBookingModal()" class="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition">
+                        Cancel
+                    </button>
+                    <button onclick="submitBooking()" class="flex-1 px-4 py-2 text-white rounded-md transition" style="background: linear-gradient(135deg, #014196, #079591);" onmouseover="this.style.background='linear-gradient(135deg, #079591, #014196)'" onmouseout="this.style.background='linear-gradient(135deg, #014196, #079591)'">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Book Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Health Packages Web Application
+        let packages = [];
+        let filteredPackages = [];
+        let selectedPackages = new Set();
+        let currentView = 'list';
+        let compareMode = false;
+        let expandedCards = new Set();
+
+        // Health packages data
+        const healthPackages = [
+          {
+            id: 'basic',
+            name: 'Basic Health Package',
+            icon: 'fa-heartbeat',
+            color: '#014196',
+            description: 'Essential health screening for overall wellness',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'ESR',
+              'FBS',
+              'PPBS',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Urine Routine',
+              'Serum Creatinine',
+              'TSH',
+              'Stool (Occult Blood)',
+              'X-ray (Chest)',
+              'Ultrasound (Abdomen & Pelvis)',
+              'ECG',
+              '2D Echo',
+              'Physician Consultation',
+              'Dietician Consultation'
+            ]
+          },
+          {
+            id: 'bone-joint',
+            name: 'Bone & Joint Health Package',
+            icon: 'fa-bone',
+            color: '#079591',
+            description: 'Comprehensive screening for bone and joint health',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'ESR',
+              'CRP',
+              'Vitamin D3',
+              'Serum Calcium',
+              'RA Factor',
+              'Anti-CCP',
+              'Uric Acid',
+              'X-ray',
+              'Parathyroid Hormone (PTH)',
+              'Orthopaedician Consultation',
+              'Dietician Consultation'
+            ]
+          },
+          {
+            id: 'cancer',
+            name: 'Cancer Screening Package',
+            icon: 'fa-ribbon',
+            color: '#014196',
+            description: 'Early detection and screening for various cancers',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Plateletcount, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'ESR',
+              'Peripheral Smear',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Stool (Occult Blood)',
+              'Urine Routine',
+              'Total PSA (Male Only)',
+              'X-ray (Chest)',
+              'Ultrasound (Abdomen & Pelvis)',
+              'ECG',
+              'Pap Smear (Female only)',
+              'B/L Mammogram (Female only)',
+              'Onco-Physician Consultation',
+              'Dietician Consultation'
+            ]
+          },
+          {
+            id: 'women',
+            name: "Women's Health Package",
+            icon: 'fa-female',
+            color: '#079591',
+            description: 'Specialized health screening for women',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'ESR',
+              'Peripheral Smear',
+              'HbA1c',
+              'FBS',
+              'PPBS',
+              'Thyroid Profile (T3, T4, TSH)',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Lipid Profile: Total Cholesterol, Triglycerides, HDL, LDL, VLDL',
+              'Renal Function Test: Blood Urea, Creatinine, Serum Electrolytes',
+              'Serum Calcium',
+              'Vitamin D3',
+              'Vitamin B12',
+              'CA-125',
+              'CA-15.3',
+              'Stool (Occult Blood)',
+              'Urine Routine',
+              'Pap Smear',
+              'B/L Mammogram',
+              'Ultrasound (Abdomen & Pelvis)',
+              'ECG',
+              '2D Echo',
+              'DEXA Scan',
+              'Physician Consultation',
+              'Dietician Consultation',
+              'Gynaec Consultation'
+            ]
+          },
+          {
+            id: 'cardiac',
+            name: 'Cardiac Health Package',
+            icon: 'fa-heart',
+            color: '#014196',
+            description: 'Complete cardiovascular health assessment',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'HbA1c',
+              'FBS',
+              'PPBS',
+              'hsCRP',
+              'Lipid Profile: Total Cholesterol, Triglycerides, HDL, LDL, VLDL',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Renal Function Test: Blood Urea, Creatinine, Serum Electrolytes',
+              'Thyroid Profile (T3, T4, TSH)',
+              'Homocysteine levels',
+              'ECG',
+              '2D Echo',
+              'TMT',
+              'X-ray (Chest)',
+              'Cardialogist Consultation',  
+              'Dietician Consultation',
+              'Physician Consultation'
+            ]
+          },
+          {
+            id: 'children',
+            name: "Children's Health Package",
+            icon: 'fa-child',
+            color: '#079591',
+            description: 'Pediatric health screening and wellness check',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'FBS',
+              'PPBS',
+              'ESR',
+              'Peripheral Smear',
+              'Monteux Test',
+              'Lipid Profile: Total Cholesterol, Triglycerides, HDL, LDL, VLDL',
+              'Urine Routine',
+              'Stool Routine',
+              'X-ray (Chest)',
+              'Ultrasound (Abdomen & Pelvis)',
+              'Eye Check-Up',
+              'Ear Check-Up',
+              'Dental Check-Up',
+              'Paediatrician Consultation'
+            ]
+          },
+          {
+            id: 'comprehensive',
+            name: 'Comprehensive Health Package',
+            icon: 'fa-shield-alt',
+            color: '#014196',
+            description: 'Most extensive health screening package',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'ESR',
+              'Peripheral Smear',
+              'HbA1c',
+              'FBS',
+              'PPBS',
+              'TSH',
+              'Renal Function Test: Blood Urea, Creatinine, Serum Electrolytes',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Vitamin D3',
+              'Vitamin B12',
+              'Uric Acid',
+              'HBsAG',
+              'Lipid Profile: Total Cholesterol, Triglycerides, HDL, LDL, VLDL',
+              'Stool (Occult Blood)',
+              'Urine Routine',
+              'Pap Smear (Female only)',
+              'Total PSA (Male only)',
+              'Ultrasound (Abdomen & Pelvis)',
+              '2D Echo',
+              'ECG',
+              'X-ray (Chest)',
+              'B/L Mammagram (Female only)',
+              'Physician Consultation',
+              'Dietician Consultation'
+            ]
+          },
+          {
+            id: 'pulmonary',
+            name: 'Pulmonary Health Package',
+            icon: 'fa-lungs',
+            color: '#079591',
+            description: 'Respiratory and lung health assessment',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'ESR',
+              'RBS',
+              'X-ray (Chest)',
+              'Pulmonary Function Test (PFT)',
+              'ECG',
+              '2D Echo',
+              'AEC',
+              'Physician / Pulmonologist Consultation'
+            ]
+          },
+          {
+            id: 'diabetics',
+            name: 'Diabetics Health Package',
+            icon: 'fa-tint',
+            color: '#014196',
+            description: 'Specialized care for diabetes management',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'HbA1c',
+              'FBS',  
+              'PPBS',
+              'Lipid Profile: Total Cholesterol, Triglycerides, HDL, LDL, VLDL',
+              'Thyroid Profile (T3, T4, TSH)',
+              'Renal Function Test: Blood Urea, Creatinine, Serum Electrolytes',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Urine Routine',
+              'Urinary Microalbuminuria',
+              'ECG',
+              '2D Echo',
+              'ESR',
+              'Eye Check-Up (Vision Screening, Fundoscopy)',
+              'Foot Screening',
+              'Physician consultation',
+              'Dietician Consulatation'
+            ]
+          },
+          {
+            id: 'executive',
+            name: 'Executive Health Check-Up Package',
+            icon: 'fa-briefcase',
+            color: '#079591',
+            description: 'Premium health screening for executives',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'ESR',
+              'Peripheral Smear',
+              'HbA1c',
+              'FBS',
+              'PPBS',
+              'TSH',
+              'Renal Function Test: Blood Urea, Creatinine, Serum Electrolytes',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Vitamin D3',
+              'Vitamin B12',
+              'Uric Acid',
+              'Lipid Profile: Total Cholesterol, Triglycerides, HDL, LDL, VLDL',
+              'Stool (Occult Blood)',
+              'Urine Routine',
+              'Pap Smear (Female only)',
+              'Total PSA (Male only)',
+              'Ultrasound (Abdomen & Pelvis)',
+              '2D Echo',
+              'ECG',
+              'X-ray (Chest)',
+              'B/L Mammogram (Female only)',
+              'Physician Consultation',
+              'Dietician Consultation'
+            ]
+          },
+          {
+            id: 'ncds',
+            name: 'Non-Communicable Diseases (NCDs) Health Package',
+            icon: 'fa-user-shield',
+            color: '#014196',
+            description: 'Screening for non-communicable diseases',
+            tests: [
+              'Complete Blood Count (CBC): HB, PCV, TC, DC, RBC, Platelet Count, MCV, MCH, MCHC',
+              'Blood Group & Rh Type',
+              'ESR',
+              'Peripheral Smear',
+              'HbA1c',
+              'FBS',
+              'PPBS',
+              'TSH',
+              'Liver Function Test: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, Total Protein, Albumin, Globulin, A/G Ratio, SGOT/AST, SGPT/ALT, Alkaline Phosphate, GGT',
+              'Renal Function Test: Blood Urea, Creatinine, Serum Electrolytes',
+              'Lipid Profile: Total Cholesterol, Triglycerides, HDL, LDL, VLDL',
+              'Stool (Occult Blood)',
+              'Urine Routine',
+              'Vitamin D3',
+              'Vitamin B12',
+              'Pap Smear (Female only)',
+              'Total PSA (Male only)',
+              'Ultrasound (Abdomen & Pelvis)',
+              'ECG',
+              'X-ray (Chest)',
+              'B/L Mammogram (Female only)',
+              'Onco-Physician Consultation',
+              'Dietician Consultation'
+            ]
+          }
+        ];
+
+        // Force grid view (View 1) on mobile; View 2 not reliable on small screens
+        function ensureMobileView() {
+            if (typeof window !== 'undefined' && window.innerWidth <= 768 && currentView !== 'grid') {
+                currentView = 'grid';
+                return true;
+            }
+            return false;
+        }
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', async () => {
+            packages = healthPackages;
+            filteredPackages = [...packages];
+            if (ensureMobileView()) { /* will render with grid */ }
+            renderApp();
+            initializeEventListeners();
+            window.addEventListener('resize', () => { if (ensureMobileView()) renderApp(); });
+        });
+
+        // Main render function
+        function renderApp() {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                ${renderHeader()}
+                ${renderSearchBar()}
+                ${renderStats()}
+                ${renderViewToggle()}
+                ${renderPackagesSection()}
+                ${renderComparisonSection()}
+                ${renderFooter()}
+            `;
+        }
+
+        // Render header with navigation
+        function renderHeader() {
+            return `
+                
+            `;
+        }
+
+        // Render search bar
+        function renderSearchBar() {
+            return `
+                <div class="container mx-auto px-4 py-8">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            placeholder="Search for tests, packages, or conditions..."
+                            onkeyup="handleSearch(event)"
+                            id="searchInput"
+                        />
+                        <div class="search-suggestions hidden" id="searchSuggestions"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render filter tags
+        function renderFilterTags() {
+            const categories = [
+                { name: 'All', value: 'all', icon: 'fa-th' },
+                { name: 'Basic', value: 'basic', icon: 'fa-heartbeat' },
+                { name: 'Specialized', value: 'specialized', icon: 'fa-user-md' },
+                { name: 'Comprehensive', value: 'comprehensive', icon: 'fa-shield-alt' },
+                { name: 'Gender Specific', value: 'gender', icon: 'fa-venus-mars' }
+            ];
+
+            return `
+                <div class="container mx-auto px-4 pb-6">
+                    <div class="flex flex-wrap justify-center">
+                        ${categories.map(cat => `
+                            <span class="filter-tag ${cat.value === 'all' ? 'active' : ''}" onclick="filterByCategory('${cat.value}')">
+                                <i class="fas ${cat.icon} mr-2"></i>${cat.name}
+                            </span>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render stats section
+        function renderStats() {
+            return `
+                <div class="container mx-auto px-4 pb-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="stats-card animate-fadeInUp">
+                            <div class="stats-number">11</div>
+                            <div class="text-gray-600 mt-2">Health Packages</div>
+                        </div>
+                        
+                        <div class="stats-card animate-fadeInUp" style="animation-delay: 0.2s">
+                            <div class="stats-number">24/7</div>
+                            <div class="text-gray-600 mt-2">Support</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render view toggle
+        function renderViewToggle() {
+            return `
+                <div class="container mx-auto px-4 pb-6">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-2xl font-bold text-gray-800">Health Screening Packages</h2>
+                        <div class="view-toggle">
+                            <button class="${currentView === 'grid' ? 'active' : ''}" onclick="setView('grid')">
+                                <i class="fas fa-th mr-2"></i>View 1
+                            </button>
+                            <button class="${currentView === 'list' ? 'active' : ''}" onclick="setView('list')">
+                                <i class="fas fa-list mr-2"></i>View 2
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render packages section
+        function renderPackagesSection() {
+            return `
+                <div class="container mx-auto px-4 pb-12">
+                    <div class="${currentView === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-6'} ${compareMode ? 'compare-mode' : ''}" id="packagesContainer">
+                        ${filteredPackages.map((pkg, index) => renderPackageCard(pkg, index)).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Icon style mapping for unique visual identity
+        const iconStyleMap = {
+            'basic': 'gradient-primary',
+            'bone-joint': 'gradient-reverse',
+            'cancer': 'gradient-radial',
+            'women': 'gradient-diagonal',
+            'cardiac': 'gradient-vertical',
+            'children': 'gradient-horizontal',
+            'comprehensive': 'gradient-conic',
+            'pulmonary': 'gradient-diamond',
+            'diabetics': 'gradient-pulse',
+            'executive': 'gradient-shine',
+            'ncds': 'gradient-primary'
+        };
+
+        // Render individual package card
+        function renderPackageCard(pkg, index) {
+            const isExpanded = expandedCards.has(pkg.id);
+            const isSelected = selectedPackages.has(pkg.id);
+            const iconStyle = iconStyleMap[pkg.id] || 'gradient-primary';
+            
+            if (currentView === 'list') {
+                return `
+                    <div class="package-card ${isSelected ? 'selected' : ''} animate-fadeInUp" 
+                         style="animation-delay: ${index * 0.05}s"
+                         data-package-id="${pkg.id}"
+                         id="package-${pkg.id}">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center space-x-4">
+                                    <div class="icon-container ${iconStyle}">
+                                        <i class="fas ${pkg.icon}"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">${pkg.name}</h3>
+                                        <p class="text-gray-600 mt-1">${pkg.description}</p>
+                                        <p class="text-sm text-gray-500 mt-2">
+                                            <i class="fas fa-check-circle mr-1" style="color: #014196"></i>
+                                            ${pkg.tests.length} Tests Included
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <div class="flex space-x-2">
+                                    ${compareMode ? `
+                                        <button onclick="toggleSelection('${pkg.id}')" 
+                                                class="px-4 py-2 rounded-lg ${isSelected ? 'text-white' : 'bg-gray-200 text-gray-700'} transition"
+                                                style="${isSelected ? 'background: linear-gradient(135deg, #014196, #079591)' : ''}">
+                                            ${isSelected ? '<i class="fas fa-check"></i>' : 'Select'}
+                                        </button>
+                                    ` : ''}
+                                    <button onclick="toggleTests('${pkg.id}')" 
+                                            class="px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition">
+                                        <i class="fas fa-chevron-${isExpanded ? 'up' : 'down'} mr-2"></i>
+                                        ${isExpanded ? 'Hide' : 'View'} Tests
+                                    </button>
+                                    <button onclick="bookPackage('${pkg.id}')" 
+                                            class="px-4 py-2 text-white rounded-lg transition"
+                                            style="background: linear-gradient(135deg, #014196, #079591)">
+                                        Book Now
+                                    </button>
+                                    </div>
+                                    
+                                    <div class="text-right mt-2">
+                                        ${pkg.id === 'women' ? `
+                                            <span class="text-sm" style="font-weight: 600; color: #014196; background: rgba(1, 65, 150, 0.1); padding: 4px 12px; border-radius: 50px; border: 1px solid #014196;">Suitable for Women</span>
+                                        ` : pkg.id === 'children' ? `
+                                            <span class="text-sm" style="font-weight: 600; color: #079591; background: rgba(7, 149, 145, 0.1); padding: 4px 12px; border-radius: 50px; border: 1px solid #079591;">Suitable for Children</span>
+                                        ` : `
+                                            <span class="text-sm" style="font-weight: 600; color: #014196; background: rgba(1, 65, 150, 0.1); padding: 4px 12px; border-radius: 50px; border: 1px solid #014196;">Suitable for Male & Female</span>
+                                        `}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="test-list ${isExpanded ? 'expanded' : ''} mt-4" id="tests-${pkg.id}">
+                                <div class="grid gap-2 mt-4">
+                                    ${pkg.tests.map((test, i) => `
+                                        <div class="test-item" style="animation-delay: ${i * 0.03}s">
+                                            <i class="fas fa-vial text-gray-400 mr-3"></i>
+                                            ${test}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                return `
+                    <div class="package-card ${isExpanded ? 'expanded' : ''} ${isSelected ? 'selected' : ''} animate-fadeInUp" 
+                         style="animation-delay: ${index * 0.05}s"
+                         data-package-id="${pkg.id}"
+                         id="package-${pkg.id}">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="icon-container ${iconStyle}">
+                                    <i class="fas ${pkg.icon}"></i>
+                                </div>
+                                ${compareMode ? `
+                                    <button onclick="toggleSelection('${pkg.id}')" 
+                                            class="px-3 py-1 rounded-full ${isSelected ? 'text-white' : 'bg-gray-200 text-gray-700'} transition"
+                                            style="${isSelected ? 'background: linear-gradient(135deg, #014196, #079591)' : ''}">
+                                        ${isSelected ? '<i class="fas fa-check"></i>' : '+'}
+                                    </button>
+                                ` : ''}
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">${pkg.name}</h3>
+                            <p class="text-gray-600 text-sm mb-4">${pkg.description}</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-sm text-gray-500">
+                                    <i class="fas fa-check-circle mr-1" style="color: #014196"></i>
+                                    ${pkg.tests.length} Tests
+                                </span>
+                                <button onclick="toggleTests('${pkg.id}')" 
+                                        class="text-sm text-blue-600 hover:text-blue-700 transition">
+                                    ${isExpanded ? 'Hide' : 'View'} Details
+                                    <i class="fas fa-chevron-${isExpanded ? 'up' : 'down'} ml-1"></i>
+                                </button>
+                            </div>
+                            <div class="test-list ${isExpanded ? 'expanded' : ''}" id="tests-${pkg.id}">
+                                <div class="space-y-2 mt-4 pt-4 border-t">
+                                    ${pkg.tests.slice(0, isExpanded ? undefined : 3).map((test, i) => `
+                                        <div class="test-item text-sm" style="animation-delay: ${i * 0.03}s">
+                                            <i class="fas fa-check mr-2" style="color: #014196"></i>
+                                            ${test}
+                                        </div>
+                                    `).join('')}
+                                    ${!isExpanded && pkg.tests.length > 3 ? `
+                                        <div class="text-sm text-gray-500 italic">
+                                            +${pkg.tests.length - 3} more tests...
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                            <div class="flex justify-center mt-0">
+                                ${pkg.id === 'women' ? `
+                                    <span class="text-sm text-center" style="font-weight: 600; color: #014196; background: rgba(1, 65, 150, 0.1); padding: 4px 12px; border-radius: 50px; border: 1px solid #014196;">Suitable for Women</span>
+                                ` : pkg.id === 'children' ? `
+                                    <span class="text-sm text-center" style="font-weight: 600; color: #079591; background: rgba(7, 149, 145, 0.1); padding: 4px 12px; border-radius: 50px; border: 1px solid #079591;">Suitable for Children</span>
+                                ` : `
+                                    <span class="text-sm text-center" style="font-weight: 600; color: #014196; background: rgba(1, 65, 150, 0.1); padding: 4px 12px; border-radius: 50px; border: 1px solid #014196;">Suitable for Male & Female</span>
+                                `}
+                            </div>
+
+                            <button onclick="bookPackage('${pkg.id}')" 
+                                    class="w-full mt-4 px-4 py-2 text-white rounded-lg transition hover:opacity-90"
+                                    style="background: linear-gradient(135deg, #014196, #079591)">
+                                <i class="fas fa-calendar-check mr-2"></i>
+                                Book This Package
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Render comparison section
+        function renderComparisonSection() {
+            if (!compareMode || selectedPackages.size < 2) {
+                return '';
+            }
+
+            const selectedPkgs = Array.from(selectedPackages).map(id => packages.find(p => p.id === id));
+            const allTests = new Set();
+            selectedPkgs.forEach(pkg => pkg.tests.forEach(test => allTests.add(test)));
+
+            return `
+                <div class="container mx-auto px-4 pb-12">
+                    <h3 class="text-2xl font-bold mb-6">Package Comparison</h3>
+                    <div class="comparison-table overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th class="sticky left-0 z-10">Test Name</th>
+                                    ${selectedPkgs.map(pkg => `
+                                        <th class="text-center min-w-[150px]">
+                                            <i class="fas ${pkg.icon} mr-2"></i>
+                                            ${pkg.name}
+                                        </th>
+                                    `).join('')}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${Array.from(allTests).map(test => `
+                                    <tr>
+                                        <td class="font-medium sticky left-0 bg-white z-10">${test}</td>
+                                        ${selectedPkgs.map(pkg => `
+                                            <td class="text-center">
+                                                ${pkg.tests.includes(test) 
+                                                    ? '<i class="fas fa-check-circle check-mark"></i>' 
+                                                    : '<i class="fas fa-times-circle cross-mark"></i>'}
+                                            </td>
+                                        `).join('')}
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-6 flex justify-center space-x-4">
+                        <button onclick="clearComparison()" class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">
+                            Clear Comparison
+                        </button>
+                        <button onclick="bookMultiplePackages()" class="px-6 py-2 text-white rounded-lg transition" style="background: linear-gradient(135deg, #014196, #079591);" onmouseover="this.style.background='linear-gradient(135deg, #079591, #014196)'" onmouseout="this.style.background='linear-gradient(135deg, #014196, #079591)'">
+                            Book Selected Packages
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render footer
+        function renderFooter() {
+            return `
+
+            `;
+        }
+
+        // Event Handlers
+        function handleSearch(event) {
+            const query = event.target.value.toLowerCase();
+            const suggestionsDiv = document.getElementById('searchSuggestions');
+            
+            if (query.length === 0) {
+                filteredPackages = [...packages];
+                suggestionsDiv.classList.add('hidden');
+                renderPackagesSection();
+                document.getElementById('packagesContainer').innerHTML = filteredPackages.map((pkg, index) => renderPackageCard(pkg, index)).join('');
+                return;
+            }
+
+            filteredPackages = packages.filter(pkg => {
+                const inName = pkg.name.toLowerCase().includes(query);
+                const inDescription = pkg.description.toLowerCase().includes(query);
+                const inTests = pkg.tests.some(test => test.toLowerCase().includes(query));
+                return inName || inDescription || inTests;
+            });
+
+            // Show suggestions
+            if (filteredPackages.length > 0) {
+                suggestionsDiv.innerHTML = filteredPackages.slice(0, 5).map(pkg => `
+                    <div class="search-suggestion-item" onclick="selectPackage('${pkg.id}')">
+                        <i class="fas ${pkg.icon} mr-2" style="color: ${pkg.color}"></i>
+                        <strong>${pkg.name}</strong>
+                        <span class="text-gray-500 text-sm ml-2">(${pkg.tests.length} tests)</span>
+                    </div>
+                `).join('');
+                suggestionsDiv.classList.remove('hidden');
+            } else {
+                suggestionsDiv.classList.add('hidden');
+            }
+
+            document.getElementById('packagesContainer').innerHTML = filteredPackages.map((pkg, index) => renderPackageCard(pkg, index)).join('');
+        }
+
+        function filterByCategory(category) {
+            // Update active filter
+            document.querySelectorAll('.filter-tag').forEach(tag => {
+                tag.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Apply filter
+            if (category === 'all') {
+                filteredPackages = [...packages];
+            } else if (category === 'basic') {
+                filteredPackages = packages.filter(pkg => 
+                    ['basic', 'pulmonary', 'diabetics'].includes(pkg.id)
+                );
+            } else if (category === 'specialized') {
+                filteredPackages = packages.filter(pkg => 
+                    ['bone-joint', 'cardiac', 'cancer', 'ncds'].includes(pkg.id)
+                );
+            } else if (category === 'comprehensive') {
+                filteredPackages = packages.filter(pkg => 
+                    ['comprehensive', 'executive'].includes(pkg.id)
+                );
+            } else if (category === 'gender') {
+                filteredPackages = packages.filter(pkg => 
+                    ['women', 'children'].includes(pkg.id)
+                );
+            }
+
+            document.getElementById('packagesContainer').innerHTML = filteredPackages.map((pkg, index) => renderPackageCard(pkg, index)).join('');
+        }
+
+        function toggleTests(packageId) {
+            if (expandedCards.has(packageId)) {
+                expandedCards.delete(packageId);
+            } else {
+                expandedCards.add(packageId);
+            }
+            document.getElementById('packagesContainer').innerHTML = filteredPackages.map((pkg, index) => renderPackageCard(pkg, index)).join('');
+        }
+
+        function toggleCompareMode() {
+            compareMode = !compareMode;
+            selectedPackages.clear();
+            renderApp();
+        }
+
+        function toggleSelection(packageId) {
+            if (selectedPackages.has(packageId)) {
+                selectedPackages.delete(packageId);
+            } else {
+                if (selectedPackages.size < 3) {
+                    selectedPackages.add(packageId);
+                } else {
+                    alert('You can compare up to 3 packages at a time');
+                    return;
+                }
+            }
+            renderApp();
+        }
+
+        function setView(view) {
+            if (window.innerWidth <= 768) return; // Keep grid (View 1) on mobile; toggle is hidden
+            currentView = view;
+            renderApp();
+        }
+
+        function clearComparison() {
+            selectedPackages.clear();
+            compareMode = false;
+            renderApp();
+        }
+
+        function scrollToPackage(packageId) {
+            const element = document.getElementById(`package-${packageId}`);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                element.classList.add('animate-pulse');
+                setTimeout(() => element.classList.remove('animate-pulse'), 2000);
+            }
+        }
+
+        function selectPackage(packageId) {
+            document.getElementById('searchSuggestions').classList.add('hidden');
+            document.getElementById('searchInput').value = '';
+            scrollToPackage(packageId);
+        }
+
+        // FIXED: Enhanced bookPackage function with proper modal setup
+        function bookPackage(packageId) {
+            const pkg = packages.find(p => p.id === packageId);
+            if (!pkg) return;
+            
+            // Update modal content
+            document.getElementById('modalTitle').textContent = `Book ${pkg.name}`;
+            document.getElementById('modalPackageName').textContent = pkg.name;
+            document.getElementById('modalPackageTests').textContent = `${pkg.tests.length} tests included`;
+            
+            // Update modal icon with unique style
+            const modalIcon = document.getElementById('modalIcon');
+            const iconStyle = iconStyleMap[pkg.id] || 'gradient-primary';
+            modalIcon.className = `icon-container ${iconStyle} mr-3`;
+            modalIcon.style.width = '40px';
+            modalIcon.style.height = '40px';
+            modalIcon.style.fontSize = '16px';
+            modalIcon.innerHTML = `<i class="fas ${pkg.icon}"></i>`;
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('appointmentDate').setAttribute('min', today);
+            
+            // FIXED: Show modal and prevent body scroll
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-open');
+            
+            // FIXED: Focus first input for accessibility
+            setTimeout(() => {
+                const firstInput = modal.querySelector('input');
+                if (firstInput) firstInput.focus();
+            }, 100);
+            
+            // Store selected package for booking
+            window.selectedPackage = pkg;
+        }
+
+        // FIXED: Enhanced closeBookingModal function
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('modal-open'); // Restore body scroll
+            
+            // Reset form
+            document.getElementById('patientName').value = '';
+            document.getElementById('patientPhone').value = '';
+            document.getElementById('patientEmail').value = '';
+            document.getElementById('patientAge').value = '';
+            document.getElementById('patientGender').value = '';
+            document.getElementById('appointmentDate').value = '';
+            document.getElementById('specialInstructions').value = '';
+        }
+
+        function submitBooking() {
+            // Validate required fields
+            const name = document.getElementById('patientName').value.trim();
+            const phone = document.getElementById('patientPhone').value.trim();
+            const age = document.getElementById('patientAge').value;
+            const gender = document.getElementById('patientGender').value;
+            const date = document.getElementById('appointmentDate').value;
+            
+            if (!name || !phone || !age || !gender || !date) {
+                alert('Please fill in all required fields marked with *');
+                return;
+            }
+            
+            // Validate phone number (basic validation)
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
+                alert('Please enter a valid 10-digit phone number');
+                return;
+            }
+            
+            // Validate age
+            if (age < 1 || age > 120) {
+                alert('Please enter a valid age between 1 and 120');
+                return;
+            }
+            
+             // 🔵 GA4 EVENT (CTA CONFIRMED CLICK)
+    if (typeof gtag === 'function') {
+        gtag('event', 'screening_package_booking_attempt', {
+            transport_type: 'beacon'
+        });
+    }
+
+            
+            
+            // Prepare booking data
+            const bookingData = {
+                packageName: window.selectedPackage.name,
+                patientName: name,
+                patientPhone: phone,
+                patientEmail: document.getElementById('patientEmail').value,
+                patientAge: age,
+                patientGender: gender,
+                appointmentDate: date,
+                specialInstructions: document.getElementById('specialInstructions').value
+            };
+            
+            // Show loading state
+            const submitBtn = document.querySelector('button[onclick="submitBooking()"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            submitBtn.disabled = true;
+            
+            // Send data to PHP script
+            const formData = new FormData();
+            Object.keys(bookingData).forEach(key => {
+                formData.append(key, bookingData[key]);
+            });
+            
+            // Debug: Log the data being sent
+            console.log('Sending booking data:', bookingData);
+            
+            fetch('cancer-screening-booking.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                return response.text();
+            })
+            .then(data => {
+                console.log('Response data:', data);
+                if (data.startsWith('SUCCESS:')) {
+                    // Show success message
+                    alert(`Booking request submitted successfully!\n\nPackage: ${bookingData.packageName}\nPatient: ${bookingData.patientName}\nDate: ${bookingData.appointmentDate}\n\nWe will contact you soon to confirm your appointment.`);
+                    
+                    // Close modal
+                    closeBookingModal();
+                } else {
+                    // Show error message
+                    alert('Error: ' + data);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while submitting your booking. Please try again later.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        }
+
+        function bookMultiplePackages() {
+            const selectedNames = Array.from(selectedPackages).map(id => 
+                packages.find(p => p.id === id).name
+            );
+            alert(`Booking packages: ${selectedNames.join(', ')}. This would redirect to the booking form.`);
+        }
+
+        function openBooking() {
+            alert('Opening booking portal. This would redirect to the booking page.');
+        }
+
+        function initializeEventListeners() {
+            // Close search suggestions when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.search-container')) {
+                    document.getElementById('searchSuggestions').classList.add('hidden');
+                }
+            });
+
+            // FIXED: Enhanced modal event listeners
+            const modal = document.getElementById('bookingModal');
+            
+            // Close modal when clicking overlay (but not the modal content)
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    closeBookingModal();
+                }
+            });
+            
+            // FIXED: ESC key handler to close modal
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    const modal = document.getElementById('bookingModal');
+                    if (!modal.classList.contains('hidden')) {
+                        closeBookingModal();
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Shankara Cancer Hospital Footer</title>
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <footer id="hospital-footer"></footer>
+    
+    <script src="../footer.js"></script>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankara Cancer Hospital & Research Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../footer-main.css" /> 
+    <link rel="stylesheet" href="../chatbox.css" /> 
+</head>
+<body>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24">
+            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+        </svg>
+    </button>
+
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3">
+                <div class="avatar3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                </div>
+                </div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+                    </svg>
+                    
+                </button>
+            </div>
+        </form>
+    </div>
+<script src="../chatbox.js"></script>
+<script src="../footer-main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
