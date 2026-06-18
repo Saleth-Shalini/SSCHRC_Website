@@ -1,183 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Font Awesome Icons -->
+    <meta name="description" content="The Physiotherapy and Oncology Rehabilitation Department specializes in restoring physical function and maximizing the quality of life for individuals throughout and after cancer treatment. Our services are based on the ">
+    <title>Department of Physiotherapy and Oncology Rehabilitation: Restoring Function and Strength | Sri Shankara Cancer Hospital</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Header CSS -->
+    <script>tailwind.config={theme:{extend:{colors:{'hospital-green':'#2E8B57','hospital-orange':'#FF4500'}}}};</script>
     <link rel="stylesheet" href="../header.css">
-</head>
-<body>
-    <!-- Header will be dynamically generated here -->
-    <header id="dynamic-header"></header>
-    
-    <!-- Header JavaScript -->
-    <script src="../header.js"></script>
-</body>
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Department of Physiotherapy and Oncology Rehabilitation: Restoring Function and Strength</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Footer CSS -->
+    <link rel="stylesheet" href="department-page.css">
     <link rel="stylesheet" href="../footer.css">
     <link rel="stylesheet" href="../footer-main.css">
     <link rel="stylesheet" href="../chatbox.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #1f2937;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: Arial, sans-serif;
-        }
-        
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        .animate-slide-up {
-            animation: slideUp 0.8s ease-out forwards;
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s ease-in forwards;
-        }
-        
-        .gradient-sea-orange {
-            background: linear-gradient(135deg, rgba(46,139,87,0.95) 0%, rgba(255,69,0,0.85) 100%);
-        }
-        
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-        
-        .card-shadow {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s ease;
-        }
-        
-        .card-shadow:hover {
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-        
-        /* Mobile fix for icon layout - make icon inline with heading only, remove wasted left space */
-        @media (max-width: 768px) {
-            /* Cards with icon and content - optimize layout for mobile */
-            .bg-white.rounded-xl .flex.items-start.mb-4 {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 0.75rem;
-            }
-            
-            /* Make icon smaller and position it next to heading */
-            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 {
-                margin-right: 0;
-                margin-bottom: 0;
-                flex-shrink: 0;
-            }
-            
-            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div {
-                width: 2.5rem !important;
-                height: 2.5rem !important;
-            }
-            
-            .bg-white.rounded-xl .flex.items-start.mb-4 > .flex-shrink-0 > div > i {
-                font-size: 1rem !important;
-            }
-            
-            /* Remove left margin, make content full width */
-            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 {
-                margin-left: 0 !important;
-                flex: 1;
-                min-width: 0;
-            }
-            
-            /* Make heading display inline with icon */
-            .bg-white.rounded-xl .flex.items-start.mb-4 > .ml-4.flex-1 > h4 {
-                display: inline;
-                margin-bottom: 0.75rem;
-            }
-            
-            /* Reduce section spacing on mobile for better consistency */
-            section.py-20 {
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-            }
-        }
-    </style>
-    
-    
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9EM0LW3CT3');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9EM0LW3CT3');</script>
 </head>
 <body class="bg-gray-50">
+    <header id="dynamic-header"></header>
+    <script src="../header.js"></script>
 
-    <!-- Banner Section -->
+<!-- Banner Section -->
     <div class="hospital-banner-container">
         <div class="hospital-banner-wrapper">
             <!-- Desktop Background Image (16:9) -->
@@ -217,8 +61,32 @@
         </div>
     </div>
 
+
+    <div class="dept-breadcrumb-wrapper">
+        <nav class="dept-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Departments</a></li>
+                <li aria-current="page">Department of Physiotherapy and Oncology Rehabilitation: Restoring Function and Strength</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="dept-page-header">
+        <div class="dept-page-header-inner">
+            <h1>Department of Physiotherapy and Oncology Rehabilitation: Restoring Function and Strength</h1>
+            <p class="dept-tagline">The Physiotherapy and Oncology Rehabilitation Department specializes in restoring physical function and maximizing the quality of life for individuals throughout and after cancer treatment. Our services are based on the latest evidence supp</p>
+            <nav class="dept-jump-nav" aria-label="Page sections">
+                <a href="#overview" class="dept-jump-link"><i class="fas fa-info-circle" aria-hidden="true"></i> Overview</a>
+                <a href="#services" class="dept-jump-link"><i class="fas fa-procedures" aria-hidden="true"></i> Services</a>
+                <a href="#strengths" class="dept-jump-link"><i class="fas fa-star" aria-hidden="true"></i> Why Us</a>
+                <a href="#doctors" class="dept-jump-link"><i class="fas fa-user-md" aria-hidden="true"></i> Specialists</a>
+            </nav>
+        </div>
+    </div>
+
     <!-- Section 1: What Does Our Biochemistry Department Do? -->
-    <section class="py-20 bg-white">
+    <section id="overview" class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -346,7 +214,7 @@
     </section>
 
     <!-- Section 2: Comprehensive Services -->
-    <section class="py-20 bg-gray-50">
+    <section id="services" class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -482,7 +350,7 @@
     </section>
 
     <!-- Section 3: Our Unique Strengths (USPs) -->
-    <section class="py-20 bg-white">
+    <section id="strengths" class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -627,7 +495,7 @@
     </script>
 
     <!-- Doctors Section -->
-    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="doctors" class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-slide-up">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Rehabilitation Specialists</h2>
@@ -903,185 +771,9 @@
         }
     </style>
 
-    <script>
-        // Carousel functionality
-        let currentSlide = 0;
-        let slidesPerView = 3;
-        let autoRotateInterval = null;
-        
-        function updateSlidesPerView() {
-            if (window.innerWidth < 768) {
-                slidesPerView = 1;
-            } else if (window.innerWidth < 1024) {
-                slidesPerView = 2;
-            } else {
-                slidesPerView = 3;
-            }
-            
-            updateCarousel();
-            updateDots();
-        }
-        
-        function updateCarousel() {
-            const track = document.getElementById('carouselTrack');
-            if (!track) return;
-            const cards = track.getElementsByClassName('doctor-card-desktop');
-            const totalSlides = cards.length;
-            if (totalSlides === 0) return;
-            
-            const maxSlide = Math.max(0, totalSlides - slidesPerView);
-            currentSlide = Math.min(currentSlide, maxSlide);
-            
-            // Get actual card width and gap from the first card
-            const firstCard = cards[0];
-            if (!firstCard) return;
-            
-            let cardWidth, gap;
-            
-            if (window.innerWidth < 768) {
-                // Mobile: use actual rendered card width for accuracy
-                cardWidth = firstCard.offsetWidth;
-                const trackStyle = window.getComputedStyle(track);
-                gap = parseFloat(trackStyle.gap) || 16; // 1rem = 16px
-            } else {
-                // Desktop: use actual rendered width
-                cardWidth = firstCard.offsetWidth;
-                const trackStyle = window.getComputedStyle(track);
-                gap = parseFloat(trackStyle.gap) || 24;
-            }
-            
-            const offset = currentSlide * (cardWidth + gap);
-            track.style.transform = `translateX(-${offset}px)`;
-        }
-        
-        function moveCarousel(direction) {
-            const track = document.getElementById('carouselTrack');
-            if (!track) return;
-            const cards = track.getElementsByClassName('doctor-card-desktop');
-            const totalSlides = cards.length;
-            const maxSlide = totalSlides - slidesPerView;
-            
-            currentSlide += direction;
-            
-            if (currentSlide < 0) {
-                currentSlide = maxSlide;
-            } else if (currentSlide > maxSlide) {
-                currentSlide = 0;
-            }
-            
-            updateCarousel();
-            updateDots();
-            resetAutoRotate();
-        }
-        
-        function startAutoRotate() {
-            if (autoRotateInterval) {
-                clearInterval(autoRotateInterval);
-            }
-            
-            autoRotateInterval = setInterval(() => {
-                const track = document.getElementById('carouselTrack');
-                if (!track) return;
-                const cards = track.getElementsByClassName('doctor-card-desktop');
-                const totalSlides = cards.length;
-                if (totalSlides === 0) return;
-                
-                const maxSlide = totalSlides - slidesPerView;
-                currentSlide += 1;
-                
-                if (currentSlide > maxSlide) {
-                    currentSlide = 0;
-                }
-                
-                updateCarousel();
-                updateDots();
-            }, 5000);
-        }
-        
-        function stopAutoRotate() {
-            if (autoRotateInterval) {
-                clearInterval(autoRotateInterval);
-                autoRotateInterval = null;
-            }
-        }
-        
-        function resetAutoRotate() {
-            stopAutoRotate();
-            startAutoRotate();
-        }
-        
-        function updateDots() {
-            const dotsContainer = document.getElementById('carouselDots');
-            if (!dotsContainer) return;
-            const track = document.getElementById('carouselTrack');
-            if (!track) return;
-            const cards = track.getElementsByClassName('doctor-card-desktop');
-            const totalSlides = cards.length;
-            const totalDots = Math.ceil(totalSlides / slidesPerView);
-            
-            dotsContainer.innerHTML = '';
-            
-            for (let i = 0; i < totalDots; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'carousel-dot';
-                if (Math.floor(currentSlide / slidesPerView) === i || (currentSlide === totalSlides - slidesPerView && i === totalDots - 1)) {
-                    dot.classList.add('active');
-                }
-                dot.onclick = () => {
-                    currentSlide = i * slidesPerView;
-                    updateCarousel();
-                    updateDots();
-                    resetAutoRotate();
-                };
-                dotsContainer.appendChild(dot);
-            }
-        }
-        
-        // Initialize on load
-        window.addEventListener('load', () => {
-            updateSlidesPerView();
-            updateDots();
-            startAutoRotate();
-            
-            // Pause auto-rotation on hover
-            const carouselContainer = document.querySelector('.carousel-container');
-            if (carouselContainer) {
-                carouselContainer.addEventListener('mouseenter', stopAutoRotate);
-                carouselContainer.addEventListener('mouseleave', startAutoRotate);
-            }
-        });
-        
-        // Update on resize
-        window.addEventListener('resize', () => {
-            updateSlidesPerView();
-            resetAutoRotate();
-        });
-        
-        // Touch support for carousel
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        const carouselTrack = document.getElementById('carouselTrack');
-        if (carouselTrack) {
-            carouselTrack.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-            
-            carouselTrack.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-        }
-        
-        function handleSwipe() {
-            if (touchEndX < touchStartX - 50) {
-                moveCarousel(1);
-            }
-            if (touchEndX > touchStartX + 50) {
-                moveCarousel(-1);
-            }
-        }
-    </script>
+        <script src="department-carousel.js"></script>
+
+
 </body>
 <head>
     <meta charset="UTF-8">

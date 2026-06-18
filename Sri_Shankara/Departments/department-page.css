@@ -1,0 +1,445 @@
+/* Shared department page styles — Sri Shankara Cancer Hospital */
+
+:root {
+    --dept-green: #2E8B57;
+    --dept-orange: #FF4500;
+    --dept-ink: #0f172a;
+    --dept-muted: #64748b;
+    --dept-border: #e2e8f0;
+    --dept-surface: #f8fafc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Breadcrumb & page header */
+.dept-breadcrumb-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 0;
+}
+
+.dept-breadcrumb {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.dept-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.dept-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+}
+
+.dept-breadcrumb li + li::before {
+    content: "›";
+    opacity: 0.55;
+    margin: 0 0.45rem 0 0.2rem;
+}
+
+.dept-breadcrumb a {
+    color: #003017;
+    text-decoration: none;
+}
+
+.dept-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.dept-breadcrumb [aria-current="page"] {
+    font-weight: 600;
+    color: #111;
+}
+
+.dept-page-header {
+    background: linear-gradient(135deg, #f0fdf4 0%, #fff 50%, #fff7f0 100%);
+    border-bottom: 1px solid var(--dept-border);
+    padding: 1.75rem 0 2rem;
+}
+
+.dept-page-header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.dept-page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--dept-ink);
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+}
+
+.dept-page-header .dept-tagline {
+    font-size: 1.0625rem;
+    color: var(--dept-muted);
+    max-width: 52rem;
+    margin: 0 0 1.25rem;
+    line-height: 1.7;
+}
+
+.dept-jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dept-jump-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #1e293b;
+    background: #fff;
+    border: 1px solid var(--dept-border);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.dept-jump-link:hover {
+    border-color: var(--dept-green);
+    color: var(--dept-green);
+    background: #f0fdf4;
+}
+
+/* Section layout */
+.dept-section {
+    padding: 4rem 0;
+}
+
+.dept-section-alt {
+    background: var(--dept-surface);
+}
+
+.dept-section-header {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 2.5rem;
+}
+
+.dept-section-header h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: var(--dept-ink);
+    margin: 0 0 0.75rem;
+}
+
+.dept-section-header p {
+    font-size: 1.0625rem;
+    color: var(--dept-muted);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.dept-mission-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .dept-mission-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.dept-mission-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--dept-border);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.dept-mission-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Expandable specialty cards */
+.specialty-grid {
+    align-items: start;
+}
+
+.specialty-card {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    background: #fff;
+}
+
+.specialty-card-summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1.15rem 1.25rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.specialty-card-summary::-webkit-details-marker {
+    display: none;
+}
+
+.specialty-card-summary h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dept-ink);
+    margin: 0;
+}
+
+.specialty-chevron {
+    color: var(--dept-muted);
+    font-size: 0.8rem;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.specialty-card[open] .specialty-chevron {
+    transform: rotate(180deg);
+    color: var(--dept-green);
+}
+
+.specialty-card-body {
+    padding: 0 1.25rem 1.15rem;
+    border-top: 1px solid #f1f5f9;
+    line-height: 1.65;
+}
+
+.specialty-card-body div {
+    margin-bottom: 0.35rem;
+}
+
+/* Cards & animation */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.7s ease-out forwards;
+}
+
+.card-shadow {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.25s ease;
+}
+
+.card-shadow:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+}
+
+/* Doctor carousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.45s ease-in-out;
+}
+
+.doctor-card {
+    flex: 0 0 350px;
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-card .p-6 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.doctor-card .btn-primary {
+    margin-top: auto;
+}
+
+.doctor-photo-frame {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.doctor-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s ease;
+}
+
+.doctor-card:hover .doctor-photo-frame img {
+    transform: scale(1.04);
+}
+
+.doctor-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, 0.25) 100%);
+    pointer-events: none;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--dept-green);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav:hover {
+    background: #27724a;
+    transform: translateY(-50%) scale(1.06);
+}
+
+.carousel-nav.prev { left: 0.5rem; }
+.carousel-nav.next { right: 0.5rem; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.carousel-dot.active {
+    background: var(--dept-green);
+    width: 28px;
+    border-radius: 6px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--dept-green);
+    color: #fff;
+    padding: 0.7rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: #27724a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.25);
+}
+
+/* USP blocks */
+.dept-usp-block {
+    border-radius: 1rem;
+    padding: 1.75rem;
+    border: 1px solid var(--dept-border);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .dept-section {
+        padding: 2.5rem 0;
+    }
+
+    .dept-section-header {
+        margin-bottom: 1.75rem;
+    }
+
+    .carousel-container {
+        margin: 0 -0.5rem;
+    }
+
+    .carousel-track {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .doctor-card {
+        flex: 0 0 calc(100vw - 2.5rem);
+        min-width: calc(100vw - 2.5rem);
+        max-width: calc(100vw - 2.5rem);
+    }
+
+    .doctor-photo-frame {
+        height: 320px;
+    }
+
+    .carousel-nav {
+        width: 38px;
+        height: 38px;
+    }
+}

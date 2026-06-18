@@ -1,322 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Head and Neck Cancer - Patient Information Guide | Sri Shankara Cancer Hospital</title>
-    
-    <!-- Font Awesome Icons -->
+    <meta name="description" content="Head and neck cancer refer to a group of cancers that start in the tissues of the mouth, nose, throat, larynx (voice box), sinuses, salivary glands, thyroid, parathyroid gland, skin and skull base.">
+    <title>Understanding Head and Neck Cancer - Patient Information Guide Department | Sri Shankara Cancer Hospital</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Header CSS -->
+    <script>tailwind.config={theme:{extend:{colors:{'hospital-green':'#2E8B57','hospital-orange':'#FF4500'}}}};</script>
     <link rel="stylesheet" href="../header.css">
-    <!-- Footer CSS -->
+    <link rel="stylesheet" href="department-page.css">
     <link rel="stylesheet" href="../footer.css">
     <link rel="stylesheet" href="../footer-main.css">
     <link rel="stylesheet" href="../chatbox.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #1f2937;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: Arial, sans-serif;
-        }
-        
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-slide-up {
-            animation: slideUp 0.8s ease-out forwards;
-        }
-        
-        .card-shadow {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s ease;
-        }
-        
-        .card-shadow:hover {
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-        
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        
-        .hover-scale:hover {
-            transform: scale(1.02);
-        }
-        
-        /* Enhanced Visual Elements */
-        .gradient-text {
-            background: linear-gradient(135deg, #2E8B57, #1e40af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .feature-icon-wrapper {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .section-divider {
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #2E8B57, transparent);
-            margin: 4rem 0;
-        }
-        
-        .stat-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 2px solid #e5e7eb;
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            border-color: #2E8B57;
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(46, 139, 87, 0.15);
-        }
-        
-        /* Doctor Card Styles */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            padding: 2rem 0;
-        }
-        
-        .carousel-track {
-            display: flex;
-            gap: 1.5rem;
-            transition: transform 0.5s ease-in-out;
-        }
-        
-        .doctor-card {
-            flex: 0 0 350px;
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .doctor-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .doctor-card-desktop {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .doctor-card .p-6 {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-        
-        .doctor-card .btn-primary {
-            margin-top: auto;
-        }
-        
-        @media (max-width: 768px) {
-            .carousel-container {
-                margin: 0 -1rem;
-                overflow: hidden;
-                width: 100vw;
-            }
-            
-            .carousel-track {
-                gap: 1rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            
-            .doctor-card {
-                flex: 0 0 calc(100vw - 2rem);
-                min-width: calc(100vw - 2rem);
-                max-width: calc(100vw - 2rem);
-                width: calc(100vw - 2rem);
-                height: 750px;
-                margin: 0;
-            }
-            
-            .carousel-nav {
-                width: 40px;
-                height: 40px;
-            }
-            
-            .carousel-nav.prev {
-                left: 0.5rem;
-            }
-            
-            .carousel-nav.next {
-                right: 0.5rem;
-            }
-        }
-        
-        .doctor-photo-frame {
-            position: relative;
-            width: 100%;
-            height: 450px;
-            overflow: hidden;
-        }
-        
-        .doctor-photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .doctor-card:hover .doctor-photo-frame img {
-            transform: scale(1.05);
-        }
-        
-        .doctor-photo-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
-        }
-        
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2E8B57, #3cb371);
-            border: none;
-            color: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        
-        .carousel-nav:hover {
-            background: linear-gradient(135deg, #3cb371, #2E8B57);
-            transform: translateY(-50%) scale(1.1);
-        }
-        
-        .carousel-nav.prev {
-            left: 1rem;
-        }
-        
-        .carousel-nav.next {
-            right: 1rem;
-        }
-        
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 2rem;
-        }
-        
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #d1d5db;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .carousel-dot.active {
-            background: #2E8B57;
-            width: 30px;
-            border-radius: 6px;
-        }
-        
-        .btn-primary {
-            display: inline-block;
-            background: #2E8B57;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: #3cb371;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
-        }
-        
-        /* Mobile responsive styles */
-        @media (max-width: 768px) {
-            section.py-20 {
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-            }
-        }
-    </style>
-    
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9EM0LW3CT3');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9EM0LW3CT3');</script>
 </head>
 <body class="bg-gray-50">
-    <!-- Header will be dynamically generated here -->
     <header id="dynamic-header"></header>
-    
-    <!-- Header JavaScript -->
     <script src="../header.js"></script>
 
-    <!-- Banner Section -->
+<!-- Banner Section -->
     <div class="hospital-banner-container">
         <div class="hospital-banner-wrapper">
             <!-- Desktop Background Image (16:9) -->
@@ -356,8 +61,31 @@
         </div>
     </div>
 
+
+    <div class="dept-breadcrumb-wrapper">
+        <nav class="dept-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Departments</a></li>
+                <li aria-current="page">Understanding Head and Neck Cancer - Patient Information Guide</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="dept-page-header">
+        <div class="dept-page-header-inner">
+            <h1>Understanding Head and Neck Cancer - Patient Information Guide Department</h1>
+            <p class="dept-tagline">Head and neck cancer refer to a group of cancers that start in the tissues of the mouth, nose, throat, larynx (voice box), sinuses, salivary glands, thyroid, parathyroid gland, skin and skull base.</p>
+            <nav class="dept-jump-nav" aria-label="Page sections">
+                <a href="#overview" class="dept-jump-link"><i class="fas fa-info-circle" aria-hidden="true"></i> Overview</a>
+                <a href="#services" class="dept-jump-link"><i class="fas fa-procedures" aria-hidden="true"></i> Services</a>
+                <a href="#doctors" class="dept-jump-link"><i class="fas fa-user-md" aria-hidden="true"></i> Specialists</a>
+            </nav>
+        </div>
+    </div>
+
     <!-- Section 1: Introduction -->
-    <section class="py-20 bg-white">
+    <section id="overview" class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -383,7 +111,7 @@
     </section>
 
     <!-- Section 2: Head and Neck Cancer in India -->
-    <section class="py-20 bg-gray-50">
+    <section id="services" class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -457,7 +185,7 @@
     </section>
 
     <!-- Section 3: Risk Factors -->
-    <section class="py-20 bg-white">
+    <section class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -609,7 +337,7 @@
     </section>
 
     <!-- Section 4: Warning Signs and Symptoms -->
-    <section class="py-20 bg-gray-50">
+    <section class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -801,7 +529,7 @@
     </section>
 
     <!-- Section 5: Special Cancer Types -->
-    <section class="py-20 bg-white">
+    <section class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -926,7 +654,7 @@
     </section>
 
     <!-- Section 6: Diagnosis and Staging -->
-    <section class="py-20 bg-gray-50">
+    <section class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1038,7 +766,7 @@
     </section>
 
     <!-- Section 7: Staging -->
-    <section class="py-20 bg-white">
+    <section class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1108,7 +836,7 @@
     </section>
 
     <!-- Section 8: Treatment Options -->
-    <section class="py-20 bg-gray-50">
+    <section class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1245,7 +973,7 @@
     </section>
 
     <!-- Section 9: Managing Side Effects -->
-    <section class="py-20 bg-white">
+    <section class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1322,7 +1050,7 @@
     </section>
 
     <!-- Section 10: Nutrition During and After Treatment -->
-    <section class="py-20 bg-gray-50">
+    <section class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1421,7 +1149,7 @@
     </section>
 
     <!-- Section 11: Rehabilitation and Recovery -->
-    <section class="py-20 bg-white">
+    <section class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1497,7 +1225,7 @@
     </section>
 
     <!-- Section 12: Prevention -->
-    <section class="py-20 bg-gray-50">
+    <section class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1580,7 +1308,7 @@
     </section>
 
     <!-- Section 13: Follow-Up Care -->
-    <section class="py-20 bg-white">
+    <section class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1620,7 +1348,7 @@
     </section>
 
     <!-- Section 14: Prognosis -->
-    <section class="py-20 bg-gray-50">
+    <section class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1661,7 +1389,7 @@
     </section>
 
     <!-- Section 15: Questions to Ask Your Doctor -->
-    <section class="py-20 bg-white">
+    <section class="dept-section bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1978,7 +1706,7 @@
     </section>
 
     <!-- Doctors Section -->
-    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="doctors" class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-slide-up">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Head & Neck Oncology Specialists</h2>
@@ -2237,7 +1965,7 @@
 </div>
 </section>
 
-    <section id="doctors" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="doctors" class="dept-section dept-section-alt scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-slide-up">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Oral & Maxillofacial Surgery Specialists</h2>
@@ -2398,408 +2126,9 @@
 </section>
 
 
-    <script>
-        // Smooth scroll behavior
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        <script src="department-carousel.js"></script>
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-slide-up');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card-shadow').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Carousel functionality - scoped to doctors section
-        let currentSlide = 0;
-        let slidesPerView = 3;
-        let autoRotateInterval = null;
-        
-        function updateSlidesPerView() {
-            if (window.innerWidth < 768) {
-                slidesPerView = 1;
-            } else if (window.innerWidth < 1024) {
-                slidesPerView = 2;
-            } else {
-                slidesPerView = 3;
-            }
-        }
-        
-        function moveCarousel(direction) {
-            const track = document.getElementById('carouselTrack');
-            if (!track) return;
-            
-            const cards = track.querySelectorAll('.doctor-card');
-            const totalCards = cards.length;
-            
-            if (totalCards === 0) return;
-            
-            updateSlidesPerView();
-            
-            currentSlide += direction;
-            
-            if (currentSlide < 0) {
-                currentSlide = Math.max(0, totalCards - slidesPerView);
-            } else if (currentSlide > totalCards - slidesPerView) {
-                currentSlide = 0;
-            }
-            
-            const cardWidth = cards[0].offsetWidth + 24; // card width + gap
-            const translateX = -currentSlide * cardWidth;
-            track.style.transform = `translateX(${translateX}px)`;
-            
-            updateDots();
-            resetAutoRotate();
-        }
-        
-        function startAutoRotate() {
-            if (autoRotateInterval) {
-                clearInterval(autoRotateInterval);
-            }
-            
-            autoRotateInterval = setInterval(() => {
-                const track = document.getElementById('carouselTrack');
-                if (!track) return;
-                const cards = track.querySelectorAll('.doctor-card');
-                const totalCards = cards.length;
-                if (totalCards === 0) return;
-                
-                updateSlidesPerView();
-                const maxSlide = Math.max(0, totalCards - slidesPerView);
-                currentSlide += 1;
-                
-                if (currentSlide > maxSlide) {
-                    currentSlide = 0;
-                }
-                
-                const cardWidth = cards[0].offsetWidth + 24;
-                const translateX = -currentSlide * cardWidth;
-                track.style.transform = `translateX(${translateX}px)`;
-                
-                updateDots();
-            }, 5000);
-        }
-        
-        function stopAutoRotate() {
-            if (autoRotateInterval) {
-                clearInterval(autoRotateInterval);
-                autoRotateInterval = null;
-            }
-        }
-        
-        function resetAutoRotate() {
-            stopAutoRotate();
-            startAutoRotate();
-        }
-        
-        function updateDots() {
-            const dots = document.querySelectorAll('.carousel-dot');
-            const cards = document.querySelectorAll('.doctor-card');
-            if (cards.length === 0) return;
-            
-            updateSlidesPerView();
-            const totalDots = Math.ceil(cards.length / slidesPerView);
-            
-            dots.forEach((dot, index) => {
-                const dotIndex = Math.floor(currentSlide / slidesPerView);
-                dot.classList.toggle('active', index === dotIndex);
-            });
-        }
-        
-        function initCarousel() {
-            const track = document.getElementById('carouselTrack');
-            if (!track) return;
-            
-            updateSlidesPerView();
-            const cards = document.querySelectorAll('.doctor-card');
-            if (cards.length === 0) return;
-            
-            const totalDots = Math.ceil(cards.length / slidesPerView);
-            const dotsContainer = document.getElementById('carouselDots');
-            
-            if (!dotsContainer) return;
-            
-            dotsContainer.innerHTML = '';
-            for (let i = 0; i < totalDots; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-                dot.addEventListener('click', () => {
-                    currentSlide = i * slidesPerView;
-                    const cardWidth = cards[0].offsetWidth + 24;
-                    const translateX = -currentSlide * cardWidth;
-                    track.style.transform = `translateX(${translateX}px)`;
-                    updateDots();
-                });
-                dotsContainer.appendChild(dot);
-            }
-            
-            // Touch/swipe support
-            let startX = 0;
-            let isDragging = false;
-            
-            track.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                isDragging = true;
-            });
-            
-            track.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-            });
-            
-            track.addEventListener('touchend', (e) => {
-                if (!isDragging) return;
-                const endX = e.changedTouches[0].clientX;
-                const diff = startX - endX;
-                
-                if (Math.abs(diff) > 50) {
-                    if (diff > 0) {
-                        moveCarousel(1);
-                    } else {
-                        moveCarousel(-1);
-                    }
-                }
-                isDragging = false;
-            });
-        }
-        
-        window.addEventListener('resize', () => {
-            updateSlidesPerView();
-            moveCarousel(0);
-        });
-        
-        // Make function globally accessible
-        window.moveCarousel = moveCarousel;
-        
-        // Initialize carousel when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                setTimeout(initCarousel, 100);
-            });
-        } else {
-            setTimeout(initCarousel, 100);
-        }
-
-        // Carousel 2 functionality - for Oral & Maxillofacial Surgery Specialists
-        let currentSlide2 = 0;
-        let slidesPerView2 = 3;
-        let autoRotateInterval2 = null;
-        
-        function updateSlidesPerView2() {
-            if (window.innerWidth < 768) {
-                slidesPerView2 = 1;
-            } else if (window.innerWidth < 1024) {
-                slidesPerView2 = 2;
-            } else {
-                slidesPerView2 = 3;
-            }
-        }
-        
-        function moveCarousel2(direction) {
-            const track = document.getElementById('carouselTrack2');
-            if (!track) {
-                console.error('Carousel track 2 not found');
-                return;
-            }
-            
-            const cards = track.querySelectorAll('.doctor-card');
-            const totalCards = cards.length;
-            
-            if (totalCards === 0) {
-                console.error('No doctor cards found in carousel 2');
-                return;
-            }
-            
-            // Ensure cards are rendered and have width
-            if (cards[0].offsetWidth === 0) {
-                // Retry after a short delay if cards aren't ready
-                setTimeout(() => moveCarousel2(direction), 50);
-                return;
-            }
-            
-            updateSlidesPerView2();
-            
-            if (direction !== 0) {
-                currentSlide2 += direction;
-            }
-            
-            const maxSlide = Math.max(0, totalCards - slidesPerView2);
-            
-            if (currentSlide2 < 0) {
-                currentSlide2 = maxSlide;
-            } else if (currentSlide2 > maxSlide) {
-                currentSlide2 = 0;
-            }
-            
-            // Calculate card width including gap (1.5rem = 24px)
-            const cardWidth = cards[0].offsetWidth;
-            const gap = 24; // 1.5rem in pixels
-            const translateX = -currentSlide2 * (cardWidth + gap);
-            track.style.transform = `translateX(${translateX}px)`;
-            
-            updateDots2();
-            if (direction !== 0) {
-                resetAutoRotate2();
-            }
-        }
-        
-        function startAutoRotate2() {
-            if (autoRotateInterval2) {
-                clearInterval(autoRotateInterval2);
-            }
-            
-            autoRotateInterval2 = setInterval(() => {
-                const track = document.getElementById('carouselTrack2');
-                if (!track) return;
-                const cards = track.querySelectorAll('.doctor-card');
-                const totalCards = cards.length;
-                if (totalCards === 0) return;
-                
-                updateSlidesPerView2();
-                const maxSlide = Math.max(0, totalCards - slidesPerView2);
-                currentSlide2 += 1;
-                
-                if (currentSlide2 > maxSlide) {
-                    currentSlide2 = 0;
-                }
-                
-                const cardWidth = cards[0].offsetWidth;
-                const gap = 24; // 1.5rem in pixels
-                const translateX = -currentSlide2 * (cardWidth + gap);
-                track.style.transform = `translateX(${translateX}px)`;
-                
-                updateDots2();
-            }, 5000);
-        }
-        
-        function stopAutoRotate2() {
-            if (autoRotateInterval2) {
-                clearInterval(autoRotateInterval2);
-                autoRotateInterval2 = null;
-            }
-        }
-        
-        function resetAutoRotate2() {
-            stopAutoRotate2();
-            startAutoRotate2();
-        }
-        
-        function updateDots2() {
-            const dots = document.querySelectorAll('#carouselDots2 .carousel-dot');
-            const track = document.getElementById('carouselTrack2');
-            if (!track) return;
-            const cards = track.querySelectorAll('.doctor-card');
-            if (cards.length === 0) return;
-            
-            updateSlidesPerView2();
-            const totalDots = Math.ceil(cards.length / slidesPerView2);
-            
-            dots.forEach((dot, index) => {
-                const dotIndex = Math.floor(currentSlide2 / slidesPerView2);
-                dot.classList.toggle('active', index === dotIndex);
-            });
-        }
-        
-        function initCarousel2() {
-            const track = document.getElementById('carouselTrack2');
-            if (!track) return;
-            
-            updateSlidesPerView2();
-            const cards = track.querySelectorAll('.doctor-card');
-            if (cards.length === 0) return;
-            
-            const totalDots = Math.ceil(cards.length / slidesPerView2);
-            const dotsContainer = document.getElementById('carouselDots2');
-            
-            if (!dotsContainer) return;
-            
-            dotsContainer.innerHTML = '';
-            for (let i = 0; i < totalDots; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-                dot.addEventListener('click', () => {
-                    currentSlide2 = i * slidesPerView2;
-                    const cardWidth = cards[0].offsetWidth;
-                    const gap = 24; // 1.5rem in pixels
-                    const translateX = -currentSlide2 * (cardWidth + gap);
-                    track.style.transform = `translateX(${translateX}px)`;
-                    updateDots2();
-                });
-                dotsContainer.appendChild(dot);
-            }
-            
-            // Touch/swipe support
-            let startX = 0;
-            let isDragging = false;
-            
-            track.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                isDragging = true;
-            });
-            
-            track.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-            });
-            
-            track.addEventListener('touchend', (e) => {
-                if (!isDragging) return;
-                const endX = e.changedTouches[0].clientX;
-                const diff = startX - endX;
-                
-                if (Math.abs(diff) > 50) {
-                    if (diff > 0) {
-                        moveCarousel2(1);
-                    } else {
-                        moveCarousel2(-1);
-                    }
-                }
-                isDragging = false;
-            });
-            
-            // Initialize position
-            moveCarousel2(0);
-            startAutoRotate2();
-        }
-        
-        window.addEventListener('resize', () => {
-            updateSlidesPerView2();
-            moveCarousel2(0);
-        });
-        
-        // Make function globally accessible
-        window.moveCarousel2 = moveCarousel2;
-        
-        // Initialize carousel 2 when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                setTimeout(initCarousel2, 100);
-            });
-        } else {
-            setTimeout(initCarousel2, 100);
-        }
-    </script>
 
     <!-- Footer -->
     <footer id="hospital-footer"></footer>
