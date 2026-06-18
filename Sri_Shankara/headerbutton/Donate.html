@@ -3,498 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Font Awesome Icons -->
+    <meta name="description" content="Support cancer care at Sri Shankara Cancer Hospital & Research Centre. Donate to hospital projects, patient support, meals, and cancer research.">
+    <title>Donate | Sri Shankara Cancer Hospital & Research Centre</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Header CSS -->
-    <link rel="stylesheet" href="../header.css">
-    
 
-
-</head>
-<body>
-    <!-- Header will be dynamically generated here -->
-    <header id="dynamic-header"></header>
-    
-    <!-- Header JavaScript -->
-    <script src="../header.js"></script>
-</body>
-
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sri Shankara Cancer Hospital & Research Centre, Bengaluru | Advanced Cancer Care & Oncology Research in India</title>
-  <!-- Font Awesome - Multiple CDN sources for reliability -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet" />
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>  
-  <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../footer-main.css" /> 
-  <link rel="stylesheet" href="../chatbox.css" /> 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         'hospital-green': '#2E8B57',
-                        'hospital-orange': '#FF4500',
-                        'sea-green': '#2E8B57',
-                        'orange-red': '#FF4500',
-                        'deep-blue': '#1e40af',
-                        'light-green': '#dcfce7',
-                        'primary': '#0d5f3c',
-                        'primary-light': '#10b981',
-                        'primary-bg': '#f0fdf4',
-                        'accent': '#dc2626',
-                        'accent-light': '#fef2f2',
-                        'background': '#ffffff',
-                        'surface': '#f8fafc',
-                        'card': '#ffffff',
-                        'text': '#0f172a',
-                        'text-muted': '#64748b',
-                        'border': '#e2e8f0',
-                        'border-light': '#f1f5f9',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'pulse-slow': 'pulse 3s infinite',
+                        'hospital-orange': '#FF4500'
                     }
                 }
             }
-        }
+        };
     </script>
-    <style>
-        :root{
-            --primary: #0d5f3c;
-            --primary-light: #10b981;
-            --primary-bg: #f0fdf4;
-            --accent: #dc2626;
-            --accent-light: #fef2f2;
-            --background: #ffffff;
-            --surface: #f8fafc;
-            --card: #ffffff;
-            --text: #0f172a;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
-            --border-light: #f1f5f9;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --radius: 16px;
-            --radius-lg: 24px;
-            --maxw: 1200px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
 
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { 
-            margin: 0; 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--text);
-            background: var(--background);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../footer-main.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-
-        .animate-slide-up {
-            animation: slideUp 0.8s ease-out;
-        }
-        
-        /* Fix account details box styling - ensure gradients and text visibility */
-        .account-details-hospital {
-            background: linear-gradient(135deg, #2E8B57 0%, #059669 100%) !important;
-            color: white !important;
-        }
-        .account-details-anna {
-            background: linear-gradient(135deg, #FF4500 0%, #ea580c 100%) !important;
-            color: white !important;
-        }
-        .account-details-patient {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
-            color: white !important;
-        }
-        .account-details-research {
-            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
-            color: white !important;
-        }
-        
-        /* Fix text visibility in account details */
-        .account-details-content {
-            background-color: rgba(255, 255, 255, 0.15) !important;
-            backdrop-filter: blur(10px) !important;
-        }
-        .account-details-label {
-            color: rgba(255, 255, 255, 0.9) !important;
-            font-weight: 600 !important;
-        }
-        .account-details-text {
-            color: white !important;
-        }
-        .account-details-highlight {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            color: white !important;
-        }
-        
-        /* Override Bootstrap conflicts */
-        .bg-gradient-to-br {
-            background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)) !important;
-        }
-        .text-white {
-            color: rgb(255 255 255) !important;
-        }
-        .bg-white {
-            background-color: rgb(255 255 255) !important;
-        }
-        
-        /* Ensure Font Awesome icons are visible */
-        .fas, .far, .fab, .fa {
-            font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands" !important;
-            font-weight: 900 !important;
-            display: inline-block !important;
-            font-style: normal !important;
-            font-variant: normal !important;
-            text-rendering: auto !important;
-            line-height: 1 !important;
-        }
-        
-        /* Specific icon fixes */
-        .fa-heartbeat:before { content: "\f21e" !important; }
-        .fa-heart:before { content: "\f004" !important; }
-        .fa-hospital:before { content: "\f0f8" !important; }
-        .fa-utensils:before { content: "\f2e7" !important; }
-        .fa-microscope:before { content: "\f610" !important; }
-        .fa-university:before { content: "\f19c" !important; }
-        .fa-bars:before { content: "\f0c9" !important; }
-        .fa-exclamation-circle:before { content: "\f06a" !important; }
-        .fa-info-circle:before { content: "\f05a" !important; }
-        .fa-receipt:before { content: "\f543" !important; }
-        .fa-medal:before { content: "\f5a2" !important; }
-        .fa-chart-line:before { content: "\f201" !important; }
-        .fa-user:before { content: "\f007" !important; }
-        .fa-phone:before { content: "\f095" !important; }
-        .fa-envelope:before { content: "\f0e0" !important; }
-        .fa-map-marker-alt:before { content: "\f3c5" !important; }
-        .fa-globe-americas:before { content: "\f57d" !important; }
-        .fa-hand-holding-heart:before { content: "\f4be" !important; }
-        .fa-facebook-f:before { content: "\f39e" !important; }
-        .fa-twitter:before { content: "\f099" !important; }
-        .fa-linkedin-in:before { content: "\f0e1" !important; }
-        .fa-instagram:before { content: "\f16d" !important; }
-
-        /* Donation widget — Mayo-style card */
-        .donation-widget-section {
-            background: #f5f5f5;
-        }
-
-        .donation-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 2rem 1.75rem 1.5rem;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e8e8e8;
-            max-width: 420px;
-            margin: 0 auto;
-        }
-
-        .donation-card-title {
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: #111;
-            text-align: center;
-            margin: 0 0 0.5rem;
-            line-height: 1.3;
-        }
-
-        .donation-card-subtitle {
-            text-align: center;
-            font-size: 0.9375rem;
-            color: #444;
-            margin: 0 0 1.5rem;
-        }
-
-        .amount-presets {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .amount-preset-btn {
-            border: 1.5px solid #d1d5db;
-            background: #fff;
-            border-radius: 8px;
-            padding: 0.875rem 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #111;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: center;
-        }
-
-        .amount-preset-btn:hover {
-            border-color: #9ca3af;
-        }
-
-        .amount-preset-btn.selected {
-            border-color: #2563eb;
-            background: #2563eb;
-            color: #fff;
-        }
-
-        .amount-custom-field {
-            position: relative;
-            border: 1.5px solid #d1d5db;
-            border-radius: 8px;
-            padding: 1rem 1rem 1.25rem;
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            background: #fff;
-            transition: border-color 0.2s ease;
-        }
-
-        .amount-custom-field:focus-within {
-            border-color: #2563eb;
-        }
-
-        .amount-symbol {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #111;
-            margin-right: 0.5rem;
-            flex-shrink: 0;
-        }
-
-        .amount-custom-value {
-            flex: 1;
-            border: none;
-            outline: none;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #111;
-            text-align: right;
-            background: transparent;
-            min-width: 0;
-        }
-
-        .amount-custom-value::placeholder {
-            color: #9ca3af;
-            font-weight: 500;
-            font-size: 1.125rem;
-        }
-
-        .amount-currency-badge {
-            position: absolute;
-            bottom: -0.65rem;
-            left: 0.75rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            background: #fff;
-            border: 1.5px solid #d1d5db;
-            border-radius: 6px;
-            padding: 0.2rem 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #374151;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .amount-currency-badge:hover {
-            border-color: #2563eb;
-            color: #2563eb;
-        }
-
-        .support-label {
-            display: block;
-            font-size: 0.8125rem;
-            font-weight: 500;
-            color: #374151;
-            margin-bottom: 0.4rem;
-        }
-
-        .support-select-wrap {
-            position: relative;
-            margin-bottom: 1rem;
-        }
-
-        .support-search-icon {
-            position: absolute;
-            left: 0.875rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #9ca3af;
-            font-size: 0.875rem;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .support-chevron {
-            position: absolute;
-            right: 0.875rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #6b7280;
-            font-size: 0.75rem;
-            pointer-events: none;
-        }
-
-        .support-select {
-            width: 100%;
-            appearance: none;
-            border: 1.5px solid #d1d5db;
-            border-radius: 8px;
-            padding: 0.75rem 2rem 0.75rem 2.25rem;
-            font-size: 0.9375rem;
-            font-weight: 600;
-            color: #111;
-            background: #fff;
-            cursor: pointer;
-            transition: border-color 0.2s ease;
-        }
-
-        .support-select:focus {
-            outline: none;
-            border-color: #2563eb;
-        }
-
-        .dedicate-label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            color: #374151;
-            margin-bottom: 1.25rem;
-            cursor: pointer;
-        }
-
-        .dedicate-label input[type="checkbox"] {
-            width: 1rem;
-            height: 1rem;
-            accent-color: #2563eb;
-            cursor: pointer;
-        }
-
-        .dedicate-info {
-            color: #9ca3af;
-            font-size: 0.8rem;
-            cursor: help;
-        }
-
-        .donation-divider {
-            border: none;
-            border-top: 1px solid #e5e7eb;
-            margin: 0 0 1.25rem;
-        }
-
-        .donate-btn-primary {
-            width: 100%;
-            background: #111;
-            color: #fff;
-            border: none;
-            border-radius: 999px;
-            padding: 0.9rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.2s ease, transform 0.15s ease;
-        }
-
-        .donate-btn-primary:hover {
-            background: #000;
-            transform: translateY(-1px);
-        }
-
-        .donation-form-amount-summary {
-            font-size: 0.875rem;
-            color: #4b5563;
-            padding: 0.75rem 1rem;
-            background: #f9fafb;
-            border-radius: 8px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .donation-form-amount-summary strong {
-            color: #111;
-        }
-
-    </style>
-    
-    
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9EM0LW3CT3');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9EM0LW3CT3');
+    </script>
 </head>
-
 <body class="bg-gray-50">
 
+    <header id="dynamic-header"></header>
+    <script src="../header.js"></script>
 
+    <!-- Banner -->
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <img
+                src="../Banners/Donate &amp; CSR/Donation Page.jpg"
+                alt="Donate to Sri Shankara Cancer Hospital"
+                class="hospital-banner-background desktop"
+            >
+            <img
+                src="../Banners/Donate &amp; CSR/Donation Page.jpg"
+                alt="Donate to Sri Shankara Cancer Hospital"
+                class="hospital-banner-background mobile"
+            >
+            <div class="hospital-banner-overlay"></div>
+            <div class="hospital-banner-logo"></div>
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a href="#donation-amount-widget" class="hospital-banner-cta">Make a Donation</a>
+                    <a href="List of donors category wise.pdf" target="_blank" rel="noopener noreferrer" class="hospital-banner-cta">Our Donors</a>
+                </div>
+            </div>
+        </div>
+        <div class="hospital-banner-mobile-text">
+            <a href="#donation-amount-widget" class="hospital-banner-cta">Make a Donation</a>
+            <a href="List of donors category wise.pdf" target="_blank" rel="noopener noreferrer" class="hospital-banner-cta">Our Donors</a>
+        </div>
+    </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    generateMenu1(); 
-  });
-</script>
+    <!-- Breadcrumb -->
+    <div class="donate-breadcrumb-wrapper">
+        <nav class="donate-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="../index.html">Home</a></li>
+                <li aria-current="page">Donate</li>
+            </ol>
+        </nav>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-hospital-green to-green-600 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Support Cancer Care at Sri Shankara Cancer Hospital</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                From our humble beginnings to being 6 institutions strong, we've created an Oncology Healthcare Ecosystem focused on making the best cancer care accessible and affordable to all.
+    <!-- Page intro -->
+    <section class="donate-intro">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1>Support Cancer Care at Sri Shankara Cancer Hospital</h1>
+            <p>
+                From our humble beginnings to being 6 institutions strong, we have created an oncology healthcare ecosystem
+                focused on making the best cancer care accessible and affordable to all.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button onclick="scrollToDonationForm()" class="bg-hospital-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg inline-flex items-center">
-                    <i class="fas fa-heart mr-2"></i>Donate Now
+            <div class="donate-intro-actions">
+                <button type="button" class="donate-btn donate-btn-primary" onclick="scrollToDonationForm()">
+                    <i class="fas fa-heart" aria-hidden="true"></i> Donate Now
                 </button>
-                <a href="List of donors category wise.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-[#FF5100] hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg no-underline">
-                    <i class="fas fa-hand-holding-heart mr-2"></i>Our Donors
+                <a href="List of donors category wise.pdf" target="_blank" rel="noopener noreferrer" class="donate-btn donate-btn-secondary">
+                    <i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Our Donors
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Donation Amount Widget -->
-    <section class="donation-widget-section py-14">
+    <!-- Donation amount widget -->
+    <section class="donation-widget-section" id="donation-amount-widget">
         <div class="max-w-md mx-auto px-4 sm:px-6">
-            <div class="donation-card" id="donation-amount-widget">
+            <div class="donation-card">
                 <h2 class="donation-card-title">Make a gift to Sri Shankara Cancer Hospital</h2>
                 <p class="donation-card-subtitle">Choose an amount to donate <strong>one-time</strong></p>
 
@@ -509,7 +118,7 @@
                         inputmode="decimal"
                         autocomplete="off"
                         aria-label="Custom donation amount"
-                    />
+                    >
                     <button type="button" class="amount-currency-badge" id="currency-badge" aria-label="Switch currency">
                         <span id="currency-flag">🇺🇸</span>
                         <span id="currency-code">USD</span>
@@ -529,243 +138,150 @@
                 </div>
 
                 <label class="dedicate-label">
-                    <input type="checkbox" id="dedicate-checkbox" />
+                    <input type="checkbox" id="dedicate-checkbox">
                     Dedicate my donation
                     <i class="fas fa-info-circle dedicate-info" title="Honor someone special with your gift"></i>
                 </label>
 
-                <hr class="donation-divider" />
+                <hr class="donation-divider">
 
-                <button type="button" class="donate-btn-primary" onclick="handleWidgetDonate()">Donate</button>
+                <button type="button" class="donate-btn-submit" onclick="handleWidgetDonate()">Donate</button>
             </div>
         </div>
     </section>
 
-    <!-- Donation Causes Section -->
-    <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-        <!-- Background decorative elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute -top-40 -right-40 w-80 h-80 bg-hospital-green bg-opacity-5 rounded-full"></div>
-            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-hospital-orange bg-opacity-5 rounded-full"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <!-- Header Section -->
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-                    Causes You Can 
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-hospital-green to-green-600">Donate To</span>
-                </h2>
-                <p class="text-xl md:text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-                    Your generous contributions go a long way towards benefitting all cancer warriors and survivors at our institutions. 
-                    <span class="text-hospital-green font-semibold">Your support can help advance these critical programs for a cancer-free society.</span>
-                </p>
-            </div>
-            
-            <!-- Main Content Grid -->
-          <!-- Main Content Grid -->
-<div class="space-y-12">
-
-    <!-- Hospital Project -->
-    <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Left -->
-        <div class="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-6 border-hospital-green group h-full flex flex-col">
-            <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-hospital-green to-green-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-hospital text-white text-2xl"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Hospital Project</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                        Support the development and expansion of our cancer care infrastructure and facilities to serve more patients with world-class treatment.
-                    </p>
-                    <button onclick="scrollToDonationForm()" class="bg-gradient-to-r from-hospital-green to-green-600 hover:from-green-600 hover:to-green-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-                        Donate Now
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Right -->
-        <div class="bg-gradient-to-br from-hospital-green to-green-600 rounded-3xl shadow-xl p-8 text-white h-full flex flex-col">
-            <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
-                    <i class="fas fa-hospital text-white text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold">Hospital Project</h3>
-            </div>
-            <div class="bg-white bg-opacity-95 rounded-2xl p-6 flex-1 text-gray-900">
-                <p class="text-sm font-semibold mb-4 flex items-center text-gray-700">
-                    <i class="fas fa-university mr-2 text-green-600"></i>Account Details:
-                </p>
-                <div class="space-y-3 text-sm">
-                    <p><span class="font-medium">Sri Shankara Cancer Foundation</span></p>
-                    <p>A/C: <span class="font-mono bg-gray-100 px-3 py-1 rounded">59225042008001</span></p>
-                    <p>HDFC Bank Ltd</p>
-                    <p class="text-xs opacity-90">Branch: No 68, Appu Rao Main Road, 6th Main Road, Chamarajpet, Bangalore-560018</p>
-                    <p>IFSC: <span class="font-mono bg-gray-100 px-3 py-1 rounded">HDFC0002709</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Nithya Anna Dana Yojana -->
-    <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Left -->
-        <div class="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-6 border-hospital-orange group h-full flex flex-col">
-            <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-hospital-orange to-orange-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-utensils text-white text-2xl"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Nithya Anna Dana Yojana</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                        Provide free, nutritious meals for our patients with 7 customized meals served daily to general ward patients.
-                    </p>
-                    <button onclick="scrollToDonationForm()" class="bg-gradient-to-r from-hospital-orange to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-                        Donate Now
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Right -->
-        <div class="bg-gradient-to-br from-hospital-orange to-orange-600 rounded-3xl shadow-xl p-8 text-white h-full flex flex-col">
-            <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
-                    <i class="fas fa-utensils text-white text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold">Nithya Anna Dana Yojana</h3>
-            </div>
-            <div class="bg-white bg-opacity-95 rounded-2xl p-6 flex-1 text-gray-900">
-                <p class="text-sm font-semibold mb-4 flex items-center text-gray-700">
-                    <i class="fas fa-university mr-2 text-orange-600"></i>Account Details:
-                </p>
-                <div class="space-y-3 text-sm">
-                    <p><span class="font-medium">Sri Shankara Cancer Foundation</span></p>
-                    <p>A/C: <span class="font-mono bg-gray-100 px-3 py-1 rounded">59225042008002</span></p>
-                    <p>HDFC Bank Ltd</p>
-                    <p>IFSC: <span class="font-mono bg-gray-100 px-3 py-1 rounded">HDFC0002709</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Patient Support -->
-    <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Left -->
-        <div class="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-6 border-blue-500 group h-full flex flex-col">
-            <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-heart text-white text-2xl"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Patient Support</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                        Ensure patients from economically disadvantaged backgrounds receive the best quality cancer care regardless of their socio-economic status.
-                    </p>
-                    <button onclick="scrollToDonationForm()" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-                        Donate Now
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Right -->
-        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl shadow-xl p-8 text-white h-full flex flex-col">
-            <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
-                    <i class="fas fa-heart text-white text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold">Patient Support</h3>
-            </div>
-            <div class="bg-white bg-opacity-95 rounded-2xl p-6 flex-1 text-gray-900">
-                <p class="text-sm font-semibold mb-4 flex items-center text-gray-700">
-                    <i class="fas fa-university mr-2 text-blue-600"></i>Account Details:
-                </p>
-                <div class="space-y-3 text-sm">
-                    <p><span class="font-medium">Sri Shankara Cancer Foundation</span></p>
-                    <p>A/C: <span class="font-mono bg-gray-100 px-3 py-1 rounded">59225042008003</span></p>
-                    <p>HDFC Bank Ltd</p>
-                    <p>IFSC: <span class="font-mono bg-gray-100 px-3 py-1 rounded">HDFC0002709</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cancer Research -->
-    <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Left -->
-        <div class="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-l-6 border-purple-500 group h-full flex flex-col">
-            <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-microscope text-white text-2xl"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Cancer Research</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                        Support Sarva Rakshana - The Cancer Research Project and advance oncology research and preventive oncology.
-                    </p>
-                    <button onclick="scrollToDonationForm()" class="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-                        Donate Now
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Right -->
-        <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl shadow-xl p-8 text-white h-full flex flex-col">
-            <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
-                    <i class="fas fa-microscope text-white text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold">Cancer Research</h3>
-            </div>
-            <div class="bg-white bg-opacity-95 rounded-2xl p-6 flex-1 text-gray-900">
-                <p class="text-sm font-semibold mb-4 flex items-center text-gray-700">
-                    <i class="fas fa-university mr-2 text-purple-600"></i>Account Details:
-                </p>
-                <div class="space-y-3 text-sm">
-                    <p><span class="font-medium">Sri Shankara Cancer Foundation</span></p>
-                    <p>A/C: <span class="font-mono bg-gray-100 px-3 py-1 rounded">59225042008006</span></p>
-                    <p>HDFC Bank Ltd</p>
-                    <p>IFSC: <span class="font-mono bg-gray-100 px-3 py-1 rounded">HDFC0002709</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-    </section>
-
-    <!-- International Donors Section -->
-    <section class="py-16 bg-white">
+    <!-- Causes -->
+    <section class="donate-causes">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">International Donors</h2>
-                <p class="text-xl text-gray-600">Sri Shankara Cancer Foundation is registered under FCRA, 2010 and authorized to receive international support.</p>
+            <div class="donate-section-header">
+                <h2>Causes You Can Donate To</h2>
+                <p>
+                    Your generous contributions benefit cancer warriors and survivors across our institutions.
+                    Your support helps advance critical programs for a cancer-free society.
+                </p>
             </div>
-            
-            <div class="bg-gradient-to-r from-hospital-green to-green-600 rounded-lg p-8 text-white">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4">FCRA Account Details</h3>
-                        <div class="space-y-2">
-                            <p><strong>Account Name:</strong> Sri Shankara Cancer Foundation</p>
-                            <p><strong>Account No:</strong> 40176984857</p>
-                            <p><strong>Bank:</strong> State Bank of India</p>
-                            <p><strong>IFSC:</strong> SBIN0000691</p>
-                            <p><strong>SWIFT:</strong> SBININBB104</p>
+
+            <div class="donate-cause-row" style="--cause-color: #2E8B57;">
+                <div class="donate-cause-info">
+                    <div class="donate-cause-info-header">
+                        <div class="donate-cause-icon"><i class="fas fa-hospital" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Hospital Project</h3>
+                            <p>Support the development and expansion of our cancer care infrastructure and facilities to serve more patients with world-class treatment.</p>
                         </div>
+                    </div>
+                    <button type="button" class="donate-btn donate-btn-secondary" onclick="scrollToDonationForm()">Donate Now</button>
+                </div>
+                <div class="donate-cause-accounts">
+                    <h3><i class="fas fa-hospital" aria-hidden="true"></i> Hospital Project</h3>
+                    <div class="donate-account-box">
+                        <p class="label"><i class="fas fa-university" aria-hidden="true"></i> Account Details</p>
+                        <p><strong>Sri Shankara Cancer Foundation</strong></p>
+                        <p>A/C: <code>59225042008001</code></p>
+                        <p>HDFC Bank Ltd</p>
+                        <p>Branch: No 68, Appu Rao Main Road, 6th Main Road, Chamarajpet, Bangalore-560018</p>
+                        <p>IFSC: <code>HDFC0002709</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donate-cause-row" style="--cause-color: #FF4500;">
+                <div class="donate-cause-info">
+                    <div class="donate-cause-info-header">
+                        <div class="donate-cause-icon"><i class="fas fa-utensils" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Nithya Anna Dana Yojana</h3>
+                            <p>Provide free, nutritious meals for our patients with 7 customized meals served daily to general ward patients.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="donate-btn donate-btn-primary" onclick="scrollToDonationForm()">Donate Now</button>
+                </div>
+                <div class="donate-cause-accounts">
+                    <h3><i class="fas fa-utensils" aria-hidden="true"></i> Nithya Anna Dana Yojana</h3>
+                    <div class="donate-account-box">
+                        <p class="label"><i class="fas fa-university" aria-hidden="true"></i> Account Details</p>
+                        <p><strong>Sri Shankara Cancer Foundation</strong></p>
+                        <p>A/C: <code>59225042008002</code></p>
+                        <p>HDFC Bank Ltd</p>
+                        <p>IFSC: <code>HDFC0002709</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donate-cause-row" style="--cause-color: #3b82f6;">
+                <div class="donate-cause-info">
+                    <div class="donate-cause-info-header">
+                        <div class="donate-cause-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Patient Support</h3>
+                            <p>Ensure patients from economically disadvantaged backgrounds receive the best quality cancer care regardless of their socio-economic status.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="donate-btn donate-btn-blue" onclick="scrollToDonationForm()">Donate Now</button>
+                </div>
+                <div class="donate-cause-accounts">
+                    <h3><i class="fas fa-heart" aria-hidden="true"></i> Patient Support</h3>
+                    <div class="donate-account-box">
+                        <p class="label"><i class="fas fa-university" aria-hidden="true"></i> Account Details</p>
+                        <p><strong>Sri Shankara Cancer Foundation</strong></p>
+                        <p>A/C: <code>59225042008003</code></p>
+                        <p>HDFC Bank Ltd</p>
+                        <p>IFSC: <code>HDFC0002709</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donate-cause-row" style="--cause-color: #8b5cf6;">
+                <div class="donate-cause-info">
+                    <div class="donate-cause-info-header">
+                        <div class="donate-cause-icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Cancer Research</h3>
+                            <p>Support Sarva Rakshana — The Cancer Research Project and advance oncology research and preventive oncology.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="donate-btn donate-btn-purple" onclick="scrollToDonationForm()">Donate Now</button>
+                </div>
+                <div class="donate-cause-accounts">
+                    <h3><i class="fas fa-microscope" aria-hidden="true"></i> Cancer Research</h3>
+                    <div class="donate-account-box">
+                        <p class="label"><i class="fas fa-university" aria-hidden="true"></i> Account Details</p>
+                        <p><strong>Sri Shankara Cancer Foundation</strong></p>
+                        <p>A/C: <code>59225042008006</code></p>
+                        <p>HDFC Bank Ltd</p>
+                        <p>IFSC: <code>HDFC0002709</code></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International donors -->
+    <section class="donate-international">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="donate-section-header">
+                <h2>International Donors</h2>
+                <p>Sri Shankara Cancer Foundation is registered under FCRA, 2010 and authorized to receive international support.</p>
+            </div>
+            <div class="donate-fcra-card">
+                <div class="donate-fcra-grid">
+                    <div>
+                        <h3>FCRA Account Details</h3>
+                        <p><strong>Account Name:</strong> Sri Shankara Cancer Foundation</p>
+                        <p><strong>Account No:</strong> 40176984857</p>
+                        <p><strong>Bank:</strong> State Bank of India</p>
+                        <p><strong>IFSC:</strong> SBIN0000691</p>
+                        <p><strong>SWIFT:</strong> SBININBB104</p>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4">Alternative Options</h3>
-                        <div class="space-y-3">
-                            <div class="flex items-center">
-                                <i class="fas fa-globe-americas mr-3"></i>
-                                <span>SSCF USA (501(c)(3) exempt)</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-hand-holding-heart mr-3"></i>
-                                <span>Benevity Platform</span>
-                            </div>
+                        <h3>Alternative Options</h3>
+                        <div class="donate-alt-option">
+                            <i class="fas fa-globe-americas" aria-hidden="true"></i>
+                            <span>SSCF USA (501(c)(3) exempt)</span>
+                        </div>
+                        <div class="donate-alt-option">
+                            <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                            <span>Benevity Platform</span>
                         </div>
                     </div>
                 </div>
@@ -773,838 +289,202 @@
         </div>
     </section>
 
-    
+    <!-- Receipt form -->
+    <section id="donation-form" class="donate-receipt-section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="donate-section-header">
+                <h2>After Donating, Submit Details to Receive Your Receipt</h2>
+                <p>Fill out the form below to receive your tax-benefit donation receipt.</p>
+            </div>
 
+            <form class="donate-receipt-form" action="donate.php" method="POST" enctype="multipart/form-data" novalidate>
+                <div class="donate-form-grid">
+                    <div class="donate-field">
+                        <label for="donor_name">Name of the Donor</label>
+                        <input type="text" name="donor_name" id="donor_name" required maxlength="50" autocomplete="name">
+                        <span class="donate-field-error" id="err_donor_name"></span>
+                    </div>
 
+                    <div class="donate-field">
+                        <label for="program">Program Donated Toward</label>
+                        <select name="program" id="program" required>
+                            <option value="">-- Select Program --</option>
+                            <option value="Hospital Project">Hospital Project</option>
+                            <option value="Nithya Anna Dana Yojana">Nithya Anna Dana Yojana</option>
+                            <option value="Patient Support">Patient Support</option>
+                            <option value="Cancer Research">Cancer Research</option>
+                        </select>
+                        <span class="donate-field-error" id="err_program"></span>
+                    </div>
 
+                    <div class="donate-field span-2">
+                        <input type="hidden" name="amount" id="amount">
+                        <input type="hidden" name="donation_currency" id="donation_currency" value="USD">
+                        <input type="hidden" name="dedicate" id="dedicate" value="0">
+                        <label for="amount-display">Donation Amount</label>
+                        <p class="donation-form-amount-summary" id="amount-form-summary">
+                            Selected: <strong id="amount-display">$100.00 USD</strong> — use the widget above to change
+                        </p>
+                        <span class="donate-field-error" id="err_amount"></span>
+                    </div>
 
+                    <div class="donate-field">
+                        <label for="pan">PAN Number</label>
+                        <input type="text" name="pan" id="pan" required maxlength="10" placeholder="ABCDE1234F" autocomplete="off">
+                        <span class="donate-field-error" id="err_pan"></span>
+                    </div>
 
+                    <div class="donate-field">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" required autocomplete="email">
+                        <span class="donate-field-error" id="err_email"></span>
+                    </div>
 
+                    <div class="donate-field">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" name="contact" id="contact" required maxlength="10" placeholder="10-digit mobile number" autocomplete="tel">
+                        <span class="donate-field-error" id="err_contact"></span>
+                    </div>
 
+                    <div class="donate-field span-2">
+                        <label for="address">Address</label>
+                        <textarea name="address" id="address" rows="3" required></textarea>
+                        <span class="donate-field-error" id="err_address"></span>
+                    </div>
 
+                    <div class="donate-field">
+                        <label for="transaction_id">UTR / Transaction ID</label>
+                        <input type="text" name="transaction_id" id="transaction_id" required minlength="6" maxlength="30" autocomplete="off">
+                        <span class="donate-field-error" id="err_transaction_id"></span>
+                    </div>
+                </div>
 
+                <label class="donate-consent">
+                    <input type="checkbox" name="consent">
+                    <span>I accept to receive updates from Sri Shankara Cancer Foundation and its associated institutions via email, WhatsApp, SMS and calls.</span>
+                </label>
 
-
-
-
-
-
-
-
-
-
-
-    <!-- Donation Receipt Form -->
-   <!-- Donation Receipt Form -->
-<section id="donation-form" class="py-16 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        After Donating, Submit the details to receive the receipt.
-      </h2>
-      <p class="text-xl text-gray-600">
-        Fill out the details below to receive tax benefit donation receipt
-      </p>
-    </div>
-
-    <form class="bg-gray-50 rounded-lg p-8" action="donate.php" method="POST" enctype="multipart/form-data">
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >Name of the Donor</label
-          >
-          <input
-            type="text"
-            name="donor_name"
-            id="donor_name"
-            required
-            maxlength="50"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          />
-          <span class="text-red-600 text-xs hidden" id="err_donor_name"></span>
+                <div class="donate-form-submit">
+                    <button type="submit" class="donate-btn donate-btn-primary">
+                        Submit for Receipt
+                    </button>
+                </div>
+            </form>
         </div>
+    </section>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >Program Donated Toward</label
-          >
-          <select
-            name="program"
-            id="program"
-            required
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          >
-            <option value="">-- Select Program --</option>
-            <option value="Hospital Project">Hospital Project</option>
-            <option value="Nithya Anna Dana Yojana">
-              Nithya Anna Dana Yojana
-            </option>
-            <option value="Patient Support">Patient Support</option>
-            <option value="Cancer Research">Cancer Research</option>
-          </select>
-          <span class="text-red-600 text-xs hidden" id="err_program"></span>
-        </div>
-
-        <div class="md:col-span-2">
-          <input type="hidden" name="amount" id="amount" />
-          <input type="hidden" name="donation_currency" id="donation_currency" value="USD" />
-          <input type="hidden" name="dedicate" id="dedicate" value="0" />
-          <label class="block text-sm font-medium text-gray-700 mb-2" id="amount-label">Donation Amount</label>
-          <p class="donation-form-amount-summary" id="amount-form-summary">
-            Selected: <strong id="amount-display">$100.00 USD</strong> — use the widget above to change
-          </p>
-          <span class="text-red-600 text-xs hidden" id="err_amount"></span>
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >PAN Number</label
-          >
-          <input
-            type="text"
-            name="pan"
-            id="pan"
-            required
-            maxlength="10"
-            placeholder="ABCDE1234F"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          />
-          <span class="text-red-600 text-xs hidden" id="err_pan"></span>
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >Email Address</label
-          >
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          />
-          <span class="text-red-600 text-xs hidden" id="err_email"></span>
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >Contact Number</label
-          >
-          <input
-            type="tel"
-            name="contact"
-            id="contact"
-            required
-            maxlength="10"
-            placeholder="10-digit mobile number"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          />
-          <span class="text-red-600 text-xs hidden" id="err_contact"></span>
-        </div>
-
-        <div class="md:col-span-2">
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >Address</label
-          >
-          <textarea
-            name="address"
-            id="address"
-            rows="3"
-            required
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          ></textarea>
-          <span class="text-red-600 text-xs hidden" id="err_address"></span>
-        </div>
-
-
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >UTR/Transaction ID</label
-          >
-          <input
-            type="text"
-            name="transaction_id"
-            id="transaction_id"
-            required
-            minlength="6"
-            maxlength="30"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          />
-          <span class="text-red-600 text-xs hidden" id="err_transaction_id"></span>
-        </div>
-      </div>
-
-      <div class="mt-6">
-        <label class="flex items-center">
-          <input type="checkbox" name="consent" class="mr-2" />
-          <span class="text-sm text-gray-600"
-            >I accept to receive updates from Sri Shankara Cancer Foundation and
-            its associated institutions via email, WhatsApp, SMS and
-            calls.</span
-          >
-        </label>
-      </div>
-
-      <div class="mt-8 text-center">
-        <button
-          type="submit"
-          class="bg-hospital-orange hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-        >
-          Submit for Receipt
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
-
-    <!-- Tax Benefits Section -->
-    <section class="py-16 bg-hospital-green text-white">
+    <!-- Tax benefits -->
+    <section class="donate-tax-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tax Benefits and Donor Recognition</h2>
+            <div class="donate-section-header">
+                <h2>Tax Benefits and Donor Recognition</h2>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white text-3xl">📄</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Tax Exemption</h3>
-                    <p class="text-green-100">50% tax exemption under section 80G. 100% exemption for Cancer Research under section 35(1)(ii).</p>
+            <div class="donate-benefits-grid">
+                <div class="donate-benefit-card">
+                    <div class="donate-benefit-icon"><i class="fas fa-file-invoice" aria-hidden="true"></i></div>
+                    <h3>Tax Exemption</h3>
+                    <p>50% tax exemption under section 80G. 100% exemption for Cancer Research under section 35(1)(ii).</p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white text-3xl">🏆</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Honorary Name Plaque</h3>
-                    <p class="text-green-100">Your support will be honored through name plaques on sponsored infrastructure.</p>
+                <div class="donate-benefit-card">
+                    <div class="donate-benefit-icon"><i class="fas fa-medal" aria-hidden="true"></i></div>
+                    <h3>Honorary Name Plaque</h3>
+                    <p>Your support will be honored through name plaques on sponsored infrastructure.</p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white text-3xl">📊</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Impact Reports</h3>
-                    <p class="text-green-100">Receive annual utilization and impact reports of your support.</p>
+                <div class="donate-benefit-card">
+                    <div class="donate-benefit-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                    <h3>Impact Reports</h3>
+                    <p>Receive annual utilization and impact reports of your support.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white scroll-mt-24">
+    <!-- Contact -->
+    <section id="contact" class="donate-contact-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Donations & Charity Cell</h2>
-                <p class="text-xl text-gray-600">For queries and more information, contact our dedicated team</p>
+            <div class="donate-section-header">
+                <h2>Donations &amp; Charity Cell</h2>
+                <p>For queries and more information, contact our dedicated team.</p>
             </div>
-            
-            <div class="bg-gray-50 rounded-lg p-8 max-w-2xl mx-auto">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-hospital-green rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-user text-white text-2xl"></i>
+            <div class="donate-contact-grid">
+                <div class="donate-contact-card">
+                    <div class="donate-contact-avatar"><i class="fas fa-user" aria-hidden="true"></i></div>
+                    <h3>Mrs. Rama Ramamurthy</h3>
+                    <p class="donate-contact-role">Manager, Donations &amp; Charity Cell</p>
+                    <div class="donate-contact-detail">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <span>080 26981129</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Mrs. Rama Ramamurthy</h3>
-                    <p class="text-gray-600 mb-4">Manager, Donations & Charity Cell</p>
-                    
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-center">
-                            <i class="fas fa-phone text-hospital-green mr-2"></i>
-                            <span>080 26981129</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <i class="fas fa-envelope text-hospital-green mr-2"></i>
-                            <span>charitycell@sschrc.org</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <i class="fas fa-envelope text-hospital-green mr-2"></i>
-                            <span>rama@sschrc.org</span>
-                        </div>
+                    <div class="donate-contact-detail">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:charitycell@sschrc.org">charitycell@sschrc.org</a>
+                    </div>
+                    <div class="donate-contact-detail">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:rama@sschrc.org">rama@sschrc.org</a>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-8 max-w-2xl mx-auto">
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-hospital-green rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-user text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Mr. M P Harish Kumar</h3>
-                        <p class="text-gray-600 mb-4">Head-CSR</p>
-                        
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-center">
-                                <i class="fas fa-phone text-hospital-green mr-2"></i>
-                                <span>080 46481079</span>
-                            </div>
-                            <i class="fas fa-phone text-hospital-green mr-2"></i>
-                            <span>77954 85415</span>
-                            <div class="flex items-center justify-center">
-                                <i class="fas fa-envelope text-hospital-green mr-2"></i>
-                                <span>harishkumar.csr@sschrc.org</span>
-                            </div>
-                        </div>
+                <div class="donate-contact-card">
+                    <div class="donate-contact-avatar"><i class="fas fa-user" aria-hidden="true"></i></div>
+                    <h3>Mr. M P Harish Kumar</h3>
+                    <p class="donate-contact-role">Head — CSR</p>
+                    <div class="donate-contact-detail">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <span>080 46481079</span>
                     </div>
-            </div>
+                    <div class="donate-contact-detail">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <span>77954 85415</span>
+                    </div>
+                    <div class="donate-contact-detail">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:harishkumar.csr@sschrc.org">harishkumar.csr@sschrc.org</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <script>
-        // Donation amount widget
-        (function () {
-            var PRESETS = {
-                USD: [50, 100, 250, 500],
-                INR: [5000, 10000, 25000, 50000]
-            };
-            var CURRENCY_META = {
-                USD: { symbol: '$', flag: '🇺🇸', code: 'USD' },
-                INR: { symbol: '₹', flag: '🇮🇳', code: 'INR' }
-            };
-            var state = { currency: 'USD', amount: 100 };
-
-            function formatDisplay(value, currency) {
-                if (value == null || value === '') return '—';
-                var num = Number(value);
-                if (!num || num <= 0) return '—';
-                if (currency === 'USD') {
-                    return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' USD';
-                }
-                return '₹' + num.toLocaleString('en-IN', { maximumFractionDigits: 0 }) + ' INR';
-            }
-
-            function formatInputValue(value) {
-                if (value == null || value === '') return '';
-                var num = Number(value);
-                if (!num || num <= 0) return '';
-                return state.currency === 'USD'
-                    ? num.toFixed(2)
-                    : String(Math.round(num));
-            }
-
-            function renderPresets() {
-                var container = document.getElementById('amount-presets');
-                if (!container) return;
-                var amounts = PRESETS[state.currency];
-                container.innerHTML = amounts.map(function (amt) {
-                    var selected = state.amount === amt ? ' selected' : '';
-                    var label = state.currency === 'USD'
-                        ? '$' + amt
-                        : '₹' + amt.toLocaleString('en-IN');
-                    return '<button type="button" class="amount-preset-btn' + selected + ' preset-btn-main" data-amount="' + amt + '">' + label + '</button>';
-                }).join('');
-            }
-
-            function syncProgram() {
-                var widgetProgram = document.getElementById('widget-program');
-                var formProgram = document.getElementById('program');
-                if (widgetProgram && formProgram) {
-                    formProgram.value = widgetProgram.value;
-                }
-            }
-
-            function syncDedicate() {
-                var checkbox = document.getElementById('dedicate-checkbox');
-                var hidden = document.getElementById('dedicate');
-                if (checkbox && hidden) {
-                    hidden.value = checkbox.checked ? '1' : '0';
-                }
-            }
-
-            function syncUI() {
-                var meta = CURRENCY_META[state.currency];
-                var prefix = document.getElementById('amount-currency-prefix');
-                if (prefix) prefix.textContent = meta.symbol;
-
-                var flag = document.getElementById('currency-flag');
-                var code = document.getElementById('currency-code');
-                if (flag) flag.textContent = meta.flag;
-                if (code) code.textContent = meta.code;
-
-                var customInput = document.getElementById('custom-amount-input');
-                if (customInput) {
-                    customInput.value = formatInputValue(state.amount);
-                }
-
-                var display = document.getElementById('amount-display');
-                if (display) display.textContent = formatDisplay(state.amount, state.currency);
-
-                var hiddenAmount = document.getElementById('amount');
-                if (hiddenAmount) hiddenAmount.value = state.amount ? Math.round(state.amount) : '';
-
-                var hiddenCurrency = document.getElementById('donation_currency');
-                if (hiddenCurrency) hiddenCurrency.value = state.currency;
-
-                renderPresets();
-                syncProgram();
-                syncDedicate();
-            }
-
-            function setCurrency(currency) {
-                state.currency = currency;
-                state.amount = PRESETS[currency][1];
-                syncUI();
-            }
-
-            function toggleCurrency() {
-                setCurrency(state.currency === 'USD' ? 'INR' : 'USD');
-            }
-
-            function setAmount(amount) {
-                var num = parseFloat(String(amount).replace(/,/g, ''));
-                if (!num || num <= 0) {
-                    state.amount = null;
-                } else {
-                    state.amount = num;
-                }
-                syncUI();
-            }
-
-            window.handleWidgetDonate = function () {
-                if (!state.amount || state.amount <= 0) {
-                    showFieldError('amount', 'Please select or enter a donation amount.');
-                    scrollToDonationForm();
-                    return;
-                }
-                clearFieldError('amount');
-                syncProgram();
-                scrollToDonationForm();
-            };
-
-            document.addEventListener('DOMContentLoaded', function () {
-                syncUI();
-
-                var currencyBadge = document.getElementById('currency-badge');
-                if (currencyBadge) {
-                    currencyBadge.addEventListener('click', toggleCurrency);
-                }
-
-                document.addEventListener('click', function (e) {
-                    var preset = e.target.closest('.preset-btn-main');
-                    if (preset) {
-                        setAmount(preset.getAttribute('data-amount'));
-                        clearFieldError('amount');
-                    }
-                });
-
-                var customInput = document.getElementById('custom-amount-input');
-                if (customInput) {
-                    customInput.addEventListener('input', function () {
-                        var raw = customInput.value.replace(/[^\d.]/g, '');
-                        if (raw) {
-                            setAmount(raw);
-                            clearFieldError('amount');
-                        } else {
-                            state.amount = null;
-                            syncUI();
-                        }
-                    });
-                    customInput.addEventListener('blur', function () {
-                        if (state.amount) syncUI();
-                    });
-                }
-
-                var widgetProgram = document.getElementById('widget-program');
-                if (widgetProgram) {
-                    widgetProgram.addEventListener('change', function () {
-                        syncProgram();
-                        clearFieldError('program');
-                    });
-                }
-
-                var dedicateCheckbox = document.getElementById('dedicate-checkbox');
-                if (dedicateCheckbox) {
-                    dedicateCheckbox.addEventListener('change', syncDedicate);
-                }
-            });
-
-            window.getDonationAmount = function () { return state.amount; };
-            window.getDonationCurrency = function () { return state.currency; };
-            window.resetDonationAmountWidget = function () {
-                state.currency = 'USD';
-                state.amount = PRESETS.USD[1];
-                var checkbox = document.getElementById('dedicate-checkbox');
-                if (checkbox) checkbox.checked = false;
-                var widgetProgram = document.getElementById('widget-program');
-                if (widgetProgram) widgetProgram.selectedIndex = 0;
-                syncUI();
-            };
-        })();
-
-        // Function to scroll to donation form
-        function scrollToDonationForm() {
-            const formSection = document.getElementById('donation-form');
-            if (formSection) {
-                formSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                // Optional: Add a slight highlight effect
-                formSection.style.transition = 'box-shadow 0.3s ease';
-                formSection.style.boxShadow = '0 0 20px rgba(46, 139, 87, 0.3)';
-                setTimeout(() => {
-                    formSection.style.boxShadow = '';
-                }, 2000);
-            }
-        }
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add hover effects to donation cards
-        document.querySelectorAll('.hover\\:shadow-xl').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-        
-        // ============================================================
-        // FRONTEND VALIDATION - Added for field-level validation
-        // ============================================================
-        function showFieldError(fieldId, message) {
-            var errEl = document.getElementById('err_' + fieldId);
-            var inputEl = document.getElementById(fieldId);
-            if (errEl) {
-                errEl.textContent = message;
-                errEl.classList.remove('hidden');
-            }
-            if (inputEl) {
-                inputEl.style.borderColor = '#dc2626';
-            }
-        }
-
-        function clearFieldError(fieldId) {
-            var errEl = document.getElementById('err_' + fieldId);
-            var inputEl = document.getElementById(fieldId);
-            if (errEl) {
-                errEl.textContent = '';
-                errEl.classList.add('hidden');
-            }
-            if (inputEl) {
-                inputEl.style.borderColor = '';
-            }
-        }
-
-        function clearAllErrors() {
-            var fields = ['donor_name','program','amount','pan','email','contact','address','transaction_id'];
-            fields.forEach(function(f) { clearFieldError(f); });
-        }
-
-        // Live clear errors on input/change
-        ['donor_name','program','amount','pan','email','contact','address','transaction_id'].forEach(function(fid) {
-            var el = document.getElementById(fid);
-            if (el) {
-                el.addEventListener('input', function() { clearFieldError(fid); });
-                el.addEventListener('change', function() { clearFieldError(fid); });
-            }
-        });
-
-        function validateDonationForm(form) {
-            clearAllErrors();
-            var valid = true;
-
-            // --- Donor Name ---
-            var donor_name = document.getElementById('donor_name').value.trim();
-            if (!donor_name) {
-                showFieldError('donor_name', 'Name of the Donor is required.');
-                valid = false;
-            } else if (!/^[A-Za-z\s]+$/.test(donor_name)) {
-                showFieldError('donor_name', 'Name must contain only alphabets and spaces.');
-                valid = false;
-            } else if (donor_name.length < 3) {
-                showFieldError('donor_name', 'Name must be at least 3 characters long.');
-                valid = false;
-            } else if (donor_name.length > 50) {
-                showFieldError('donor_name', 'Name must not exceed 50 characters.');
-                valid = false;
-            }
-
-            // --- Program Dropdown ---
-            var program = document.getElementById('program').value;
-            if (!program) {
-                showFieldError('program', 'Please select a program.');
-                valid = false;
-            }
-
-            // --- Amount ---
-            var amount = document.getElementById('amount').value.trim();
-            if (!amount) {
-                showFieldError('amount', 'Donation amount is required.');
-                valid = false;
-            } else if (!/^\d+$/.test(amount) || parseInt(amount, 10) <= 0) {
-                showFieldError('amount', 'Please enter a valid amount greater than 0 (whole numbers only).');
-                valid = false;
-            }
-
-            // --- PAN Number ---
-            var pan = document.getElementById('pan').value.trim().toUpperCase();
-            if (!pan) {
-                showFieldError('pan', 'PAN Number is required.');
-                valid = false;
-            } else if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(pan)) {
-                showFieldError('pan', 'Invalid PAN format. Example: ABCDE1234F');
-                valid = false;
-            }
-
-            // --- Email ---
-            var email = document.getElementById('email').value.trim();
-            if (!email) {
-                showFieldError('email', 'Email Address is required.');
-                valid = false;
-            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                showFieldError('email', 'Please enter a valid email address.');
-                valid = false;
-            }
-
-            // --- Contact Number ---
-            var contact = document.getElementById('contact').value.trim();
-            if (!contact) {
-                showFieldError('contact', 'Contact Number is required.');
-                valid = false;
-            } else if (!/^\d{10}$/.test(contact)) {
-                showFieldError('contact', 'Contact Number must be exactly 10 digits (numbers only, no spaces).');
-                valid = false;
-            }
-
-            // --- Address ---
-            var address = document.getElementById('address').value.trim();
-            if (!address) {
-                showFieldError('address', 'Address is required.');
-                valid = false;
-            }
-
-            // --- UTR/Transaction ID ---
-            var txn = document.getElementById('transaction_id').value.trim();
-            if (!txn) {
-                showFieldError('transaction_id', 'UTR/Transaction ID is required.');
-                valid = false;
-            } else if (!/^[A-Za-z0-9]{6,30}$/.test(txn)) {
-                showFieldError('transaction_id', 'Transaction ID must be 6–30 alphanumeric characters (no spaces or special characters).');
-                valid = false;
-            }
-
-            return valid;
-        }
-        // ============================================================
-        // END FRONTEND VALIDATION
-        // ============================================================
-
-        // Form submission with AJAX
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.querySelector('form[action="donate.php"]');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    // Run frontend validation before submitting
-                    if (!validateDonationForm(form)) {
-                        // Scroll to first error
-                        var firstErr = form.querySelector('[style*="border-color: rgb(220, 38, 38)"]');
-                        if (firstErr) { firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-                        return;
-                    }
-                    
-                    // Get form element
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    const originalBtnText = submitBtn.innerHTML;
-                    
-                    // Show submitting status
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
-                    
-                    // Create FormData object
-                    const formData = new FormData(form);
-                    
-                    // Submit via AJAX
-                    fetch('donate.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        if (data.status === 'success') {
-                            
-                            
-                             // 🔵 GA4 DONATION SUCCESS EVENT
-        if (typeof gtag === 'function') {
-            gtag('event', 'donate_submit', {
-                transport_type: 'beacon'
-            });
-        }
-                            
-                            
-                            // Show success message
-                            showNotification(data.message, 'success');
-                            // Reset form
-                            form.reset();
-                            if (window.resetDonationAmountWidget) window.resetDonationAmountWidget();
-                        } else {
-                            // Show error message
-                            showNotification(data.message || 'An error occurred. Please try again.', 'error');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        showNotification('An error occurred while submitting your request. Please try again later.', 'error');
-                    })
-                    .finally(() => {
-                        // Re-enable submit button
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = originalBtnText;
-                    });
-                });
-            }
-        });
-        
-        // Show notification function
-        function showNotification(message, type) {
-            // Remove existing notifications
-            const existing = document.querySelector('.form-notification');
-            if (existing) {
-                existing.remove();
-            }
-            
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.className = 'form-notification fixed top-4 right-4 px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300 max-w-md';
-            notification.style.backgroundColor = type === 'success' ? '#2E8B57' : '#dc2626';
-            notification.style.color = 'white';
-            notification.innerHTML = `
-                <div class="flex items-center">
-                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} mr-3 text-xl"></i>
-                    <span>${message}</span>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Animate in
-            setTimeout(() => {
-                notification.classList.remove('translate-x-full');
-            }, 100);
-            
-            // Remove after 5 seconds
-            setTimeout(() => {
-                notification.classList.add('translate-x-full');
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
-                    }
-                }, 300);
-            }, 5000);
-        }
-    </script>
-
-<!-- Font Awesome Icon Fallback -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if Font Awesome is loaded
-    if (!document.querySelector('link[href*="font-awesome"]') || !window.FontAwesome) {
-        // Fallback: Load Font Awesome from alternative CDN
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
-        document.head.appendChild(link);
-    }
-    
-    // Ensure all icons are visible
-    const icons = document.querySelectorAll('.fas, .far, .fab, .fa');
-    icons.forEach(icon => {
-        if (!icon.style.fontFamily.includes('Font Awesome')) {
-            icon.style.fontFamily = '"Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands"';
-            icon.style.fontWeight = '900';
-            icon.style.display = 'inline-block';
-        }
-    });
-});
-</script>
-</body>
-
-
-<!-- ═══════════════ SHARED FOOTER ═══════════════ -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Shankara Cancer Hospital Footer</title>
-    <link rel="stylesheet" href="../footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Footer container - content will be dynamically generated by JavaScript -->
+    <!-- Footer -->
     <footer id="hospital-footer"></footer>
-    
-    <script src="../footer.js"></script>
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shankara Cancer Hospital & Research Center</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../footer-main.css" /> 
-    <link rel="stylesheet" href="../chatbox.css" /> 
-</head>
-<body>
+    <!-- Chatbox -->
     <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
-        <svg viewBox="0 0 24 24">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
         </svg>
     </button>
-
     <div id="chatbox-container3">
         <div id="chatbox-header3">
             <div class="header-content3">
                 <div class="avatar3">
-                    <svg viewBox="0 0 24 24">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
                     </svg>
                 </div>
-                </div>
+            </div>
             <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
         </div>
-
         <div id="chatbox-body3">
             <div id="chatbox-messages3" style="display:none;"></div>
-
             <div id="chatbox-faq-buttons3" style="display:none;"></div>
         </div>
-
         <form id="chatbox-form3" style="display:none;">
             <div id="chatbox-input-area3">
-                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
-                <button type="submit" id="chatbox-send-btn3">
-                    <svg viewBox="0 0 24 24">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required>
+                <button type="submit" id="chatbox-send-btn3" aria-label="Send message">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
                     </svg>
-                    
                 </button>
             </div>
         </form>
     </div>
-<script src="../chatbox.js"></script>
-<script src="../footer-main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="donate.js"></script>
+    <script src="../footer.js"></script>
+    <script src="../chatbox.js"></script>
+    <script src="../footer-main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
