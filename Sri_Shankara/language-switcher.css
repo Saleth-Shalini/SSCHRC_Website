@@ -1,0 +1,119 @@
+/* Site-wide language switcher */
+#dynamic-header .careers-donate-column,
+#dynamic-header .action-buttons,
+#dynamic-header .header-right,
+#dynamic-header .header-top {
+    overflow: visible !important;
+}
+
+.lang-switcher {
+    position: relative;
+    display: inline-flex;
+    z-index: 100020;
+}
+
+.lang-switcher .lang-btn {
+    background: #7c3aed;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    pointer-events: auto;
+}
+
+.lang-switcher .lang-btn:hover {
+    background: #6d28d9;
+}
+
+.lang-switcher .lang-arrow {
+    font-size: 0.65rem;
+    margin-left: 0.15rem;
+    transition: transform 0.2s ease;
+}
+
+.lang-switcher.open .lang-arrow {
+    transform: rotate(180deg);
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    right: 0;
+    min-width: 9.5rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    list-style: none;
+    margin: 0;
+    padding: 0.35rem 0;
+    z-index: 100030;
+    pointer-events: auto;
+}
+
+.lang-switcher.open .lang-dropdown {
+    display: block !important;
+}
+
+.lang-dropdown button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.55rem 0.9rem;
+    border: none;
+    background: transparent;
+    color: #374151;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.lang-dropdown button:hover,
+.lang-dropdown button.active {
+    background: #f3f4f6;
+    color: #2E8B57;
+}
+
+.mobile-lang-switcher {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-lang-switcher .lang-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.mobile-lang-switcher .lang-dropdown {
+    left: 0;
+    right: 0;
+    min-width: 100%;
+}
+
+/* Hide Google Translate UI — language only, no layout change */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-te-menu-value span,
+.goog-te-gadget {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+#google_translate_element,
+.skiptranslate.goog-te-gadget {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+.translated-ltr body,
+.translated-rtl body {
+    top: 0 !important;
+}
