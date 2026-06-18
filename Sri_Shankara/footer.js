@@ -460,44 +460,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
 });
 
-// Site-wide Kannada / English language switcher
 (function () {
-    'use strict';
-    if (window.SSCHRC_LANG_LOADER) return;
-    window.SSCHRC_LANG_LOADER = true;
     try {
-        var lang = localStorage.getItem('sschrc-lang') || localStorage.getItem('sschrc-index-lang');
-        if (lang === 'kn') {
-            document.cookie = 'googtrans=/en/kn;path=/';
-        }
+        localStorage.removeItem('sschrc-lang');
+        localStorage.removeItem('sschrc-index-lang');
+        document.cookie = 'googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
     } catch (e) {}
-    var scripts = document.getElementsByTagName('script');
-    var assetBase = '';
-    for (var i = scripts.length - 1; i >= 0; i--) {
-        var src = scripts[i].getAttribute('src') || '';
-        if (src.indexOf('footer.js') !== -1 && src.indexOf('footer-home.js') === -1) {
-            assetBase = src.substring(0, src.lastIndexOf('/') + 1);
-            break;
-        }
-    }
-    if (!document.getElementById('sschrc-lang-css')) {
-        var link = document.createElement('link');
-        link.id = 'sschrc-lang-css';
-        link.rel = 'stylesheet';
-        link.href = assetBase + 'language-switcher.css';
-        document.head.appendChild(link);
-    }
-    if (!document.getElementById('sschrc-lang-js')) {
-        var script = document.createElement('script');
-        script.id = 'sschrc-lang-js';
-        script.src = assetBase + 'language-switcher.js';
-        script.onload = function () {
-            if (window.sschrcRefreshLanguage) {
-                window.sschrcRefreshLanguage();
-                window.setTimeout(window.sschrcRefreshLanguage, 400);
-                window.setTimeout(window.sschrcRefreshLanguage, 1200);
-            }
-        };
-        document.body.appendChild(script);
-    }
 })();

@@ -3340,17 +3340,11 @@ a:focus, button:focus, .tab:focus {
                     );
 
                     if (filteredItems.length === 0) {
-                        const noResultsText = (window.sschrcGetLang && window.sschrcGetLang() === 'kn')
-                            ? 'ಯಾವುದೇ ಫಲಿತಾಂಶಗಳು ಕಂಡುಬಂದಿಲ್ಲ'
-                            : 'No results found';
-                        resultsContainer.innerHTML = '<div class="p-4 text-gray-500 text-center">' + noResultsText + '</div>';
+                        resultsContainer.innerHTML = '<div class="p-4 text-gray-500 text-center">No results found</div>';
                     } else {
                         resultsContainer.innerHTML = filteredItems.map(item => {
-                            const label = (window.sschrcTranslateString && window.sschrcGetLang && window.sschrcGetLang() === 'kn')
-                                ? window.sschrcTranslateString(item.name)
-                                : item.name;
                             return `<div class="search-result-item p-3 hover:bg-gray-100 cursor-pointer border-b border-gray-200 last:border-b-0" data-link="${item.link}">
-                                <div class="font-medium text-gray-800 truncate">${label}</div>
+                                <div class="font-medium text-gray-800 truncate">${item.name}</div>
                             </div>`;
                         }).join('');
                     }
