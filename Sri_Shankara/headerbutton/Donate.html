@@ -210,6 +210,245 @@
         .fa-linkedin-in:before { content: "\f0e1" !important; }
         .fa-instagram:before { content: "\f16d" !important; }
 
+        /* Donation widget — Mayo-style card */
+        .donation-widget-section {
+            background: #f5f5f5;
+        }
+
+        .donation-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem 1.75rem 1.5rem;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e8e8e8;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .donation-card-title {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: #111;
+            text-align: center;
+            margin: 0 0 0.5rem;
+            line-height: 1.3;
+        }
+
+        .donation-card-subtitle {
+            text-align: center;
+            font-size: 0.9375rem;
+            color: #444;
+            margin: 0 0 1.5rem;
+        }
+
+        .amount-presets {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .amount-preset-btn {
+            border: 1.5px solid #d1d5db;
+            background: #fff;
+            border-radius: 8px;
+            padding: 0.875rem 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .amount-preset-btn:hover {
+            border-color: #9ca3af;
+        }
+
+        .amount-preset-btn.selected {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: #fff;
+        }
+
+        .amount-custom-field {
+            position: relative;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            padding: 1rem 1rem 1.25rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            transition: border-color 0.2s ease;
+        }
+
+        .amount-custom-field:focus-within {
+            border-color: #2563eb;
+        }
+
+        .amount-symbol {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #111;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .amount-custom-value {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #111;
+            text-align: right;
+            background: transparent;
+            min-width: 0;
+        }
+
+        .amount-custom-value::placeholder {
+            color: #9ca3af;
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
+
+        .amount-currency-badge {
+            position: absolute;
+            bottom: -0.65rem;
+            left: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #fff;
+            border: 1.5px solid #d1d5db;
+            border-radius: 6px;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .amount-currency-badge:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .support-label {
+            display: block;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.4rem;
+        }
+
+        .support-select-wrap {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .support-search-icon {
+            position: absolute;
+            left: 0.875rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            font-size: 0.875rem;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .support-chevron {
+            position: absolute;
+            right: 0.875rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            font-size: 0.75rem;
+            pointer-events: none;
+        }
+
+        .support-select {
+            width: 100%;
+            appearance: none;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            padding: 0.75rem 2rem 0.75rem 2.25rem;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #111;
+            background: #fff;
+            cursor: pointer;
+            transition: border-color 0.2s ease;
+        }
+
+        .support-select:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .dedicate-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #374151;
+            margin-bottom: 1.25rem;
+            cursor: pointer;
+        }
+
+        .dedicate-label input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .dedicate-info {
+            color: #9ca3af;
+            font-size: 0.8rem;
+            cursor: help;
+        }
+
+        .donation-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 0 0 1.25rem;
+        }
+
+        .donate-btn-primary {
+            width: 100%;
+            background: #111;
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 0.9rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.15s ease;
+        }
+
+        .donate-btn-primary:hover {
+            background: #000;
+            transform: translateY(-1px);
+        }
+
+        .donation-form-amount-summary {
+            font-size: 0.875rem;
+            color: #4b5563;
+            padding: 0.75rem 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .donation-form-amount-summary strong {
+            color: #111;
+        }
+
     </style>
     
     
@@ -248,6 +487,56 @@
                 <a href="List of donors category wise.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-[#FF5100] hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg no-underline">
                     <i class="fas fa-hand-holding-heart mr-2"></i>Our Donors
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Amount Widget -->
+    <section class="donation-widget-section py-14">
+        <div class="max-w-md mx-auto px-4 sm:px-6">
+            <div class="donation-card" id="donation-amount-widget">
+                <h2 class="donation-card-title">Make a gift to Sri Shankara Cancer Hospital</h2>
+                <p class="donation-card-subtitle">Choose an amount to donate <strong>one-time</strong></p>
+
+                <div class="amount-presets" id="amount-presets"></div>
+
+                <div class="amount-custom-field">
+                    <span class="amount-symbol" id="amount-currency-prefix">$</span>
+                    <input
+                        type="text"
+                        id="custom-amount-input"
+                        class="amount-custom-value"
+                        inputmode="decimal"
+                        autocomplete="off"
+                        aria-label="Custom donation amount"
+                    />
+                    <button type="button" class="amount-currency-badge" id="currency-badge" aria-label="Switch currency">
+                        <span id="currency-flag">🇺🇸</span>
+                        <span id="currency-code">USD</span>
+                    </button>
+                </div>
+
+                <label class="support-label" for="widget-program">I'd like to support</label>
+                <div class="support-select-wrap">
+                    <i class="fas fa-search support-search-icon" aria-hidden="true"></i>
+                    <select id="widget-program" class="support-select" aria-label="Select program to support">
+                        <option value="Hospital Project">Hospital Project</option>
+                        <option value="Nithya Anna Dana Yojana">Nithya Anna Dana Yojana</option>
+                        <option value="Patient Support">Patient Support</option>
+                        <option value="Cancer Research">Cancer Research</option>
+                    </select>
+                    <i class="fas fa-chevron-down support-chevron" aria-hidden="true"></i>
+                </div>
+
+                <label class="dedicate-label">
+                    <input type="checkbox" id="dedicate-checkbox" />
+                    Dedicate my donation
+                    <i class="fas fa-info-circle dedicate-info" title="Honor someone special with your gift"></i>
+                </label>
+
+                <hr class="donation-divider" />
+
+                <button type="button" class="donate-btn-primary" onclick="handleWidgetDonate()">Donate</button>
             </div>
         </div>
     </section>
@@ -557,19 +846,14 @@
           <span class="text-red-600 text-xs hidden" id="err_program"></span>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2"
-            >Amount Donated (INR)</label
-          >
-          <input
-            type="number"
-            name="amount"
-            id="amount"
-            required
-            min="1"
-            step="1"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hospital-green"
-          />
+        <div class="md:col-span-2">
+          <input type="hidden" name="amount" id="amount" />
+          <input type="hidden" name="donation_currency" id="donation_currency" value="USD" />
+          <input type="hidden" name="dedicate" id="dedicate" value="0" />
+          <label class="block text-sm font-medium text-gray-700 mb-2" id="amount-label">Donation Amount</label>
+          <p class="donation-form-amount-summary" id="amount-form-summary">
+            Selected: <strong id="amount-display">$100.00 USD</strong> — use the widget above to change
+          </p>
           <span class="text-red-600 text-xs hidden" id="err_amount"></span>
         </div>
 
@@ -768,6 +1052,186 @@
 
 
     <script>
+        // Donation amount widget
+        (function () {
+            var PRESETS = {
+                USD: [50, 100, 250, 500],
+                INR: [5000, 10000, 25000, 50000]
+            };
+            var CURRENCY_META = {
+                USD: { symbol: '$', flag: '🇺🇸', code: 'USD' },
+                INR: { symbol: '₹', flag: '🇮🇳', code: 'INR' }
+            };
+            var state = { currency: 'USD', amount: 100 };
+
+            function formatDisplay(value, currency) {
+                if (value == null || value === '') return '—';
+                var num = Number(value);
+                if (!num || num <= 0) return '—';
+                if (currency === 'USD') {
+                    return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' USD';
+                }
+                return '₹' + num.toLocaleString('en-IN', { maximumFractionDigits: 0 }) + ' INR';
+            }
+
+            function formatInputValue(value) {
+                if (value == null || value === '') return '';
+                var num = Number(value);
+                if (!num || num <= 0) return '';
+                return state.currency === 'USD'
+                    ? num.toFixed(2)
+                    : String(Math.round(num));
+            }
+
+            function renderPresets() {
+                var container = document.getElementById('amount-presets');
+                if (!container) return;
+                var amounts = PRESETS[state.currency];
+                container.innerHTML = amounts.map(function (amt) {
+                    var selected = state.amount === amt ? ' selected' : '';
+                    var label = state.currency === 'USD'
+                        ? '$' + amt
+                        : '₹' + amt.toLocaleString('en-IN');
+                    return '<button type="button" class="amount-preset-btn' + selected + ' preset-btn-main" data-amount="' + amt + '">' + label + '</button>';
+                }).join('');
+            }
+
+            function syncProgram() {
+                var widgetProgram = document.getElementById('widget-program');
+                var formProgram = document.getElementById('program');
+                if (widgetProgram && formProgram) {
+                    formProgram.value = widgetProgram.value;
+                }
+            }
+
+            function syncDedicate() {
+                var checkbox = document.getElementById('dedicate-checkbox');
+                var hidden = document.getElementById('dedicate');
+                if (checkbox && hidden) {
+                    hidden.value = checkbox.checked ? '1' : '0';
+                }
+            }
+
+            function syncUI() {
+                var meta = CURRENCY_META[state.currency];
+                var prefix = document.getElementById('amount-currency-prefix');
+                if (prefix) prefix.textContent = meta.symbol;
+
+                var flag = document.getElementById('currency-flag');
+                var code = document.getElementById('currency-code');
+                if (flag) flag.textContent = meta.flag;
+                if (code) code.textContent = meta.code;
+
+                var customInput = document.getElementById('custom-amount-input');
+                if (customInput) {
+                    customInput.value = formatInputValue(state.amount);
+                }
+
+                var display = document.getElementById('amount-display');
+                if (display) display.textContent = formatDisplay(state.amount, state.currency);
+
+                var hiddenAmount = document.getElementById('amount');
+                if (hiddenAmount) hiddenAmount.value = state.amount ? Math.round(state.amount) : '';
+
+                var hiddenCurrency = document.getElementById('donation_currency');
+                if (hiddenCurrency) hiddenCurrency.value = state.currency;
+
+                renderPresets();
+                syncProgram();
+                syncDedicate();
+            }
+
+            function setCurrency(currency) {
+                state.currency = currency;
+                state.amount = PRESETS[currency][1];
+                syncUI();
+            }
+
+            function toggleCurrency() {
+                setCurrency(state.currency === 'USD' ? 'INR' : 'USD');
+            }
+
+            function setAmount(amount) {
+                var num = parseFloat(String(amount).replace(/,/g, ''));
+                if (!num || num <= 0) {
+                    state.amount = null;
+                } else {
+                    state.amount = num;
+                }
+                syncUI();
+            }
+
+            window.handleWidgetDonate = function () {
+                if (!state.amount || state.amount <= 0) {
+                    showFieldError('amount', 'Please select or enter a donation amount.');
+                    scrollToDonationForm();
+                    return;
+                }
+                clearFieldError('amount');
+                syncProgram();
+                scrollToDonationForm();
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                syncUI();
+
+                var currencyBadge = document.getElementById('currency-badge');
+                if (currencyBadge) {
+                    currencyBadge.addEventListener('click', toggleCurrency);
+                }
+
+                document.addEventListener('click', function (e) {
+                    var preset = e.target.closest('.preset-btn-main');
+                    if (preset) {
+                        setAmount(preset.getAttribute('data-amount'));
+                        clearFieldError('amount');
+                    }
+                });
+
+                var customInput = document.getElementById('custom-amount-input');
+                if (customInput) {
+                    customInput.addEventListener('input', function () {
+                        var raw = customInput.value.replace(/[^\d.]/g, '');
+                        if (raw) {
+                            setAmount(raw);
+                            clearFieldError('amount');
+                        } else {
+                            state.amount = null;
+                            syncUI();
+                        }
+                    });
+                    customInput.addEventListener('blur', function () {
+                        if (state.amount) syncUI();
+                    });
+                }
+
+                var widgetProgram = document.getElementById('widget-program');
+                if (widgetProgram) {
+                    widgetProgram.addEventListener('change', function () {
+                        syncProgram();
+                        clearFieldError('program');
+                    });
+                }
+
+                var dedicateCheckbox = document.getElementById('dedicate-checkbox');
+                if (dedicateCheckbox) {
+                    dedicateCheckbox.addEventListener('change', syncDedicate);
+                }
+            });
+
+            window.getDonationAmount = function () { return state.amount; };
+            window.getDonationCurrency = function () { return state.currency; };
+            window.resetDonationAmountWidget = function () {
+                state.currency = 'USD';
+                state.amount = PRESETS.USD[1];
+                var checkbox = document.getElementById('dedicate-checkbox');
+                if (checkbox) checkbox.checked = false;
+                var widgetProgram = document.getElementById('widget-program');
+                if (widgetProgram) widgetProgram.selectedIndex = 0;
+                syncUI();
+            };
+        })();
+
         // Function to scroll to donation form
         function scrollToDonationForm() {
             const formSection = document.getElementById('donation-form');
@@ -989,6 +1453,7 @@
                             showNotification(data.message, 'success');
                             // Reset form
                             form.reset();
+                            if (window.resetDonationAmountWidget) window.resetDonationAmountWidget();
                         } else {
                             // Show error message
                             showNotification(data.message || 'An error occurred. Please try again.', 'error');

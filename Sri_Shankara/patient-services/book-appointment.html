@@ -340,6 +340,48 @@
     .banner.error{background:#fee2e2;color:#7f1d1d;border:1px solid #fecaca}
     .banner.success{background:#dcfce7;color:#065f46;border:1px solid #bbf7d0}
     .note{font-size:18px;color:var(--muted) !important}
+
+    /* Portal tabs */
+    .portal-tabs{
+      display:flex;gap:10px;margin:20px 0 8px;flex-wrap:wrap;
+    }
+    .portal-tab{
+      flex:1;min-width:200px;padding:14px 16px;border:2px solid #d1d5db;border-radius:14px;
+      background:#fff;color:var(--text);cursor:pointer;font-weight:700;font-size:15px;text-align:center;
+      transition:border-color .2s, box-shadow .2s, background .2s;display:flex;align-items:center;
+      justify-content:center;gap:8px;
+    }
+    .portal-tab:hover{border-color:#94a3b8}
+    .portal-tab.active{
+      border-color:#014196;background:linear-gradient(135deg,rgba(1,65,150,.07),rgba(7,149,145,.07));
+      color:#014196;box-shadow:0 4px 14px rgba(1,65,150,.12);
+    }
+    .portal-panel{display:none}
+    .portal-panel.active{display:block}
+    .form-section-title{
+      font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+      color:#014196;margin:22px 0 12px;padding-bottom:8px;border-bottom:2px solid #e5e7eb;
+      display:flex;align-items:center;gap:8px;
+    }
+    .form-section-title i{font-size:14px;opacity:.85}
+    .portal-intro{
+      background:linear-gradient(135deg,rgba(1,65,150,.06),rgba(7,149,145,.06));
+      border:1px solid rgba(1,65,150,.12);border-radius:12px;padding:14px 16px;
+      font-size:14px;color:var(--muted);margin-bottom:8px;line-height:1.55;
+    }
+    .urgency-options{display:flex;gap:10px;flex-wrap:wrap}
+    .urgency-option{
+      flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:8px;
+      padding:10px 12px;border:2px solid #d1d5db;border-radius:12px;cursor:pointer;
+      font-weight:600;font-size:14px;background:#fff;transition:all .2s;
+    }
+    .urgency-option input{display:none}
+    .urgency-option.selected{border-color:#014196;background:rgba(1,65,150,.08);color:#014196}
+    .urgency-option.urgent.selected{border-color:#ea580c;background:rgba(234,88,12,.08);color:#c2410c}
+    .urgency-option.emergency.selected{border-color:#dc2626;background:rgba(220,38,38,.08);color:#b91c1c}
+    .consent-row{display:flex;align-items:flex-start;gap:10px;margin-top:4px}
+    .consent-row input{margin-top:4px;accent-color:#014196}
+    .consent-row label{font-weight:500;font-size:14px;margin:0}
     
     /* Ensure Footer Grid Uses Correct Layout - Must override page styles */
     #hospital-footer .footer-grid {
@@ -380,14 +422,26 @@
       <div class="brand">
       
         <div>
-          <h1>Request an Appointment</h1>
-          <!-- <div class="subtitle"></div> -->
+          <h1 id="page-title">Request an Appointment</h1>
+          <div class="subtitle" id="page-subtitle">Book for yourself or refer a patient as a healthcare provider</div>
         </div>
       </div>
       <div class="note" aria-hidden="true">24×7 Support: +91-7090521000</div>
     </header>
 
+    <div class="portal-tabs" role="tablist" aria-label="Appointment type">
+      <button type="button" class="portal-tab active" id="tab-patient" role="tab" aria-selected="true" aria-controls="patient-portal" data-portal="patient">
+        <i class="fas fa-user-injured" aria-hidden="true"></i> Patient Appointment
+      </button>
+      <button type="button" class="portal-tab" id="tab-referral" role="tab" aria-selected="false" aria-controls="referral-portal" data-portal="referral">
+        <i class="fas fa-user-md" aria-hidden="true"></i> Referring Doctor Portal
+      </button>
+    </div>
+
     <div id="form-status" class="banner visually-hidden" role="status" aria-live="polite"></div>
+
+    <!-- Patient Appointment Portal -->
+    <div id="patient-portal" class="portal-panel active" role="tabpanel" aria-labelledby="tab-patient">
 
   <form id="appointmentForm" class="card" action="book-appointment.php" method="post" novalidate>
 
@@ -462,6 +516,149 @@
       <div id="clientErrors" class="error" role="alert" aria-live="assertive"></div>
     </form>
 
+    </div><!-- /patient-portal -->
+
+    <!-- Referring Doctor Portal -->
+    <div id="referral-portal" class="portal-panel" role="tabpanel" aria-labelledby="tab-referral" hidden>
+
+    <div class="portal-intro">
+      <strong>For referring physicians:</strong> Submit patient referrals in a standardized format. Our referral desk will review clinical details and coordinate the earliest appropriate appointment. For emergencies, please call <strong>+91-7090521000</strong>.
+    </div>
+
+    <form id="referralForm" class="card" action="refer-patient.php" method="post" enctype="multipart/form-data" novalidate>
+
+      <input type="text" name="website" autocomplete="off" tabindex="-1" class="visually-hidden" aria-hidden="true" />
+
+      <div class="form-section-title"><i class="fas fa-stethoscope"></i> Referring Doctor Details</div>
+      <div class="grid">
+        <div>
+          <label for="referring_doctor_name">Doctor Name <span class="req">*</span></label>
+          <input id="referring_doctor_name" name="referring_doctor_name" type="text" required maxlength="120" placeholder="Dr. Full Name" autocomplete="name" />
+        </div>
+        <div>
+          <label for="medical_reg_no">Medical Registration No. <span class="req">*</span></label>
+          <input id="medical_reg_no" name="medical_reg_no" type="text" required maxlength="50" placeholder="e.g., KMC 12345" />
+        </div>
+        <div>
+          <label for="specialization">Specialization <span class="req">*</span></label>
+          <input id="specialization" name="specialization" type="text" required maxlength="100" placeholder="e.g., General Surgery" />
+        </div>
+        <div>
+          <label for="institution_name">Hospital / Clinic Name <span class="req">*</span></label>
+          <input id="institution_name" name="institution_name" type="text" required maxlength="150" placeholder="Institution name" />
+        </div>
+        <div>
+          <label for="institution_city">City <span class="req">*</span></label>
+          <input id="institution_city" name="institution_city" type="text" required maxlength="80" placeholder="e.g., Bengaluru" />
+        </div>
+        <div>
+          <label for="doctor_mobile">Doctor Mobile <span class="req">*</span></label>
+          <input id="doctor_mobile" name="doctor_mobile" type="tel" required pattern="^\d{10}$" maxlength="10" placeholder="10-digit mobile" autocomplete="tel" />
+        </div>
+        <div class="grid grid-1" style="grid-column:1/-1;">
+          <label for="doctor_email">Doctor Email <span class="req">*</span></label>
+          <input id="doctor_email" name="doctor_email" type="email" required placeholder="doctor@hospital.com" autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="form-section-title"><i class="fas fa-user-injured"></i> Patient Details</div>
+      <div class="grid">
+        <div>
+          <label for="patient_name">Patient Name <span class="req">*</span></label>
+          <input id="patient_name" name="patient_name" type="text" required maxlength="120" placeholder="Patient full name" />
+        </div>
+        <div>
+          <label for="patient_age">Patient Age <span class="req">*</span></label>
+          <input id="patient_age" name="patient_age" type="number" required min="0" max="120" placeholder="Age in years" />
+        </div>
+        <div>
+          <label for="patient_gender">Patient Gender <span class="req">*</span></label>
+          <select id="patient_gender" name="patient_gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="patient_mobile">Patient / Caregiver Mobile <span class="req">*</span></label>
+          <input id="patient_mobile" name="patient_mobile" type="tel" required pattern="^\d{10}$" maxlength="10" placeholder="10-digit mobile" />
+        </div>
+        <div class="grid grid-1" style="grid-column:1/-1;">
+          <label for="diagnosis">Diagnosis / Suspected Condition <span class="req">*</span></label>
+          <input id="diagnosis" name="diagnosis" type="text" required maxlength="200" placeholder="Primary diagnosis or clinical suspicion" />
+        </div>
+      </div>
+
+      <div class="form-section-title"><i class="fas fa-notes-medical"></i> Referral Information</div>
+      <div class="grid grid-1">
+        <div>
+          <label>Referral Urgency <span class="req">*</span></label>
+          <div class="urgency-options" id="urgencyOptions">
+            <label class="urgency-option selected" data-urgency="Routine">
+              <input type="radio" name="urgency" value="Routine" checked /> Routine
+            </label>
+            <label class="urgency-option urgent" data-urgency="Urgent">
+              <input type="radio" name="urgency" value="Urgent" /> Urgent
+            </label>
+            <label class="urgency-option emergency" data-urgency="Emergency">
+              <input type="radio" name="urgency" value="Emergency" /> Emergency
+            </label>
+          </div>
+        </div>
+        <div>
+          <label for="preferred_specialty">Preferred Specialty</label>
+          <select id="preferred_specialty" name="preferred_specialty">
+            <option value="">Select specialty (optional)</option>
+            <option>Medical Oncology</option>
+            <option>Surgical Oncology</option>
+            <option>Radiation Oncology</option>
+            <option>Hemato-Oncology &amp; BMT</option>
+            <option>Gynaecologic Oncology</option>
+            <option>Head &amp; Neck Oncology</option>
+            <option>Paediatric Oncology</option>
+            <option>Nuclear Medicine</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div>
+          <label for="referralDoctor">Preferred Consultant (optional)</label>
+          <select id="referralDoctor" name="referralDoctor" class="doctor-select">
+            <option value="">Select a consultant</option>
+          </select>
+          <div class="help">Type to search our cancer specialists list.</div>
+        </div>
+        <div>
+          <label for="referral_preferred_date">Preferred Appointment Date</label>
+          <input id="referral_preferred_date" name="referral_preferred_date" type="date" min="" />
+          <input type="hidden" id="referral_preferred_date_formatted" name="referral_preferred_date_formatted" />
+          <div class="help">Optional — our team will confirm the final slot.</div>
+        </div>
+        <div>
+          <label for="clinical_summary">Clinical Summary &amp; Reason for Referral <span class="req">*</span></label>
+          <textarea id="clinical_summary" name="clinical_summary" required placeholder="Brief history, examination findings, investigations done, treatment received, and reason for referral"></textarea>
+        </div>
+        <div>
+          <label for="referral_reports">Upload Reports (optional)</label>
+          <input id="referral_reports" name="referral_reports[]" type="file" accept=".pdf,.jpg,.jpeg,.png" multiple />
+          <div class="help">PDF, JPG, or PNG — max 5 MB per file.</div>
+        </div>
+        <div class="consent-row">
+          <input id="referral_consent" name="referral_consent" type="checkbox" required value="1" />
+          <label for="referral_consent">I confirm that I am a registered medical practitioner and authorize Sri Shankara Cancer Hospital to contact the patient/caregiver for referral coordination. <span class="req">*</span></label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="form-btn" aria-label="Submit Referral">Submit Referral</button>
+        <span class="note" style="font-size:14px">Referral desk response within 1 business day (urgent cases prioritized).</span>
+      </div>
+
+      <div id="referralClientErrors" class="error" role="alert" aria-live="assertive"></div>
+    </form>
+
+    </div><!-- /referral-portal -->
+
     
   </div>
 
@@ -481,6 +678,8 @@
 
     // Populate doctor name from URL parameter and setup date input
     document.addEventListener('DOMContentLoaded', function() {
+      initPortalTabs();
+
       // Setup date input minimum date (today)
       const dateInput = document.getElementById('preferred_date');
       if (dateInput) {
@@ -535,7 +734,216 @@
           $(doctorSelect).val(doctorName).trigger('change');
         }
       }
+
+      initReferralPortal();
     });
+
+    function initPortalTabs() {
+      const tabs = document.querySelectorAll('.portal-tab');
+      const panels = document.querySelectorAll('.portal-panel');
+      const pageTitle = document.getElementById('page-title');
+      const pageSubtitle = document.getElementById('page-subtitle');
+      const formStatus = document.getElementById('form-status');
+
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          const portal = tab.getAttribute('data-portal');
+          tabs.forEach(function(t) {
+            t.classList.toggle('active', t === tab);
+            t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+          });
+          panels.forEach(function(panel) {
+            const isActive = (portal === 'patient' && panel.id === 'patient-portal') ||
+                             (portal === 'referral' && panel.id === 'referral-portal');
+            panel.classList.toggle('active', isActive);
+            panel.hidden = !isActive;
+          });
+          if (pageTitle) {
+            pageTitle.textContent = portal === 'referral'
+              ? 'Referring Doctor Portal'
+              : 'Request an Appointment';
+          }
+          if (pageSubtitle) {
+            pageSubtitle.textContent = portal === 'referral'
+              ? 'Standardized patient referral form for healthcare providers'
+              : 'Book for yourself or refer a patient as a healthcare provider';
+          }
+          if (formStatus) formStatus.classList.add('visually-hidden');
+          if (location.hash !== '#' + portal) {
+            history.replaceState(null, '', '#' + portal);
+          }
+        });
+      });
+
+      const hash = location.hash.replace('#', '');
+      if (hash === 'referral') {
+        document.getElementById('tab-referral').click();
+      }
+    }
+
+    function initReferralPortal() {
+      const referralDate = document.getElementById('referral_preferred_date');
+      if (referralDate) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        referralDate.min = today.toISOString().split('T')[0];
+        referralDate.addEventListener('change', function() {
+          document.getElementById('referral_preferred_date_formatted').value =
+            this.value ? formatDateToDDMMYYYY(this.value) : '';
+        });
+      }
+
+      const referralDoctorSelect = document.getElementById('referralDoctor');
+      const doctorsList = getDoctorsList();
+      if (referralDoctorSelect && doctorsList.length > 0) {
+        doctorsList.forEach(function(name) {
+          const option = document.createElement('option');
+          option.value = name;
+          option.textContent = name;
+          referralDoctorSelect.appendChild(option);
+        });
+        $(referralDoctorSelect).select2({
+          placeholder: 'Select a consultant',
+          allowClear: true,
+          width: '100%',
+          minimumResultsForSearch: 0
+        });
+      }
+
+      document.querySelectorAll('.urgency-option').forEach(function(opt) {
+        opt.addEventListener('click', function() {
+          document.querySelectorAll('.urgency-option').forEach(function(o) {
+            o.classList.remove('selected');
+          });
+          opt.classList.add('selected');
+          opt.querySelector('input').checked = true;
+        });
+      });
+
+      setupReferralFormSubmit();
+    }
+
+    function validateReferralFiles(input, allowed, maxSizeMB) {
+      const files = input.files;
+      if (!files || !files.length) return '';
+      const max = maxSizeMB * 1024 * 1024;
+      for (const f of files) {
+        const ext = f.name.toLowerCase().split('.').pop();
+        if (f.size > max) return 'File "' + f.name + '" exceeds ' + maxSizeMB + ' MB.';
+        if (allowed.indexOf(ext) === -1) return 'File "' + f.name + '" type not allowed.';
+      }
+      return '';
+    }
+
+    function clearReferralForm() {
+      const form = document.getElementById('referralForm');
+      if (!form) return;
+      form.reset();
+      document.getElementById('referral_preferred_date_formatted').value = '';
+      document.querySelectorAll('.urgency-option').forEach(function(o, i) {
+        o.classList.toggle('selected', i === 0);
+      });
+      const refDoc = document.getElementById('referralDoctor');
+      if (refDoc && $(refDoc).hasClass('select2-hidden-accessible')) {
+        $(refDoc).val(null).trigger('change');
+      }
+      const err = document.getElementById('referralClientErrors');
+      if (err) err.textContent = '';
+    }
+
+    function setupReferralFormSubmit() {
+      const referralForm = document.getElementById('referralForm');
+      const referralErrors = document.getElementById('referralClientErrors');
+      const formStatus = document.getElementById('form-status');
+      if (!referralForm) return;
+
+      referralForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        referralErrors.textContent = '';
+        const errors = [];
+
+        if (!referralForm.checkValidity()) {
+          errors.push('Please complete all required fields correctly.');
+        }
+        if (!/^\d{10}$/.test(document.getElementById('doctor_mobile').value.trim())) {
+          errors.push('Doctor mobile must be exactly 10 digits.');
+        }
+        if (!/^\d{10}$/.test(document.getElementById('patient_mobile').value.trim())) {
+          errors.push('Patient mobile must be exactly 10 digits.');
+        }
+        const age = parseInt(document.getElementById('patient_age').value, 10);
+        if (isNaN(age) || age < 0 || age > 120) {
+          errors.push('Please enter a valid patient age (0–120).');
+        }
+        if (!document.getElementById('referral_consent').checked) {
+          errors.push('Please confirm the referral authorization checkbox.');
+        }
+        const fileErr = validateReferralFiles(
+          document.getElementById('referral_reports'),
+          ['pdf', 'jpg', 'jpeg', 'png'],
+          5
+        );
+        if (fileErr) errors.push(fileErr);
+
+        const refDate = document.getElementById('referral_preferred_date').value;
+        if (refDate) {
+          document.getElementById('referral_preferred_date_formatted').value = formatDateToDDMMYYYY(refDate);
+        }
+
+        if (errors.length) {
+          referralErrors.innerHTML = errors.map(function(x) { return '• ' + x; }).join('<br>');
+          formStatus.className = 'banner error';
+          formStatus.textContent = 'Please fix the highlighted issues and try again.';
+          formStatus.classList.remove('visually-hidden');
+          return;
+        }
+
+        formStatus.className = 'banner success';
+        formStatus.textContent = 'Submitting referral…';
+        formStatus.classList.remove('visually-hidden');
+
+        const submitBtn = referralForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Submitting...';
+
+        fetch('refer-patient.php', {
+          method: 'POST',
+          body: new FormData(referralForm)
+        })
+        .then(function(response) {
+          const ct = response.headers.get('content-type');
+          if (ct && ct.indexOf('application/json') !== -1) return response.json();
+          return response.text().then(function(text) {
+            return { status: response.ok ? 'success' : 'error', message: text || 'An error occurred' };
+          });
+        })
+        .then(function(data) {
+          if (data.status === 'success') {
+            if (typeof gtag === 'function') gtag('event', 'referral_submit');
+            alert('✓ ' + data.message);
+            clearReferralForm();
+            formStatus.classList.add('visually-hidden');
+            referralForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            alert('✗ Error: ' + data.message);
+            formStatus.className = 'banner error';
+            formStatus.textContent = data.message;
+            formStatus.classList.remove('visually-hidden');
+          }
+        })
+        .catch(function() {
+          alert('✗ An error occurred while submitting the referral. Please try again or call +91-7090521000.');
+          formStatus.className = 'banner error';
+          formStatus.textContent = 'An error occurred. Please try again.';
+          formStatus.classList.remove('visually-hidden');
+        })
+        .finally(function() {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
+      });
+    }
     
     // All doctor names from Cancer-Specialists.html
     const allDoctorNames = [
