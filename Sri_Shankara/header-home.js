@@ -1,6 +1,15 @@
 // Header JavaScript for Sri Shankara Cancer Hospital
 // This file dynamically generates the header content
 
+(function () {
+    try {
+        var lang = localStorage.getItem('sschrc-lang') || localStorage.getItem('sschrc-index-lang');
+        if (lang === 'kn') {
+            document.cookie = 'googtrans=/en/kn;path=/';
+        }
+    } catch (e) {}
+})();
+
 // Mobile Menu Toggle Functions - Define early for global access
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
@@ -475,6 +484,22 @@ function syncDepartmentsMenuHeight() {
     scrollArea.style.maxHeight = `${available}px`;
 }
 
+function getLanguageSwitcherMarkup(id, extraClass) {
+    const extra = extraClass ? ` ${extraClass}` : '';
+    return `
+                            <div class="lang-switcher${extra}" id="${id}">
+                                <button type="button" class="action-btn lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+                                    <i class="fas fa-globe"></i>
+                                    <span class="lang-current-label">EN</span>
+                                    <i class="fas fa-chevron-down lang-arrow"></i>
+                                </button>
+                                <ul class="lang-dropdown" role="menu">
+                                    <li role="none"><button type="button" role="menuitem" data-lang="en">English</button></li>
+                                    <li role="none"><button type="button" role="menuitem" data-lang="kn">ಕನ್ನಡ (Kannada)</button></li>
+                                </ul>
+                            </div>`;
+}
+
 // Main header generation function
 function generateHeader() {
     const header = document.getElementById('dynamic-header');
@@ -525,6 +550,7 @@ function generateHeader() {
                         <!-- Action Buttons -->
                         <div class="action-buttons">
                             <div class="careers-donate-column">
+                                ${getLanguageSwitcherMarkup('lang-switcher-desktop')}
                                 <a href="headerbutton/Careers.html" class="action-btn careers-btn" target="_blank">
                                     <i class="fas fa-briefcase"></i>
                                     <span>Careers</span>
@@ -1091,6 +1117,7 @@ function generateMobileMenu() {
             
             <!-- Mobile Action Buttons -->
             <div class="mobile-action-buttons">
+                ${getLanguageSwitcherMarkup('lang-switcher-mobile-menu', 'mobile-lang-switcher')}
                 <a href="headerbutton/Careers.html" class="mobile-action-button careers" target="_blank">
                     <i class="fas fa-briefcase"></i>
                     <span>Careers</span>

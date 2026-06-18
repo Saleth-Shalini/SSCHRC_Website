@@ -443,7 +443,7 @@
     <!-- Patient Appointment Portal -->
     <div id="patient-portal" class="portal-panel active" role="tabpanel" aria-labelledby="tab-patient">
 
-  <form id="appointmentForm" class="card" action="book-appointment.php" method="post" novalidate>
+  <form id="appointmentForm" class="card" action="/patient-services/book-appointment.php" method="post" novalidate>
 
       <!-- Honeypot -->
       <input type="text" name="website" autocomplete="off" tabindex="-1" class="visually-hidden" aria-hidden="true" />
@@ -462,7 +462,7 @@
 
         <div>
           <label for="mobile">Mobile Number <span class="req" aria-hidden="true">*</span></label>
-          <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="^\d{10}$" maxlength="10" placeholder="10-digit mobile" required autocomplete="tel" />
+          <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="^[6-9][0-9]{9}$" maxlength="10" placeholder="10-digit mobile" required autocomplete="tel" />
           <div class="help">Enter a valid 10-digit Indian mobile number.</div>
         </div>
 
@@ -680,15 +680,23 @@
     document.addEventListener('DOMContentLoaded', function() {
       initPortalTabs();
 
-      // Setup date input minimum date (today)
+      // Setup date input: today through one year from today
       const dateInput = document.getElementById('preferred_date');
       if (dateInput) {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-        const year = today.getFullYear();
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const day = String(today.getDate()).padStart(2, '0');
-        dateInput.min = `${year}-${month}-${day}`;
+        const maxDate = new Date(today);
+        maxDate.setFullYear(maxDate.getFullYear() + 1);
+
+        function toDateInputValue(d) {
+          const year = d.getFullYear();
+          const month = String(d.getMonth() + 1).padStart(2, '0');
+          const day = String(d.getDate()).padStart(2, '0');
+          return `${year}-${month}-${day}`;
+        }
+
+        dateInput.min = toDateInputValue(today);
+        dateInput.max = toDateInputValue(maxDate);
         
         // Update formatted date on change
         dateInput.addEventListener('change', function() {
@@ -1145,6 +1153,8 @@
       const mobile = document.getElementById('mobile').value.trim();
       if (!/^\d{10}$/.test(mobile)) {
         errors.push("Mobile number must be exactly 10 digits.");
+      } else if (!/^[6-9]/.test(mobile)) {
+        errors.push("Mobile number cannot start with 1, 2, 3, 4, or 5. Please enter a valid 10-digit Indian mobile number.");
       }
 
       // Age range validation
@@ -1163,7 +1173,16 @@
       if (!rawDate) {
         errors.push("Please select a preferred date.");
       } else {
-        document.getElementById('preferred_date_formatted').value = formatDateToDDMMYYYY(rawDate);
+        const selectedDate = new Date(rawDate + 'T00:00:00');
+        const todayDate = new Date();
+        todayDate.setHours(0, 0, 0, 0);
+        const maxAllowed = new Date(todayDate);
+        maxAllowed.setFullYear(maxAllowed.getFullYear() + 1);
+        if (selectedDate < todayDate || selectedDate > maxAllowed) {
+          errors.push("Preferred date must be between today and one year from today.");
+        } else {
+          document.getElementById('preferred_date_formatted').value = formatDateToDDMMYYYY(rawDate);
+        }
       }
 
       // Doctor name is optional, no validation needed
@@ -1194,24 +1213,31 @@
       
       // Create FormData object
       const formData = new FormData(form);
+      const submitUrl = (function () {
+        if (window.location.protocol === 'file:') {
+          return 'book-appointment.php';
+        }
+        return '/patient-services/book-appointment.php';
+      })();
       
       // Submit via AJAX
-      fetch('book-appointment.php', {
+      fetch(submitUrl, {
         method: 'POST',
         body: formData
       })
-      .then(response => {
-        // Check if response is JSON
-        const contentType = response.headers.get('content-type');
-        if (contentType && contentType.includes('application/json')) {
-          return response.json();
-        } else {
-          // Handle non-JSON response (legacy error format)
-          return response.text().then(text => ({
-            status: response.ok ? 'success' : 'error',
-            message: text || 'An error occurred'
-          }));
-        }
+      .then(function (response) {
+        return response.text().then(function (text) {
+          var data;
+          try {
+            data = text ? JSON.parse(text) : {};
+          } catch (err) {
+            throw new Error('Server returned an invalid response. Please try again or call +91-7090521000.');
+          }
+          if (!data || typeof data.status === 'undefined') {
+            throw new Error((data && data.message) || text || 'Unexpected server response.');
+          }
+          return data;
+        });
       })
       .then(data => {
           
@@ -1223,7 +1249,9 @@
             
             console.log("SUCCESS BLOCK HIT");
           // Show success popup (blocking - waits for user to click OK)
-          gtag('event', 'appointment_submit');
+          if (typeof gtag === 'function') {
+            gtag('event', 'appointment_submit');
+          }
           alert('✓ ' + data.message);
           
           // After user clicks OK on alert, clear the form (similar to closeBookingModal in reference)
@@ -1246,9 +1274,15 @@
       })
       .catch(error => {
         console.error('Error:', error);
-        alert('✗ An error occurred while submitting your request. Please try again later.');
+        var message = (error && error.message)
+          ? error.message
+          : 'An error occurred while submitting your request. Please try again later.';
+        if (window.location.protocol === 'file:') {
+          message = 'Form submission requires the website to be opened through the web server (not as a local file). Please use the live site or run a PHP server.';
+        }
+        alert('✗ ' + message);
         formStatus.className = "banner error";
-        formStatus.textContent = "An error occurred. Please try again.";
+        formStatus.textContent = message;
         formStatus.classList.remove('visually-hidden');
       })
       .finally(() => {
