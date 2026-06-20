@@ -1,0 +1,254 @@
+/* Careers page — Sri Shankara Cancer Hospital */
+
+:root {
+    --careers-green: #2E8B57;
+    --careers-green-dark: #27724a;
+    --careers-orange: #FF4500;
+    --careers-ink: #0f172a;
+    --careers-muted: #64748b;
+    --careers-border: #e2e8f0;
+    --careers-surface: #f8fafc;
+    --careers-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Top action bar — View Jobs & Quick Apply */
+.careers-top-bar {
+    background: linear-gradient(135deg, #f0fdf4 0%, #fff 55%, #fff7f0 100%);
+    border-bottom: 1px solid var(--careers-border);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.careers-top-bar__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.careers-top-bar__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.careers-top-bar__text strong {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--careers-ink);
+}
+
+.careers-top-bar__text span {
+    font-size: 0.9rem;
+    color: var(--careers-muted);
+}
+
+.careers-top-bar__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.careers-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.35rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+}
+
+.careers-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.careers-btn-primary {
+    background: var(--careers-orange);
+    color: #fff;
+}
+
+.careers-btn-primary:hover {
+    color: #fff;
+    background: #e63e00;
+}
+
+.careers-btn-secondary {
+    background: var(--careers-green);
+    color: #fff;
+}
+
+.careers-btn-secondary:hover {
+    color: #fff;
+    background: var(--careers-green-dark);
+}
+
+.careers-btn-outline {
+    background: #fff;
+    color: var(--careers-green);
+    border: 1px solid var(--careers-border);
+}
+
+.careers-btn-outline:hover {
+    background: var(--careers-surface);
+    color: var(--careers-green-dark);
+    border-color: var(--careers-green);
+}
+
+/* Breadcrumb */
+.careers-breadcrumb-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 0;
+}
+
+.careers-breadcrumb {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.careers-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.careers-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+}
+
+.careers-breadcrumb li + li::before {
+    content: "›";
+    opacity: 0.55;
+    margin: 0 0.45rem 0 0.2rem;
+}
+
+.careers-breadcrumb a {
+    color: #003017;
+    text-decoration: none;
+}
+
+.careers-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.careers-breadcrumb [aria-current="page"] {
+    font-weight: 600;
+    color: #111;
+}
+
+@media (max-width: 640px) {
+    .careers-top-bar__inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .careers-top-bar__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .careers-top-bar__actions .careers-btn {
+        width: 100%;
+    }
+}
+
+/* Job filter empty state */
+.jobs-empty-state {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--careers-muted);
+    background: var(--careers-surface);
+    border: 1px dashed var(--careers-border);
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+/* CV autofill */
+.cv-upload-actions {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cv-fill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: 10px;
+    border: 1px solid var(--careers-green);
+    background: #fff;
+    color: var(--careers-green-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cv-fill-btn:hover {
+    background: #f0fdf4;
+    transform: translateY(-1px);
+}
+
+.cv-parse-status {
+    margin-top: 0.65rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    padding: 0.65rem 0.85rem;
+    border-radius: 8px;
+}
+
+.cv-parse-status--loading {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.cv-parse-status--ok {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.cv-parse-status--warn {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.cv-parse-status--err {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.cv-parse-status--info {
+    background: var(--careers-surface);
+    color: var(--careers-muted);
+    border: 1px solid var(--careers-border);
+}
+
+.job.is-filtered-out {
+    display: none !important;
+}

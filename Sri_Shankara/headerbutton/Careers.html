@@ -1,39 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Header CSS -->
-    <link rel="stylesheet" href="../header.css">
-    
-
-
-</head>
-<body>
-    <!-- Header will be dynamically generated here -->
-    <header id="dynamic-header"></header>
-    
-    <!-- Header JavaScript -->
-    <script src="../header.js"></script>
-</body>
-
-
-<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sri Shankara Cancer Hospital & Research Centre — Careers</title>
+<title>Careers | Sri Shankara Cancer Hospital & Research Centre</title>
 <meta name="description" content="Careers at Sri Shankara Cancer Hospital & Research Centre. Join our mission-driven team transforming cancer care in India." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../header.css">
+<link rel="stylesheet" href="careers.css">
+<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="../footer-main.css">
+<link rel="stylesheet" href="../chatbox.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
   :root{
     --sea:#2e8b57; --sea-600:#27724a; --sea-300:#5aa57c; --sea-100:#cce8d8; --sea-50:#f0fbf6;
@@ -51,47 +32,11 @@
   a:hover{color:var(--saffron);}
   .container{max-width:1200px;margin:0 auto;padding:16px}
   .badge{display:inline-flex;gap:.5rem;align-items:center;padding:.5rem 1rem;border-radius:999px;font-size:.85rem;font-weight:600;background:var(--sea-50);color:var(--sea);border:1px solid var(--ring)}
-  .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.75rem;border-radius:12px;font-weight:700;border:none;cursor:pointer;box-shadow:var(--shadow);transition: var(--transition);}
+  .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.75rem;border-radius:12px;font-weight:700;border:none;cursor:pointer;box-shadow:var(--shadow);transition: var(--transition);font-family:inherit;text-decoration:none;}
   .btn-primary{background:var(--saffron);color:#fff;}
   .btn-primary:hover{background:var(--saffron-600); transform: translateY(-2px); box-shadow: var(--shadow-lg);}
   .btn-ghost{background:#fff;color:var(--sea);border:1px solid var(--sea-100);}
   .btn-ghost:hover{background:var(--sea-50); border-color: var(--sea-300); transform: translateY(-2px);}
-  
-  /* Header */
-  header {
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
-  }
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: .8rem;
-  }
-  .logo {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: linear-gradient(135deg,var(--sea),var(--saffron));
-    box-shadow: var(--shadow);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-  }
   
   /* Hero */
   .hero{
@@ -588,7 +533,38 @@
   gtag('config', 'G-9EM0LW3CT3');
 </script>
 </head>
-    <body>
+<body class="bg-gray-50">
+
+  <header id="dynamic-header"></header>
+  <script src="../header.js"></script>
+
+  <!-- Top actions: View Jobs & Quick Apply -->
+  <div class="careers-top-bar" role="region" aria-label="Career quick actions">
+    <div class="careers-top-bar__inner">
+      <div class="careers-top-bar__text">
+        <strong>Build a career with purpose at Sri Shankara</strong>
+        <span>Browse open roles or submit your resume in minutes</span>
+      </div>
+      <div class="careers-top-bar__actions">
+        <a href="#open-roles" class="careers-btn careers-btn-secondary">
+          <i class="fas fa-briefcase" aria-hidden="true"></i> View Jobs
+        </a>
+        <button type="button" class="careers-btn careers-btn-primary js-open-career-modal" aria-haspopup="dialog" aria-controls="career-modal">
+          <i class="fas fa-file-upload" aria-hidden="true"></i> Quick Apply with Resume
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="careers-breadcrumb-wrapper">
+    <nav class="careers-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../index.html">Home</a></li>
+        <li aria-current="page">Careers</li>
+      </ol>
+    </nav>
+  </div>
+
   <!-- Hero -->
   <section class="hero">
     <div class="container hero-grid">
@@ -606,7 +582,8 @@
         </div>
         
         <div style="display:flex;gap:16px;flex-wrap:wrap">
-          <!--<a class="btn btn-primary" href="#open-roles"><i class="fas fa-search"></i> Explore Roles</a>-->
+          <a class="btn btn-primary" href="#open-roles"><i class="fas fa-briefcase"></i> View Jobs</a>
+          <button type="button" class="btn btn-primary js-open-career-modal" aria-haspopup="dialog" aria-controls="career-modal"><i class="fas fa-file-upload"></i> Quick Apply with Resume</button>
           <a class="btn btn-ghost" href="#why"><i class="fas fa-info-circle"></i> Why Sri Shankara</a>
         </div>
       </div>
@@ -712,7 +689,7 @@
   </section>
 
   <!-- Open roles -->
-  <!-- <section id="open-roles" class="section">
+  <section id="open-roles" class="section">
     <div class="container">
       <div class="jobs-header">
         <div>
@@ -722,16 +699,16 @@
           </p>
         </div>
         <div class="filter-options">
-          <button class="filter-btn active">All</button>
-          <button class="filter-btn">Medical</button>
-          <button class="filter-btn">Nursing</button>
-          <button class="filter-btn">Technical</button>
-          <button class="filter-btn">Admin</button>
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="medical">Medical</button>
+          <button type="button" class="filter-btn" data-filter="nursing">Nursing</button>
+          <button type="button" class="filter-btn" data-filter="technical">Technical</button>
+          <button type="button" class="filter-btn" data-filter="admin">Admin</button>
         </div>
       </div>
 
       <div id="jobs" class="grid-3">
-        <article class="card job" data-dept="Nursing" data-loc="Bengaluru" data-type="Full-time">
+        <article class="card job" data-category="nursing" data-dept="Nursing" data-loc="Bengaluru" data-type="Full-time">
           <h3>Staff Nurse — Oncology Ward</h3>
           <div class="meta">
             <span class="tag dept">Nursing</span>
@@ -740,12 +717,12 @@
           </div>
           <p style="color:var(--muted); margin-bottom: 1.5rem;">Deliver evidence-based, compassionate care across inpatient oncology services.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <button type="button" class="btn btn-primary js-open-career-modal">Apply Now</button>
             <a class="btn btn-ghost" href="#hr-contact">View Details</a>
           </div>
         </article>
 
-        <article class="card job" data-dept="IT & Analytics" data-loc="Bengaluru" data-type="Full-time">
+        <article class="card job" data-category="technical" data-dept="IT & Analytics" data-loc="Bengaluru" data-type="Full-time">
           <h3>Data Analyst — Hospital Analytics</h3>
           <div class="meta">
             <span class="tag dept">IT & Analytics</span>
@@ -754,12 +731,12 @@
           </div>
           <p style="color:var(--muted); margin-bottom: 1.5rem;">Build dashboards and analyses that improve patient flow, quality, and outcomes.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <button type="button" class="btn btn-primary js-open-career-modal">Apply Now</button>
             <a class="btn btn-ghost" href="#hr-contact">View Details</a>
           </div>
         </article>
 
-        <article class="card job" data-dept="Pathology" data-loc="Bengaluru" data-type="Full-time">
+        <article class="card job" data-category="technical" data-dept="Pathology" data-loc="Bengaluru" data-type="Full-time">
           <h3>Histotechnologist — Pathology Lab</h3>
           <div class="meta">
             <span class="tag dept">Pathology</span>
@@ -768,12 +745,12 @@
           </div>
           <p style="color:var(--muted); margin-bottom: 1.5rem;">Support diagnostic excellence with high-quality tissue processing and staining.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <button type="button" class="btn btn-primary js-open-career-modal">Apply Now</button>
             <a class="btn btn-ghost" href="#hr-contact">View Details</a>
           </div>
         </article>
         
-        <article class="card job" data-dept="Medical" data-loc="Bengaluru" data-type="Full-time">
+        <article class="card job" data-category="medical" data-dept="Medical" data-loc="Bengaluru" data-type="Full-time">
           <h3>Oncology Pharmacist</h3>
           <div class="meta">
             <span class="tag dept">Medical</span>
@@ -782,12 +759,12 @@
           </div>
           <p style="color:var(--muted); margin-bottom: 1.5rem;">Specialize in oncology medications and support patient care through pharmaceutical expertise.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <button type="button" class="btn btn-primary js-open-career-modal">Apply Now</button>
             <a class="btn btn-ghost" href="#hr-contact">View Details</a>
           </div>
         </article>
         
-        <article class="card job" data-dept="Administration" data-loc="Bengaluru" data-type="Full-time">
+        <article class="card job" data-category="admin" data-dept="Administration" data-loc="Bengaluru" data-type="Full-time">
           <h3>Patient Relations Manager</h3>
           <div class="meta">
             <span class="tag dept">Administration</span>
@@ -796,12 +773,12 @@
           </div>
           <p style="color:var(--muted); margin-bottom: 1.5rem;">Enhance patient experience and support families throughout their care journey.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <button type="button" class="btn btn-primary js-open-career-modal">Apply Now</button>
             <a class="btn btn-ghost" href="#hr-contact">View Details</a>
           </div>
         </article>
         
-        <article class="card job" data-dept="Research" data-loc="Bengaluru" data-type="Full-time">
+        <article class="card job" data-category="medical" data-dept="Research" data-loc="Bengaluru" data-type="Full-time">
           <h3>Clinical Research Coordinator</h3>
           <div class="meta">
             <span class="tag dept">Research</span>
@@ -810,13 +787,14 @@
           </div>
           <p style="color:var(--muted); margin-bottom: 1.5rem;">Coordinate oncology clinical trials and contribute to cutting-edge cancer research.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn btn-primary" href="#hr-contact">Apply Now</a>
+            <button type="button" class="btn btn-primary js-open-career-modal">Apply Now</button>
             <a class="btn btn-ghost" href="#hr-contact">View Details</a>
           </div>
         </article>
       </div>
+      <p id="jobs-empty-state" class="jobs-empty-state" hidden>No open roles match this filter. Try another category or contact HR.</p>
     </div>
-  </section> -->
+  </section>
 
   <!-- Benefits & culture 
   <section class="section">
@@ -899,7 +877,7 @@
             <p class="contact-apply__text">
               Click below to submit your application online. Our HR team will review it and get in touch with you.
             </p>
-            <button type="button" id="open-career-modal" class="btn-apply-modal" aria-haspopup="dialog" aria-controls="career-modal">
+            <button type="button" id="open-career-modal" class="btn-apply-modal js-open-career-modal" aria-haspopup="dialog" aria-controls="career-modal">
               <i class="fas fa-paper-plane" aria-hidden="true"></i> Apply Now
             </button>
           </div>
@@ -1169,11 +1147,16 @@
                ondrop="handleDrop(event)">
             <i class="fas fa-cloud-upload-alt" style="font-size:2rem;color:#2e8b57;display:block;margin-bottom:10px"></i>
             <strong style="color:#1f2937">Click to upload</strong> or drag &amp; drop<br>
-            <small style="color:#6b7280">PDF, DOC, DOCX — Max 2 MB</small>
+            <small style="color:#6b7280">PDF, DOCX — Max 2 MB (.doc: save as PDF/DOCX for auto-fill)</small>
             <div id="cv-filename" style="margin-top:10px;color:#2e8b57;font-weight:600;font-size:.9rem"></div>
           </div>
-          <input type="file" id="cv_file" name="cv_file" accept=".pdf,.doc,.docx" required
-                 style="display:none" onchange="showFileName(this)">
+          <input type="file" id="cv_file" name="cv_file" accept=".pdf,.doc,.docx" required style="display:none">
+          <div class="cv-upload-actions">
+            <button type="button" id="fill-from-resume-btn" class="cv-fill-btn">
+              <i class="fas fa-magic" aria-hidden="true"></i> Fill from Resume
+            </button>
+          </div>
+          <p id="cv-parse-status" class="cv-parse-status" hidden aria-live="polite"></p>
         </div>
 
         <p style="font-size:.85rem;color:#6b7280;margin:0;border-top:1px solid #edf7f1;padding-top:18px">
@@ -1319,22 +1302,6 @@
       }
     })();
     
-    // Simple filter functionality
-    document.querySelectorAll('.filter-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-          btn.classList.remove('active');
-        });
-        
-        // Add active class to clicked button
-        button.classList.add('active');
-        
-        // Filter logic would go here in a real implementation
-        // This is just a UI demonstration
-      });
-    });
-    
     // Animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
       const observer = new IntersectionObserver((entries) => {
@@ -1346,8 +1313,8 @@
         });
       }, { threshold: 0.1 });
       
-      // Observe cards for animation
-      document.querySelectorAll('.card').forEach(card => {
+      // Observe cards for animation (exclude job listing cards — handled by filter)
+      document.querySelectorAll('.card:not(.job)').forEach(card => {
         card.style.opacity = 0;
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1533,11 +1500,11 @@
 
     (function initCareerModal() {
       const modal = document.getElementById('career-modal');
-      const openBtn = document.getElementById('open-career-modal');
+      const openBtns = document.querySelectorAll('.js-open-career-modal');
       const closeBtn = document.getElementById('close-career-modal');
       const cancelBtn = document.getElementById('cancel-career-modal');
       const backdrop = document.getElementById('career-modal-backdrop');
-      if (!modal || !openBtn) return;
+      if (!modal || !openBtns.length) return;
 
       let lastFocus = null;
       function openModal() {
@@ -1556,7 +1523,9 @@
         if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
       }
 
-      openBtn.addEventListener('click', openModal);
+      openBtns.forEach(function(btn) {
+        btn.addEventListener('click', openModal);
+      });
       if (closeBtn) closeBtn.addEventListener('click', closeModal);
       if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
       if (backdrop) backdrop.addEventListener('click', closeModal);
@@ -1586,18 +1555,7 @@
         lbl.textContent = ''; zone.style.borderColor = '#cce8d8'; zone.style.background = '#f9fffc';
       }
     }
-
-    function handleDrop(e) {
-      e.preventDefault();
-      const zone = document.getElementById('cv-drop-zone');
-      zone.style.borderColor='#cce8d8'; zone.style.background='#f9fffc';
-      const dt = e.dataTransfer;
-      if (dt.files.length) {
-        const fi = document.getElementById('cv_file');
-        const dt2 = new DataTransfer(); dt2.items.add(dt.files[0]); fi.files = dt2.files;
-        showFileName(fi);
-      }
-    }
+    window.showFileName = showFileName;
 
     const careerFormEl = document.getElementById('career-form');
     if (careerFormEl) careerFormEl.addEventListener('submit', function(e) {
@@ -1700,81 +1658,35 @@
     });
   </script>
 
-  <!-- Optional: Schema.org JobPosting -->
-  <script type="application/ld+json">
-  [{
-    "@context": "https://schema.org",
-    "@type": "JobPosting",
-    "title": "Staff Nurse — Oncology Ward",
-    "hiringOrganization": {"@type": "Organization","name": "Sri Shankara Cancer Hospital & Research Centre"},
-    "employmentType": "FULL_TIME",
-    "applicantLocationRequirements": {"@type":"Country","name":"India"},
-    "jobLocation": {"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"}},
-    "description": "Deliver evidence-based, compassionate care across inpatient oncology services.",
-    "datePosted": "2025-09-05",
-    "validThrough": "2025-12-31",
-    "industry": "Healthcare"
-  }]
-  </script>
-</body>
+  <footer id="hospital-footer"></footer>
+  <script src="../footer.js"></script>
 
+  <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+    <svg viewBox="0 0 24 24">
+      <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
+    </svg>
+  </button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Shankara Cancer Hospital Footer</title>
-    <link rel="stylesheet" href="../footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Footer container - content will be dynamically generated by JavaScript -->
-    <footer id="hospital-footer"></footer>
-    
-    <script src="../footer.js"></script>
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shankara Cancer Hospital & Research Center</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../footer-main.css" /> 
-    <link rel="stylesheet" href="../chatbox.css" /> 
-</head>
-<body>
-    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
-        <svg viewBox="0 0 24 24">
-            <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/>
-        </svg>
-    </button>
-
-    <div id="chatbox-container3">
-        <div id="chatbox-header3">
-            <div class="header-content3">
-                <div class="avatar3">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
-                    </svg>
-                </div>
-                </div>
-            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+  <div id="chatbox-container3">
+    <div id="chatbox-header3">
+      <div class="header-content3">
+        <div class="avatar3">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+          </svg>
         </div>
+      </div>
+      <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+    </div>
+    <div id="chatbox-body3">
+      <div id="chatbox-messages3" style="display:none;"></div>
+      <div id="chatbox-faq-buttons3" style="display:none;"></div>
+    </div>
+  </div>
 
-        <div id="chatbox-body3">
-            <div id="chatbox-messages3" style="display:none;"></div>
-
-            <div id="chatbox-faq-buttons3" style="display:none;"></div>
-        </div>
-
-           </div>
-<script src="../chatbox.js"></script>
-<script src="../footer-main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="careers.js"></script>
+  <script src="../chatbox.js"></script>
+  <script src="../footer-main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
