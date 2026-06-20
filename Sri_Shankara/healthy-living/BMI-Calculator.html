@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your Body Mass Index (BMI) with Sri Shankara Cancer Hospital's free online BMI calculator.">
+    <title>BMI Calculator | Sri Shankara Cancer Hospital</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../chatbox.css">
+    <link rel="stylesheet" href="healthy-living.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EM0LW3CT3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9EM0LW3CT3');
+    </script>
+</head>
+<body class="hl-page">
+    <header id="dynamic-header"></header>
+    <script src="../header.js"></script>
+
+    <div class="hospital-banner-container">
+        <div class="hospital-banner-wrapper">
+            <img src="../Banners/Departments/Nutrition & Dietetics.jpg" alt="BMI Calculator" class="hospital-banner-background desktop">
+            <img src="../Banners/Departments/Nutrition & Dietetics.jpg" alt="BMI Calculator" class="hospital-banner-background mobile">
+            <div class="hospital-banner-overlay"></div>
+            <div class="hospital-banner-logo"></div>
+            <div class="hospital-banner-content">
+                <div class="hospital-banner-text">
+                    <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+                    <a target="_blank" href="Nutrition-Counseling.html" class="hospital-banner-cta">Nutrition Counseling</a>
+                </div>
+            </div>
+        </div>
+        <div class="hospital-banner-mobile-text">
+            <a target="_blank" href="../patient-services/book-appointment.html" class="hospital-banner-cta">Request an appointment</a>
+            <a target="_blank" href="Nutrition-Counseling.html" class="hospital-banner-cta">Nutrition Counseling</a>
+        </div>
+    </div>
+
+    <div class="breadcrumb-wrapper">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="Healthy-Diet.html">Healthy Living</a></li>
+                <li aria-current="page">BMI Calculator</li>
+            </ol>
+        </nav>
+    </div>
+
+    <section class="hl-section">
+        <h1 class="hl-section-title">BMI Calculator</h1>
+        <p class="hl-section-intro">
+            Body Mass Index (BMI) is a screening tool that estimates whether your weight is in a healthy range for your height. It does not diagnose health conditions on its own, but it can help start a conversation with your care team.
+        </p>
+
+        <div class="hl-card hl-bmi-card">
+            <label for="bmi-height">Height (cm)</label>
+            <input type="number" id="bmi-height" min="50" max="250" placeholder="e.g. 165">
+
+            <label for="bmi-weight">Weight (kg)</label>
+            <input type="number" id="bmi-weight" min="10" max="300" step="0.1" placeholder="e.g. 68">
+
+            <button type="button" class="hl-cta" id="bmi-calculate-btn"><i class="fas fa-calculator"></i> Calculate BMI</button>
+
+            <div class="hl-bmi-result" id="bmi-result" role="status" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <section class="hl-section alt">
+        <h2 class="hl-section-title">Understanding Your Result</h2>
+        <div class="hl-grid">
+            <div class="hl-card">
+                <h3>Under 18.5</h3>
+                <p>Underweight. Discuss balanced nutrition and screening with a dietitian, especially during or after cancer treatment.</p>
+            </div>
+            <div class="hl-card">
+                <h3>18.5 – 24.9</h3>
+                <p>Normal weight range for most adults. Continue healthy eating and regular activity as advised by your doctor.</p>
+            </div>
+            <div class="hl-card">
+                <h3>25 – 29.9</h3>
+                <p>Overweight. Lifestyle guidance and medical review may help reduce long-term health risks.</p>
+            </div>
+            <div class="hl-card">
+                <h3>30 and above</h3>
+                <p>Obesity range. A personalized nutrition and activity plan with your healthcare team is recommended.</p>
+            </div>
+        </div>
+        <div class="hl-cta-wrap">
+            <a href="Nutrition-Counseling.html" class="hl-cta"><i class="fas fa-user-md"></i> Get Personalized Advice</a>
+            <a href="Healthy-Diet.html" class="hl-cta secondary"><i class="fas fa-apple-alt"></i> Healthy Diet Guide</a>
+        </div>
+    </section>
+
+    <footer id="hospital-footer"></footer>
+    <button id="chat-fab3" class="pulse3" aria-label="Open chat support">
+        <svg viewBox="0 0 24 24"><path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2M6,9V7H18V9H6M14,11V13H6V11H14M16,15H6V17H16V15Z"/></svg>
+    </button>
+    <div id="chatbox-container3">
+        <div id="chatbox-header3">
+            <div class="header-content3"><div class="avatar3"><svg viewBox="0 0 24 24"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/></svg></div></div>
+            <button id="chatbox-close3" aria-label="Close chatbox">&times;</button>
+        </div>
+        <div id="chatbox-body3">
+            <div id="chatbox-messages3" style="display:none;"></div>
+            <div id="chatbox-faq-buttons3" style="display:none;"></div>
+        </div>
+        <form id="chatbox-form3" style="display:none;">
+            <div id="chatbox-input-area3">
+                <input type="text" id="chatbox-input3" placeholder="Type your message here..." autocomplete="off" required />
+                <button type="submit" id="chatbox-send-btn3"><svg viewBox="0 0 24 24"><path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/></svg></button>
+            </div>
+        </form>
+    </div>
+    <script src="../footer.js"></script>
+    <script src="../chatbox.js"></script>
+    <script>
+        document.getElementById('bmi-calculate-btn').addEventListener('click', function () {
+            var height = parseFloat(document.getElementById('bmi-height').value);
+            var weight = parseFloat(document.getElementById('bmi-weight').value);
+            var result = document.getElementById('bmi-result');
+
+            if (!height || !weight || height < 50 || height > 250 || weight < 10 || weight > 300) {
+                result.textContent = 'Please enter a valid height (50–250 cm) and weight (10–300 kg).';
+                result.classList.add('show');
+                return;
+            }
+
+            var heightM = height / 100;
+            var bmi = weight / (heightM * heightM);
+            var category = 'Obesity';
+
+            if (bmi < 18.5) category = 'Underweight';
+            else if (bmi < 25) category = 'Normal weight';
+            else if (bmi < 30) category = 'Overweight';
+
+            result.textContent = 'Your BMI is ' + bmi.toFixed(1) + ' (' + category + '). Please consult our nutrition team for guidance tailored to your health needs.';
+            result.classList.add('show');
+        });
+    </script>
+</body>
+</html>

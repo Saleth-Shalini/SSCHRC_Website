@@ -444,6 +444,9 @@ function createFooter() {
 // Initialize footer when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     createFooter();
+    if (window.sschrcRenderUpNext) {
+        window.sschrcRenderUpNext();
+    }
 });
 
 // Handle image loading errors
@@ -466,4 +469,38 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.removeItem('sschrc-index-lang');
         document.cookie = 'googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
     } catch (e) {}
+})();
+
+(function () {
+    'use strict';
+    if (window.SSCHRC_UP_NEXT_LOADER) return;
+    window.SSCHRC_UP_NEXT_LOADER = true;
+    var scripts = document.getElementsByTagName('script');
+    var assetBase = '';
+    var i;
+    for (i = scripts.length - 1; i >= 0; i--) {
+        var src = scripts[i].getAttribute('src') || '';
+        if (src.indexOf('footer.js') !== -1 && src.indexOf('footer-home.js') === -1) {
+            assetBase = src.substring(0, src.lastIndexOf('/') + 1);
+            break;
+        }
+    }
+    if (!document.getElementById('sschrc-up-next-css')) {
+        var link = document.createElement('link');
+        link.id = 'sschrc-up-next-css';
+        link.rel = 'stylesheet';
+        link.href = assetBase + 'up-next.css';
+        document.head.appendChild(link);
+    }
+    if (!document.getElementById('sschrc-up-next-js')) {
+        var script = document.createElement('script');
+        script.id = 'sschrc-up-next-js';
+        script.src = assetBase + 'up-next.js';
+        script.onload = function () {
+            if (window.sschrcRenderUpNext) {
+                window.sschrcRenderUpNext();
+            }
+        };
+        document.body.appendChild(script);
+    }
 })();
